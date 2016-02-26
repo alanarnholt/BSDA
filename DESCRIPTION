@@ -1,0 +1,16 @@
+Package: BSDA
+Type: Package
+Title: Basic Statistics and Data Analysis
+Version: 1.02
+Date: 2016-02-25
+LazyData: yes
+Author: Alan T. Arnholt
+Description: Data sets for book "Basic Statistics and Data Analysis" by
+        Larry J. Kitchens.
+Maintainer: Alan T. Arnholt <arnholt@math.appstate.edu>
+Depends: 
+      lattice
+Imports:
+      e1071  
+License: GPL (>= 2)
+
