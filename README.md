@@ -18,7 +18,7 @@ Please report any **bugs** or **suggestions** at:
 The package is available for download from
 [CRAN](http://cran.r-project.org/web/packages/BSDA/).
 
-You may download the most recent version using the [devtools](http://github.com/hdaley/devtools) function `install_github()` to install **PASWR** in R.
+You may download the most recent version using the [devtools](http://github.com/hdaley/devtools) function `install_github()` to install **BSDA** in R.
 
 However, you need to make sure you're set up to develop packages. This is platform specific:
 
