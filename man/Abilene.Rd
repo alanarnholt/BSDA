@@ -4,32 +4,41 @@
 \name{Abilene}
 \alias{Abilene}
 \title{Crimes reported in Abilene, Texas}
-\format{A data frame with 8 observations on the following 5 variables.
+\format{A data frame with 16 observations on 3 variables.
 \describe{
-\item{Crime}{a factor with levels \code{Aggravated
-assault} \code{Arson} \code{Burglary} \code{Forcible rape} \code{Larceny
-theft} \code{Murder} \code{Robbery} \code{Vehicle theft}}
-\item{X1992}{a numeric vector}
-\item{X92percent}{a numeric vector}
-\item{X1999}{a numeric vector}
-\item{X99percent}{a numeric vector} }}
+\item{CrimeType}{a factor with levels \code{Aggravated
+assault}, \code{Arson}, \code{Burglary}, \code{Forcible rape}, \code{Larceny
+theft}, \code{Murder}, \code{Robbery}, and \code{Vehicle theft}.}
+\item{Year}{a factor with levels \code{1992} and \code{1999}}
+\item{Number}{number of reported crimes}
+}}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
+}
+\usage{
+Abilene
 }
 \description{
 Data used in Exercise 1.23 and 2.79
 }
 \examples{
-data(Abilene)
-attach(Abilene)
-par(mfrow=c(2,1))
-barplot(X1992,names.arg=c("Murder","Rape","Robbery","Assault","Burglary",
-"Larceny","V.Theft","Arson"),col="blue",main="Crime 1992")
-barplot(X1999,names.arg=c("Murder","Rape","Robbery","Assault","Burglary",
-"Larceny","V.Theft","Arson"),col="red",main="Crime 1999")
-par(mfrow=c(1,1))
-detach(Abilene)
+par(mfrow = c(2, 1))
+barplot(Abilene$Number[Abilene$Year=="1992"],
+names.arg = Abilene$CrimeType[Abilene$Year == "1992"],
+main = "1992 Crime Stats", col = "red")
+barplot(Abilene$Number[Abilene$Year=="1999"],
+names.arg = Abilene$CrimeType[Abilene$Year == "1999"],
+main = "1999 Crime Stats", col = "blue")
+par(mfrow = c(1, 1))
+
+\dontrun{
+library(ggplot2)
+ggplot(data = Abilene, aes(x = CrimeType, y = Number, fill = Year)) +
+geom_bar(stat = "identity", position = "dodge") +
+theme_bw() +
+theme(axis.text.x = element_text(angle = 30, hjust = 1))
+}
 }
 \keyword{datasets}
 

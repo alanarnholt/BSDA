@@ -4,12 +4,9 @@
 \name{Absent}
 \alias{Absent}
 \title{Number of absent days for 20 employees}
-\format{A data frame with 20 observations on the following 4 variables.
+\format{A data frame with 20 observations on one variable.
 \describe{
 \item{days}{a numeric vector}
-\item{days_1}{a numeric vector}
-\item{Count}{a numeric vector}
-\item{Percent}{a numeric vector}
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -19,11 +16,10 @@ Duxbury
 Data used in Exercise 1.28
 }
 \examples{
-data(Absent)
-attach(Absent)
-table(days)
-barplot(table(days),col="pink")
-detach(Absent)
+CT <- xtabs(~ days, data = Absent)
+CT
+barplot(CT, col = "pink")
+plot(ecdf(Absent$days), main = "ECDF")
 }
 \keyword{datasets}
 

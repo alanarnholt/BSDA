@@ -9,8 +9,11 @@ Description: Data sets for book "Basic Statistics and Data Analysis" by
         Larry J. Kitchens.
 Maintainer: Alan T. Arnholt <arnholt@math.appstate.edu>
 Depends: 
-      lattice
+      lattice,
+      R (>= 2.10)
 Imports:
       e1071  
 License: GPL (>= 2)
+Suggests:
+    ggplot2 (>= 2.1.0)
 

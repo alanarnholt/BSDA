@@ -18,22 +18,18 @@ NULL
 #' @docType data
 #' @format A data frame with 50 observations on the following variable.
 #' \describe{ 
-#' \item{C1}{a numeric vector} 
+#' \item{price}{daily price returns (in pence) of Abbey National shares} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Abbey)
-#' EDA(C1)
-#' t.test(C1,mu=300)
-#' detach(Abbey)
+#' qqnorm(Abbey$price)
+#' qqline(Abbey$price)
+#' t.test(Abbey$price, mu = 300)
 #' 
-NULL
-
-
-
+"Abbey"
 
 
 #' Three samples to illustrate analysis of variance
@@ -43,26 +39,20 @@ NULL
 #' 
 #' @name Abc
 #' @docType data
-#' @format A data frame with 18 observations on the following 3 variables.
+#' @format A data frame with 51 observations on 2 variables.
 #' \describe{ 
-#' \item{GroupA}{a numeric vector}
-#' \item{GroupB}{a numeric vector}
-#' \item{GroupC}{a numeric vector}
+#' \item{response}{a numeric vector}
+#' \item{group}{a factor with e levels \code{A}, \code{B}, and \code{C}}
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Abc)
-#' STACKED <-stack(Abc)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Abc)
+#' boxplot(response ~ group, col=c("red", "blue", "green"), data = Abc )
+#' anova(lm(response ~ group, data = Abc))
 #' 
-NULL
+"Abc"
 
 
 
@@ -75,31 +65,37 @@ NULL
 #' 
 #' @name Abilene
 #' @docType data
-#' @format A data frame with 8 observations on the following 5 variables.
+#' @format A data frame with 16 observations on 3 variables.
 #' \describe{ 
-#' \item{Crime}{a factor with levels \code{Aggravated
-#' assault} \code{Arson} \code{Burglary} \code{Forcible rape} \code{Larceny
-#' theft} \code{Murder} \code{Robbery} \code{Vehicle theft}}
-#' \item{X1992}{a numeric vector} 
-#' \item{X92percent}{a numeric vector} 
-#' \item{X1999}{a numeric vector} 
-#' \item{X99percent}{a numeric vector} }
+#' \item{CrimeType}{a factor with levels \code{Aggravated
+#' assault}, \code{Arson}, \code{Burglary}, \code{Forcible rape}, \code{Larceny
+#' theft}, \code{Murder}, \code{Robbery}, and \code{Vehicle theft}.}
+#' \item{Year}{a factor with levels \code{1992} and \code{1999}} 
+#' \item{Number}{number of reported crimes} 
+#' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Abilene)
-#' attach(Abilene)
-#' par(mfrow=c(2,1))
-#' barplot(X1992,names.arg=c("Murder","Rape","Robbery","Assault","Burglary",
-#' "Larceny","V.Theft","Arson"),col="blue",main="Crime 1992")
-#' barplot(X1999,names.arg=c("Murder","Rape","Robbery","Assault","Burglary",
-#' "Larceny","V.Theft","Arson"),col="red",main="Crime 1999")
-#' par(mfrow=c(1,1))
-#' detach(Abilene)
+#' par(mfrow = c(2, 1))
+#' barplot(Abilene$Number[Abilene$Year=="1992"],
+#' names.arg = Abilene$CrimeType[Abilene$Year == "1992"],
+#' main = "1992 Crime Stats", col = "red")
+#' barplot(Abilene$Number[Abilene$Year=="1999"],
+#' names.arg = Abilene$CrimeType[Abilene$Year == "1999"],
+#' main = "1999 Crime Stats", col = "blue")
+#' par(mfrow = c(1, 1))
 #' 
-NULL
+#' \dontrun{
+#' library(ggplot2)
+#' ggplot(data = Abilene, aes(x = CrimeType, y = Number, fill = Year)) +
+#' geom_bar(stat = "identity", position = "dodge") +
+#' theme_bw() +
+#' theme(axis.text.x = element_text(angle = 30, hjust = 1))
+#' }
+#' 
+"Abilene"
 
 
 
@@ -112,24 +108,21 @@ NULL
 #' 
 #' @name Ability
 #' @docType data
-#' @format A data frame with 2 observations on the following 6 variables.
+#' @format A data frame with 400 observations on 2 variables.
 #' \describe{ 
-#' \item{gender}{a factor with levels \code{boys} \code{girls}} 
-#' \item{hopeless}{a numeric vector}
-#' \item{belowavg}{a numeric vector} 
-#' \item{average}{a numeric vector} 
-#' \item{aboveavg}{a numeric vector} 
-#' \item{superior}{a numeric vector} 
+#' \item{gender}{a factor with levels \code{girls} and \code{boys}} 
+#' \item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' X <- as.matrix(Ability[1:2,2:6])
-#' chisq.test(X)
+#' CT <- xtabs(~gender + ability, data = Ability)
+#' CT
+#' chisq.test(CT)
 #' 
-NULL
+"Ability"
 
 
 
@@ -137,12 +130,12 @@ NULL
 
 #' Abortion rate by region of country
 #' 
-#' Data use in Exercise 8.51
+#' Data used in Exercise 8.51
 #' 
 #' 
 #' @name Abortion
 #' @docType data
-#' @format A data frame with 51 observations on the following 9 variables.
+#' @format A data frame with 51 observations on the following 10 variables.
 #' \describe{ 
 #' \item{state}{a factor with levels \code{alabama}
 #' \code{alaska} \code{arizona} \code{arkansas} \code{california}
@@ -160,27 +153,24 @@ NULL
 #' \item{region}{a factor with levels \code{midwest} \code{northeast}
 #' \code{south} \code{west}} 
 #' \item{regcode}{a numeric vector}
-#' \item{X88rate}{a numeric vector} 
-#' \item{X92rate}{a numeric vector} 
-#' \item{X96rate}{a numeric vector} 
-#' \item{X88provid}{a numeric vector} 
-#' \item{X92provid}{a numeric vector}
+#' \item{rate1988}{a numeric vector} 
+#' \item{rate1992}{a numeric vector} 
+#' \item{rate1996}{a numeric vector} 
+#' \item{provide1988}{a numeric vector} 
+#' \item{provide1992}{a numeric vector}
 #' \item{lowhigh}{a numeric vector} 
+#' \item{rate}{a factor with levels \code{Low} and \code{High}}
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Abortion)
-#' AbortionRate <- cut(X96rate,breaks=c(0,20,10000) )
-#' levels(AbortionRate) <- c("Low","High")
-#' table(region,AbortionRate)
-#' chisq.test(table(region,AbortionRate))
-#' detach(Abortion)
+#' T1 <- xtabs(~region + rate, data = Abortion)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
-
+"Abortion"
 
 
 
@@ -192,23 +182,19 @@ NULL
 #' 
 #' @name Absent
 #' @docType data
-#' @format A data frame with 20 observations on the following 4 variables.
+#' @format A data frame with 20 observations on one variable.
 #' \describe{ 
 #' \item{days}{a numeric vector} 
-#' \item{days_1}{a numeric vector} 
-#' \item{Count}{a numeric vector}
-#' \item{Percent}{a numeric vector} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Absent)
-#' attach(Absent)
-#' table(days)
-#' barplot(table(days),col="pink")
-#' detach(Absent)
+#' CT <- xtabs(~ days, data = Absent)
+#' CT
+#' barplot(CT, col = "pink")
+#' plot(ecdf(Absent$days), main = "ECDF")
 #' 
 NULL
 
@@ -223,25 +209,20 @@ NULL
 #' 
 #' @name Achieve
 #' @docType data
-#' @format A data frame with 25 observations on the following 4 variables.
+#' @format A data frame with 25 observations on the following w variables.
 #' \describe{ 
-#' \item{Score}{a numeric vector} 
-#' \item{Gender}{a numeric vector} 
-#' \item{Female}{a numeric vector}
-#' \item{Male}{a numeric vector} 
+#' \item{score}{a numeric vector} 
+#' \item{gender}{a factor with 2 levels \code{boys} and \code{girls}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Achieve)
-#' attach(Achieve)
-#' anova(lm(Score~Gender))
-#' t.test(Female,Male,var.equal=TRUE)
-#' detach(Achieve)
+#' anova(lm(score ~ gender, data = Achieve))
+#' t.test(score ~ gender, var.equal = TRUE, data = Achieve)
 #' 
-NULL
+"Achieve"
 
 
 
@@ -254,24 +235,24 @@ NULL
 #' 
 #' @name Adsales
 #' @docType data
-#' @format A data frame with 6 observations on the following 2 variables.
+#' @format A data frame with 6 observations on the following 3 variables.
 #' \describe{ 
-#' \item{ads}{a numeric vector} 
-#' \item{sales}{a numeric vector} 
+#' \item{month}{a character vector listing month}
+#' \item{ads}{a numeric vector containing number of ads} 
+#' \item{sales}{a numeric vector containing number of sales} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Adsales)
-#' plot(ads,sales)
-#' linmod <- lm(sales~ads)
-#' abline(linmod)
-#' summary(linmod)
-#' detach(Adsales)
+#' plot(sales ~ ads, data = Adsales)
+#' mod <- lm(sales ~ ads, data = Adsales)
+#' abline(mod)
+#' summary(mod)
+#' predict(mod, newdata = data.frame(ads = 6), interval = "conf", level = 0.99)
 #' 
-NULL
+"Adsales"
 
 
 
@@ -294,14 +275,13 @@ NULL
 #' @examples
 #' 
 #' str(Aggress)
-#' attach(Aggress)
-#' EDA(aggres)
+#' with(data = Aggress,
+#'      EDA(aggres))
 #' # OR
-#' IQR(aggres)
-#' diff(range(aggres))
-#' detach(Aggress)
-#' 
-NULL
+#' IQR(Aggress$aggres)
+#' diff(range(Aggress$aggres))
+#'
+"Aggress"
 
 
 
@@ -316,7 +296,7 @@ NULL
 #' @docType data
 #' @format A data frame with 51 observations on the following 2 variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
+#' \item{state}{a factor with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 #' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
 #' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
@@ -337,14 +317,12 @@ NULL
 #' @examples
 #' 
 #' str(Aid)
-#' attach(Aid)
-#' hist(payment)
-#' boxplot(payment)
-#' library(lattice)
-#' dotplot(State~payment)
-#' detach(Aid)
+#' hist(Aid$payment, xlab = "payment", main = "Your Title Here", 
+#' col = "lightblue")
+#' boxplot(Aid$payment)
+#' dotplot(state ~ payment, data = Aid)
 #' 
-NULL
+"Aid"
 
 
 
@@ -358,19 +336,11 @@ NULL
 #' 
 #' @name Aids
 #' @docType data
-#' @format A data frame with 295 observations on the following 11 variables.
+#' @format A data frame with 295 observations on the following 3 variables.
 #' \describe{ 
-#' \item{duration}{a numeric vector} 
-#' \item{age}{a numeric vector} 
+#' \item{duration}{time (in months) from HIV infection to the clinical manifestation of full-blown AIDS} 
+#' \item{age}{age (in years) of patient} 
 #' \item{group}{a numeric vector}
-#' \item{duratio1}{a numeric vector} 
-#' \item{children}{a numeric vector} 
-#' \item{duratio2}{a numeric vector} 
-#' \item{adults}{a numeric vector} 
-#' \item{duratio3}{a numeric vector}
-#' \item{elderly}{a numeric vector} 
-#' \item{SRES1}{a numeric vector} 
-#' \item{FITS1}{a numeric vector} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -378,11 +348,15 @@ NULL
 #' @examples
 #' 
 #' str(Aids)
-#' attach(Aids)
+#' with(data = Aids,
 #' EDA(duration)
-#' t.test(duration,mu=30,alternative="greater")
-#' SIGN.test(duration,md=24,alternative="greater")
-#' detach(Aids)
+#' )
+#' with(data = Aids, 
+#' t.test(duration, mu = 30, alternative = "greater")
+#' )
+#' with(data = Aids, 
+#' SIGN.test(duration, md = 24, alternative = "greater")
+#' )
 #' 
 NULL
 
@@ -399,31 +373,24 @@ NULL
 #' @docType data
 #' @format A data frame with 141 observations on the following 7 variables.
 #' \describe{ 
-#' \item{year}{a numeric vector} 
-#' \item{deaths}{a numeric vector} 
-#' \item{X1950}{a numeric vector}
-#' \item{X1960}{a numeric vector} 
-#' \item{X1970}{a numeric vector} 
-#' \item{X1980}{a numeric vector} 
-#' \item{X1990}{a numeric vector} 
+#' \item{year}{a numeric vector indicating the year of an aircraft accident} 
+#' \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
+#' \item{decade}{a character vector indicating the decade of an aircraft accident} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Airdisasters)
-#' STA <- stack(Airdisasters[ ,3:7])
-#' library(lattice)
-#' dotplot(ind ~ values, data = STA)
-#' stripchart(x = list(X1950, X1960, X1970, X1980, X1990), 
-#' method = "stack", main = "", pch = 1, col = "red", 
-#' group.names = c("1950", "1960", "1970", "1980", "1990"),
-#' xlab = "Number of Fatalities")
-#' title(main = "Aircraft Disasters 1950-1990") 
-#' detach(Airdisasters)
+#' par(las = 1)
+#' stripchart(deaths ~ decade, data = Airdisasters, 
+#'            subset = decade != "1930s" & decade != "1940s", 
+#'            method = "stack", pch = 19, cex = 0.5, col = "red", 
+#'            main = "Aircraft Disasters 1950 - 1990", 
+#'            xlab = "Number of fatalities")
+#' par(las = 0)
 #' 
-NULL
+"Airdisasters"
 
 
 

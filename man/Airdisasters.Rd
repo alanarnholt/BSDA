@@ -6,32 +6,28 @@
 \title{Aircraft disasters in five different decades}
 \format{A data frame with 141 observations on the following 7 variables.
 \describe{
-\item{year}{a numeric vector}
-\item{deaths}{a numeric vector}
-\item{X1950}{a numeric vector}
-\item{X1960}{a numeric vector}
-\item{X1970}{a numeric vector}
-\item{X1980}{a numeric vector}
-\item{X1990}{a numeric vector}
+\item{year}{a numeric vector indicating the year of an aircraft accident}
+\item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
+\item{decade}{a character vector indicating the decade of an aircraft accident}
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
+\usage{
+Airdisasters
+}
 \description{
 Data used in Exercise 1.12
 }
 \examples{
-attach(Airdisasters)
-STA <- stack(Airdisasters[ ,3:7])
-library(lattice)
-dotplot(ind ~ values, data = STA)
-stripchart(x = list(X1950, X1960, X1970, X1980, X1990),
-method = "stack", main = "", pch = 1, col = "red",
-group.names = c("1950", "1960", "1970", "1980", "1990"),
-xlab = "Number of Fatalities")
-title(main = "Aircraft Disasters 1950-1990")
-detach(Airdisasters)
+par(las = 1)
+stripchart(deaths ~ decade, data = Airdisasters,
+           subset = decade != "1930s" & decade != "1940s",
+           method = "stack", pch = 19, cex = 0.5, col = "red",
+           main = "Aircraft Disasters 1950 - 1990",
+           xlab = "Number of fatalities")
+par(las = 0)
 }
 \keyword{datasets}
 

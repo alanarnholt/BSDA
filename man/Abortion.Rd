@@ -4,7 +4,7 @@
 \name{Abortion}
 \alias{Abortion}
 \title{Abortion rate by region of country}
-\format{A data frame with 51 observations on the following 9 variables.
+\format{A data frame with 51 observations on the following 10 variables.
 \describe{
 \item{state}{a factor with levels \code{alabama}
 \code{alaska} \code{arizona} \code{arkansas} \code{california}
@@ -22,27 +22,28 @@ island} \code{south carolina} \code{south dakota} \code{tennessee}
 \item{region}{a factor with levels \code{midwest} \code{northeast}
 \code{south} \code{west}}
 \item{regcode}{a numeric vector}
-\item{X88rate}{a numeric vector}
-\item{X92rate}{a numeric vector}
-\item{X96rate}{a numeric vector}
-\item{X88provid}{a numeric vector}
-\item{X92provid}{a numeric vector}
+\item{rate1988}{a numeric vector}
+\item{rate1992}{a numeric vector}
+\item{rate1996}{a numeric vector}
+\item{provide1988}{a numeric vector}
+\item{provide1992}{a numeric vector}
 \item{lowhigh}{a numeric vector}
+\item{rate}{a factor with levels \code{Low} and \code{High}}
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
+\usage{
+Abortion
+}
 \description{
-Data use in Exercise 8.51
+Data used in Exercise 8.51
 }
 \examples{
-attach(Abortion)
-AbortionRate <- cut(X96rate,breaks=c(0,20,10000) )
-levels(AbortionRate) <- c("Low","High")
-table(region,AbortionRate)
-chisq.test(table(region,AbortionRate))
-detach(Abortion)
+T1 <- xtabs(~region + rate, data = Abortion)
+T1
+chisq.test(T1)
 }
 \keyword{datasets}
 

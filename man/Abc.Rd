@@ -4,27 +4,24 @@
 \name{Abc}
 \alias{Abc}
 \title{Three samples to illustrate analysis of variance}
-\format{A data frame with 18 observations on the following 3 variables.
+\format{A data frame with 51 observations on 2 variables.
 \describe{
-\item{GroupA}{a numeric vector}
-\item{GroupB}{a numeric vector}
-\item{GroupC}{a numeric vector}
+\item{response}{a numeric vector}
+\item{group}{a factor with e levels \code{A}, \code{B}, and \code{C}}
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
+\usage{
+Abc
+}
 \description{
 Data used in Exercise 10.1
 }
 \examples{
-attach(Abc)
-STACKED <-stack(Abc)
-STACKED[1:5,]
-boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-anova(lm(values~ind,data=STACKED))
-remove(STACKED)
-detach(Abc)
+boxplot(response ~ group, col=c("red", "blue", "green"), data = Abc )
+anova(lm(response ~ group, data = Abc))
 }
 \keyword{datasets}
 

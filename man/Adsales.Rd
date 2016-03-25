@@ -4,25 +4,28 @@
 \name{Adsales}
 \alias{Adsales}
 \title{Number of ads versus number of sales for a retailer of satellite dishes}
-\format{A data frame with 6 observations on the following 2 variables.
+\format{A data frame with 6 observations on the following 3 variables.
 \describe{
-\item{ads}{a numeric vector}
-\item{sales}{a numeric vector}
+\item{month}{a character vector listing month}
+\item{ads}{a numeric vector containing number of ads}
+\item{sales}{a numeric vector containing number of sales}
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
+\usage{
+Adsales
+}
 \description{
 Data used in Exercise 9.15
 }
 \examples{
-attach(Adsales)
-plot(ads,sales)
-linmod <- lm(sales~ads)
-abline(linmod)
-summary(linmod)
-detach(Adsales)
+plot(sales ~ ads, data = Adsales)
+mod <- lm(sales ~ ads, data = Adsales)
+abline(mod)
+summary(mod)
+predict(mod, newdata = data.frame(ads = 6), interval = "conf", level = 0.99)
 }
 \keyword{datasets}
 

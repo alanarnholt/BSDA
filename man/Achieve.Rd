@@ -4,26 +4,24 @@
 \name{Achieve}
 \alias{Achieve}
 \title{Math achievement test scores by gender for 25 high school students}
-\format{A data frame with 25 observations on the following 4 variables.
+\format{A data frame with 25 observations on the following w variables.
 \describe{
-\item{Score}{a numeric vector}
-\item{Gender}{a numeric vector}
-\item{Female}{a numeric vector}
-\item{Male}{a numeric vector}
+\item{score}{a numeric vector}
+\item{gender}{a factor with 2 levels \code{boys} and \code{girls}}
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
+\usage{
+Achieve
+}
 \description{
 Data used in Example 7.14 and Exercise 10.7
 }
 \examples{
-str(Achieve)
-attach(Achieve)
-anova(lm(Score~Gender))
-t.test(Female,Male,var.equal=TRUE)
-detach(Achieve)
+anova(lm(score ~ gender, data = Achieve))
+t.test(score ~ gender, var.equal = TRUE, data = Achieve)
 }
 \keyword{datasets}
 

@@ -12,17 +12,19 @@
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
+\usage{
+Aggress
+}
 \description{
 Data used in Exercises 1.61 and 1.81
 }
 \examples{
 str(Aggress)
-attach(Aggress)
-EDA(aggres)
+with(data = Aggress,
+     EDA(aggres))
 # OR
-IQR(aggres)
-diff(range(aggres))
-detach(Aggress)
+IQR(Aggress$aggres)
+diff(range(Aggress$aggres))
 }
 \keyword{datasets}
 

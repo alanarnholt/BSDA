@@ -5,19 +5,11 @@
 \alias{Aids}
 \title{Incubation times for 295 patients thought to be infected with HIV by a blood
 transfusion}
-\format{A data frame with 295 observations on the following 11 variables.
+\format{A data frame with 295 observations on the following 3 variables.
 \describe{
-\item{duration}{a numeric vector}
-\item{age}{a numeric vector}
+\item{duration}{time (in months) from HIV infection to the clinical manifestation of full-blown AIDS}
+\item{age}{age (in years) of patient}
 \item{group}{a numeric vector}
-\item{duratio1}{a numeric vector}
-\item{children}{a numeric vector}
-\item{duratio2}{a numeric vector}
-\item{adults}{a numeric vector}
-\item{duratio3}{a numeric vector}
-\item{elderly}{a numeric vector}
-\item{SRES1}{a numeric vector}
-\item{FITS1}{a numeric vector}
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -28,11 +20,15 @@ Data used in Exercise 6.60
 }
 \examples{
 str(Aids)
-attach(Aids)
+with(data = Aids,
 EDA(duration)
-t.test(duration,mu=30,alternative="greater")
-SIGN.test(duration,md=24,alternative="greater")
-detach(Aids)
+)
+with(data = Aids,
+t.test(duration, mu = 30, alternative = "greater")
+)
+with(data = Aids,
+SIGN.test(duration, md = 24, alternative = "greater")
+)
 }
 \keyword{datasets}
 

@@ -6,7 +6,7 @@
 \title{Monthly payments per person for families in the AFDC federal program}
 \format{A data frame with 51 observations on the following 2 variables.
 \describe{
-\item{State}{a factor with levels \code{Alabama}
+\item{state}{a factor with levels \code{Alabama}
 \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
 Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
@@ -25,17 +25,18 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
+\usage{
+Aid
+}
 \description{
 Data used in Exercises 1.91 and 3.68
 }
 \examples{
 str(Aid)
-attach(Aid)
-hist(payment)
-boxplot(payment)
-library(lattice)
-dotplot(State~payment)
-detach(Aid)
+hist(Aid$payment, xlab = "payment", main = "Your Title Here",
+col = "lightblue")
+boxplot(Aid$payment)
+dotplot(state ~ payment, data = Aid)
 }
 \keyword{datasets}
 
