@@ -405,25 +405,25 @@ NULL
 #' @docType data
 #' @format A data frame with 11 observations on the following 3 variables.
 #' \describe{ 
-#' \item{airline}{a factor with levels \code{Alaska}
+#' \item{airline}{a charater variable with values \code{Alaska}
 #' \code{Amer West} \code{American} \code{Continental} \code{Delta}
 #' \code{Northwest} \code{Pan Am} \code{Southwest} \code{TWA} \code{United}
 #' \code{USAir}} 
 #' \item{ontime}{a numeric vector}
-#' \item{complnt}{a numeric vector} 
+#' \item{complaints}{a numeric vector} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Airline)
-#' attach(Airline)
-#' barplot(complnt,names.arg=airline,col="lightblue")
-#' plot(ontime,complnt)
-#' detach(Airline)
+#' with(data = Airline, 
+#' barplot(complaints, names.arg = airline, col = "lightblue")
+#' )
+#' plot(complaints ~ ontime, data = Airline, pch = 19, col = "red",
+#' xlab = "On time", ylab = "Complaints")
 #' 
-NULL
+"Airline"
 
 
 
@@ -444,16 +444,11 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Alcohol)
-#' qqnorm(age)
-#' qqline(age)
-#' SIGN.test(age,md=20,conf.level=0.99)
-#' detach(Alcohol)
+#' qqnorm(Alcohol$age)
+#' qqline(Alcohol$age)
+#' SIGN.test(Alcohol$age, md = 20, conf.level = 0.99)
 #' 
-NULL
-
-
-
+"Alcohol"
 
 
 #' Allergy medicines by adverse events
@@ -463,27 +458,23 @@ NULL
 #' 
 #' @name Allergy
 #' @docType data
-#' @format A data frame with 3 observations on the following 4 variables.
+#' @format A data frame with 406 observations on 2 variables.
 #' \describe{ 
-#' \item{C1.T}{a factor with levels \code{Drowsiness}
-#' \code{Headache} \code{Insomnia}} 
-#' \item{Seldane}{a numeric vector}
-#' \item{Pseudoep}{a numeric vector} 
-#' \item{Placebo}{a numeric vector}
+#' \item{event}{a factor with levels \code{insomnia}
+#' \code{headache} \code{drowsiness}} 
+#' \item{medication}{a factor with levels \code{seldane-d}
+#' \code{pseudoephedrine} \code{placebo}}
 #'  }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Allergy)
-#' X <- as.matrix(Allergy[1:3, 2:4])
-#' chisq.test(X)
-#' Xr <- as.matrix(Allergy[2:3, 2:4])
-#' chisq.test(Xr)
-#' detach(Allergy)
+#' T1 <- xtabs(~event + medication, data = Allergy)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Allergy"
 
 
 
@@ -498,21 +489,20 @@ NULL
 #' @docType data
 #' @format A data frame with 10 observations on the following variable.
 #' \describe{ 
-#' \item{recover}{a numeric vector} 
+#' \item{recover}{recovery time in hours} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Anesthet)
-#' str(Anesthet)
-#' qqnorm(recover)
-#' qqline(recover)
-#' t.test(recover,conf.level=0.90)$conf
-#' detach(Anesthet)
+#' qqnorm(Anesthet$recover)
+#' qqline(Anesthet$recover)
+#' with(data = Anesthet,
+#' t.test(recover, conf.level = 0.90)$conf
+#' )
 #' 
-NULL
+"Anesthet"
 
 
 
@@ -527,23 +517,23 @@ NULL
 #' @docType data
 #' @format A data frame with 20 observations on the following 2 variables.
 #' \describe{ 
-#' \item{anxiety}{a numeric vector} 
-#' \item{math}{a numeric vector} 
+#' \item{anxiety}{anxiety score before a major math test} 
+#' \item{math}{math test score} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Anxiety)
-#' plot(anxiety,math)
-#' cor(anxiety,math)
-#' linmod <- lm(math~anxiety)
+#' plot(math ~ anxiety, data = Anxiety)
+#' with(data = Anxiety,
+#' cor(math, anxiety)
+#' )
+#' linmod <- lm(math ~ anxiety, data = Anxiety)
 #' abline(linmod)
 #' summary(linmod)
-#' detach(Anxiety)
 #' 
-NULL
+"Anxiety"
 
 
 
@@ -557,63 +547,27 @@ NULL
 #' 
 #' @name Apolipop
 #' @docType data
-#' @format A data frame with 15 observations on the following 4 variables.
+#' @format A data frame with 15 observations on the following 2 variables.
 #' \describe{ 
-#' \item{coffee}{a numeric vector} 
-#' \item{apolipB}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
+#' \item{coffee}{number of cups of coffee per day} 
+#' \item{apolipB}{level of apoliprotein B} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Apolipop)
-#' str(Apolipop)
-#' plot(coffee,apolipB)
-#' linmod <- lm(apolipB~coffee)
+#' plot(apolipB ~ coffee, data = Apolipop)
+#' linmod <- lm(apolipB ~ coffee, data = Apolipop)
 #' summary(linmod)
-#' # plot(linmod)
-#' detach(Apolipop)
+#' summary(linmod)$sigma
+#' anova(linmod)
+#' anova(linmod)[2, 3]^.5
+#' par(mfrow = c(2, 2))
+#' plot(linmod)
+#' par(mfrow = c(1, 1))
 #' 
-NULL
-
-
-
-
-
-#' Median costs of appendectomies at three different types of North Carolina
-#' hospitals
-#' 
-#' Data for Exercise 10.60
-#' 
-#' 
-#' @name Appendec
-#' @docType data
-#' @format A data frame with 59 observations on the following 5 variables.
-#' \describe{ 
-#' \item{Cost}{a numeric vector} 
-#' \item{Region}{a numeric vector} 
-#' \item{Rural}{a numeric vector}
-#' \item{Regional}{a numeric vector} 
-#' \item{Metropol}{a numeric vector} 
-#' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
-#' @keywords datasets
-#' @examples
-#' 
-#' str(Appendec)
-#' attach(Appendec)
-#' boxplot(Cost~Region)
-#' anova(lm(Cost~as.factor(Region)))
-#' detach(Appendec)
-#' 
-NULL
-
-
-
+"Apolipop"
 
 
 #' Median costs of an appendectomy at 20 hospitals in North Carolina
@@ -625,59 +579,78 @@ NULL
 #' @docType data
 #' @format A data frame with 20 observations on the following variable.
 #' \describe{ 
-#' \item{fee}{a numeric vector} 
+#' \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Append)
-#' attach(Append)
-#' ll <- mean(fee)-2*sd(fee)
-#' ul <- mean(fee)+2*sd(fee)
-#' limits <-c(ll,ul)
+#' fee <- Append$fee
+#' ll <- mean(fee) - 2*sd(fee)
+#' ul <- mean(fee) + 2*sd(fee)
+#' limits <-c(ll, ul)
 #' limits
-#' fee[fee<ll | fee>ul]
-#' detach(Append)
+#' fee[fee < ll | fee > ul]
 #' 
-NULL
+"Append"
 
 
+#' Median costs of appendectomies at three different types of North Carolina
+#' hospitals
+#' 
+#' Data for Exercise 10.60
+#' 
+#' 
+#' @name Appendec
+#' @docType data
+#' @format A data frame with 59 observations on the following 2 variables.
+#' \describe{ 
+#' \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
+#' \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
+#'
+#' }
+#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' Duxbury
+#' @keywords datasets
+#' @examples
+#' 
+#' str(Appendec)
+#' Appendec$regionc <- ifelse(Appendec$region == 1, "rural", 
+#'                     ifelse(Appendec$region == 2, "regional", "metropolitan"))
+#' boxplot(cost ~ regionc, data = Appendec, col = c("red","blue", "cyan"))
+#' anova(lm(cost ~ as.factor(regionc), data = Appendec))
+#' 
+"Appendec"
 
 
 
 #' Aptitude test scores versus productivity in a factory
 #' 
-#' Data for Exercises 2.1, 2.35 and 2.51
+#' Data for Exercises 2.1, 2.26, 2.35 and 2.51
 #' 
 #' 
 #' @name Aptitude
 #' @docType data
-#' @format A data frame with 8 observations on the following 4 variables.
+#' @format A data frame with 8 observations on the following 2 variables.
 #' \describe{ 
-#' \item{aptitude}{a numeric vector}
-#' \item{product}{a numeric vector} 
-#' \item{SRES1}{a numeric vector} 
-#' \item{FITS1}{a numeric vector} 
+#' \item{aptitude}{aptitude test scores}
+#' \item{product}{productivity scores} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Aptitude)
-#' attach(Aptitude)
-#' plot(aptitude,product,main="Exercise 2.1")
-#' model1 <- lm(product~aptitude)
+#' plot(product ~ aptitude, data = Aptitude, main = "Exercise 2.1")
+#' model1 <- lm(product ~ aptitude, data = Aptitude)
 #' model1
-#' abline(model1,col="red",lwd=3)
+#' abline(model1, col = "red", lwd=3)
 #' resid(model1)
 #' fitted(model1)
-#' cor(product,aptitude)
-#' detach(Aptitude)
+#' cor(Aptitude$product, Aptitude$aptitude)
 #' 
-NULL
+"Aptitude"
 
 
 
@@ -690,27 +663,21 @@ NULL
 #' 
 #' @name Archaeo
 #' @docType data
-#' @format A data frame with 60 observations on the following 6 variables.
+#' @format A data frame with 60 observations on the following 2 variables.
 #' \describe{ 
-#' \item{phase1}{a numeric vector} 
-#' \item{phase2}{a numeric vector} 
-#' \item{phase3}{a numeric vector}
-#' \item{phase4}{a numeric vector} 
-#' \item{age}{a numeric vector}
-#' \item{phase}{a numeric vector} 
+#' \item{age}{number of years before 1983 - the year the data were obtained}
+#' \item{phase}{Ceramic Phase numbers} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Archaeo)
-#' attach(Archaeo)
-#' boxplot(age~phase,col="yellow",main="Example 1.16",xlab="Phase",ylab="Age")
-#' anova(lm(age~as.factor(phase)))
-#' detach(Archaeo)
+#' boxplot(age ~ phase, data = Archaeo, col = "yellow", 
+#'         main = "Example 1.16", xlab = "Ceramic Phase", ylab = "Age")
+#' anova(lm(age ~ as.factor(phase), data= Archaeo))
 #' 
-NULL
+"Archaeo"
 
 
 
@@ -718,31 +685,25 @@ NULL
 
 #' Time of relief for three treatments of arthritis
 #' 
-#' Data for Exercise
+#' Data for Exercise 10.58
 #' 
 #' 
 #' @name Arthriti
 #' @docType data
-#' @format A data frame with 51 observations on the following 5 variables.
+#' @format A data frame with 51 observations on the following 2 variables.
 #' \describe{ 
-#' \item{TreatA}{a numeric vector} 
-#' \item{TreatB}{a numeric vector} 
-#' \item{TreatC}{a numeric vector}
-#' \item{Time}{a numeric vector} 
-#' \item{Treatmnt}{a numeric vector} 
+#' \item{time}{time (days?) until an arthritis sufferer experienced relief} 
+#' \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Arthriti)
-#' attach(Arthriti)
-#' boxplot(Time~Treatmnt)
-#' anova(lm(Time~as.factor(Treatmnt)))
-#' detach(Arthriti)
+#' boxplot(time ~ treatment, data = Arthriti)
+#' anova(lm(time ~ treatment, data = Arthriti))
 #' 
-NULL
+"Arthriti"
 
 
 
@@ -757,24 +718,20 @@ NULL
 #' @docType data
 #' @format A data frame with 15 observations on the following variable.
 #' \describe{ 
-#' \item{duration}{a numeric vector} 
+#' \item{duration}{duration (in hours) for transplant} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Artifici)
-#' attach(Artifici)
-#' stem(duration)
-#' summary(duration)
-#' values <- duration[duration<6.5]
+#' stem(Artifici$duration, 2)
+#' summary(Artifici$duration)
+#' values <- Artifici$duration[Artifici$duration < 6.5]
 #' values
 #' summary(values)
-#' detach(Artifici)
-#' remove(values)
 #' 
-NULL
+"Artifici"
 
 
 
@@ -787,27 +744,20 @@ NULL
 #' 
 #' @name Asprin
 #' @docType data
-#' @format A data frame with 5 observations on the following 3 variables.
+#' @format A data frame with 15 observations on 2 variables.
 #' \describe{ 
-#' \item{X1.}{a numeric vector} 
-#' \item{X5.}{a numeric vector} 
-#' \item{X10.}{a numeric vector} 
+#' \item{time}{time (in seconds) for aspirin to dissolve} 
+#' \item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Asprin)
-#' attach(Asprin)
-#' STACKED <-stack(Asprin)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Asprin)
+#' boxplot(time ~ impurity, data = Aspirin, 
+#'         col = c("red", "blue", "green"))
 #' 
-NULL
+"Aspirin"
 
 
 
@@ -822,24 +772,24 @@ NULL
 #' @docType data
 #' @format A data frame with 9 observations on the following 3 variables.
 #' \describe{
-#' \item{Drug}{a numeric vector} 
-#' \item{Placebo}{a numeric vector} 
-#' \item{differ}{a numeric vector} 
+#' \item{drug}{asthmatic relief index for patients given a drug} 
+#' \item{placebo}{asthmatic relief index for patients given a placebo} 
+#' \item{difference}{difference between the \code{placebo} and \code{drug}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Asthmati)
-#' attach(Asthmati)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' t.test(Placebo,Drug,paired=TRUE,mu=0,alternative="greater")
-#' detach(Asthmati)
+#' qqnorm(Asthmati$difference)
+#' qqline(Asthmati$difference)
+#' shapiro.test(Asthmati$difference)
+#' with(data = Asthmati,
+#' t.test(placebo, drug, paired = TRUE, mu = 0, 
+#' alternative = "greater")
+#' )
 #' 
-NULL
+"Asthmati"
 
 
 
@@ -847,16 +797,16 @@ NULL
 
 #' Number of convictions reported by U.S. attorney's offices
 #' 
-#' Data for Exercises 2.2, 2.43 and 2.57
+#' Data for Example 2.2 and Exercises 2.43 and 2.57
 #' 
 #' 
 #' @name Attorney
 #' @docType data
 #' @format A data frame with 88 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Staff}{a numeric vector} 
-#' \item{Convict}{a numeric vector} 
-#' \item{District}{a factor with levels
+#' \item{staff}{U.S. attorneys' office staff per 1 million population} 
+#' \item{convict}{U.S. attorneys' office convictions per 1 million population} 
+#' \item{district}{a factor with levels
 #' \code{Albuquerque} \code{Alexandria, va} \code{Anchorage} \code{Asheville,
 #' NC} \code{Atlanta} \code{Baltimore} \code{Baton Rouge} \code{Billings, Mt}
 #' \code{Birmingham, Al} \code{Boise, Id} \code{Boston} \code{Buffalo}
@@ -888,15 +838,13 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Attorney)
-#' attach(Attorney)
-#' par(mfrow=c(1,2))
-#' plot(Staff,Convict,main="With Washington, D.C.")
-#' plot(Staff[-86],Convict[-86],main="Without Washington, D.C.")
-#' par(mfrow=c(1,1))
-#' detach(Attorney)
+#' par(mfrow=c(1, 2))
+#' plot(convict ~ staff, data = Attorney, main = "With Washington, D.C.")
+#' plot(convict[-86] ~staff[-86], data = Attorney, 
+#' main = "Without Washington, D.C.")
+#' par(mfrow=c(1, 1))
 #' 
-NULL
+"Attorney"
 
 
 
@@ -911,22 +859,19 @@ NULL
 #' @docType data
 #' @format A data frame with 20 observations on the following 2 variables.
 #' \describe{ 
-#' \item{A}{a numeric vector} 
-#' \item{B}{a numeric vector} 
+#' \item{defectives}{number of defective gears in the production of 100 gears per day} 
+#' \item{manufacturer}{a factor with levels \code{A} and \code{B}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Autogear)
-#' attach(Autogear)
-#' t.test(A,B)
-#' wilcox.test(A,B)
-#' t.test(A,B,var.equal=TRUE)
-#' detach(Autogear)
+#' t.test(defectives ~ manufacturer, data = Autogear)
+#' wilcox.test(defectives ~ manufacturer, data = Autogear)
+#' t.test(defectives ~ manufacturer, var.equal = TRUE, data = Autogear)
 #' 
-NULL
+"Autogear"
 
 
 
@@ -943,19 +888,16 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' \item{group}{a numeric vector} 
-#' \item{ranks}{a numeric vector} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Backtoback)
-#' attach(Backtoback)
-#' wilcox.test(score~group)
-#' detach(Backtoback)
+#' wilcox.test(score ~ group, data = Backtoback)
+#' t.test(score ~ group, data = Backtoback)
 #' 
-NULL
+"Backtoback"
 
 
 
@@ -968,28 +910,21 @@ NULL
 #' 
 #' @name Bbsalaries
 #' @docType data
-#' @format A data frame with 33 observations on the following 5 variables.
+#' @format A data frame with 142 observations on 2 variables.
 #' \describe{ 
-#' \item{ANGLES}{a numeric vector} 
-#' \item{ORIOLES}{a numeric vector} 
-#' \item{REDSOXS}{a numeric vector}
-#' \item{WHITESOXS}{a numeric vector} 
-#' \item{INDIANS}{a numeric vector} 
+#' \item{salary}{1999 salary} 
+#' \item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bbsalaries)
-#' attach(Bbsalaries)
-#' stripchart(x=list(INDIANS,WHITESOXS,REDSOXS,ORIOLES,ANGLES),xlab="Salary",
-#' method="stack",main="",pch=1,col="blue", group.names=c("Indians","White Sox", 
-#' "Red Sox", "Orioles","Angels"))
-#' title(main="Major League Salaries")
-#' detach(Bbsalaries)
+#' stripchart(salary ~ team, data = Bbsalaries, method = "stack", 
+#'            pch = 19, col = "blue", cex = 0.75)
+#' title(main = "Major League Salaries")
 #' 
-NULL
+"Bbsalaries"
 
 
 
@@ -1002,31 +937,28 @@ NULL
 #' 
 #' @name Bigten
 #' @docType data
-#' @format A data frame with 11 observations on the following 5 variables.
+#' @format A data frame with 44 observations on the following 4 variables.
 #' \describe{ 
-#' \item{School}{a factor with levels \code{Illinois}
+#' \item{school}{a factor with levels \code{Illinois}
 #' \code{Indiana} \code{Iowa} \code{Michigan} \code{Michigan State}
 #' \code{Minnesota} \code{Northwestern} \code{Ohio State} \code{Penn State}
 #' \code{Purdue} \code{Wisconsin}} 
-#' \item{X1984.85students}{a numeric vector} 
-#' \item{X1984.85athletes}{a numeric vector}
-#' \item{X1993.94students}{a numeric vector}
-#' \item{X1993.94athletes}{a numeric vector} 
+#' \item{rate}{graduation rate} 
+#' \item{year}{factor with two levels \code{1984-1985} and \code{1993-1994}}
+#' \item{status}{factor with two levels \code{athlete} and \code{student}}
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bigten)
-#' attach(Bigten)
-#' boxplot(X1993.94students,X1993.94athletes,names=c("Students","Athletes"),
-#' ylab="1993-1994 Graduation Rates")
-#' plot(X1993.94students,X1993.94athletes,xlab="1993-1994 students",
-#' ylab="1993-1994 athletes")
-#' detach(Bigten)
+#' boxplot(rate ~ status, data = subset(Bigten, year = "1993-1994"), 
+#' horizontal = TRUE, main = "Graduation Rates 1993-1994")
+#' with(data = Bigten,
+#'      tapply(rate, list(year, status), mean)
+#'     )
 #' 
-NULL
+"Bigten"
 
 
 
