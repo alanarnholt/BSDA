@@ -1366,26 +1366,27 @@ NULL
 #' @format A data frame with 20 observations on the following 3 variables.
 #' \describe{ 
 #' \item{Home}{a numeric vector} 
-#' \item{SupplA}{a numeric vector} 
-#' \item{SupplB}{a numeric vector} 
+#' \item{SupplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
+#' \item{SupplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Cabinets)
-#' attach(Cabinets)
-#' DIF <- SupplA - SupplB
+#' DIF <- Cabinets$SupplA - Cabinets$SupplB
 #' qqnorm(DIF)
 #' qqline(DIF)
 #' shapiro.test(DIF)
-#' t.test(SupplA,SupplB,paired=TRUE)
-#' wilcox.test(SupplA,SupplB,paired=TRUE)
-#' detach(Cabinets)
-#' remove(DIF)
+#' with(data = Cabinets, 
+#'      t.test(SupplA, SupplB, paired = TRUE)
+#' )
+#' with(data = Cabinets,
+#'      wilcox.test(SupplA, SupplB, paired = TRUE)
+#')
+#' rm(DIF)
 #' 
-NULL
+"Cabinets"
 
 
 

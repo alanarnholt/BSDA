@@ -253,3 +253,19 @@ devtools::use_data(Bus, overwrite = TRUE)
 # Bypass
 Bypass <- read.csv("Bypass.csv")
 devtools::use_data(Bypass, overwrite = TRUE)
+#
+# Cabinets
+Cabinets <- read.csv("Cabinets.csv")
+devtools::use_data(Cabinets, overwrite = TRUE)
+# Examples
+DIF <- Cabinets$SupplA - Cabinets$SupplB
+qqnorm(DIF)
+qqline(DIF)
+shapiro.test(DIF)
+with(data = Cabinets,
+t.test(SupplA, SupplB, paired = TRUE)
+)
+with(data = Cabinets,
+wilcox.test(SupplA, SupplB, paired = TRUE)
+)
+rm(DIF)
