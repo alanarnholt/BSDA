@@ -13,23 +13,23 @@ Ct} \code{Duke Med Ct} \code{Durham Regional} \code{Forsyth Memorial}
 Baptist} \code{New Hanover Regional} \code{Pitt Co. Memorial}
 \code{Presbyterian} \code{Rex} \code{Univ of North Carolina} \code{Wake
 County}}
-\item{charge}{a numeric vector} 
+\item{charge}{median charge for coronary bypass} 
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
+}
+\usage{
+Bypass
 }
 \description{
 Data for Exercises 5.104 and 6.43
 }
 \examples{
 
-str(Bypass)
-attach(Bypass)
-EDA(charge)
-t.test(charge,conf.level=.90)$conf
-t.test(charge,mu=35000)
-detach(Bypass)
+EDA(Bypass$charge)
+t.test(Bypass$charge, conf.level=.90)$conf
+t.test(Bypass$charge, mu = 35000)
 
 }
 \keyword{datasets}

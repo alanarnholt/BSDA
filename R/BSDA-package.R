@@ -754,10 +754,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(time ~ impurity, data = Aspirin, 
+#' boxplot(time ~ impurity, data = Asprin, 
 #'         col = c("red", "blue", "green"))
 #' 
-"Aspirin"
+"Asprin"
 
 
 
@@ -973,20 +973,18 @@ NULL
 #' @docType data
 #' @format A data frame with 30 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{test scores on the first test in a beginning biology class} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Biology)
-#' attach(Biology)
-#' hist(score,breaks="scott",col="brown",prob=TRUE,main="Problem 1.49")
-#' lines(density(score),lwd=3)
-#' detach(Biology)
+#' hist(Biology$score, breaks = "scott", col = "brown", freq = FALSE, 
+#' main = "Problem 1.49", xlab = "Test Score")
+#' lines(density(Biology$score), lwd=3)
 #' 
-NULL
+"Biology"
 
 
 
@@ -1001,7 +999,7 @@ NULL
 #' @docType data
 #' @format A data frame with 51 observations on the following 3 variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
+#' \item{state}{a character with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 #' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
 #' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
@@ -1014,25 +1012,23 @@ NULL
 #' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
 #' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-#' \item{X1990rate}{a numeric vector} 
-#' \item{X1998rate}{a numeric vector} 
+#' \item{rate}{live birth rates per 1000 population} 
+#' \item{year}{a factor with levels \code{1990} and \code{1998}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Birth)
-#' attach(Birth)
-#' stem(X1998rate)
-#' hist(X1998rate,breaks=seq(10.9,21.9,1.0),xlab="1998 Birth Rate",
-#' main="Figure 1.14 in BSDA",col="pink")
-#' hist(X1998rate,breaks=seq(10.9,21.9,1.0),xlab="1998 Birth Rate",
-#' main="Figure 1.14 in BSDA",col="pink",prob=TRUE)
-#' lines(density(X1998rate),col="red",lwd=2)
-#' detach(Birth)
+#' rate1998 <- subset(Birth, year == "1998", select = rate, drop = TRUE)
+#' stem(x = rate1998, scale = 2)
+#' hist(rate1998, breaks = seq(10.9, 21.9, 1.0), xlab = "1998 Birth Rate",
+#'      main = "Figure 1.14 in BSDA", col = "pink")
+#' hist(rate1998, breaks = seq(10.9, 21.9, 1.0), xlab = "1998 Birth Rate",
+#'      main = "Figure 1.16 in BSDA", col = "pink", freq = FALSE)      
+#' lines(density(rate1998), lwd = 3)
 #' 
-NULL
+"Birth"
 
 
 
@@ -1045,26 +1041,23 @@ NULL
 #' 
 #' @name Blackedu
 #' @docType data
-#' @format A data frame with 5 observations on the following 3 variables.
-#' \describe{ 
-#' \item{education}{a factor with levels \code{bachelor deg}
-#' \code{graduate deg} \code{high sch dropout} \code{high sch graduate}
-#' \code{some college}} 
-#' \item{female}{a numeric vector}
-#' \item{male}{a numeric vector} 
+#' @format A data frame with 3800 observations on 2 variables.
+#' \describe{
+#' \item{gender}{a factor with levels \code{Female} and \code{Male}}
+#' \item{education}{a factor with levels \code{High school dropout},
+#' \code{High school graudate}, \code{Some college}, \code{Bachelor}'\code{s degree}, and
+#' \code{Graduate degree}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Blackedu)
-#' attach(Blackedu)
-#' Blackedu
-#' chisq.test(Blackedu[,2:3])
-#' detach(Blackedu)
+#' T1 <- xtabs(~gender + education, data = Blackedu)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Blackedu"
 
 
 
@@ -1079,25 +1072,22 @@ NULL
 #' @docType data
 #' @format A data frame with 15 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Machine}{a numeric vector} 
-#' \item{Expert}{a numeric vector} 
+#' \item{machine}{blood pressure recorded from an automated blood pressure machine} 
+#' \item{expert}{blood pressure recorded by an expert using an at-home device} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Blood)
-#' attach(Blood)
-#' DIF <- Machine - Expert
-#' qqnorm(DIF)
-#' qqline(DIF)
-#' shapiro.test(DIF)
-#' t.test(Machine,Expert,paired=TRUE)
-#' detach(Blood)
-#' remove(DIF)
+#' DIFF <- Blood$machine - Blood$expert
+#' shapiro.test(DIFF)
+#' qqnorm(DIFF)
+#' qqline(DIFF)
+#' rm(DIFF)
+#' t.test(Blood$machine, Blood$expert, paired = TRUE)
 #' 
-NULL
+"Blood"
 
 
 
@@ -1112,56 +1102,46 @@ NULL
 #' @docType data
 #' @format A data frame with 7 observations on the following 3 variables.
 #' \describe{ 
-#' \item{UnivA}{a numeric vector} 
-#' \item{UnivB}{a numeric vector} 
-#' \item{UnivC}{a numeric vector} 
+#' \item{salary}{1999 salary (in $1000) for board directors} 
+#' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Board)
-#' attach(Board)
-#' STACKED <-stack(Board)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' remove(STACKED)
-#' detach(Board)
+#' boxplot(salary ~ university, data = Board, col = c("red", "blue", "green"), 
+#'         ylab = "Income")
+#' tapply(Board$salary, Board$university, summary)
+#' anova(lm(salary ~ university, data = Board))
 #' 
-NULL
-
-
+"Board"
 
 
 
 #' Bone density measurements of 35 physically active and 35 non-active women
 #' 
-#' Data for Exercise 7.22
+#' Data for Example 7.22
 #' 
 #' 
 #' @name Bones
 #' @docType data
-#' @format A data frame with 70 observations on the following 5 variables.
+#' @format A data frame with 70 observations on 2 variables.
 #' \describe{ 
-#' \item{Active}{a numeric vector}
-#' \item{Nonactive}{a numeric vector} 
-#' \item{Density}{a numeric vector} 
-#' \item{group}{a numeric vector} 
-#' \item{Ranks}{a numeric vector} 
+#' \item{density}{bone density measurements}
+#' \item{group}{a factor with levels \code{active} and \code{nonactive}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bones)
-#' attach(Bones)
-#' t.test(Active,Nonactive,alternative="greater")
-#' wilcox.test(Active,Nonactive,alternative="greater")
-#' detach(Bones)
+#' t.test(density ~ group, data = Bones, alternative = "greater")
+#' t.test(rank(density) ~ group, data = Bones, alternative = "greater")
+#' wilcox.test(density ~ group, data = Bones, alternative = "greater")
 #' 
-NULL
+#' 
+"Bones"
 
 
 
@@ -1176,17 +1156,20 @@ NULL
 #' @docType data
 #' @format A data frame with 17 observations on the following 2 variables.
 #' \describe{ 
-#' \item{book}{a numeric vector} 
-#' \item{spelling}{a numeric vector} 
+#' \item{book}{number of books read} 
+#' \item{spelling}{spelling score} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Books)
+#' plot(spelling ~ book, data = Books)
+#' mod <- lm(spelling ~ book, data = Books)
+#' summary(mod)
+#' abline(mod, col = "blue", lwd = 2)
 #' 
-NULL
+"Books"
 
 
 
@@ -1199,27 +1182,21 @@ NULL
 #' 
 #' @name Bookstor
 #' @docType data
-#' @format A data frame with 72 observations on the following 6 variables.
+#' @format A data frame with 72 observations on 2 variables.
 #' \describe{ 
-#' \item{StoreA}{a numeric vector} 
-#' \item{StoreB}{a numeric vector} 
-#' \item{StoreC}{a numeric vector}
-#' \item{Dollars}{a numeric vector} 
-#' \item{Store}{a numeric vector} 
-#' \item{Ranks}{a numeric vector}
+#' \item{dollars}{money obtained for selling textbooks} 
+#' \item{store}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bookstor)
-#' attach(Bookstor)
-#' boxplot(Dollars~Store)
-#' kruskal.test(Dollars~as.factor(Store))
-#' detach(Bookstor)
+#' boxplot(dollars ~ store, data = Bookstor, 
+#'         col = c("purple", "lightblue", "cyan"))
+#' kruskal.test(dollars ~ store, data = Bookstor)
 #' 
-NULL
+"Bookstor"
 
 
 
@@ -1232,33 +1209,30 @@ NULL
 #' 
 #' @name Brain
 #' @docType data
-#' @format A data frame with 28 observations on the following 5 variables.
+#' @format A data frame with 28 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Species}{a factor with levels \code{Africian
+#' \item{species}{a factor with levels \code{African
 #' elephant} \code{Asian Elephant} \code{Brachiosaurus} \code{Cat}
 #' \code{Chimpanzee} \code{Cow} \code{Diplodocus} \code{Donkey} \code{Giraffe}
 #' \code{Goat} \code{Gorilla} \code{Gray wolf} \code{Guinea Pig} \code{Hamster}
 #' \code{Horse} \code{Human} \code{Jaguar} \code{Kangaroo} \code{Mole}
 #' \code{Mouse} \code{Mt Beaver} \code{Pig} \code{Potar monkey} \code{Rabbit}
 #' \code{Rat} \code{Rhesus monkey} \code{Sheep} \code{Triceratops}}
-#' \item{body.wt}{a numeric vector} 
-#' \item{brain.wt}{a numeric vector} 
-#' \item{logbody}{a numeric vector} 
-#' \item{logbrain}{a numeric vector} 
+#' \item{bodyweight}{body weight (in kg)} 
+#' \item{brainweight}{brain weight (in g)} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Brain)
-#' attach(Brain)
-#' plot(logbody,logbrain,pch=19,col="blue",main="Example 2.3")
-#' model <- lm(logbrain~logbody)
-#' abline(model)
-#' detach(Brain)
+#' plot(log(brainweight) ~ log(bodyweight), data = Brain, 
+#'      pch = 19, col = "blue", main = "Example 2.3")
+#' mod <- lm(log(brainweight) ~ log(bodyweight), data = Brain)      
+#' abline(mod, lty = "dashed", col = "blue")
 #' 
-NULL
+#' 
+"Brain"
 
 
 
@@ -1285,9 +1259,6 @@ NULL
 NULL
 
 
-
-
-
 #' Repair costs of vehicles crashed into a barrier at 5 miles per hour
 #' 
 #' Data for Exercise 1.73
@@ -1297,7 +1268,7 @@ NULL
 #' @docType data
 #' @format A data frame with 23 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Car}{a factor with levels \code{Buick Century}
+#' \item{car}{a factor with levels \code{Buick Century}
 #' \code{Buick Skylark} \code{Chevrolet Cavalier} \code{Chevrolet Corsica}
 #' \code{Chevrolet Lumina} \code{Dodge Dynasty} \code{Dodge Monaco} \code{Ford
 #' Taurus} \code{Ford Tempo} \code{Honda Accord} \code{Hyundai Sonata}
@@ -1305,24 +1276,19 @@ NULL
 #' \code{Oldsmobile Calais} \code{Oldsmobile Ciere} \code{Plymouth Acclaim}
 #' \code{Pontiac 6000} \code{Pontiac Grand Am} \code{Pontiac Sunbird}
 #' \code{Saturn SL2} \code{Subaru Legacy} \code{Toyota Camry}}
-#' \item{repair}{a numeric vector} 
+#' \item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bumpers)
-#' attach(Bumpers)
-#' EDA(repair)
-#' sum(repair>(mean(repair)-sd(repair)) & 
-#' repair < (mean(repair)+sd(repair)))/length(repair)
-#' stripchart(repair,method="stack")
+#' EDA(Bumpers$repair)
+#' stripchart(Bumpers$repair, method = "stack", pch = 19, col = "blue")
 #' library(lattice)
-#' dotplot(Car~repair)
-#' detach(Bumpers)
+#' dotplot(car ~ repair, data = Bumpers)
 #' 
-NULL
+"Bumpers"
 
 
 
@@ -1335,28 +1301,22 @@ NULL
 #' 
 #' @name Bus
 #' @docType data
-#' @format A data frame with 2 observations on the following 6 variables.
+#' @format A data frame with 29363 observations on 2 variables.
 #' \describe{ 
-#' \item{Attend}{a factor with levels \code{Absent}
-#' \code{Present}} 
-#' \item{AM}{a numeric vector} 
-#' \item{Noon}{a numeric vector} 
-#' \item{PM}{a numeric vector} 
-#' \item{Swing}{a numeric vector} 
-#' \item{Split}{a numeric vector} 
+#' \item{attendance}{a factor with levels \code{absent}
+#' \code{present}} 
+#' \item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, \code{swing}, and \code{split}} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bus)
-#' attach(Bus)
-#' Bus
-#' chisq.test(Bus[,2:6])
-#' detach(Bus)
+#' T1 <- xtabs(~attendance + shift, data = Bus)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Bus"
 
 
 
@@ -1378,21 +1338,18 @@ NULL
 #' Baptist} \code{New Hanover Regional} \code{Pitt Co. Memorial}
 #' \code{Presbyterian} \code{Rex} \code{Univ of North Carolina} \code{Wake
 #' County}}
-#' \item{charge}{a numeric vector} 
+#' \item{charge}{median charge for coronary bypass} 
 #' }
 #' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bypass)
-#' attach(Bypass)
-#' EDA(charge)
-#' t.test(charge,conf.level=.90)$conf
-#' t.test(charge,mu=35000)
-#' detach(Bypass)
+#' EDA(Bypass$charge)
+#' t.test(Bypass$charge, conf.level=.90)$conf
+#' t.test(Bypass$charge, mu = 35000)
 #' 
-NULL
+"Bypass"
 
 
 

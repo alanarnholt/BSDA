@@ -109,11 +109,11 @@ Artifici <- read.csv("Artifici.csv")
 devtools::use_data(Artifici, overwrite = TRUE)
 #
 #
-Aspirin <- read.csv("Aspirin.csv")
-Aspirin$impurity <- factor(Aspirin$impurity, 
+Asprin <- read.csv("Aspirin.csv")
+Asprin$impurity <- factor(Asprin$impurity, 
                         levels = c("1%", "5%", "10%"))
-str(Aspirin)
-devtools::use_data(Aspirin, overwrite = TRUE)
+str(Asprin)
+devtools::use_data(Asprin, overwrite = TRUE)
 #
 # Asthmati
 Asthmati <- read.csv("Asthmati.csv")
@@ -144,3 +144,112 @@ boxplot(rate ~ status, data = subset(Bigten, year = "1993-1994"),
 with(data = Bigten,
 tapply(rate, list(year, status), mean)
 )
+#
+# Biology
+Biology <- read.csv("Biology.csv")
+devtools::use_data(Biology, overwrite = TRUE)
+#
+# Birth
+Birth <- read.csv("Birth.csv", colClasses = c("character", "numeric", "factor"))
+devtools::use_data(Birth, overwrite = TRUE)
+#
+rate1998 <- subset(Birth, year == "1998", select = rate, drop = TRUE)
+stem(x = rate1998, scale = 2)
+hist(rate1998, breaks = seq(10.9, 21.9, 1.0), xlab = "1998 Birth Rate",
+     main = "Figure 1.14 in BSDA", col = "pink")
+hist(rate1998, breaks = seq(10.9, 21.9, 1.0), xlab = "1998 Birth Rate",
+     main = "Figure 1.16 in BSDA", col = "pink", freq = FALSE)
+lines(density(rate1998), lwd = 3)
+#
+# Blackedu
+# Create Blackedu
+# Create Allergy
+mat <- matrix(data = c(486, 496, 659, 530, 691, 435, 208, 134, 96, 65), nrow = 2)
+dimnames(mat) <- list(gender = c("Female", "Male"), 
+                      education = c("High school dropout", "High school graduate", 
+                                    "Some college", "Bachelor's degree", "Graduate degree"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Blackedu <- vcdExtra::expand.dft(matDF)
+Blackedu$gender <- factor(Blackedu$gender, 
+                        levels = c("Female", "Male"))
+Blackedu$education <- factor(Blackedu$education, 
+                             levels = c("High school dropout", "High school graduate", 
+                                        "Some college", "Bachelor's degree", "Graduate degree"))
+# Check
+# xtabs(~gender + education, data = Blackedu)  # OK now
+devtools::use_data(Blackedu, overwrite = TRUE)
+#
+# Blood
+Blood <- read.csv("Blood.csv")
+devtools::use_data(Blood, overwrite = TRUE)
+# checks
+DIFF <- Blood$machine - Blood$expert
+qqnorm(DIFF)
+qqline(DIFF)
+rm(DIFF)
+t.test(Blood$machine, Blood$expert, paired = TRUE)
+#
+# Board
+Board <- read.csv("Board.csv")
+devtools::use_data(Board, overwrite = TRUE)
+# Checks
+boxplot(salary ~ university, data = Board, col = c("red", "blue", "green"),
+        ylab = "Income")
+tapply(Board$salary, Board$university, summary)
+anova(lm(salary ~ university, data = Board))
+#
+# Bones
+Bones <- read.csv("Bones.csv")
+devtools::use_data(Bones, overwrite = TRUE)
+#
+# Books
+Books <- read.csv("Books.csv")
+devtools::use_data(Books, overwrite = TRUE)
+# Examples
+plot(spelling ~ book, data = Books)
+mod <- lm(spelling ~ book, data = Books)
+summary(mod)
+abline(mod, col = "blue", lwd = 2)
+#
+# Bookstor
+Bookstor <- read.csv("Bookstor.csv")
+devtools::use_data(Bookstor, overwrite = TRUE)
+# Checks
+boxplot(dollars ~ store, data = Bookstor, 
+        col = c("purple", "lightblue", "cyan"))
+kruskal.test(dollars ~ store, data = Bookstor)
+#
+# Brain
+Brain <- read.csv("Brain.csv")
+devtools::use_data(Brain, overwrite = TRUE)
+# Checks
+plot(log(brainweight) ~ log(bodyweight), data = Brain,
+     pch = 19, col = "blue", main = "Example 2.3")
+mod <- lm(log(brainweight) ~ log(bodyweight), data = Brain)
+abline(mod, lty = "dashed", col = "blue")
+#
+# Bumpers
+Bumpers <- read.csv("Bumpers.csv")
+devtools::use_data(Bumpers, overwrite = TRUE)
+# Checks
+str(Bumpers)
+#
+# Bus
+# Create Bus
+mat <- matrix(data = c(454, 5806, 208, 2112, 491, 3989, 160, 3790, 1599, 10754), nrow = 2)
+dimnames(mat) <- list(attendance = c("absent", "present"), 
+                      shift = c("am", "noon", "pm", "swing", "split"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Bus <- vcdExtra::expand.dft(matDF)
+Bus$attendance <- factor(Bus$attendance, 
+                          levels = c("absent", "present"))
+Bus$shift <- factor(Bus$shift, levels = c("am", "noon", "pm", "swing", "split"))
+# Checks
+xtabs(~attendance + shift, data = Bus)
+devtools::use_data(Bus, overwrite = TRUE)
+#
+# Bypass
+Bypass <- read.csv("Bypass.csv")
+devtools::use_data(Bypass, overwrite = TRUE)

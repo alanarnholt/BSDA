@@ -6,27 +6,27 @@
 \title{Blood pressure of 15 adult males taken by machine and by an expert}
 \format{A data frame with 15 observations on the following 2 variables.
 \describe{ 
-\item{Machine}{a numeric vector} 
-\item{Expert}{a numeric vector} 
+\item{machine}{blood pressure recorded from an automated blood pressure machine} 
+\item{expert}{blood pressure recorded by an expert using an at-home device} 
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
+}
+\usage{
+Blood
 }
 \description{
 Data for Exercise 7.84
 }
 \examples{
 
-str(Blood)
-attach(Blood)
-DIF <- Machine - Expert
-qqnorm(DIF)
-qqline(DIF)
-shapiro.test(DIF)
-t.test(Machine,Expert,paired=TRUE)
-detach(Blood)
-remove(DIF)
+DIFF <- Blood$machine - Blood$expert
+shapiro.test(DIFF)
+qqnorm(DIFF)
+qqline(DIFF)
+rm(DIFF)
+t.test(Blood$machine, Blood$expert, paired = TRUE)
 
 }
 \keyword{datasets}

@@ -4,28 +4,28 @@
 \name{Blackedu}
 \alias{Blackedu}
 \title{Education level of blacks by gender}
-\format{A data frame with 5 observations on the following 3 variables.
-\describe{ 
-\item{education}{a factor with levels \code{bachelor deg}
-\code{graduate deg} \code{high sch dropout} \code{high sch graduate}
-\code{some college}} 
-\item{female}{a numeric vector}
-\item{male}{a numeric vector} 
+\format{A data frame with 3800 observations on 2 variables.
+\describe{
+\item{gender}{a factor with levels \code{Female} and \code{Male}}
+\item{education}{a factor with levels \code{High school dropout},
+\code{High school graudate}, \code{Some college}, \code{Bachelor}'\code{s degree}, and
+\code{Graduate degree}} 
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
+}
+\usage{
+Blackedu
 }
 \description{
 Data for Exercise 8.55
 }
 \examples{
 
-str(Blackedu)
-attach(Blackedu)
-Blackedu
-chisq.test(Blackedu[,2:3])
-detach(Blackedu)
+T1 <- xtabs(~gender + education, data = Blackedu)
+T1
+chisq.test(T1)
 
 }
 \keyword{datasets}
