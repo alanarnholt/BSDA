@@ -6,19 +6,25 @@
 \title{Number of books read and final spelling scores for 17 third graders}
 \format{A data frame with 17 observations on the following 2 variables.
 \describe{ 
-\item{book}{a numeric vector} 
-\item{spelling}{a numeric vector} 
+\item{book}{number of books read} 
+\item{spelling}{spelling score} 
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
+}
+\usage{
+Books
 }
 \description{
 Data for Exercise 9.53
 }
 \examples{
 
-data(Books)
+plot(spelling ~ book, data = Books)
+mod <- lm(spelling ~ book, data = Books)
+summary(mod)
+abline(mod, col = "blue", lwd = 2)
 
 }
 \keyword{datasets}

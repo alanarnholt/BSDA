@@ -6,7 +6,7 @@
 \title{Repair costs of vehicles crashed into a barrier at 5 miles per hour}
 \format{A data frame with 23 observations on the following 2 variables.
 \describe{ 
-\item{Car}{a factor with levels \code{Buick Century}
+\item{car}{a factor with levels \code{Buick Century}
 \code{Buick Skylark} \code{Chevrolet Cavalier} \code{Chevrolet Corsica}
 \code{Chevrolet Lumina} \code{Dodge Dynasty} \code{Dodge Monaco} \code{Ford
 Taurus} \code{Ford Tempo} \code{Honda Accord} \code{Hyundai Sonata}
@@ -14,26 +14,24 @@ Taurus} \code{Ford Tempo} \code{Honda Accord} \code{Hyundai Sonata}
 \code{Oldsmobile Calais} \code{Oldsmobile Ciere} \code{Plymouth Acclaim}
 \code{Pontiac 6000} \code{Pontiac Grand Am} \code{Pontiac Sunbird}
 \code{Saturn SL2} \code{Subaru Legacy} \code{Toyota Camry}}
-\item{repair}{a numeric vector} 
+\item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
+}
+\usage{
+Bumpers
 }
 \description{
 Data for Exercise 1.73
 }
 \examples{
 
-str(Bumpers)
-attach(Bumpers)
-EDA(repair)
-sum(repair>(mean(repair)-sd(repair)) & 
-repair < (mean(repair)+sd(repair)))/length(repair)
-stripchart(repair,method="stack")
+EDA(Bumpers$repair)
+stripchart(Bumpers$repair, method = "stack", pch = 19, col = "blue")
 library(lattice)
-dotplot(Car~repair)
-detach(Bumpers)
+dotplot(car ~ repair, data = Bumpers)
 
 }
 \keyword{datasets}

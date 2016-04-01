@@ -6,7 +6,7 @@
 \title{Live birth rates in 1990 and 1998 for all states}
 \format{A data frame with 51 observations on the following 3 variables.
 \describe{ 
-\item{State}{a factor with levels \code{Alabama}
+\item{state}{a character with levels \code{Alabama}
 \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
 Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
@@ -19,27 +19,28 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \code{Rhode Island} \code{South Carolina} \code{South Dakota}
 \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
 \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-\item{X1990rate}{a numeric vector} 
-\item{X1998rate}{a numeric vector} 
+\item{rate}{live birth rates per 1000 population} 
+\item{year}{a factor with levels \code{1990} and \code{1998}} 
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
+}
+\usage{
+Birth
 }
 \description{
 Data for Exercise 1.10
 }
 \examples{
 
-str(Birth)
-attach(Birth)
-stem(X1998rate)
-hist(X1998rate,breaks=seq(10.9,21.9,1.0),xlab="1998 Birth Rate",
-main="Figure 1.14 in BSDA",col="pink")
-hist(X1998rate,breaks=seq(10.9,21.9,1.0),xlab="1998 Birth Rate",
-main="Figure 1.14 in BSDA",col="pink",prob=TRUE)
-lines(density(X1998rate),col="red",lwd=2)
-detach(Birth)
+rate1998 <- subset(Birth, year == "1998", select = rate, drop = TRUE)
+stem(x = rate1998, scale = 2)
+hist(rate1998, breaks = seq(10.9, 21.9, 1.0), xlab = "1998 Birth Rate",
+     main = "Figure 1.14 in BSDA", col = "pink")
+hist(rate1998, breaks = seq(10.9, 21.9, 1.0), xlab = "1998 Birth Rate",
+     main = "Figure 1.16 in BSDA", col = "pink", freq = FALSE)      
+lines(density(rate1998), lwd = 3)
 
 }
 \keyword{datasets}

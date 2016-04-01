@@ -6,26 +6,25 @@
 \title{Incomes of board members from three different universities}
 \format{A data frame with 7 observations on the following 3 variables.
 \describe{ 
-\item{UnivA}{a numeric vector} 
-\item{UnivB}{a numeric vector} 
-\item{UnivC}{a numeric vector} 
+\item{salary}{1999 salary (in $1000) for board directors} 
+\item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
+}
+\usage{
+Board
 }
 \description{
 Data for Exercise 10.14
 }
 \examples{
 
-str(Board)
-attach(Board)
-STACKED <-stack(Board)
-STACKED[1:5,]
-boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-remove(STACKED)
-detach(Board)
+boxplot(salary ~ university, data = Board, col = c("red", "blue", "green"), 
+        ylab = "Income")
+tapply(Board$salary, Board$university, summary)
+anova(lm(salary ~ university, data = Board))
 
 }
 \keyword{datasets}

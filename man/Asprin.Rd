@@ -2,7 +2,6 @@
 % Please edit documentation in R/BSDA-package.R
 \docType{data}
 \name{Asprin}
-\alias{Aspirin}
 \alias{Asprin}
 \title{Dissolving time versus level of impurities in aspirin tablets}
 \format{A data frame with 15 observations on 2 variables.
@@ -15,14 +14,14 @@ Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
 \usage{
-Aspirin
+Asprin
 }
 \description{
 Data for Exercise 10.51
 }
 \examples{
 
-boxplot(time ~ impurity, data = Aspirin, 
+boxplot(time ~ impurity, data = Asprin, 
         col = c("red", "blue", "green"))
 
 }
