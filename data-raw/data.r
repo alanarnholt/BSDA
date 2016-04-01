@@ -144,3 +144,7 @@ boxplot(rate ~ status, data = subset(Bigten, year = "1993-1994"),
 with(data = Bigten,
 tapply(rate, list(year, status), mean)
 )
+#
+# Biology
+Biology <- read.csv("Biology.csv")
+devtools::use_data(Biology, overwrite = TRUE)
