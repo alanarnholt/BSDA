@@ -305,3 +305,21 @@ devtools::use_data(Censored, overwrite = TRUE)
 str(Censored)
 boxplot(survival ~ treatment, data = Censored)
 wilcox.test(survival ~ treatment, data = Censored, alternative = "greater")
+#
+# Challeng
+Challeng <- read.csv("Challeng.csv", colClasses = c("character", "character", "numeric", "numeric"))
+Challeng$date <- as.Date(Challeng$date, "%m/%d/%y")
+devtools::use_data(Challeng, overwrite = TRUE)
+# Examples
+str(Challeng)
+stem(Challeng$temp)
+summary(Challeng$temp)
+IQR(Challeng$temp)
+#
+# Chemist
+read.csv("Chemist.csv")
+devtools::use_data(Chemist, overwrite = TRUE)
+#
+# Chesapea
+read.csv("Chesapea.csv")
+devtools::use_data(Chesapea, overwrite = TRUE)

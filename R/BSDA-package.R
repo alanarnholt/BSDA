@@ -1532,47 +1532,40 @@ NULL
 #' @docType data
 #' @format A data frame with 25 observations on the following 4 variables.
 #' \describe{ 
-#' \item{flight}{a factor with levels \code{1} \code{2}
-#' \code{3} \code{4} \code{41-b} \code{41-c} \code{41-d} \code{41-g} \code{5}
-#' \code{51-a} \code{51-b} \code{51-c} \code{51-d} \code{51-f} \code{51-g}
-#' \code{51-i} \code{51-j} \code{6} \code{61-a} \code{61-b} \code{61-c}
-#' \code{61-i} \code{7} \code{8} \code{9}} 
-#' \item{date}{a factor with
-#' levels \code{1/12/86} \code{1/24/85} \code{1/28/86} \code{10/3/85}
-#' \code{10/30/85} \code{10/5/84} \code{11/11/82} \code{11/12/81}
-#' \code{11/26/85} \code{11/28/83} \code{11/8/84} \code{2/3/84} \code{3/22/82}
-#' \code{4/12/81} \code{4/12/85} \code{4/29/85} \code{4/4/83} \code{4/6/84}
-#' \code{6/17/85} \code{6/18/83} \code{6/27/82} \code{7/29/85} \code{8/27/85}
-#' \code{8/30/83} \code{8/30/84}} 
-#' \item{temp}{a numeric vector}
-#' \item{Failures}{a numeric vector} 
+#' \item{flight}{a character variable indicating the flight}
+#' \item{date}{date of the flight} 
+#' \item{temp}{temperature (in fahrenheit)}
+#' \item{failures}{number of failures} 
 #' }
+#' 
+#' @source Dalal, S. R., Fowlkes, E. B., Hoadley, B. 1989. \dQuote{Risk Analysis of the Space Shuttle: Pre-Challenger 
+#' Prediction of Failure.} 
+#' \emph{Journal of the American Statistical Association}, 84, No. 408, 945-957.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Challeng)
-#' attach(Challeng)
-#' stem(temp)
-#' summary(temp)
-#' IQR(temp)
-#' quantile(temp)
-#' fivenum(temp)
-#' stem(sort(temp)[-1])
-#' summary(sort(temp)[-1])
-#' IQR(sort(temp)[-1])
-#' quantile(sort(temp)[-1])
-#' fivenum(sort(temp)[-1])
-#' par(mfrow=c(1,2))
-#' qqnorm(temp)
-#' qqline(temp)
-#' qqnorm(sort(temp)[-1])
-#' qqline(sort(temp)[-1])
-#' par(mfrow=c(1,1))
-#' detach(Challeng)
+#' str(Challeng) 
+#' stem(Challeng$temp)
+#' summary(Challeng$temp)
+#' IQR(Challeng$temp)
+#' quantile(Challeng$temp)
+#' fivenum(Challeng$temp)
+#' stem(sort(Challeng$temp)[-1])
+#' summary(sort(Challeng$temp)[-1])
+#' IQR(sort(Challeng$temp)[-1])
+#' quantile(sort(Challeng$temp)[-1])
+#' fivenum(sort(Challeng$temp)[-1])
+#' par(mfrow=c(1, 2))
+#' qqnorm(Challeng$temp)
+#' qqline(Challeng$temp)
+#' qqnorm(sort(Challeng$temp)[-1])
+#' qqline(sort(Challeng$temp)[-1])
+#' par(mfrow=c(1, 1))
 #' 
-NULL
+"Challeng"
 
 
 
@@ -1587,7 +1580,7 @@ NULL
 #' @docType data
 #' @format A data frame with 50 observations on the following variable.
 #' \describe{ 
-#' \item{salary}{a numeric vector} 
+#' \item{salary}{starting salary (in dollars) for chemistry major} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1595,11 +1588,9 @@ NULL
 #' @examples
 #' 
 #' str(Chemist)
-#' attach(Chemist)
-#' EDA(salary)
-#' detach(Chemist)
+#' EDA(Chemist$salary)
 #' 
-NULL
+"Chemist"
 
 
 
@@ -1608,29 +1599,32 @@ NULL
 #' Surface salinity measurements taken offshore from Annapolis, Maryland in
 #' 1927
 #' 
-#' Data for Exercise 6.46
+#' Data for Exercise 6.41
 #' 
 #' 
 #' @name Chesapea
 #' @docType data
 #' @format A data frame with 16 observations on the following variable.
 #' \describe{ 
-#' \item{salinity}{a numeric vector} 
+#' \item{salinity}{surface salinity measurements (in parts per 1000) for station 11, 
+#' offshore from Annanapolis, Maryland, on July 3-4, 1927.} 
 #' }
+#' 
+#' @source Davis, J. (1986) \emph{Statistics and Data Analysis in Geology, Second Edition}. 
+#' John Wiley and Sons, New York.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Chesapea)
-#' attach(Chesapea)
-#' qqnorm(salinity)
-#' qqline(salinity)
-#' shapiro.test(salinity)
-#' t.test(salinity,mu=7)
-#' detach(Chesapea)
+#' qqnorm(Chesapea$salinity)
+#' qqline(Chesapea$salinity)
+#' shapiro.test(Chesapea$salinity)
+#' t.test(Chesapea$salinity, mu = 7)
 #' 
-NULL
+"Chesapea"
 
 
 
