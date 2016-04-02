@@ -20,10 +20,6 @@ in 1990}
 \item{errors}{a numeric vector} 
 \item{era}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.23
 }
@@ -38,6 +34,10 @@ summary(model)
 detach(Wins)
 remove(model)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

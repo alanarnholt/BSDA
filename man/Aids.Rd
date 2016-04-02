@@ -11,10 +11,6 @@ transfusion}
 \item{age}{age (in years) of patient} 
 \item{group}{a numeric vector}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data used in Exercise 6.60
 }
@@ -31,6 +27,10 @@ with(data = Aids,
 SIGN.test(duration, md = 24, alternative = "greater")
 )
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

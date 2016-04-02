@@ -15,10 +15,6 @@
 \code{Eg} \code{In} \code{Is} \code{Ni} \code{Ru} \code{SK} \code{Uk}
 \code{Ve}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 1.14 and 1.47
 }
@@ -34,6 +30,10 @@ dotchart(rate,main="Tickets/Vehicle/Month",col="red",pch=2)
 barplot(rate,col="pink")
 detach(Diplomat)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

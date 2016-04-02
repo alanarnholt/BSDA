@@ -269,3 +269,18 @@ with(data = Cabinets,
 wilcox.test(SupplA, SupplB, paired = TRUE)
 )
 rm(DIF)
+#
+# Cancer
+Cancer <- read.csv("Cancer.csv")
+devtools::use_data(Cancer, overwrite = TRUE)
+# Examples
+str(Cancer)
+boxplot(survival ~ type, Cancer)
+stomach <- Cancer$survival[Cancer$type == "stomach"]
+bronchus <- Cancer$survival[Cancer$type == "bronchus"]
+boxplot(stomach, ylab = "Days")
+SIGN.test(stomach, md = 100, alternative = "greater")
+SIGN.test(bronchus, md = 100, alternative = "greater")
+rm(bronchus, stomach)
+
+

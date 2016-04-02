@@ -36,10 +36,6 @@ island} \code{south carolina} \code{south dakota} \code{tennessee}
 \item{code99}{a numeric vector} 
 \item{expend99}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Statistical Insight Chapter 9
 }
@@ -50,6 +46,10 @@ attach(Sat)
 pairs(Sat)
 detach(Sat)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -9,10 +9,6 @@ graduate school}
 \describe{ 
 \item{miller}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 5.7
 }
@@ -27,6 +23,10 @@ qqnorm(miller,col="blue")
 qqline(miller,col="red")
 detach(Miller)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

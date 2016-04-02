@@ -9,10 +9,6 @@
 \item{defectives}{number of defective gears in the production of 100 gears per day} 
 \item{manufacturer}{a factor with levels \code{A} and \code{B}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Autogear
 }
@@ -25,6 +21,10 @@ t.test(defectives ~ manufacturer, data = Autogear)
 wilcox.test(defectives ~ manufacturer, data = Autogear)
 t.test(defectives ~ manufacturer, var.equal = TRUE, data = Autogear)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

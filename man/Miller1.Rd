@@ -8,10 +8,6 @@
 \describe{ 
 \item{miller}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.41
 }
@@ -23,6 +19,10 @@ stem(miller)
 stem(miller,scale=2)
 detach(Miller1)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

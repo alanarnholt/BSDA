@@ -12,10 +12,6 @@
 \item{FITS1}{a numeric vector} 
 \item{RESI1}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.36 and Example 9.8
 }
@@ -31,6 +27,10 @@ summary(model)
 detach(Randd)
 remove(model)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

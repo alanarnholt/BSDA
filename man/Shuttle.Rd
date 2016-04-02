@@ -10,10 +10,6 @@ area}
 \item{shuttle}{a numeric vector} 
 \item{autos}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.20
 }
@@ -26,6 +22,10 @@ summary(model)
 detach(Shuttle)
 remove(model)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

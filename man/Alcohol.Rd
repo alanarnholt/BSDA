@@ -7,10 +7,6 @@
 \format{A data frame with 14 observations on the following variable.
 \describe{ 
 \item{age}{a numeric vector} }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Alcohol
 }
@@ -23,6 +19,10 @@ qqnorm(Alcohol$age)
 qqline(Alcohol$age)
 SIGN.test(Alcohol$age, md = 20, conf.level = 0.99)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

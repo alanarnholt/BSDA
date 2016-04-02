@@ -9,10 +9,6 @@
 \item{Year}{a numeric vector} 
 \item{CPI}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.34
 }
@@ -25,6 +21,10 @@ names(CPI) <- Year
 barplot(CPI,col="pink",las=2,main="Problem 1.34")   
 detach(Cpi)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

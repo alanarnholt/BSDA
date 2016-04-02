@@ -10,10 +10,6 @@ situation}
 \item{Prestre}{a numeric vector}
 \item{Poststre}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 7.20
 }
@@ -29,6 +25,10 @@ t.test(Poststre,Prestre,paired=TRUE,alternative="less")
 detach(Stress)
 remove(DIF)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -9,10 +9,6 @@
 \item{react}{a numeric vector} 
 \item{drug}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.3
 }
@@ -24,6 +20,10 @@ boxplot(react~drug)
 anova(lm(react~as.factor(drug)))
 detach(Nervous)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

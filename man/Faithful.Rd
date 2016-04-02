@@ -9,10 +9,6 @@
 \item{Time}{a numeric vector} 
 \item{Eruption}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.12 and 5.111
 }
@@ -25,6 +21,10 @@ lines(density(Time),col="red",lwd=3)
 t.test(Time)$conf
 detach(Faithful)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -14,10 +14,6 @@
 \item{SRES2}{a numeric vector} 
 \item{FITS2}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.34
 }
@@ -28,6 +24,10 @@ attach(Windmill)
 summary(lm(output~velocity))
 detach(Windmill)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

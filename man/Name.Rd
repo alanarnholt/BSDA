@@ -20,10 +20,6 @@ Lee} \code{Schweppes} \code{Smirnoff} \code{Tampax} \code{Winston}
 \item{value}{a numeric vector}
 \item{revenue}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 2.28, 9.19, and Example 2.8
 }
@@ -39,6 +35,10 @@ summary(model)
 detach(Name)
 remove(model)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

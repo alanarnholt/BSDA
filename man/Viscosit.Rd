@@ -9,10 +9,6 @@
 \item{first}{a numeric vector} 
 \item{second}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.44
 }
@@ -23,6 +19,10 @@ attach(Viscosit)
 t.test(first,second)
 detach(Viscosit)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

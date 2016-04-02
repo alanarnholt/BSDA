@@ -9,10 +9,6 @@
 \item{sales}{a numeric vector} 
 \item{loss}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.58
 }
@@ -23,6 +19,10 @@ attach(Shoplift)
 summary(lm(loss~sales))
 detach(Shoplift)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

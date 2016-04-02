@@ -8,10 +8,6 @@
 \describe{ 
 \item{time}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.93
 }
@@ -23,6 +19,10 @@ EDA(time)
 SIGN.test(time,md=98.5,alternative="greater")
 detach(Stable)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

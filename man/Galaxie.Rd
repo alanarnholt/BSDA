@@ -8,10 +8,6 @@
 \describe{ 
 \item{velocity}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 5.2
 }
@@ -22,6 +18,10 @@ attach(Galaxie)
 EDA(velocity)
 detach(Galaxie)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

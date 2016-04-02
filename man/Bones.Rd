@@ -9,10 +9,6 @@
 \item{density}{bone density measurements}
 \item{group}{a factor with levels \code{active} and \code{nonactive}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Bones
 }
@@ -26,6 +22,10 @@ t.test(rank(density) ~ group, data = Bones, alternative = "greater")
 wilcox.test(density ~ group, data = Bones, alternative = "greater")
 
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -9,10 +9,6 @@
 \item{gender}{a numeric vector} 
 \item{smoke}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 4.85
 }
@@ -25,6 +21,10 @@ addmargins(table(gender,smoke))
 addmargins(table(gender,smoke)/1000)
 detach(Kidsmoke)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

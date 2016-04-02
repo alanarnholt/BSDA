@@ -10,10 +10,6 @@
 \item{After}{a numeric vector} 
 \item{differ}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.53
 }
@@ -28,6 +24,10 @@ t.test(After,Before,paired=TRUE,conf.level=.99)
 wilcox.test(After,Before,paired=TRUE)
 detach(Movie)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

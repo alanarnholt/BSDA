@@ -9,10 +9,6 @@
 \item{age}{number of years before 1983 - the year the data were obtained}
 \item{phase}{Ceramic Phase numbers} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Archaeo
 }
@@ -25,6 +21,10 @@ boxplot(age ~ phase, data = Archaeo, col = "yellow",
         main = "Example 1.16", xlab = "Ceramic Phase", ylab = "Age")
 anova(lm(age ~ as.factor(phase), data= Archaeo))
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

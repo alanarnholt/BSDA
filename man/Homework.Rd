@@ -10,10 +10,6 @@ school students}
 \item{Private}{a numeric vector} 
 \item{Public}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.78
 }
@@ -25,6 +21,10 @@ boxplot(Private,Public)
 t.test(Private,Public,conf.level=.98)
 detach(Homework)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

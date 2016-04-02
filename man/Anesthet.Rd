@@ -8,10 +8,6 @@
 \describe{ 
 \item{recover}{recovery time in hours} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Anesthet
 }
@@ -26,6 +22,10 @@ with(data = Anesthet,
 t.test(recover, conf.level = 0.90)$conf
 )
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

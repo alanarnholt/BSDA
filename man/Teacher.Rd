@@ -23,10 +23,6 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \item{X1983.84}{a numeric vector} 
 \item{X1993.94}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.114
 }
@@ -38,6 +34,10 @@ boxplot(X1973.74,X1983.84,X1993.94,
 names=c("1973-1974","1983-1984","1993-1994"),ylab="Average Salary")
 detach(Teacher)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

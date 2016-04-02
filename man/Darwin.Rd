@@ -14,10 +14,6 @@
 \item{differ}{a numeric vector} 
 \item{sgnrnks}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.62
 }
@@ -31,6 +27,10 @@ shapiro.test(differ)
 wilcox.test(cross,self,paired=TRUE)
 detach(Darwin)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

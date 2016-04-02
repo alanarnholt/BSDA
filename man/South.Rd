@@ -8,10 +8,6 @@
 \describe{ 
 \item{rate}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.84
 }
@@ -22,6 +18,10 @@ attach(South)
 boxplot(rate,col="yellow",main="Problem 1.83")
 detach(South)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

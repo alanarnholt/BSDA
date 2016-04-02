@@ -14,10 +14,6 @@
 \item{condition}{a factor with levels \code{CondA}
 \code{CondB} \code{CondC} \code{CondD}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.13
 }
@@ -29,6 +25,10 @@ boxplot(score~condition)
 anova(lm(score~condition))
 detach(Maze)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

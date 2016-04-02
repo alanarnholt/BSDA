@@ -12,10 +12,6 @@
 \item{Against}{a numeric vector} 
 \item{undecide}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 8.53
 }
@@ -27,6 +23,10 @@ Drink
 chisq.test(Drink[,2:4])
 detach(Drink)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

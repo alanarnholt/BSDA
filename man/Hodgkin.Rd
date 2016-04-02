@@ -12,10 +12,6 @@
 \item{Partial}{a numeric vector} 
 \item{None}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.77
 }
@@ -30,6 +26,10 @@ barplot(t(HOD),legend=TRUE,beside=TRUE)
 detach(Hodgkin)
 remove(HOD)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

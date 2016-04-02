@@ -8,10 +8,6 @@
 \describe{ 
 \item{receipt}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 2.18
 }
@@ -19,6 +15,10 @@ Data for Example 2.18
 
 data(Hardware)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

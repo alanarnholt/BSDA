@@ -9,10 +9,6 @@
 \item{machine}{blood pressure recorded from an automated blood pressure machine} 
 \item{expert}{blood pressure recorded by an expert using an at-home device} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Blood
 }
@@ -28,6 +24,10 @@ qqline(DIFF)
 rm(DIFF)
 t.test(Blood$machine, Blood$expert, paired = TRUE)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

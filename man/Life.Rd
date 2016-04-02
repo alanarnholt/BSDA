@@ -10,10 +10,6 @@
 \item{Men}{a numeric vector} 
 \item{Women}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.31
 }
@@ -28,6 +24,10 @@ text(1955,65,"Men",col="blue")
 text(1955,70,"Women",col="red")
 detach(Life)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -8,10 +8,6 @@
 \describe{ 
 \item{mileage}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Statistical Insight Chapter 6
 }
@@ -22,6 +18,10 @@ attach(Honda)
 t.test(mileage,mu=40,alternative="less")
 detach(Honda)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

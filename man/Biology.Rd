@@ -8,10 +8,6 @@
 \describe{ 
 \item{score}{test scores on the first test in a beginning biology class} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Biology
 }
@@ -24,6 +20,10 @@ hist(Biology$score, breaks = "scott", col = "brown", freq = FALSE,
 main = "Problem 1.49", xlab = "Test Score")
 lines(density(Biology$score), lwd=3)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

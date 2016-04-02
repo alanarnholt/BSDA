@@ -13,10 +13,6 @@
 \item{Site}{a numeric vector} 
 \item{Ranks}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.33
 }
@@ -28,6 +24,10 @@ boxplot(Traffic~Site)
 anova(lm(Traffic~as.factor(Site)))
 detach(Lodge)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

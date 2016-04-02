@@ -9,10 +9,6 @@
 \item{time}{time (in seconds) for aspirin to dissolve} 
 \item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Asprin
 }
@@ -24,6 +20,10 @@ Data for Exercise 10.51
 boxplot(time ~ impurity, data = Asprin, 
         col = c("red", "blue", "green"))
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

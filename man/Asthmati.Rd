@@ -10,10 +10,6 @@
 \item{placebo}{asthmatic relief index for patients given a placebo} 
 \item{difference}{difference between the \code{placebo} and \code{drug}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Asthmati
 }
@@ -30,6 +26,10 @@ t.test(placebo, drug, paired = TRUE, mu = 0,
 alternative = "greater")
 )
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

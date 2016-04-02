@@ -16,10 +16,6 @@ SO2500G} \code{Black&D T660G} \code{Black&D TRO200} \code{Black&D TRO400}
 \item{score}{a numeric vector}
 \item{cost}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.35
 }
@@ -27,6 +23,10 @@ Data for Exercise 9.35
 
 data(Toaster)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

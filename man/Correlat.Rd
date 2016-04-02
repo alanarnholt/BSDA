@@ -9,10 +9,6 @@
 \item{X}{a numeric vector} 
 \item{Y}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.23
 }
@@ -25,6 +21,10 @@ model <- lm(Y~X)
 abline(model)
 detach(Correlat)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

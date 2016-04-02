@@ -8,10 +8,6 @@
 \describe{ 
 \item{survival}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 6.12
 }
@@ -22,6 +18,10 @@ attach(Lethal)
 SIGN.test(survival,md=45,alternative="less")
 detach(Lethal)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

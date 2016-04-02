@@ -22,10 +22,6 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \item{rate}{live birth rates per 1000 population} 
 \item{year}{a factor with levels \code{1990} and \code{1998}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Birth
 }
@@ -42,6 +38,10 @@ hist(rate1998, breaks = seq(10.9, 21.9, 1.0), xlab = "1998 Birth Rate",
      main = "Figure 1.16 in BSDA", col = "pink", freq = FALSE)      
 lines(density(rate1998), lwd = 3)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -14,10 +14,6 @@
 \item{D}{a numeric vector} 
 \item{F}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 8.34
 }
@@ -29,6 +25,10 @@ Vehicle
 chisq.test(Vehicle[,2:6])
 detach(Vehicle)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

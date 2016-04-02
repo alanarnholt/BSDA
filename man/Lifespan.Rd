@@ -11,10 +11,6 @@
 \item{RESI1}{a numeric vector}
 \item{FITS1}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.4, 2.37, and 2.49
 }
@@ -31,6 +27,10 @@ anova(model)
 # plot(model)  # Used for diagnostic purposes
 detach(Lifespan)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -8,10 +8,6 @@
 \describe{ 
 \item{rent}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.117
 }
@@ -23,6 +19,10 @@ EDA(rent)
 t.test(rent,conf.level=.99)$conf
 detach(Metrent)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

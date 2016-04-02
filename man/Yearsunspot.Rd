@@ -31,10 +31,6 @@
 \item{SSN}{a numeric vector} 
 \item{year}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Yearsunspot
 }
@@ -48,6 +44,10 @@ attach(Yearsunspot)
 boxplot(SSN~year,main="Exercise 2.7",col="lightblue")
 detach(Yearsunspot)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

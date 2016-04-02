@@ -8,10 +8,6 @@
 \describe{ 
 \item{duration}{duration (in hours) for transplant} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Artifici
 }
@@ -26,6 +22,10 @@ values <- Artifici$duration[Artifici$duration < 6.5]
 values
 summary(values)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

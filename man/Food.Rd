@@ -8,10 +8,6 @@
 \describe{ 
 \item{food}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.106
 }
@@ -22,6 +18,10 @@ attach(Food)
 EDA(food)
 detach(Food)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

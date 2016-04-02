@@ -12,10 +12,6 @@
 \item{FITS1}{a numeric vector} 
 \item{Residuals}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 2.5, 2.24, and 2.55
 }
@@ -29,6 +25,10 @@ model <- lm(kilowatt~Size)
 plot(Size,resid(model))
 detach(Energy)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -11,10 +11,6 @@ self-defense}
 \item{Before}{a numeric vector} 
 \item{After}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 7.19
 }
@@ -30,6 +26,10 @@ t.test(After,Before,paired=TRUE,alternative="greater")
 detach(Selfdefe)
 remove(DIF)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

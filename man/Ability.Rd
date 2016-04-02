@@ -9,10 +9,6 @@
 \item{gender}{a factor with levels \code{girls} and \code{boys}} 
 \item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Ability
 }
@@ -25,6 +21,10 @@ CT <- xtabs(~gender + ability, data = Ability)
 CT
 chisq.test(CT)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

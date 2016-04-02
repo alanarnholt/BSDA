@@ -12,10 +12,6 @@
  \item{Regional}{a numeric vector} 
  \item{Metropol}{a numeric vector} 
  }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.18
 }
@@ -27,6 +23,10 @@ boxplot(cost~class)
 anova(lm(cost~as.factor(class)))
 detach(Laminect)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

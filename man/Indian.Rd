@@ -14,10 +14,6 @@ American indians living on reservations}
 \item{income}{a numeric vector} 
 \item{poverty}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.95
 }
@@ -32,6 +28,10 @@ par(mfrow=c(1,1))
 cor(cbind(highsch,income,poverty))
 detach(Indian)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

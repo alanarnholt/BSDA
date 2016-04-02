@@ -11,10 +11,6 @@
 \item{medication}{a factor with levels \code{seldane-d}
 \code{pseudoephedrine} \code{placebo}}
  }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Allergy
 }
@@ -27,6 +23,10 @@ T1 <- xtabs(~event + medication, data = Allergy)
 T1
 chisq.test(T1)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

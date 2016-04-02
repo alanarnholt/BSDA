@@ -9,10 +9,6 @@
 \item{response}{a numeric vector}
 \item{group}{a factor with e levels \code{A}, \code{B}, and \code{C}}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Abc
 }
@@ -24,6 +20,10 @@ Data used in Exercise 10.1
 boxplot(response ~ group, col=c("red", "blue", "green"), data = Abc )
 anova(lm(response ~ group, data = Abc))
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

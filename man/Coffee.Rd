@@ -11,10 +11,6 @@
 \item{differ}{a numeric vector}
 \item{sgnrnks}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.55
 }
@@ -29,6 +25,10 @@ t.test(With,Without,paired=TRUE,alternative="greater")
 wilcox.test(With,Without,paired=TRUE,alternative="greater")
 detach(Coffee)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

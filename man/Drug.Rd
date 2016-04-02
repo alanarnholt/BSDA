@@ -10,10 +10,6 @@ control and an experimental group}
 \item{trials}{a numeric vector} 
 \item{group}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.15
 }
@@ -25,6 +21,10 @@ boxplot(trials~group)
 wilcox.test(trials~group)
 detach(Drug)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

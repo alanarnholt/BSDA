@@ -13,10 +13,6 @@
 \item{Team}{a numeric vector} 
 \item{Ranks}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 10.53
 }
@@ -28,6 +24,10 @@ boxplot(Time~Team)
 anova(lm(Time~as.factor(Team)))
 detach(Nascar)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

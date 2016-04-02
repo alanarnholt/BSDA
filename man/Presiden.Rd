@@ -25,10 +25,6 @@
 \item{Inaugage}{a numeric vector} 
 \item{Deathage}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.126
 }
@@ -42,6 +38,10 @@ stripchart(x=list(Inaugage,Deathage),method="stack",
 group.names=c("Inaugural Age","Death Age"),col=c("green","brown"),pch=19)
 detach(Presiden) 
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

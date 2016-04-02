@@ -11,10 +11,6 @@
 \item{level}{a numeric vector} 
 \item{sunspot}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.98
 }
@@ -29,6 +25,10 @@ cor(sunspot,level)
 model
 detach(Victoria)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

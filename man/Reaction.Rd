@@ -8,10 +8,6 @@
 \describe{ 
 \item{time}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 6.11
 }
@@ -22,6 +18,10 @@ attach(Reaction)
 SIGN.test(time,md=15,alternative="less")
 detach(Reaction)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

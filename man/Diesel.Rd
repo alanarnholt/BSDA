@@ -34,10 +34,6 @@
 \item{Coast}{a numeric vector} 
 \item{Calif}{a numeric vector}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.8
 }
@@ -49,6 +45,10 @@ boxplot(NatAvg,EstCst,Gulf,Rocky,Calif,
 names=c("National Average","East Coast","Gulf","Rocky","California"),col="pink")
 
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

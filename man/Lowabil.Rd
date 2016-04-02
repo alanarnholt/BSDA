@@ -10,10 +10,6 @@
 \item{Experimt}{a numeric vector} 
 \item{Control}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 7.18
 }
@@ -29,6 +25,10 @@ t.test(Experimt,Control,paired=TRUE)
 detach(Lowabil)
 remove(DIF)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

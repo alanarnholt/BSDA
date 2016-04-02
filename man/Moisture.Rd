@@ -12,10 +12,6 @@ Louisiana}
 \item{lnmoist}{a numeric vector}
 \item{depthsq}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.37
 }
@@ -28,6 +24,10 @@ plot(depth,resid(model))
 detach(Moisture)
 remove(model)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

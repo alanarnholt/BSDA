@@ -9,10 +9,6 @@
 \item{score}{a numeric vector} 
 \item{group}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Backtoback
 }
@@ -24,6 +20,10 @@ Data for Exercise 7.40
 wilcox.test(score ~ group, data = Backtoback)
 t.test(score ~ group, data = Backtoback)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -8,10 +8,6 @@
 \describe{ 
 \item{days}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data used in Exercise 1.28
 }
@@ -22,6 +18,10 @@ CT
 barplot(CT, col = "pink")
 plot(ecdf(Absent$days), main = "ECDF")
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

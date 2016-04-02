@@ -12,10 +12,6 @@ students}
 \item{Method3}{a numeric vector}
 \item{Method4}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.17
 }
@@ -30,6 +26,10 @@ anova(lm(values~ind,data=STACKED))
 remove(STACKED)
 detach(Program)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

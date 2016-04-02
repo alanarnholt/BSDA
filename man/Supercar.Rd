@@ -14,10 +14,6 @@
 \item{speed}{a numeric vector} 
 \item{car}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Statistical Insight Chapter 10
 }
@@ -29,6 +25,10 @@ boxplot(speed~car)
 anova(lm(speed~as.factor(car)))
 detach(Supercar)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

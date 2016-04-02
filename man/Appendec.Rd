@@ -11,10 +11,6 @@ hospitals}
 \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Appendec
 }
@@ -29,6 +25,10 @@ Appendec$regionc <- ifelse(Appendec$region == 1, "rural",
 boxplot(cost ~ regionc, data = Appendec, col = c("red","blue", "cyan"))
 anova(lm(cost ~ as.factor(regionc), data = Appendec))
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

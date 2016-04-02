@@ -9,10 +9,6 @@
 \item{Party}{a numeric vector} 
 \item{Gender}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 8.3
 }
@@ -24,6 +20,10 @@ table(Party,Gender)
 chisq.test(table(Party,Gender))
 detach(Politic)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

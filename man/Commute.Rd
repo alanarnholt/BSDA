@@ -20,10 +20,6 @@
 \item{X1980}{a numeric vector}
 \item{X1990}{a numeric vector}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 1.13, and 7.85
 }
@@ -45,6 +41,10 @@ bwplot(ind~values)
 remove(commute)
 detach(Commute)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

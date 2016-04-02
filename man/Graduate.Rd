@@ -14,10 +14,6 @@ Carolina} \code{Tennessee} \code{Vanderbilt}}
 \code{LSt} \code{Mi} \code{MSt} \code{SC} \code{Te} \code{Va}}
 \item{Percent}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.118
 }
@@ -29,6 +25,10 @@ names(Percent) <- School
 barplot(Percent,las=2,cex.names=.65,col="tomato")
 detach(Graduate)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

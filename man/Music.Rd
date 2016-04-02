@@ -11,10 +11,6 @@ techniques}
 \item{Method2}{a numeric vector} 
 \item{differ}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.59
 }
@@ -28,6 +24,10 @@ shapiro.test(differ)
 t.test(Method1,Method2,paired=TRUE)
 detach(Music)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

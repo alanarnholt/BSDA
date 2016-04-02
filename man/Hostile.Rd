@@ -14,10 +14,6 @@ areas}
 \item{Type}{a numeric vector} 
 \item{Ranks}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 10.6
 }
@@ -29,6 +25,10 @@ boxplot(HLT~Type)
 kruskal.test(HLT~as.factor(Type))
 detach(Hostile)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

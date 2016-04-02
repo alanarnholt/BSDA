@@ -16,10 +16,6 @@ selected from 30 lots}
 \item{wafer23}{a numeric vector} 
 \item{wafer24}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.9
 }
@@ -30,6 +26,10 @@ attach(Chips)
 boxplot(wafer11,wafer12,wafer13,wafer14,wafer21,wafer22,wafer23,wafer24)
 detach(Chips)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

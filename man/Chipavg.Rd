@@ -11,10 +11,6 @@ circuits}
 \item{wafer2}{a numeric vector} 
 \item{thickness}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 6.49 and 7.47
 }
@@ -30,6 +26,10 @@ shapiro.test(wafer2)
 t.test(wafer1,wafer2,var.equal=TRUE)
 detach(Chipavg)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

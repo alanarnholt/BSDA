@@ -11,10 +11,6 @@
 \item{Carrier}{a numeric vector}
 \item{Non.carrier}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.78
 }
@@ -29,6 +25,10 @@ barplot(t(TON),beside=TRUE,legend=TRUE)
 remove(TON)
 detach(Tonsils)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

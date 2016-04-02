@@ -12,10 +12,6 @@ experimental course in German}
 \item{differ}{a numeric vector}
 \item{sgnrnks}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.60
 }
@@ -29,6 +25,10 @@ shapiro.test(differ)
 wilcox.test(Before,After,paired=TRUE)
 detach(German)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

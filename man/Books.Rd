@@ -9,10 +9,6 @@
 \item{book}{number of books read} 
 \item{spelling}{spelling score} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Books
 }
@@ -26,6 +22,10 @@ mod <- lm(spelling ~ book, data = Books)
 summary(mod)
 abline(mod, col = "blue", lwd = 2)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

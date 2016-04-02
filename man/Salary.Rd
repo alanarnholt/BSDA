@@ -8,10 +8,6 @@
 \describe{ 
 \item{salary}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 3.66
 }
@@ -19,6 +15,10 @@ Data for Exercise 3.66
 
 data(Salary)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

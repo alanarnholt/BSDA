@@ -11,10 +11,6 @@
 \item{differ}{a numeric vector}
 \item{signrnks}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.58
 }
@@ -29,6 +25,10 @@ t.test(After,Before,paired=TRUE,alternative="greater")
 wilcox.test(After,Before,paired=TRUE,alternative="greater")
 detach(Speed)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

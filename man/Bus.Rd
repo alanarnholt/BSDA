@@ -10,10 +10,6 @@
 \code{present}} 
 \item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, \code{swing}, and \code{split}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Bus
 }
@@ -26,6 +22,10 @@ T1 <- xtabs(~attendance + shift, data = Bus)
 T1
 chisq.test(T1)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -9,10 +9,6 @@
 \item{aptitude}{aptitude test scores}
 \item{product}{productivity scores} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Aptitude
 }
@@ -29,6 +25,10 @@ resid(model1)
 fitted(model1)
 cor(Aptitude$product, Aptitude$aptitude)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -12,10 +12,6 @@
 \item{Average}{a numeric vector} 
 \item{More}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 8.54
 }
@@ -27,6 +23,10 @@ Funeral
 chisq.test(Funeral[,2:4])
 detach(Funeral)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

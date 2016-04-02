@@ -17,10 +17,6 @@
 \item{Parallax}{a numeric vector} 
 \item{Sample}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.65
 }
@@ -34,6 +30,10 @@ SIGN.test(Parallax,md=8.798)
 t.test(Parallax,mu=8.798)
 detach(Short)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

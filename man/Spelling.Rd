@@ -11,10 +11,6 @@ instruction}
 \item{After}{a numeric vector} 
 \item{differ}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.56
 }
@@ -28,6 +24,10 @@ shapiro.test(differ)
 t.test(After,Before,paired=TRUE,alternative="greater")
 detach(Spelling)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

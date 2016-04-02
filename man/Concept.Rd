@@ -8,10 +8,6 @@
 \describe{ 
 \item{self}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 16.8 and 1.82
 }
@@ -29,6 +25,10 @@ sd(self/10)
 diff(range(self/10))
 detach(Concept)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

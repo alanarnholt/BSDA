@@ -25,10 +25,6 @@ ma} \code{ventura, ca} \code{wayne, mi} \code{worchester, ma}}
 \item{torts}{a numeric vector} 
 \item{rate}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.13
 }
@@ -39,6 +35,10 @@ attach(Tort)
 EDA(months)
 detach(Tort)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

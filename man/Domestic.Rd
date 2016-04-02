@@ -10,10 +10,6 @@
 \code{25-34} \code{35-49} \code{50-64}} 
 \item{Rate}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.20
 }
@@ -26,6 +22,10 @@ barplot(Rate,col="gold")
 pie(Rate)
 detach(Domestic)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

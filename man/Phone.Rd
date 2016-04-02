@@ -8,10 +8,6 @@
 \describe{ 
 \item{time}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.95
 }
@@ -25,6 +21,10 @@ shapiro.test(time)
 SIGN.test(time,md=5,alternative="greater")
 detach(Phone)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

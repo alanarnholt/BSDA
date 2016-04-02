@@ -9,10 +9,6 @@ workers}
 \describe{ 
 \item{number}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.46 and 6.98
 }
@@ -24,6 +20,10 @@ EDA(number)
 t.test(number,mu=24)
 detach(Vacation)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

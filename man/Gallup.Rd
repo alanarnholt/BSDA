@@ -27,10 +27,6 @@ conducted in 1980}
 \item{No.Crime4}{a numeric vector} 
 \item{No.Opinion4}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.76
 }
@@ -51,6 +47,10 @@ ylab="Percent of Population Opining")
 barplot((INFOmat[2:3,]),beside=TRUE,legend=TRUE,ylab="Percent of Population Opining" )
 remove(INFO,INFOmat)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

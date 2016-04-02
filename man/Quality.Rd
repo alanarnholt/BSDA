@@ -9,10 +9,6 @@
 \item{Process1}{a numeric vector}
 \item{Process2}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.81
 }
@@ -29,6 +25,10 @@ shapiro.test(Process2)
 t.test(Process1,Process2)
 detach(Quality)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -10,10 +10,6 @@
 \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
 \item{decade}{a character vector indicating the decade of an aircraft accident} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Airdisasters
 }
@@ -30,6 +26,10 @@ stripchart(deaths ~ decade, data = Airdisasters,
            xlab = "Number of fatalities")
 par(las = 0)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

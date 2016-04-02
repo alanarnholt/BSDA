@@ -8,10 +8,6 @@
 \describe{ 
 \item{score}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.116
 }
@@ -24,6 +20,10 @@ fivenum(score)
 boxplot(score,main="Problem 1.116",col="green")
 detach(Cat)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

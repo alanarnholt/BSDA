@@ -9,10 +9,6 @@
 \item{X9am}{a numeric vector} 
 \item{X2pm}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.30
 }
@@ -23,6 +19,10 @@ attach(Statclas)
 t.test(X9am,X2pm)
 detach(Statclas)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

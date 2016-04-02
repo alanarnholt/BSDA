@@ -12,10 +12,6 @@
 \item{Treatmnt}{a numeric vector} 
 \item{Group}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.44
 }
@@ -26,6 +22,10 @@ attach(Treatments)
 anova(lm(Treatmnt~as.factor(Group)))
 detach(Treatments)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -8,10 +8,6 @@
 \describe{ 
 \item{salary}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 5.3
 }
@@ -22,6 +18,10 @@ attach(Chemist)
 EDA(salary)
 detach(Chemist)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

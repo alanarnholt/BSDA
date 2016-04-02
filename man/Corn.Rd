@@ -11,10 +11,6 @@ planted on 12 plots of land}
 \item{Standard}{a numeric vector} 
 \item{differ}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.77
 }
@@ -29,6 +25,10 @@ shapiro.test(differ)
 t.test(New,Standard,paired=TRUE,alternative="greater")
 detach(Corn)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 
