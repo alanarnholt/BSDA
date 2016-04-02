@@ -33,10 +33,6 @@ Francisco, CA} \code{Seattle, WA} \code{Spokane, WA} \code{St Louis, MO}
 \item{X2000}{a numeric vector}
 \item{difference}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Statistical Insight Chapter 5
 }
@@ -49,6 +45,10 @@ boxplot(X1994,X2000,names=c("1994","2000"),col=c("red","blue"),ylab="Cost")
 boxplot(X2000~Region)
 detach(Homes)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

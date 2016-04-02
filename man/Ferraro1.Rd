@@ -12,10 +12,6 @@
 \item{Mond.Fer}{a numeric vector} 
 \item{undecide}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 8.23
 }
@@ -27,6 +23,10 @@ Ferraro1
 chisq.test(Ferraro1[,2:4])
 detach(Ferraro1)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

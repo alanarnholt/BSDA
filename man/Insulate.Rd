@@ -9,10 +9,6 @@
 \item{temp}{a numeric vector} 
 \item{loss}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.50
 }
@@ -23,6 +19,10 @@ attach(Insulate)
 summary(lm(loss~temp))
 detach(Insulate)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

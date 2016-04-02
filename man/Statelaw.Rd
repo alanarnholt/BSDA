@@ -22,10 +22,6 @@ agencies}
 Virginia} \code{Wisconsin} \code{Wyoming}} 
 \item{cost}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.62
 }
@@ -38,6 +34,10 @@ EDA(cost)
 SIGN.test(cost,md=8,alternative="less")
 detach(Statelaw)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -12,10 +12,6 @@
 \item{nearly}{a numeric vector} 
 \item{every}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 8.21
 }
@@ -26,6 +22,10 @@ attach(Snore)
 chisq.test(Snore[,2:5])
 detach(Snore)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

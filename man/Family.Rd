@@ -9,10 +9,6 @@
 \item{Number}{a numeric vector} 
 \item{Cost}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.89
 }
@@ -25,6 +21,10 @@ cor(Number,Cost)
 lm(Cost~Number)
 detach(Family)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

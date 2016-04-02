@@ -4,17 +4,21 @@
 \name{Cancer}
 \alias{Cancer}
 \title{Survival times of terminal cancer patients treated with vitamin C}
-\format{A data frame with 17 observations on the following 5 variables.
+\format{A data frame with 64 observations on 2 variables.
 \describe{ 
-\item{stomach}{a numeric vector}
-\item{bronchus}{a numeric vector} 
-\item{colon}{a numeric vector} 
-\item{ovary}{a numeric vector} 
-\item{breast}{a numeric vector} 
+\item{survival}{survival time (in days) of terminal patients 
+treated with vitamin C}
+\item{type}{a factor indicating type of cancer with levels 
+\code{breast}, \code{bronchus}, \code{colon}, \code{ovary}, and 
+\code{stomach}} 
 }}
 \source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Cameron, E and Pauling, L. 1978. \dQuote{Supplemental Ascorbate in the 
+Supportive Treatment of Cancer.} \emph{Proceedings of the National Academy of 
+Science}, 75, 4538-4542.
+}
+\usage{
+Cancer
 }
 \description{
 Data for Exercises 6.55 and 6.64
@@ -22,11 +26,19 @@ Data for Exercises 6.55 and 6.64
 \examples{
 
 str(Cancer)
-attach(Cancer)
-EDA(stomach)
-SIGN.test(stomach,md=100,alternative="greater")
-detach(Cancer)
+boxplot(survival ~ type, Cancer)
+stomach <- Cancer$survival[Cancer$type == "stomach"]
+bronchus <- Cancer$survival[Cancer$type == "bronchus"]
+boxplot(stomach, ylab = "Days")
+SIGN.test(stomach, md = 100, alternative = "greater")
+SIGN.test(bronchus, md = 100, alternative = "greater")
+rm(bronchus, stomach)
 
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

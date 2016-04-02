@@ -10,10 +10,6 @@
 \item{GroupB}{a numeric vector} 
 \item{GroupC}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.42
 }
@@ -28,6 +24,10 @@ anova(lm(values~ind,data=STACKED))
 remove(STACKED)
 detach(Groupabc)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

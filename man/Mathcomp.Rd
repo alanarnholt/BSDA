@@ -9,10 +9,6 @@ community college}
 \describe{ 
 \item{score}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.26
 }
@@ -24,6 +20,10 @@ stem(score)
 EDA(score)
 detach(Mathcomp)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

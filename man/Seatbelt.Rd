@@ -13,10 +13,6 @@
 \item{Minor}{a numeric vector}
 \item{Major}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 8.24
 }
@@ -28,6 +24,10 @@ Seatbelt
 chisq.test(Seatbelt[,2:5])
 detach(Seatbelt)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -10,10 +10,6 @@ store}
 \item{months}{a numeric vector}
 \item{sales}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.59
 }
@@ -24,6 +20,10 @@ attach(Retail)
 summary(lm(sales~months))
 detach(Retail)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

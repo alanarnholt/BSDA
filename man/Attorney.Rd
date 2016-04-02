@@ -35,10 +35,6 @@ Conn} \code{New Orleans} \code{New York (Brooklyn)} \code{New York
 \code{Tyler, Tex} \code{Washington} \code{Wheeling, WVa} \code{Wilmington,
 Del}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Attorney
 }
@@ -53,6 +49,10 @@ plot(convict[-86] ~staff[-86], data = Attorney,
 main = "Without Washington, D.C.")
 par(mfrow=c(1, 1))
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

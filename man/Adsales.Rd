@@ -10,10 +10,6 @@
 \item{ads}{a numeric vector containing number of ads} 
 \item{sales}{a numeric vector containing number of sales} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Adsales
 }
@@ -28,6 +24,10 @@ abline(mod)
 summary(mod)
 predict(mod, newdata = data.frame(ads = 6), interval = "conf", level = 0.99)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

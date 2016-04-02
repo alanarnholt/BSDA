@@ -8,10 +8,6 @@
 \describe{ 
 \item{score}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 1.8
 }
@@ -22,6 +18,10 @@ attach(Entrance)
 stem(score)
 detach(Entrance)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

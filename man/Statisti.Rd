@@ -9,10 +9,6 @@
 \item{Class1}{a numeric vector} 
 \item{Class2}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 1.70 and 1.87
 }
@@ -24,6 +20,10 @@ boxplot(Class1,Class2,names=c("Class 1","Class 2"),col=c("red","blue"),
 main="Problem 1.87")
 detach(Statisti)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

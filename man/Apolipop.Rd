@@ -10,10 +10,6 @@
 \item{coffee}{number of cups of coffee per day} 
 \item{apolipB}{level of apoliprotein B} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Apolipop
 }
@@ -32,6 +28,10 @@ par(mfrow = c(2, 2))
 plot(linmod)
 par(mfrow = c(1, 1))
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

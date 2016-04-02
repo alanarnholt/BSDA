@@ -15,10 +15,6 @@ City}
 \item{SRES2}{a numeric vector} 
 \item{FITS2}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 9.3
 }
@@ -31,6 +27,10 @@ summary(model)
 detach(Patrol)
 remove(model)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

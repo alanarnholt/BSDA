@@ -12,10 +12,6 @@
 \item{Signal}{a numeric vector} 
 \item{Cable}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.24 and 10.25
 }
@@ -27,6 +23,10 @@ boxplot(Signal~Cable)
 kruskal.test(Signal~as.factor(Cable))
 detach(Coaxial)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -9,10 +9,6 @@
 \item{salary}{1999 salary} 
 \item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Bbsalaries
 }
@@ -25,6 +21,10 @@ stripchart(salary ~ team, data = Bbsalaries, method = "stack",
            pch = 19, col = "blue", cex = 0.75)
 title(main = "Major League Salaries")
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

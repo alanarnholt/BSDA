@@ -13,10 +13,6 @@
 \item{Site}{a numeric vector} 
 \item{Ranks}{a numeric vector}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.28 and 10.29
 }
@@ -28,6 +24,10 @@ boxplot(monoxide~Site)
 kruskal.test(monoxide~as.factor(Site))
 detach(Carbon)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

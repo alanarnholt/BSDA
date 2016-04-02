@@ -8,10 +8,6 @@
 \describe{ 
 \item{inde}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.59
 }
@@ -23,6 +19,10 @@ EDA(inde)
 t.test(inde,conf.level=.98)$conf
 detach(Pollutio)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

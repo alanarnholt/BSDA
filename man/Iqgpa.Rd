@@ -9,10 +9,6 @@
 \item{IQ}{a numeric vector} 
 \item{GPA}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 9.51 and 9.52
 }
@@ -27,6 +23,10 @@ summary(model)
 detach(Iqgpa)
 remove(model)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

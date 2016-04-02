@@ -9,10 +9,6 @@
 \item{time}{time (days?) until an arthritis sufferer experienced relief} 
 \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Arthriti
 }
@@ -24,6 +20,10 @@ Data for Exercise 10.58
 boxplot(time ~ treatment, data = Arthriti)
 anova(lm(time ~ treatment, data = Arthriti))
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

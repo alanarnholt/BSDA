@@ -11,10 +11,6 @@ without a softener}
 \item{With}{a numeric vector} 
 \item{Without}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.21
 }
@@ -30,6 +26,10 @@ wilcox.test(With,Without,paired=TRUE,alternative="greater")
 detach(Fabric)
 remove(DIF)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

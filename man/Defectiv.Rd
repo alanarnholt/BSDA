@@ -11,10 +11,6 @@
 \item{Count}{a numeric vector}
 \item{Percent}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.27
 }
@@ -27,6 +23,10 @@ barplot(table(C1),col="pink",ylab="Frequency",
 xlab="Defective Items Produced by Employees",main="Problem 1.27")
 detach(Defectiv)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

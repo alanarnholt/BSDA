@@ -11,10 +11,6 @@ workers}
 \item{earnings}{a numeric vector} 
 \item{price}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.11
 }
@@ -28,6 +24,10 @@ plot(year,price)
 par(mfrow=c(1,1))
 detach(Wheat)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

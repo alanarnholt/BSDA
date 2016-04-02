@@ -38,10 +38,6 @@
 \code{7.200000000e+000 5.200000000e+000 3.150000000e+002}
 \code{7.600000000e+000 5.150000000e+000 3.030000000e+002}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 9.10 and 9.16
 }
@@ -51,6 +47,10 @@ str(Nfldraft)
 attach(Nfldraft)
 detach(Nfldraft)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

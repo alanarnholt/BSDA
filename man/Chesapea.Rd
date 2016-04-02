@@ -9,10 +9,6 @@
 \describe{ 
 \item{salinity}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.46
 }
@@ -26,6 +22,10 @@ shapiro.test(salinity)
 t.test(salinity,mu=7)
 detach(Chesapea)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

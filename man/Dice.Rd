@@ -9,10 +9,6 @@
 \item{x}{a numeric vector} 
 \item{P.x.}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 3.109
 }
@@ -27,6 +23,10 @@ table(outcome)/length(outcome)
 detach(Dice)
 remove(roll1,roll2,outcome)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

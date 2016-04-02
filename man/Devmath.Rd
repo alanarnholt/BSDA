@@ -9,10 +9,6 @@ semester 1995}
 \describe{ 
 \item{score}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.47
 }
@@ -24,6 +20,10 @@ EDA(score)
 t.test(score,mu=80,alternative="less")
 detach(Devmath)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

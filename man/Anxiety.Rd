@@ -9,10 +9,6 @@
 \item{anxiety}{anxiety score before a major math test} 
 \item{math}{math test score} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Anxiety
 }
@@ -29,6 +25,10 @@ linmod <- lm(math ~ anxiety, data = Anxiety)
 abline(linmod)
 summary(linmod)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

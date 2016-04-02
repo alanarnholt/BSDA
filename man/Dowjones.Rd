@@ -10,10 +10,6 @@
 \item{close}{a numeric vector} 
 \item{X.change}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.35
 }
@@ -25,6 +21,10 @@ plot(year,close,type="l",lty=2,lwd=2,col="blue")
 barplot(close,col="blue",las=2,main="Problem 1.35",names.arg=FALSE)      
 detach(Dowjones) 
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

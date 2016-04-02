@@ -15,10 +15,6 @@
 \item{height}{a numeric vector} 
 \item{children}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.90
 }
@@ -30,6 +26,10 @@ plot(weight,height)
 plot(handed,words)
 detach(Dyslexia)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

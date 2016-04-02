@@ -23,10 +23,6 @@ Virginia} \code{Wisconsin} \code{Wyoming}}
 \item{nodegree}{a numeric vector} 
 \item{crime}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.41
 }
@@ -37,6 +33,10 @@ attach(Educat)
 plot(nodegree,crime,xlab="No Crime",ylab="Violent Crime Rate per 100,000")
 detach(Educat)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

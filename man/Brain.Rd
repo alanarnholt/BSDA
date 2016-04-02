@@ -16,10 +16,6 @@ elephant} \code{Asian Elephant} \code{Brachiosaurus} \code{Cat}
 \item{bodyweight}{body weight (in kg)} 
 \item{brainweight}{brain weight (in g)} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Brain
 }
@@ -34,6 +30,10 @@ mod <- lm(log(brainweight) ~ log(bodyweight), data = Brain)
 abline(mod, lty = "dashed", col = "blue")
 
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

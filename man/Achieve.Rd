@@ -9,10 +9,6 @@
 \item{score}{a numeric vector} 
 \item{gender}{a factor with 2 levels \code{boys} and \code{girls}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Achieve
 }
@@ -24,6 +20,10 @@ Data used in Example 7.14 and Exercise 10.7
 anova(lm(score ~ gender, data = Achieve))
 t.test(score ~ gender, var.equal = TRUE, data = Achieve)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

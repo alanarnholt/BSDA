@@ -12,10 +12,6 @@ antipsychotic drug}
 \item{DBH}{a numeric vector} 
 \item{group}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 5.14 and 7.49
 }
@@ -27,6 +23,10 @@ boxplot(DBH~group,names=c("Non Psychotic","Psychotic"))
 t.test(DBH~group,var.equal=TRUE)
 detach(Dopamine)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

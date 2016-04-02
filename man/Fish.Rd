@@ -12,10 +12,6 @@
 \item{smallmesh}{a numeric vector} 
 \item{largemesh}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 5.83, 5.119, and 7.29
 }
@@ -32,6 +28,10 @@ SIGN.test(largemesh,conf.level=.99)
 t.test(smallmesh,largemesh)
 detach(Fish)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

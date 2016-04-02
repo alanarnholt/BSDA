@@ -8,10 +8,6 @@
 \describe{ 
 \item{prejud}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.10 and 5.22
 }
@@ -22,6 +18,10 @@ attach(Prejudic)
 EDA(prejud)
 detach(Prejudic)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -8,10 +8,6 @@
 \describe{ 
 \item{visual}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.6
 }
@@ -24,6 +20,10 @@ fivenum(visual)
 boxplot(visual)
 detach(Visual)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

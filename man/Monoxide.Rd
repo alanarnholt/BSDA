@@ -9,10 +9,6 @@
 \item{manufac}{a numeric vector} 
 \item{compet}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.45
 }
@@ -24,6 +20,10 @@ t.test(manufac,compet)
 wilcox.test(manufac,compet)
 detach(Monoxide)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

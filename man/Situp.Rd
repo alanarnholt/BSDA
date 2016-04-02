@@ -8,10 +8,6 @@
 \describe{ 
 \item{number}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.47
 }
@@ -26,6 +22,10 @@ main="Problems 1.46 & 1.47")
 lines(density(number),col="red",lwd=3)
 detach(Situp)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

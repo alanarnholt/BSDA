@@ -8,10 +8,6 @@
 \describe{ 
 \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Append
 }
@@ -27,6 +23,10 @@ limits <-c(ll, ul)
 limits
 fee[fee < ll | fee > ul]
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

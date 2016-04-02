@@ -14,10 +14,6 @@
 \item{year}{factor with two levels \code{1984-1985} and \code{1993-1994}}
 \item{status}{factor with two levels \code{athlete} and \code{student}}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Bigten
 }
@@ -32,6 +28,10 @@ with(data = Bigten,
      tapply(rate, list(year, status), mean)
     )
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

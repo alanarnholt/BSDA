@@ -15,10 +15,6 @@ Baptist} \code{New Hanover Regional} \code{Pitt Co. Memorial}
 County}}
 \item{charge}{median charge for coronary bypass} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Bypass
 }
@@ -31,6 +27,10 @@ EDA(Bypass$charge)
 t.test(Bypass$charge, conf.level=.90)$conf
 t.test(Bypass$charge, mu = 35000)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

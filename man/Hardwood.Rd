@@ -22,10 +22,6 @@ batches of pulp}
 1.100000000e+001} \code{5.310000000e+001 9.000000000e+000}
 \code{6.300000000e+000 1.000000000e+000}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.33
 }
@@ -36,6 +32,10 @@ attach(Hardwood)
 
 
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

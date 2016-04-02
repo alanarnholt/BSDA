@@ -10,10 +10,6 @@
 \item{reported}{a numeric vector} 
 \item{actual}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 2.16, 2.45, and 2.59
 }
@@ -28,6 +24,10 @@ anova(model)
 summary(model)
 detach(Submarin)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

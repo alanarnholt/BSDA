@@ -9,10 +9,6 @@
 \item{Fourth}{a numeric vector} 
 \item{Colleag}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.82
 }
@@ -23,6 +19,10 @@ attach(Spellers)
 t.test(Fourth,Colleag,alternative="greater")
 detach(Spellers)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

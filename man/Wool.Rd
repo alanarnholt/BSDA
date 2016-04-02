@@ -9,10 +9,6 @@
 \item{Type.1}{a numeric vector} 
 \item{Type.2}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.42
 }
@@ -23,6 +19,10 @@ attach(Wool)
 t.test(Type.1,Type.2,var.equal=TRUE)
 detach(Wool)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

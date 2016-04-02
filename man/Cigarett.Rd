@@ -9,10 +9,6 @@
 \item{cigarett}{a numeric vector} 
 \item{weight}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.27
 }
@@ -26,6 +22,10 @@ abline(model)
 cor(weight,cigarett)
 detach(Cigarett)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

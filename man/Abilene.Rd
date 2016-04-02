@@ -12,10 +12,6 @@ theft}, \code{Murder}, \code{Robbery}, and \code{Vehicle theft}.}
 \item{Year}{a factor with levels \code{1992} and \code{1999}} 
 \item{Number}{number of reported crimes} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Abilene
 }
@@ -41,6 +37,10 @@ theme_bw() +
 theme(axis.text.x = element_text(angle = 30, hjust = 1))
 }
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

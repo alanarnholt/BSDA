@@ -19,10 +19,6 @@ Indianapolis 500 race}
 \item{starts}{a numeric vector} 
 \item{group}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 7.11 and 7.36
 }
@@ -35,6 +31,10 @@ boxplot(qualif~group)
 t.test(qualif~group)
 detach(Indy500)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

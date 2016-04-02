@@ -10,10 +10,6 @@
 \item{exposed}{a numeric vector} 
 \item{control}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 1.17
 }
@@ -24,6 +20,10 @@ attach(Lead)
 boxplot(exposed,control, names=c("Exposed","Control"),col=c("red","blue"))
 detach(Lead)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

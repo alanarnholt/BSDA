@@ -9,10 +9,6 @@
 \describe{ 
 \item{price}{daily price returns (in pence) of Abbey National shares} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Abbey
 }
@@ -25,6 +21,10 @@ qqnorm(Abbey$price)
 qqline(Abbey$price)
 t.test(Abbey$price, mu = 300)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -9,10 +9,6 @@ English kindred}
 \describe{ 
 \item{SLC}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.116
 }
@@ -23,6 +19,10 @@ attach(Slc)
 EDA(SLC)
 detach(Slc)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

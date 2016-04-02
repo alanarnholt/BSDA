@@ -20,7 +20,7 @@ NULL
 #' \describe{ 
 #' \item{price}{daily price returns (in pence) of Abbey National shares} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -44,7 +44,7 @@ NULL
 #' \item{response}{a numeric vector}
 #' \item{group}{a factor with e levels \code{A}, \code{B}, and \code{C}}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -73,7 +73,7 @@ NULL
 #' \item{Year}{a factor with levels \code{1992} and \code{1999}} 
 #' \item{Number}{number of reported crimes} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -113,7 +113,7 @@ NULL
 #' \item{gender}{a factor with levels \code{girls} and \code{boys}} 
 #' \item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -161,7 +161,7 @@ NULL
 #' \item{lowhigh}{a numeric vector} 
 #' \item{rate}{a factor with levels \code{Low} and \code{High}}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -186,7 +186,7 @@ NULL
 #' \describe{ 
 #' \item{days}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -214,7 +214,7 @@ NULL
 #' \item{score}{a numeric vector} 
 #' \item{gender}{a factor with 2 levels \code{boys} and \code{girls}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -241,7 +241,7 @@ NULL
 #' \item{ads}{a numeric vector containing number of ads} 
 #' \item{sales}{a numeric vector containing number of sales} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -269,7 +269,7 @@ NULL
 #' \describe{ 
 #' \item{aggres}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -311,7 +311,7 @@ NULL
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 #' \item{payment}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -342,7 +342,7 @@ NULL
 #' \item{age}{age (in years) of patient} 
 #' \item{group}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -377,7 +377,7 @@ NULL
 #' \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
 #' \item{decade}{a character vector indicating the decade of an aircraft accident} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -412,7 +412,7 @@ NULL
 #' \item{ontime}{a numeric vector}
 #' \item{complaints}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -439,7 +439,7 @@ NULL
 #' @format A data frame with 14 observations on the following variable.
 #' \describe{ 
 #' \item{age}{a numeric vector} }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -465,7 +465,7 @@ NULL
 #' \item{medication}{a factor with levels \code{seldane-d}
 #' \code{pseudoephedrine} \code{placebo}}
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -491,7 +491,7 @@ NULL
 #' \describe{ 
 #' \item{recover}{recovery time in hours} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -520,7 +520,7 @@ NULL
 #' \item{anxiety}{anxiety score before a major math test} 
 #' \item{math}{math test score} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -552,7 +552,7 @@ NULL
 #' \item{coffee}{number of cups of coffee per day} 
 #' \item{apolipB}{level of apoliprotein B} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -581,7 +581,7 @@ NULL
 #' \describe{ 
 #' \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -610,7 +610,7 @@ NULL
 #' \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
 #'
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -637,7 +637,7 @@ NULL
 #' \item{aptitude}{aptitude test scores}
 #' \item{product}{productivity scores} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -668,7 +668,7 @@ NULL
 #' \item{age}{number of years before 1983 - the year the data were obtained}
 #' \item{phase}{Ceramic Phase numbers} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -695,7 +695,7 @@ NULL
 #' \item{time}{time (days?) until an arthritis sufferer experienced relief} 
 #' \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -720,7 +720,7 @@ NULL
 #' \describe{ 
 #' \item{duration}{duration (in hours) for transplant} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -749,7 +749,7 @@ NULL
 #' \item{time}{time (in seconds) for aspirin to dissolve} 
 #' \item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -776,7 +776,7 @@ NULL
 #' \item{placebo}{asthmatic relief index for patients given a placebo} 
 #' \item{difference}{difference between the \code{placebo} and \code{drug}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -833,7 +833,7 @@ NULL
 #' \code{Tyler, Tex} \code{Washington} \code{Wheeling, WVa} \code{Wilmington,
 #' Del}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -862,7 +862,7 @@ NULL
 #' \item{defectives}{number of defective gears in the production of 100 gears per day} 
 #' \item{manufacturer}{a factor with levels \code{A} and \code{B}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -889,7 +889,7 @@ NULL
 #' \item{score}{a numeric vector} 
 #' \item{group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -915,7 +915,7 @@ NULL
 #' \item{salary}{1999 salary} 
 #' \item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -947,7 +947,7 @@ NULL
 #' \item{year}{factor with two levels \code{1984-1985} and \code{1993-1994}}
 #' \item{status}{factor with two levels \code{athlete} and \code{student}}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -975,7 +975,7 @@ NULL
 #' \describe{ 
 #' \item{score}{test scores on the first test in a beginning biology class} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1015,7 +1015,7 @@ NULL
 #' \item{rate}{live birth rates per 1000 population} 
 #' \item{year}{a factor with levels \code{1990} and \code{1998}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1048,7 +1048,7 @@ NULL
 #' \code{High school graudate}, \code{Some college}, \code{Bachelor}'\code{s degree}, and
 #' \code{Graduate degree}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1075,7 +1075,7 @@ NULL
 #' \item{machine}{blood pressure recorded from an automated blood pressure machine} 
 #' \item{expert}{blood pressure recorded by an expert using an at-home device} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1105,7 +1105,7 @@ NULL
 #' \item{salary}{1999 salary (in $1000) for board directors} 
 #' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1131,7 +1131,7 @@ NULL
 #' \item{density}{bone density measurements}
 #' \item{group}{a factor with levels \code{active} and \code{nonactive}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1159,7 +1159,7 @@ NULL
 #' \item{book}{number of books read} 
 #' \item{spelling}{spelling score} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1187,7 +1187,7 @@ NULL
 #' \item{dollars}{money obtained for selling textbooks} 
 #' \item{store}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1221,7 +1221,7 @@ NULL
 #' \item{bodyweight}{body weight (in kg)} 
 #' \item{brainweight}{brain weight (in g)} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1278,7 +1278,7 @@ NULL
 #' \code{Saturn SL2} \code{Subaru Legacy} \code{Toyota Camry}}
 #' \item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1307,7 +1307,7 @@ NULL
 #' \code{present}} 
 #' \item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, \code{swing}, and \code{split}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1340,7 +1340,7 @@ NULL
 #' County}}
 #' \item{charge}{median charge for coronary bypass} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1369,7 +1369,7 @@ NULL
 #' \item{SupplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
 #' \item{SupplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1399,26 +1399,36 @@ NULL
 #' 
 #' @name Cancer
 #' @docType data
-#' @format A data frame with 17 observations on the following 5 variables.
+#' @format A data frame with 64 observations on 2 variables.
 #' \describe{ 
-#' \item{stomach}{a numeric vector}
-#' \item{bronchus}{a numeric vector} 
-#' \item{colon}{a numeric vector} 
-#' \item{ovary}{a numeric vector} 
-#' \item{breast}{a numeric vector} 
+#' \item{survival}{survival time (in days) of terminal patients 
+#' treated with vitamin C}
+#' \item{type}{a factor indicating type of cancer with levels 
+#' \code{breast}, \code{bronchus}, \code{colon}, \code{ovary}, and 
+#' \code{stomach}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @source Cameron, E and Pauling, L. 1978. \dQuote{Supplemental Ascorbate in the 
+#' Supportive Treatment of Cancer.} \emph{Proceedings of the National Academy of 
+#' Science}, 75, 4538-4542.
+#' 
+#' 
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Cancer)
-#' attach(Cancer)
-#' EDA(stomach)
-#' SIGN.test(stomach,md=100,alternative="greater")
-#' detach(Cancer)
+#' boxplot(survival ~ type, Cancer)
+#' stomach <- Cancer$survival[Cancer$type == "stomach"]
+#' bronchus <- Cancer$survival[Cancer$type == "bronchus"]
+#' boxplot(stomach, ylab = "Days")
+#' SIGN.test(stomach, md = 100, alternative = "greater")
+#' SIGN.test(bronchus, md = 100, alternative = "greater")
+#' rm(bronchus, stomach)
 #' 
-NULL
+#' 
+"Cancer"
 
 
 
@@ -1440,7 +1450,7 @@ NULL
 #' \item{Site}{a numeric vector} 
 #' \item{Ranks}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1468,7 +1478,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1505,7 +1515,7 @@ NULL
 #' \item{survival}{a numeric vector} 
 #' \item{group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1546,7 +1556,7 @@ NULL
 #' \item{temp}{a numeric vector}
 #' \item{Failures}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1588,7 +1598,7 @@ NULL
 #' \describe{ 
 #' \item{salary}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1616,7 +1626,7 @@ NULL
 #' \describe{ 
 #' \item{salinity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1652,7 +1662,7 @@ NULL
 #' \item{D}{a numeric vector} 
 #' \item{F}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1682,7 +1692,7 @@ NULL
 #' \item{Ration2}{a numeric vector} 
 #' \item{Ration3}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1716,7 +1726,7 @@ NULL
 #' \item{wafer2}{a numeric vector} 
 #' \item{thickness}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1756,7 +1766,7 @@ NULL
 #' \item{wafer23}{a numeric vector} 
 #' \item{wafer24}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1784,7 +1794,7 @@ NULL
 #' \item{cigarett}{a numeric vector} 
 #' \item{weight}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1819,7 +1829,7 @@ NULL
 #' \item{tar}{a numeric vector}
 #' \item{brand}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1848,7 +1858,7 @@ NULL
 #' \item{age}{a numeric vector} 
 #' \item{percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1882,7 +1892,7 @@ NULL
 #' \item{clean}{a numeric vector} 
 #' \item{agent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1914,7 +1924,7 @@ NULL
 #' \item{Signal}{a numeric vector} 
 #' \item{Cable}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1945,7 +1955,7 @@ NULL
 #' \item{differ}{a numeric vector}
 #' \item{sgnrnks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -1976,7 +1986,7 @@ NULL
 #' \describe{ 
 #' \item{coins}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2017,7 +2027,7 @@ NULL
 #' \item{X1980}{a numeric vector}
 #' \item{X1990}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2055,7 +2065,7 @@ NULL
 #' \describe{ 
 #' \item{self}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2091,7 +2101,7 @@ NULL
 #' \item{Method}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2121,7 +2131,7 @@ NULL
 #' \item{Standard}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2153,7 +2163,7 @@ NULL
 #' \item{X}{a numeric vector} 
 #' \item{Y}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2182,7 +2192,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2211,7 +2221,7 @@ NULL
 #' \item{Year}{a numeric vector} 
 #' \item{CPI}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2254,7 +2264,7 @@ NULL
 #' \item{X1983}{a numeric vector} 
 #' \item{X1993}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2289,7 +2299,7 @@ NULL
 #' \item{differ}{a numeric vector} 
 #' \item{sgnrnks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2321,7 +2331,7 @@ NULL
 #' \item{Replace}{a numeric vector} 
 #' \item{Recomnd}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2355,7 +2365,7 @@ NULL
 #' \item{Count}{a numeric vector}
 #' \item{Percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2389,7 +2399,7 @@ NULL
 #' \item{X1970}{a numeric vector} 
 #' \item{X1990}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2426,7 +2436,7 @@ NULL
 #' \item{delay}{a numeric vector} 
 #' \item{Carrier}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2457,7 +2467,7 @@ NULL
 #' \item{Count}{a numeric vector}
 #' \item{Percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2486,7 +2496,7 @@ NULL
 #' \describe{ 
 #' \item{educ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2513,7 +2523,7 @@ NULL
 #' @format The format is: num [1:5, 1:2] 545 24 71 142 1587 ...  - attr(*,
 #' "dimnames")=List of 2 ..$ : chr [1:5] "African America" "American Indian"
 #' "Asian" "Latino" ...  ..$ : chr [1:2] "Two-year" "Four-year"
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2539,7 +2549,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2568,7 +2578,7 @@ NULL
 #' \item{x}{a numeric vector} 
 #' \item{P.x.}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2625,7 +2635,7 @@ NULL
 #' \item{Coast}{a numeric vector} 
 #' \item{Calif}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2660,7 +2670,7 @@ NULL
 #' \code{Eg} \code{In} \code{Is} \code{Ni} \code{Ru} \code{SK} \code{Uk}
 #' \code{Ve}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2692,7 +2702,7 @@ NULL
 #' \describe{ 
 #' \item{pounds}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2730,7 +2740,7 @@ NULL
 #' \item{X1997}{a numeric vector} 
 #' \item{X1998}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2759,7 +2769,7 @@ NULL
 #' \code{25-34} \code{35-49} \code{50-64}} 
 #' \item{Rate}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2792,7 +2802,7 @@ NULL
 #' \item{DBH}{a numeric vector} 
 #' \item{group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2822,7 +2832,7 @@ NULL
 #' \item{close}{a numeric vector} 
 #' \item{X.change}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2854,7 +2864,7 @@ NULL
 #' \item{Against}{a numeric vector} 
 #' \item{undecide}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2884,7 +2894,7 @@ NULL
 #' \item{trials}{a numeric vector} 
 #' \item{group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2919,7 +2929,7 @@ NULL
 #' \item{height}{a numeric vector} 
 #' \item{children}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2948,7 +2958,7 @@ NULL
 #' \item{year}{a numeric vector} 
 #' \item{severity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -2991,7 +3001,7 @@ NULL
 #' \item{nodegree}{a numeric vector} 
 #' \item{crime}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3024,7 +3034,7 @@ NULL
 #' \item{SRES2}{a numeric vector} 
 #' \item{FITS2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3069,7 +3079,7 @@ NULL
 #' \item{X85percent}{a numeric vector} 
 #' \item{X98percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3102,7 +3112,7 @@ NULL
 #' \item{FITS1}{a numeric vector} 
 #' \item{Residuals}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3137,7 +3147,7 @@ NULL
 #' \item{university}{a numeric vector} 
 #' \item{ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3165,7 +3175,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3208,7 +3218,7 @@ NULL
 #' \item{hwy}{a numeric vector} 
 #' \item{cmb}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3255,7 +3265,7 @@ NULL
 #' \item{hwy}{a numeric vector} 
 #' \item{cmb}{a numeric vector} 
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3282,7 +3292,7 @@ NULL
 #' \describe{ 
 #' \item{Age}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3309,7 +3319,7 @@ NULL
 #' \describe{ 
 #' \item{loss}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3339,7 +3349,7 @@ NULL
 #' \item{With}{a numeric vector} 
 #' \item{Without}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3372,7 +3382,7 @@ NULL
 #' \item{Time}{a numeric vector} 
 #' \item{Eruption}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3402,7 +3412,7 @@ NULL
 #' \item{Number}{a numeric vector} 
 #' \item{Cost}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3435,7 +3445,7 @@ NULL
 #' \item{Mond.Fer}{a numeric vector} 
 #' \item{undecide}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3467,7 +3477,7 @@ NULL
 #' \item{Ferraro}{a numeric vector} 
 #' \item{undecide}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3508,7 +3518,7 @@ NULL
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 #' \item{rate}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3539,7 +3549,7 @@ NULL
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3570,7 +3580,7 @@ NULL
 #' \item{smallmesh}{a numeric vector} 
 #' \item{largemesh}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3604,7 +3614,7 @@ NULL
 #' \item{Before}{a numeric vector} 
 #' \item{After}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3660,7 +3670,7 @@ NULL
 #' \item{PHILLIPS}{a numeric vector}
 #' \item{Total}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3698,7 +3708,7 @@ NULL
 #' \item{group}{a numeric vector} 
 #' \item{ln.resp.}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3726,7 +3736,7 @@ NULL
 #' \describe{ 
 #' \item{food}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3753,7 +3763,7 @@ NULL
 #' \describe{ 
 #' \item{cholest}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3784,7 +3794,7 @@ NULL
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3815,7 +3825,7 @@ NULL
 #' \item{Average}{a numeric vector} 
 #' \item{More}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3843,7 +3853,7 @@ NULL
 #' \describe{ 
 #' \item{velocity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3889,7 +3899,7 @@ NULL
 #' \item{No.Crime4}{a numeric vector} 
 #' \item{No.Opinion4}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3926,7 +3936,7 @@ NULL
 #' \describe{ 
 #' \item{price}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3957,7 +3967,7 @@ NULL
 #' \item{differ}{a numeric vector}
 #' \item{sgnrnks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3987,7 +3997,7 @@ NULL
 #' \describe{ 
 #' \item{yards}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4029,7 +4039,7 @@ NULL
 #' \item{X1994salary}{a numeric vector} 
 #' \item{X1999salary}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4057,7 +4067,7 @@ NULL
 #' \item{HSGPA}{a numeric vector} 
 #' \item{CollGPA}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4092,7 +4102,7 @@ NULL
 #' \describe{ 
 #' \item{grades}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4125,7 +4135,7 @@ NULL
 #' \code{LSt} \code{Mi} \code{MSt} \code{SC} \code{Te} \code{Va}}
 #' \item{Percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4154,7 +4164,7 @@ NULL
 #' \describe{ 
 #' \item{thick}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4183,7 +4193,7 @@ NULL
 #' \describe{ 
 #' \item{thick}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4214,7 +4224,7 @@ NULL
 #' \item{GroupB}{a numeric vector} 
 #' \item{GroupC}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4247,7 +4257,7 @@ NULL
 #' \item{GroupB}{a numeric vector} 
 #' \item{GroupC}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4280,7 +4290,7 @@ NULL
 #' \item{number}{a numeric vector} 
 #' \item{x.}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4313,7 +4323,7 @@ NULL
 #' \item{differ}{a numeric vector} 
 #' \item{signrks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4344,7 +4354,7 @@ NULL
 #' \describe{ 
 #' \item{concent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4374,7 +4384,7 @@ NULL
 #' \describe{ 
 #' \item{receipt}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4412,7 +4422,7 @@ NULL
 #' 1.100000000e+001} \code{5.310000000e+001 9.000000000e+000}
 #' \code{6.300000000e+000 1.000000000e+000}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4444,7 +4454,7 @@ NULL
 #' \item{Type}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4478,7 +4488,7 @@ NULL
 #' \item{All.US}{a numeric vector} 
 #' \item{Not.Rese}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4516,7 +4526,7 @@ NULL
 #' \item{Partial}{a numeric vector} 
 #' \item{None}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4572,7 +4582,7 @@ NULL
 #' \item{X2000}{a numeric vector}
 #' \item{difference}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4603,7 +4613,7 @@ NULL
 #' \item{Private}{a numeric vector} 
 #' \item{Public}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4631,7 +4641,7 @@ NULL
 #' \describe{ 
 #' \item{mileage}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4664,7 +4674,7 @@ NULL
 #' \item{Type}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4703,7 +4713,7 @@ NULL
 #' \item{X1984}{a numeric vector} 
 #' \item{X1993}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4759,7 +4769,7 @@ NULL
 #' \code{warm}} 
 #' \item{code}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4794,7 +4804,7 @@ NULL
 #' \item{Newfound}{a numeric vector}
 #' \item{GrandBk}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4839,7 +4849,7 @@ NULL
 #' \item{freq}{a numeric vector}
 #' \item{percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4872,7 +4882,7 @@ NULL
 #' \item{group}{a numeric vector} 
 #' \item{ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4906,7 +4916,7 @@ NULL
 #' \item{income}{a numeric vector} 
 #' \item{poverty}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4939,7 +4949,7 @@ NULL
 #' \item{speed}{a numeric vector} 
 #' \item{yr.1960}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4977,7 +4987,7 @@ NULL
 #' \item{starts}{a numeric vector} 
 #' \item{group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5010,7 +5020,7 @@ NULL
 #' \item{inflation}{a numeric vector} 
 #' \item{C6.T}{a factor with levels \code{alow} \code{bmiddle} \code{high}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5038,7 +5048,7 @@ NULL
 #' \describe{ 
 #' \item{temp}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5071,7 +5081,7 @@ NULL
 #' \item{cocaine}{a numeric vector} 
 #' \item{marijuan}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5104,7 +5114,7 @@ NULL
 #' \item{X70.85}{a numeric vector} 
 #' \item{great85}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5133,7 +5143,7 @@ NULL
 #' \item{temp}{a numeric vector} 
 #' \item{loss}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5161,7 +5171,7 @@ NULL
 #' \item{IQ}{a numeric vector} 
 #' \item{GPA}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5205,7 +5215,7 @@ NULL
 #' \item{sepalL}{a numeric vector}
 #' \item{sample}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5241,7 +5251,7 @@ NULL
 #' \item{X1994}{a numeric vector} 
 #' \item{X1995}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5273,7 +5283,7 @@ NULL
 #' \item{WSPT}{a numeric vector} 
 #' \item{satisfac}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5305,7 +5315,7 @@ NULL
 #' \item{gender}{a numeric vector} 
 #' \item{smoke}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5347,7 +5357,7 @@ NULL
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 #' \item{rate}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5377,7 +5387,7 @@ NULL
 #' \item{Kinder}{a numeric vector} 
 #' \item{NoKinder}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5413,7 +5423,7 @@ NULL
 #'  \item{Regional}{a numeric vector} 
 #'  \item{Metropol}{a numeric vector} 
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5442,7 +5452,7 @@ NULL
 #' \item{under35}{a numeric vector} 
 #' \item{over35}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5472,7 +5482,7 @@ NULL
 #' \item{exposed}{a numeric vector} 
 #' \item{control}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5499,7 +5509,7 @@ NULL
 #' \describe{ 
 #' \item{survival}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5528,7 +5538,7 @@ NULL
 #' \item{Men}{a numeric vector} 
 #' \item{Women}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5562,7 +5572,7 @@ NULL
 #' \item{RESI1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5601,7 +5611,7 @@ NULL
 #' \item{injuries}{a numeric vector}
 #' \item{damage}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5633,7 +5643,7 @@ NULL
 #' \item{Site}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5666,7 +5676,7 @@ NULL
 #' \item{Group}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5697,7 +5707,7 @@ NULL
 #' \item{Experimt}{a numeric vector} 
 #' \item{Control}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5732,7 +5742,7 @@ NULL
 #' \item{SRES1}{a numeric vector} 
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5763,7 +5773,7 @@ NULL
 #' \describe{ 
 #' \item{award}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5790,7 +5800,7 @@ NULL
 #' \describe{ 
 #' \item{salary}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5818,7 +5828,7 @@ NULL
 #' \describe{ 
 #' \item{percent}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5848,7 +5858,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5903,7 +5913,7 @@ NULL
 #' \item{Profic}{a numeric vector} 
 #' \item{Group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5934,7 +5944,7 @@ NULL
 #' \describe{ 
 #' \item{math}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5970,7 +5980,7 @@ NULL
 #' \item{condition}{a factor with levels \code{CondA}
 #' \code{CondB} \code{CondC} \code{CondD}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6000,7 +6010,7 @@ NULL
 #' \item{Sample2}{a numeric vector} 
 #' \item{Sample3}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6032,7 +6042,7 @@ NULL
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6059,7 +6069,7 @@ NULL
 #' \describe{ 
 #' \item{mercury}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6086,7 +6096,7 @@ NULL
 #' \describe{ 
 #' \item{rent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6114,7 +6124,7 @@ NULL
 #' \describe{ 
 #' \item{miller}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6143,7 +6153,7 @@ NULL
 #' \describe{ 
 #' \item{miller}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6178,7 +6188,7 @@ NULL
 #' \item{lnmoist}{a numeric vector}
 #' \item{depthsq}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6208,7 +6218,7 @@ NULL
 #' \item{manufac}{a numeric vector} 
 #' \item{compet}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6238,7 +6248,7 @@ NULL
 #' \item{After}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6272,7 +6282,7 @@ NULL
 #' \item{Method2}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6314,7 +6324,7 @@ NULL
 #' \item{value}{a numeric vector}
 #' \item{revenue}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6351,7 +6361,7 @@ NULL
 #' \item{Team}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6380,7 +6390,7 @@ NULL
 #' \item{react}{a numeric vector} 
 #' \item{drug}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6408,7 +6418,7 @@ NULL
 #' \describe{ 
 #' \item{profit}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6478,7 +6488,7 @@ NULL
 #' \code{7.500000000e+000 4.940000000e+000 2.760000000e+002}
 #' \code{8.200000000e+000 4.720000000e+000 3.130000000e+002}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6532,7 +6542,7 @@ NULL
 #' \code{7.200000000e+000 5.200000000e+000 3.150000000e+002}
 #' \code{7.600000000e+000 5.150000000e+000 3.030000000e+002}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6559,7 +6569,7 @@ NULL
 #' \item{nicotine}{a numeric vector} 
 #' \item{sales}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6589,7 +6599,7 @@ NULL
 #' \item{harvest}{a numeric vector} 
 #' \item{price}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6628,7 +6638,7 @@ NULL
 #' \code{Webster}} 
 #' \item{X1999salary}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6654,7 +6664,7 @@ NULL
 #' \item{Before}{a numeric vector} 
 #' \item{After}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6689,7 +6699,7 @@ NULL
 #' \item{Mother}{a numeric vector} 
 #' \item{Father}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6727,7 +6737,7 @@ NULL
 #' \item{SRES2}{a numeric vector} 
 #' \item{FITS2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6757,7 +6767,7 @@ NULL
 #' \item{brother}{a numeric vector} 
 #' \item{sister}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6785,7 +6795,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6818,7 +6828,7 @@ NULL
 #' \code{Plants}} 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6846,7 +6856,7 @@ NULL
 #' \item{Party}{a numeric vector} 
 #' \item{Gender}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6874,7 +6884,7 @@ NULL
 #' \describe{ 
 #' \item{inde}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6903,7 +6913,7 @@ NULL
 #' \describe{ 
 #' \item{porosity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6942,7 +6952,7 @@ NULL
 #' \item{popu}{a numeric vector} 
 #' \item{ratio}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6974,7 +6984,7 @@ NULL
 #' \item{rate}{a numeric vector} 
 #' \item{income}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7004,7 +7014,7 @@ NULL
 #' \describe{ 
 #' \item{prejud}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7048,7 +7058,7 @@ NULL
 #' \item{Inaugage}{a numeric vector} 
 #' \item{Deathage}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7082,7 +7092,7 @@ NULL
 #' \item{SRES1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7110,7 +7120,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7142,7 +7152,7 @@ NULL
 #' \item{Method3}{a numeric vector}
 #' \item{Method4}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7176,7 +7186,7 @@ NULL
 #' \item{SRES1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7204,7 +7214,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7232,7 +7242,7 @@ NULL
 #' \describe{ 
 #' \item{income}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7261,7 +7271,7 @@ NULL
 #' \item{placebo}{a numeric vector}
 #' \item{treatmen}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7292,7 +7302,7 @@ NULL
 #' \item{Process1}{a numeric vector}
 #' \item{Process2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7329,7 +7339,7 @@ NULL
 #' \item{x3}{a numeric vector} 
 #' \item{x4}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7361,7 +7371,7 @@ NULL
 #' \item{FITS1}{a numeric vector} 
 #' \item{RESI1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7399,7 +7409,7 @@ NULL
 #' \item{Rating}{a factor with levels \code{A} \code{B} \code{C} \code{D} \code{F}}
 #' \item{GPA}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7426,7 +7436,7 @@ NULL
 #' \describe{ 
 #' \item{survival.time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7457,7 +7467,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7487,7 +7497,7 @@ NULL
 #' \item{trimmed}{a numeric vector}
 #' \item{winsoriz}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7515,7 +7525,7 @@ NULL
 #' \item{reading}{a numeric vector} 
 #' \item{IQ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7548,7 +7558,7 @@ NULL
 #' \item{Against}{a numeric vector} 
 #' \item{undecide}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7580,7 +7590,7 @@ NULL
 #'  \item{Region}{a numeric vector}
 #'  \item{Ranks}{a numeric vector} 
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7611,7 +7621,7 @@ NULL
 #' \item{SRES1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7643,7 +7653,7 @@ NULL
 #' \item{Psych2}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7676,7 +7686,7 @@ NULL
 #' \item{female}{a numeric vector} 
 #' \item{male}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7705,7 +7715,7 @@ NULL
 #' \describe{ 
 #' \item{rent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7732,7 +7742,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7762,7 +7772,7 @@ NULL
 #' \item{months}{a numeric vector}
 #' \item{sales}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7800,7 +7810,7 @@ NULL
 #' \item{upsalinity2}{a numeric vector} 
 #' \item{updensity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7832,7 +7842,7 @@ NULL
 #' \item{secondarysalinity}{a numeric vector} 
 #' \item{density}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7863,7 +7873,7 @@ NULL
 #' \item{score}{a numeric vector} 
 #' \item{code}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7891,7 +7901,7 @@ NULL
 #' \describe{ 
 #' \item{salary}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7915,7 +7925,7 @@ NULL
 #' \describe{ 
 #' \item{salinity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7971,7 +7981,7 @@ NULL
 #' \item{code99}{a numeric vector} 
 #' \item{expend99}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8004,7 +8014,7 @@ NULL
 #' \item{state}{a numeric vector}
 #' \item{ranks}{a numeric vector}
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8035,7 +8045,7 @@ NULL
 #' \code{C} \code{D}} 
 #' \item{reading}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8063,7 +8073,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8092,7 +8102,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8125,7 +8135,7 @@ NULL
 #' \item{Minor}{a numeric vector}
 #' \item{Major}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8156,7 +8166,7 @@ NULL
 #' \item{Before}{a numeric vector} 
 #' \item{After}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8188,7 +8198,7 @@ NULL
 #' \describe{ 
 #' \item{reaction}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8216,7 +8226,7 @@ NULL
 #' \describe{ 
 #' \item{months}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8255,7 +8265,7 @@ NULL
 #' \code{NoDrug/S}} 
 #' \item{Response}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8285,7 +8295,7 @@ NULL
 #' \item{Group2}{a numeric vector} 
 #' \item{Group3}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8318,7 +8328,7 @@ NULL
 #' \item{sales}{a numeric vector} 
 #' \item{loss}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8354,7 +8364,7 @@ NULL
 #' \item{Parallax}{a numeric vector} 
 #' \item{Sample}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8386,7 +8396,7 @@ NULL
 #' \item{shuttle}{a numeric vector} 
 #' \item{autos}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8430,7 +8440,7 @@ NULL
 #' \item{gradept}{a numeric vector} 
 #' \item{gender2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8463,7 +8473,7 @@ NULL
 #' \describe{ 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8495,7 +8505,7 @@ NULL
 #' \item{C1}{a numeric vector} 
 #' \item{C2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8524,7 +8534,7 @@ NULL
 #' \item{close}{a numeric vector} 
 #' \item{poor}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8555,7 +8565,7 @@ NULL
 #' \describe{ 
 #' \item{SLC}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8586,7 +8596,7 @@ NULL
 #' \item{SRES1}{a numeric vector} 
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8624,7 +8634,7 @@ NULL
 #' \item{nearly}{a numeric vector} 
 #' \item{every}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8654,7 +8664,7 @@ NULL
 #' \item{concent}{a numeric vector}
 #' \item{site}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8681,7 +8691,7 @@ NULL
 #' \describe{ 
 #' \item{weight}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8710,7 +8720,7 @@ NULL
 #' \describe{ 
 #' \item{income}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8741,7 +8751,7 @@ NULL
 #' \item{SAT}{a numeric vector} 
 #' \item{Exam}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8768,7 +8778,7 @@ NULL
 #' \describe{ 
 #' \item{rate}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8798,7 +8808,7 @@ NULL
 #' \item{differ}{a numeric vector}
 #' \item{signrnks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8830,7 +8840,7 @@ NULL
 #' \item{Fourth}{a numeric vector} 
 #' \item{Colleag}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8860,7 +8870,7 @@ NULL
 #' \item{After}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8893,7 +8903,7 @@ NULL
 #' 2.600000000e+001} \code{male 3.300000000e+001 3.800000000e+001
 #' 2.400000000e+001 5.000000000e+000}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8923,7 +8933,7 @@ NULL
 #' \item{husband}{a numeric vector} 
 #' \item{wife}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8951,7 +8961,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8981,7 +8991,7 @@ NULL
 #' \item{thick}{a numeric vector} 
 #' \item{freq}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9011,7 +9021,7 @@ NULL
 #' \item{X9am}{a numeric vector} 
 #' \item{X2pm}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9052,7 +9062,7 @@ NULL
 #' Virginia} \code{Wisconsin} \code{Wyoming}} 
 #' \item{cost}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9082,7 +9092,7 @@ NULL
 #' \item{Class1}{a numeric vector} 
 #' \item{Class2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9110,7 +9120,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9140,7 +9150,7 @@ NULL
 #' \item{Prestre}{a numeric vector}
 #' \item{Poststre}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9172,7 +9182,7 @@ NULL
 #' \describe{ 
 #' \item{hours}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9202,7 +9212,7 @@ NULL
 #' \item{reported}{a numeric vector} 
 #' \item{actual}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9233,7 +9243,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9261,7 +9271,7 @@ NULL
 #' \item{year}{a numeric vector} 
 #' \item{sunspots}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9307,7 +9317,7 @@ NULL
 #' \item{loser.score}{a numeric vector} 
 #' \item{margin}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9340,7 +9350,7 @@ NULL
 #' \item{speed}{a numeric vector} 
 #' \item{car}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9388,7 +9398,7 @@ NULL
 #' \item{gas}{a numeric vector} 
 #' \item{air}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9431,7 +9441,7 @@ NULL
 #' \item{X1983.84}{a numeric vector} 
 #' \item{X1993.94}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9459,7 +9469,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9491,7 +9501,7 @@ NULL
 #' \item{Tensile}{a numeric vector}
 #' \item{Run}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9521,7 +9531,7 @@ NULL
 #' \describe{ 
 #' \item{test1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9550,7 +9560,7 @@ NULL
 #' \item{loss}{a numeric vector} 
 #' \item{x}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9672,7 +9682,7 @@ NULL
 #' \code{9/25/1999} \code{9/26/1999} \code{9/27/1999} \code{9/28/1999}
 #' \code{9/29/1999} \code{9/30/1999}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9696,7 +9706,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9731,7 +9741,7 @@ NULL
 #' \item{score}{a numeric vector}
 #' \item{cost}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9758,7 +9768,7 @@ NULL
 #' \item{Carrier}{a numeric vector}
 #' \item{Non.carrier}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9806,7 +9816,7 @@ NULL
 #' \item{torts}{a numeric vector} 
 #' \item{rate}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9850,7 +9860,7 @@ NULL
 #' \item{minority}{a numeric vector} 
 #' \item{percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9882,7 +9892,7 @@ NULL
 #' \item{Year}{a numeric vector} 
 #' \item{X1500m}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9928,7 +9938,7 @@ NULL
 #' \item{X3000m}{a numeric vector} 
 #' \item{marathon}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9960,7 +9970,7 @@ NULL
 #' \item{Treatmnt}{a numeric vector} 
 #' \item{Group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9987,7 +9997,7 @@ NULL
 #' \describe{ 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10020,7 +10030,7 @@ NULL
 #' \item{gas.mileage}{a numeric vector} 
 #' \item{truck}{a factor with levels \code{chevy} \code{dodge} \code{ford}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10062,7 +10072,7 @@ NULL
 #' \item{percent}{a numeric vector} 
 #' \item{test}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10093,7 +10103,7 @@ NULL
 #' \item{TwinB}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10132,7 +10142,7 @@ NULL
 #' \item{SAT}{a numeric vector} 
 #' \item{Drops}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10167,7 +10177,7 @@ NULL
 #' \describe{ 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10199,7 +10209,7 @@ NULL
 #' Carolina} \code{Tennessee} \code{Texas}} 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10239,7 +10249,7 @@ NULL
 #' \item{D}{a numeric vector} 
 #' \item{F}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10271,7 +10281,7 @@ NULL
 #' \item{SRES1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10303,7 +10313,7 @@ NULL
 #' \item{level}{a numeric vector} 
 #' \item{sunspot}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10335,7 +10345,7 @@ NULL
 #' \item{first}{a numeric vector} 
 #' \item{second}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10362,7 +10372,7 @@ NULL
 #' \describe{ 
 #' \item{visual}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10393,7 +10403,7 @@ NULL
 #' \item{First}{a numeric vector} 
 #' \item{Second}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10429,7 +10439,7 @@ NULL
 #' \item{ln.no.}{a numeric vector}
 #' \item{index}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10462,7 +10472,7 @@ NULL
 #' \code{Tornado} \code{Winter weather}} 
 #' \item{Number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10494,7 +10504,7 @@ NULL
 #' \item{earnings}{a numeric vector} 
 #' \item{price}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10530,7 +10540,7 @@ NULL
 #' \item{SRES2}{a numeric vector} 
 #' \item{FITS2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10558,7 +10568,7 @@ NULL
 #' \item{Window}{a numeric vector} 
 #' \item{Leakage}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10597,7 +10607,7 @@ NULL
 #' \item{errors}{a numeric vector} 
 #' \item{era}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10629,7 +10639,7 @@ NULL
 #' \item{Type.1}{a numeric vector} 
 #' \item{Type.2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10679,7 +10689,7 @@ NULL
 #' \item{SSN}{a numeric vector} 
 #' \item{year}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples

@@ -9,10 +9,6 @@
 \item{year}{a numeric vector} 
 \item{sunspots}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 1.7
 }
@@ -27,6 +23,10 @@ xyplot(sunspots ~ 1700:2000, xlab = "", type = "l", aspect="xy",
 main="Yearly Sunspots")
 detach(Sunspot)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

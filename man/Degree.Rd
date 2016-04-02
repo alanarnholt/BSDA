@@ -13,10 +13,6 @@
 \item{X1970}{a numeric vector} 
 \item{X1990}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.75
 }
@@ -32,6 +28,10 @@ barplot(t(Dmat),beside=TRUE,legend=TRUE,cex.names=.5)
 detach(Degree)
 remove(Dmat)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

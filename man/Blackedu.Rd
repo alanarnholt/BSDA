@@ -11,10 +11,6 @@
 \code{High school graudate}, \code{Some college}, \code{Bachelor}'\code{s degree}, and
 \code{Graduate degree}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Blackedu
 }
@@ -27,6 +23,10 @@ T1 <- xtabs(~gender + education, data = Blackedu)
 T1
 chisq.test(T1)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

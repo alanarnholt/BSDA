@@ -9,10 +9,6 @@
 \item{harvest}{a numeric vector} 
 \item{price}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.61
 }
@@ -23,6 +19,10 @@ attach(Orange)
 summary(lm(price~harvest))
 detach(Orange)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

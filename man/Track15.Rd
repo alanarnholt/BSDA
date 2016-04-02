@@ -9,10 +9,6 @@
 \item{Year}{a numeric vector} 
 \item{X1500m}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.36
 }
@@ -24,6 +20,10 @@ plot(Year,X1500m,type="l",lwd=2,lty=2,col="red",xlab="Year",
 ylab="1500m Time (seconds)",main="Problem 1.36")       
 detach(Track15) 
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

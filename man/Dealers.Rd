@@ -10,10 +10,6 @@ rendered to customers}
 \item{Replace}{a numeric vector} 
 \item{Recomnd}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 2.22
 }
@@ -28,6 +24,10 @@ barplot(t(Deal),beside=TRUE,legend=TRUE)
 detach(Dealers)
 remove(Deal)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

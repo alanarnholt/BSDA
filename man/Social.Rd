@@ -8,10 +8,6 @@
 \describe{ 
 \item{income}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.63
 }
@@ -22,6 +18,10 @@ attach(Social)
 SIGN.test(income,md=27500,alternative="less")
 detach(Social)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

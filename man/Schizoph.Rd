@@ -9,10 +9,6 @@ of schizophrenics after a specified dose of a tranquilizer}
 \describe{ 
 \item{score}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 6.10
 }
@@ -24,6 +20,10 @@ EDA(score)
 t.test(score,mu=20)
 detach(Schizoph)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

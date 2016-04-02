@@ -11,10 +11,6 @@
 \item{SRES1}{a numeric vector}
 \item{FITS1}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.3, 2.39, and 2.54
 }
@@ -28,6 +24,10 @@ abline(model)
 plot(age,resid(model))
 detach(Register)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

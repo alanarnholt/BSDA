@@ -11,10 +11,6 @@ homes}
 \item{SupplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
 \item{SupplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Cabinets
 }
@@ -35,6 +31,10 @@ with(data = Cabinets,
 )
 rm(DIF)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

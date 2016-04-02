@@ -10,10 +10,6 @@
 \item{Sample2}{a numeric vector} 
 \item{Sample3}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.52
 }
@@ -29,6 +25,10 @@ kruskal.test(values~ind,data=STACKED)
 remove(STACKED)
 detach(Median)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

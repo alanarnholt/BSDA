@@ -21,10 +21,6 @@
 \item{sepalL}{a numeric vector}
 \item{sample}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 1.15 and 5.19
 }
@@ -36,6 +32,10 @@ EDA(sepalL1)
 t.test(sepalL1,conf.level=.99)$conf
 detach(Irises)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

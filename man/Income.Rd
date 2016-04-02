@@ -25,10 +25,6 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \item{freq}{a numeric vector}
 \item{percent}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.33
 }
@@ -43,6 +39,10 @@ barplot(table(CATS),col="lightblue",main="Problem 1.33")
 detach(Income)
 remove(CATS)      
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

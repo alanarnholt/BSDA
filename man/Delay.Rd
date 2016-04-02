@@ -13,10 +13,6 @@
 \item{delay}{a numeric vector} 
 \item{Carrier}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.55
 }
@@ -28,6 +24,10 @@ boxplot(delay~Carrier)
 kruskal.test(delay~as.factor(Carrier))
 detach(Delay)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

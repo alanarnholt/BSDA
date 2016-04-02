@@ -8,10 +8,6 @@
 \describe{ 
 \item{time}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.19
 }
@@ -22,6 +18,10 @@ attach(Subway)
 EDA(time)
 detach(Subway)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

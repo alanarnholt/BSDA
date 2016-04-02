@@ -16,10 +16,6 @@ Taurus} \code{Ford Tempo} \code{Honda Accord} \code{Hyundai Sonata}
 \code{Saturn SL2} \code{Subaru Legacy} \code{Toyota Camry}}
 \item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Bumpers
 }
@@ -33,6 +29,10 @@ stripchart(Bumpers$repair, method = "stack", pch = 19, col = "blue")
 library(lattice)
 dotplot(car ~ repair, data = Bumpers)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

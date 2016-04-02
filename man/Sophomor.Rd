@@ -12,10 +12,6 @@ sophomores}
 \item{SAT}{a numeric vector} 
 \item{Exam}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.42
 }
@@ -26,6 +22,10 @@ attach(Sophomor)
 cor(Sophomor)
 detach(Sophomor)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

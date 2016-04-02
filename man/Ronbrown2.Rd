@@ -13,10 +13,6 @@
 \item{secondarysalinity}{a numeric vector} 
 \item{density}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.56 and Example 2.4
 }
@@ -28,6 +24,10 @@ plot(depth,primarysalinity,xlab="Depth",ylab="Salinity",
 main="Example 2.4",col="tomato")
 detach(Ronbrown2)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

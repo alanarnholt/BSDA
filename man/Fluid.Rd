@@ -18,10 +18,6 @@ stress}
 \item{group}{a numeric vector} 
 \item{ln.resp.}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.76
 }
@@ -33,6 +29,10 @@ stem(X34kV)
 SIGN.test(X34kV)
 detach(Fluid)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

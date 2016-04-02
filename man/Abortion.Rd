@@ -30,10 +30,6 @@ island} \code{south carolina} \code{south dakota} \code{tennessee}
 \item{lowhigh}{a numeric vector} 
 \item{rate}{a factor with levels \code{Low} and \code{High}}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Abortion
 }
@@ -46,6 +42,10 @@ T1 <- xtabs(~region + rate, data = Abortion)
 T1
 chisq.test(T1)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

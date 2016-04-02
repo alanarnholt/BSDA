@@ -13,10 +13,6 @@
 \item{university}{a numeric vector} 
 \item{ranks}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 10.7
 }
@@ -28,6 +24,10 @@ boxplot(salary~university)
 kruskal.test(salary~as.factor(university))
 detach(Engineer)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

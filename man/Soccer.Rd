@@ -8,10 +8,6 @@
 \describe{ 
 \item{weight}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.46
 }
@@ -24,6 +20,10 @@ hist(weight,breaks=seq(110,210,10),col="orange",
 main="Problem 1.46 \\n Weights of Soccer Players",right=FALSE)
 detach(Soccer)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

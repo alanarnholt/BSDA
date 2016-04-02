@@ -13,10 +13,6 @@ Chevrolet, Dodge and Ford}
 \item{gas.mileage}{a numeric vector} 
 \item{truck}{a factor with levels \code{chevy} \code{dodge} \code{ford}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 10.2
 }
@@ -27,6 +23,10 @@ attach(Trucks)
 anova(lm(gas.mileage~truck))
 detach(Trucks)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

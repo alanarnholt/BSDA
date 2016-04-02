@@ -9,10 +9,6 @@
 \item{Window}{a numeric vector} 
 \item{Leakage}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.54
 }
@@ -23,6 +19,10 @@ attach(Window)
 SIGN.test(Leakage,md=.125,alternative="greater")
 detach(Window)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

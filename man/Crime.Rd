@@ -22,10 +22,6 @@ Virginia} \code{Wisconsin} \code{Wyoming}}
 \item{X1983}{a numeric vector} 
 \item{X1993}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 1.90, 2.32, 3.64, and 5.113
 }
@@ -38,6 +34,10 @@ ylab="Crime Rate per 100,000 Inhabitants",main="Problem 1.90")
 plot(X1983,X1993)
 detach(Crime)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

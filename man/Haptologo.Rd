@@ -8,10 +8,6 @@
 \describe{ 
 \item{concent}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 6.9
 }
@@ -25,6 +21,10 @@ shapiro.test(concent)
 t.test(concent,mu=2,alternative="less")
 detach(Haptologo)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

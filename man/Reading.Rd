@@ -11,10 +11,6 @@
 \item{trimmed}{a numeric vector}
 \item{winsoriz}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.72 and 2.10
 }
@@ -25,6 +21,10 @@ attach(Reading)
 EDA(reading)
 detach(Reading)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

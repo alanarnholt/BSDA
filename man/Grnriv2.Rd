@@ -9,10 +9,6 @@ major lake in the Rocky Mountains}
 \describe{ 
 \item{thick}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 6.45 and 6.98
 }
@@ -25,6 +21,10 @@ t.test(thick,mu=8,alternative="less")
 SIGN.test(thick,md=8,alternative="less")
 detach(Grnriv2)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -8,10 +8,6 @@
 \describe{ 
 \item{age}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.53
 }
@@ -22,6 +18,10 @@ attach(Freshman)
 SIGN.test(age,md=19)
 detach(Freshman)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

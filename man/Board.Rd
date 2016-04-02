@@ -9,10 +9,6 @@
 \item{salary}{1999 salary (in $1000) for board directors} 
 \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Board
 }
@@ -26,6 +22,10 @@ boxplot(salary ~ university, data = Board, col = c("red", "blue", "green"),
 tapply(Board$salary, Board$university, summary)
 anova(lm(salary ~ university, data = Board))
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

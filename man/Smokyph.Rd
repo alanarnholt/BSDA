@@ -12,10 +12,6 @@
 \item{SRES1}{a numeric vector} 
 \item{FITS1}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 6.40, 6.59, 7.10, and 7.35
 }
@@ -33,6 +29,10 @@ t.test(waterph[code=="low"],waterph[code=="high"])
 t.test(waterph[code=="low"],waterph[code=="high"],conf.level=.90)$conf
 detach(Smokyph)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

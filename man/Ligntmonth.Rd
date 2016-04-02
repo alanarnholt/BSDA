@@ -14,10 +14,6 @@
 \item{injuries}{a numeric vector}
 \item{damage}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.6
 }
@@ -28,6 +24,10 @@ attach(Ligntmonth)
 plot(damage,deaths)
 detach(Ligntmonth)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

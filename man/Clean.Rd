@@ -12,10 +12,6 @@
 \item{clean}{a numeric vector} 
 \item{agent}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.16
 }
@@ -27,6 +23,10 @@ boxplot(clean~agent,col=c("red","blue","green"))
 anova(lm(clean~as.factor(agent)))
 detach(Clean)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

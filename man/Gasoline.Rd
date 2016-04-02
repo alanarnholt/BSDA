@@ -8,10 +8,6 @@
 \describe{ 
 \item{price}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.45
 }
@@ -22,6 +18,10 @@ attach(Gasoline)
 stem(price)
 detach(Gasoline)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

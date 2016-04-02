@@ -9,10 +9,6 @@
 \item{Before}{a numeric vector} 
 \item{After}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.71
 }
@@ -27,6 +23,10 @@ shapiro.test(DIF)
 t.test(After,Before,paired=TRUE,alternative="greater")
 detach(Fitness)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

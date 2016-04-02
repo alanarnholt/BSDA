@@ -9,10 +9,6 @@
 \item{C1}{a numeric vector} 
 \item{C2}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.65
 }
@@ -24,6 +20,10 @@ boxplot(C1,C2)
 wilcox.test(C1,C2)
 detach(Skewed)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

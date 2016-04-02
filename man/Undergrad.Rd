@@ -17,10 +17,6 @@
 \item{SAT}{a numeric vector} 
 \item{Drops}{a numeric vector}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.15
 }
@@ -38,6 +34,10 @@ stripchart(Drops~Gender,method="stack",col=c("red","blue"),pch=19,
 main="Drops versus Gender")
 detach(Undergrad)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

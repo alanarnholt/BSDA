@@ -22,10 +22,6 @@ levels \code{1/12/86} \code{1/24/85} \code{1/28/86} \code{10/3/85}
 \item{temp}{a numeric vector}
 \item{Failures}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Examples 1.11, 1.12, 1.13, 2.11 and 5.1
 }
@@ -51,6 +47,10 @@ qqline(sort(temp)[-1])
 par(mfrow=c(1,1))
 detach(Challeng)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

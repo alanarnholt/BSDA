@@ -14,10 +14,6 @@ and Texas}
 \item{state}{a numeric vector}
 \item{ranks}{a numeric vector}
  }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.34 and 10.49
 }
@@ -29,6 +25,10 @@ boxplot(PAR~state)
 kruskal.test(PAR~as.factor(state))
 detach(Saving)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -24,10 +24,6 @@ CONVERTIBLE} \code{TT COUPE} \code{TT COUPE QUATTRO}}
 \item{hwy}{a numeric vector} 
 \item{cmb}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.65
 }
@@ -38,6 +34,10 @@ attach(Epaminicompact)
 summary(cty)
 detach(Epaminicompact)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

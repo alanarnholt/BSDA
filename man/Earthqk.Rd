@@ -9,10 +9,6 @@
 \item{year}{a numeric vector} 
 \item{severity}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.97
 }
@@ -24,6 +20,10 @@ EDA(severity)
 t.test(severity,mu=100,alternative="greater")
 detach(Earthqk)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

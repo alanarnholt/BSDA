@@ -13,10 +13,6 @@
 \item{ontime}{a numeric vector}
 \item{complaints}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \usage{
 Airline
 }
@@ -31,6 +27,10 @@ barplot(complaints, names.arg = airline, col = "lightblue")
 plot(complaints ~ ontime, data = Airline, pch = 19, col = "red",
 xlab = "On time", ylab = "Complaints")
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

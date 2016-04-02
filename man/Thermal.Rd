@@ -10,10 +10,6 @@
 \item{loss}{a numeric vector} 
 \item{x}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 9.5
 }
@@ -25,6 +21,10 @@ model <- lm(loss~temp)
 summary(model)
 detach(Thermal)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

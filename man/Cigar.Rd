@@ -13,10 +13,6 @@
 \item{tar}{a numeric vector}
 \item{brand}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 10.4
 }
@@ -28,6 +24,10 @@ boxplot(tar~brand)
 anova(lm(tar~as.factor(brand)))
 detach(Cigar)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

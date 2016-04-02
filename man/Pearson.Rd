@@ -9,10 +9,6 @@
 \item{brother}{a numeric vector} 
 \item{sister}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.20
 }
@@ -24,6 +20,10 @@ plot(brother,sister)
 cor(brother,sister)
 detach(Pearson)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

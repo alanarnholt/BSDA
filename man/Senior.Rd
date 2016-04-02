@@ -8,10 +8,6 @@
 \describe{ 
 \item{reaction}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.83 and 3.67
 }
@@ -23,6 +19,10 @@ fivenum(reaction)
 boxplot(reaction,horizontal=TRUE,main="Problem 1.83 Part d.",col="orange")
 detach(Senior)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

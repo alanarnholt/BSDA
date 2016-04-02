@@ -15,10 +15,6 @@ tasks}
 \code{NoDrug/S}} 
 \item{Response}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 10.11 and 10.12
 }
@@ -30,6 +26,10 @@ boxplot(Response~Treatment)
 anova(lm(Response~Treatment))
 detach(Shkdrug)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

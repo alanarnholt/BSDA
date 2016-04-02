@@ -10,10 +10,6 @@
 \item{Group2}{a numeric vector} 
 \item{Group3}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 10.50
 }
@@ -29,6 +25,10 @@ remove(STACKED)
 detach(Shock)
 
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -11,10 +11,6 @@ those who did not}
 \item{Kinder}{a numeric vector} 
 \item{NoKinder}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.68
 }
@@ -30,6 +26,10 @@ t.test(Kinder, NoKinder,paired=TRUE,alternative="greater")
 detach(Kinder)
 remove(DIF)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

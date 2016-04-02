@@ -26,10 +26,6 @@
 \item{X3000m}{a numeric vector} 
 \item{marathon}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 2.97, 5.115, and 9.62
 }
@@ -41,6 +37,10 @@ cor(Track[,2:8])
 pairs(Track[,2:8])
 detach(Track)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

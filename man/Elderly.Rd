@@ -22,10 +22,6 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \item{X85percent}{a numeric vector} 
 \item{X98percent}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.92 and 2.61
 }
@@ -38,6 +34,10 @@ col=c("red","blue"),group.names=c("1998","1985"))
 cor(X98percent,X85percent)
 detach(Elderly)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

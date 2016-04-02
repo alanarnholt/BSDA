@@ -16,10 +16,6 @@ two different treatments}
 \item{survival}{a numeric vector} 
 \item{group}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 7.34 and 7.48
 }
@@ -30,6 +26,10 @@ attach(Censored)
 boxplot(survival~group)
 detach(Censored)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 

@@ -10,10 +10,6 @@
 \item{Psych2}{a numeric vector} 
 \item{differ}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.61
 }
@@ -29,6 +25,10 @@ col=c("pink","lightblue"))
 t.test(Psych1,Psych2,paired=TRUE)
 detach(Rehab)
 
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
 }
 \keyword{datasets}
 
