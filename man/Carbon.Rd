@@ -4,25 +4,22 @@
 \name{Carbon}
 \alias{Carbon}
 \title{Carbon monoxide level measured at three industrial sites}
-\format{A data frame with 24 observations on the following 6 variables.
+\format{A data frame with 24 observations on 2 variables.
 \describe{ 
-\item{SiteA}{a numeric vector} 
-\item{SiteB}{a numeric vector} 
-\item{SiteC}{a numeric vector}
-\item{monoxide}{a numeric vector} 
-\item{Site}{a numeric vector} 
-\item{Ranks}{a numeric vector}
+\item{CO}{carbon monoxide measured (in parts per million)} 
+\item{site}{a factor with levels \code{SiteA}, \code{SiteB}, and \code{SiteC}} 
 }}
+\usage{
+Carbon
+}
 \description{
 Data for Exercise 10.28 and 10.29
 }
 \examples{
 
 str(Carbon)
-attach(Carbon)
-boxplot(monoxide~Site)
-kruskal.test(monoxide~as.factor(Site))
-detach(Carbon)
+boxplot(CO ~ site, data = Carbon)
+kruskal.test(CO ~ site, data = Carbon)
 
 }
 \references{

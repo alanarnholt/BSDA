@@ -1441,14 +1441,10 @@ NULL
 #' 
 #' @name Carbon
 #' @docType data
-#' @format A data frame with 24 observations on the following 6 variables.
+#' @format A data frame with 24 observations on 2 variables.
 #' \describe{ 
-#' \item{SiteA}{a numeric vector} 
-#' \item{SiteB}{a numeric vector} 
-#' \item{SiteC}{a numeric vector}
-#' \item{monoxide}{a numeric vector} 
-#' \item{Site}{a numeric vector} 
-#' \item{Ranks}{a numeric vector}
+#' \item{CO}{carbon monoxide measured (in parts per million)} 
+#' \item{site}{a factor with levels \code{SiteA}, \code{SiteB}, and \code{SiteC}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1456,12 +1452,10 @@ NULL
 #' @examples
 #' 
 #' str(Carbon)
-#' attach(Carbon)
-#' boxplot(monoxide~Site)
-#' kruskal.test(monoxide~as.factor(Site))
-#' detach(Carbon)
+#' boxplot(CO ~ site, data = Carbon)
+#' kruskal.test(CO ~ site, data = Carbon)
 #' 
-NULL
+"Carbon"
 
 
 
@@ -1476,7 +1470,7 @@ NULL
 #' @docType data
 #' @format A data frame with 17 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{reading score on the California Achievement Test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1484,13 +1478,11 @@ NULL
 #' @examples
 #' 
 #' str(Cat)
-#' attach(Cat)
-#' stem(score)
-#' fivenum(score)
-#' boxplot(score,main="Problem 1.116",col="green")
-#' detach(Cat)
+#' stem(Cat$score)
+#' fivenum(Cat$score)
+#' boxplot(Cat$score, main = "Problem 1.116", col = "green")
 #' 
-NULL
+"Cat"
 
 
 
@@ -1504,28 +1496,27 @@ NULL
 #' 
 #' @name Censored
 #' @docType data
-#' @format A data frame with 121 observations on the following 8 variables.
+#' @format A data frame with 121 observations on the following 3 variables.
 #' \describe{ 
-#' \item{survivA}{a numeric vector} 
-#' \item{ageA}{a numeric vector} 
-#' \item{censorA}{a numeric vector}
-#' \item{survivB}{a numeric vector} 
-#' \item{ageB}{a numeric vector} 
-#' \item{censorB}{a numeric vector} 
-#' \item{survival}{a numeric vector} 
-#' \item{group}{a numeric vector} 
+#' \item{survival}{survival time (in days) of patients with small cell lung cancer} 
+#' \item{treatment}{a factor with levels \code{armA} and \code{armB} indicating the 
+#' treatment a patient received} 
+#' \item{age}{the age of the patient} 
 #' }
+#' 
+#' @source Ying, Z., Jung, S., Wei, L. 1995. \dQuote{Survival Analysis with Median Regression Models.} 
+#' \emph{Journal of the American Statistical Association}, 90, 178-184.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Censored)
-#' attach(Censored)
-#' boxplot(survival~group)
-#' detach(Censored)
+#' boxplot(survival ~ treatment, data = Censored)
+#' wilcox.test(survival ~ treatment, data = Censored, alternative = "greater")
 #' 
-NULL
+"Censored"
 
 
 

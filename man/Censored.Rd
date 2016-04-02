@@ -5,26 +5,28 @@
 \alias{Censored}
 \title{Entry age and survival time of patients with small cell lung cancer under
 two different treatments}
-\format{A data frame with 121 observations on the following 8 variables.
+\format{A data frame with 121 observations on the following 3 variables.
 \describe{ 
-\item{survivA}{a numeric vector} 
-\item{ageA}{a numeric vector} 
-\item{censorA}{a numeric vector}
-\item{survivB}{a numeric vector} 
-\item{ageB}{a numeric vector} 
-\item{censorB}{a numeric vector} 
-\item{survival}{a numeric vector} 
-\item{group}{a numeric vector} 
+\item{survival}{survival time (in days) of patients with small cell lung cancer} 
+\item{treatment}{a factor with levels \code{armA} and \code{armB} indicating the 
+treatment a patient received} 
+\item{age}{the age of the patient} 
 }}
+\source{
+Ying, Z., Jung, S., Wei, L. 1995. \dQuote{Survival Analysis with Median Regression Models.} 
+\emph{Journal of the American Statistical Association}, 90, 178-184.
+}
+\usage{
+Censored
+}
 \description{
 Data for Exercises 7.34 and 7.48
 }
 \examples{
 
 str(Censored)
-attach(Censored)
-boxplot(survival~group)
-detach(Censored)
+boxplot(survival ~ treatment, data = Censored)
+wilcox.test(survival ~ treatment, data = Censored, alternative = "greater")
 
 }
 \references{
