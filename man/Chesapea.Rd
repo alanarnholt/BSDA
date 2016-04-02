@@ -7,20 +7,26 @@
 1927}
 \format{A data frame with 16 observations on the following variable.
 \describe{ 
-\item{salinity}{a numeric vector} 
+\item{salinity}{surface salinity measurements (in parts per 1000) for station 11, 
+offshore from Annanapolis, Maryland, on July 3-4, 1927.} 
 }}
+\source{
+Davis, J. (1986) \emph{Statistics and Data Analysis in Geology, Second Edition}. 
+John Wiley and Sons, New York.
+}
+\usage{
+Chesapea
+}
 \description{
-Data for Exercise 6.46
+Data for Exercise 6.41
 }
 \examples{
 
 str(Chesapea)
-attach(Chesapea)
-qqnorm(salinity)
-qqline(salinity)
-shapiro.test(salinity)
-t.test(salinity,mu=7)
-detach(Chesapea)
+qqnorm(Chesapea$salinity)
+qqline(Chesapea$salinity)
+shapiro.test(Chesapea$salinity)
+t.test(Chesapea$salinity, mu = 7)
 
 }
 \references{

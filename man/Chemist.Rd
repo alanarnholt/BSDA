@@ -6,17 +6,18 @@
 \title{Starting salaries of 50 chemistry majors}
 \format{A data frame with 50 observations on the following variable.
 \describe{ 
-\item{salary}{a numeric vector} 
+\item{salary}{starting salary (in dollars) for chemistry major} 
 }}
+\usage{
+Chemist
+}
 \description{
 Data for Example 5.3
 }
 \examples{
 
 str(Chemist)
-attach(Chemist)
-EDA(salary)
-detach(Chemist)
+EDA(Chemist$salary)
 
 }
 \references{
