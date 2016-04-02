@@ -1703,6 +1703,11 @@ NULL
 #' \item{thickness}{average thickness of the oxide layer of the eight measurements
 #' obtained from each set of two wafers} 
 #' }
+#' 
+#' @source Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
+#' for Monitoring Parameters of a Nested Random Effect Model.} 
+#' \emph{Journal of the American Statistical Association}, 90, 729-738.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -1732,26 +1737,31 @@ NULL
 #' @docType data
 #' @format A data frame with 30 observations on the following 8 variables.
 #' \describe{ 
-#' \item{wafer11}{a numeric vector} 
-#' \item{wafer12}{a numeric vector} 
-#' \item{wafer13}{a numeric vector}
-#' \item{wafer14}{a numeric vector} 
-#' \item{wafer21}{a numeric vector} 
-#' \item{wafer22}{a numeric vector} 
-#' \item{wafer23}{a numeric vector} 
-#' \item{wafer24}{a numeric vector} 
+#' \item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
+#' \item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
+#' \item{wafer13}{third measurement of thickness of the oxide layer for \code{wafer1}}
+#' \item{wafer14}{fourth measurement of thickness of the oxide layer for \code{wafer1}}
+#' \item{wafer21}{first measurement of thickness of the oxide layer for \code{wafer2}} 
+#' \item{wafer22}{second measurement of thickness of the oxide layer for \code{wafer2}} 
+#' \item{wafer23}{third measurement of thickness of the oxide layer for \code{wafer2}} 
+#' \item{wafer24}{fourth measurement of thickness of the oxide layer for \code{wafer2}} 
 #' }
+#' 
+#' @source Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
+#' for Monitoring Parameters of a Nested Random Effect Model.} 
+#' \emph{Journal of the American Statistical Association}, 90, 729-738.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Chips)
-#' attach(Chips)
-#' boxplot(wafer11,wafer12,wafer13,wafer14,wafer21,wafer22,wafer23,wafer24)
-#' detach(Chips)
+#' with(data = Chips, 
+#' boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, wafer22, wafer23, wafer24)
+#' )
 #' 
-NULL
+"Chips"
 
 
 

@@ -7,24 +7,32 @@
 selected from 30 lots}
 \format{A data frame with 30 observations on the following 8 variables.
 \describe{ 
-\item{wafer11}{a numeric vector} 
-\item{wafer12}{a numeric vector} 
-\item{wafer13}{a numeric vector}
-\item{wafer14}{a numeric vector} 
-\item{wafer21}{a numeric vector} 
-\item{wafer22}{a numeric vector} 
-\item{wafer23}{a numeric vector} 
-\item{wafer24}{a numeric vector} 
+\item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
+\item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
+\item{wafer13}{third measurement of thickness of the oxide layer for \code{wafer1}}
+\item{wafer14}{fourth measurement of thickness of the oxide layer for \code{wafer1}}
+\item{wafer21}{first measurement of thickness of the oxide layer for \code{wafer2}} 
+\item{wafer22}{second measurement of thickness of the oxide layer for \code{wafer2}} 
+\item{wafer23}{third measurement of thickness of the oxide layer for \code{wafer2}} 
+\item{wafer24}{fourth measurement of thickness of the oxide layer for \code{wafer2}} 
 }}
+\source{
+Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
+for Monitoring Parameters of a Nested Random Effect Model.} 
+\emph{Journal of the American Statistical Association}, 90, 729-738.
+}
+\usage{
+Chips
+}
 \description{
 Data for Exercise 10.9
 }
 \examples{
 
 str(Chips)
-attach(Chips)
-boxplot(wafer11,wafer12,wafer13,wafer14,wafer21,wafer22,wafer23,wafer24)
-detach(Chips)
+with(data = Chips, 
+boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, wafer22, wafer23, wafer24)
+)
 
 }
 \references{
