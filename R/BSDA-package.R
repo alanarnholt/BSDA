@@ -1637,15 +1637,12 @@ NULL
 #' 
 #' @name Chevy
 #' @docType data
-#' @format A data frame with 2 observations on the following 6 variables.
+#' @format A data frame with 67 observations on 2 variables.
 #' \describe{ 
-#' \item{year}{a factor with levels \code{88-90}
-#' \code{91-93}} 
-#' \item{A}{a numeric vector} 
-#' \item{B}{a numeric vector} 
-#' \item{C}{a numeric vector} 
-#' \item{D}{a numeric vector} 
-#' \item{F}{a numeric vector} 
+#' \item{year}{a factor with levels \code{1988-90} and
+#' \code{1991-93}} 
+#' \item{frequency}{a factor with levels \code{much better than average}, \code{above average},
+#' \code{average}, \code{below average}, and \code{much worse than average}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1653,12 +1650,11 @@ NULL
 #' @examples
 #' 
 #' str(Chevy)
-#' attach(Chevy)
-#' Chevy
-#' chisq.test(Chevy[,2:6])
-#' detach(Chevy)
+#' T1 <- xtabs(~year + frequency, data = Chevy)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Chevy"
 
 
 
@@ -1673,9 +1669,9 @@ NULL
 #' @docType data
 #' @format A data frame with 13 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Ration1}{a numeric vector} 
-#' \item{Ration2}{a numeric vector} 
-#' \item{Ration3}{a numeric vector} 
+#' \item{gain}{weight gain over a specified period} 
+#' \item{feed}{a factor with levels \code{ration1}, \code{ration2}, 
+#' and \code{ration3}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1683,15 +1679,10 @@ NULL
 #' @examples
 #' 
 #' str(Chicken)
-#' attach(Chicken)
-#' STACKED <-stack(Chicken)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Chicken)
+#' boxplot(gain ~ feed, col = c("red","blue","green"), data = Chicken)
+#' anova(lm(gain ~ feed, data = Chicken))
 #' 
-NULL
+"Chicken"
 
 
 

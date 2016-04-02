@@ -323,3 +323,27 @@ devtools::use_data(Chemist, overwrite = TRUE)
 # Chesapea
 read.csv("Chesapea.csv")
 devtools::use_data(Chesapea, overwrite = TRUE)
+#
+# Create Chevy
+#
+mat <- matrix(data = c(16, 12, 5, 2, 5, 12, 3, 2, 4, 6), nrow = 2)
+dimnames(mat) <- list(year = c("1988-90", "1991-93"), 
+                      frequency = c("much better than average", "above average", 
+                                    "average", "below average", "much worse than average"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Chevy <- vcdExtra::expand.dft(matDF)
+Chevy$year <- factor(Chevy$year, 
+                         levels = c("1988-90", "1991-93"))
+Chevy$frequency <- factor(Chevy$frequency, levels = c("much better than average", "above average", 
+                                                     "average", "below average", "much worse than average"))
+# Checks
+xtabs(~year + frequency, data = Chevy)
+devtools::use_data(Chevy, overwrite = TRUE)
+#
+# Chicken
+Chicken <- read.csv("Chicken.csv")
+devtools::use_data(Chicken, overwrite = TRUE)
+#
+# Examples
+str(Chicken)

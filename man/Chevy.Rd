@@ -4,26 +4,25 @@
 \name{Chevy}
 \alias{Chevy}
 \title{Insurance injury ratings of Chevrolet vehicles for 1990 and 1993 models}
-\format{A data frame with 2 observations on the following 6 variables.
+\format{A data frame with 67 observations on 2 variables.
 \describe{ 
-\item{year}{a factor with levels \code{88-90}
-\code{91-93}} 
-\item{A}{a numeric vector} 
-\item{B}{a numeric vector} 
-\item{C}{a numeric vector} 
-\item{D}{a numeric vector} 
-\item{F}{a numeric vector} 
+\item{year}{a factor with levels \code{1988-90} and
+\code{1991-93}} 
+\item{frequency}{a factor with levels \code{much better than average}, \code{above average},
+\code{average}, \code{below average}, and \code{much worse than average}} 
 }}
+\usage{
+Chevy
+}
 \description{
 Data for Exercise 8.35
 }
 \examples{
 
 str(Chevy)
-attach(Chevy)
-Chevy
-chisq.test(Chevy[,2:6])
-detach(Chevy)
+T1 <- xtabs(~year + frequency, data = Chevy)
+T1
+chisq.test(T1)
 
 }
 \references{

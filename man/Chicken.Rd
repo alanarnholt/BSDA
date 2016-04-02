@@ -6,23 +6,21 @@
 \title{Weight gain of chickens fed three different rations}
 \format{A data frame with 13 observations on the following 3 variables.
 \describe{ 
-\item{Ration1}{a numeric vector} 
-\item{Ration2}{a numeric vector} 
-\item{Ration3}{a numeric vector} 
+\item{gain}{weight gain over a specified period} 
+\item{feed}{a factor with levels \code{ration1}, \code{ration2}, 
+and \code{ration3}} 
 }}
+\usage{
+Chicken
+}
 \description{
 Data for Exercise 10.15
 }
 \examples{
 
 str(Chicken)
-attach(Chicken)
-STACKED <-stack(Chicken)
-STACKED[1:5,]
-boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-anova(lm(values~ind,data=STACKED))
-remove(STACKED)
-detach(Chicken)
+boxplot(gain ~ feed, col = c("red","blue","green"), data = Chicken)
+anova(lm(gain ~ feed, data = Chicken))
 
 }
 \references{
