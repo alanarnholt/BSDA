@@ -347,3 +347,10 @@ devtools::use_data(Chicken, overwrite = TRUE)
 #
 # Examples
 str(Chicken)
+#
+# Chipavg
+Chipavg <- read.csv("Chipavg.csv")
+devtools::use_data(Chipavg, overwrite = TRUE)
+
+
+
