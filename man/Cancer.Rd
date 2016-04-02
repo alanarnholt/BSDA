@@ -8,7 +8,7 @@
 \describe{ 
 \item{survival}{survival time (in days) of terminal patients 
 treated with vitamin C}
-\item{bronchus}{a factor indicating type of cancer with levels 
+\item{type}{a factor indicating type of cancer with levels 
 \code{breast}, \code{bronchus}, \code{colon}, \code{ovary}, and 
 \code{stomach}} 
 }}
