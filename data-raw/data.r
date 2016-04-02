@@ -351,6 +351,9 @@ str(Chicken)
 # Chipavg
 Chipavg <- read.csv("Chipavg.csv")
 devtools::use_data(Chipavg, overwrite = TRUE)
-
+#
+# Chips
+Chips <- read.csv("Chips.csv")
+devtools::use_data(Chips, overwrite = TRUE)
 
 

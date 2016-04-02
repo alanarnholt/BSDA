@@ -12,6 +12,11 @@ circuits}
 \item{thickness}{average thickness of the oxide layer of the eight measurements
 obtained from each set of two wafers} 
 }}
+\source{
+Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
+for Monitoring Parameters of a Nested Random Effect Model.} 
+\emph{Journal of the American Statistical Association}, 90, 729-738.
+}
 \usage{
 Chipavg
 }
