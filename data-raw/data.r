@@ -282,5 +282,26 @@ boxplot(stomach, ylab = "Days")
 SIGN.test(stomach, md = 100, alternative = "greater")
 SIGN.test(bronchus, md = 100, alternative = "greater")
 rm(bronchus, stomach)
-
-
+#
+# Carbon
+Carbon <- read.csv("Carbon.csv")
+devtools::use_data(Carbon, overwrite = TRUE)
+# Examples
+str(Carbon)
+boxplot(CO ~ site, data = Carbon)
+kruskal.test(CO ~ site, data = Carbon)
+#
+# Cat
+read.csv("Cat.csv")
+devtools::use_data(Cat, overwrite = TRUE)
+stem(Cat$score)
+fivenum(Cat$score)
+boxplot(Cat$score, main = "Problem 1.116", col = "green")
+#
+# Censored
+Censored <- read.csv("Censored.csv")
+devtools::use_data(Censored, overwrite = TRUE)
+# Examples
+str(Censored)
+boxplot(survival ~ treatment, data = Censored)
+wilcox.test(survival ~ treatment, data = Censored, alternative = "greater")

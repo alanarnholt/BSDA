@@ -6,19 +6,20 @@
 \title{Reading scores on the California achievement test for a group of 3rd graders}
 \format{A data frame with 17 observations on the following variable.
 \describe{ 
-\item{score}{a numeric vector} 
+\item{score}{reading score on the California Achievement Test} 
 }}
+\usage{
+Cat
+}
 \description{
 Data for Exercise 1.116
 }
 \examples{
 
 str(Cat)
-attach(Cat)
-stem(score)
-fivenum(score)
-boxplot(score,main="Problem 1.116",col="green")
-detach(Cat)
+stem(Cat$score)
+fivenum(Cat$score)
+boxplot(Cat$score, main = "Problem 1.116", col = "green")
 
 }
 \references{
