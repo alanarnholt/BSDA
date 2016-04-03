@@ -355,5 +355,13 @@ devtools::use_data(Chipavg, overwrite = TRUE)
 # Chips
 Chips <- read.csv("Chips.csv")
 devtools::use_data(Chips, overwrite = TRUE)
+#
+# Cigar
+Cigar <- read.csv("Cigar.csv")
+devtools::use_data(Cigar, overwrite = TRUE)
+# Examples
+
+
+
 
 
