@@ -4,25 +4,23 @@
 \name{Cigar}
 \alias{Cigar}
 \title{Milligrams of tar in 25 cigarettes selected randomly from 4 different brands}
-\format{A data frame with 100 observations on the following 6 variables.
+\format{A data frame with 100 observations on the following 2 variables.
 \describe{ 
-\item{brandA}{a numeric vector} 
-\item{brandB}{a numeric vector} 
-\item{brandC}{a numeric vector}
-\item{brandD}{a numeric vector} 
-\item{tar}{a numeric vector}
-\item{brand}{a numeric vector} 
+\item{tar}{amount of tar (measured in milligrams)}
+\item{brand}{a factor indicating cigarette brand with levels \code{brandA}, \code{brandB},
+\code{brandC}, and \code{brandD}} 
 }}
+\usage{
+Cigar
+}
 \description{
 Data for Example 10.4
 }
 \examples{
 
 str(Cigar)
-attach(Cigar)
-boxplot(tar~brand)
-anova(lm(tar~as.factor(brand)))
-detach(Cigar)
+boxplot(tar ~ brand, data = Cigar)
+anova(lm(tar ~ brand, data = Cigar))
 
 }
 \references{
