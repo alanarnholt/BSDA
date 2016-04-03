@@ -1835,8 +1835,8 @@ NULL
 #' @docType data
 #' @format A data frame with 9 observations on the following 2 variables.
 #' \describe{ 
-#' \item{age}{a numeric vector} 
-#' \item{percent}{a numeric vector} 
+#' \item{age}{age of children} 
+#' \item{percent}{percent peak bone density} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1844,14 +1844,12 @@ NULL
 #' @examples
 #' 
 #' str(Citrus)
-#' attach(Citrus)
-#' model <- lm(percent~age)
+#' model <- lm(percent ~ age, data = Citrus)
 #' summary(model)
 #' anova(model)
-#' detach(Citrus)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Citrus"
 
 
 
@@ -1866,11 +1864,8 @@ NULL
 #' @docType data
 #' @format A data frame with 45 observations on the following 5 variables.
 #' \describe{ 
-#' \item{A}{a numeric vector} 
-#' \item{B}{a numeric vector} 
-#' \item{C}{a numeric vector} 
-#' \item{clean}{a numeric vector} 
-#' \item{agent}{a numeric vector} 
+#' \item{clean}{residual contaminants} 
+#' \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1878,12 +1873,10 @@ NULL
 #' @examples
 #' 
 #' str(Clean)
-#' attach(Clean)
-#' boxplot(clean~agent,col=c("red","blue","green"))
-#' anova(lm(clean~as.factor(agent)))
-#' detach(Clean)
+#' boxplot(clean ~ agent, col = c("red", "blue", "green"), data = Clean)
+#' anova(lm(clean ~ agent, data = Clean))
 #' 
-NULL
+"Clean"
 
 
 

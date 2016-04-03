@@ -364,9 +364,16 @@ devtools::use_data(Cigar, overwrite = TRUE)
 # Cigarett
 Cigarett <- read.csv("Cigarett.csv")
 devtools::use_data(Cigarett, overwrite = TRUE)
+# 
+#
+# Citrus
+Citrus <- read.csv("Citrus.csv")
+devtools::use_data(Citrus, overwrite = TRUE)
+#
+# Clean
+Clean <- read.csv("Clean.csv")
+devtools::use_data(Clean, overwrite = TRUE)
 # Examples
-
-
-
+str(Clean)
 
 
