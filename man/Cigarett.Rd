@@ -6,21 +6,24 @@
 \title{Effect of mother's smoking on birth weight of newborn}
 \format{A data frame with 16 observations on the following 2 variables.
 \describe{ 
-\item{cigarett}{a numeric vector} 
-\item{weight}{a numeric vector} 
+\item{cigarettes}{mothers' estimated average number of cigarettes smoked per day} 
+\item{weight}{children's birth weights (in pounds)} 
 }}
+\usage{
+Cigarett
+}
 \description{
 Data for Exercise 2.27
 }
 \examples{
 
 str(Cigarett)
-attach(Cigarett)
-plot(cigarett,weight)
-model <- lm(weight~cigarett)
+plot(weight ~ cigarettes, data = Cigarett)
+model <- lm(weight ~ cigarettes, data = Cigarett)
 abline(model)
-cor(weight,cigarett)
-detach(Cigarett)
+with(data = Cigarett,
+cor(weight, cigarettes)
+)
 
 }
 \references{
