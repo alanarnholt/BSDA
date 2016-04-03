@@ -1776,8 +1776,8 @@ NULL
 #' @docType data
 #' @format A data frame with 16 observations on the following 2 variables.
 #' \describe{ 
-#' \item{cigarett}{a numeric vector} 
-#' \item{weight}{a numeric vector} 
+#' \item{cigarettes}{mothers' estimated average number of cigarettes smoked per day} 
+#' \item{weight}{children's birth weights (in pounds)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1785,14 +1785,14 @@ NULL
 #' @examples
 #' 
 #' str(Cigarett)
-#' attach(Cigarett)
-#' plot(cigarett,weight)
-#' model <- lm(weight~cigarett)
+#' plot(weight ~ cigarettes, data = Cigarett)
+#' model <- lm(weight ~ cigarettes, data = Cigarett)
 #' abline(model)
-#' cor(weight,cigarett)
-#' detach(Cigarett)
+#' with(data = Cigarett,
+#' cor(weight, cigarettes)
+#' )
 #' 
-NULL
+"Cigarett"
 
 
 

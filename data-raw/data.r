@@ -360,6 +360,11 @@ devtools::use_data(Chips, overwrite = TRUE)
 Cigar <- read.csv("Cigar.csv")
 devtools::use_data(Cigar, overwrite = TRUE)
 # Examples
+#
+# Cigarett
+Cigarett <- read.csv("Cigarett.csv")
+devtools::use_data(Cigarett, overwrite = TRUE)
+# Examples
 
 
 
