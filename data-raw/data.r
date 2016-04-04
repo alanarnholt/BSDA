@@ -365,6 +365,10 @@ devtools::use_data(Cigar, overwrite = TRUE)
 Cigarett <- read.csv("Cigarett.csv")
 devtools::use_data(Cigarett, overwrite = TRUE)
 # Examples
+#
+# Darwin
+Darwin <- read.csv("Darwin.csv")
+devtools::use_data(Darwin, overwrite = TRUE)
 
 
 
