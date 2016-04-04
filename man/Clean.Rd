@@ -6,22 +6,20 @@
 \title{Residual contaminant following the use of three different cleansing agents}
 \format{A data frame with 45 observations on the following 5 variables.
 \describe{ 
-\item{A}{a numeric vector} 
-\item{B}{a numeric vector} 
-\item{C}{a numeric vector} 
-\item{clean}{a numeric vector} 
-\item{agent}{a numeric vector} 
+\item{clean}{residual contaminants} 
+\item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 }}
+\usage{
+Clean
+}
 \description{
 Data for Exercise 10.16
 }
 \examples{
 
 str(Clean)
-attach(Clean)
-boxplot(clean~agent,col=c("red","blue","green"))
-anova(lm(clean~as.factor(agent)))
-detach(Clean)
+boxplot(clean ~ agent, col = c("red", "blue", "green"), data = Clean)
+anova(lm(clean ~ agent, data = Clean))
 
 }
 \references{

@@ -364,9 +364,95 @@ devtools::use_data(Cigar, overwrite = TRUE)
 # Cigarett
 Cigarett <- read.csv("Cigarett.csv")
 devtools::use_data(Cigarett, overwrite = TRUE)
+# 
+#
+# Citrus
+Citrus <- read.csv("Citrus.csv")
+devtools::use_data(Citrus, overwrite = TRUE)
+#
+# Clean
+Clean <- read.csv("Clean.csv")
+devtools::use_data(Clean, overwrite = TRUE)
 # Examples
+str(Clean)
+#
+# Coaxial
+Coaxial <- read.csv("Coaxial.csv")
+devtools::use_data(Coaxial, overwrite = TRUE)
+# Examples
+boxplot(signal ~ cable, data = Coaxial, col = c("red", "green", "yellow"))
+kruskal.test(signal ~ cable, data = Coaxial)
+#
+# Coffee
+Coffee <- read.csv("Coffee.csv")
+devtools::use_data(Coffee, overwrite = TRUE)
+# Examples
+differences <- Coffee$with - Coffee$without
+qqnorm(differences)
+qqline(differences)
+shapiro.test(differences)
+t.test(Coffee$with, Coffee$without, paired = TRUE, alternative = "greater")
+wilcox.test(Coffee$with, Coffee$without, paired = TRUE, alterantive = "greater")
+rm(differences)
+#
+# Coins
+Coins <- read.csv("Coins.csv")
+devtools::use_data(Coins, overwrite = TRUE)
+#
+# Commute
+Commute <- read.csv("Commute.csv")
+devtools::use_data(Commute, overwrite = TRUE)
+# Examples
+commute <- stack(Commute)
+str(commute)
+stripplot(ind ~ values, data = commute, jitter = TRUE)
+dotplot(ind ~ values, data = commute)
+bwplot(ind ~ values, data = commute)
 
-
-
-
-
+stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
+           col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
+           xlab = "minutes")
+title(main = "Commute Time")
+boxplot(values ~ ind, data = commute, names=c("1980", "1990"), 
+        horizontal = TRUE, las = 1)
+rm(commute)
+#
+# Concept
+Concept <- read.csv("Concept.csv")
+devtools::use_data(Concept, overwrite = TRUE)
+#
+str(Concept)
+#
+# Concrete
+Concrete <- read.csv("Concrete.csv")
+devtools::use_data(Concrete, overwrite = TRUE)
+#
+str(Concrete)
+#
+# Corn
+Corn <- read.csv("Corn.csv")
+devtools::use_data(Corn, overwrite = TRUE)
+#
+str(Corn)
+#
+# Correlat
+Correlat <- read.csv("Correlat.csv")
+devtools::use_data(Correlat, overwrite = TRUE)
+#
+#
+Counsel <- read.csv("Counsel.csv")
+devtools::use_data(Counsel, overwrite = TRUE)
+#
+str(Counsel)
+#
+# Cpi
+Cpi <- read.csv("Cpi.csv")
+devtools::use_data(Cpi, overwrite = TRUE)
+#
+# Crime
+Crime <- read.csv("Crime.csv", colClasses = c("factor", "factor", "numeric"))
+devtools::use_data(Crime, overwrite = TRUE)
+# 
+# Examples
+str(Crime)
+boxplot(rate ~ year, data = Crime)

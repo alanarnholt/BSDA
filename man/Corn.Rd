@@ -7,23 +7,26 @@
 planted on 12 plots of land}
 \format{A data frame with 12 observations on the following 3 variables.
 \describe{ 
-\item{New}{a numeric vector} 
-\item{Standard}{a numeric vector} 
-\item{differ}{a numeric vector} 
+\item{plot}{number of plot} 
+\item{new}{corn yield with new meathod} 
+\item{standard}{corn yield with standard method} 
 }}
+\usage{
+Corn
+}
 \description{
 Data for Exercise 7.77
 }
 \examples{
 
 str(Corn)
-attach(Corn)
+differ <- Corn$new - Corn$standard
 boxplot(differ)
 qqnorm(differ)
 qqline(differ)
 shapiro.test(differ)
-t.test(New,Standard,paired=TRUE,alternative="greater")
-detach(Corn)
+t.test(Corn$new, Corn$standard, paired = TRUE, alternative = "greater")
+rm(differ)
 
 }
 \references{

@@ -1835,8 +1835,8 @@ NULL
 #' @docType data
 #' @format A data frame with 9 observations on the following 2 variables.
 #' \describe{ 
-#' \item{age}{a numeric vector} 
-#' \item{percent}{a numeric vector} 
+#' \item{age}{age of children} 
+#' \item{percent}{percent peak bone density} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1844,14 +1844,12 @@ NULL
 #' @examples
 #' 
 #' str(Citrus)
-#' attach(Citrus)
-#' model <- lm(percent~age)
+#' model <- lm(percent ~ age, data = Citrus)
 #' summary(model)
 #' anova(model)
-#' detach(Citrus)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Citrus"
 
 
 
@@ -1866,11 +1864,8 @@ NULL
 #' @docType data
 #' @format A data frame with 45 observations on the following 5 variables.
 #' \describe{ 
-#' \item{A}{a numeric vector} 
-#' \item{B}{a numeric vector} 
-#' \item{C}{a numeric vector} 
-#' \item{clean}{a numeric vector} 
-#' \item{agent}{a numeric vector} 
+#' \item{clean}{residual contaminants} 
+#' \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1878,12 +1873,10 @@ NULL
 #' @examples
 #' 
 #' str(Clean)
-#' attach(Clean)
-#' boxplot(clean~agent,col=c("red","blue","green"))
-#' anova(lm(clean~as.factor(agent)))
-#' detach(Clean)
+#' boxplot(clean ~ agent, col = c("red", "blue", "green"), data = Clean)
+#' anova(lm(clean ~ agent, data = Clean))
 #' 
-NULL
+"Clean"
 
 
 
@@ -1896,13 +1889,11 @@ NULL
 #' 
 #' @name Coaxial
 #' @docType data
-#' @format A data frame with 45 observations on the following 5 variables.
+#' @format A data frame with 45 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Type.A}{a numeric vector} 
-#' \item{Type.B}{a numeric vector} 
-#' \item{Type.C}{a numeric vector}
-#' \item{Signal}{a numeric vector} 
-#' \item{Cable}{a numeric vector} 
+#' \item{signal}{signal loss per 1000 feet} 
+#' \item{cable}{factor with three levels of coaxial cable \code{typeA}, 
+#' \code{typeB}, and \code{typeC}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1910,12 +1901,10 @@ NULL
 #' @examples
 #' 
 #' str(Coaxial)
-#' attach(Coaxial)
-#' boxplot(Signal~Cable)
-#' kruskal.test(Signal~as.factor(Cable))
-#' detach(Coaxial)
+#' boxplot(signal ~ cable, data = Coaxial, col = c("red", "green", "yellow"))
+#' kruskal.test(signal ~ cable, data = Coaxial)
 #' 
-NULL
+"Coaxial"
 
 
 
@@ -1928,12 +1917,10 @@ NULL
 #' 
 #' @name Coffee
 #' @docType data
-#' @format A data frame with 9 observations on the following 4 variables.
+#' @format A data frame with 9 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Without}{a numeric vector} 
-#' \item{With}{a numeric vector} 
-#' \item{differ}{a numeric vector}
-#' \item{sgnrnks}{a numeric vector} 
+#' \item{without}{workers' productivity scores without a coffee break} 
+#' \item{with}{workers' productivity scores with a coffee break} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1941,15 +1928,16 @@ NULL
 #' @examples
 #' 
 #' str(Coffee)
-#' attach(Coffee)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' t.test(With,Without,paired=TRUE,alternative="greater")
-#' wilcox.test(With,Without,paired=TRUE,alternative="greater")
-#' detach(Coffee)
+#' differences <- Coffee$with - Coffee$without
+#' qqnorm(differences)
+#' qqline(differences)
+#' shapiro.test(differences)
+#' t.test(Coffee$with, Coffee$without, paired = TRUE, alternative = "greater")
+#' wilcox.test(Coffee$with, Coffee$without, paired = TRUE, 
+#'             alterantive = "greater")
+#' rm(differences)
 #' 
-NULL
+"Coffee"
 
 
 
@@ -1964,7 +1952,7 @@ NULL
 #' @docType data
 #' @format A data frame with 12 observations on the following variable.
 #' \describe{ 
-#' \item{coins}{a numeric vector} 
+#' \item{return}{yearly returns on each of 12 possible investments} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -1972,13 +1960,10 @@ NULL
 #' @examples
 #' 
 #' str(Coins)
-#' attach(Coins)
-#' qqnorm(coins)
-#' qqline(coins)
-#' EDA(coins)
-#' detach(Coins)
+#' qqnorm(Coins$return)
+#' qqline(Coins$return)
 #' 
-NULL
+"Coins"
 
 
 
@@ -1993,7 +1978,7 @@ NULL
 #' @docType data
 #' @format A data frame with 39 observations on the following 3 variables.
 #' \describe{ 
-#' \item{City}{a factor with levels \code{Atlanta}
+#' \item{city}{a factor with levels \code{Atlanta}
 #' \code{Baltimore} \code{Boston} \code{Buffalo} \code{Charlotte}
 #' \code{Chicago} \code{Cincinnati} \code{Cleveland} \code{Columbus}
 #' \code{Dallas} \code{Denver} \code{Detroit} \code{Hartford} \code{Houston}
@@ -2004,31 +1989,29 @@ NULL
 #' \code{Sacramento} \code{Salt Lake City} \code{San Antonio} \code{San Diego}
 #' \code{San Francisco} \code{Seattle} \code{St. Louis} \code{Tampa}
 #' \code{Washington}}
-#' \item{X1980}{a numeric vector}
-#' \item{X1990}{a numeric vector}
+#' \item{year1980}{urban commute times for the year 1980}
+#' \item{year1990}{urban commute times for the year 1990}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Commute)
-#' attach(Commute)
-#' stripchart(x=list(X1980,X1990),method="stack",pch=1,cex=2,col=c("red","blue"),
-#' group.names=c("1980","1990"),main="",xlab="minutes")
-#' title(main="Commute Time")
-#' boxplot(X1980,X1990,col=c("red","blue"),names=c("1980","1990"),horizontal=TRUE,las=1)
-#' library(lattice)
 #' commute <- stack(Commute)
-#' commute[1:5,]
-#' attach(commute)
-#' stripplot(ind~values,jitter=TRUE)
-#' dotplot(ind~values)
-#' bwplot(ind~values)
-#' remove(commute)
-#' detach(Commute)
+#' str(commute)
+#' stripplot(ind ~ values, data = commute, jitter = TRUE)
+#' dotplot(ind ~ values, data = commute)
+#' bwplot(ind ~ values, data = commute)
+#' stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
+#'           col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
+#'           xlab = "minutes")
+#' title(main = "Commute Time")
+#' boxplot(values ~ ind, data = commute, names=c("1980", "1990"), 
+#'        horizontal = TRUE, las = 1)
+#' rm(commute)
 #' 
-NULL
+#' 
+"Commute"
 
 
 
@@ -2043,7 +2026,7 @@ NULL
 #' @docType data
 #' @format A data frame with 28 observations on the following variable.
 #' \describe{ 
-#' \item{self}{a numeric vector} 
+#' \item{self}{Tennessee self concept scores} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2051,18 +2034,16 @@ NULL
 #' @examples
 #' 
 #' str(Concept)
-#' attach(Concept)
-#' summary(self)
-#' sd(self)
-#' diff(range(self))
-#' IQR(self)
-#' summary(self/10)
-#' IQR(self/10)
-#' sd(self/10)
-#' diff(range(self/10))
-#' detach(Concept)
+#' summary(Concept$self)
+#' sd(Concept$self)
+#' diff(range(Concept$self))
+#' IQR(Concept$self)
+#' summary(Concept$self/10)
+#' IQR(Concept$self/10)
+#' sd(Concept$self/10)
+#' diff(range(Concept$self/10))
 #' 
-NULL
+"Concept"
 
 
 
@@ -2075,11 +2056,11 @@ NULL
 #' 
 #' @name Concrete
 #' @docType data
-#' @format A data frame with 20 observations on the following 3 variables.
+#' @format A data frame with 20 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Strength}{a numeric vector} 
-#' \item{Method}{a numeric vector} 
-#' \item{Ranks}{a numeric vector} 
+#' \item{strength}{comprehensive strength (in pounds per square inch)} 
+#' \item{method}{factor with levels \code{new} and \code{old} indicating the 
+#' method used to construct a concrete block} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2087,11 +2068,9 @@ NULL
 #' @examples
 #' 
 #' str(Concrete)
-#' attach(Concrete)
-#' wilcox.test(Strength~Method,alternative="greater")
-#' detach(Concrete)
+#' wilcox.test(strength ~ method, data = Concrete, alternative = "greater")
 #' 
-NULL
+"Concrete"
 
 
 
@@ -2107,9 +2086,9 @@ NULL
 #' @docType data
 #' @format A data frame with 12 observations on the following 3 variables.
 #' \describe{ 
-#' \item{New}{a numeric vector} 
-#' \item{Standard}{a numeric vector} 
-#' \item{differ}{a numeric vector} 
+#' \item{plot}{number of plot} 
+#' \item{new}{corn yield with new meathod} 
+#' \item{standard}{corn yield with standard method} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2117,15 +2096,15 @@ NULL
 #' @examples
 #' 
 #' str(Corn)
-#' attach(Corn)
+#' differ <- Corn$new - Corn$standard
 #' boxplot(differ)
 #' qqnorm(differ)
 #' qqline(differ)
 #' shapiro.test(differ)
-#' t.test(New,Standard,paired=TRUE,alternative="greater")
-#' detach(Corn)
+#' t.test(Corn$new, Corn$standard, paired = TRUE, alternative = "greater")
+#' rm(differ)
 #' 
-NULL
+"Corn"
 
 
 
@@ -2149,13 +2128,11 @@ NULL
 #' @examples
 #' 
 #' str(Correlat)
-#' attach(Correlat)
-#' plot(X,Y)
-#' model <- lm(Y~X)
+#' plot(Y ~ X, data = Correlat)
+#' model <- lm(Y ~ X, data = Correlat)
 #' abline(model)
-#' detach(Correlat)
 #' 
-NULL
+"Correlat"
 
 
 
@@ -2170,7 +2147,7 @@ NULL
 #' @docType data
 #' @format A data frame with 18 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{standardized psychology scores after a counseling process} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2178,12 +2155,10 @@ NULL
 #' @examples
 #' 
 #' str(Counsel)
-#' attach(Counsel)
-#' EDA(score)
-#' t.test(score,mu=70)
-#' detach(Counsel)
+#' EDA(Counsel$score)
+#' t.test(Counsel$score, mu = 70)
 #' 
-NULL
+"Counsel"
 
 
 
@@ -2198,8 +2173,8 @@ NULL
 #' @docType data
 #' @format A data frame with 20 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Year}{a numeric vector} 
-#' \item{CPI}{a numeric vector} 
+#' \item{Year}{year} 
+#' \item{CPI}{consumer price index} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2207,13 +2182,10 @@ NULL
 #' @examples
 #' 
 #' str(Cpi)
-#' attach(Cpi)  
-#' plot(Year,CPI,type="l",lty=2,lwd=2,col="red")   
-#' names(CPI) <- Year
-#' barplot(CPI,col="pink",las=2,main="Problem 1.34")   
-#' detach(Cpi)
+#' plot(CPI ~ Year, data = Cpi, type = "l", lty = 2, lwd = 2, col = "red")   
+#' barplot(Cpi$CPI, col = "pink", las = 2, main = "Problem 1.34")   
 #' 
-NULL
+"Cpi"
 
 
 
@@ -2226,9 +2198,9 @@ NULL
 #' 
 #' @name Crime
 #' @docType data
-#' @format A data frame with 51 observations on the following 3 variables.
+#' @format A data frame with 102 observations on the following 3 variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
+#' \item{state}{a factor with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 #' \code{Colorado} \code{Connecticut} \code{DC} \code{Delaware} \code{Florida}
 #' \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
@@ -2241,8 +2213,8 @@ NULL
 #' \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
 #' \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
 #' Virginia} \code{Wisconsin} \code{Wyoming}} 
-#' \item{X1983}{a numeric vector} 
-#' \item{X1993}{a numeric vector} 
+#' \item{year}{a factor with levels \code{1983} and \code{1993}} 
+#' \item{rate}{crime rate per 100,000 inhabitants} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2250,13 +2222,9 @@ NULL
 #' @examples
 #' 
 #' str(Crime)
-#' attach(Crime)
-#' boxplot(X1983,X1993,names=c("1983","1993"),xlab="Year",
-#' ylab="Crime Rate per 100,000 Inhabitants",main="Problem 1.90")
-#' plot(X1983,X1993)
-#' detach(Crime)
+#' boxplot(rate ~ year, data = Crime)
 #' 
-NULL
+"Crime"
 
 
 
