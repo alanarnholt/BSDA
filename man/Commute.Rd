@@ -6,7 +6,7 @@
 \title{Commuting times for selected cities in 1980 and 1990}
 \format{A data frame with 39 observations on the following 3 variables.
 \describe{ 
-\item{City}{a factor with levels \code{Atlanta}
+\item{city}{a factor with levels \code{Atlanta}
 \code{Baltimore} \code{Boston} \code{Buffalo} \code{Charlotte}
 \code{Chicago} \code{Cincinnati} \code{Cleveland} \code{Columbus}
 \code{Dallas} \code{Denver} \code{Detroit} \code{Hartford} \code{Houston}
@@ -17,29 +17,30 @@
 \code{Sacramento} \code{Salt Lake City} \code{San Antonio} \code{San Diego}
 \code{San Francisco} \code{Seattle} \code{St. Louis} \code{Tampa}
 \code{Washington}}
-\item{X1980}{a numeric vector}
-\item{X1990}{a numeric vector}
+\item{year1980}{urban commute times for the year 1980}
+\item{year1990}{urban commute times for the year 1990}
 }}
+\usage{
+Commute
+}
 \description{
 Data for Exercises 1.13, and 7.85
 }
 \examples{
 
-str(Commute)
-attach(Commute)
-stripchart(x=list(X1980,X1990),method="stack",pch=1,cex=2,col=c("red","blue"),
-group.names=c("1980","1990"),main="",xlab="minutes")
-title(main="Commute Time")
-boxplot(X1980,X1990,col=c("red","blue"),names=c("1980","1990"),horizontal=TRUE,las=1)
-library(lattice)
 commute <- stack(Commute)
-commute[1:5,]
-attach(commute)
-stripplot(ind~values,jitter=TRUE)
-dotplot(ind~values)
-bwplot(ind~values)
-remove(commute)
-detach(Commute)
+str(commute)
+stripplot(ind ~ values, data = commute, jitter = TRUE)
+dotplot(ind ~ values, data = commute)
+bwplot(ind ~ values, data = commute)
+stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
+          col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
+          xlab = "minutes")
+title(main = "Commute Time")
+boxplot(values ~ ind, data = commute, names=c("1980", "1990"), 
+       horizontal = TRUE, las = 1)
+rm(commute)
+
 
 }
 \references{

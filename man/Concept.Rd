@@ -6,24 +6,25 @@
 \title{Tennessee self concept scale scores for a group of teenage boys}
 \format{A data frame with 28 observations on the following variable.
 \describe{ 
-\item{self}{a numeric vector} 
+\item{self}{Tennessee self concept scores} 
 }}
+\usage{
+Concept
+}
 \description{
 Data for Exercise 16.8 and 1.82
 }
 \examples{
 
 str(Concept)
-attach(Concept)
-summary(self)
-sd(self)
-diff(range(self))
-IQR(self)
-summary(self/10)
-IQR(self/10)
-sd(self/10)
-diff(range(self/10))
-detach(Concept)
+summary(Concept$self)
+sd(Concept$self)
+diff(range(Concept$self))
+IQR(Concept$self)
+summary(Concept$self/10)
+IQR(Concept$self/10)
+sd(Concept$self/10)
+diff(range(Concept$self/10))
 
 }
 \references{

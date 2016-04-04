@@ -4,26 +4,28 @@
 \name{Coffee}
 \alias{Coffee}
 \title{Productivity of workers with and without a coffee break}
-\format{A data frame with 9 observations on the following 4 variables.
+\format{A data frame with 9 observations on the following 2 variables.
 \describe{ 
-\item{Without}{a numeric vector} 
-\item{With}{a numeric vector} 
-\item{differ}{a numeric vector}
-\item{sgnrnks}{a numeric vector} 
+\item{without}{workers' productivity scores without a coffee break} 
+\item{with}{workers' productivity scores with a coffee break} 
 }}
+\usage{
+Coffee
+}
 \description{
 Data for Exercise 7.55
 }
 \examples{
 
 str(Coffee)
-attach(Coffee)
-qqnorm(differ)
-qqline(differ)
-shapiro.test(differ)
-t.test(With,Without,paired=TRUE,alternative="greater")
-wilcox.test(With,Without,paired=TRUE,alternative="greater")
-detach(Coffee)
+differences <- Coffee$with - Coffee$without
+qqnorm(differences)
+qqline(differences)
+shapiro.test(differences)
+t.test(Coffee$with, Coffee$without, paired = TRUE, alternative = "greater")
+wilcox.test(Coffee$with, Coffee$without, paired = TRUE, 
+            alterantive = "greater")
+rm(differences)
 
 }
 \references{

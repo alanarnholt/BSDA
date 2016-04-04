@@ -6,19 +6,19 @@
 \title{Yearly returns on 12 investments}
 \format{A data frame with 12 observations on the following variable.
 \describe{ 
-\item{coins}{a numeric vector} 
+\item{return}{yearly returns on each of 12 possible investments} 
 }}
+\usage{
+Coins
+}
 \description{
 Data for Exercise 5.68
 }
 \examples{
 
 str(Coins)
-attach(Coins)
-qqnorm(coins)
-qqline(coins)
-EDA(coins)
-detach(Coins)
+qqnorm(Coins$return)
+qqline(Coins$return)
 
 }
 \references{

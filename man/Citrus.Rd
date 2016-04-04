@@ -6,21 +6,22 @@
 \title{Percent of peak bone density of different aged children}
 \format{A data frame with 9 observations on the following 2 variables.
 \describe{ 
-\item{age}{a numeric vector} 
-\item{percent}{a numeric vector} 
+\item{age}{age of children} 
+\item{percent}{percent peak bone density} 
 }}
+\usage{
+Citrus
+}
 \description{
 Data for Exercise 9.7
 }
 \examples{
 
 str(Citrus)
-attach(Citrus)
-model <- lm(percent~age)
+model <- lm(percent ~ age, data = Citrus)
 summary(model)
 anova(model)
-detach(Citrus)
-remove(model)
+rm(model)
 
 }
 \references{
