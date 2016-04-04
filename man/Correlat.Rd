@@ -9,17 +9,18 @@
 \item{X}{a numeric vector} 
 \item{Y}{a numeric vector} 
 }}
+\usage{
+Correlat
+}
 \description{
 Data for Exercise 2.23
 }
 \examples{
 
 str(Correlat)
-attach(Correlat)
-plot(X,Y)
-model <- lm(Y~X)
+plot(Y ~ X, data = Correlat)
+model <- lm(Y ~ X, data = Correlat)
 abline(model)
-detach(Correlat)
 
 }
 \references{

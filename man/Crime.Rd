@@ -4,9 +4,9 @@
 \name{Crime}
 \alias{Crime}
 \title{Violent crime rates for the states in 1983 and 1993}
-\format{A data frame with 51 observations on the following 3 variables.
+\format{A data frame with 102 observations on the following 3 variables.
 \describe{ 
-\item{State}{a factor with levels \code{Alabama}
+\item{state}{a factor with levels \code{Alabama}
 \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 \code{Colorado} \code{Connecticut} \code{DC} \code{Delaware} \code{Florida}
 \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
@@ -19,20 +19,19 @@
 \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
 \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
 Virginia} \code{Wisconsin} \code{Wyoming}} 
-\item{X1983}{a numeric vector} 
-\item{X1993}{a numeric vector} 
+\item{year}{a factor with levels \code{1983} and \code{1993}} 
+\item{rate}{crime rate per 100,000 inhabitants} 
 }}
+\usage{
+Crime
+}
 \description{
 Data for Exercises 1.90, 2.32, 3.64, and 5.113
 }
 \examples{
 
 str(Crime)
-attach(Crime)
-boxplot(X1983,X1993,names=c("1983","1993"),xlab="Year",
-ylab="Crime Rate per 100,000 Inhabitants",main="Problem 1.90")
-plot(X1983,X1993)
-detach(Crime)
+boxplot(rate ~ year, data = Crime)
 
 }
 \references{

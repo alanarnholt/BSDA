@@ -6,20 +6,20 @@
 \title{Consumer price index from 1979 to 1998}
 \format{A data frame with 20 observations on the following 2 variables.
 \describe{ 
-\item{Year}{a numeric vector} 
-\item{CPI}{a numeric vector} 
+\item{Year}{year} 
+\item{CPI}{consumer price index} 
 }}
+\usage{
+Cpi
+}
 \description{
 Data for Exercise 1.34
 }
 \examples{
 
 str(Cpi)
-attach(Cpi)  
-plot(Year,CPI,type="l",lty=2,lwd=2,col="red")   
-names(CPI) <- Year
-barplot(CPI,col="pink",las=2,main="Problem 1.34")   
-detach(Cpi)
+plot(CPI ~ Year, data = Cpi, type = "l", lty = 2, lwd = 2, col = "red")   
+barplot(Cpi$CPI, col = "pink", las = 2, main = "Problem 1.34")   
 
 }
 \references{
