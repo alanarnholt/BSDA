@@ -463,3 +463,8 @@ devtools::use_data(Crime, overwrite = TRUE)
 # Examples
 str(Crime)
 boxplot(rate ~ year, data = Crime)
+#
+# Darwin
+Darwin <- read.csv("Darwin.csv")
+devtools::use_data(Darwin, overwrite = TRUE)
+
