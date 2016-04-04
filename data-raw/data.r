@@ -374,6 +374,12 @@ devtools::use_data(Citrus, overwrite = TRUE)
 Clean <- read.csv("Clean.csv")
 devtools::use_data(Clean, overwrite = TRUE)
 # Examples
+<<<<<<< HEAD
+#
+# Darwin
+Darwin <- read.csv("Darwin.csv")
+devtools::use_data(Darwin, overwrite = TRUE)
+=======
 str(Clean)
 #
 # Coaxial
@@ -408,6 +414,7 @@ str(commute)
 stripplot(ind ~ values, data = commute, jitter = TRUE)
 dotplot(ind ~ values, data = commute)
 bwplot(ind ~ values, data = commute)
+>>>>>>> b00a2bc75db4b07fe2dfe69b95b3e11380c2594b
 
 stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
            col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
@@ -456,3 +463,8 @@ devtools::use_data(Crime, overwrite = TRUE)
 # Examples
 str(Crime)
 boxplot(rate ~ year, data = Crime)
+#
+# Darwin
+Darwin <- read.csv("Darwin.csv")
+devtools::use_data(Darwin, overwrite = TRUE)
+

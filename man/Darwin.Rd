@@ -4,28 +4,27 @@
 \name{Darwin}
 \alias{Darwin}
 \title{Charles Darwin's study of cross-fertilized and self-fertilized plants}
-\format{A data frame with 30 observations on the following 7 variables.
+\format{A data frame with 15 observations on the following 3 variables.
 \describe{ 
-\item{pot}{a numeric vector} 
-\item{cross}{a numeric vector} 
-\item{self}{a numeric vector}
-\item{height}{a numeric vector} 
-\item{method}{a numeric vector} 
-\item{differ}{a numeric vector} 
-\item{sgnrnks}{a numeric vector} 
+\item{pot}{number of pot} 
+\item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
+\item{self}{height of plant (in inches) after a fixed period of time when self-fertilized}
 }}
+\usage{
+Darwin
+}
 \description{
 Data for Exercise 7.62
 }
 \examples{
 
 str(Darwin)
-attach(Darwin)
+differ <- Darwin$cross - Darwin$self
 qqnorm(differ)
 qqline(differ)
 shapiro.test(differ)
-wilcox.test(cross,self,paired=TRUE)
-detach(Darwin)
+wilcox.test(Darwin$cross, Darwin$self, paired = TRUE)
+rm(differ)
 
 }
 \references{
