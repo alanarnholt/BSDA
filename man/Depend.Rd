@@ -4,24 +4,22 @@
 \name{Depend}
 \alias{Depend}
 \title{Number of dependent children for 50 families}
-\format{A data frame with 50 observations on the following 4 variables.
+\format{A data frame with 50 observations on 1 variable.
 \describe{ 
-\item{C1}{a numeric vector} 
-\item{number}{a numeric vector} 
-\item{Count}{a numeric vector}
-\item{Percent}{a numeric vector} 
+\item{children}{The number of dependent children for 50 families.} 
 }}
+\usage{
+Depend
+}
 \description{
 Data for Exercise 1.26
 }
 \examples{
 
 str(Depend)
-attach(Depend)
-table(C1)
-barplot(table(C1),col="lightblue",main="Problem 1.26",
-xlab="Number of Dependent Children",ylab="Frequency")
-detach(Depend)
+T1 <- xtabs(~children, data = Depend)
+T1
+barplot(T1, col = "lightblue", main = "Number of Dependent \\nChildren for 50 Families")
 
 }
 \references{

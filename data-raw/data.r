@@ -468,3 +468,31 @@ boxplot(rate ~ year, data = Crime)
 Darwin <- read.csv("Darwin.csv")
 devtools::use_data(Darwin, overwrite = TRUE)
 
+###### Erin Working
+##
+#
+#
+# Creating Dealers
+mat <- matrix(data = c(19,3,12,8,11,4,2,16,9,13,10,15), nrow = 6)
+dimnames(mat) <- list(dealership = c("Honda", "Toyota","Mazda","Ford","Dodge","Saturn"), 
+                      service = c("Before Needed","Only When Recommended"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Dealers <- vcdExtra::expand.dft(matDF)
+Dealers$dealership <- factor(Dealers$dealership, 
+                          levels = c("Honda", "Toyota","Mazda","Ford","Dodge","Saturn"))
+Dealers$service <- factor(Dealers$service, levels = c("Before Needed","Only When Recommended"))
+devtools::use_data(Dealers, overwrite = TRUE)
+# Check
+T1 <- xtabs(~dealership+service,data=Dealers)
+barplot(t(T1), beside = TRUE)
+
+
+
+# Create Depend
+Depend <- read.csv("Depend.csv")
+devtools::use_data(Depend,overwrite=TRUE)
+# Checks
+T1 <- xtabs(~children, data = Depend)
+T1
+barplot(T1, col = "lightblue", main = "Number of Dependent \nChildren for 50 Families")
