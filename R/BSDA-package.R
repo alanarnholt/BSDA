@@ -2356,25 +2356,17 @@ NULL
 #' @docType data
 #' @format A data frame with 80 observations on the following 6 variables.
 #' \describe{ 
-#' \item{CarrierA}{a numeric vector}
-#' \item{CarrierB}{a numeric vector} 
-#' \item{CarrierC}{a numeric vector} 
-#' \item{CarrierD}{a numeric vector} 
 #' \item{delay}{a numeric vector} 
-#' \item{Carrier}{a numeric vector} 
+#' \item{carrier}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
+#' boxplot(Delay$delay~Delay$carrier)
+#' kruskal.test(Delay$delay~as.factor(Delay$carrier))
 #' 
-#' str(Delay)
-#' attach(Delay)
-#' boxplot(delay~Carrier)
-#' kruskal.test(delay~as.factor(Carrier))
-#' detach(Delay)
-#' 
-NULL
+"Delay"
 
 
 

@@ -503,7 +503,12 @@ devtools::use_data(Degree,overwrite=TRUE)
 #Check
 barplot(t(Dmat),beside=TRUE,legend=TRUE,cex.names=.5)
 
-
+# Create Delay
+Delay <- read.csv("Delay.csv")
+devtools::use_data(Delay,overwrite=TRUE)
+#Checks
+boxplot(Delay$delay~Delay$carrier)
+kruskal.test(Delay$delay~as.factor(Delay$carrier))
 
 
 # Create Depend
