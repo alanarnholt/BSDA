@@ -494,6 +494,18 @@ devtools::use_data(Defectiv,overwrite=TRUE)
 T1 <- table(Defectiv$C1)
 barplot(T1, col = "green", ylab = "Frequency",xlab="Defective Items Produced by Employees",main="Problem 1.27")
 
+# Create Degree
+Dmat <- as.matrix(Degree[,2:3])
+rownames(Dmat) <- Degree$Field
+colnames(Dmat) <- c("1970","1990")
+Dmat
+devtools::use_data(Degree,overwrite=TRUE)
+#Check
+barplot(t(Dmat),beside=TRUE,legend=TRUE,cex.names=.5)
+
+
+
+
 # Create Depend
 Depend <- read.csv("Depend.csv")
 devtools::use_data(Depend,overwrite=TRUE)
