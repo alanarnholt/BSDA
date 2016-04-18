@@ -8,17 +8,18 @@
 \describe{ 
 \item{pounds}{a numeric vector} 
 }}
+\usage{
+Disposal
+}
 \description{
 Data for Exercise 1.127
 }
 \examples{
 
 str(Disposal)
-attach(Disposal)
-stem(pounds)
-fivenum(pounds)
-EDA(pounds)
-detach(Disposal)
+stem(Disposal$pounds)
+fivenum(Disposal$pounds)
+EDA(Disposal$pounds)
 
 }
 \references{

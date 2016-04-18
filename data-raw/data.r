@@ -556,3 +556,11 @@ dotchart(Diplomat$number,main="Number of Tickets",col="blue",pch=1)
 names(Diplomat$rate) <- Diplomat$country
 dotchart(Diplomat$rate,main="Tickets/Vehicle/Month",col="red",pch=2)
 barplot(Diplomat$rate,col="pink")
+
+# Create Disposal
+Disposal <- read.csv("Disposal.csv")
+devtools::use_data(Disposal,overwrite=TRUE)
+# check
+stem(Disposal$pounds)
+fivenum(Disposal$pounds)
+EDA(Disposal$pounds)

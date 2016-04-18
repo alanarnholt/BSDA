@@ -2591,6 +2591,8 @@ NULL
 
 
 
+
+
 #' Toxic intensity for plants producing herbicidal preparations
 #' 
 #' Data for Exercise 1.127
@@ -2608,13 +2610,11 @@ NULL
 #' @examples
 #' 
 #' str(Disposal)
-#' attach(Disposal)
-#' stem(pounds)
-#' fivenum(pounds)
-#' EDA(pounds)
-#' detach(Disposal)
+#' stem(Disposal$pounds)
+#' fivenum(Disposal$pounds)
+#' EDA(Disposal$pounds)
 #' 
-NULL
+"Disposal"
 
 
 
