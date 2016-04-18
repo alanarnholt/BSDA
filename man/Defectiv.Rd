@@ -4,24 +4,20 @@
 \name{Defectiv}
 \alias{Defectiv}
 \title{Number of defective items produced by 20 employees}
-\format{A data frame with 20 observations on the following 4 variables.
+\format{A data frame with 20 observations on the following variable.
 \describe{ 
 \item{C1}{a numeric vector} 
-\item{number}{a numeric vector} 
-\item{Count}{a numeric vector}
-\item{Percent}{a numeric vector} 
 }}
+\usage{
+Defectiv
+}
 \description{
 Data for Exercise 1.27
 }
 \examples{
 
-str(Defectiv)
-attach(Defectiv)
-table(C1)
-barplot(table(C1),col="pink",ylab="Frequency",
-xlab="Defective Items Produced by Employees",main="Problem 1.27")
-detach(Defectiv)
+T1 <- table(Defectiv$C1)
+barplot(T1, col = "green", ylab = "Frequency",xlab="Defective Items Produced by Employees",main="Problem 1.27")
 
 }
 \references{

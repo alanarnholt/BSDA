@@ -487,7 +487,12 @@ devtools::use_data(Dealers, overwrite = TRUE)
 T1 <- xtabs(~dealership+service,data=Dealers)
 barplot(t(T1), beside = TRUE)
 
-
+# Create Defectiv
+Defectiv <- read.csv("Defectiv.csv")
+devtools::use_data(Defectiv,overwrite=TRUE)
+# Check
+T1 <- table(Defectiv$C1)
+barplot(T1, col = "green", ylab = "Frequency",xlab="Defective Items Produced by Employees",main="Problem 1.27")
 
 # Create Depend
 Depend <- read.csv("Depend.csv")
@@ -496,3 +501,5 @@ devtools::use_data(Depend,overwrite=TRUE)
 T1 <- xtabs(~children, data = Depend)
 T1
 barplot(T1, col = "lightblue", main = "Number of Dependent \nChildren for 50 Families")
+
+#

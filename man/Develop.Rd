@@ -8,6 +8,9 @@
 \format{The format is: num [1:5, 1:2] 545 24 71 142 1587 ...  - attr(*,
 "dimnames")=List of 2 ..$ : chr [1:5] "African America" "American Indian"
 "Asian" "Latino" ...  ..$ : chr [1:2] "Two-year" "Four-year"}
+\usage{
+Develop
+}
 \description{
 Data used for Exercise 8.50
 }
