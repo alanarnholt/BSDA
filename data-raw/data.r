@@ -585,3 +585,9 @@ devtools::use_data(Dopamine,overwrite=TRUE)
 boxplot(Dopamine$DBH~Dopamine$group,names=c("Non Psychotic","Psychotic"))
 t.test(Dopamine$DBH~Dopamine$group,var.equal=TRUE)
 
+# Create Dowjones
+Dowjones <- read.csv("Dowjones.csv")
+devtools::use_data(Dowjones,overwrite=TRUE)
+#checks
+plot(Dowjones$year,Dowjones$close,type="l",lty=2,lwd=2,col="blue")
+barplot(Dowjones$close,col="blue",las=2,main="Problem 1.35",names.arg=FALSE)

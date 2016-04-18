@@ -10,16 +10,17 @@
 \item{close}{a numeric vector} 
 \item{X.change}{a numeric vector} 
 }}
+\usage{
+Dowjones
+}
 \description{
 Data for Exercise 1.35
 }
 \examples{
 
 str(Dowjones)
-attach(Dowjones)  
-plot(year,close,type="l",lty=2,lwd=2,col="blue")     
-barplot(close,col="blue",las=2,main="Problem 1.35",names.arg=FALSE)      
-detach(Dowjones) 
+plot(Dowjones$year,Dowjones$close,type="l",lty=2,lwd=2,col="blue")
+barplot(Dowjones$close,col="blue",las=2,main="Problem 1.35",names.arg=FALSE)
 
 }
 \references{
