@@ -7,21 +7,20 @@
 antipsychotic drug}
 \format{A data frame with 25 observations on the following 4 variables.
 \describe{ 
-\item{nonpsych}{a numeric vector}
-\item{psychotic}{a numeric vector} 
 \item{DBH}{a numeric vector} 
 \item{group}{a numeric vector} 
 }}
+\usage{
+Dopamine
+}
 \description{
 Data for Exercises 5.14 and 7.49
 }
 \examples{
 
 str(Dopamine)
-attach(Dopamine)
-boxplot(DBH~group,names=c("Non Psychotic","Psychotic"))
-t.test(DBH~group,var.equal=TRUE)
-detach(Dopamine)
+boxplot(Dopamine$DBH~Dopamine$group,names=c("Non Psychotic","Psychotic"))
+t.test(Dopamine$DBH~Dopamine$group,var.equal=TRUE)
 
 }
 \references{

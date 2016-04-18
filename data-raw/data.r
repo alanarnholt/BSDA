@@ -577,3 +577,11 @@ devtools::use_data(Domestic,overwrite=TRUE)
 names(Domestic$Rate) <- Domestic$Age
 barplot(Domestic$Rate,col="gold")
 pie(Domestic$Rate)
+
+# Create Dopamine
+Dopamine <- read.csv("Dopamine.csv")
+devtools::use_data(Dopamine,overwrite=TRUE)
+# checks
+boxplot(Dopamine$DBH~Dopamine$group,names=c("Non Psychotic","Psychotic"))
+t.test(Dopamine$DBH~Dopamine$group,var.equal=TRUE)
+
