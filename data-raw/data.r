@@ -611,3 +611,11 @@ class(DF)
 CT <- xtabs(~Drink + View, data = DF)
 CT
 chisq.test(CT)
+
+
+# Create Drug
+Drug <- read.csv("Drug.csv")
+devtools::use_data(Drug,overwrite=TRUE)
+# checks
+boxplot(Drug$trials~Drug$group)
+wilcox.test(Drug$trials~Drug$group)

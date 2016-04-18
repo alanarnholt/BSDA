@@ -2789,12 +2789,10 @@ NULL
 #' @examples
 #' 
 #' str(Drug)
-#' attach(Drug)
-#' boxplot(trials~group)
-#' wilcox.test(trials~group)
-#' detach(Drug)
+#' boxplot(Drug$trials~Drug$group)
+#' wilcox.test(Drug$trials~Drug$group)
 #' 
-NULL
+"Drug"
 
 
 

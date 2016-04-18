@@ -10,16 +10,17 @@ control and an experimental group}
 \item{trials}{a numeric vector} 
 \item{group}{a numeric vector} 
 }}
+\usage{
+Drug
+}
 \description{
 Data for Exercise 7.15
 }
 \examples{
 
 str(Drug)
-attach(Drug)
-boxplot(trials~group)
-wilcox.test(trials~group)
-detach(Drug)
+boxplot(Drug$trials~Drug$group)
+wilcox.test(Drug$trials~Drug$group)
 
 }
 \references{
