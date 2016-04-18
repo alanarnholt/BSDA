@@ -539,3 +539,9 @@ t.test(Devmath$score,mu=80,alternative="less")
 # Create Dice
 Dice <- read.csv("Dice.csv")
 devtools::use_data(Dice,overwrite=TRUE)
+
+# Create Diesel
+Diesel <- read.csv("Diesel.csv")
+devtools::use_data(Diesel,overwrite=TRUE)
+#checks 
+boxplot(Diesel$NatAvg,Diesel$EstCst,Diesel$Gulf,Diesel$Rocky,Diesel$Calif,col="pink")

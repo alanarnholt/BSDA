@@ -2546,11 +2546,11 @@ NULL
 #' 
 #' str(Diesel)
 #' attach(Diesel)
-#' boxplot(NatAvg,EstCst,Gulf,Rocky,Calif,
+#' boxplot(Diesel$NatAvg,Diesel$EstCst,Diesel$Gulf,Diesel$Rocky,Diesel$Calif,
 #' names=c("National Average","East Coast","Gulf","Rocky","California"),col="pink")
 #' 
 #' 
-NULL
+"Diesel"
 
 
 

@@ -34,6 +34,9 @@
 \item{Coast}{a numeric vector} 
 \item{Calif}{a numeric vector}
 }}
+\usage{
+Diesel
+}
 \description{
 Data for Exercise 2.8
 }
@@ -41,7 +44,7 @@ Data for Exercise 2.8
 
 str(Diesel)
 attach(Diesel)
-boxplot(NatAvg,EstCst,Gulf,Rocky,Calif,
+boxplot(Diesel$NatAvg,Diesel$EstCst,Diesel$Gulf,Diesel$Rocky,Diesel$Calif,
 names=c("National Average","East Coast","Gulf","Rocky","California"),col="pink")
 
 
