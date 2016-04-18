@@ -15,20 +15,19 @@
 \code{Eg} \code{In} \code{Is} \code{Ni} \code{Ru} \code{SK} \code{Uk}
 \code{Ve}} 
 }}
+\usage{
+Diplomat
+}
 \description{
 Data for Exercises 1.14 and 1.47
 }
 \examples{
-
-str(Diplomat)
-attach(Diplomat)
 par(mfrow=c(1,2))
-names(Number) <- Country
-dotchart(Number,main="Number of Tickets",col="blue",pch=1)
-names(rate) <- Country
-dotchart(rate,main="Tickets/Vehicle/Month",col="red",pch=2)
-barplot(rate,col="pink")
-detach(Diplomat)
+names(Diplomat$number) <- Diplomat$country
+dotchart(Diplomat$number,main="Number of Tickets",col="blue",pch=1)
+names(Diplomat$rate) <- Diplomat$country
+dotchart(Diplomat$rate,main="Tickets/Vehicle/Month",col="red",pch=2)
+barplot(Diplomat$rate,col="pink")
 
 }
 \references{

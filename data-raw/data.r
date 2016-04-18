@@ -545,3 +545,14 @@ Diesel <- read.csv("Diesel.csv")
 devtools::use_data(Diesel,overwrite=TRUE)
 #checks 
 boxplot(Diesel$NatAvg,Diesel$EstCst,Diesel$Gulf,Diesel$Rocky,Diesel$Calif,col="pink")
+
+# Create Diplomat
+Diplomat <- read.csv("Diplomat.csv")
+devtools::use_data(Diplomat,overwrite=TRUE)
+# checks 
+par(mfrow=c(1,2))
+names(Diplomat$number) <- Diplomat$country
+dotchart(Diplomat$number,main="Number of Tickets",col="blue",pch=1)
+names(Diplomat$rate) <- Diplomat$country
+dotchart(Diplomat$rate,main="Tickets/Vehicle/Month",col="red",pch=2)
+barplot(Diplomat$rate,col="pink")

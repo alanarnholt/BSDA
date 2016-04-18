@@ -2578,18 +2578,14 @@ NULL
 #' Duxbury
 #' @keywords datasets
 #' @examples
-#' 
-#' str(Diplomat)
-#' attach(Diplomat)
 #' par(mfrow=c(1,2))
-#' names(Number) <- Country
-#' dotchart(Number,main="Number of Tickets",col="blue",pch=1)
-#' names(rate) <- Country
-#' dotchart(rate,main="Tickets/Vehicle/Month",col="red",pch=2)
-#' barplot(rate,col="pink")
-#' detach(Diplomat)
+#' names(Diplomat$number) <- Diplomat$country
+#' dotchart(Diplomat$number,main="Number of Tickets",col="blue",pch=1)
+#' names(Diplomat$rate) <- Diplomat$country
+#' dotchart(Diplomat$rate,main="Tickets/Vehicle/Month",col="red",pch=2)
+#' barplot(Diplomat$rate,col="pink")
 #' 
-NULL
+"Diplomat"
 
 
 
