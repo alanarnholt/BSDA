@@ -15,16 +15,17 @@
 \item{height}{a numeric vector} 
 \item{children}{a numeric vector} 
 }}
+\usage{
+Dyslexia
+}
 \description{
 Data for Exercise 2.90
 }
 \examples{
 
 str(Dyslexia)
-attach(Dyslexia)
-plot(weight,height)
-plot(handed,words)
-detach(Dyslexia)
+plot(Dyslexia$weight,Dyslexia$height)
+plot(Dyslexia$handed,Dyslexia$words)
 
 }
 \references{

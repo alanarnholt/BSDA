@@ -619,3 +619,10 @@ devtools::use_data(Drug,overwrite=TRUE)
 # checks
 boxplot(Drug$trials~Drug$group)
 wilcox.test(Drug$trials~Drug$group)
+
+#Create Dyslexia
+Dyslexia <- read.csv("Dyslexia.csv")
+devtools::use_data(Dyslexia,overwrite=TRUE)
+# checks
+plot(Dyslexia$weight,Dyslexia$height)
+plot(Dyslexia$handed,Dyslexia$words)
