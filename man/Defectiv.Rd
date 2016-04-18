@@ -17,7 +17,8 @@ Data for Exercise 1.27
 \examples{
 
 T1 <- table(Defectiv$C1)
-barplot(T1, col = "green", ylab = "Frequency",xlab="Defective Items Produced by Employees",main="Problem 1.27")
+barplot(T1, col = "green", ylab = "Frequency",
+xlab = "Defective Items Produced by Employees", main = "Problem 1.27")
 
 }
 \references{

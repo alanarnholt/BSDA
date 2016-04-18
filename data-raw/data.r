@@ -542,9 +542,14 @@ devtools::use_data(Dice,overwrite=TRUE)
 
 # Create Diesel
 Diesel <- read.csv("Diesel.csv")
+Diesel$Date <- as.Date(Diesel$Date, "%m/%d/%y")
+str(Diesel)
 devtools::use_data(Diesel,overwrite=TRUE)
 #checks 
-boxplot(Diesel$NatAvg,Diesel$EstCst,Diesel$Gulf,Diesel$Rocky,Diesel$Calif,col="pink")
+boxplot(Diesel[,-1])
+boxplot(Diesel$NatAvg,Diesel$EstCst,Diesel$Gulf,Diesel$Rocky,Diesel$Calif,
+       names=c("National Average","East Coast","Gulf","Rocky","California"),col="pink")
+
 
 # Create Diplomat
 Diplomat <- read.csv("Diplomat.csv")
@@ -594,7 +599,7 @@ barplot(Dowjones$close,col="blue",las=2,main="Problem 1.35",names.arg=FALSE)
 
 # Create Drink
 mat <- matrix(data = c(95,73,12,83,71,46,21,18,8), nrow = 3)
-dimnames(mat) <- list(Drink = c("Ok", "Tolerated","Immoral"), View = c("For","Against","Undecided"))
+dimnames(mat) <- list(drink = c("Ok", "Tolerated","Immoral"), view = c("For","Against","Undecided"))
 mat
 class(mat)
 matT <- as.table(mat)
@@ -603,12 +608,12 @@ class(matT)
 matDF <- as.data.frame(matT)
 matDF
 class(matDF)
-DF <- vcdExtra::expand.dft(matDF)
+Drink <- vcdExtra::expand.dft(matDF)
 devtools::use_data(Drink,overwrite=TRUE)
 #checks
-head(DF)
-class(DF)
-CT <- xtabs(~Drink + View, data = DF)
+head(Drink)
+class(Drink)
+CT <- xtabs(~drink + view, data = Drink)
 CT
 chisq.test(CT)
 

@@ -4,13 +4,10 @@
 \name{Drink}
 \alias{Drink}
 \title{Opinion on referendum by view on moral issue of selling alcoholic beverages}
-\format{A data frame with 3 observations on the following 4 variables.
+\format{A data frame with 427 observations on the following 2 variables.
 \describe{ 
-\item{drink}{a factor with levels \code{immoral}
-\code{ok} \code{tolerated}} 
-\item{For}{a numeric vector}
-\item{Against}{a numeric vector} 
-\item{undecide}{a numeric vector} 
+\item{drink}{a factor with levels \code{OK}, \code{Tolerated}, and \code{Immoral}}
+\item{view}{a factor with levels \code{For}, \code{Against}, and \code{Undecided}}
 }}
 \usage{
 Drink
@@ -19,9 +16,9 @@ Drink
 Data for Exercise 8.53
 }
 \examples{
-head(DF)
-class(DF)
-CT <- xtabs(~Drink + View, data = DF)
+head(Drink)
+class(Drink)
+CT <- xtabs(~drink + view, data = Drink)
 CT
 chisq.test(CT)
 

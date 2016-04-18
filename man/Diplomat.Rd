@@ -6,12 +6,12 @@
 \title{Parking tickets issued to diplomats}
 \format{A data frame with 10 observations on the following 4 variables.
 \describe{ 
-\item{Country}{a factor with levels \code{Brazil}
+\item{country}{a factor with levels \code{Brazil}
 \code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
 \code{Russia} \code{S. Korea} \code{Ukraine} \code{Venezuela}}
-\item{Number}{a numeric vector} 
+\item{number}{a numeric vector} 
 \item{rate}{a numeric vector} 
-\item{Code}{a factor with levels \code{Br} \code{Bu}
+\item{code}{a factor with levels \code{Br} \code{Bu}
 \code{Eg} \code{In} \code{Is} \code{Ni} \code{Ru} \code{SK} \code{Uk}
 \code{Ve}} 
 }}

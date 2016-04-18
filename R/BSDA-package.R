@@ -2309,7 +2309,8 @@ NULL
 #' @examples
 #' 
 #' T1 <- table(Defectiv$C1)
-#' barplot(T1, col = "green", ylab = "Frequency",xlab="Defective Items Produced by Employees",main="Problem 1.27")
+#' barplot(T1, col = "green", ylab = "Frequency",
+#' xlab = "Defective Items Produced by Employees", main = "Problem 1.27")
 #' 
 "Defectiv"
 
@@ -2511,23 +2512,7 @@ NULL
 #' @docType data
 #' @format A data frame with 65 observations on the following 11 variables.
 #' \describe{ 
-#' \item{Date}{a factor with levels \code{1/03/2000}
-#' \code{1/04/1999} \code{1/10/2000} \code{1/11/1999} \code{1/17/2000}
-#' \code{1/18/1999} \code{1/24/2000} \code{1/25/1999} \code{1/31/2000}
-#' \code{10/04/1999} \code{10/11/1999} \code{10/18/1999} \code{10/25/1999}
-#' \code{11/01/1999} \code{11/08/1999} \code{11/15/1999} \code{11/22/1999}
-#' \code{11/29/1999} \code{12/06/1999} \code{12/07/1998} \code{12/13/1999}
-#' \code{12/14/1998} \code{12/20/1999} \code{12/21/1998} \code{12/27/1999}
-#' \code{12/28/1998} \code{2/01/1999} \code{2/07/2000} \code{2/08/1999}
-#' \code{2/14/2000} \code{2/15/1999} \code{2/21/2000} \code{2/22/1999}
-#' \code{2/28/2000} \code{3/01/1999} \code{3/08/1999} \code{3/15/1999}
-#' \code{3/22/1999} \code{3/29/1999} \code{4/05/1999} \code{4/12/1999}
-#' \code{4/19/1999} \code{4/26/1999} \code{5/03/1999} \code{5/10/1999}
-#' \code{5/17/1999} \code{5/24/1999} \code{5/31/1999} \code{6/07/1999}
-#' \code{6/14/1999} \code{6/21/1999} \code{6/28/1999} \code{7/05/1999}
-#' \code{7/12/1999} \code{7/19/1999} \code{7/26/1999} \code{8/02/1999}
-#' \code{8/09/1999} \code{8/16/1999} \code{8/23/1999} \code{8/30/1999}
-#' \code{9/06/1999} \code{9/13/1999} \code{9/20/1999} \code{9/27/1999}}
+#' \item{Date}{a date field}
 #' \item{NatAvg}{a numeric vector} 
 #' \item{EstCst}{a numeric vector} 
 #' \item{NE}{a numeric vector} 
@@ -2545,7 +2530,7 @@ NULL
 #' @examples
 #' 
 #' str(Diesel)
-#' attach(Diesel)
+#' boxplot(Diesel[,-1])
 #' boxplot(Diesel$NatAvg,Diesel$EstCst,Diesel$Gulf,Diesel$Rocky,Diesel$Calif,
 #' names=c("National Average","East Coast","Gulf","Rocky","California"),col="pink")
 #' 
@@ -2565,12 +2550,12 @@ NULL
 #' @docType data
 #' @format A data frame with 10 observations on the following 4 variables.
 #' \describe{ 
-#' \item{Country}{a factor with levels \code{Brazil}
+#' \item{country}{a factor with levels \code{Brazil}
 #' \code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
 #' \code{Russia} \code{S. Korea} \code{Ukraine} \code{Venezuela}}
-#' \item{Number}{a numeric vector} 
+#' \item{number}{a numeric vector} 
 #' \item{rate}{a numeric vector} 
-#' \item{Code}{a factor with levels \code{Br} \code{Bu}
+#' \item{code}{a factor with levels \code{Br} \code{Bu}
 #' \code{Eg} \code{In} \code{Is} \code{Ni} \code{Ru} \code{SK} \code{Uk}
 #' \code{Ve}} 
 #' }
@@ -2746,21 +2731,18 @@ NULL
 #' 
 #' @name Drink
 #' @docType data
-#' @format A data frame with 3 observations on the following 4 variables.
+#' @format A data frame with 427 observations on the following 2 variables.
 #' \describe{ 
-#' \item{drink}{a factor with levels \code{immoral}
-#' \code{ok} \code{tolerated}} 
-#' \item{For}{a numeric vector}
-#' \item{Against}{a numeric vector} 
-#' \item{undecide}{a numeric vector} 
+#' \item{drink}{a factor with levels \code{OK}, \code{Tolerated}, and \code{Immoral}}
+#' \item{view}{a factor with levels \code{For}, \code{Against}, and \code{Undecided}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
-#' head(DF)
-#' class(DF)
-#' CT <- xtabs(~Drink + View, data = DF)
+#' head(Drink)
+#' class(Drink)
+#' CT <- xtabs(~drink + view, data = Drink)
 #' CT
 #' chisq.test(CT)
 #' 
