@@ -2758,14 +2758,13 @@ NULL
 #' Duxbury
 #' @keywords datasets
 #' @examples
+#' head(DF)
+#' class(DF)
+#' CT <- xtabs(~Drink + View, data = DF)
+#' CT
+#' chisq.test(CT)
 #' 
-#' str(Drink)
-#' attach(Drink)
-#' Drink
-#' chisq.test(Drink[,2:4])
-#' detach(Drink)
-#' 
-NULL
+"Drink"
 
 
 

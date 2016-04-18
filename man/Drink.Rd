@@ -12,16 +12,18 @@
 \item{Against}{a numeric vector} 
 \item{undecide}{a numeric vector} 
 }}
+\usage{
+Drink
+}
 \description{
 Data for Exercise 8.53
 }
 \examples{
-
-str(Drink)
-attach(Drink)
-Drink
-chisq.test(Drink[,2:4])
-detach(Drink)
+head(DF)
+class(DF)
+CT <- xtabs(~Drink + View, data = DF)
+CT
+chisq.test(CT)
 
 }
 \references{

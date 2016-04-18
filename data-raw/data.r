@@ -591,3 +591,23 @@ devtools::use_data(Dowjones,overwrite=TRUE)
 #checks
 plot(Dowjones$year,Dowjones$close,type="l",lty=2,lwd=2,col="blue")
 barplot(Dowjones$close,col="blue",las=2,main="Problem 1.35",names.arg=FALSE)
+
+# Create Drink
+mat <- matrix(data = c(95,73,12,83,71,46,21,18,8), nrow = 3)
+dimnames(mat) <- list(Drink = c("Ok", "Tolerated","Immoral"), View = c("For","Against","Undecided"))
+mat
+class(mat)
+matT <- as.table(mat)
+matT
+class(matT)
+matDF <- as.data.frame(matT)
+matDF
+class(matDF)
+DF <- vcdExtra::expand.dft(matDF)
+devtools::use_data(Drink,overwrite=TRUE)
+#checks
+head(DF)
+class(DF)
+CT <- xtabs(~Drink + View, data = DF)
+CT
+chisq.test(CT)
