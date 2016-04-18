@@ -569,3 +569,11 @@ EDA(Disposal$pounds)
 #Create Dogs
 Dogs <- read.csv("Dogs.csv")
 devtools::use_data(Dogs,overwrite=TRUE)
+
+# Create Domestic
+Domestic <- read.csv("Domestic.csv")
+devtools::use_data(Domestic,overwrite=TRUE)
+#checks
+names(Domestic$Rate) <- Domestic$Age
+barplot(Domestic$Rate,col="gold")
+pie(Domestic$Rate)

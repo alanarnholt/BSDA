@@ -2672,14 +2672,12 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Domestic)
-#' attach(Domestic)
-#' names(Rate) <- Age
-#' barplot(Rate,col="gold")
-#' pie(Rate)
-#' detach(Domestic)
+#' names(Domestic$Rate) <- Domestic$Age
+#' barplot(Domestic$Rate,col="gold")
+#' pie(Domestic$Rate)
 #' 
-NULL
+"Domestic"
+
 
 
 

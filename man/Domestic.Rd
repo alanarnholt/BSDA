@@ -10,17 +10,17 @@
 \code{25-34} \code{35-49} \code{50-64}} 
 \item{Rate}{a numeric vector} 
 }}
+\usage{
+Domestic
+}
 \description{
 Data for Exercise 1.20
 }
 \examples{
 
-str(Domestic)
-attach(Domestic)
-names(Rate) <- Age
-barplot(Rate,col="gold")
-pie(Rate)
-detach(Domestic)
+names(Domestic$Rate) <- Domestic$Age
+barplot(Domestic$Rate,col="gold")
+pie(Domestic$Rate)
 
 }
 \references{
