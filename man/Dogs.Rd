@@ -17,15 +17,16 @@
 \item{X1997}{a numeric vector} 
 \item{X1998}{a numeric vector} 
 }}
+\usage{
+Dogs
+}
 \description{
 Data for Exercise 2.88
 }
 \examples{
 
 str(Dogs)
-attach(Dogs)
 cor(Dogs[,2:5])
-detach(Dogs)
 
 }
 \references{

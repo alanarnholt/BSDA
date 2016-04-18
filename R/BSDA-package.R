@@ -2646,11 +2646,9 @@ NULL
 #' @examples
 #' 
 #' str(Dogs)
-#' attach(Dogs)
 #' cor(Dogs[,2:5])
-#' detach(Dogs)
 #' 
-NULL
+"Dogs"
 
 
 

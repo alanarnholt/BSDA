@@ -564,3 +564,8 @@ devtools::use_data(Disposal,overwrite=TRUE)
 stem(Disposal$pounds)
 fivenum(Disposal$pounds)
 EDA(Disposal$pounds)
+
+
+#Create Dogs
+Dogs <- read.csv("Dogs.csv")
+devtools::use_data(Dogs,overwrite=TRUE)
