@@ -2415,12 +2415,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Detroit)
-#' attach(Detroit)
-#' EDA(educ)
-#' detach(Detroit)
+#' EDA(Detroit$educ)
 #' 
-NULL
+"Detroit"
+
 
 
 
@@ -2442,8 +2440,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' Develop
-#' chisq.test(Develop)
+#' chisq.test(Develop$two.year,Develop$four.yr)
 #' 
 "Develop"
 
@@ -2468,13 +2465,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Devmath)
-#' attach(Devmath)
-#' EDA(score)
-#' t.test(score,mu=80,alternative="less")
-#' detach(Devmath)
 #' 
-NULL
+#' EDA(Devmath$score)
+#' t.test(Devmath$score,mu=80,alternative="less")
+"Devmath"
 
 
 
@@ -2497,16 +2491,12 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Dice)
-#' attach(Dice)
 #' roll1 <- sample(1:6,2000,replace=TRUE)
 #' roll2 <- sample(1:6,2000,replace=TRUE)
 #' outcome <- roll1+roll2
 #' table(outcome)/length(outcome)
-#' detach(Dice)
-#' remove(roll1,roll2,outcome)
 #' 
-NULL
+"Dice"
 
 
 

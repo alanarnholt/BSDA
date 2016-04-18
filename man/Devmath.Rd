@@ -9,17 +9,17 @@ semester 1995}
 \describe{ 
 \item{score}{a numeric vector} 
 }}
+\usage{
+Devmath
+}
 \description{
 Data for Exercise 6.47
 }
 \examples{
 
-str(Devmath)
-attach(Devmath)
-EDA(score)
-t.test(score,mu=80,alternative="less")
-detach(Devmath)
 
+EDA(Devmath$score)
+t.test(Devmath$score,mu=80,alternative="less")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

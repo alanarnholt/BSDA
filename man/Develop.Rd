@@ -16,8 +16,7 @@ Data used for Exercise 8.50
 }
 \examples{
 
-Develop
-chisq.test(Develop)
+chisq.test(Develop$two.year,Develop$four.yr)
 
 }
 \references{

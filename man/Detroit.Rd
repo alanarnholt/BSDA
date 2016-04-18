@@ -8,15 +8,15 @@
 \describe{ 
 \item{educ}{a numeric vector} 
 }}
+\usage{
+Detroit
+}
 \description{
 Data for Exercise 5.21
 }
 \examples{
 
-str(Detroit)
-attach(Detroit)
-EDA(educ)
-detach(Detroit)
+EDA(Detroit$educ)
 
 }
 \references{

@@ -519,4 +519,23 @@ T1 <- xtabs(~children, data = Depend)
 T1
 barplot(T1, col = "lightblue", main = "Number of Dependent \nChildren for 50 Families")
 
-#
+# Create Detroit
+Detroit <- read.csv("Detroit.csv")
+devtools::use_data(Detroit,overwrite=TRUE)
+
+# Create Develop
+Develop <- read.csv("Develop.csv")
+devtools::use_data(Develop,overwrite=TRUE)
+# check
+chisq.test(Develop$two.year,Develop$four.yr)
+
+# Create Devmath
+Devmath <- read.csv("Devmath.csv")
+devtools::use_data(Devmath,overwrite=TRUE)
+# checks
+EDA(Devmath$score)
+t.test(Devmath$score,mu=80,alternative="less")
+
+# Create Dice
+Dice <- read.csv("Dice.csv")
+devtools::use_data(Dice,overwrite=TRUE)

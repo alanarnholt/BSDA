@@ -9,19 +9,18 @@
 \item{x}{a numeric vector} 
 \item{P.x.}{a numeric vector} 
 }}
+\usage{
+Dice
+}
 \description{
 Data for Exercise 3.109
 }
 \examples{
 
-str(Dice)
-attach(Dice)
 roll1 <- sample(1:6,2000,replace=TRUE)
 roll2 <- sample(1:6,2000,replace=TRUE)
 outcome <- roll1+roll2
 table(outcome)/length(outcome)
-detach(Dice)
-remove(roll1,roll2,outcome)
 
 }
 \references{
