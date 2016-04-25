@@ -581,6 +581,7 @@ devtools::use_data(Domestic,overwrite=TRUE)
 barplot(Domestic$Rate,col="gold",names.arg = Domestic$Age)
 pie(Domestic$Rate, labels = Domestic$Age)
 
+
 # Create Dopamine
 Dopamine <- read.csv("Dopamine.csv")
 devtools::use_data(Dopamine,overwrite=TRUE)
