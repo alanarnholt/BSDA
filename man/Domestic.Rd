@@ -17,10 +17,8 @@ Domestic
 Data for Exercise 1.20
 }
 \examples{
-
-names(Domestic$Rate) <- Domestic$Age
-barplot(Domestic$Rate,col="gold")
-pie(Domestic$Rate)
+barplot(Domestic$Rate,col="gold",names.arg = Domestic$Age)
+pie(Domestic$Rate, labels = Domestic$Age)
 
 }
 \references{

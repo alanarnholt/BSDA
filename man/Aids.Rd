@@ -11,6 +11,9 @@ transfusion}
 \item{age}{age (in years) of patient} 
 \item{group}{a numeric vector}
 }}
+\usage{
+Aids
+}
 \description{
 Data used in Exercise 6.60
 }

@@ -414,8 +414,6 @@ str(commute)
 stripplot(ind ~ values, data = commute, jitter = TRUE)
 dotplot(ind ~ values, data = commute)
 bwplot(ind ~ values, data = commute)
->>>>>>> b00a2bc75db4b07fe2dfe69b95b3e11380c2594b
-
 stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
            col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
            xlab = "minutes")
@@ -560,7 +558,8 @@ names(Diplomat$number) <- Diplomat$country
 dotchart(Diplomat$number,main="Number of Tickets",col="blue",pch=1)
 names(Diplomat$rate) <- Diplomat$country
 dotchart(Diplomat$rate,main="Tickets/Vehicle/Month",col="red",pch=2)
-barplot(Diplomat$rate,col="pink")
+barplot(Diplomat$rate, Diplomat$number, col="pink")
+# Example number 1.47 is not related to this dataframe
 
 # Create Disposal
 Disposal <- read.csv("Disposal.csv")
@@ -579,9 +578,8 @@ devtools::use_data(Dogs,overwrite=TRUE)
 Domestic <- read.csv("Domestic.csv")
 devtools::use_data(Domestic,overwrite=TRUE)
 #checks
-names(Domestic$Rate) <- Domestic$Age
-barplot(Domestic$Rate,col="gold")
-pie(Domestic$Rate)
+barplot(Domestic$Rate,col="gold",names.arg = Domestic$Age)
+pie(Domestic$Rate, labels = Domestic$Age)
 
 # Create Dopamine
 Dopamine <- read.csv("Dopamine.csv")

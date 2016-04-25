@@ -196,7 +196,7 @@ NULL
 #' barplot(CT, col = "pink")
 #' plot(ecdf(Absent$days), main = "ECDF")
 #' 
-NULL
+"Absent"
 
 
 
@@ -358,7 +358,7 @@ NULL
 #' SIGN.test(duration, md = 24, alternative = "greater")
 #' )
 #' 
-NULL
+"Aids"
 
 
 
@@ -2541,7 +2541,7 @@ NULL
 
 #' Parking tickets issued to diplomats
 #' 
-#' Data for Exercises 1.14 and 1.47
+#' Data for Exercises 1.14 and 1.37
 #' 
 #' 
 #' @name Diplomat
@@ -2654,10 +2654,8 @@ NULL
 #' Duxbury
 #' @keywords datasets
 #' @examples
-#' 
-#' names(Domestic$Rate) <- Domestic$Age
-#' barplot(Domestic$Rate,col="gold")
-#' pie(Domestic$Rate)
+#' barplot(Domestic$Rate,col="gold",names.arg = Domestic$Age)
+#' pie(Domestic$Rate, labels = Domestic$Age)
 #' 
 "Domestic"
 

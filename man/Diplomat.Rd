@@ -19,7 +19,7 @@
 Diplomat
 }
 \description{
-Data for Exercises 1.14 and 1.47
+Data for Exercises 1.14 and 1.37
 }
 \examples{
 par(mfrow=c(1,2))
