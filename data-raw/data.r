@@ -621,8 +621,8 @@ chisq.test(CT)
 Drug <- read.csv("Drug.csv")
 devtools::use_data(Drug,overwrite=TRUE)
 # checks
-boxplot(Drug$trials~Drug$group)
-wilcox.test(Drug$trials~Drug$group)
+boxplot(trials ~ group, data = Drug)
+wilcox.test(trials ~ group, data = Drug)
 
 #Create Dyslexia
 Dyslexia <- read.csv("Dyslexia.csv")

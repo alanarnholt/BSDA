@@ -7,20 +7,20 @@
 control and an experimental group}
 \format{A data frame with 28 observations on the following 2 variables.
 \describe{ 
-\item{trials}{a numeric vector} 
-\item{group}{a numeric vector} 
+\item{trials}{the number of trials required to master a given task} 
+\item{group}{a factor with levels \code{experimental} and \code{control}} 
 }}
 \usage{
 Drug
 }
 \description{
-Data for Exercise 7.15
+Data for Example 7.15
 }
 \examples{
 
 str(Drug)
-boxplot(Drug$trials~Drug$group)
-wilcox.test(Drug$trials~Drug$group)
+boxplot(trials ~ group, data = Drug)
+wilcox.test(trials ~ group, data = Drug)
 
 }
 \references{

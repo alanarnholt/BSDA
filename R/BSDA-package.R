@@ -2751,15 +2751,15 @@ NULL
 #' Number of trials to master a task for a group of 28 subjects assigned to a
 #' control and an experimental group
 #' 
-#' Data for Exercise 7.15
+#' Data for Example 7.15
 #' 
 #' 
 #' @name Drug
 #' @docType data
 #' @format A data frame with 28 observations on the following 2 variables.
 #' \describe{ 
-#' \item{trials}{a numeric vector} 
-#' \item{group}{a numeric vector} 
+#' \item{trials}{the number of trials required to master a given task} 
+#' \item{group}{a factor with levels \code{experimental} and \code{control}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2767,8 +2767,8 @@ NULL
 #' @examples
 #' 
 #' str(Drug)
-#' boxplot(Drug$trials~Drug$group)
-#' wilcox.test(Drug$trials~Drug$group)
+#' boxplot(trials ~ group, data = Drug)
+#' wilcox.test(trials ~ group, data = Drug)
 #' 
 "Drug"
 
@@ -2785,14 +2785,14 @@ NULL
 #' @docType data
 #' @format A data frame with 8 observations on the following 7 variables.
 #' \describe{ 
-#' \item{words}{a numeric vector} 
-#' \item{age}{a numeric vector} 
+#' \item{words}{the number of words read per minute} 
+#' \item{age}{age in years} 
 #' \item{gender}{a factor with levels \code{f}
 #' \code{m}} 
 #' \item{handed}{a factor with levels \code{l} \code{r}}
-#' \item{weight}{a numeric vector} 
-#' \item{height}{a numeric vector} 
-#' \item{children}{a numeric vector} 
+#' \item{weight}{weight in pounds} 
+#' \item{height}{height in inches} 
+#' \item{children}{number of children in family} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2800,8 +2800,8 @@ NULL
 #' @examples
 #' 
 #' str(Dyslexia)
-#' plot(Dyslexia$weight,Dyslexia$height)
-#' plot(Dyslexia$handed,Dyslexia$words)
+#' plot(height ~ weight, data = Dyslexia)
+#' plot(words ~ handed, data = Dyslexia)
 #' 
 "Dyslexia"
 
