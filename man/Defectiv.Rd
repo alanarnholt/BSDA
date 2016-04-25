@@ -6,7 +6,7 @@
 \title{Number of defective items produced by 20 employees}
 \format{A data frame with 20 observations on the following variable.
 \describe{ 
-\item{C1}{a numeric vector} 
+\item{item}{The number of defective items produced by the 20 employees in a small business firm.} 
 }}
 \usage{
 Defectiv
@@ -16,7 +16,8 @@ Data for Exercise 1.27
 }
 \examples{
 
-T1 <- table(Defectiv$C1)
+T1 <- table(Defectiv$item)
+T1
 barplot(T1, col = "green", ylab = "Frequency",
 xlab = "Defective Items Produced by Employees", main = "Problem 1.27")
 

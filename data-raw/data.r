@@ -491,17 +491,17 @@ barplot(t(T1), beside = TRUE)
 Defectiv <- read.csv("Defectiv.csv")
 devtools::use_data(Defectiv,overwrite=TRUE)
 # Check
-T1 <- table(Defectiv$C1)
+T1 <- table(Defectiv$item)
+T1
 barplot(T1, col = "green", ylab = "Frequency",xlab="Defective Items Produced by Employees",main="Problem 1.27")
 
 # Create Degree
-Dmat <- as.matrix(Degree[,2:3])
-rownames(Dmat) <- Degree$Field
-colnames(Dmat) <- c("1970","1990")
-Dmat
+Degree <- read.csv("Degree.csv",colClasses = c("factor","numeric","factor"))
 devtools::use_data(Degree,overwrite=TRUE)
 #Check
-barplot(t(Dmat),beside=TRUE,legend=TRUE,cex.names=.5)
+str(Degree)
+T1 <- xtabs(percent ~ field + year, data = Degree)
+barplot(t(T1), beside = TRUE, legend = TRUE, cex.names = 0.5)
 
 # Create Delay
 Delay <- read.csv("Delay.csv")
