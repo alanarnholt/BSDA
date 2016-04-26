@@ -374,12 +374,10 @@ devtools::use_data(Citrus, overwrite = TRUE)
 Clean <- read.csv("Clean.csv")
 devtools::use_data(Clean, overwrite = TRUE)
 # Examples
-<<<<<<< HEAD
 #
 # Darwin
 Darwin <- read.csv("Darwin.csv")
 devtools::use_data(Darwin, overwrite = TRUE)
-=======
 str(Clean)
 #
 # Coaxial
@@ -409,20 +407,6 @@ devtools::use_data(Coins, overwrite = TRUE)
 Commute <- read.csv("Commute.csv")
 devtools::use_data(Commute, overwrite = TRUE)
 # Examples
-commute <- stack(Commute)
-str(commute)
-stripplot(ind ~ values, data = commute, jitter = TRUE)
-dotplot(ind ~ values, data = commute)
-bwplot(ind ~ values, data = commute)
->>>>>>> b00a2bc75db4b07fe2dfe69b95b3e11380c2594b
-
-stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
-           col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
-           xlab = "minutes")
-title(main = "Commute Time")
-boxplot(values ~ ind, data = commute, names=c("1980", "1990"), 
-        horizontal = TRUE, las = 1)
-rm(commute)
 #
 # Concept
 Concept <- read.csv("Concept.csv")
