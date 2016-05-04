@@ -6,17 +6,18 @@
 \title{Educational levels of a sample of 40 auto workers in Detroit}
 \format{A data frame with 40 observations on the following variable.
 \describe{ 
-\item{educ}{a numeric vector} 
+\item{educ}{the educational level (in years) of a sample of 40 auto workers in a plant in Detroit} 
 }}
+\usage{
+Detroit
+}
 \description{
 Data for Exercise 5.21
 }
 \examples{
 
 str(Detroit)
-attach(Detroit)
-EDA(educ)
-detach(Detroit)
+EDA(Detroit$educ)
 
 }
 \references{

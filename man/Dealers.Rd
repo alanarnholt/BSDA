@@ -5,24 +5,28 @@
 \alias{Dealers}
 \title{Automobile dealers classified according to type dealership and service
 rendered to customers}
-\format{A data frame with 6 observations on the following 2 variables.
+\format{A data frame with 122 observations on the following 2 variables.
 \describe{ 
-\item{Replace}{a numeric vector} 
-\item{Recomnd}{a numeric vector} 
+\item{Type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
+\code{Ford}, \code{Dodge}, and \code{Saturn}} 
+\item{Service}{a factor with levels \code{Replaces unnecessarily} and \code{Follows manufacturer guidelines}} 
 }}
+\usage{
+Dealers
+}
 \description{
 Data for Example 2.22
 }
 \examples{
 
 str(Dealers)
-attach(Dealers)
-Deal <- as.matrix(Dealers)
-rownames(Deal) <- c("Honda","Toyota","Mazda","Ford","Dodge","Saturn")
-Dealers
-barplot(t(Deal),beside=TRUE,legend=TRUE)
-detach(Dealers)
-remove(Deal)
+xtabs(~Type + Service, data = Dealers)
+T1 <- xtabs(~Type + Service, data = Dealers)
+T1
+addmargins(T1)
+pt <- prop.table(T1, margin = 1)
+pt
+barplot(t(pt),  col = c("red", "skyblue"), legend = colnames(T1))
 
 }
 \references{

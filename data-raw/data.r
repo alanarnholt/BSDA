@@ -452,4 +452,173 @@ boxplot(rate ~ year, data = Crime)
 Darwin <- read.csv("Darwin.csv")
 devtools::use_data(Darwin, overwrite = TRUE)
 #
-# Some Comment
+# Dealers
+mat <- matrix(data = c(19, 3, 12, 8, 11, 4, 2, 16, 9, 13, 10, 15), nrow = 6)
+dimnames(mat) <- list(Type = c("Honda", "Toyota", "Mazda", "Ford", "Dodge", "Saturn"), 
+                      Service = c("Replaces unnecessarily", "Follows manufacturer guidelines"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Dealers <- vcdExtra::expand.dft(matDF)
+Dealers$Type <- factor(Dealers$Type, 
+                     levels = c("Honda", "Toyota", "Mazda", "Ford", "Dodge", "Saturn"))
+Dealers$Service <- factor(Dealers$Service, levels = c("Replaces unnecessarily", 
+                                                      "Follows manufacturer guidelines"))
+# Checks
+xtabs(~Type + Service, data = Dealers)
+T1 <- xtabs(~Type + Service, data = Dealers)
+T1
+addmargins(T1)
+pt <- prop.table(T1, margin = 1)
+pt
+barplot(t(pt),  col = c("red", "skyblue"), legend = colnames(T1))
+devtools::use_data(Dealers, overwrite = TRUE)
+# Defectiv
+Defectiv <- read.csv("Defectiv.csv")
+devtools::use_data(Defectiv, overwrite = TRUE)
+#
+# Degree
+mat <- matrix(data = c(78.0, 75.0, 73.4, 43.4, 57.3, 27.8, 8.7, 37.1, 13.6, 0.7, 43.1,
+                       84.3, 78.1, 73.4, 71.5, 67.5, 50.7, 46.7, 44.2, 31.2, 13.8, 53.2), 
+              nrow = 11)
+dimnames(mat) <- list(Field = c("Health", "Education", "Foreign Language", "Psychology", 
+                               "Fine Arts", "Life Sciences", "Business", "Social Science",
+                               "Physical Sciences", "Engineering", "All Fields"), 
+                      Awarded = c("1970", "1990"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Degree <- vcdExtra::expand.dft(matDF)
+Degree$Field <- factor(Degree$Field, 
+                       levels = c("Health", "Education", "Foreign Language", "Psychology", 
+                                  "Fine Arts", "Life Sciences", "Business", "Social Science",
+                                  "Physical Sciences", "Engineering", "All Fields"))
+Degree$Awarded <- factor(Degree$Awarded, levels = c("1970", "1990"))
+devtools::use_data(Degree, overwrite = TRUE)
+# Checks
+xtabs(~Field + Awarded, data = Degree)
+T1 <- xtabs(~Field + Awarded, data = Degree)
+T1
+barplot(t(T1), beside = TRUE, col = c("red", "skyblue"), legend = colnames(T1))
+#
+# Delay
+Delay <- read.csv("Delay.csv")
+devtools::use_data(Delay, overwrite = TRUE)
+# 
+# Examples
+# Depend
+Depend <- read.csv("Depend.csv")
+devtools::use_data(Depend, overwrite = TRUE)
+# 
+# Detroit
+Detroit <- read.csv("Detroit.csv")
+devtools::use_data(Detroit, overwrite = TRUE)
+# 
+# Develop
+mat <- matrix(data = c(545, 24, 71, 142, 1587, 986, 66, 66, 230, 1939), 
+              nrow = 5)
+dimnames(mat) <- list(Race = c("African American", "American Indian", "Asian",
+                                "Latino", "White"), 
+                      College = c("Two-year", "Four-year"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Develop <- vcdExtra::expand.dft(matDF)
+Develop$Race <- factor(Develop$Race, 
+                       levels = c("African American", "American Indian", "Asian",
+                                  "Latino", "White"))
+Develop$College <- factor(Develop$College, levels = c("Two-year", "Four-year"))
+devtools::use_data(Develop, overwrite = TRUE)
+# Checks
+xtabs(~Race + College, data = Develop)
+T1 <- xtabs(~Race + College, data = Develop)
+T1
+#
+# Devmath
+Devmath <- read.csv("Devmath.csv")
+devtools::use_data(Devmath, overwrite = TRUE)
+#
+# Dice
+x <- 2:12
+Px <- c(1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1)/36
+sum(Px)
+Dice <- data.frame(x = x, Px = Px)
+rm(x, Px)
+str(Dice)
+devtools::use_data(Dice, overwrite = TRUE)
+#
+# Examples
+#
+str(Dice)
+set.seed(123)
+roll1 <- sample(1:6, 20000, replace = TRUE)
+roll2 <- sample(1:6, 20000, replace = TRUE)
+outcome <- roll1 + roll2
+T1 <- table(outcome)/length(outcome)
+T1
+round(t(Dice), 5)
+remove(roll1, roll2, outcome)
+#
+# Diesel
+Diesel <- read.csv("Diesel.csv", colClasses = c(Date = "character", 
+                                                PricePerGallon = "numeric", 
+                                                Location = "factor"))
+str(Diesel)
+Diesel$Date <- as.Date(Diesel$Date, "%m/%d/%y")
+str(Diesel)
+devtools::use_data(Diesel, overwrite = TRUE)
+# Examples
+boxplot(PricePerGallon ~ Location, data = Diesel)
+par(las = 2)
+boxplot(PricePerGallon ~ Location, 
+        data = droplevels(Diesel[Diesel$Location == "EastCoast" | 
+                                   Diesel$Location == "Gulf" |
+                                   Diesel$Location == "NatAvg" |
+                                   Diesel$Location == "Rocky" |
+                                   Diesel$Location == "California", ]),
+        col = "pink", main = "Exercise 2.8")
+par(las = 1)
+ggplot(data = Diesel, aes(x = Date, y = PricePerGallon, color = Location)) + 
+  geom_point() + 
+  geom_smooth(se = FALSE) + 
+  theme_bw() + 
+  labs(y = "Price per Gallon (in dollars)")
+#
+#
+# Diplomat
+Diplomat <- read.csv("Diplomat.csv")
+str(Diplomat)
+devtools::use_data(Diplomat, overwrite = TRUE)
+# Examples
+par(las = 2, mfrow = c(2, 2))
+# DI <- Diplomat[order(Diplomat$number, decreasing = TRUE), ]
+stripchart(number ~ country, data = Diplomat, pch = 19, col= "red", vertical = TRUE)
+stripchart(rate ~ country, data = Diplomat, pch = 19, col= "blue", vertical = TRUE)
+with(data = Diplomat, 
+  barplot(number, names.arg = country, col = "red"))
+with(data = Diplomat, 
+     barplot(rate, names.arg = country, col = "blue"))
+par(las = 1, mfrow = c(1, 1))
+# Not Run
+ggplot(data = Diplomat, aes(x = reorder(country, number), y = number)) +
+  geom_bar(stat = "identity", fill = "pink", color = "black") + 
+  theme_bw() + labs(x = "", y = "Total Number of Tickets")
+ggplot(data = Diplomat, aes(x = reorder(country, rate), y = rate)) +
+  geom_bar(stat = "identity", fill = "pink", color = "black") + 
+  theme_bw() + labs(x = "", y = "Tickets per vehicle per month")
+#
+#
+# Disposal
+Disposal <- read.csv("Disposal.csv")
+str(Disposal)
+devtools::use_data(Disposal, overwrite = TRUE)
+# Examples
+#
+# Dogs
+Dogs <- read.csv("Dogs.csv", 
+                 colClasses = c(breed = "factor", 
+                                rankings = "numeric", year = "factor"))
+str(Dogs)
+devtools::use_data(Dogs, overwrite = TRUE)
+# Examples
+#
+str(Dogs)
+cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
+cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])

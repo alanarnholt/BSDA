@@ -4,25 +4,22 @@
 \name{Delay}
 \alias{Delay}
 \title{Delay times on 20 flights from four major air carriers}
-\format{A data frame with 80 observations on the following 6 variables.
+\format{A data frame with 80 observations on the following 2 variables.
 \describe{ 
-\item{CarrierA}{a numeric vector}
-\item{CarrierB}{a numeric vector} 
-\item{CarrierC}{a numeric vector} 
-\item{CarrierD}{a numeric vector} 
-\item{delay}{a numeric vector} 
-\item{Carrier}{a numeric vector} 
+\item{delay}{the delay time (in minutes) for 80 randomly selected flights}
+\item{carrier}{a factor with levels \code{A}, \code{B}, \code{C}, and \code{D}} 
 }}
+\usage{
+Delay
+}
 \description{
 Data for Exercise 10.55
 }
 \examples{
 
 str(Delay)
-attach(Delay)
-boxplot(delay~Carrier)
-kruskal.test(delay~as.factor(Carrier))
-detach(Delay)
+boxplot(delay ~ carrier, data = Delay)
+kruskal.test(delay ~carrier, data = Delay)
 
 }
 \references{

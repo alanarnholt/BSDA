@@ -6,23 +6,25 @@
 \title{Outcomes and probabilities of the roll of a pair of fair dice}
 \format{A data frame with 11 observations on the following 2 variables.
 \describe{ 
-\item{x}{a numeric vector} 
-\item{P.x.}{a numeric vector} 
+\item{x}{possible outcomes for the sum of two dice} 
+\item{Px}{probability for outcome \code{x}} 
 }}
+\usage{
+Dice
+}
 \description{
 Data for Exercise 3.109
 }
 \examples{
 
 str(Dice)
-attach(Dice)
-roll1 <- sample(1:6,2000,replace=TRUE)
-roll2 <- sample(1:6,2000,replace=TRUE)
-outcome <- roll1+roll2
-table(outcome)/length(outcome)
-detach(Dice)
-remove(roll1,roll2,outcome)
-
+roll1 <- sample(1:6, 20000, replace = TRUE)
+roll2 <- sample(1:6, 20000, replace = TRUE)
+outcome <- roll1 + roll2
+T1 <- table(outcome)/length(outcome)
+remove(roll1, roll2, outcome)
+T1
+round(t(Dice), 5)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

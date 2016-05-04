@@ -4,29 +4,35 @@
 \name{Dogs}
 \alias{Dogs}
 \title{Rankings of the favorite breeds of dogs}
-\format{A data frame with 20 observations on the following 5 variables.
+\format{A data frame with 20 observations on the following 3 variables.
 \describe{ 
-\item{Dog}{a factor with levels \code{Beagle}
-\code{Boxer} \code{Chihuahua} \code{Chow} \code{Dachshund} \code{Dalmatian}
-\code{Doberman} \code{Huskie} \code{Labrador} \code{Pomeranian}
-\code{Poodle} \code{Retriever} \code{Rotweiler} \code{Schnauzer}
-\code{Shepherd} \code{Shetland} \code{ShihTzu} \code{Spaniel}
-\code{Springer} \code{Yorkshire}}
-\item{X1992}{a numeric vector}
-\item{X1993}{a numeric vector} 
-\item{X1997}{a numeric vector} 
-\item{X1998}{a numeric vector} 
+\item{breed}{a factor with levels \code{Beagle},
+\code{Boxer}, \code{Chihuahua}, \code{Chow}, \code{Dachshund}, 
+\code{Dalmatian}, \code{Doberman}, \code{Huskie}, \code{Labrador}, 
+\code{Pomeranian}, \code{Poodle}, \code{Retriever}, \code{Rotweiler}, 
+\code{Schnauzer}, \code{Shepherd}, \code{Shetland}, \code{ShihTzu}, 
+\code{Spaniel}, \code{Springer}, and  \code{Yorkshire}}
+\item{ranking}{numeric ranking}
+\item{year}{a factor with levels \code{1992}, \code{1993}, \code{1997}, 
+and \code{1998}} 
 }}
+\usage{
+Dogs
+}
 \description{
 Data for Exercise 2.88
 }
 \examples{
 
 str(Dogs)
-attach(Dogs)
-cor(Dogs[,2:5])
-detach(Dogs)
-
+cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
+cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
+\dontrun{
+ggplot2::ggplot(data = Dogs, aes(x = reorder(breed, ranking), y = ranking)) + 
+     geom_bar(stat = "identity") + 
+     facet_grid(year ~. ) + 
+     theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) 
+}
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

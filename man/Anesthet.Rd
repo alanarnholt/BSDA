@@ -6,7 +6,7 @@
 \title{Recovery times for anesthetized patients}
 \format{A data frame with 10 observations on the following variable.
 \describe{ 
-\item{recover}{recovery time in hours} 
+\item{recover}{recovery time (in hours)} 
 }}
 \usage{
 Anesthet

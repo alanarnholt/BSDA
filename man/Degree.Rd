@@ -4,29 +4,26 @@
 \name{Degree}
 \alias{Degree}
 \title{Percent of bachelor's degrees awarded women in 1970 versus 1990}
-\format{A data frame with 11 observations on the following 3 variables.
+\format{A data frame with 1064 observations on the following 2 variables.
 \describe{ 
-\item{Field}{a factor with levels \code{All fields}
-\code{Business} \code{Education} \code{Engineering} \code{Fine Arts}
-\code{Foreign Lng} \code{Health} \code{Life Sciences} \code{Physical Sci}
-\code{Psychology} \code{Social Science}} 
-\item{X1970}{a numeric vector} 
-\item{X1990}{a numeric vector} 
+\item{Field}{a factor with levels \code{Health}
+\code{Education} \code{Foreign Language} \code{Psychology} \code{Fine Arts}
+\code{Life Sciences} \code{Business} \code{Social Science} \code{Physical Sciences}
+\code{Engineering} \code{All Fields}} 
+\item{Awarded}{a factor with levels \code{1970} and \code{1990}} 
 }}
+\usage{
+Degree
+}
 \description{
 Data for Exercise 2.75
 }
 \examples{
 
 str(Degree)
-attach(Degree)
-Dmat <- as.matrix(Degree[,2:3])
-rownames(Dmat) <- Field
-colnames(Dmat) <- c("1970","1990")
-Dmat
-barplot(t(Dmat),beside=TRUE,legend=TRUE,cex.names=.5)
-detach(Degree)
-remove(Dmat)
+T1 <- xtabs(~Field + Awarded, data = Degree)
+T1
+barplot(t(T1), beside = TRUE, col = c("red", "skyblue"), legend = colnames(T1))
 
 }
 \references{

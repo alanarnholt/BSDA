@@ -7,18 +7,19 @@
 semester 1995}
 \format{A data frame with 40 observations on the following variable.
 \describe{ 
-\item{score}{a numeric vector} 
+\item{score}{first exam score} 
 }}
+\usage{
+Devmath
+}
 \description{
 Data for Exercise 6.47
 }
 \examples{
 
 str(Devmath)
-attach(Devmath)
-EDA(score)
-t.test(score,mu=80,alternative="less")
-detach(Devmath)
+EDA(Devmath$score)
+t.test(Devmath$score, mu = 80, alternative = "less")
 
 }
 \references{

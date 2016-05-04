@@ -9,7 +9,6 @@ hospitals}
 \describe{ 
 \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
 \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
-
 }}
 \usage{
 Appendec
@@ -22,7 +21,7 @@ Data for Exercise 10.60
 str(Appendec)
 Appendec$regionc <- ifelse(Appendec$region == 1, "rural", 
                     ifelse(Appendec$region == 2, "regional", "metropolitan"))
-boxplot(cost ~ regionc, data = Appendec, col = c("red","blue", "cyan"))
+boxplot(cost ~ regionc, data = Appendec, col = c("red", "blue", "cyan"))
 anova(lm(cost ~ as.factor(regionc), data = Appendec))
 
 }

@@ -438,7 +438,8 @@ NULL
 #' @docType data
 #' @format A data frame with 14 observations on the following variable.
 #' \describe{ 
-#' \item{age}{a numeric vector} }
+#' \item{age}{a numeric vector} 
+#' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -489,7 +490,7 @@ NULL
 #' @docType data
 #' @format A data frame with 10 observations on the following variable.
 #' \describe{ 
-#' \item{recover}{recovery time in hours} 
+#' \item{recover}{recovery time (in hours)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -608,7 +609,6 @@ NULL
 #' \describe{ 
 #' \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
 #' \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
-#'
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -618,7 +618,7 @@ NULL
 #' str(Appendec)
 #' Appendec$regionc <- ifelse(Appendec$region == 1, "rural", 
 #'                     ifelse(Appendec$region == 2, "regional", "metropolitan"))
-#' boxplot(cost ~ regionc, data = Appendec, col = c("red","blue", "cyan"))
+#' boxplot(cost ~ regionc, data = Appendec, col = c("red", "blue", "cyan"))
 #' anova(lm(cost ~ as.factor(regionc), data = Appendec))
 #' 
 "Appendec"
@@ -2270,10 +2270,11 @@ NULL
 #' 
 #' @name Dealers
 #' @docType data
-#' @format A data frame with 6 observations on the following 2 variables.
+#' @format A data frame with 122 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Replace}{a numeric vector} 
-#' \item{Recomnd}{a numeric vector} 
+#' \item{Type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
+#' \code{Ford}, \code{Dodge}, and \code{Saturn}} 
+#' \item{Service}{a factor with levels \code{Replaces unnecessarily} and \code{Follows manufacturer guidelines}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2281,15 +2282,15 @@ NULL
 #' @examples
 #' 
 #' str(Dealers)
-#' attach(Dealers)
-#' Deal <- as.matrix(Dealers)
-#' rownames(Deal) <- c("Honda","Toyota","Mazda","Ford","Dodge","Saturn")
-#' Dealers
-#' barplot(t(Deal),beside=TRUE,legend=TRUE)
-#' detach(Dealers)
-#' remove(Deal)
+#' xtabs(~Type + Service, data = Dealers)
+#' T1 <- xtabs(~Type + Service, data = Dealers)
+#' T1
+#' addmargins(T1)
+#' pt <- prop.table(T1, margin = 1)
+#' pt
+#' barplot(t(pt),  col = c("red", "skyblue"), legend = colnames(T1))
 #' 
-NULL
+"Dealers"
 
 
 
@@ -2302,12 +2303,9 @@ NULL
 #' 
 #' @name Defectiv
 #' @docType data
-#' @format A data frame with 20 observations on the following 4 variables.
+#' @format A data frame with 20 observations on one variable.
 #' \describe{ 
-#' \item{C1}{a numeric vector} 
-#' \item{number}{a numeric vector} 
-#' \item{Count}{a numeric vector}
-#' \item{Percent}{a numeric vector} 
+#' \item{number}{number of defective items produced by the employees in a small business firm} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2315,17 +2313,12 @@ NULL
 #' @examples
 #' 
 #' str(Defectiv)
-#' attach(Defectiv)
-#' table(C1)
-#' barplot(table(C1),col="pink",ylab="Frequency",
-#' xlab="Defective Items Produced by Employees",main="Problem 1.27")
-#' detach(Defectiv)
+#' T1 <- xtabs(~ number, data = Defectiv)
+#' T1
+#' barplot(T1, col = "pink", ylab = "Frequency",
+#' xlab = "Defective Items Produced by Employees", main = "Problem 1.27")
 #' 
-NULL
-
-
-
-
+"Defectiv"
 
 #' Percent of bachelor's degrees awarded women in 1970 versus 1990
 #' 
@@ -2334,14 +2327,13 @@ NULL
 #' 
 #' @name Degree
 #' @docType data
-#' @format A data frame with 11 observations on the following 3 variables.
+#' @format A data frame with 1064 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Field}{a factor with levels \code{All fields}
-#' \code{Business} \code{Education} \code{Engineering} \code{Fine Arts}
-#' \code{Foreign Lng} \code{Health} \code{Life Sciences} \code{Physical Sci}
-#' \code{Psychology} \code{Social Science}} 
-#' \item{X1970}{a numeric vector} 
-#' \item{X1990}{a numeric vector} 
+#' \item{Field}{a factor with levels \code{Health}
+#' \code{Education} \code{Foreign Language} \code{Psychology} \code{Fine Arts}
+#' \code{Life Sciences} \code{Business} \code{Social Science} \code{Physical Sciences}
+#' \code{Engineering} \code{All Fields}} 
+#' \item{Awarded}{a factor with levels \code{1970} and \code{1990}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2349,16 +2341,11 @@ NULL
 #' @examples
 #' 
 #' str(Degree)
-#' attach(Degree)
-#' Dmat <- as.matrix(Degree[,2:3])
-#' rownames(Dmat) <- Field
-#' colnames(Dmat) <- c("1970","1990")
-#' Dmat
-#' barplot(t(Dmat),beside=TRUE,legend=TRUE,cex.names=.5)
-#' detach(Degree)
-#' remove(Dmat)
+#' T1 <- xtabs(~Field + Awarded, data = Degree)
+#' T1
+#' barplot(t(T1), beside = TRUE, col = c("red", "skyblue"), legend = colnames(T1))
 #' 
-NULL
+"Degree"
 
 
 
@@ -2371,14 +2358,10 @@ NULL
 #' 
 #' @name Delay
 #' @docType data
-#' @format A data frame with 80 observations on the following 6 variables.
+#' @format A data frame with 80 observations on the following 2 variables.
 #' \describe{ 
-#' \item{CarrierA}{a numeric vector}
-#' \item{CarrierB}{a numeric vector} 
-#' \item{CarrierC}{a numeric vector} 
-#' \item{CarrierD}{a numeric vector} 
-#' \item{delay}{a numeric vector} 
-#' \item{Carrier}{a numeric vector} 
+#' \item{delay}{the delay time (in minutes) for 80 randomly selected flights}
+#' \item{carrier}{a factor with levels \code{A}, \code{B}, \code{C}, and \code{D}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2386,12 +2369,10 @@ NULL
 #' @examples
 #' 
 #' str(Delay)
-#' attach(Delay)
-#' boxplot(delay~Carrier)
-#' kruskal.test(delay~as.factor(Carrier))
-#' detach(Delay)
+#' boxplot(delay ~ carrier, data = Delay)
+#' kruskal.test(delay ~carrier, data = Delay)
 #' 
-NULL
+"Delay"
 
 
 
@@ -2404,12 +2385,9 @@ NULL
 #' 
 #' @name Depend
 #' @docType data
-#' @format A data frame with 50 observations on the following 4 variables.
+#' @format A data frame with 50 observations on one variable.
 #' \describe{ 
-#' \item{C1}{a numeric vector} 
-#' \item{number}{a numeric vector} 
-#' \item{Count}{a numeric vector}
-#' \item{Percent}{a numeric vector} 
+#' \item{number}{number of dependent children in a family} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2417,13 +2395,12 @@ NULL
 #' @examples
 #' 
 #' str(Depend)
-#' attach(Depend)
-#' table(C1)
-#' barplot(table(C1),col="lightblue",main="Problem 1.26",
-#' xlab="Number of Dependent Children",ylab="Frequency")
-#' detach(Depend)
+#' T1 <- xtabs(~ number, data = Depend)
+#' T1
+#' barplot(T1, col = "lightblue", main = "Problem 1.26",
+#' xlab = "Number of Dependent Children", ylab = "Frequency")
 #' 
-NULL
+"Depend"
 
 
 
@@ -2438,7 +2415,7 @@ NULL
 #' @docType data
 #' @format A data frame with 40 observations on the following variable.
 #' \describe{ 
-#' \item{educ}{a numeric vector} 
+#' \item{educ}{the educational level (in years) of a sample of 40 auto workers in a plant in Detroit} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2446,11 +2423,9 @@ NULL
 #' @examples
 #' 
 #' str(Detroit)
-#' attach(Detroit)
-#' EDA(educ)
-#' detach(Detroit)
+#' EDA(Detroit$educ)
 #' 
-NULL
+"Detroit"
 
 
 
@@ -2464,18 +2439,22 @@ NULL
 #' 
 #' @name Develop
 #' @docType data
-#' @format The format is: num [1:5, 1:2] 545 24 71 142 1587 ...  - attr(*,
-#' "dimnames")=List of 2 ..$ : chr [1:5] "African America" "American Indian"
-#' "Asian" "Latino" ...  ..$ : chr [1:2] "Two-year" "Four-year"
+#' @format A data frame with 5656 observations on the following two variables.
+#' \describe{ 
+#' \item{Race}{a factor with levels \code{African American}, \code{American Indian},
+#' \code{Asian}, \code{Latino}, and \code{White}} 
+#' \item{College}{a factor with levels \code{Two-year} and \code{Four-year}}
+#' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' Develop
-#' chisq.test(Develop)
-#' 
-NULL
+#' str(Develop)
+#' T1 <- xtabs(~Race + College, data = Develop)
+#' T1
+#' chisq.test(T1)
+"Develop"
 
 
 
@@ -2491,7 +2470,7 @@ NULL
 #' @docType data
 #' @format A data frame with 40 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{first exam score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2499,12 +2478,10 @@ NULL
 #' @examples
 #' 
 #' str(Devmath)
-#' attach(Devmath)
-#' EDA(score)
-#' t.test(score,mu=80,alternative="less")
-#' detach(Devmath)
+#' EDA(Devmath$score)
+#' t.test(Devmath$score, mu = 80, alternative = "less")
 #' 
-NULL
+"Devmath"
 
 
 
@@ -2519,8 +2496,8 @@ NULL
 #' @docType data
 #' @format A data frame with 11 observations on the following 2 variables.
 #' \describe{ 
-#' \item{x}{a numeric vector} 
-#' \item{P.x.}{a numeric vector} 
+#' \item{x}{possible outcomes for the sum of two dice} 
+#' \item{Px}{probability for outcome \code{x}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2528,15 +2505,14 @@ NULL
 #' @examples
 #' 
 #' str(Dice)
-#' attach(Dice)
-#' roll1 <- sample(1:6,2000,replace=TRUE)
-#' roll2 <- sample(1:6,2000,replace=TRUE)
-#' outcome <- roll1+roll2
-#' table(outcome)/length(outcome)
-#' detach(Dice)
-#' remove(roll1,roll2,outcome)
-#' 
-NULL
+#' roll1 <- sample(1:6, 20000, replace = TRUE)
+#' roll2 <- sample(1:6, 20000, replace = TRUE)
+#' outcome <- roll1 + roll2
+#' T1 <- table(outcome)/length(outcome)
+#' remove(roll1, roll2, outcome)
+#' T1
+#' round(t(Dice), 5)
+"Dice"
 
 
 
@@ -2549,35 +2525,13 @@ NULL
 #' 
 #' @name Diesel
 #' @docType data
-#' @format A data frame with 65 observations on the following 11 variables.
+#' @format A data frame with 650 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Date}{a factor with levels \code{1/03/2000}
-#' \code{1/04/1999} \code{1/10/2000} \code{1/11/1999} \code{1/17/2000}
-#' \code{1/18/1999} \code{1/24/2000} \code{1/25/1999} \code{1/31/2000}
-#' \code{10/04/1999} \code{10/11/1999} \code{10/18/1999} \code{10/25/1999}
-#' \code{11/01/1999} \code{11/08/1999} \code{11/15/1999} \code{11/22/1999}
-#' \code{11/29/1999} \code{12/06/1999} \code{12/07/1998} \code{12/13/1999}
-#' \code{12/14/1998} \code{12/20/1999} \code{12/21/1998} \code{12/27/1999}
-#' \code{12/28/1998} \code{2/01/1999} \code{2/07/2000} \code{2/08/1999}
-#' \code{2/14/2000} \code{2/15/1999} \code{2/21/2000} \code{2/22/1999}
-#' \code{2/28/2000} \code{3/01/1999} \code{3/08/1999} \code{3/15/1999}
-#' \code{3/22/1999} \code{3/29/1999} \code{4/05/1999} \code{4/12/1999}
-#' \code{4/19/1999} \code{4/26/1999} \code{5/03/1999} \code{5/10/1999}
-#' \code{5/17/1999} \code{5/24/1999} \code{5/31/1999} \code{6/07/1999}
-#' \code{6/14/1999} \code{6/21/1999} \code{6/28/1999} \code{7/05/1999}
-#' \code{7/12/1999} \code{7/19/1999} \code{7/26/1999} \code{8/02/1999}
-#' \code{8/09/1999} \code{8/16/1999} \code{8/23/1999} \code{8/30/1999}
-#' \code{9/06/1999} \code{9/13/1999} \code{9/20/1999} \code{9/27/1999}}
-#' \item{NatAvg}{a numeric vector} 
-#' \item{EstCst}{a numeric vector} 
-#' \item{NE}{a numeric vector} 
-#' \item{CltAtl}{a numeric vector} 
-#' \item{LwrAtl}{a numeric vector} 
-#' \item{Gulf}{a numeric vector} 
-#' \item{Rocky}{a numeric vector}
-#' \item{WstMt}{a numeric vector} 
-#' \item{Coast}{a numeric vector} 
-#' \item{Calif}{a numeric vector}
+#' \item{Date}{date when price was recorded}
+#' \item{PricePerGallon}{price per gallon (in dollars)}
+#' \item{Location}{a factor with levels \code{California}, \code{CentralAtlantic},
+#' \code{Coast}, \code{EastCoast}, \code{Gulf}, \code{LowerAtlantic}, \code{NatAvg},
+#' \code{NorthEast}, \code{Rocky}, and \code{WesternMountain}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2585,12 +2539,23 @@ NULL
 #' @examples
 #' 
 #' str(Diesel)
-#' attach(Diesel)
-#' boxplot(NatAvg,EstCst,Gulf,Rocky,Calif,
-#' names=c("National Average","East Coast","Gulf","Rocky","California"),col="pink")
-#' 
-#' 
-NULL
+#' par(las = 2)
+#' boxplot(PricePerGallon ~ Location, data = Diesel)
+#' boxplot(PricePerGallon ~ Location, 
+#'          data = droplevels(Diesel[Diesel$Location == "EastCoast" | 
+#'          Diesel$Location == "Gulf" | Diesel$Location == "NatAvg" | 
+#'          Diesel$Location == "Rocky" | Diesel$Location == "California", ]), 
+#'          col = "pink", main = "Exercise 2.8")
+#' par(las = 1) 
+#' \dontrun{
+#' ggplot2::ggplot(data = Diesel, aes(x = Date, y = PricePerGallon, 
+#'                color = Location)) + 
+#'                geom_point() + 
+#'                geom_smooth(se = FALSE) + 
+#'                theme_bw() + 
+#'                labs(y = "Price per Gallon (in dollars)")
+#' }         
+"Diesel"
 
 
 
@@ -2598,21 +2563,18 @@ NULL
 
 #' Parking tickets issued to diplomats
 #' 
-#' Data for Exercises 1.14 and 1.47
+#' Data for Exercises 1.14 and 1.37
 #' 
 #' 
 #' @name Diplomat
 #' @docType data
-#' @format A data frame with 10 observations on the following 4 variables.
+#' @format A data frame with 10 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Country}{a factor with levels \code{Brazil}
+#' \item{country}{a factor with levels \code{Brazil}
 #' \code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
 #' \code{Russia} \code{S. Korea} \code{Ukraine} \code{Venezuela}}
-#' \item{Number}{a numeric vector} 
-#' \item{rate}{a numeric vector} 
-#' \item{Code}{a factor with levels \code{Br} \code{Bu}
-#' \code{Eg} \code{In} \code{Is} \code{Ni} \code{Ru} \code{SK} \code{Uk}
-#' \code{Ve}} 
+#' \item{number}{total number of tickets} 
+#' \item{rate}{number of tickets per vehicle per month} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2620,22 +2582,33 @@ NULL
 #' @examples
 #' 
 #' str(Diplomat)
-#' attach(Diplomat)
-#' par(mfrow=c(1,2))
-#' names(Number) <- Country
-#' dotchart(Number,main="Number of Tickets",col="blue",pch=1)
-#' names(rate) <- Country
-#' dotchart(rate,main="Tickets/Vehicle/Month",col="red",pch=2)
-#' barplot(rate,col="pink")
-#' detach(Diplomat)
-#' 
-NULL
+#' par(las = 2, mfrow = c(2, 2))
+#' stripchart(number ~ country, data = Diplomat, pch = 19, 
+#'            col= "red", vertical = TRUE)
+#' stripchart(rate ~ country, data = Diplomat, pch = 19, 
+#'            col= "blue", vertical = TRUE) 
+#' with(data = Diplomat, 
+#'      barplot(number, names.arg = country, col = "red"))
+#' with(data = Diplomat, 
+#'      barplot(rate, names.arg = country, col = "blue"))           
+#' par(las = 1, mfrow = c(1, 1))
+#' \dontrun{
+#' ggplot2::ggplot(data = Diplomat, aes(x = reorder(country, number), 
+#'                  y = number)) + 
+#'            geom_bar(stat = "identity", fill = "pink", color = "black") + 
+#'            theme_bw() + labs(x = "", y = "Total Number of Tickets")
+#' ggplot2::ggplot(data = Diplomat, aes(x = reorder(country, rate), 
+#'                  y = rate)) +
+#'            geom_bar(stat = "identity", fill = "pink", color = "black") + 
+#'            theme_bw() + labs(x = "", y = "Tickets per vehicle per month")
+#' }
+"Diplomat"
 
 
 
 
 
-#' Toxic intensity for plants producing herbicidal preparations
+#' Toxic intensity for manufacturing plants producing herbicidal preparations
 #' 
 #' Data for Exercise 1.127
 #' 
@@ -2644,7 +2617,7 @@ NULL
 #' @docType data
 #' @format A data frame with 29 observations on the following variable.
 #' \describe{ 
-#' \item{pounds}{a numeric vector} 
+#' \item{pounds}{pounds of toxic waste per $1000 of shipments of its products} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2652,13 +2625,11 @@ NULL
 #' @examples
 #' 
 #' str(Disposal)
-#' attach(Disposal)
-#' stem(pounds)
-#' fivenum(pounds)
-#' EDA(pounds)
-#' detach(Disposal)
+#' stem(Disposal$pounds)
+#' fivenum(Disposal$pounds)
+#' EDA(Disposal$pounds)
 #' 
-NULL
+"Disposal"
 
 
 
@@ -2671,18 +2642,17 @@ NULL
 #' 
 #' @name Dogs
 #' @docType data
-#' @format A data frame with 20 observations on the following 5 variables.
+#' @format A data frame with 20 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Dog}{a factor with levels \code{Beagle}
-#' \code{Boxer} \code{Chihuahua} \code{Chow} \code{Dachshund} \code{Dalmatian}
-#' \code{Doberman} \code{Huskie} \code{Labrador} \code{Pomeranian}
-#' \code{Poodle} \code{Retriever} \code{Rotweiler} \code{Schnauzer}
-#' \code{Shepherd} \code{Shetland} \code{ShihTzu} \code{Spaniel}
-#' \code{Springer} \code{Yorkshire}}
-#' \item{X1992}{a numeric vector}
-#' \item{X1993}{a numeric vector} 
-#' \item{X1997}{a numeric vector} 
-#' \item{X1998}{a numeric vector} 
+#' \item{breed}{a factor with levels \code{Beagle},
+#' \code{Boxer}, \code{Chihuahua}, \code{Chow}, \code{Dachshund}, 
+#' \code{Dalmatian}, \code{Doberman}, \code{Huskie}, \code{Labrador}, 
+#' \code{Pomeranian}, \code{Poodle}, \code{Retriever}, \code{Rotweiler}, 
+#' \code{Schnauzer}, \code{Shepherd}, \code{Shetland}, \code{ShihTzu}, 
+#' \code{Spaniel}, \code{Springer}, and  \code{Yorkshire}}
+#' \item{ranking}{numeric ranking}
+#' \item{year}{a factor with levels \code{1992}, \code{1993}, \code{1997}, 
+#' and \code{1998}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2690,11 +2660,15 @@ NULL
 #' @examples
 #' 
 #' str(Dogs)
-#' attach(Dogs)
-#' cor(Dogs[,2:5])
-#' detach(Dogs)
-#' 
-NULL
+#' cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
+#' cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
+#' \dontrun{
+#' ggplot2::ggplot(data = Dogs, aes(x = reorder(breed, ranking), y = ranking)) + 
+#'      geom_bar(stat = "identity") + 
+#'      facet_grid(year ~. ) + 
+#'      theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) 
+#' }
+"Dogs"
 
 
 

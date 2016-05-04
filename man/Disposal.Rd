@@ -3,22 +3,23 @@
 \docType{data}
 \name{Disposal}
 \alias{Disposal}
-\title{Toxic intensity for plants producing herbicidal preparations}
+\title{Toxic intensity for manufacturing plants producing herbicidal preparations}
 \format{A data frame with 29 observations on the following variable.
 \describe{ 
-\item{pounds}{a numeric vector} 
+\item{pounds}{pounds of toxic waste per $1000 of shipments of its products} 
 }}
+\usage{
+Disposal
+}
 \description{
 Data for Exercise 1.127
 }
 \examples{
 
 str(Disposal)
-attach(Disposal)
-stem(pounds)
-fivenum(pounds)
-EDA(pounds)
-detach(Disposal)
+stem(Disposal$pounds)
+fivenum(Disposal$pounds)
+EDA(Disposal$pounds)
 
 }
 \references{
