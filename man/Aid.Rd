@@ -4,7 +4,7 @@
 \name{Aid}
 \alias{Aid}
 \title{Monthly payments per person for families in the AFDC federal program}
-\format{A data frame with 51 observations on the following 2 variables.
+\format{A data frame with 51 observations on the following two variables.
 \describe{ 
 \item{state}{a factor with levels \code{Alabama}
 \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
@@ -19,7 +19,7 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \code{Rhode Island} \code{South Carolina} \code{South Dakota}
 \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
 \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-\item{payment}{a numeric vector} 
+\item{payment}{average monthly payment per person in a family} 
 }}
 \usage{
 Aid

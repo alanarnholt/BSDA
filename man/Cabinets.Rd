@@ -5,11 +5,11 @@
 \alias{Cabinets}
 \title{Estimates of costs of kitchen cabinets by two suppliers on 20 prospective
 homes}
-\format{A data frame with 20 observations on the following 3 variables.
+\format{A data frame with 20 observations on the following three variables.
 \describe{ 
-\item{Home}{a numeric vector} 
-\item{SupplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
-\item{SupplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
+\item{home}{a numeric vector} 
+\item{supplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
+\item{supplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
 }}
 \usage{
 Cabinets
@@ -19,15 +19,15 @@ Data for Exercise 7.83
 }
 \examples{
 
-DIF <- Cabinets$SupplA - Cabinets$SupplB
+DIF <- Cabinets$supplA - Cabinets$supplB
 qqnorm(DIF)
 qqline(DIF)
 shapiro.test(DIF)
 with(data = Cabinets, 
-     t.test(SupplA, SupplB, paired = TRUE)
+     t.test(supplA, supplB, paired = TRUE)
 )
 with(data = Cabinets,
-     wilcox.test(SupplA, SupplB, paired = TRUE)
+     wilcox.test(supplA, supplB, paired = TRUE)
 )
 rm(DIF)
 

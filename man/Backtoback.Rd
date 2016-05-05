@@ -4,7 +4,7 @@
 \name{Backtoback}
 \alias{Backtoback}
 \title{Illustrates inferences based on pooled t-test versus Wilcoxon rank sum test}
-\format{A data frame with 24 observations on the following 3 variables.
+\format{A data frame with 24 observations on the following two variables.
 \describe{ 
 \item{score}{a numeric vector} 
 \item{group}{a numeric vector} 

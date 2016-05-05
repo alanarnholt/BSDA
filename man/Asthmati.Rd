@@ -3,8 +3,8 @@
 \docType{data}
 \name{Asthmati}
 \alias{Asthmati}
-\title{Asthmatic relief index on 9 subjects given a drug and a placebo}
-\format{A data frame with 9 observations on the following 3 variables.
+\title{Asthmatic relief index on nine subjects given a drug and a placebo}
+\format{A data frame with nine observations on the following three variables.
 \describe{
 \item{drug}{asthmatic relief index for patients given a drug} 
 \item{placebo}{asthmatic relief index for patients given a placebo} 

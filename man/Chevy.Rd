@@ -4,7 +4,7 @@
 \name{Chevy}
 \alias{Chevy}
 \title{Insurance injury ratings of Chevrolet vehicles for 1990 and 1993 models}
-\format{A data frame with 67 observations on 2 variables.
+\format{A data frame with 67 observations on two variables.
 \describe{ 
 \item{year}{a factor with levels \code{1988-90} and
 \code{1991-93}} 

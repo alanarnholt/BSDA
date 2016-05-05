@@ -4,24 +4,28 @@
 \name{Domestic}
 \alias{Domestic}
 \title{Rates of domestic violence per 1,000 women by age groups}
-\format{A data frame with 5 observations on the following 2 variables.
+\format{A data frame with 5 observations on the following two variables.
 \describe{ 
-\item{Age}{a factor with levels \code{12-19} \code{20-24}
-\code{25-34} \code{35-49} \code{50-64}} 
-\item{Rate}{a numeric vector} 
+\item{age}{a factor with levels \code{12-19}, \code{20-24},
+\code{25-34}, \code{35-49}, and \code{50-64}} 
+\item{rate}{rate of domestic violence per 1000 women} 
 }}
+\usage{
+Domestic
+}
 \description{
 Data for Exercise 1.20
 }
 \examples{
 
 str(Domestic)
-attach(Domestic)
-names(Rate) <- Age
-barplot(Rate,col="gold")
-pie(Rate)
-detach(Domestic)
-
+barplot(Domestic$rate, names.arg = Domestic$age)
+\dontrun{
+ggplot2::ggplot(data = Domestic, aes(x = age, y = rate)) + 
+     geom_bar(stat = "identity", fill = "purple", color = "black") + 
+     labs(x = "", y = "Domestic violence per 1000 women") + 
+     theme_bw()
+}
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

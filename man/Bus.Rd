@@ -4,9 +4,9 @@
 \name{Bus}
 \alias{Bus}
 \title{Attendance of bus drivers versus attendance}
-\format{A data frame with 29363 observations on 2 variables.
+\format{A data frame with 29363 observations on two variables.
 \describe{ 
-\item{attendance}{a factor with levels \code{absent}
+\item{attendance}{a factor with levels \code{absent} and
 \code{present}} 
 \item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, \code{swing}, and \code{split}} 
 }}

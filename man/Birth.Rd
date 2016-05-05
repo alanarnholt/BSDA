@@ -4,7 +4,7 @@
 \name{Birth}
 \alias{Birth}
 \title{Live birth rates in 1990 and 1998 for all states}
-\format{A data frame with 51 observations on the following 3 variables.
+\format{A data frame with 51 observations on the following three variables.
 \describe{ 
 \item{state}{a character with levels \code{Alabama}
 \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}

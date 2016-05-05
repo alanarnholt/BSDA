@@ -4,7 +4,7 @@
 \name{Anxiety}
 \alias{Anxiety}
 \title{Math test scores versus anxiety scores before the test}
-\format{A data frame with 20 observations on the following 2 variables.
+\format{A data frame with 20 observations on the following two variables.
 \describe{ 
 \item{anxiety}{anxiety score before a major math test} 
 \item{math}{math test score} 

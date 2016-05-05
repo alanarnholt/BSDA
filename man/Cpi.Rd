@@ -4,10 +4,10 @@
 \name{Cpi}
 \alias{Cpi}
 \title{Consumer price index from 1979 to 1998}
-\format{A data frame with 20 observations on the following 2 variables.
+\format{A data frame with 20 observations on the following two variables.
 \describe{ 
-\item{Year}{year} 
-\item{CPI}{consumer price index} 
+\item{year}{year} 
+\item{cpi}{consumer price index} 
 }}
 \usage{
 Cpi
@@ -18,8 +18,8 @@ Data for Exercise 1.34
 \examples{
 
 str(Cpi)
-plot(CPI ~ Year, data = Cpi, type = "l", lty = 2, lwd = 2, col = "red")   
-barplot(Cpi$CPI, col = "pink", las = 2, main = "Problem 1.34")   
+plot(cpi ~ year, data = Cpi, type = "l", lty = 2, lwd = 2, col = "red")   
+barplot(Cpi$cpi, col = "pink", las = 2, main = "Problem 1.34")   
 
 }
 \references{

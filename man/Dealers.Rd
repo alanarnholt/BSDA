@@ -5,11 +5,11 @@
 \alias{Dealers}
 \title{Automobile dealers classified according to type dealership and service
 rendered to customers}
-\format{A data frame with 122 observations on the following 2 variables.
+\format{A data frame with 122 observations on the following two variables.
 \describe{ 
-\item{Type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
+\item{type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
 \code{Ford}, \code{Dodge}, and \code{Saturn}} 
-\item{Service}{a factor with levels \code{Replaces unnecessarily} and \code{Follows manufacturer guidelines}} 
+\item{service}{a factor with levels \code{Replaces unnecessarily} and \code{Follows manufacturer guidelines}} 
 }}
 \usage{
 Dealers
@@ -20,8 +20,8 @@ Data for Example 2.22
 \examples{
 
 str(Dealers)
-xtabs(~Type + Service, data = Dealers)
-T1 <- xtabs(~Type + Service, data = Dealers)
+xtabs(~type + service, data = Dealers)
+T1 <- xtabs(~type + service, data = Dealers)
 T1
 addmargins(T1)
 pt <- prop.table(T1, margin = 1)

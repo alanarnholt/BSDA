@@ -4,14 +4,14 @@
 \name{Bypass}
 \alias{Bypass}
 \title{Median charges for coronary bypass at 17 hospitals in North Carolina}
-\format{A data frame with 17 observations on the following 2 variables.
+\format{A data frame with 17 observations on the following two variables.
 \describe{ 
 \item{hospital}{a factor with levels \code{Carolinas Med
-Ct} \code{Duke Med Ct} \code{Durham Regional} \code{Forsyth Memorial}
-\code{Frye Regional} \code{High Point Regional} \code{Memorial Mission}
-\code{Mercy} \code{Moore Regional} \code{Moses Cone Memorial} \code{NC
-Baptist} \code{New Hanover Regional} \code{Pitt Co. Memorial}
-\code{Presbyterian} \code{Rex} \code{Univ of North Carolina} \code{Wake
+Ct}, \code{Duke Med Ct}, \code{Durham Regional}, \code{Forsyth Memorial},
+\code{Frye Regional}, \code{High Point Regional}, \code{Memorial Mission},
+\code{Mercy}, \code{Moore Regional}, \code{Moses Cone Memorial}, \code{NC
+Baptist}, \code{New Hanover Regional}, \code{Pitt Co. Memorial},
+\code{Presbyterian}, \code{Rex}, \code{Univ of North Carolina}, and \code{Wake
 County}}
 \item{charge}{median charge for coronary bypass} 
 }}

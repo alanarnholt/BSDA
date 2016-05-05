@@ -5,21 +5,23 @@
 \alias{Drug}
 \title{Number of trials to master a task for a group of 28 subjects assigned to a
 control and an experimental group}
-\format{A data frame with 28 observations on the following 2 variables.
+\format{A data frame with 28 observations on the following two variables.
 \describe{ 
-\item{trials}{a numeric vector} 
-\item{group}{a numeric vector} 
+\item{trials}{number of trials to master a task} 
+\item{group}{a factor with levels \code{control} and \code{experimental}} 
 }}
+\usage{
+Drug
+}
 \description{
 Data for Exercise 7.15
 }
 \examples{
 
 str(Drug)
-attach(Drug)
-boxplot(trials~group)
-wilcox.test(trials~group)
-detach(Drug)
+boxplot(trials ~ group, data = Drug)
+wilcox.test(trials ~ group, data = Drug)
+t.test(rank(trials) ~ group, data = Drug, var.equal = TRUE)
 
 }
 \references{

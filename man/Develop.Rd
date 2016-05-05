@@ -7,9 +7,9 @@
 4-year colleges}
 \format{A data frame with 5656 observations on the following two variables.
 \describe{ 
-\item{Race}{a factor with levels \code{African American}, \code{American Indian},
+\item{race}{a factor with levels \code{African American}, \code{American Indian},
 \code{Asian}, \code{Latino}, and \code{White}} 
-\item{College}{a factor with levels \code{Two-year} and \code{Four-year}}
+\item{college}{a factor with levels \code{Two-year} and \code{Four-year}}
 }}
 \usage{
 Develop
@@ -20,7 +20,7 @@ Data used for Exercise 8.50
 \examples{
 
 str(Develop)
-T1 <- xtabs(~Race + College, data = Develop)
+T1 <- xtabs(~race + college, data = Develop)
 T1
 chisq.test(T1)
 }

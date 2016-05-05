@@ -5,7 +5,7 @@
 \alias{Corn}
 \title{Comparison of the yields of a new variety and a standard variety of corn
 planted on 12 plots of land}
-\format{A data frame with 12 observations on the following 3 variables.
+\format{A data frame with 12 observations on the following three variables.
 \describe{ 
 \item{plot}{number of plot} 
 \item{new}{corn yield with new meathod} 

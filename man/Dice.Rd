@@ -4,7 +4,7 @@
 \name{Dice}
 \alias{Dice}
 \title{Outcomes and probabilities of the roll of a pair of fair dice}
-\format{A data frame with 11 observations on the following 2 variables.
+\format{A data frame with 11 observations on the following two variables.
 \describe{ 
 \item{x}{possible outcomes for the sum of two dice} 
 \item{Px}{probability for outcome \code{x}} 

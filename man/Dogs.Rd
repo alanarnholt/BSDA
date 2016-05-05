@@ -4,7 +4,7 @@
 \name{Dogs}
 \alias{Dogs}
 \title{Rankings of the favorite breeds of dogs}
-\format{A data frame with 20 observations on the following 3 variables.
+\format{A data frame with 20 observations on the following three variables.
 \describe{ 
 \item{breed}{a factor with levels \code{Beagle},
 \code{Boxer}, \code{Chihuahua}, \code{Chow}, \code{Dachshund}, 

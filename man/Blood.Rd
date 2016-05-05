@@ -4,7 +4,7 @@
 \name{Blood}
 \alias{Blood}
 \title{Blood pressure of 15 adult males taken by machine and by an expert}
-\format{A data frame with 15 observations on the following 2 variables.
+\format{A data frame with 15 observations on the following two variables.
 \describe{ 
 \item{machine}{blood pressure recorded from an automated blood pressure machine} 
 \item{expert}{blood pressure recorded by an expert using an at-home device} 

@@ -4,7 +4,7 @@
 \name{Airdisasters}
 \alias{Airdisasters}
 \title{Aircraft disasters in five different decades}
-\format{A data frame with 141 observations on the following 7 variables.
+\format{A data frame with 141 observations on the following seven variables.
 \describe{ 
 \item{year}{a numeric vector indicating the year of an aircraft accident} 
 \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}

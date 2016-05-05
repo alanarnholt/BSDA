@@ -5,7 +5,7 @@
 \alias{Apolipop}
 \title{Level of apolipoprotein B and number of cups of coffee consumed per day for
 15 adult males}
-\format{A data frame with 15 observations on the following 2 variables.
+\format{A data frame with 15 observations on the following two variables.
 \describe{ 
 \item{coffee}{number of cups of coffee per day} 
 \item{apolipB}{level of apoliprotein B} 

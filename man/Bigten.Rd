@@ -4,7 +4,7 @@
 \name{Bigten}
 \alias{Bigten}
 \title{Graduation rates for student athletes and nonathletes in the Big Ten Conf.}
-\format{A data frame with 44 observations on the following 4 variables.
+\format{A data frame with 44 observations on the following four variables.
 \describe{ 
 \item{school}{a factor with levels \code{Illinois}
 \code{Indiana} \code{Iowa} \code{Michigan} \code{Michigan State}

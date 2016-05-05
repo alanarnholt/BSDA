@@ -454,18 +454,18 @@ devtools::use_data(Darwin, overwrite = TRUE)
 #
 # Dealers
 mat <- matrix(data = c(19, 3, 12, 8, 11, 4, 2, 16, 9, 13, 10, 15), nrow = 6)
-dimnames(mat) <- list(Type = c("Honda", "Toyota", "Mazda", "Ford", "Dodge", "Saturn"), 
-                      Service = c("Replaces unnecessarily", "Follows manufacturer guidelines"))
+dimnames(mat) <- list(type = c("Honda", "Toyota", "Mazda", "Ford", "Dodge", "Saturn"), 
+                      service = c("Replaces unnecessarily", "Follows manufacturer guidelines"))
 matT <- as.table(mat)
 matDF <- as.data.frame(matT)
 Dealers <- vcdExtra::expand.dft(matDF)
-Dealers$Type <- factor(Dealers$Type, 
+Dealers$type <- factor(Dealers$type, 
                      levels = c("Honda", "Toyota", "Mazda", "Ford", "Dodge", "Saturn"))
-Dealers$Service <- factor(Dealers$Service, levels = c("Replaces unnecessarily", 
+Dealers$service <- factor(Dealers$service, levels = c("Replaces unnecessarily", 
                                                       "Follows manufacturer guidelines"))
 # Checks
-xtabs(~Type + Service, data = Dealers)
-T1 <- xtabs(~Type + Service, data = Dealers)
+xtabs(~type + service, data = Dealers)
+T1 <- xtabs(~type + service, data = Dealers)
 T1
 addmargins(T1)
 pt <- prop.table(T1, margin = 1)
@@ -480,22 +480,22 @@ devtools::use_data(Defectiv, overwrite = TRUE)
 mat <- matrix(data = c(78.0, 75.0, 73.4, 43.4, 57.3, 27.8, 8.7, 37.1, 13.6, 0.7, 43.1,
                        84.3, 78.1, 73.4, 71.5, 67.5, 50.7, 46.7, 44.2, 31.2, 13.8, 53.2), 
               nrow = 11)
-dimnames(mat) <- list(Field = c("Health", "Education", "Foreign Language", "Psychology", 
+dimnames(mat) <- list(field = c("Health", "Education", "Foreign Language", "Psychology", 
                                "Fine Arts", "Life Sciences", "Business", "Social Science",
                                "Physical Sciences", "Engineering", "All Fields"), 
-                      Awarded = c("1970", "1990"))
+                      awarded = c("1970", "1990"))
 matT <- as.table(mat)
 matDF <- as.data.frame(matT)
 Degree <- vcdExtra::expand.dft(matDF)
-Degree$Field <- factor(Degree$Field, 
+Degree$field <- factor(Degree$field, 
                        levels = c("Health", "Education", "Foreign Language", "Psychology", 
                                   "Fine Arts", "Life Sciences", "Business", "Social Science",
                                   "Physical Sciences", "Engineering", "All Fields"))
-Degree$Awarded <- factor(Degree$Awarded, levels = c("1970", "1990"))
+Degree$awarded <- factor(Degree$awarded, levels = c("1970", "1990"))
 devtools::use_data(Degree, overwrite = TRUE)
 # Checks
-xtabs(~Field + Awarded, data = Degree)
-T1 <- xtabs(~Field + Awarded, data = Degree)
+xtabs(~field + awarded, data = Degree)
+T1 <- xtabs(~field + awarded, data = Degree)
 T1
 barplot(t(T1), beside = TRUE, col = c("red", "skyblue"), legend = colnames(T1))
 #
@@ -515,20 +515,20 @@ devtools::use_data(Detroit, overwrite = TRUE)
 # Develop
 mat <- matrix(data = c(545, 24, 71, 142, 1587, 986, 66, 66, 230, 1939), 
               nrow = 5)
-dimnames(mat) <- list(Race = c("African American", "American Indian", "Asian",
+dimnames(mat) <- list(race = c("African American", "American Indian", "Asian",
                                 "Latino", "White"), 
-                      College = c("Two-year", "Four-year"))
+                      college = c("Two-year", "Four-year"))
 matT <- as.table(mat)
 matDF <- as.data.frame(matT)
 Develop <- vcdExtra::expand.dft(matDF)
-Develop$Race <- factor(Develop$Race, 
+Develop$race <- factor(Develop$race, 
                        levels = c("African American", "American Indian", "Asian",
                                   "Latino", "White"))
-Develop$College <- factor(Develop$College, levels = c("Two-year", "Four-year"))
+Develop$college <- factor(Develop$college, levels = c("Two-year", "Four-year"))
 devtools::use_data(Develop, overwrite = TRUE)
 # Checks
-xtabs(~Race + College, data = Develop)
-T1 <- xtabs(~Race + College, data = Develop)
+xtabs(~race + college, data = Develop)
+T1 <- xtabs(~race + college, data = Develop)
 T1
 #
 # Devmath
@@ -557,11 +557,11 @@ round(t(Dice), 5)
 remove(roll1, roll2, outcome)
 #
 # Diesel
-Diesel <- read.csv("Diesel.csv", colClasses = c(Date = "character", 
-                                                PricePerGallon = "numeric", 
-                                                Location = "factor"))
+Diesel <- read.csv("Diesel.csv", colClasses = c(date = "character", 
+                                                pricepergallon = "numeric", 
+                                                location = "factor"))
 str(Diesel)
-Diesel$Date <- as.Date(Diesel$Date, "%m/%d/%y")
+Diesel$date <- as.Date(Diesel$date, "%m/%d/%y")
 str(Diesel)
 devtools::use_data(Diesel, overwrite = TRUE)
 # Examples
@@ -622,3 +622,71 @@ devtools::use_data(Dogs, overwrite = TRUE)
 str(Dogs)
 cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
 cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
+# Domestic
+Domestic <- read.csv("Domestic.csv")
+str(Domestic)
+devtools::use_data(Domestic, overwrite = TRUE)
+# Examples
+barplot(Domestic$rate, names.arg = Domestic$age)
+ggplot2::ggplot(data = Domestic, aes(x = age, y = rate)) + 
+  geom_bar(stat = "identity", fill = "purple", color = "black") + 
+  labs(x = "", y = "Domestic violence per 1000 women") + 
+  theme_bw()
+#
+# Dopamine
+Dopamine <- read.csv("Dopamine.csv")
+str(Dopamine)
+devtools::use_data(Dopamine, overwrite = TRUE)
+# 
+# Dowjones
+Dowjones <- read.csv("Dowjones.csv")
+str(Dowjones)
+Dowjones$year <- as.Date(ISOdate(Dowjones$year, 12, 31))  # Complete Year, Dec 31
+str(Dowjones)
+devtools::use_data(Dowjones, overwrite = TRUE)
+# Examples
+plot(close ~ year, data = Dowjones, type = "l")
+#
+ggplot2::ggplot(data = Dowjones, aes(x = year, y = close)) +
+  geom_point(size = 0.5) + 
+  geom_line(color = "red") + 
+  theme_bw() + 
+  labs(y = "Dow Jones Closing Price")
+#
+# Drink
+#
+mat <- matrix(data = c(95, 73, 12, 83, 71, 46, 21, 18, 8), 
+              nrow = 3)
+dimnames(mat) <- list(drinking = c("ok", "tolerated", "immoral"), 
+                      referendum = c("for", "against", "undecided"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Drink <- vcdExtra::expand.dft(matDF)
+Drink$drinking <- factor(Drink$drinking, 
+                         levels = c("ok", "tolerated", "immoral"))
+Drink$referendum <- factor(Drink$referendum, 
+                           levels = c("for", "against", "undecided"))
+devtools::use_data(Drink, overwrite = TRUE)
+# Checks
+str(Drink)
+xtabs(~drinking + referendum, data = Drink)
+T1 <- xtabs(~drinking + referendum, data = Drink)
+T1
+chisq.test(T1)
+#
+#
+# Drug
+Drug <- read.csv("Drug.csv")
+str(Drug)
+devtools::use_data(Drug, overwrite = TRUE)
+# 
+#
+# Dyslexia
+#
+Dyslexia <- read.csv("Dyslexia.csv")
+str(Dyslexia)
+devtools::use_data(Dyslexia, overwrite = TRUE)
+# 
+# Examples
+#
+ggplot2::ggplot(data = Dyslexia, aes(x = height, y = words, color = handed)) + geom_point()

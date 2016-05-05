@@ -4,10 +4,10 @@
 \name{Abc}
 \alias{Abc}
 \title{Three samples to illustrate analysis of variance}
-\format{A data frame with 51 observations on 2 variables.
+\format{A data frame with 51 observations on two variables.
 \describe{ 
 \item{response}{a numeric vector}
-\item{group}{a factor with e levels \code{A}, \code{B}, and \code{C}}
+\item{group}{a factor with levels \code{A}, \code{B}, and \code{C}}
 }}
 \usage{
 Abc

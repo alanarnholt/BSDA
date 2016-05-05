@@ -4,7 +4,7 @@
 \name{Adsales}
 \alias{Adsales}
 \title{Number of ads versus number of sales for a retailer of satellite dishes}
-\format{A data frame with 6 observations on the following 3 variables.
+\format{A data frame with six observations on the following three variables.
 \describe{ 
 \item{month}{a character vector listing month}
 \item{ads}{a numeric vector containing number of ads} 

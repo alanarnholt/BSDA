@@ -6,13 +6,13 @@
 \title{Agressive tendency scores for a group of teenage members of a street gang}
 \format{A data frame with 28 observations on the following variable.
 \describe{ 
-\item{aggres}{a numeric vector} 
+\item{aggres}{measure of aggresive tendency} 
 }}
 \usage{
 Aggress
 }
 \description{
-Data used in Exercises 1.61 and 1.81
+Data used in Exercises 1.66 and 1.81
 }
 \examples{
 

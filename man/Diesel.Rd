@@ -4,11 +4,11 @@
 \name{Diesel}
 \alias{Diesel}
 \title{Diesel fuel prices in 1999-2000 in nine regions of the country}
-\format{A data frame with 650 observations on the following 3 variables.
+\format{A data frame with 650 observations on the following three variables.
 \describe{ 
-\item{Date}{date when price was recorded}
-\item{PricePerGallon}{price per gallon (in dollars)}
-\item{Location}{a factor with levels \code{California}, \code{CentralAtlantic},
+\item{date}{date when price was recorded}
+\item{pricepergallon}{price per gallon (in dollars)}
+\item{location}{a factor with levels \code{California}, \code{CentralAtlantic},
 \code{Coast}, \code{EastCoast}, \code{Gulf}, \code{LowerAtlantic}, \code{NatAvg},
 \code{NorthEast}, \code{Rocky}, and \code{WesternMountain}}
 }}
@@ -22,16 +22,16 @@ Data for Exercise 2.8
 
 str(Diesel)
 par(las = 2)
-boxplot(PricePerGallon ~ Location, data = Diesel)
-boxplot(PricePerGallon ~ Location, 
-         data = droplevels(Diesel[Diesel$Location == "EastCoast" | 
-         Diesel$Location == "Gulf" | Diesel$Location == "NatAvg" | 
-         Diesel$Location == "Rocky" | Diesel$Location == "California", ]), 
+boxplot(pricepergallon ~ location, data = Diesel)
+boxplot(pricepergallon ~ location, 
+         data = droplevels(Diesel[Diesel$location == "EastCoast" | 
+         Diesel$location == "Gulf" | Diesel$location == "NatAvg" | 
+         Diesel$location == "Rocky" | Diesel$location == "California", ]), 
          col = "pink", main = "Exercise 2.8")
 par(las = 1) 
 \dontrun{
-ggplot2::ggplot(data = Diesel, aes(x = Date, y = PricePerGallon, 
-               color = Location)) + 
+ggplot2::ggplot(data = Diesel, aes(x = date, y = pricepergallon, 
+               color = location)) + 
                geom_point() + 
                geom_smooth(se = FALSE) + 
                theme_bw() + 

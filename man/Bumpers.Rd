@@ -4,16 +4,16 @@
 \name{Bumpers}
 \alias{Bumpers}
 \title{Repair costs of vehicles crashed into a barrier at 5 miles per hour}
-\format{A data frame with 23 observations on the following 2 variables.
+\format{A data frame with 23 observations on the following two variables.
 \describe{ 
-\item{car}{a factor with levels \code{Buick Century}
-\code{Buick Skylark} \code{Chevrolet Cavalier} \code{Chevrolet Corsica}
-\code{Chevrolet Lumina} \code{Dodge Dynasty} \code{Dodge Monaco} \code{Ford
-Taurus} \code{Ford Tempo} \code{Honda Accord} \code{Hyundai Sonata}
-\code{Mazda 626} \code{Mitsubishi Galant} \code{Nissan Stanza}
-\code{Oldsmobile Calais} \code{Oldsmobile Ciere} \code{Plymouth Acclaim}
-\code{Pontiac 6000} \code{Pontiac Grand Am} \code{Pontiac Sunbird}
-\code{Saturn SL2} \code{Subaru Legacy} \code{Toyota Camry}}
+\item{car}{a factor with levels \code{Buick Century},
+\code{Buick Skylark}, \code{Chevrolet Cavalier}, \code{Chevrolet Corsica},
+\code{Chevrolet Lumina}, \code{Dodge Dynasty}, \code{Dodge Monaco}, \code{Ford
+Taurus}, \code{Ford Tempo}, \code{Honda Accord}, \code{Hyundai Sonata},
+\code{Mazda 626}, \code{Mitsubishi Galant}, \code{Nissan Stanza},
+\code{Oldsmobile Calais}, \code{Oldsmobile Ciere}, \code{Plymouth Acclaim},
+\code{Pontiac 6000}, \code{Pontiac Grand Am}, \code{Pontiac Sunbird},
+\code{Saturn SL2}, \code{Subaru Legacy}, and \code{Toyota Camry}}
 \item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
 }}
 \usage{

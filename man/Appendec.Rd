@@ -5,7 +5,7 @@
 \alias{Appendec}
 \title{Median costs of appendectomies at three different types of North Carolina
 hospitals}
-\format{A data frame with 59 observations on the following 2 variables.
+\format{A data frame with 59 observations on the following two variables.
 \describe{ 
 \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
 \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 

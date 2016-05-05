@@ -4,7 +4,7 @@
 \name{Coaxial}
 \alias{Coaxial}
 \title{Signal loss from three types of coxial cable}
-\format{A data frame with 45 observations on the following 2 variables.
+\format{A data frame with 45 observations on the following two variables.
 \describe{ 
 \item{signal}{signal loss per 1000 feet} 
 \item{cable}{factor with three levels of coaxial cable \code{typeA}, 

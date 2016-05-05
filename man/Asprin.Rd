@@ -4,7 +4,7 @@
 \name{Asprin}
 \alias{Asprin}
 \title{Dissolving time versus level of impurities in aspirin tablets}
-\format{A data frame with 15 observations on 2 variables.
+\format{A data frame with 15 observations on two variables.
 \describe{ 
 \item{time}{time (in seconds) for aspirin to dissolve} 
 \item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 

@@ -4,7 +4,7 @@
 \name{Citrus}
 \alias{Citrus}
 \title{Percent of peak bone density of different aged children}
-\format{A data frame with 9 observations on the following 2 variables.
+\format{A data frame with nine observations on the following two variables.
 \describe{ 
 \item{age}{age of children} 
 \item{percent}{percent peak bone density} 

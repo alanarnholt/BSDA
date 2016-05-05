@@ -4,7 +4,7 @@
 \name{Cancer}
 \alias{Cancer}
 \title{Survival times of terminal cancer patients treated with vitamin C}
-\format{A data frame with 64 observations on 2 variables.
+\format{A data frame with 64 observations on two variables.
 \describe{ 
 \item{survival}{survival time (in days) of terminal patients 
 treated with vitamin C}

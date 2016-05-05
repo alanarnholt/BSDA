@@ -4,7 +4,7 @@
 \name{Clean}
 \alias{Clean}
 \title{Residual contaminant following the use of three different cleansing agents}
-\format{A data frame with 45 observations on the following 5 variables.
+\format{A data frame with 45 observations on the following two variables.
 \describe{ 
 \item{clean}{residual contaminants} 
 \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 

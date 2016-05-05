@@ -5,7 +5,7 @@
 \alias{Challeng}
 \title{Temperatures and O-ring failures for the launches of the space shuttle
 Challenger}
-\format{A data frame with 25 observations on the following 4 variables.
+\format{A data frame with 25 observations on the following four variables.
 \describe{ 
 \item{flight}{a character variable indicating the flight}
 \item{date}{date of the flight} 

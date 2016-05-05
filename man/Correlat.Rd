@@ -4,7 +4,7 @@
 \name{Correlat}
 \alias{Correlat}
 \title{Exercise to illustrate correlation}
-\format{A data frame with 13 observations on the following 2 variables.
+\format{A data frame with 13 observations on the following two variables.
 \describe{ 
 \item{X}{a numeric vector} 
 \item{Y}{a numeric vector} 

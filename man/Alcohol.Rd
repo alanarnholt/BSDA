@@ -6,7 +6,7 @@
 \title{Ages at which 14 female alcoholics began drinking}
 \format{A data frame with 14 observations on the following variable.
 \describe{ 
-\item{age}{a numeric vector} 
+\item{age}{age when individual started drinking} 
 }}
 \usage{
 Alcohol

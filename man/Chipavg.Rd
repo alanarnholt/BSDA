@@ -5,7 +5,7 @@
 \alias{Chipavg}
 \title{Measurements of the thickness of the oxide layer of manufactured integrated
 circuits}
-\format{A data frame with 30 observations on the following 3 variables.
+\format{A data frame with 30 observations on the following three variables.
 \describe{ 
 \item{wafer1}{thickness of the oxide layer for \code{wafer1}} 
 \item{wafer2}{thickness of the oxide layer for \code{wafer2}}

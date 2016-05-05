@@ -4,7 +4,7 @@
 \name{Airline}
 \alias{Airline}
 \title{Percentage of on-time arrivals and number of complaints for 11 airlines}
-\format{A data frame with 11 observations on the following 3 variables.
+\format{A data frame with 11 observations on the following three variables.
 \describe{ 
 \item{airline}{a charater variable with values \code{Alaska}
 \code{Amer West} \code{American} \code{Continental} \code{Delta}

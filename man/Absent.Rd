@@ -8,6 +8,9 @@
 \describe{ 
 \item{days}{a numeric vector} 
 }}
+\usage{
+Absent
+}
 \description{
 Data used in Exercise 1.28
 }

@@ -6,21 +6,27 @@
 \title{Closing yearend Dow Jones Industrial averages from 1896 through 2000}
 \format{A data frame with 105 observations on the following 3 variables.
 \describe{ 
-\item{year}{a numeric vector} 
-\item{close}{a numeric vector} 
-\item{X.change}{a numeric vector} 
+\item{year}{date} 
+\item{close}{Dow Jones closing price} 
+\item{change}{percent change from previous year} 
 }}
+\usage{
+Dowjones
+}
 \description{
 Data for Exercise 1.35
 }
 \examples{
 
 str(Dowjones)
-attach(Dowjones)  
-plot(year,close,type="l",lty=2,lwd=2,col="blue")     
-barplot(close,col="blue",las=2,main="Problem 1.35",names.arg=FALSE)      
-detach(Dowjones) 
-
+plot(close ~ year, data = Dowjones, type = "l", main = "Exercise 1.35")
+\dontrun{
+ggplot2::ggplot(data = Dowjones, aes(x = year, y = close)) +
+geom_point(size = 0.5) + 
+geom_line(color = "red") + 
+theme_bw() + 
+labs(y = "Dow Jones Closing Price")
+}
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

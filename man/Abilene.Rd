@@ -4,13 +4,13 @@
 \name{Abilene}
 \alias{Abilene}
 \title{Crimes reported in Abilene, Texas}
-\format{A data frame with 16 observations on 3 variables.
+\format{A data frame with 16 observations on three variables.
 \describe{ 
-\item{CrimeType}{a factor with levels \code{Aggravated
+\item{crimetype}{a factor with levels \code{Aggravated
 assault}, \code{Arson}, \code{Burglary}, \code{Forcible rape}, \code{Larceny
 theft}, \code{Murder}, \code{Robbery}, and \code{Vehicle theft}.}
-\item{Year}{a factor with levels \code{1992} and \code{1999}} 
-\item{Number}{number of reported crimes} 
+\item{year}{a factor with levels \code{1992} and \code{1999}} 
+\item{number}{number of reported crimes} 
 }}
 \usage{
 Abilene
@@ -21,17 +21,17 @@ Data used in Exercise 1.23 and 2.79
 \examples{
 
 par(mfrow = c(2, 1))
-barplot(Abilene$Number[Abilene$Year=="1992"],
-names.arg = Abilene$CrimeType[Abilene$Year == "1992"],
+barplot(Abilene$number[Abilene$year=="1992"],
+names.arg = Abilene$crimetype[Abilene$year == "1992"],
 main = "1992 Crime Stats", col = "red")
-barplot(Abilene$Number[Abilene$Year=="1999"],
-names.arg = Abilene$CrimeType[Abilene$Year == "1999"],
+barplot(Abilene$number[Abilene$year=="1999"],
+names.arg = Abilene$crimetype[Abilene$year == "1999"],
 main = "1999 Crime Stats", col = "blue")
 par(mfrow = c(1, 1))
 
 \dontrun{
 library(ggplot2)
-ggplot(data = Abilene, aes(x = CrimeType, y = Number, fill = Year)) +
+ggplot(data = Abilene, aes(x = crimetype, y = number, fill = year)) +
 geom_bar(stat = "identity", position = "dodge") +
 theme_bw() +
 theme(axis.text.x = element_text(angle = 30, hjust = 1))

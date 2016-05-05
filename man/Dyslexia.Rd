@@ -4,27 +4,28 @@
 \name{Dyslexia}
 \alias{Dyslexia}
 \title{Data on a group of college students diagnosed with dyslexia}
-\format{A data frame with 8 observations on the following 7 variables.
+\format{A data frame with 8 observations on the following seven variables.
 \describe{ 
-\item{words}{a numeric vector} 
-\item{age}{a numeric vector} 
-\item{gender}{a factor with levels \code{f}
-\code{m}} 
-\item{handed}{a factor with levels \code{l} \code{r}}
-\item{weight}{a numeric vector} 
-\item{height}{a numeric vector} 
-\item{children}{a numeric vector} 
+\item{words}{number of words read per minute} 
+\item{age}{age of participant} 
+\item{gender}{a factor with levels \code{female} and 
+\code{male}} 
+\item{handed}{a factor with levels \code{left} and \code{right}}
+\item{weight}{weight of participant (in pounds)} 
+\item{height}{height of participant (in inches)} 
+\item{children}{number of children in family} 
 }}
+\usage{
+Dyslexia
+}
 \description{
 Data for Exercise 2.90
 }
 \examples{
 
 str(Dyslexia)
-attach(Dyslexia)
-plot(weight,height)
-plot(handed,words)
-detach(Dyslexia)
+plot(height ~ weight, data = Dyslexia)
+plot(words ~ handed, data = Dyslexia)
 
 }
 \references{

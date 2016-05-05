@@ -4,7 +4,7 @@
 \name{Coffee}
 \alias{Coffee}
 \title{Productivity of workers with and without a coffee break}
-\format{A data frame with 9 observations on the following 2 variables.
+\format{A data frame with 9 observations on the following two variables.
 \describe{ 
 \item{without}{workers' productivity scores without a coffee break} 
 \item{with}{workers' productivity scores with a coffee break} 

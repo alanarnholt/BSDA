@@ -4,9 +4,9 @@
 \name{Achieve}
 \alias{Achieve}
 \title{Math achievement test scores by gender for 25 high school students}
-\format{A data frame with 25 observations on the following w variables.
+\format{A data frame with 25 observations on the following two variables.
 \describe{ 
-\item{score}{a numeric vector} 
+\item{score}{mathematics achiement score} 
 \item{gender}{a factor with 2 levels \code{boys} and \code{girls}} 
 }}
 \usage{

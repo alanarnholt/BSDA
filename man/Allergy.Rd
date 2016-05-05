@@ -4,12 +4,12 @@
 \name{Allergy}
 \alias{Allergy}
 \title{Allergy medicines by adverse events}
-\format{A data frame with 406 observations on 2 variables.
+\format{A data frame with 406 observations on two variables.
 \describe{ 
-\item{event}{a factor with levels \code{insomnia}
-\code{headache} \code{drowsiness}} 
-\item{medication}{a factor with levels \code{seldane-d}
-\code{pseudoephedrine} \code{placebo}}
+\item{event}{a factor with levels \code{insomnia},
+\code{headache}, and \code{drowsiness}} 
+\item{medication}{a factor with levels \code{seldane-d},
+\code{pseudoephedrine}, and \code{placebo}}
  }}
 \usage{
 Allergy

@@ -4,18 +4,18 @@
 \name{Commute}
 \alias{Commute}
 \title{Commuting times for selected cities in 1980 and 1990}
-\format{A data frame with 39 observations on the following 3 variables.
+\format{A data frame with 39 observations on the following three variables.
 \describe{ 
-\item{city}{a factor with levels \code{Atlanta}
-\code{Baltimore} \code{Boston} \code{Buffalo} \code{Charlotte}
-\code{Chicago} \code{Cincinnati} \code{Cleveland} \code{Columbus}
-\code{Dallas} \code{Denver} \code{Detroit} \code{Hartford} \code{Houston}
-\code{Indianapolis} \code{Kansas City} \code{Los Angeles} \code{Miami}
-\code{Milwaukee} \code{Minneapolis} \code{New Orleans} \code{New York}
-\code{Norfolk} \code{Orlando} \code{Philadelphia} \code{Phoenix}
-\code{Pittsburgh} \code{Portland} \code{Providence} \code{Rochester}
-\code{Sacramento} \code{Salt Lake City} \code{San Antonio} \code{San Diego}
-\code{San Francisco} \code{Seattle} \code{St. Louis} \code{Tampa}
+\item{city}{a factor with levels \code{Atlanta},
+\code{Baltimore}, \code{Boston}, \code{Buffalo}, \code{Charlotte},
+\code{Chicago}, \code{Cincinnati}, \code{Cleveland}, \code{Columbus},
+\code{Dallas}, \code{Denver}, \code{Detroit}, \code{Hartford}, \code{Houston},
+\code{Indianapolis}, \code{Kansas City}, \code{Los Angeles}, \code{Miami},
+\code{Milwaukee}, \code{Minneapolis}, \code{New Orleans}, \code{New York},
+\code{Norfolk}, \code{Orlando}, \code{Philadelphia}, \code{Phoenix},
+\code{Pittsburgh}, \code{Portland}, \code{Providence}, \code{Rochester},
+\code{Sacramento}, \code{Salt Lake City}, \code{San Antonio}, \code{San Diego},
+\code{San Francisco}, \code{Seattle}, \code{St. Louis}, \code{Tampa}, and
 \code{Washington}}
 \item{year1980}{urban commute times for the year 1980}
 \item{year1990}{urban commute times for the year 1990}

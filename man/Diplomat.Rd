@@ -4,7 +4,7 @@
 \name{Diplomat}
 \alias{Diplomat}
 \title{Parking tickets issued to diplomats}
-\format{A data frame with 10 observations on the following 3 variables.
+\format{A data frame with 10 observations on the following three variables.
 \describe{ 
 \item{country}{a factor with levels \code{Brazil}
 \code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}

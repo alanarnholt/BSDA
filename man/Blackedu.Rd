@@ -4,7 +4,7 @@
 \name{Blackedu}
 \alias{Blackedu}
 \title{Education level of blacks by gender}
-\format{A data frame with 3800 observations on 2 variables.
+\format{A data frame with 3800 observations on two variables.
 \describe{
 \item{gender}{a factor with levels \code{Female} and \code{Male}}
 \item{education}{a factor with levels \code{High school dropout},

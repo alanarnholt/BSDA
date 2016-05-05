@@ -39,10 +39,10 @@ NULL
 #' 
 #' @name Abc
 #' @docType data
-#' @format A data frame with 51 observations on 2 variables.
+#' @format A data frame with 51 observations on two variables.
 #' \describe{ 
 #' \item{response}{a numeric vector}
-#' \item{group}{a factor with e levels \code{A}, \code{B}, and \code{C}}
+#' \item{group}{a factor with levels \code{A}, \code{B}, and \code{C}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -65,13 +65,13 @@ NULL
 #' 
 #' @name Abilene
 #' @docType data
-#' @format A data frame with 16 observations on 3 variables.
+#' @format A data frame with 16 observations on three variables.
 #' \describe{ 
-#' \item{CrimeType}{a factor with levels \code{Aggravated
+#' \item{crimetype}{a factor with levels \code{Aggravated
 #' assault}, \code{Arson}, \code{Burglary}, \code{Forcible rape}, \code{Larceny
 #' theft}, \code{Murder}, \code{Robbery}, and \code{Vehicle theft}.}
-#' \item{Year}{a factor with levels \code{1992} and \code{1999}} 
-#' \item{Number}{number of reported crimes} 
+#' \item{year}{a factor with levels \code{1992} and \code{1999}} 
+#' \item{number}{number of reported crimes} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -79,17 +79,17 @@ NULL
 #' @examples
 #' 
 #' par(mfrow = c(2, 1))
-#' barplot(Abilene$Number[Abilene$Year=="1992"],
-#' names.arg = Abilene$CrimeType[Abilene$Year == "1992"],
+#' barplot(Abilene$number[Abilene$year=="1992"],
+#' names.arg = Abilene$crimetype[Abilene$year == "1992"],
 #' main = "1992 Crime Stats", col = "red")
-#' barplot(Abilene$Number[Abilene$Year=="1999"],
-#' names.arg = Abilene$CrimeType[Abilene$Year == "1999"],
+#' barplot(Abilene$number[Abilene$year=="1999"],
+#' names.arg = Abilene$crimetype[Abilene$year == "1999"],
 #' main = "1999 Crime Stats", col = "blue")
 #' par(mfrow = c(1, 1))
 #' 
 #' \dontrun{
 #' library(ggplot2)
-#' ggplot(data = Abilene, aes(x = CrimeType, y = Number, fill = Year)) +
+#' ggplot(data = Abilene, aes(x = crimetype, y = number, fill = year)) +
 #' geom_bar(stat = "identity", position = "dodge") +
 #' theme_bw() +
 #' theme(axis.text.x = element_text(angle = 30, hjust = 1))
@@ -108,7 +108,7 @@ NULL
 #' 
 #' @name Ability
 #' @docType data
-#' @format A data frame with 400 observations on 2 variables.
+#' @format A data frame with 400 observations on two variables.
 #' \describe{ 
 #' \item{gender}{a factor with levels \code{girls} and \code{boys}} 
 #' \item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
@@ -196,7 +196,7 @@ NULL
 #' barplot(CT, col = "pink")
 #' plot(ecdf(Absent$days), main = "ECDF")
 #' 
-NULL
+"Absent"
 
 
 
@@ -209,9 +209,9 @@ NULL
 #' 
 #' @name Achieve
 #' @docType data
-#' @format A data frame with 25 observations on the following w variables.
+#' @format A data frame with 25 observations on the following two variables.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{mathematics achiement score} 
 #' \item{gender}{a factor with 2 levels \code{boys} and \code{girls}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -235,7 +235,7 @@ NULL
 #' 
 #' @name Adsales
 #' @docType data
-#' @format A data frame with 6 observations on the following 3 variables.
+#' @format A data frame with six observations on the following three variables.
 #' \describe{ 
 #' \item{month}{a character vector listing month}
 #' \item{ads}{a numeric vector containing number of ads} 
@@ -260,14 +260,14 @@ NULL
 
 #' Agressive tendency scores for a group of teenage members of a street gang
 #' 
-#' Data used in Exercises 1.61 and 1.81
+#' Data used in Exercises 1.66 and 1.81
 #' 
 #' 
 #' @name Aggress
 #' @docType data
 #' @format A data frame with 28 observations on the following variable.
 #' \describe{ 
-#' \item{aggres}{a numeric vector} 
+#' \item{aggres}{measure of aggresive tendency} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -294,7 +294,7 @@ NULL
 #' 
 #' @name Aid
 #' @docType data
-#' @format A data frame with 51 observations on the following 2 variables.
+#' @format A data frame with 51 observations on the following two variables.
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
@@ -309,7 +309,7 @@ NULL
 #' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
 #' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-#' \item{payment}{a numeric vector} 
+#' \item{payment}{average monthly payment per person in a family} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -336,7 +336,7 @@ NULL
 #' 
 #' @name Aids
 #' @docType data
-#' @format A data frame with 295 observations on the following 3 variables.
+#' @format A data frame with 295 observations on the following three variables.
 #' \describe{ 
 #' \item{duration}{time (in months) from HIV infection to the clinical manifestation of full-blown AIDS} 
 #' \item{age}{age (in years) of patient} 
@@ -371,7 +371,7 @@ NULL
 #' 
 #' @name Airdisasters
 #' @docType data
-#' @format A data frame with 141 observations on the following 7 variables.
+#' @format A data frame with 141 observations on the following seven variables.
 #' \describe{ 
 #' \item{year}{a numeric vector indicating the year of an aircraft accident} 
 #' \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
@@ -403,7 +403,7 @@ NULL
 #' 
 #' @name Airline
 #' @docType data
-#' @format A data frame with 11 observations on the following 3 variables.
+#' @format A data frame with 11 observations on the following three variables.
 #' \describe{ 
 #' \item{airline}{a charater variable with values \code{Alaska}
 #' \code{Amer West} \code{American} \code{Continental} \code{Delta}
@@ -438,7 +438,7 @@ NULL
 #' @docType data
 #' @format A data frame with 14 observations on the following variable.
 #' \describe{ 
-#' \item{age}{a numeric vector} 
+#' \item{age}{age when individual started drinking} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -459,12 +459,12 @@ NULL
 #' 
 #' @name Allergy
 #' @docType data
-#' @format A data frame with 406 observations on 2 variables.
+#' @format A data frame with 406 observations on two variables.
 #' \describe{ 
-#' \item{event}{a factor with levels \code{insomnia}
-#' \code{headache} \code{drowsiness}} 
-#' \item{medication}{a factor with levels \code{seldane-d}
-#' \code{pseudoephedrine} \code{placebo}}
+#' \item{event}{a factor with levels \code{insomnia},
+#' \code{headache}, and \code{drowsiness}} 
+#' \item{medication}{a factor with levels \code{seldane-d},
+#' \code{pseudoephedrine}, and \code{placebo}}
 #'  }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -516,7 +516,7 @@ NULL
 #' 
 #' @name Anxiety
 #' @docType data
-#' @format A data frame with 20 observations on the following 2 variables.
+#' @format A data frame with 20 observations on the following two variables.
 #' \describe{ 
 #' \item{anxiety}{anxiety score before a major math test} 
 #' \item{math}{math test score} 
@@ -548,7 +548,7 @@ NULL
 #' 
 #' @name Apolipop
 #' @docType data
-#' @format A data frame with 15 observations on the following 2 variables.
+#' @format A data frame with 15 observations on the following two variables.
 #' \describe{ 
 #' \item{coffee}{number of cups of coffee per day} 
 #' \item{apolipB}{level of apoliprotein B} 
@@ -605,7 +605,7 @@ NULL
 #' 
 #' @name Appendec
 #' @docType data
-#' @format A data frame with 59 observations on the following 2 variables.
+#' @format A data frame with 59 observations on the following two variables.
 #' \describe{ 
 #' \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
 #' \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
@@ -632,7 +632,7 @@ NULL
 #' 
 #' @name Aptitude
 #' @docType data
-#' @format A data frame with 8 observations on the following 2 variables.
+#' @format A data frame with 8 observations on the following two variables.
 #' \describe{ 
 #' \item{aptitude}{aptitude test scores}
 #' \item{product}{productivity scores} 
@@ -663,7 +663,7 @@ NULL
 #' 
 #' @name Archaeo
 #' @docType data
-#' @format A data frame with 60 observations on the following 2 variables.
+#' @format A data frame with 60 observations on the following two variables.
 #' \describe{ 
 #' \item{age}{number of years before 1983 - the year the data were obtained}
 #' \item{phase}{Ceramic Phase numbers} 
@@ -690,9 +690,9 @@ NULL
 #' 
 #' @name Arthriti
 #' @docType data
-#' @format A data frame with 51 observations on the following 2 variables.
+#' @format A data frame with 51 observations on the following two variables.
 #' \describe{ 
-#' \item{time}{time (days?) until an arthritis sufferer experienced relief} 
+#' \item{time}{time (measured in days) until an arthritis sufferer experienced relief} 
 #' \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -744,7 +744,7 @@ NULL
 #' 
 #' @name Asprin
 #' @docType data
-#' @format A data frame with 15 observations on 2 variables.
+#' @format A data frame with 15 observations on two variables.
 #' \describe{ 
 #' \item{time}{time (in seconds) for aspirin to dissolve} 
 #' \item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
@@ -763,14 +763,14 @@ NULL
 
 
 
-#' Asthmatic relief index on 9 subjects given a drug and a placebo
+#' Asthmatic relief index on nine subjects given a drug and a placebo
 #' 
 #' Data for Exercise 7.52
 #' 
 #' 
 #' @name Asthmati
 #' @docType data
-#' @format A data frame with 9 observations on the following 3 variables.
+#' @format A data frame with nine observations on the following three variables.
 #' \describe{
 #' \item{drug}{asthmatic relief index for patients given a drug} 
 #' \item{placebo}{asthmatic relief index for patients given a placebo} 
@@ -802,35 +802,35 @@ NULL
 #' 
 #' @name Attorney
 #' @docType data
-#' @format A data frame with 88 observations on the following 3 variables.
+#' @format A data frame with 88 observations on the following three variables.
 #' \describe{ 
 #' \item{staff}{U.S. attorneys' office staff per 1 million population} 
 #' \item{convict}{U.S. attorneys' office convictions per 1 million population} 
 #' \item{district}{a factor with levels
-#' \code{Albuquerque} \code{Alexandria, va} \code{Anchorage} \code{Asheville,
-#' NC} \code{Atlanta} \code{Baltimore} \code{Baton Rouge} \code{Billings, Mt}
-#' \code{Birmingham, Al} \code{Boise, Id} \code{Boston} \code{Buffalo}
-#' \code{Burlington, Vt} \code{Cedar Rapids} \code{Charleston, WVA}
-#' \code{Cheyenne, Wy} \code{Chicago} \code{Cincinnati} \code{Cleveland}
-#' \code{Columbia, SC} \code{Concord, NH} \code{Denver} \code{Des Moines}
-#' \code{Detroit} \code{East St. Louis} \code{Fargo, ND} \code{Fort Smith, Ark}
-#' \code{Fort Worth} \code{Grand Rapids, Mi} \code{Greensboro, NC}
-#' \code{Honolulu} \code{Houston} \code{Indianapolis} \code{Jackson, Miss}
-#' \code{Kansas City} \code{Knoxville, Tn} \code{Las Vegas} \code{Lexington,
-#' Ky} \code{Little Rock} \code{Los Angeles} \code{Louisville} \code{Memphis}
-#' \code{Miami} \code{Milwaukee} \code{Minneapolis} \code{Mobile, Ala}
-#' \code{Montgomery, Ala} \code{Muskogee, Ok} \code{Nashville} \code{New Haven,
-#' Conn} \code{New Orleans} \code{New York (Brooklyn)} \code{New York
-#' (Manhattan)} \code{Newark, NJ} \code{Oklahoma City} \code{Omaha}
-#' \code{Oxford, Miss} \code{Pensacola, Fl} \code{Philadelphia} \code{Phoenix}
-#' \code{Pittsburgh} \code{Portland, Maine} \code{Portland, Ore}
-#' \code{Providence, RI} \code{Raleigh, NC} \code{Roanoke, Va}
-#' \code{Sacramento} \code{Salt Lake City} \code{San Antonio} \code{San Diego}
-#' \code{San Francisco} \code{Savannah, Ga} \code{Scranton, Pa} \code{Seattle}
-#' \code{Shreveport, La} \code{Sioux Falls, SD} \code{South Bend, Ind}
-#' \code{Spokane, Wash} \code{Springfield, Ill} \code{St. Louis}
-#' \code{Syracuse, NY} \code{Tampa} \code{Topeka, Kan} \code{Tulsa}
-#' \code{Tyler, Tex} \code{Washington} \code{Wheeling, WVa} \code{Wilmington,
+#' \code{Albuquerque}, \code{Alexandria, Va}, \code{Anchorage}, \code{Asheville,
+#' NC}, \code{Atlanta}, \code{Baltimore}, \code{Baton Rouge}, \code{Billings, Mt},
+#' \code{Birmingham, Al}, \code{Boise, Id}, \code{Boston}, \code{Buffalo},
+#' \code{Burlington, Vt}, \code{Cedar Rapids}, \code{Charleston, WVA},
+#' \code{Cheyenne, Wy}, \code{Chicago}, \code{Cincinnati}, \code{Cleveland},
+#' \code{Columbia, SC}, \code{Concord, NH}, \code{Denver}, \code{Des Moines},
+#' \code{Detroit}, \code{East St. Louis}, \code{Fargo, ND}, \code{Fort Smith, Ark},
+#' \code{Fort Worth}, \code{Grand Rapids, Mi}, \code{Greensboro, NC},
+#' \code{Honolulu}, \code{Houston}, \code{Indianapolis}, \code{Jackson, Miss},
+#' \code{Kansas City}, \code{Knoxville, Tn}, \code{Las Vegas}, \code{Lexington,
+#' Ky}, \code{Little Rock}, \code{Los Angeles}, \code{Louisville}, \code{Memphis},
+#' \code{Miami}, \code{Milwaukee}, \code{Minneapolis}, \code{Mobile, Ala},
+#' \code{Montgomery, Ala}, \code{Muskogee, Ok}, \code{Nashville}, \code{New Haven,
+#' Conn}, \code{New Orleans}, \code{New York (Brooklyn)}, \code{New York
+#' (Manhattan)}, \code{Newark, NJ}, \code{Oklahoma City}, \code{Omaha},
+#' \code{Oxford, Miss}, \code{Pensacola, Fl}, \code{Philadelphia}, \code{Phoenix},
+#' \code{Pittsburgh}, \code{Portland, Maine}, \code{Portland, Ore},
+#' \code{Providence, RI}, \code{Raleigh, NC}, \code{Roanoke, Va},
+#' \code{Sacramento}, \code{Salt Lake City}, \code{San Antonio}, \code{San Diego},
+#' \code{San Francisco}, \code{Savannah, Ga}, \code{Scranton, Pa}, \code{Seattle},
+#' \code{Shreveport, La}, \code{Sioux Falls, SD}, \code{South Bend, Ind},
+#' \code{Spokane, Wash} ,\code{Springfield, Ill}, \code{St. Louis},
+#' \code{Syracuse, NY}, \code{Tampa}, \code{Topeka, Kan}, \code{Tulsa},
+#' \code{Tyler, Tex}, \code{Washington}, \code{Wheeling, WVa}, and \code{Wilmington,
 #' Del}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -884,7 +884,7 @@ NULL
 #' 
 #' @name Backtoback
 #' @docType data
-#' @format A data frame with 24 observations on the following 3 variables.
+#' @format A data frame with 24 observations on the following two variables.
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' \item{group}{a numeric vector} 
@@ -910,9 +910,9 @@ NULL
 #' 
 #' @name Bbsalaries
 #' @docType data
-#' @format A data frame with 142 observations on 2 variables.
+#' @format A data frame with 142 observations on two variables.
 #' \describe{ 
-#' \item{salary}{1999 salary} 
+#' \item{salary}{1999 salary for baseball player} 
 #' \item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -937,7 +937,7 @@ NULL
 #' 
 #' @name Bigten
 #' @docType data
-#' @format A data frame with 44 observations on the following 4 variables.
+#' @format A data frame with 44 observations on the following four variables.
 #' \describe{ 
 #' \item{school}{a factor with levels \code{Illinois}
 #' \code{Indiana} \code{Iowa} \code{Michigan} \code{Michigan State}
@@ -997,7 +997,7 @@ NULL
 #' 
 #' @name Birth
 #' @docType data
-#' @format A data frame with 51 observations on the following 3 variables.
+#' @format A data frame with 51 observations on the following three variables.
 #' \describe{ 
 #' \item{state}{a character with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
@@ -1041,7 +1041,7 @@ NULL
 #' 
 #' @name Blackedu
 #' @docType data
-#' @format A data frame with 3800 observations on 2 variables.
+#' @format A data frame with 3800 observations on two variables.
 #' \describe{
 #' \item{gender}{a factor with levels \code{Female} and \code{Male}}
 #' \item{education}{a factor with levels \code{High school dropout},
@@ -1070,7 +1070,7 @@ NULL
 #' 
 #' @name Blood
 #' @docType data
-#' @format A data frame with 15 observations on the following 2 variables.
+#' @format A data frame with 15 observations on the following two variables.
 #' \describe{ 
 #' \item{machine}{blood pressure recorded from an automated blood pressure machine} 
 #' \item{expert}{blood pressure recorded by an expert using an at-home device} 
@@ -1100,7 +1100,7 @@ NULL
 #' 
 #' @name Board
 #' @docType data
-#' @format A data frame with 7 observations on the following 3 variables.
+#' @format A data frame with 7 observations on the following three variables.
 #' \describe{ 
 #' \item{salary}{1999 salary (in $1000) for board directors} 
 #' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -1126,7 +1126,7 @@ NULL
 #' 
 #' @name Bones
 #' @docType data
-#' @format A data frame with 70 observations on 2 variables.
+#' @format A data frame with 70 observations on two variables.
 #' \describe{ 
 #' \item{density}{bone density measurements}
 #' \item{group}{a factor with levels \code{active} and \code{nonactive}} 
@@ -1154,7 +1154,7 @@ NULL
 #' 
 #' @name Books
 #' @docType data
-#' @format A data frame with 17 observations on the following 2 variables.
+#' @format A data frame with 17 observations on the following two variables.
 #' \describe{ 
 #' \item{book}{number of books read} 
 #' \item{spelling}{spelling score} 
@@ -1209,15 +1209,15 @@ NULL
 #' 
 #' @name Brain
 #' @docType data
-#' @format A data frame with 28 observations on the following 3 variables.
+#' @format A data frame with 28 observations on the following three variables.
 #' \describe{ 
 #' \item{species}{a factor with levels \code{African
-#' elephant} \code{Asian Elephant} \code{Brachiosaurus} \code{Cat}
-#' \code{Chimpanzee} \code{Cow} \code{Diplodocus} \code{Donkey} \code{Giraffe}
-#' \code{Goat} \code{Gorilla} \code{Gray wolf} \code{Guinea Pig} \code{Hamster}
-#' \code{Horse} \code{Human} \code{Jaguar} \code{Kangaroo} \code{Mole}
-#' \code{Mouse} \code{Mt Beaver} \code{Pig} \code{Potar monkey} \code{Rabbit}
-#' \code{Rat} \code{Rhesus monkey} \code{Sheep} \code{Triceratops}}
+#' elephant}, \code{Asian Elephant}, \code{Brachiosaurus}, \code{Cat},
+#' \code{Chimpanzee}, \code{Cow}, \code{Diplodocus}, \code{Donkey}, \code{Giraffe},
+#' \code{Goat}, \code{Gorilla}, \code{Gray wolf}, \code{Guinea Pig}, \code{Hamster},
+#' \code{Horse}, \code{Human}, \code{Jaguar}, \code{Kangaroo}, \code{Mole},
+#' \code{Mouse}, \code{Mt Beaver}, \code{Pig}, \code{Potar monkey}, \code{Rabbit},
+#' \code{Rat}, \code{Rhesus monkey}, \code{Sheep}, and \code{Triceratops}}
 #' \item{bodyweight}{body weight (in kg)} 
 #' \item{brainweight}{brain weight (in g)} 
 #' }
@@ -1266,16 +1266,16 @@ NULL
 #' 
 #' @name Bumpers
 #' @docType data
-#' @format A data frame with 23 observations on the following 2 variables.
+#' @format A data frame with 23 observations on the following two variables.
 #' \describe{ 
-#' \item{car}{a factor with levels \code{Buick Century}
-#' \code{Buick Skylark} \code{Chevrolet Cavalier} \code{Chevrolet Corsica}
-#' \code{Chevrolet Lumina} \code{Dodge Dynasty} \code{Dodge Monaco} \code{Ford
-#' Taurus} \code{Ford Tempo} \code{Honda Accord} \code{Hyundai Sonata}
-#' \code{Mazda 626} \code{Mitsubishi Galant} \code{Nissan Stanza}
-#' \code{Oldsmobile Calais} \code{Oldsmobile Ciere} \code{Plymouth Acclaim}
-#' \code{Pontiac 6000} \code{Pontiac Grand Am} \code{Pontiac Sunbird}
-#' \code{Saturn SL2} \code{Subaru Legacy} \code{Toyota Camry}}
+#' \item{car}{a factor with levels \code{Buick Century},
+#' \code{Buick Skylark}, \code{Chevrolet Cavalier}, \code{Chevrolet Corsica},
+#' \code{Chevrolet Lumina}, \code{Dodge Dynasty}, \code{Dodge Monaco}, \code{Ford
+#' Taurus}, \code{Ford Tempo}, \code{Honda Accord}, \code{Hyundai Sonata},
+#' \code{Mazda 626}, \code{Mitsubishi Galant}, \code{Nissan Stanza},
+#' \code{Oldsmobile Calais}, \code{Oldsmobile Ciere}, \code{Plymouth Acclaim},
+#' \code{Pontiac 6000}, \code{Pontiac Grand Am}, \code{Pontiac Sunbird},
+#' \code{Saturn SL2}, \code{Subaru Legacy}, and \code{Toyota Camry}}
 #' \item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -1301,9 +1301,9 @@ NULL
 #' 
 #' @name Bus
 #' @docType data
-#' @format A data frame with 29363 observations on 2 variables.
+#' @format A data frame with 29363 observations on two variables.
 #' \describe{ 
-#' \item{attendance}{a factor with levels \code{absent}
+#' \item{attendance}{a factor with levels \code{absent} and
 #' \code{present}} 
 #' \item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, \code{swing}, and \code{split}} 
 #' }
@@ -1329,14 +1329,14 @@ NULL
 #' 
 #' @name Bypass
 #' @docType data
-#' @format A data frame with 17 observations on the following 2 variables.
+#' @format A data frame with 17 observations on the following two variables.
 #' \describe{ 
 #' \item{hospital}{a factor with levels \code{Carolinas Med
-#' Ct} \code{Duke Med Ct} \code{Durham Regional} \code{Forsyth Memorial}
-#' \code{Frye Regional} \code{High Point Regional} \code{Memorial Mission}
-#' \code{Mercy} \code{Moore Regional} \code{Moses Cone Memorial} \code{NC
-#' Baptist} \code{New Hanover Regional} \code{Pitt Co. Memorial}
-#' \code{Presbyterian} \code{Rex} \code{Univ of North Carolina} \code{Wake
+#' Ct}, \code{Duke Med Ct}, \code{Durham Regional}, \code{Forsyth Memorial},
+#' \code{Frye Regional}, \code{High Point Regional}, \code{Memorial Mission},
+#' \code{Mercy}, \code{Moore Regional}, \code{Moses Cone Memorial}, \code{NC
+#' Baptist}, \code{New Hanover Regional}, \code{Pitt Co. Memorial},
+#' \code{Presbyterian}, \code{Rex}, \code{Univ of North Carolina}, and \code{Wake
 #' County}}
 #' \item{charge}{median charge for coronary bypass} 
 #' }
@@ -1363,26 +1363,26 @@ NULL
 #' 
 #' @name Cabinets
 #' @docType data
-#' @format A data frame with 20 observations on the following 3 variables.
+#' @format A data frame with 20 observations on the following three variables.
 #' \describe{ 
-#' \item{Home}{a numeric vector} 
-#' \item{SupplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
-#' \item{SupplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
+#' \item{home}{a numeric vector} 
+#' \item{supplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
+#' \item{supplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' DIF <- Cabinets$SupplA - Cabinets$SupplB
+#' DIF <- Cabinets$supplA - Cabinets$supplB
 #' qqnorm(DIF)
 #' qqline(DIF)
 #' shapiro.test(DIF)
 #' with(data = Cabinets, 
-#'      t.test(SupplA, SupplB, paired = TRUE)
+#'      t.test(supplA, supplB, paired = TRUE)
 #' )
 #' with(data = Cabinets,
-#'      wilcox.test(SupplA, SupplB, paired = TRUE)
+#'      wilcox.test(supplA, supplB, paired = TRUE)
 #')
 #' rm(DIF)
 #' 
@@ -1399,7 +1399,7 @@ NULL
 #' 
 #' @name Cancer
 #' @docType data
-#' @format A data frame with 64 observations on 2 variables.
+#' @format A data frame with 64 observations on two variables.
 #' \describe{ 
 #' \item{survival}{survival time (in days) of terminal patients 
 #' treated with vitamin C}
@@ -1441,7 +1441,7 @@ NULL
 #' 
 #' @name Carbon
 #' @docType data
-#' @format A data frame with 24 observations on 2 variables.
+#' @format A data frame with 24 observations on two variables.
 #' \describe{ 
 #' \item{CO}{carbon monoxide measured (in parts per million)} 
 #' \item{site}{a factor with levels \code{SiteA}, \code{SiteB}, and \code{SiteC}} 
@@ -1530,7 +1530,7 @@ NULL
 #' 
 #' @name Challeng
 #' @docType data
-#' @format A data frame with 25 observations on the following 4 variables.
+#' @format A data frame with 25 observations on the following four variables.
 #' \describe{ 
 #' \item{flight}{a character variable indicating the flight}
 #' \item{date}{date of the flight} 
@@ -1637,7 +1637,7 @@ NULL
 #' 
 #' @name Chevy
 #' @docType data
-#' @format A data frame with 67 observations on 2 variables.
+#' @format A data frame with 67 observations on two variables.
 #' \describe{ 
 #' \item{year}{a factor with levels \code{1988-90} and
 #' \code{1991-93}} 
@@ -1667,7 +1667,7 @@ NULL
 #' 
 #' @name Chicken
 #' @docType data
-#' @format A data frame with 13 observations on the following 3 variables.
+#' @format A data frame with 13 observations on the following three variables.
 #' \describe{ 
 #' \item{gain}{weight gain over a specified period} 
 #' \item{feed}{a factor with levels \code{ration1}, \code{ration2}, 
@@ -1696,7 +1696,7 @@ NULL
 #' 
 #' @name Chipavg
 #' @docType data
-#' @format A data frame with 30 observations on the following 3 variables.
+#' @format A data frame with 30 observations on the following three variables.
 #' \describe{ 
 #' \item{wafer1}{thickness of the oxide layer for \code{wafer1}} 
 #' \item{wafer2}{thickness of the oxide layer for \code{wafer2}}
@@ -1735,7 +1735,7 @@ NULL
 #' 
 #' @name Chips
 #' @docType data
-#' @format A data frame with 30 observations on the following 8 variables.
+#' @format A data frame with 30 observations on the following eight variables.
 #' \describe{ 
 #' \item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
 #' \item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
@@ -1774,7 +1774,7 @@ NULL
 #' 
 #' @name Cigarett
 #' @docType data
-#' @format A data frame with 16 observations on the following 2 variables.
+#' @format A data frame with 16 observations on the following two variables.
 #' \describe{ 
 #' \item{cigarettes}{mothers' estimated average number of cigarettes smoked per day} 
 #' \item{weight}{children's birth weights (in pounds)} 
@@ -1805,7 +1805,7 @@ NULL
 #' 
 #' @name Cigar
 #' @docType data
-#' @format A data frame with 100 observations on the following 2 variables.
+#' @format A data frame with 100 observations on the following two variables.
 #' \describe{ 
 #' \item{tar}{amount of tar (measured in milligrams)}
 #' \item{brand}{a factor indicating cigarette brand with levels \code{brandA}, \code{brandB},
@@ -1833,7 +1833,7 @@ NULL
 #' 
 #' @name Citrus
 #' @docType data
-#' @format A data frame with 9 observations on the following 2 variables.
+#' @format A data frame with nine observations on the following two variables.
 #' \describe{ 
 #' \item{age}{age of children} 
 #' \item{percent}{percent peak bone density} 
@@ -1862,7 +1862,7 @@ NULL
 #' 
 #' @name Clean
 #' @docType data
-#' @format A data frame with 45 observations on the following 5 variables.
+#' @format A data frame with 45 observations on the following two variables.
 #' \describe{ 
 #' \item{clean}{residual contaminants} 
 #' \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -1889,7 +1889,7 @@ NULL
 #' 
 #' @name Coaxial
 #' @docType data
-#' @format A data frame with 45 observations on the following 2 variables.
+#' @format A data frame with 45 observations on the following two variables.
 #' \describe{ 
 #' \item{signal}{signal loss per 1000 feet} 
 #' \item{cable}{factor with three levels of coaxial cable \code{typeA}, 
@@ -1917,7 +1917,7 @@ NULL
 #' 
 #' @name Coffee
 #' @docType data
-#' @format A data frame with 9 observations on the following 2 variables.
+#' @format A data frame with 9 observations on the following two variables.
 #' \describe{ 
 #' \item{without}{workers' productivity scores without a coffee break} 
 #' \item{with}{workers' productivity scores with a coffee break} 
@@ -1976,18 +1976,18 @@ NULL
 #' 
 #' @name Commute
 #' @docType data
-#' @format A data frame with 39 observations on the following 3 variables.
+#' @format A data frame with 39 observations on the following three variables.
 #' \describe{ 
-#' \item{city}{a factor with levels \code{Atlanta}
-#' \code{Baltimore} \code{Boston} \code{Buffalo} \code{Charlotte}
-#' \code{Chicago} \code{Cincinnati} \code{Cleveland} \code{Columbus}
-#' \code{Dallas} \code{Denver} \code{Detroit} \code{Hartford} \code{Houston}
-#' \code{Indianapolis} \code{Kansas City} \code{Los Angeles} \code{Miami}
-#' \code{Milwaukee} \code{Minneapolis} \code{New Orleans} \code{New York}
-#' \code{Norfolk} \code{Orlando} \code{Philadelphia} \code{Phoenix}
-#' \code{Pittsburgh} \code{Portland} \code{Providence} \code{Rochester}
-#' \code{Sacramento} \code{Salt Lake City} \code{San Antonio} \code{San Diego}
-#' \code{San Francisco} \code{Seattle} \code{St. Louis} \code{Tampa}
+#' \item{city}{a factor with levels \code{Atlanta},
+#' \code{Baltimore}, \code{Boston}, \code{Buffalo}, \code{Charlotte},
+#' \code{Chicago}, \code{Cincinnati}, \code{Cleveland}, \code{Columbus},
+#' \code{Dallas}, \code{Denver}, \code{Detroit}, \code{Hartford}, \code{Houston},
+#' \code{Indianapolis}, \code{Kansas City}, \code{Los Angeles}, \code{Miami},
+#' \code{Milwaukee}, \code{Minneapolis}, \code{New Orleans}, \code{New York},
+#' \code{Norfolk}, \code{Orlando}, \code{Philadelphia}, \code{Phoenix},
+#' \code{Pittsburgh}, \code{Portland}, \code{Providence}, \code{Rochester},
+#' \code{Sacramento}, \code{Salt Lake City}, \code{San Antonio}, \code{San Diego},
+#' \code{San Francisco}, \code{Seattle}, \code{St. Louis}, \code{Tampa}, and
 #' \code{Washington}}
 #' \item{year1980}{urban commute times for the year 1980}
 #' \item{year1990}{urban commute times for the year 1990}
@@ -2056,7 +2056,7 @@ NULL
 #' 
 #' @name Concrete
 #' @docType data
-#' @format A data frame with 20 observations on the following 2 variables.
+#' @format A data frame with 20 observations on the following 2twovariables.
 #' \describe{ 
 #' \item{strength}{comprehensive strength (in pounds per square inch)} 
 #' \item{method}{factor with levels \code{new} and \code{old} indicating the 
@@ -2084,7 +2084,7 @@ NULL
 #' 
 #' @name Corn
 #' @docType data
-#' @format A data frame with 12 observations on the following 3 variables.
+#' @format A data frame with 12 observations on the following three variables.
 #' \describe{ 
 #' \item{plot}{number of plot} 
 #' \item{new}{corn yield with new meathod} 
@@ -2117,7 +2117,7 @@ NULL
 #' 
 #' @name Correlat
 #' @docType data
-#' @format A data frame with 13 observations on the following 2 variables.
+#' @format A data frame with 13 observations on the following two variables.
 #' \describe{ 
 #' \item{X}{a numeric vector} 
 #' \item{Y}{a numeric vector} 
@@ -2171,10 +2171,10 @@ NULL
 #' 
 #' @name Cpi
 #' @docType data
-#' @format A data frame with 20 observations on the following 2 variables.
+#' @format A data frame with 20 observations on the following two variables.
 #' \describe{ 
-#' \item{Year}{year} 
-#' \item{CPI}{consumer price index} 
+#' \item{year}{year} 
+#' \item{cpi}{consumer price index} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2182,8 +2182,8 @@ NULL
 #' @examples
 #' 
 #' str(Cpi)
-#' plot(CPI ~ Year, data = Cpi, type = "l", lty = 2, lwd = 2, col = "red")   
-#' barplot(Cpi$CPI, col = "pink", las = 2, main = "Problem 1.34")   
+#' plot(cpi ~ year, data = Cpi, type = "l", lty = 2, lwd = 2, col = "red")   
+#' barplot(Cpi$cpi, col = "pink", las = 2, main = "Problem 1.34")   
 #' 
 "Cpi"
 
@@ -2198,21 +2198,21 @@ NULL
 #' 
 #' @name Crime
 #' @docType data
-#' @format A data frame with 102 observations on the following 3 variables.
+#' @format A data frame with 102 observations on the following three variables.
 #' \describe{ 
-#' \item{state}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{DC} \code{Delaware} \code{Florida}
-#' \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
-#' \code{Iowa} \code{Kansas} \code{Kentucky} \code{Louisiana} \code{Maine}
-#' \code{Maryland} \code{Massachusetts} \code{Michigan} \code{Minnesota}
-#' \code{Mississippi} \code{Missour} \code{Montana} \code{Nebraska}
-#' \code{Nevada} \code{New Hampshire} \code{New Jersey} \code{New Mexico}
-#' \code{New York} \code{North Carolina} \code{North Dakota} \code{Ohio}
-#' \code{Oklahoma} \code{Oregon} \code{Pennsylvania} \code{Rhode Island}
-#' \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
-#' \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
-#' Virginia} \code{Wisconsin} \code{Wyoming}} 
+#' \item{state}{a factor with levels \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{DC}, \code{Delaware}, \code{Florida},
+#' \code{Georgia}, \code{Hawaii}, \code{Idaho}, \code{Illinois}, \code{Indiana},
+#' \code{Iowa}, \code{Kansas}, \code{Kentucky}, \code{Louisiana}, \code{Maine},
+#' \code{Maryland}, \code{Massachusetts}, \code{Michigan}, \code{Minnesota},
+#' \code{Mississippi}, \code{Missour}, \code{Montana}, \code{Nebraska},
+#' \code{Nevada}, \code{New Hampshire}, \code{New Jersey}, \code{New Mexico},
+#' \code{New York}, \code{North Carolina}, \code{North Dakota}, \code{Ohio},
+#' \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania}, \code{Rhode Island},
+#' \code{South Carolina}, \code{South Dakota}, \code{Tennessee}, \code{Texas},
+#' \code{Utah}, \code{Vermont}, \code{Virginia}, \code{Washington}, \code{West
+#' Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 #' \item{year}{a factor with levels \code{1983} and \code{1993}} 
 #' \item{rate}{crime rate per 100,000 inhabitants} 
 #' }
@@ -2237,7 +2237,7 @@ NULL
 #' 
 #' @name Darwin
 #' @docType data
-#' @format A data frame with 15 observations on the following 3 variables.
+#' @format A data frame with 15 observations on the following three variables.
 #' \describe{ 
 #' \item{pot}{number of pot} 
 #' \item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
@@ -2270,11 +2270,11 @@ NULL
 #' 
 #' @name Dealers
 #' @docType data
-#' @format A data frame with 122 observations on the following 2 variables.
+#' @format A data frame with 122 observations on the following two variables.
 #' \describe{ 
-#' \item{Type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
+#' \item{type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
 #' \code{Ford}, \code{Dodge}, and \code{Saturn}} 
-#' \item{Service}{a factor with levels \code{Replaces unnecessarily} and \code{Follows manufacturer guidelines}} 
+#' \item{service}{a factor with levels \code{Replaces unnecessarily} and \code{Follows manufacturer guidelines}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2282,8 +2282,8 @@ NULL
 #' @examples
 #' 
 #' str(Dealers)
-#' xtabs(~Type + Service, data = Dealers)
-#' T1 <- xtabs(~Type + Service, data = Dealers)
+#' xtabs(~type + service, data = Dealers)
+#' T1 <- xtabs(~type + service, data = Dealers)
 #' T1
 #' addmargins(T1)
 #' pt <- prop.table(T1, margin = 1)
@@ -2327,13 +2327,13 @@ NULL
 #' 
 #' @name Degree
 #' @docType data
-#' @format A data frame with 1064 observations on the following 2 variables.
+#' @format A data frame with 1064 observations on the following two variables.
 #' \describe{ 
-#' \item{Field}{a factor with levels \code{Health}
-#' \code{Education} \code{Foreign Language} \code{Psychology} \code{Fine Arts}
-#' \code{Life Sciences} \code{Business} \code{Social Science} \code{Physical Sciences}
-#' \code{Engineering} \code{All Fields}} 
-#' \item{Awarded}{a factor with levels \code{1970} and \code{1990}} 
+#' \item{field}{a factor with levels \code{Health},
+#' \code{Education}, \code{Foreign Language}, \code{Psychology}, \code{Fine Arts},
+#' \code{Life Sciences}, \code{Business}, \code{Social Science}, \code{Physical Sciences},
+#' \code{Engineering}, and \code{All Fields}} 
+#' \item{awarded}{a factor with levels \code{1970} and \code{1990}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2341,7 +2341,7 @@ NULL
 #' @examples
 #' 
 #' str(Degree)
-#' T1 <- xtabs(~Field + Awarded, data = Degree)
+#' T1 <- xtabs(~field + awarded, data = Degree)
 #' T1
 #' barplot(t(T1), beside = TRUE, col = c("red", "skyblue"), legend = colnames(T1))
 #' 
@@ -2358,7 +2358,7 @@ NULL
 #' 
 #' @name Delay
 #' @docType data
-#' @format A data frame with 80 observations on the following 2 variables.
+#' @format A data frame with 80 observations on the following two variables.
 #' \describe{ 
 #' \item{delay}{the delay time (in minutes) for 80 randomly selected flights}
 #' \item{carrier}{a factor with levels \code{A}, \code{B}, \code{C}, and \code{D}} 
@@ -2441,9 +2441,9 @@ NULL
 #' @docType data
 #' @format A data frame with 5656 observations on the following two variables.
 #' \describe{ 
-#' \item{Race}{a factor with levels \code{African American}, \code{American Indian},
+#' \item{race}{a factor with levels \code{African American}, \code{American Indian},
 #' \code{Asian}, \code{Latino}, and \code{White}} 
-#' \item{College}{a factor with levels \code{Two-year} and \code{Four-year}}
+#' \item{college}{a factor with levels \code{Two-year} and \code{Four-year}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2451,7 +2451,7 @@ NULL
 #' @examples
 #' 
 #' str(Develop)
-#' T1 <- xtabs(~Race + College, data = Develop)
+#' T1 <- xtabs(~race + college, data = Develop)
 #' T1
 #' chisq.test(T1)
 "Develop"
@@ -2494,7 +2494,7 @@ NULL
 #' 
 #' @name Dice
 #' @docType data
-#' @format A data frame with 11 observations on the following 2 variables.
+#' @format A data frame with 11 observations on the following two variables.
 #' \describe{ 
 #' \item{x}{possible outcomes for the sum of two dice} 
 #' \item{Px}{probability for outcome \code{x}} 
@@ -2525,11 +2525,11 @@ NULL
 #' 
 #' @name Diesel
 #' @docType data
-#' @format A data frame with 650 observations on the following 3 variables.
+#' @format A data frame with 650 observations on the following three variables.
 #' \describe{ 
-#' \item{Date}{date when price was recorded}
-#' \item{PricePerGallon}{price per gallon (in dollars)}
-#' \item{Location}{a factor with levels \code{California}, \code{CentralAtlantic},
+#' \item{date}{date when price was recorded}
+#' \item{pricepergallon}{price per gallon (in dollars)}
+#' \item{location}{a factor with levels \code{California}, \code{CentralAtlantic},
 #' \code{Coast}, \code{EastCoast}, \code{Gulf}, \code{LowerAtlantic}, \code{NatAvg},
 #' \code{NorthEast}, \code{Rocky}, and \code{WesternMountain}}
 #' }
@@ -2540,16 +2540,16 @@ NULL
 #' 
 #' str(Diesel)
 #' par(las = 2)
-#' boxplot(PricePerGallon ~ Location, data = Diesel)
-#' boxplot(PricePerGallon ~ Location, 
-#'          data = droplevels(Diesel[Diesel$Location == "EastCoast" | 
-#'          Diesel$Location == "Gulf" | Diesel$Location == "NatAvg" | 
-#'          Diesel$Location == "Rocky" | Diesel$Location == "California", ]), 
+#' boxplot(pricepergallon ~ location, data = Diesel)
+#' boxplot(pricepergallon ~ location, 
+#'          data = droplevels(Diesel[Diesel$location == "EastCoast" | 
+#'          Diesel$location == "Gulf" | Diesel$location == "NatAvg" | 
+#'          Diesel$location == "Rocky" | Diesel$location == "California", ]), 
 #'          col = "pink", main = "Exercise 2.8")
 #' par(las = 1) 
 #' \dontrun{
-#' ggplot2::ggplot(data = Diesel, aes(x = Date, y = PricePerGallon, 
-#'                color = Location)) + 
+#' ggplot2::ggplot(data = Diesel, aes(x = date, y = pricepergallon, 
+#'                color = location)) + 
 #'                geom_point() + 
 #'                geom_smooth(se = FALSE) + 
 #'                theme_bw() + 
@@ -2568,7 +2568,7 @@ NULL
 #' 
 #' @name Diplomat
 #' @docType data
-#' @format A data frame with 10 observations on the following 3 variables.
+#' @format A data frame with 10 observations on the following three variables.
 #' \describe{ 
 #' \item{country}{a factor with levels \code{Brazil}
 #' \code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
@@ -2642,7 +2642,7 @@ NULL
 #' 
 #' @name Dogs
 #' @docType data
-#' @format A data frame with 20 observations on the following 3 variables.
+#' @format A data frame with 20 observations on the following three variables.
 #' \describe{ 
 #' \item{breed}{a factor with levels \code{Beagle},
 #' \code{Boxer}, \code{Chihuahua}, \code{Chow}, \code{Dachshund}, 
@@ -2681,11 +2681,11 @@ NULL
 #' 
 #' @name Domestic
 #' @docType data
-#' @format A data frame with 5 observations on the following 2 variables.
+#' @format A data frame with 5 observations on the following two variables.
 #' \describe{ 
-#' \item{Age}{a factor with levels \code{12-19} \code{20-24}
-#' \code{25-34} \code{35-49} \code{50-64}} 
-#' \item{Rate}{a numeric vector} 
+#' \item{age}{a factor with levels \code{12-19}, \code{20-24},
+#' \code{25-34}, \code{35-49}, and \code{50-64}} 
+#' \item{rate}{rate of domestic violence per 1000 women} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2693,13 +2693,14 @@ NULL
 #' @examples
 #' 
 #' str(Domestic)
-#' attach(Domestic)
-#' names(Rate) <- Age
-#' barplot(Rate,col="gold")
-#' pie(Rate)
-#' detach(Domestic)
-#' 
-NULL
+#' barplot(Domestic$rate, names.arg = Domestic$age)
+#' \dontrun{
+#' ggplot2::ggplot(data = Domestic, aes(x = age, y = rate)) + 
+#'      geom_bar(stat = "identity", fill = "purple", color = "black") + 
+#'      labs(x = "", y = "Domestic violence per 1000 women") + 
+#'      theme_bw()
+#' }
+"Domestic"
 
 
 
@@ -2713,12 +2714,10 @@ NULL
 #' 
 #' @name Dopamine
 #' @docType data
-#' @format A data frame with 25 observations on the following 4 variables.
+#' @format A data frame with 25 observations on the following two variables.
 #' \describe{ 
-#' \item{nonpsych}{a numeric vector}
-#' \item{psychotic}{a numeric vector} 
-#' \item{DBH}{a numeric vector} 
-#' \item{group}{a numeric vector} 
+#' \item{dbh}{dopamine b-hydroxylase activity (units are nmol/(ml)(h)/(mg) of protein)} 
+#' \item{group}{a factor with levels \code{nonpsychotic} and \code{psychotic}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2726,12 +2725,10 @@ NULL
 #' @examples
 #' 
 #' str(Dopamine)
-#' attach(Dopamine)
-#' boxplot(DBH~group,names=c("Non Psychotic","Psychotic"))
-#' t.test(DBH~group,var.equal=TRUE)
-#' detach(Dopamine)
+#' boxplot(dbh ~ group, data = Dopamine)
+#' t.test(dbh ~ group, data = Dopamine, var.equal = TRUE)
 #' 
-NULL
+"Dopamine"
 
 
 
@@ -2746,9 +2743,9 @@ NULL
 #' @docType data
 #' @format A data frame with 105 observations on the following 3 variables.
 #' \describe{ 
-#' \item{year}{a numeric vector} 
-#' \item{close}{a numeric vector} 
-#' \item{X.change}{a numeric vector} 
+#' \item{year}{date} 
+#' \item{close}{Dow Jones closing price} 
+#' \item{change}{percent change from previous year} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2756,15 +2753,15 @@ NULL
 #' @examples
 #' 
 #' str(Dowjones)
-#' attach(Dowjones)  
-#' plot(year,close,type="l",lty=2,lwd=2,col="blue")     
-#' barplot(close,col="blue",las=2,main="Problem 1.35",names.arg=FALSE)      
-#' detach(Dowjones) 
-#' 
-NULL
-
-
-
+#' plot(close ~ year, data = Dowjones, type = "l", main = "Exercise 1.35")
+#' \dontrun{
+#' ggplot2::ggplot(data = Dowjones, aes(x = year, y = close)) +
+#' geom_point(size = 0.5) + 
+#' geom_line(color = "red") + 
+#' theme_bw() + 
+#' labs(y = "Dow Jones Closing Price")
+#' }
+"Dowjones"
 
 
 #' Opinion on referendum by view on moral issue of selling alcoholic beverages
@@ -2774,13 +2771,11 @@ NULL
 #' 
 #' @name Drink
 #' @docType data
-#' @format A data frame with 3 observations on the following 4 variables.
+#' @format A data frame with 472 observations on two variables.
 #' \describe{ 
-#' \item{drink}{a factor with levels \code{immoral}
-#' \code{ok} \code{tolerated}} 
-#' \item{For}{a numeric vector}
-#' \item{Against}{a numeric vector} 
-#' \item{undecide}{a numeric vector} 
+#' \item{drinking}{a factor with levels \code{ok},
+#' \code{tolerated}, and \code{immoral}} 
+#' \item{referendum}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2788,12 +2783,11 @@ NULL
 #' @examples
 #' 
 #' str(Drink)
-#' attach(Drink)
-#' Drink
-#' chisq.test(Drink[,2:4])
-#' detach(Drink)
+#' T1 <- xtabs(~drinking + referendum, data = Drink)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Drink"
 
 
 
@@ -2807,10 +2801,10 @@ NULL
 #' 
 #' @name Drug
 #' @docType data
-#' @format A data frame with 28 observations on the following 2 variables.
+#' @format A data frame with 28 observations on the following two variables.
 #' \describe{ 
-#' \item{trials}{a numeric vector} 
-#' \item{group}{a numeric vector} 
+#' \item{trials}{number of trials to master a task} 
+#' \item{group}{a factor with levels \code{control} and \code{experimental}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2818,12 +2812,11 @@ NULL
 #' @examples
 #' 
 #' str(Drug)
-#' attach(Drug)
-#' boxplot(trials~group)
-#' wilcox.test(trials~group)
-#' detach(Drug)
+#' boxplot(trials ~ group, data = Drug)
+#' wilcox.test(trials ~ group, data = Drug)
+#' t.test(rank(trials) ~ group, data = Drug, var.equal = TRUE)
 #' 
-NULL
+"Drug"
 
 
 
@@ -2836,16 +2829,16 @@ NULL
 #' 
 #' @name Dyslexia
 #' @docType data
-#' @format A data frame with 8 observations on the following 7 variables.
+#' @format A data frame with 8 observations on the following seven variables.
 #' \describe{ 
-#' \item{words}{a numeric vector} 
-#' \item{age}{a numeric vector} 
-#' \item{gender}{a factor with levels \code{f}
-#' \code{m}} 
-#' \item{handed}{a factor with levels \code{l} \code{r}}
-#' \item{weight}{a numeric vector} 
-#' \item{height}{a numeric vector} 
-#' \item{children}{a numeric vector} 
+#' \item{words}{number of words read per minute} 
+#' \item{age}{age of participant} 
+#' \item{gender}{a factor with levels \code{female} and 
+#' \code{male}} 
+#' \item{handed}{a factor with levels \code{left} and \code{right}}
+#' \item{weight}{weight of participant (in pounds)} 
+#' \item{height}{height of participant (in inches)} 
+#' \item{children}{number of children in family} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2853,12 +2846,10 @@ NULL
 #' @examples
 #' 
 #' str(Dyslexia)
-#' attach(Dyslexia)
-#' plot(weight,height)
-#' plot(handed,words)
-#' detach(Dyslexia)
+#' plot(height ~ weight, data = Dyslexia)
+#' plot(words ~ handed, data = Dyslexia)
 #' 
-NULL
+"Dyslexia"
 
 
 
