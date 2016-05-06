@@ -2862,10 +2862,10 @@ NULL
 #' 
 #' @name Earthqk
 #' @docType data
-#' @format A data frame with 100 observations on the following 2 variables.
+#' @format A data frame with 100 observations on the following two variables.
 #' \describe{ 
-#' \item{year}{a numeric vector} 
-#' \item{severity}{a numeric vector} 
+#' \item{year}{year seimic activity recorded} 
+#' \item{severity}{annual incidence of sever earthquakes} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2873,12 +2873,10 @@ NULL
 #' @examples
 #' 
 #' str(Earthqk)
-#' attach(Earthqk)
-#' EDA(severity)
-#' t.test(severity,mu=100,alternative="greater")
-#' detach(Earthqk)
+#' EDA(Earthqk$severity)
+#' t.test(Earthqk$severity, mu = 100, alternative = "greater")
 #' 
-NULL
+"Earthqk"
 
 
 
@@ -2892,23 +2890,23 @@ NULL
 #' 
 #' @name Educat
 #' @docType data
-#' @format A data frame with 51 observations on the following 3 variables.
+#' @format A data frame with 51 observations on the following three variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{DC} \code{Delaware} \code{Florida}
-#' \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
-#' \code{Iowa} \code{Kansas} \code{Kentucky} \code{Louisiana} \code{Maine}
-#' \code{Maryland} \code{Massachusetts} \code{Michigan} \code{Minnesota}
-#' \code{Mississippi} \code{Missour} \code{Montana} \code{Nebraska}
-#' \code{Nevada} \code{New Hampshire} \code{New Jersey} \code{New Mexico}
-#' \code{New York} \code{North Carolina} \code{North Dakota} \code{Ohio}
-#' \code{Oklahoma} \code{Oregon} \code{Pennsylvania} \code{Rhode Island}
-#' \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
-#' \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
-#' Virginia} \code{Wisconsin} \code{Wyoming}} 
-#' \item{nodegree}{a numeric vector} 
-#' \item{crime}{a numeric vector} 
+#' \item{state}{a factor with levels \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{DC}, \code{Delaware}, \code{Florida},
+#' \code{Georgia}, \code{Hawaii}, \code{Idaho}, \code{Illinois}, \code{Indiana},
+#' \code{Iowa}, \code{Kansas}, \code{Kentucky}, \code{Louisiana}, \code{Maine},
+#' \code{Maryland}, \code{Massachusetts}, \code{Michigan}, \code{Minnesota},
+#' \code{Mississippi}, \code{Missour}, \code{Montana}, \code{Nebraska},
+#' \code{Nevada}, \code{New Hampshire}, \code{New Jersey}, \code{New Mexico},
+#' \code{New York}, \code{North Carolina}, \code{North Dakota}, \code{Ohio},
+#' \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania}, \code{Rhode Island},
+#' \code{South Carolina}, \code{South Dakota}, \code{Tennessee}, \code{Texas},
+#' \code{Utah}, \code{Vermont}, \code{Virginia}, \code{Washington}, \code{West
+#' Virginia}, \code{Wisconsin}, and \code{Wyoming}} 
+#' \item{nodegree}{percent of the population without a high school degree} 
+#' \item{crime}{violent crimes per 100,000 population} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2916,11 +2914,11 @@ NULL
 #' @examples
 #' 
 #' str(Educat)
-#' attach(Educat)
-#' plot(nodegree,crime,xlab="No Crime",ylab="Violent Crime Rate per 100,000")
-#' detach(Educat)
+#' plot(crime ~ nodegree, data = Educat, 
+#'      xlab = "Percent of population without high school degree",
+#'      ylab = "Violent Crime Rate per 100,000")
 #' 
-NULL
+"Educat"
 
 
 
@@ -2933,15 +2931,10 @@ NULL
 #' 
 #' @name Eggs
 #' @docType data
-#' @format A data frame with 12 observations on the following 7 variables.
+#' @format A data frame with 12 observations on the following two variables.
 #' \describe{ 
-#' \item{feed}{a numeric vector} 
-#' \item{eggs}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
-#' \item{c1sq}{a numeric vector}
-#' \item{SRES2}{a numeric vector} 
-#' \item{FITS2}{a numeric vector} 
+#' \item{feed}{amount of feed supplement} 
+#' \item{eggs}{number of eggs per day for 100 chickens} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2949,15 +2942,13 @@ NULL
 #' @examples
 #' 
 #' str(Eggs)
-#' attach(Eggs)
-#' plot(feed,eggs)
-#' model <- lm(eggs~feed)
+#' plot(eggs ~ feed, data = Eggs)
+#' model <- lm(eggs ~ feed, data = Eggs)
 #' abline(model)
 #' summary(model)
-#' detach(Eggs)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Eggs"
 
 
 
@@ -2970,23 +2961,23 @@ NULL
 #' 
 #' @name Elderly
 #' @docType data
-#' @format A data frame with 51 observations on the following 3 variables.
+#' @format A data frame with 51 observations on the following three variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
-#' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
-#' \code{Illinois} \code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky}
-#' \code{Louisiana} \code{Maine} \code{Maryland} \code{Massachusetts}
-#' \code{Michigan} \code{Minnesota} \code{Mississippi} \code{Missour}
-#' \code{Montana} \code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New
-#' Jersey} \code{New Mexico} \code{New York} \code{North Carolina} \code{North
-#' Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
-#' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
-#' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
-#' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-#' \item{X85percent}{a numeric vector} 
-#' \item{X98percent}{a numeric vector} 
+#' \item{state}{a factor with levels \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{Delaware}, \code{District of
+#' Colunbia}, \code{Florida}, \code{Georgia}, \code{Hawaii}, \code{Idaho},
+#' \code{Illinois}, \code{Indiana}, \code{Iowa}, \code{Kansas}, \code{Kentucky},
+#' \code{Louisiana}, \code{Maine}, \code{Maryland}, \code{Massachusetts},
+#' \code{Michigan}, \code{Minnesota}, \code{Mississippi}, \code{Missour},
+#' \code{Montana}, \code{Nebraska}, \code{Nevada}, \code{New Hampshire}, \code{New
+#' Jersey}, \code{New Mexico}, \code{New York}, \code{North Carolina}, \code{North
+#' Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
+#' \code{Rhode Island}, \code{South Carolina}, \code{South Dakota},
+#' \code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia},
+#' \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
+#' \item{percent1985}{percent of the population over the age of 65 in 1985} 
+#' \item{percent1998}{percent of the population over the age of 65 in 1998} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -2994,13 +2985,16 @@ NULL
 #' @examples
 #' 
 #' str(Elderly)
-#' attach(Elderly)
-#' stripchart(x=list(X98percent,X85percent),method="stack",pch=19,
-#' col=c("red","blue"),group.names=c("1998","1985"))
-#' cor(X98percent,X85percent)
-#' detach(Elderly)
-#' 
-NULL
+#' with(data = Elderly, 
+#' stripchart(x = list(percent1998, percent1985), method = "stack", pch = 19,
+#'            col = c("red","blue"), group.names = c("1998", "1985"))
+#'            )
+#' with(data = Elderly, cor(percent1998, percent1985))
+#' \dontrun{
+#' ggplot2::ggplot(data = Elderly, aes(x = percent1985, y = percent1998)) +
+#'                geom_point() + theme_bw()
+#' }
+"Elderly"
 
 
 
@@ -3013,13 +3007,10 @@ NULL
 #' 
 #' @name Energy
 #' @docType data
-#' @format A data frame with 12 observations on the following 5 variables.
+#' @format A data frame with 12 observations on the following two variables.
 #' \describe{ 
-#' \item{Size}{a numeric vector} 
-#' \item{kilowatt}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
-#' \item{Residuals}{a numeric vector} 
+#' \item{size}{size of home (in square feet)} 
+#' \item{kilowatt}{killowatt-hours per month} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -3027,17 +3018,12 @@ NULL
 #' @examples
 #' 
 #' str(Energy)
-#' attach(Energy)
-#' plot(Size,kilowatt)
-#' cor(Size,kilowatt)
-#' model <- lm(kilowatt~Size)
-#' plot(Size,resid(model))
-#' detach(Energy)
+#' plot(kilowatt ~ size, data = Energy)
+#' with(data = Energy, cor(size, kilowatt))
+#' model <- lm(kilowatt ~ size, data = Energy)
+#' plot(Energy$size, resid(model))
 #' 
-NULL
-
-
-
+"Energy"
 
 
 #' Salaries after 10 years for graduates of three different universities
@@ -3047,14 +3033,10 @@ NULL
 #' 
 #' @name Engineer
 #' @docType data
-#' @format A data frame with 51 observations on the following 6 variables.
+#' @format A data frame with 51 observations on the following two variables.
 #' \describe{ 
-#' \item{UnivA}{a numeric vector} 
-#' \item{UnivB}{a numeric vector} 
-#' \item{UnivC}{a numeric vector}
-#' \item{salary}{a numeric vector} 
-#' \item{university}{a numeric vector} 
-#' \item{ranks}{a numeric vector} 
+#' \item{salary}{salary (in $1000) 10 years after graduation} 
+#' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -3062,12 +3044,12 @@ NULL
 #' @examples
 #' 
 #' str(Engineer)
-#' attach(Engineer)
-#' boxplot(salary~university)
-#' kruskal.test(salary~as.factor(university))
-#' detach(Engineer)
+#' boxplot(salary ~ university, data = Engineer)
+#' kruskal.test(salary ~ university, data = Engineer)
+#' anova(lm(salary ~ university, data = Engineer))
+#' anova(lm(rank(salary) ~ university, data = Engineer))
 #' 
-NULL
+"Engineer"
 
 
 
@@ -3082,7 +3064,7 @@ NULL
 #' @docType data
 #' @format A data frame with 24 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{college entrance exam score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -3090,11 +3072,10 @@ NULL
 #' @examples
 #' 
 #' str(Entrance)
-#' attach(Entrance)
-#' stem(score)
-#' detach(Entrance)
+#' stem(Entrance$score)
+#' stem(Entrance$score, scale = 2)
 #' 
-NULL
+"Entrance"
 
 
 

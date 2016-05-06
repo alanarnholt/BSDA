@@ -690,3 +690,32 @@ devtools::use_data(Dyslexia, overwrite = TRUE)
 # Examples
 #
 ggplot2::ggplot(data = Dyslexia, aes(x = height, y = words, color = handed)) + geom_point()
+#
+# Earthqk
+Earthqk <- read.csv("Earthqk.csv")
+str(Earthqk)
+devtools::use_data(Earthqk, overwrite = TRUE)
+# Educat
+Educat <- read.csv("Educat.csv")
+str(Educat)
+devtools::use_data(Educat, overwrite = TRUE)
+# Eggs
+Eggs <- read.csv("Eggs.csv")
+str(Eggs)
+devtools::use_data(Eggs, overwrite = TRUE)
+# Elderly
+Elderly <- read.csv("Elderly.csv")
+str(Elderly)
+devtools::use_data(Elderly, overwrite = TRUE)
+# Energy
+Energy <- read.csv("Energy.csv")
+str(Energy)
+devtools::use_data(Energy, overwrite = TRUE)
+# Engineer
+Engineer <- read.csv("Engineer.csv")
+str(Engineer)
+devtools::use_data(Engineer, overwrite = TRUE)
+# Entrance
+Entrance <- read.csv("Entrance.csv")
+str(Entrance)
+devtools::use_data(Entrance, overwrite = TRUE)

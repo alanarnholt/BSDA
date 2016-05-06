@@ -4,26 +4,24 @@
 \name{Energy}
 \alias{Energy}
 \title{Amount of energy consumed by homes versus their sizes}
-\format{A data frame with 12 observations on the following 5 variables.
+\format{A data frame with 12 observations on the following two variables.
 \describe{ 
-\item{Size}{a numeric vector} 
-\item{kilowatt}{a numeric vector} 
-\item{SRES1}{a numeric vector}
-\item{FITS1}{a numeric vector} 
-\item{Residuals}{a numeric vector} 
+\item{size}{size of home (in square feet)} 
+\item{kilowatt}{killowatt-hours per month} 
 }}
+\usage{
+Energy
+}
 \description{
 Data for Exercises 2.5, 2.24, and 2.55
 }
 \examples{
 
 str(Energy)
-attach(Energy)
-plot(Size,kilowatt)
-cor(Size,kilowatt)
-model <- lm(kilowatt~Size)
-plot(Size,resid(model))
-detach(Energy)
+plot(kilowatt ~ size, data = Energy)
+with(data = Energy, cor(size, kilowatt))
+model <- lm(kilowatt ~ size, data = Energy)
+plot(Energy$size, resid(model))
 
 }
 \references{

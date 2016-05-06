@@ -5,33 +5,36 @@
 \alias{Educat}
 \title{Crime rates versus the percent of the population without a high school
 degree}
-\format{A data frame with 51 observations on the following 3 variables.
+\format{A data frame with 51 observations on the following three variables.
 \describe{ 
-\item{State}{a factor with levels \code{Alabama}
-\code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-\code{Colorado} \code{Connecticut} \code{DC} \code{Delaware} \code{Florida}
-\code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
-\code{Iowa} \code{Kansas} \code{Kentucky} \code{Louisiana} \code{Maine}
-\code{Maryland} \code{Massachusetts} \code{Michigan} \code{Minnesota}
-\code{Mississippi} \code{Missour} \code{Montana} \code{Nebraska}
-\code{Nevada} \code{New Hampshire} \code{New Jersey} \code{New Mexico}
-\code{New York} \code{North Carolina} \code{North Dakota} \code{Ohio}
-\code{Oklahoma} \code{Oregon} \code{Pennsylvania} \code{Rhode Island}
-\code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
-\code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
-Virginia} \code{Wisconsin} \code{Wyoming}} 
-\item{nodegree}{a numeric vector} 
-\item{crime}{a numeric vector} 
+\item{state}{a factor with levels \code{Alabama},
+\code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+\code{Colorado}, \code{Connecticut}, \code{DC}, \code{Delaware}, \code{Florida},
+\code{Georgia}, \code{Hawaii}, \code{Idaho}, \code{Illinois}, \code{Indiana},
+\code{Iowa}, \code{Kansas}, \code{Kentucky}, \code{Louisiana}, \code{Maine},
+\code{Maryland}, \code{Massachusetts}, \code{Michigan}, \code{Minnesota},
+\code{Mississippi}, \code{Missour}, \code{Montana}, \code{Nebraska},
+\code{Nevada}, \code{New Hampshire}, \code{New Jersey}, \code{New Mexico},
+\code{New York}, \code{North Carolina}, \code{North Dakota}, \code{Ohio},
+\code{Oklahoma}, \code{Oregon}, \code{Pennsylvania}, \code{Rhode Island},
+\code{South Carolina}, \code{South Dakota}, \code{Tennessee}, \code{Texas},
+\code{Utah}, \code{Vermont}, \code{Virginia}, \code{Washington}, \code{West
+Virginia}, \code{Wisconsin}, and \code{Wyoming}} 
+\item{nodegree}{percent of the population without a high school degree} 
+\item{crime}{violent crimes per 100,000 population} 
 }}
+\usage{
+Educat
+}
 \description{
 Data for Exercise 2.41
 }
 \examples{
 
 str(Educat)
-attach(Educat)
-plot(nodegree,crime,xlab="No Crime",ylab="Violent Crime Rate per 100,000")
-detach(Educat)
+plot(crime ~ nodegree, data = Educat, 
+     xlab = "Percent of population without high school degree",
+     ylab = "Violent Crime Rate per 100,000")
 
 }
 \references{

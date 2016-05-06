@@ -6,17 +6,19 @@
 \title{College entrance exam scores for 24 high school seniors}
 \format{A data frame with 24 observations on the following variable.
 \describe{ 
-\item{score}{a numeric vector} 
+\item{score}{college entrance exam score} 
 }}
+\usage{
+Entrance
+}
 \description{
 Data for Example 1.8
 }
 \examples{
 
 str(Entrance)
-attach(Entrance)
-stem(score)
-detach(Entrance)
+stem(Entrance$score)
+stem(Entrance$score, scale = 2)
 
 }
 \references{

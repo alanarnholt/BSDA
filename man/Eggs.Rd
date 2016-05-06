@@ -4,29 +4,25 @@
 \name{Eggs}
 \alias{Eggs}
 \title{Number of eggs versus amounts of feed supplement}
-\format{A data frame with 12 observations on the following 7 variables.
+\format{A data frame with 12 observations on the following two variables.
 \describe{ 
-\item{feed}{a numeric vector} 
-\item{eggs}{a numeric vector} 
-\item{SRES1}{a numeric vector}
-\item{FITS1}{a numeric vector} 
-\item{c1sq}{a numeric vector}
-\item{SRES2}{a numeric vector} 
-\item{FITS2}{a numeric vector} 
+\item{feed}{amount of feed supplement} 
+\item{eggs}{number of eggs per day for 100 chickens} 
 }}
+\usage{
+Eggs
+}
 \description{
 Data for Exercise 9.22
 }
 \examples{
 
 str(Eggs)
-attach(Eggs)
-plot(feed,eggs)
-model <- lm(eggs~feed)
+plot(eggs ~ feed, data = Eggs)
+model <- lm(eggs ~ feed, data = Eggs)
 abline(model)
 summary(model)
-detach(Eggs)
-remove(model)
+rm(model)
 
 }
 \references{
