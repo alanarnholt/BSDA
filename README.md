@@ -6,6 +6,7 @@ BSDA
 [![Travis-CI Build Status](https://travis-ci.org/alanarnholt/BSDA.svg?branch=master)](https://travis-ci.org/alanarnholt/BSDA)
 [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/BSDA)](http://cran.rstudio.com/package=BSDA)
 
+
 ### Alan T. Arnholt
 
 **BSDA**: Functions and data sets for the text *Basic Statistics and Data Analysis*
