@@ -100,9 +100,11 @@ Duxbury</p>
 <span class='fu'>str</span>(<span class='no'>Poison</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	6 obs. of  2 variables:
 #&gt;  $ Type  : Factor w/ 6 levels &quot;Alcohol&quot;,&quot;Cleaning agent&quot;,..: 4 2 6 3 5 1
 #&gt;  $ number: int  150857 22347 22326 13192 8438 9201
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Poison</span>)
-<span class='fu'>names</span>(<span class='no'>number</span>) <span class='kw'>&lt;-</span> <span class='no'>Type</span>
-<span class='fu'>barplot</span>(<span class='no'>number</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>)</div><img src='Poison-4.png' alt='' width='540' height='400' /><div class='input'>
+#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Poison</span>)</div><div class='output'><strong class='text-info'>The following objects are masked from Poison (pos = 6):
+
+    number, Type
+</strong></div><div class='input'><span class='fu'>names</span>(<span class='no'>number</span>) <span class='kw'>&lt;-</span> <span class='no'>Type</span>
+<span class='fu'>barplot</span>(<span class='no'>number</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>)</div><img src='Poison-6.png' alt='' width='540' height='400' /><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3">
