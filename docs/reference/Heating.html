@@ -106,16 +106,8 @@ Duxbury</p>
 #&gt;  $ Rating: int  75 71 74 86 77 84 76 75 57 96 ...
 #&gt;  $ Type  : int  1 1 1 1 1 1 1 1 1 1 ...
 #&gt;  $ Ranks : num  20 12 17 27 24 26 22.5 20 3 30 ...
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Heating</span>)</div><div class='output'><strong class='text-info'>The following object is masked from Poison (pos = 5):
-
-    Type
-</strong></div><div class='output'><strong class='text-info'>The following object is masked from Poison (pos = 7):
-
-    Type
-</strong></div><div class='output'><strong class='text-info'>The following object is masked from Poison (pos = 10):
-
-    Type
-</strong></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Rating</span>~<span class='no'>Type</span>)</div><img src='Heating-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>Rating</span>~<span class='fu'>as.factor</span>(<span class='no'>Type</span>))</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Heating</span>)
+<span class='fu'>boxplot</span>(<span class='no'>Rating</span>~<span class='no'>Type</span>)</div><img src='Heating-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>Rating</span>~<span class='fu'>as.factor</span>(<span class='no'>Type</span>))</div><div class='output co'>#&gt; 
 #&gt; 	Kruskal-Wallis rank sum test
 #&gt; 
 #&gt; data:  Rating by as.factor(Type)

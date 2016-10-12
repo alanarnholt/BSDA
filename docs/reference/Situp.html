@@ -96,16 +96,7 @@ Duxbury</p>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Situp</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	20 obs. of  1 variable:
 #&gt;  $ number: int  24 31 54 62 36 28 37 55 18 27 ...
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Situp</span>)</div><div class='output'><strong class='text-info'>The following object is masked from Poison (pos = 3):
-
-    number
-</strong></div><div class='output'><strong class='text-info'>The following object is masked from Poison (pos = 6):
-
-    number
-</strong></div><div class='output'><strong class='text-info'>The following object is masked from Poison (pos = 8):
-
-    number
-</strong></div><div class='output'><strong class='text-info'>The following object is masked from Poison (pos = 11):
+#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Situp</span>)</div><div class='output'><strong class='text-info'>The following object is masked from Poison:
 
     number
 </strong></div><div class='input'><span class='fu'>stem</span>(<span class='no'>number</span>)</div><div class='output co'>#&gt; 
@@ -118,8 +109,8 @@ Duxbury</p>
 #&gt;   5 | 45568
 #&gt;   6 | 2
 #&gt; 
-#&gt; </div><div class='input'><span class='fu'>hist</span>(<span class='no'>number</span>,<span class='kw'>breaks</span><span class='kw'>=</span><span class='fu'>seq</span>(<span class='fl'>0</span>,<span class='fl'>70</span>,<span class='fl'>10</span>))</div><img src='Situp-11.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>hist</span>(<span class='no'>number</span>,<span class='kw'>breaks</span><span class='kw'>=</span><span class='fu'>seq</span>(<span class='fl'>0</span>,<span class='fl'>70</span>,<span class='fl'>10</span>),<span class='kw'>right</span><span class='kw'>=</span><span class='fl'>FALSE</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"blue"</span>,<span class='kw'>prob</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Problems 1.46 &amp; 1.47"</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>number</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>,<span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>3</span>)</div><img src='Situp-14.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Situp</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>hist</span>(<span class='no'>number</span>,<span class='kw'>breaks</span><span class='kw'>=</span><span class='fu'>seq</span>(<span class='fl'>0</span>,<span class='fl'>70</span>,<span class='fl'>10</span>))</div><img src='Situp-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>hist</span>(<span class='no'>number</span>,<span class='kw'>breaks</span><span class='kw'>=</span><span class='fu'>seq</span>(<span class='fl'>0</span>,<span class='fl'>70</span>,<span class='fl'>10</span>),<span class='kw'>right</span><span class='kw'>=</span><span class='fl'>FALSE</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"blue"</span>,<span class='kw'>prob</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
+<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Problems 1.46 &amp; 1.47"</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>number</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>,<span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>3</span>)</div><img src='Situp-11.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Situp</span>)</div></pre>
   </div>
   <div class="col-md-3">
   </div>
