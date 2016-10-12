@@ -4,6 +4,7 @@
 \name{Commute}
 \alias{Commute}
 \title{Commuting times for selected cities in 1980 and 1990}
+<<<<<<< HEAD
 \format{A data frame with 39 observations on the following 3 variables.
 \describe{ 
 \item{City}{a factor with levels \code{Atlanta}
@@ -16,19 +17,33 @@
 \code{Pittsburgh} \code{Portland} \code{Providence} \code{Rochester}
 \code{Sacramento} \code{Salt Lake City} \code{San Antonio} \code{San Diego}
 \code{San Francisco} \code{Seattle} \code{St. Louis} \code{Tampa}
+=======
+\format{A data frame with 39 observations on the following three variables.
+\describe{ 
+\item{city}{a factor with levels \code{Atlanta},
+\code{Baltimore}, \code{Boston}, \code{Buffalo}, \code{Charlotte},
+\code{Chicago}, \code{Cincinnati}, \code{Cleveland}, \code{Columbus},
+\code{Dallas}, \code{Denver}, \code{Detroit}, \code{Hartford}, \code{Houston},
+\code{Indianapolis}, \code{Kansas City}, \code{Los Angeles}, \code{Miami},
+\code{Milwaukee}, \code{Minneapolis}, \code{New Orleans}, \code{New York},
+\code{Norfolk}, \code{Orlando}, \code{Philadelphia}, \code{Phoenix},
+\code{Pittsburgh}, \code{Portland}, \code{Providence}, \code{Rochester},
+\code{Sacramento}, \code{Salt Lake City}, \code{San Antonio}, \code{San Diego},
+\code{San Francisco}, \code{Seattle}, \code{St. Louis}, \code{Tampa}, and
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 \code{Washington}}
-\item{X1980}{a numeric vector}
-\item{X1990}{a numeric vector}
+\item{year1980}{urban commute times for the year 1980}
+\item{year1990}{urban commute times for the year 1990}
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Commute
 }
 \description{
 Data for Exercises 1.13, and 7.85
 }
 \examples{
 
+<<<<<<< HEAD
 str(Commute)
 attach(Commute)
 stripchart(x=list(X1980,X1990),method="stack",pch=1,cex=2,col=c("red","blue"),
@@ -45,6 +60,26 @@ bwplot(ind~values)
 remove(commute)
 detach(Commute)
 
+=======
+commute <- stack(Commute)
+str(commute)
+stripplot(ind ~ values, data = commute, jitter = TRUE)
+dotplot(ind ~ values, data = commute)
+bwplot(ind ~ values, data = commute)
+stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
+          col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
+          xlab = "minutes")
+title(main = "Commute Time")
+boxplot(values ~ ind, data = commute, names=c("1980", "1990"), 
+       horizontal = TRUE, las = 1)
+rm(commute)
+
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -5,22 +5,29 @@
 \alias{Apolipop}
 \title{Level of apolipoprotein B and number of cups of coffee consumed per day for
 15 adult males}
+<<<<<<< HEAD
 \format{A data frame with 15 observations on the following 4 variables.
 \describe{ 
 \item{coffee}{a numeric vector} 
 \item{apolipB}{a numeric vector} 
 \item{SRES1}{a numeric vector}
 \item{FITS1}{a numeric vector} 
+=======
+\format{A data frame with 15 observations on the following two variables.
+\describe{ 
+\item{coffee}{number of cups of coffee per day} 
+\item{apolipB}{level of apoliprotein B} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Apolipop
 }
 \description{
 Data used in Examples 9.2 and 9.9
 }
 \examples{
 
+<<<<<<< HEAD
 attach(Apolipop)
 str(Apolipop)
 plot(coffee,apolipB)
@@ -29,6 +36,22 @@ summary(linmod)
 # plot(linmod)
 detach(Apolipop)
 
+=======
+plot(apolipB ~ coffee, data = Apolipop)
+linmod <- lm(apolipB ~ coffee, data = Apolipop)
+summary(linmod)
+summary(linmod)$sigma
+anova(linmod)
+anova(linmod)[2, 3]^.5
+par(mfrow = c(2, 2))
+plot(linmod)
+par(mfrow = c(1, 1))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

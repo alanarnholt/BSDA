@@ -6,11 +6,14 @@
 \title{Yearly returns on 12 investments}
 \format{A data frame with 12 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{coins}{a numeric vector} 
+=======
+\item{return}{yearly returns on each of 12 possible investments} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Coins
 }
 \description{
 Data for Exercise 5.68
@@ -18,12 +21,22 @@ Data for Exercise 5.68
 \examples{
 
 str(Coins)
+<<<<<<< HEAD
 attach(Coins)
 qqnorm(coins)
 qqline(coins)
 EDA(coins)
 detach(Coins)
 
+=======
+qqnorm(Coins$return)
+qqline(Coins$return)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

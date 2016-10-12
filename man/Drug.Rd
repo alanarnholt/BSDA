@@ -5,14 +5,20 @@
 \alias{Drug}
 \title{Number of trials to master a task for a group of 28 subjects assigned to a
 control and an experimental group}
+<<<<<<< HEAD
 \format{A data frame with 28 observations on the following 2 variables.
 \describe{ 
 \item{trials}{a numeric vector} 
 \item{group}{a numeric vector} 
+=======
+\format{A data frame with 28 observations on the following two variables.
+\describe{ 
+\item{trials}{number of trials to master a task} 
+\item{group}{a factor with levels \code{control} and \code{experimental}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Drug
 }
 \description{
 Data for Exercise 7.15
@@ -20,11 +26,22 @@ Data for Exercise 7.15
 \examples{
 
 str(Drug)
+<<<<<<< HEAD
 attach(Drug)
 boxplot(trials~group)
 wilcox.test(trials~group)
 detach(Drug)
 
+=======
+boxplot(trials ~ group, data = Drug)
+wilcox.test(trials ~ group, data = Drug)
+t.test(rank(trials) ~ group, data = Drug, var.equal = TRUE)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

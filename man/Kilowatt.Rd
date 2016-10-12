@@ -21,10 +21,6 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 \item{rate}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 5.9
 }
@@ -35,6 +31,13 @@ attach(Kilowatt)
 EDA(rate)
 detach(Kilowatt)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

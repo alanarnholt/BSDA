@@ -6,11 +6,14 @@
 \title{Educational levels of a sample of 40 auto workers in Detroit}
 \format{A data frame with 40 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{educ}{a numeric vector} 
+=======
+\item{educ}{the educational level (in years) of a sample of 40 auto workers in a plant in Detroit} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Detroit
 }
 \description{
 Data for Exercise 5.21
@@ -18,10 +21,19 @@ Data for Exercise 5.21
 \examples{
 
 str(Detroit)
+<<<<<<< HEAD
 attach(Detroit)
 EDA(educ)
 detach(Detroit)
 
+=======
+EDA(Detroit$educ)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

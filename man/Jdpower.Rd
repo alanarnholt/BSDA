@@ -16,10 +16,6 @@
 \item{X1994}{a numeric vector} 
 \item{X1995}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.14, 2.17, 2.31, 2.33, and 2.40
 }
@@ -34,6 +30,13 @@ model
 cor(X1995,X1994)
 detach(Jdpower)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

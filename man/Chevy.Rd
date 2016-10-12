@@ -4,6 +4,7 @@
 \name{Chevy}
 \alias{Chevy}
 \title{Insurance injury ratings of Chevrolet vehicles for 1990 and 1993 models}
+<<<<<<< HEAD
 \format{A data frame with 2 observations on the following 6 variables.
 \describe{ 
 \item{year}{a factor with levels \code{88-90}
@@ -13,10 +14,17 @@
 \item{C}{a numeric vector} 
 \item{D}{a numeric vector} 
 \item{F}{a numeric vector} 
+=======
+\format{A data frame with 67 observations on two variables.
+\describe{ 
+\item{year}{a factor with levels \code{1988-90} and
+\code{1991-93}} 
+\item{frequency}{a factor with levels \code{much better than average}, \code{above average},
+\code{average}, \code{below average}, and \code{much worse than average}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Chevy
 }
 \description{
 Data for Exercise 8.35
@@ -24,11 +32,22 @@ Data for Exercise 8.35
 \examples{
 
 str(Chevy)
+<<<<<<< HEAD
 attach(Chevy)
 Chevy
 chisq.test(Chevy[,2:6])
 detach(Chevy)
 
+=======
+T1 <- xtabs(~year + frequency, data = Chevy)
+T1
+chisq.test(T1)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

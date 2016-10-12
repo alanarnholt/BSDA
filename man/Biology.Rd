@@ -6,23 +6,37 @@
 \title{Test scores on first exam in biology class}
 \format{A data frame with 30 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{score}{a numeric vector} 
+=======
+\item{score}{test scores on the first test in a beginning biology class} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Biology
 }
 \description{
 Data for Exercise 1.49
 }
 \examples{
 
+<<<<<<< HEAD
 str(Biology)
 attach(Biology)
 hist(score,breaks="scott",col="brown",prob=TRUE,main="Problem 1.49")
 lines(density(score),lwd=3)
 detach(Biology)
 
+=======
+hist(Biology$score, breaks = "scott", col = "brown", freq = FALSE, 
+main = "Problem 1.49", xlab = "Test Score")
+lines(density(Biology$score), lwd=3)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

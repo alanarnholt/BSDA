@@ -7,11 +7,14 @@
 semester 1995}
 \format{A data frame with 40 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{score}{a numeric vector} 
+=======
+\item{score}{first exam score} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Devmath
 }
 \description{
 Data for Exercise 6.47
@@ -19,11 +22,21 @@ Data for Exercise 6.47
 \examples{
 
 str(Devmath)
+<<<<<<< HEAD
 attach(Devmath)
 EDA(score)
 t.test(score,mu=80,alternative="less")
 detach(Devmath)
 
+=======
+EDA(Devmath$score)
+t.test(Devmath$score, mu = 80, alternative = "less")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

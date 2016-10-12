@@ -4,6 +4,7 @@
 \name{Attorney}
 \alias{Attorney}
 \title{Number of convictions reported by U.S. attorney's offices}
+<<<<<<< HEAD
 \format{A data frame with 88 observations on the following 3 variables.
 \describe{ 
 \item{Staff}{a numeric vector} 
@@ -33,17 +34,48 @@ Conn} \code{New Orleans} \code{New York (Brooklyn)} \code{New York
 \code{Spokane, Wash} \code{Springfield, Ill} \code{St. Louis}
 \code{Syracuse, NY} \code{Tampa} \code{Topeka, Kan} \code{Tulsa}
 \code{Tyler, Tex} \code{Washington} \code{Wheeling, WVa} \code{Wilmington,
+=======
+\format{A data frame with 88 observations on the following three variables.
+\describe{ 
+\item{staff}{U.S. attorneys' office staff per 1 million population} 
+\item{convict}{U.S. attorneys' office convictions per 1 million population} 
+\item{district}{a factor with levels
+\code{Albuquerque}, \code{Alexandria, Va}, \code{Anchorage}, \code{Asheville,
+NC}, \code{Atlanta}, \code{Baltimore}, \code{Baton Rouge}, \code{Billings, Mt},
+\code{Birmingham, Al}, \code{Boise, Id}, \code{Boston}, \code{Buffalo},
+\code{Burlington, Vt}, \code{Cedar Rapids}, \code{Charleston, WVA},
+\code{Cheyenne, Wy}, \code{Chicago}, \code{Cincinnati}, \code{Cleveland},
+\code{Columbia, SC}, \code{Concord, NH}, \code{Denver}, \code{Des Moines},
+\code{Detroit}, \code{East St. Louis}, \code{Fargo, ND}, \code{Fort Smith, Ark},
+\code{Fort Worth}, \code{Grand Rapids, Mi}, \code{Greensboro, NC},
+\code{Honolulu}, \code{Houston}, \code{Indianapolis}, \code{Jackson, Miss},
+\code{Kansas City}, \code{Knoxville, Tn}, \code{Las Vegas}, \code{Lexington,
+Ky}, \code{Little Rock}, \code{Los Angeles}, \code{Louisville}, \code{Memphis},
+\code{Miami}, \code{Milwaukee}, \code{Minneapolis}, \code{Mobile, Ala},
+\code{Montgomery, Ala}, \code{Muskogee, Ok}, \code{Nashville}, \code{New Haven,
+Conn}, \code{New Orleans}, \code{New York (Brooklyn)}, \code{New York
+(Manhattan)}, \code{Newark, NJ}, \code{Oklahoma City}, \code{Omaha},
+\code{Oxford, Miss}, \code{Pensacola, Fl}, \code{Philadelphia}, \code{Phoenix},
+\code{Pittsburgh}, \code{Portland, Maine}, \code{Portland, Ore},
+\code{Providence, RI}, \code{Raleigh, NC}, \code{Roanoke, Va},
+\code{Sacramento}, \code{Salt Lake City}, \code{San Antonio}, \code{San Diego},
+\code{San Francisco}, \code{Savannah, Ga}, \code{Scranton, Pa}, \code{Seattle},
+\code{Shreveport, La}, \code{Sioux Falls, SD}, \code{South Bend, Ind},
+\code{Spokane, Wash} ,\code{Springfield, Ill}, \code{St. Louis},
+\code{Syracuse, NY}, \code{Tampa}, \code{Topeka, Kan}, \code{Tulsa},
+\code{Tyler, Tex}, \code{Washington}, \code{Wheeling, WVa}, and \code{Wilmington,
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 Del}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Attorney
 }
 \description{
-Data for Exercises 2.2, 2.43 and 2.57
+Data for Example 2.2 and Exercises 2.43 and 2.57
 }
 \examples{
 
+<<<<<<< HEAD
 str(Attorney)
 attach(Attorney)
 par(mfrow=c(1,2))
@@ -52,6 +84,18 @@ plot(Staff[-86],Convict[-86],main="Without Washington, D.C.")
 par(mfrow=c(1,1))
 detach(Attorney)
 
+=======
+par(mfrow=c(1, 2))
+plot(convict ~ staff, data = Attorney, main = "With Washington, D.C.")
+plot(convict[-86] ~staff[-86], data = Attorney, 
+main = "Without Washington, D.C.")
+par(mfrow=c(1, 1))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

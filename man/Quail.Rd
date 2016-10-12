@@ -9,10 +9,6 @@
 \item{placebo}{a numeric vector}
 \item{treatmen}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.53, 1.77, 1.88, 5.66, and 7.50
 }
@@ -26,6 +22,13 @@ boxplot(placebo,treatmen,names=c("Placebo","Treatment"),
 ylab="LDL level",col=c("lightblue","yellow"))
 detach(Quail)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

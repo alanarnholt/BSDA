@@ -5,16 +5,22 @@
 \alias{Dopamine}
 \title{Dopamine b-hydroxylase activity of schizophrenic patients treated with an
 antipsychotic drug}
+<<<<<<< HEAD
 \format{A data frame with 25 observations on the following 4 variables.
 \describe{ 
 \item{nonpsych}{a numeric vector}
 \item{psychotic}{a numeric vector} 
 \item{DBH}{a numeric vector} 
 \item{group}{a numeric vector} 
+=======
+\format{A data frame with 25 observations on the following two variables.
+\describe{ 
+\item{dbh}{dopamine b-hydroxylase activity (units are nmol/(ml)(h)/(mg) of protein)} 
+\item{group}{a factor with levels \code{nonpsychotic} and \code{psychotic}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Dopamine
 }
 \description{
 Data for Exercises 5.14 and 7.49
@@ -22,11 +28,21 @@ Data for Exercises 5.14 and 7.49
 \examples{
 
 str(Dopamine)
+<<<<<<< HEAD
 attach(Dopamine)
 boxplot(DBH~group,names=c("Non Psychotic","Psychotic"))
 t.test(DBH~group,var.equal=TRUE)
 detach(Dopamine)
 
+=======
+boxplot(dbh ~ group, data = Dopamine)
+t.test(dbh ~ group, data = Dopamine, var.equal = TRUE)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -4,6 +4,7 @@
 \name{Allergy}
 \alias{Allergy}
 \title{Allergy medicines by adverse events}
+<<<<<<< HEAD
 \format{A data frame with 3 observations on the following 4 variables.
 \describe{ 
 \item{C1.T}{a factor with levels \code{Drowsiness}
@@ -11,16 +12,24 @@
 \item{Seldane}{a numeric vector}
 \item{Pseudoep}{a numeric vector} 
 \item{Placebo}{a numeric vector}
+=======
+\format{A data frame with 406 observations on two variables.
+\describe{ 
+\item{event}{a factor with levels \code{insomnia},
+\code{headache}, and \code{drowsiness}} 
+\item{medication}{a factor with levels \code{seldane-d},
+\code{pseudoephedrine}, and \code{placebo}}
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
  }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Allergy
 }
 \description{
 Data used in Exercise 8.22
 }
 \examples{
 
+<<<<<<< HEAD
 attach(Allergy)
 X <- as.matrix(Allergy[1:3, 2:4])
 chisq.test(X)
@@ -28,6 +37,16 @@ Xr <- as.matrix(Allergy[2:3, 2:4])
 chisq.test(Xr)
 detach(Allergy)
 
+=======
+T1 <- xtabs(~event + medication, data = Allergy)
+T1
+chisq.test(T1)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

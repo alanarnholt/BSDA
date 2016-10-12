@@ -5,6 +5,7 @@
 \alias{Aids}
 \title{Incubation times for 295 patients thought to be infected with HIV by a blood
 transfusion}
+<<<<<<< HEAD
 \format{A data frame with 295 observations on the following 11 variables.
 \describe{ 
 \item{duration}{a numeric vector} 
@@ -18,23 +19,41 @@ transfusion}
 \item{elderly}{a numeric vector} 
 \item{SRES1}{a numeric vector} 
 \item{FITS1}{a numeric vector} 
+=======
+\format{A data frame with 295 observations on the following three variables.
+\describe{ 
+\item{duration}{time (in months) from HIV infection to the clinical manifestation of full-blown AIDS} 
+\item{age}{age (in years) of patient} 
+\item{group}{a numeric vector}
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data used in Exercise 6.60
 }
 \examples{
 
 str(Aids)
-attach(Aids)
+with(data = Aids,
 EDA(duration)
+<<<<<<< HEAD
 t.test(duration,mu=30,alternative="greater")
 SIGN.test(duration,md=24,alternative="greater")
 detach(Aids)
 
+=======
+)
+with(data = Aids, 
+t.test(duration, mu = 30, alternative = "greater")
+)
+with(data = Aids, 
+SIGN.test(duration, md = 24, alternative = "greater")
+)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

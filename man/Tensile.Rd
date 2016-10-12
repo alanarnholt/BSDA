@@ -11,10 +11,6 @@
 \item{Tensile}{a numeric vector}
 \item{Run}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 7.11
 }
@@ -28,6 +24,13 @@ t.test(Tensile~Run)
 t.test(Run.1,Run.2)
 detach(Tensile)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

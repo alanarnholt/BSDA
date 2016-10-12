@@ -5,15 +5,28 @@
 \alias{Chipavg}
 \title{Measurements of the thickness of the oxide layer of manufactured integrated
 circuits}
+<<<<<<< HEAD
 \format{A data frame with 30 observations on the following 3 variables.
 \describe{ 
 \item{wafer1}{a numeric vector} 
 \item{wafer2}{a numeric vector} 
 \item{thickness}{a numeric vector} 
+=======
+\format{A data frame with 30 observations on the following three variables.
+\describe{ 
+\item{wafer1}{thickness of the oxide layer for \code{wafer1}} 
+\item{wafer2}{thickness of the oxide layer for \code{wafer2}}
+\item{thickness}{average thickness of the oxide layer of the eight measurements
+obtained from each set of two wafers} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
 \source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
+for Monitoring Parameters of a Nested Random Effect Model.} 
+\emph{Journal of the American Statistical Association}, 90, 729-738.
+}
+\usage{
+Chipavg
 }
 \description{
 Data for Exercises 6.49 and 7.47
@@ -21,6 +34,7 @@ Data for Exercises 6.49 and 7.47
 \examples{
 
 str(Chipavg)
+<<<<<<< HEAD
 attach(Chipavg)
 EDA(thickness)
 t.test(thickness,mu=1000)
@@ -30,6 +44,19 @@ shapiro.test(wafer2)
 t.test(wafer1,wafer2,var.equal=TRUE)
 detach(Chipavg)
 
+=======
+EDA(Chipavg$thickness)
+t.test(Chipavg$thickness, mu = 1000)
+boxplot(Chipavg$wafer1, Chipavg$wafer2, name = c("Wafer 1", "Wafer 2"))
+shapiro.test(Chipavg$wafer1)
+shapiro.test(Chipavg$wafer2)
+t.test(Chipavg$wafer1, Chipavg$wafer2, var.equal = TRUE)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

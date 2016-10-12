@@ -4,30 +4,52 @@
 \name{Airline}
 \alias{Airline}
 \title{Percentage of on-time arrivals and number of complaints for 11 airlines}
+<<<<<<< HEAD
 \format{A data frame with 11 observations on the following 3 variables.
 \describe{ 
 \item{airline}{a factor with levels \code{Alaska}
+=======
+\format{A data frame with 11 observations on the following three variables.
+\describe{ 
+\item{airline}{a charater variable with values \code{Alaska}
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 \code{Amer West} \code{American} \code{Continental} \code{Delta}
 \code{Northwest} \code{Pan Am} \code{Southwest} \code{TWA} \code{United}
 \code{USAir}} 
 \item{ontime}{a numeric vector}
+<<<<<<< HEAD
 \item{complnt}{a numeric vector} 
+=======
+\item{complaints}{a numeric vector} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Airline
 }
 \description{
 Data for Exercise 2.9
 }
 \examples{
 
+<<<<<<< HEAD
 str(Airline)
 attach(Airline)
 barplot(complnt,names.arg=airline,col="lightblue")
 plot(ontime,complnt)
 detach(Airline)
 
+=======
+with(data = Airline, 
+barplot(complaints, names.arg = airline, col = "lightblue")
+)
+plot(complaints ~ ontime, data = Airline, pch = 19, col = "red",
+xlab = "On time", ylab = "Complaints")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

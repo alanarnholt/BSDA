@@ -4,6 +4,7 @@
 \name{Coaxial}
 \alias{Coaxial}
 \title{Signal loss from three types of coxial cable}
+<<<<<<< HEAD
 \format{A data frame with 45 observations on the following 5 variables.
 \describe{ 
 \item{Type.A}{a numeric vector} 
@@ -11,10 +12,16 @@
 \item{Type.C}{a numeric vector}
 \item{Signal}{a numeric vector} 
 \item{Cable}{a numeric vector} 
+=======
+\format{A data frame with 45 observations on the following two variables.
+\describe{ 
+\item{signal}{signal loss per 1000 feet} 
+\item{cable}{factor with three levels of coaxial cable \code{typeA}, 
+\code{typeB}, and \code{typeC}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Coaxial
 }
 \description{
 Data for Exercise 10.24 and 10.25
@@ -22,11 +29,21 @@ Data for Exercise 10.24 and 10.25
 \examples{
 
 str(Coaxial)
+<<<<<<< HEAD
 attach(Coaxial)
 boxplot(Signal~Cable)
 kruskal.test(Signal~as.factor(Cable))
 detach(Coaxial)
 
+=======
+boxplot(signal ~ cable, data = Coaxial, col = c("red", "green", "yellow"))
+kruskal.test(signal ~ cable, data = Coaxial)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

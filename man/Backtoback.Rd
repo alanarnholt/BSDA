@@ -4,26 +4,42 @@
 \name{Backtoback}
 \alias{Backtoback}
 \title{Illustrates inferences based on pooled t-test versus Wilcoxon rank sum test}
+<<<<<<< HEAD
 \format{A data frame with 24 observations on the following 3 variables.
 \describe{ 
 \item{score}{a numeric vector} 
 \item{group}{a numeric vector} 
 \item{ranks}{a numeric vector} 
+=======
+\format{A data frame with 24 observations on the following two variables.
+\describe{ 
+\item{score}{a numeric vector} 
+\item{group}{a numeric vector} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Backtoback
 }
 \description{
 Data for Exercise 7.40
 }
 \examples{
 
+<<<<<<< HEAD
 str(Backtoback)
 attach(Backtoback)
 wilcox.test(score~group)
 detach(Backtoback)
 
+=======
+wilcox.test(score ~ group, data = Backtoback)
+t.test(score ~ group, data = Backtoback)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

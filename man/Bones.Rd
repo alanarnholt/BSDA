@@ -4,6 +4,7 @@
 \name{Bones}
 \alias{Bones}
 \title{Bone density measurements of 35 physically active and 35 non-active women}
+<<<<<<< HEAD
 \format{A data frame with 70 observations on the following 5 variables.
 \describe{ 
 \item{Active}{a numeric vector}
@@ -11,22 +12,39 @@
 \item{Density}{a numeric vector} 
 \item{group}{a numeric vector} 
 \item{Ranks}{a numeric vector} 
+=======
+\format{A data frame with 70 observations on two variables.
+\describe{ 
+\item{density}{bone density measurements}
+\item{group}{a factor with levels \code{active} and \code{nonactive}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Bones
 }
 \description{
-Data for Exercise 7.22
+Data for Example 7.22
 }
 \examples{
 
+<<<<<<< HEAD
 str(Bones)
 attach(Bones)
 t.test(Active,Nonactive,alternative="greater")
 wilcox.test(Active,Nonactive,alternative="greater")
 detach(Bones)
 
+=======
+t.test(density ~ group, data = Bones, alternative = "greater")
+t.test(rank(density) ~ group, data = Bones, alternative = "greater")
+wilcox.test(density ~ group, data = Bones, alternative = "greater")
+
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

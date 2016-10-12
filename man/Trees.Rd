@@ -8,10 +8,6 @@
 \describe{ 
 \item{number}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.50
 }
@@ -23,6 +19,13 @@ stem(number)
 hist(number,breaks=seq(60,110,10),right=FALSE,col="green",main="Problem 1.50")
 detach(Trees)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

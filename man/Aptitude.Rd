@@ -4,33 +4,53 @@
 \name{Aptitude}
 \alias{Aptitude}
 \title{Aptitude test scores versus productivity in a factory}
+<<<<<<< HEAD
 \format{A data frame with 8 observations on the following 4 variables.
 \describe{ 
 \item{aptitude}{a numeric vector}
 \item{product}{a numeric vector} 
 \item{SRES1}{a numeric vector} 
 \item{FITS1}{a numeric vector} 
+=======
+\format{A data frame with 8 observations on the following two variables.
+\describe{ 
+\item{aptitude}{aptitude test scores}
+\item{product}{productivity scores} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Aptitude
 }
 \description{
-Data for Exercises 2.1, 2.35 and 2.51
+Data for Exercises 2.1, 2.26, 2.35 and 2.51
 }
 \examples{
 
+<<<<<<< HEAD
 str(Aptitude)
 attach(Aptitude)
 plot(aptitude,product,main="Exercise 2.1")
 model1 <- lm(product~aptitude)
+=======
+plot(product ~ aptitude, data = Aptitude, main = "Exercise 2.1")
+model1 <- lm(product ~ aptitude, data = Aptitude)
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 model1
-abline(model1,col="red",lwd=3)
+abline(model1, col = "red", lwd=3)
 resid(model1)
 fitted(model1)
+<<<<<<< HEAD
 cor(product,aptitude)
 detach(Aptitude)
 
+=======
+cor(Aptitude$product, Aptitude$aptitude)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

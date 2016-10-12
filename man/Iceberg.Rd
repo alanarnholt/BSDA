@@ -13,10 +13,6 @@ Grand Banks in 1920}
 \item{Newfound}{a numeric vector}
 \item{GrandBk}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 2.46 and 2.60
 }
@@ -28,6 +24,13 @@ plot(GrandBk,Newfound)
 abline(lm(Newfound~GrandBk))
 detach(Iceberg)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

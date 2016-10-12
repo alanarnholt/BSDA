@@ -10,10 +10,6 @@
 \item{number}{a numeric vector} 
 \item{x.}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 2.21, 9.14, and 9.32
 }
@@ -27,6 +23,13 @@ abline(model)
 cor(age,number)
 detach(Gym)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

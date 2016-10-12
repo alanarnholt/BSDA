@@ -4,21 +4,28 @@
 \name{Abc}
 \alias{Abc}
 \title{Three samples to illustrate analysis of variance}
+<<<<<<< HEAD
 \format{A data frame with 18 observations on the following 3 variables.
 \describe{ 
 \item{GroupA}{a numeric vector}
 \item{GroupB}{a numeric vector}
 \item{GroupC}{a numeric vector}
+=======
+\format{A data frame with 51 observations on two variables.
+\describe{ 
+\item{response}{a numeric vector}
+\item{group}{a factor with levels \code{A}, \code{B}, and \code{C}}
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Abc
 }
 \description{
 Data used in Exercise 10.1
 }
 \examples{
 
+<<<<<<< HEAD
 attach(Abc)
 STACKED <-stack(Abc)
 STACKED[1:5,]
@@ -27,6 +34,15 @@ anova(lm(values~ind,data=STACKED))
 remove(STACKED)
 detach(Abc)
 
+=======
+boxplot(response ~ group, col=c("red", "blue", "green"), data = Abc )
+anova(lm(response ~ group, data = Abc))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

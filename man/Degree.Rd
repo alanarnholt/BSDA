@@ -4,6 +4,7 @@
 \name{Degree}
 \alias{Degree}
 \title{Percent of bachelor's degrees awarded women in 1970 versus 1990}
+<<<<<<< HEAD
 \format{A data frame with 11 observations on the following 3 variables.
 \describe{ 
 \item{Field}{a factor with levels \code{All fields}
@@ -12,10 +13,18 @@
 \code{Psychology} \code{Social Science}} 
 \item{X1970}{a numeric vector} 
 \item{X1990}{a numeric vector} 
+=======
+\format{A data frame with 1064 observations on the following two variables.
+\describe{ 
+\item{field}{a factor with levels \code{Health},
+\code{Education}, \code{Foreign Language}, \code{Psychology}, \code{Fine Arts},
+\code{Life Sciences}, \code{Business}, \code{Social Science}, \code{Physical Sciences},
+\code{Engineering}, and \code{All Fields}} 
+\item{awarded}{a factor with levels \code{1970} and \code{1990}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Degree
 }
 \description{
 Data for Exercise 2.75
@@ -23,6 +32,7 @@ Data for Exercise 2.75
 \examples{
 
 str(Degree)
+<<<<<<< HEAD
 attach(Degree)
 Dmat <- as.matrix(Degree[,2:3])
 rownames(Dmat) <- Field
@@ -32,6 +42,16 @@ barplot(t(Dmat),beside=TRUE,legend=TRUE,cex.names=.5)
 detach(Degree)
 remove(Dmat)
 
+=======
+T1 <- xtabs(~field + awarded, data = Degree)
+T1
+barplot(t(T1), beside = TRUE, col = c("red", "skyblue"), legend = colnames(T1))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -4,21 +4,28 @@
 \name{Asprin}
 \alias{Asprin}
 \title{Dissolving time versus level of impurities in aspirin tablets}
+<<<<<<< HEAD
 \format{A data frame with 5 observations on the following 3 variables.
 \describe{ 
 \item{X1.}{a numeric vector} 
 \item{X5.}{a numeric vector} 
 \item{X10.}{a numeric vector} 
+=======
+\format{A data frame with 15 observations on two variables.
+\describe{ 
+\item{time}{time (in seconds) for aspirin to dissolve} 
+\item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Asprin
 }
 \description{
 Data for Exercise 10.51
 }
 \examples{
 
+<<<<<<< HEAD
 str(Asprin)
 attach(Asprin)
 STACKED <-stack(Asprin)
@@ -28,6 +35,15 @@ anova(lm(values~ind,data=STACKED))
 remove(STACKED)
 detach(Asprin)
 
+=======
+boxplot(time ~ impurity, data = Asprin, 
+        col = c("red", "blue", "green"))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -4,15 +4,22 @@
 \name{Concrete}
 \alias{Concrete}
 \title{Compressive strength of concrete blocks made by two different methods}
+<<<<<<< HEAD
 \format{A data frame with 20 observations on the following 3 variables.
 \describe{ 
 \item{Strength}{a numeric vector} 
 \item{Method}{a numeric vector} 
 \item{Ranks}{a numeric vector} 
+=======
+\format{A data frame with 20 observations on the following 2twovariables.
+\describe{ 
+\item{strength}{comprehensive strength (in pounds per square inch)} 
+\item{method}{factor with levels \code{new} and \code{old} indicating the 
+method used to construct a concrete block} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Concrete
 }
 \description{
 Data for Exercise 7.17
@@ -20,10 +27,19 @@ Data for Exercise 7.17
 \examples{
 
 str(Concrete)
+<<<<<<< HEAD
 attach(Concrete)
 wilcox.test(Strength~Method,alternative="greater")
 detach(Concrete)
 
+=======
+wilcox.test(strength ~ method, data = Concrete, alternative = "greater")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

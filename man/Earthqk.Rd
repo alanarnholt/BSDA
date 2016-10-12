@@ -4,14 +4,20 @@
 \name{Earthqk}
 \alias{Earthqk}
 \title{One hundred year record of worldwide seismic activity(1770-1869)}
+<<<<<<< HEAD
 \format{A data frame with 100 observations on the following 2 variables.
 \describe{ 
 \item{year}{a numeric vector} 
 \item{severity}{a numeric vector} 
+=======
+\format{A data frame with 100 observations on the following two variables.
+\describe{ 
+\item{year}{year seimic activity recorded} 
+\item{severity}{annual incidence of sever earthquakes} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Earthqk
 }
 \description{
 Data for Exercise 6.97
@@ -19,11 +25,21 @@ Data for Exercise 6.97
 \examples{
 
 str(Earthqk)
+<<<<<<< HEAD
 attach(Earthqk)
 EDA(severity)
 t.test(severity,mu=100,alternative="greater")
 detach(Earthqk)
 
+=======
+EDA(Earthqk$severity)
+t.test(Earthqk$severity, mu = 100, alternative = "greater")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

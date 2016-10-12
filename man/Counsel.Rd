@@ -6,11 +6,14 @@
 \title{Scores of 18 volunteers who participated in a counseling process}
 \format{A data frame with 18 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{score}{a numeric vector} 
+=======
+\item{score}{standardized psychology scores after a counseling process} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Counsel
 }
 \description{
 Data for Exercise 6.96
@@ -18,11 +21,21 @@ Data for Exercise 6.96
 \examples{
 
 str(Counsel)
+<<<<<<< HEAD
 attach(Counsel)
 EDA(score)
 t.test(score,mu=70)
 detach(Counsel)
 
+=======
+EDA(Counsel$score)
+t.test(Counsel$score, mu = 70)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

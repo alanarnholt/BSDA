@@ -4,22 +4,40 @@
 \name{Books}
 \alias{Books}
 \title{Number of books read and final spelling scores for 17 third graders}
+<<<<<<< HEAD
 \format{A data frame with 17 observations on the following 2 variables.
 \describe{ 
 \item{book}{a numeric vector} 
 \item{spelling}{a numeric vector} 
+=======
+\format{A data frame with 17 observations on the following two variables.
+\describe{ 
+\item{book}{number of books read} 
+\item{spelling}{spelling score} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Books
 }
 \description{
 Data for Exercise 9.53
 }
 \examples{
 
+<<<<<<< HEAD
 data(Books)
 
+=======
+plot(spelling ~ book, data = Books)
+mod <- lm(spelling ~ book, data = Books)
+summary(mod)
+abline(mod, col = "blue", lwd = 2)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

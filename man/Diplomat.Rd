@@ -4,6 +4,7 @@
 \name{Diplomat}
 \alias{Diplomat}
 \title{Parking tickets issued to diplomats}
+<<<<<<< HEAD
 \format{A data frame with 10 observations on the following 4 variables.
 \describe{ 
 \item{Country}{a factor with levels \code{Brazil}
@@ -14,17 +15,26 @@
 \item{Code}{a factor with levels \code{Br} \code{Bu}
 \code{Eg} \code{In} \code{Is} \code{Ni} \code{Ru} \code{SK} \code{Uk}
 \code{Ve}} 
+=======
+\format{A data frame with 10 observations on the following three variables.
+\describe{ 
+\item{country}{a factor with levels \code{Brazil}
+\code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
+\code{Russia} \code{S. Korea} \code{Ukraine} \code{Venezuela}}
+\item{number}{total number of tickets} 
+\item{rate}{number of tickets per vehicle per month} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Diplomat
 }
 \description{
-Data for Exercises 1.14 and 1.47
+Data for Exercises 1.14 and 1.37
 }
 \examples{
 
 str(Diplomat)
+<<<<<<< HEAD
 attach(Diplomat)
 par(mfrow=c(1,2))
 names(Number) <- Country
@@ -34,6 +44,32 @@ dotchart(rate,main="Tickets/Vehicle/Month",col="red",pch=2)
 barplot(rate,col="pink")
 detach(Diplomat)
 
+=======
+par(las = 2, mfrow = c(2, 2))
+stripchart(number ~ country, data = Diplomat, pch = 19, 
+           col= "red", vertical = TRUE)
+stripchart(rate ~ country, data = Diplomat, pch = 19, 
+           col= "blue", vertical = TRUE) 
+with(data = Diplomat, 
+     barplot(number, names.arg = country, col = "red"))
+with(data = Diplomat, 
+     barplot(rate, names.arg = country, col = "blue"))           
+par(las = 1, mfrow = c(1, 1))
+\dontrun{
+ggplot2::ggplot(data = Diplomat, aes(x = reorder(country, number), 
+                 y = number)) + 
+           geom_bar(stat = "identity", fill = "pink", color = "black") + 
+           theme_bw() + labs(x = "", y = "Total Number of Tickets")
+ggplot2::ggplot(data = Diplomat, aes(x = reorder(country, rate), 
+                 y = rate)) +
+           geom_bar(stat = "identity", fill = "pink", color = "black") + 
+           theme_bw() + labs(x = "", y = "Tickets per vehicle per month")
+}
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

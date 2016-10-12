@@ -5,15 +5,22 @@
 \alias{Corn}
 \title{Comparison of the yields of a new variety and a standard variety of corn
 planted on 12 plots of land}
+<<<<<<< HEAD
 \format{A data frame with 12 observations on the following 3 variables.
 \describe{ 
 \item{New}{a numeric vector} 
 \item{Standard}{a numeric vector} 
 \item{differ}{a numeric vector} 
+=======
+\format{A data frame with 12 observations on the following three variables.
+\describe{ 
+\item{plot}{number of plot} 
+\item{new}{corn yield with new meathod} 
+\item{standard}{corn yield with standard method} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Corn
 }
 \description{
 Data for Exercise 7.77
@@ -21,14 +28,24 @@ Data for Exercise 7.77
 \examples{
 
 str(Corn)
-attach(Corn)
+differ <- Corn$new - Corn$standard
 boxplot(differ)
 qqnorm(differ)
 qqline(differ)
 shapiro.test(differ)
+<<<<<<< HEAD
 t.test(New,Standard,paired=TRUE,alternative="greater")
 detach(Corn)
 
+=======
+t.test(Corn$new, Corn$standard, paired = TRUE, alternative = "greater")
+rm(differ)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

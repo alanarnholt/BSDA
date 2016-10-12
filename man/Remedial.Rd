@@ -9,10 +9,6 @@
 \item{female}{a numeric vector} 
 \item{male}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.43
 }
@@ -25,6 +21,13 @@ wilcox.test(female,male,conf.int=TRUE)
 t.test(female,male)
 detach(Remedial)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

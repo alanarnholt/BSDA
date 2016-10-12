@@ -4,6 +4,7 @@
 \name{Darwin}
 \alias{Darwin}
 \title{Charles Darwin's study of cross-fertilized and self-fertilized plants}
+<<<<<<< HEAD
 \format{A data frame with 30 observations on the following 7 variables.
 \describe{ 
 \item{pot}{a numeric vector} 
@@ -13,10 +14,16 @@
 \item{method}{a numeric vector} 
 \item{differ}{a numeric vector} 
 \item{sgnrnks}{a numeric vector} 
+=======
+\format{A data frame with 15 observations on the following three variables.
+\describe{ 
+\item{pot}{number of pot} 
+\item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
+\item{self}{height of plant (in inches) after a fixed period of time when self-fertilized}
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Darwin
 }
 \description{
 Data for Exercise 7.62
@@ -24,13 +31,23 @@ Data for Exercise 7.62
 \examples{
 
 str(Darwin)
-attach(Darwin)
+differ <- Darwin$cross - Darwin$self
 qqnorm(differ)
 qqline(differ)
 shapiro.test(differ)
+<<<<<<< HEAD
 wilcox.test(cross,self,paired=TRUE)
 detach(Darwin)
 
+=======
+wilcox.test(Darwin$cross, Darwin$self, paired = TRUE)
+rm(differ)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

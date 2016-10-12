@@ -9,10 +9,6 @@ Mountains}
 \describe{ 
 \item{thick}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.57
 }
@@ -24,6 +20,13 @@ EDA(thick)
 SIGN.test(thick,md=7.3,alternative="greater")
 detach(Greenriv)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

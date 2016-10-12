@@ -4,6 +4,7 @@
 \name{Drink}
 \alias{Drink}
 \title{Opinion on referendum by view on moral issue of selling alcoholic beverages}
+<<<<<<< HEAD
 \format{A data frame with 3 observations on the following 4 variables.
 \describe{ 
 \item{drink}{a factor with levels \code{immoral}
@@ -11,10 +12,16 @@
 \item{For}{a numeric vector}
 \item{Against}{a numeric vector} 
 \item{undecide}{a numeric vector} 
+=======
+\format{A data frame with 472 observations on two variables.
+\describe{ 
+\item{drinking}{a factor with levels \code{ok},
+\code{tolerated}, and \code{immoral}} 
+\item{referendum}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Drink
 }
 \description{
 Data for Exercise 8.53
@@ -22,11 +29,22 @@ Data for Exercise 8.53
 \examples{
 
 str(Drink)
+<<<<<<< HEAD
 attach(Drink)
 Drink
 chisq.test(Drink[,2:4])
 detach(Drink)
 
+=======
+T1 <- xtabs(~drinking + referendum, data = Drink)
+T1
+chisq.test(T1)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

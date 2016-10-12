@@ -11,10 +11,6 @@ with levels \code{female 3.800000000e+001 2.100000000e+001 1.500000000e+001
 2.600000000e+001} \code{male 3.300000000e+001 3.800000000e+001
 2.400000000e+001 5.000000000e+000}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 8.32
 }
@@ -25,6 +21,13 @@ attach(Sports)
 Sports
 detach(Sports)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

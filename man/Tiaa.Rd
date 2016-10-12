@@ -102,10 +102,6 @@
 \code{9/25/1999} \code{9/26/1999} \code{9/27/1999} \code{9/28/1999}
 \code{9/29/1999} \code{9/30/1999}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for your enjoyment
 }
@@ -113,6 +109,13 @@ Data for your enjoyment
 
 data(Tiaa)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

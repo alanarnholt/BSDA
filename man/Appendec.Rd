@@ -5,6 +5,7 @@
 \alias{Appendec}
 \title{Median costs of appendectomies at three different types of North Carolina
 hospitals}
+<<<<<<< HEAD
 \format{A data frame with 59 observations on the following 5 variables.
 \describe{ 
 \item{Cost}{a numeric vector} 
@@ -12,10 +13,15 @@ hospitals}
 \item{Rural}{a numeric vector}
 \item{Regional}{a numeric vector} 
 \item{Metropol}{a numeric vector} 
+=======
+\format{A data frame with 59 observations on the following two variables.
+\describe{ 
+\item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
+\item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Appendec
 }
 \description{
 Data for Exercise 10.60
@@ -23,11 +29,23 @@ Data for Exercise 10.60
 \examples{
 
 str(Appendec)
+<<<<<<< HEAD
 attach(Appendec)
 boxplot(Cost~Region)
 anova(lm(Cost~as.factor(Region)))
 detach(Appendec)
 
+=======
+Appendec$regionc <- ifelse(Appendec$region == 1, "rural", 
+                    ifelse(Appendec$region == 2, "regional", "metropolitan"))
+boxplot(cost ~ regionc, data = Appendec, col = c("red", "blue", "cyan"))
+anova(lm(cost ~ as.factor(regionc), data = Appendec))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

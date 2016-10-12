@@ -4,6 +4,7 @@
 \name{Cigar}
 \alias{Cigar}
 \title{Milligrams of tar in 25 cigarettes selected randomly from 4 different brands}
+<<<<<<< HEAD
 \format{A data frame with 100 observations on the following 6 variables.
 \describe{ 
 \item{brandA}{a numeric vector} 
@@ -12,10 +13,16 @@
 \item{brandD}{a numeric vector} 
 \item{tar}{a numeric vector}
 \item{brand}{a numeric vector} 
+=======
+\format{A data frame with 100 observations on the following two variables.
+\describe{ 
+\item{tar}{amount of tar (measured in milligrams)}
+\item{brand}{a factor indicating cigarette brand with levels \code{brandA}, \code{brandB},
+\code{brandC}, and \code{brandD}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Cigar
 }
 \description{
 Data for Example 10.4
@@ -23,11 +30,21 @@ Data for Example 10.4
 \examples{
 
 str(Cigar)
+<<<<<<< HEAD
 attach(Cigar)
 boxplot(tar~brand)
 anova(lm(tar~as.factor(brand)))
 detach(Cigar)
 
+=======
+boxplot(tar ~ brand, data = Cigar)
+anova(lm(tar ~ brand, data = Cigar))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

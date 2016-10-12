@@ -4,16 +4,22 @@
 \name{Coffee}
 \alias{Coffee}
 \title{Productivity of workers with and without a coffee break}
+<<<<<<< HEAD
 \format{A data frame with 9 observations on the following 4 variables.
 \describe{ 
 \item{Without}{a numeric vector} 
 \item{With}{a numeric vector} 
 \item{differ}{a numeric vector}
 \item{sgnrnks}{a numeric vector} 
+=======
+\format{A data frame with 9 observations on the following two variables.
+\describe{ 
+\item{without}{workers' productivity scores without a coffee break} 
+\item{with}{workers' productivity scores with a coffee break} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Coffee
 }
 \description{
 Data for Exercise 7.55
@@ -21,6 +27,7 @@ Data for Exercise 7.55
 \examples{
 
 str(Coffee)
+<<<<<<< HEAD
 attach(Coffee)
 qqnorm(differ)
 qqline(differ)
@@ -29,6 +36,21 @@ t.test(With,Without,paired=TRUE,alternative="greater")
 wilcox.test(With,Without,paired=TRUE,alternative="greater")
 detach(Coffee)
 
+=======
+differences <- Coffee$with - Coffee$without
+qqnorm(differences)
+qqline(differences)
+shapiro.test(differences)
+t.test(Coffee$with, Coffee$without, paired = TRUE, alternative = "greater")
+wilcox.test(Coffee$with, Coffee$without, paired = TRUE, 
+            alterantive = "greater")
+rm(differences)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

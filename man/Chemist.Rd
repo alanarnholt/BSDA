@@ -6,11 +6,14 @@
 \title{Starting salaries of 50 chemistry majors}
 \format{A data frame with 50 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{salary}{a numeric vector} 
+=======
+\item{salary}{starting salary (in dollars) for chemistry major} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Chemist
 }
 \description{
 Data for Example 5.3
@@ -18,10 +21,19 @@ Data for Example 5.3
 \examples{
 
 str(Chemist)
+<<<<<<< HEAD
 attach(Chemist)
 EDA(salary)
 detach(Chemist)
 
+=======
+EDA(Chemist$salary)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

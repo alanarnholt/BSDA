@@ -4,6 +4,7 @@
 \name{Airdisasters}
 \alias{Airdisasters}
 \title{Aircraft disasters in five different decades}
+<<<<<<< HEAD
 \format{A data frame with 141 observations on the following 7 variables.
 \describe{ 
 \item{year}{a numeric vector} 
@@ -13,16 +14,23 @@
 \item{X1970}{a numeric vector} 
 \item{X1980}{a numeric vector} 
 \item{X1990}{a numeric vector} 
+=======
+\format{A data frame with 141 observations on the following seven variables.
+\describe{ 
+\item{year}{a numeric vector indicating the year of an aircraft accident} 
+\item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
+\item{decade}{a character vector indicating the decade of an aircraft accident} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Airdisasters
 }
 \description{
 Data used in Exercise 1.12
 }
 \examples{
 
+<<<<<<< HEAD
 attach(Airdisasters)
 STA <- stack(Airdisasters[ ,3:7])
 library(lattice)
@@ -34,6 +42,20 @@ xlab = "Number of Fatalities")
 title(main = "Aircraft Disasters 1950-1990") 
 detach(Airdisasters)
 
+=======
+par(las = 1)
+stripchart(deaths ~ decade, data = Airdisasters, 
+           subset = decade != "1930s" & decade != "1940s", 
+           method = "stack", pch = 19, cex = 0.5, col = "red", 
+           main = "Aircraft Disasters 1950 - 1990", 
+           xlab = "Number of fatalities")
+par(las = 0)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

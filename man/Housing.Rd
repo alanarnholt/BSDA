@@ -19,10 +19,6 @@ Angeles} \code{Louisville} \code{Memphis} \code{Miami} \code{Milwaukee}
 \item{X1984}{a numeric vector} 
 \item{X1993}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.82
 }
@@ -57,6 +53,13 @@ lines( c(63591.1, 79622.56),c(.25,.25),col="orange",lwd=24)
 lines( c(85591.69, 109915.4),c(.75,.75),col="pink",lwd=24)
 detach(Housing)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

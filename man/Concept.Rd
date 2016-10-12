@@ -6,11 +6,14 @@
 \title{Tennessee self concept scale scores for a group of teenage boys}
 \format{A data frame with 28 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{self}{a numeric vector} 
+=======
+\item{self}{Tennessee self concept scores} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Concept
 }
 \description{
 Data for Exercise 16.8 and 1.82
@@ -18,6 +21,7 @@ Data for Exercise 16.8 and 1.82
 \examples{
 
 str(Concept)
+<<<<<<< HEAD
 attach(Concept)
 summary(self)
 sd(self)
@@ -29,6 +33,21 @@ sd(self/10)
 diff(range(self/10))
 detach(Concept)
 
+=======
+summary(Concept$self)
+sd(Concept$self)
+diff(range(Concept$self))
+IQR(Concept$self)
+summary(Concept$self/10)
+IQR(Concept$self/10)
+sd(Concept$self/10)
+diff(range(Concept$self/10))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -4,6 +4,7 @@
 \name{Bus}
 \alias{Bus}
 \title{Attendance of bus drivers versus attendance}
+<<<<<<< HEAD
 \format{A data frame with 2 observations on the following 6 variables.
 \describe{ 
 \item{Attend}{a factor with levels \code{Absent}
@@ -13,22 +14,39 @@
 \item{PM}{a numeric vector} 
 \item{Swing}{a numeric vector} 
 \item{Split}{a numeric vector} 
+=======
+\format{A data frame with 29363 observations on two variables.
+\describe{ 
+\item{attendance}{a factor with levels \code{absent} and
+\code{present}} 
+\item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, \code{swing}, and \code{split}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Bus
 }
 \description{
 Data for Exercise 8.25
 }
 \examples{
 
+<<<<<<< HEAD
 str(Bus)
 attach(Bus)
 Bus
 chisq.test(Bus[,2:6])
 detach(Bus)
 
+=======
+T1 <- xtabs(~attendance + shift, data = Bus)
+T1
+chisq.test(T1)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

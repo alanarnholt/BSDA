@@ -4,6 +4,7 @@
 \name{Bbsalaries}
 \alias{Bbsalaries}
 \title{Baseball salaries for members of five major league teams}
+<<<<<<< HEAD
 \format{A data frame with 33 observations on the following 5 variables.
 \describe{ 
 \item{ANGLES}{a numeric vector} 
@@ -11,16 +12,22 @@
 \item{REDSOXS}{a numeric vector}
 \item{WHITESOXS}{a numeric vector} 
 \item{INDIANS}{a numeric vector} 
+=======
+\format{A data frame with 142 observations on two variables.
+\describe{ 
+\item{salary}{1999 salary for baseball player} 
+\item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Bbsalaries
 }
 \description{
 Data for Exercise 1.11
 }
 \examples{
 
+<<<<<<< HEAD
 str(Bbsalaries)
 attach(Bbsalaries)
 stripchart(x=list(INDIANS,WHITESOXS,REDSOXS,ORIOLES,ANGLES),xlab="Salary",
@@ -29,6 +36,16 @@ method="stack",main="",pch=1,col="blue", group.names=c("Indians","White Sox",
 title(main="Major League Salaries")
 detach(Bbsalaries)
 
+=======
+stripchart(salary ~ team, data = Bbsalaries, method = "stack", 
+           pch = 19, col = "blue", cex = 0.75)
+title(main = "Major League Salaries")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

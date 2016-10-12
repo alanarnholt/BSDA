@@ -4,6 +4,7 @@
 \name{Energy}
 \alias{Energy}
 \title{Amount of energy consumed by homes versus their sizes}
+<<<<<<< HEAD
 \format{A data frame with 12 observations on the following 5 variables.
 \describe{ 
 \item{Size}{a numeric vector} 
@@ -11,10 +12,15 @@
 \item{SRES1}{a numeric vector}
 \item{FITS1}{a numeric vector} 
 \item{Residuals}{a numeric vector} 
+=======
+\format{A data frame with 12 observations on the following two variables.
+\describe{ 
+\item{size}{size of home (in square feet)} 
+\item{kilowatt}{killowatt-hours per month} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Energy
 }
 \description{
 Data for Exercises 2.5, 2.24, and 2.55
@@ -22,6 +28,7 @@ Data for Exercises 2.5, 2.24, and 2.55
 \examples{
 
 str(Energy)
+<<<<<<< HEAD
 attach(Energy)
 plot(Size,kilowatt)
 cor(Size,kilowatt)
@@ -29,6 +36,17 @@ model <- lm(kilowatt~Size)
 plot(Size,resid(model))
 detach(Energy)
 
+=======
+plot(kilowatt ~ size, data = Energy)
+with(data = Energy, cor(size, kilowatt))
+model <- lm(kilowatt ~ size, data = Energy)
+plot(Energy$size, resid(model))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -4,15 +4,22 @@
 \name{Domestic}
 \alias{Domestic}
 \title{Rates of domestic violence per 1,000 women by age groups}
+<<<<<<< HEAD
 \format{A data frame with 5 observations on the following 2 variables.
 \describe{ 
 \item{Age}{a factor with levels \code{12-19} \code{20-24}
 \code{25-34} \code{35-49} \code{50-64}} 
 \item{Rate}{a numeric vector} 
+=======
+\format{A data frame with 5 observations on the following two variables.
+\describe{ 
+\item{age}{a factor with levels \code{12-19}, \code{20-24},
+\code{25-34}, \code{35-49}, and \code{50-64}} 
+\item{rate}{rate of domestic violence per 1000 women} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Domestic
 }
 \description{
 Data for Exercise 1.20
@@ -20,12 +27,26 @@ Data for Exercise 1.20
 \examples{
 
 str(Domestic)
+<<<<<<< HEAD
 attach(Domestic)
 names(Rate) <- Age
 barplot(Rate,col="gold")
 pie(Rate)
 detach(Domestic)
 
+=======
+barplot(Domestic$rate, names.arg = Domestic$age)
+\dontrun{
+ggplot2::ggplot(data = Domestic, aes(x = age, y = rate)) + 
+     geom_bar(stat = "identity", fill = "purple", color = "black") + 
+     labs(x = "", y = "Domestic violence per 1000 women") + 
+     theme_bw()
+}
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

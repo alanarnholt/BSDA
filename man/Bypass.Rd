@@ -4,26 +4,34 @@
 \name{Bypass}
 \alias{Bypass}
 \title{Median charges for coronary bypass at 17 hospitals in North Carolina}
+<<<<<<< HEAD
 \format{A data frame with 17 observations on the following 2 variables.
+=======
+\format{A data frame with 17 observations on the following two variables.
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 \describe{ 
 \item{hospital}{a factor with levels \code{Carolinas Med
-Ct} \code{Duke Med Ct} \code{Durham Regional} \code{Forsyth Memorial}
-\code{Frye Regional} \code{High Point Regional} \code{Memorial Mission}
-\code{Mercy} \code{Moore Regional} \code{Moses Cone Memorial} \code{NC
-Baptist} \code{New Hanover Regional} \code{Pitt Co. Memorial}
-\code{Presbyterian} \code{Rex} \code{Univ of North Carolina} \code{Wake
+Ct}, \code{Duke Med Ct}, \code{Durham Regional}, \code{Forsyth Memorial},
+\code{Frye Regional}, \code{High Point Regional}, \code{Memorial Mission},
+\code{Mercy}, \code{Moore Regional}, \code{Moses Cone Memorial}, \code{NC
+Baptist}, \code{New Hanover Regional}, \code{Pitt Co. Memorial},
+\code{Presbyterian}, \code{Rex}, \code{Univ of North Carolina}, and \code{Wake
 County}}
+<<<<<<< HEAD
 \item{charge}{a numeric vector} 
+=======
+\item{charge}{median charge for coronary bypass} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Bypass
 }
 \description{
 Data for Exercises 5.104 and 6.43
 }
 \examples{
 
+<<<<<<< HEAD
 str(Bypass)
 attach(Bypass)
 EDA(charge)
@@ -31,6 +39,16 @@ t.test(charge,conf.level=.90)$conf
 t.test(charge,mu=35000)
 detach(Bypass)
 
+=======
+EDA(Bypass$charge)
+t.test(Bypass$charge, conf.level=.90)$conf
+t.test(Bypass$charge, mu = 35000)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

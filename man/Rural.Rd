@@ -11,10 +11,6 @@
 \item{score}{a numeric vector} 
 \item{code}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 7.16
 }
@@ -26,6 +22,13 @@ wilcox.test(score~code)
 wilcox.test(Rural,City)
 detach(Rural)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -6,25 +6,38 @@
 \title{Agressive tendency scores for a group of teenage members of a street gang}
 \format{A data frame with 28 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{aggres}{a numeric vector} 
+=======
+\item{aggres}{measure of aggresive tendency} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Aggress
 }
 \description{
-Data used in Exercises 1.61 and 1.81
+Data used in Exercises 1.66 and 1.81
 }
 \examples{
 
 str(Aggress)
-attach(Aggress)
-EDA(aggres)
+with(data = Aggress,
+     EDA(aggres))
 # OR
+<<<<<<< HEAD
 IQR(aggres)
 diff(range(aggres))
 detach(Aggress)
 
+=======
+IQR(Aggress$aggres)
+diff(range(Aggress$aggres))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

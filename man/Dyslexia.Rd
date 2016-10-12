@@ -4,6 +4,7 @@
 \name{Dyslexia}
 \alias{Dyslexia}
 \title{Data on a group of college students diagnosed with dyslexia}
+<<<<<<< HEAD
 \format{A data frame with 8 observations on the following 7 variables.
 \describe{ 
 \item{words}{a numeric vector} 
@@ -14,10 +15,21 @@
 \item{weight}{a numeric vector} 
 \item{height}{a numeric vector} 
 \item{children}{a numeric vector} 
+=======
+\format{A data frame with 8 observations on the following seven variables.
+\describe{ 
+\item{words}{number of words read per minute} 
+\item{age}{age of participant} 
+\item{gender}{a factor with levels \code{female} and 
+\code{male}} 
+\item{handed}{a factor with levels \code{left} and \code{right}}
+\item{weight}{weight of participant (in pounds)} 
+\item{height}{height of participant (in inches)} 
+\item{children}{number of children in family} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Dyslexia
 }
 \description{
 Data for Exercise 2.90
@@ -25,11 +37,21 @@ Data for Exercise 2.90
 \examples{
 
 str(Dyslexia)
+<<<<<<< HEAD
 attach(Dyslexia)
 plot(weight,height)
 plot(handed,words)
 detach(Dyslexia)
 
+=======
+plot(height ~ weight, data = Dyslexia)
+plot(words ~ handed, data = Dyslexia)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -4,14 +4,17 @@
 \name{Correlat}
 \alias{Correlat}
 \title{Exercise to illustrate correlation}
+<<<<<<< HEAD
 \format{A data frame with 13 observations on the following 2 variables.
+=======
+\format{A data frame with 13 observations on the following two variables.
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 \describe{ 
 \item{X}{a numeric vector} 
 \item{Y}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Correlat
 }
 \description{
 Data for Exercise 2.23
@@ -19,12 +22,19 @@ Data for Exercise 2.23
 \examples{
 
 str(Correlat)
-attach(Correlat)
-plot(X,Y)
-model <- lm(Y~X)
+plot(Y ~ X, data = Correlat)
+model <- lm(Y ~ X, data = Correlat)
 abline(model)
+<<<<<<< HEAD
 detach(Correlat)
 
+=======
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

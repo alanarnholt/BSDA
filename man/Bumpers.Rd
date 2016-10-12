@@ -4,6 +4,7 @@
 \name{Bumpers}
 \alias{Bumpers}
 \title{Repair costs of vehicles crashed into a barrier at 5 miles per hour}
+<<<<<<< HEAD
 \format{A data frame with 23 observations on the following 2 variables.
 \describe{ 
 \item{Car}{a factor with levels \code{Buick Century}
@@ -15,16 +16,29 @@ Taurus} \code{Ford Tempo} \code{Honda Accord} \code{Hyundai Sonata}
 \code{Pontiac 6000} \code{Pontiac Grand Am} \code{Pontiac Sunbird}
 \code{Saturn SL2} \code{Subaru Legacy} \code{Toyota Camry}}
 \item{repair}{a numeric vector} 
+=======
+\format{A data frame with 23 observations on the following two variables.
+\describe{ 
+\item{car}{a factor with levels \code{Buick Century},
+\code{Buick Skylark}, \code{Chevrolet Cavalier}, \code{Chevrolet Corsica},
+\code{Chevrolet Lumina}, \code{Dodge Dynasty}, \code{Dodge Monaco}, \code{Ford
+Taurus}, \code{Ford Tempo}, \code{Honda Accord}, \code{Hyundai Sonata},
+\code{Mazda 626}, \code{Mitsubishi Galant}, \code{Nissan Stanza},
+\code{Oldsmobile Calais}, \code{Oldsmobile Ciere}, \code{Plymouth Acclaim},
+\code{Pontiac 6000}, \code{Pontiac Grand Am}, \code{Pontiac Sunbird},
+\code{Saturn SL2}, \code{Subaru Legacy}, and \code{Toyota Camry}}
+\item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Bumpers
 }
 \description{
 Data for Exercise 1.73
 }
 \examples{
 
+<<<<<<< HEAD
 str(Bumpers)
 attach(Bumpers)
 EDA(repair)
@@ -35,6 +49,17 @@ library(lattice)
 dotplot(Car~repair)
 detach(Bumpers)
 
+=======
+EDA(Bumpers$repair)
+stripchart(Bumpers$repair, method = "stack", pch = 19, col = "blue")
+library(lattice)
+dotplot(car ~ repair, data = Bumpers)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

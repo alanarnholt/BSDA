@@ -4,6 +4,7 @@
 \name{Brain}
 \alias{Brain}
 \title{Brain weight versus body weight of 28 animals}
+<<<<<<< HEAD
 \format{A data frame with 28 observations on the following 5 variables.
 \describe{ 
 \item{Species}{a factor with levels \code{Africian
@@ -17,16 +18,29 @@ elephant} \code{Asian Elephant} \code{Brachiosaurus} \code{Cat}
 \item{brain.wt}{a numeric vector} 
 \item{logbody}{a numeric vector} 
 \item{logbrain}{a numeric vector} 
+=======
+\format{A data frame with 28 observations on the following three variables.
+\describe{ 
+\item{species}{a factor with levels \code{African
+elephant}, \code{Asian Elephant}, \code{Brachiosaurus}, \code{Cat},
+\code{Chimpanzee}, \code{Cow}, \code{Diplodocus}, \code{Donkey}, \code{Giraffe},
+\code{Goat}, \code{Gorilla}, \code{Gray wolf}, \code{Guinea Pig}, \code{Hamster},
+\code{Horse}, \code{Human}, \code{Jaguar}, \code{Kangaroo}, \code{Mole},
+\code{Mouse}, \code{Mt Beaver}, \code{Pig}, \code{Potar monkey}, \code{Rabbit},
+\code{Rat}, \code{Rhesus monkey}, \code{Sheep}, and \code{Triceratops}}
+\item{bodyweight}{body weight (in kg)} 
+\item{brainweight}{brain weight (in g)} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Brain
 }
 \description{
 Data for Exercises 2.15, 2.44, 2.58 and Examples 2.3 and 2.20
 }
 \examples{
 
+<<<<<<< HEAD
 str(Brain)
 attach(Brain)
 plot(logbody,logbrain,pch=19,col="blue",main="Example 2.3")
@@ -34,6 +48,18 @@ model <- lm(logbrain~logbody)
 abline(model)
 detach(Brain)
 
+=======
+plot(log(brainweight) ~ log(bodyweight), data = Brain, 
+     pch = 19, col = "blue", main = "Example 2.3")
+mod <- lm(log(brainweight) ~ log(bodyweight), data = Brain)      
+abline(mod, lty = "dashed", col = "blue")
+
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

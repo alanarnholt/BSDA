@@ -4,6 +4,7 @@
 \name{Diesel}
 \alias{Diesel}
 \title{Diesel fuel prices in 1999-2000 in nine regions of the country}
+<<<<<<< HEAD
 \format{A data frame with 65 observations on the following 11 variables.
 \describe{ 
 \item{Date}{a factor with levels \code{1/03/2000}
@@ -33,10 +34,18 @@
 \item{WstMt}{a numeric vector} 
 \item{Coast}{a numeric vector} 
 \item{Calif}{a numeric vector}
+=======
+\format{A data frame with 650 observations on the following three variables.
+\describe{ 
+\item{date}{date when price was recorded}
+\item{pricepergallon}{price per gallon (in dollars)}
+\item{location}{a factor with levels \code{California}, \code{CentralAtlantic},
+\code{Coast}, \code{EastCoast}, \code{Gulf}, \code{LowerAtlantic}, \code{NatAvg},
+\code{NorthEast}, \code{Rocky}, and \code{WesternMountain}}
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Diesel
 }
 \description{
 Data for Exercise 2.8
@@ -44,11 +53,34 @@ Data for Exercise 2.8
 \examples{
 
 str(Diesel)
+<<<<<<< HEAD
 attach(Diesel)
 boxplot(NatAvg,EstCst,Gulf,Rocky,Calif,
 names=c("National Average","East Coast","Gulf","Rocky","California"),col="pink")
 
 
+=======
+par(las = 2)
+boxplot(pricepergallon ~ location, data = Diesel)
+boxplot(pricepergallon ~ location, 
+         data = droplevels(Diesel[Diesel$location == "EastCoast" | 
+         Diesel$location == "Gulf" | Diesel$location == "NatAvg" | 
+         Diesel$location == "Rocky" | Diesel$location == "California", ]), 
+         col = "pink", main = "Exercise 2.8")
+par(las = 1) 
+\dontrun{
+ggplot2::ggplot(data = Diesel, aes(x = date, y = pricepergallon, 
+               color = location)) + 
+               geom_point() + 
+               geom_smooth(se = FALSE) + 
+               theme_bw() + 
+               labs(y = "Price per Gallon (in dollars)")
+}         
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

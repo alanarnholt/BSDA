@@ -33,10 +33,6 @@ JOHNS} \code{ST. LUCIE} \code{SUMTER} \code{SUWANNEE} \code{TAYLOR}
 \item{PHILLIPS}{a numeric vector}
 \item{Total}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Statistical Insight Chapter 2
 }
@@ -48,6 +44,13 @@ plot(Total,BUCHANAN,xlab="Total votes cast (in thousands)",
 ylab="Votes for Buchanan")
 detach(Florida2000)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

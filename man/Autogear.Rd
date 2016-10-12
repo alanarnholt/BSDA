@@ -6,18 +6,23 @@
 \title{Number of defective auto gears produced by two manufacturers}
 \format{A data frame with 20 observations on the following 2 variables.
 \describe{ 
+<<<<<<< HEAD
 \item{A}{a numeric vector} 
 \item{B}{a numeric vector} 
+=======
+\item{defectives}{number of defective gears in the production of 100 gears per day} 
+\item{manufacturer}{a factor with levels \code{A} and \code{B}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Autogear
 }
 \description{
 Data for Exercise 7.46
 }
 \examples{
 
+<<<<<<< HEAD
 str(Autogear)
 attach(Autogear)
 t.test(A,B)
@@ -25,6 +30,16 @@ wilcox.test(A,B)
 t.test(A,B,var.equal=TRUE)
 detach(Autogear)
 
+=======
+t.test(defectives ~ manufacturer, data = Autogear)
+wilcox.test(defectives ~ manufacturer, data = Autogear)
+t.test(defectives ~ manufacturer, var.equal = TRUE, data = Autogear)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

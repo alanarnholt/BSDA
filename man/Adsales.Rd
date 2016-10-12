@@ -4,20 +4,28 @@
 \name{Adsales}
 \alias{Adsales}
 \title{Number of ads versus number of sales for a retailer of satellite dishes}
+<<<<<<< HEAD
 \format{A data frame with 6 observations on the following 2 variables.
 \describe{ 
 \item{ads}{a numeric vector} 
 \item{sales}{a numeric vector} 
+=======
+\format{A data frame with six observations on the following three variables.
+\describe{ 
+\item{month}{a character vector listing month}
+\item{ads}{a numeric vector containing number of ads} 
+\item{sales}{a numeric vector containing number of sales} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Adsales
 }
 \description{
 Data used in Exercise 9.15
 }
 \examples{
 
+<<<<<<< HEAD
 attach(Adsales)
 plot(ads,sales)
 linmod <- lm(sales~ads)
@@ -25,6 +33,18 @@ abline(linmod)
 summary(linmod)
 detach(Adsales)
 
+=======
+plot(sales ~ ads, data = Adsales)
+mod <- lm(sales ~ ads, data = Adsales)
+abline(mod)
+summary(mod)
+predict(mod, newdata = data.frame(ads = 6), interval = "conf", level = 0.99)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

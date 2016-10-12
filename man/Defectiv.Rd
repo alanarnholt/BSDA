@@ -4,16 +4,21 @@
 \name{Defectiv}
 \alias{Defectiv}
 \title{Number of defective items produced by 20 employees}
+<<<<<<< HEAD
 \format{A data frame with 20 observations on the following 4 variables.
 \describe{ 
 \item{C1}{a numeric vector} 
 \item{number}{a numeric vector} 
 \item{Count}{a numeric vector}
 \item{Percent}{a numeric vector} 
+=======
+\format{A data frame with 20 observations on one variable.
+\describe{ 
+\item{number}{number of defective items produced by the employees in a small business firm} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Defectiv
 }
 \description{
 Data for Exercise 1.27
@@ -21,12 +26,24 @@ Data for Exercise 1.27
 \examples{
 
 str(Defectiv)
+<<<<<<< HEAD
 attach(Defectiv)
 table(C1)
 barplot(table(C1),col="pink",ylab="Frequency",
 xlab="Defective Items Produced by Employees",main="Problem 1.27")
 detach(Defectiv)
 
+=======
+T1 <- xtabs(~ number, data = Defectiv)
+T1
+barplot(T1, col = "pink", ylab = "Frequency",
+xlab = "Defective Items Produced by Employees", main = "Problem 1.27")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

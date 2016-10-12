@@ -4,15 +4,22 @@
 \name{Chicken}
 \alias{Chicken}
 \title{Weight gain of chickens fed three different rations}
+<<<<<<< HEAD
 \format{A data frame with 13 observations on the following 3 variables.
 \describe{ 
 \item{Ration1}{a numeric vector} 
 \item{Ration2}{a numeric vector} 
 \item{Ration3}{a numeric vector} 
+=======
+\format{A data frame with 13 observations on the following three variables.
+\describe{ 
+\item{gain}{weight gain over a specified period} 
+\item{feed}{a factor with levels \code{ration1}, \code{ration2}, 
+and \code{ration3}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Chicken
 }
 \description{
 Data for Exercise 10.15
@@ -20,6 +27,7 @@ Data for Exercise 10.15
 \examples{
 
 str(Chicken)
+<<<<<<< HEAD
 attach(Chicken)
 STACKED <-stack(Chicken)
 STACKED[1:5,]
@@ -28,6 +36,15 @@ anova(lm(values~ind,data=STACKED))
 remove(STACKED)
 detach(Chicken)
 
+=======
+boxplot(gain ~ feed, col = c("red","blue","green"), data = Chicken)
+anova(lm(gain ~ feed, data = Chicken))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

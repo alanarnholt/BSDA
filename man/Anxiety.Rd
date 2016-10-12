@@ -4,20 +4,27 @@
 \name{Anxiety}
 \alias{Anxiety}
 \title{Math test scores versus anxiety scores before the test}
+<<<<<<< HEAD
 \format{A data frame with 20 observations on the following 2 variables.
 \describe{ 
 \item{anxiety}{a numeric vector} 
 \item{math}{a numeric vector} 
+=======
+\format{A data frame with 20 observations on the following two variables.
+\describe{ 
+\item{anxiety}{anxiety score before a major math test} 
+\item{math}{math test score} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Anxiety
 }
 \description{
 Data used in Exercise 2.96
 }
 \examples{
 
+<<<<<<< HEAD
 attach(Anxiety)
 plot(anxiety,math)
 cor(anxiety,math)
@@ -26,6 +33,20 @@ abline(linmod)
 summary(linmod)
 detach(Anxiety)
 
+=======
+plot(math ~ anxiety, data = Anxiety)
+with(data = Anxiety,
+cor(math, anxiety)
+)
+linmod <- lm(math ~ anxiety, data = Anxiety)
+abline(linmod)
+summary(linmod)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

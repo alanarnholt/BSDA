@@ -13,10 +13,6 @@
 \item{cocaine}{a numeric vector} 
 \item{marijuan}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Statistical Insight Chapter 8
 }
@@ -28,6 +24,13 @@ Inmate
 chisq.test(Inmate[,2:5])
 detach(Inmate)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -4,6 +4,7 @@
 \name{Eggs}
 \alias{Eggs}
 \title{Number of eggs versus amounts of feed supplement}
+<<<<<<< HEAD
 \format{A data frame with 12 observations on the following 7 variables.
 \describe{ 
 \item{feed}{a numeric vector} 
@@ -13,10 +14,15 @@
 \item{c1sq}{a numeric vector}
 \item{SRES2}{a numeric vector} 
 \item{FITS2}{a numeric vector} 
+=======
+\format{A data frame with 12 observations on the following two variables.
+\describe{ 
+\item{feed}{amount of feed supplement} 
+\item{eggs}{number of eggs per day for 100 chickens} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Eggs
 }
 \description{
 Data for Exercise 9.22
@@ -24,14 +30,22 @@ Data for Exercise 9.22
 \examples{
 
 str(Eggs)
-attach(Eggs)
-plot(feed,eggs)
-model <- lm(eggs~feed)
+plot(eggs ~ feed, data = Eggs)
+model <- lm(eggs ~ feed, data = Eggs)
 abline(model)
 summary(model)
+<<<<<<< HEAD
 detach(Eggs)
 remove(model)
 
+=======
+rm(model)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

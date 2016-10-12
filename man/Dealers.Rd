@@ -5,14 +5,21 @@
 \alias{Dealers}
 \title{Automobile dealers classified according to type dealership and service
 rendered to customers}
+<<<<<<< HEAD
 \format{A data frame with 6 observations on the following 2 variables.
 \describe{ 
 \item{Replace}{a numeric vector} 
 \item{Recomnd}{a numeric vector} 
+=======
+\format{A data frame with 122 observations on the following two variables.
+\describe{ 
+\item{type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
+\code{Ford}, \code{Dodge}, and \code{Saturn}} 
+\item{service}{a factor with levels \code{Replaces unnecessarily} and \code{Follows manufacturer guidelines}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Dealers
 }
 \description{
 Data for Example 2.22
@@ -20,6 +27,7 @@ Data for Example 2.22
 \examples{
 
 str(Dealers)
+<<<<<<< HEAD
 attach(Dealers)
 Deal <- as.matrix(Dealers)
 rownames(Deal) <- c("Honda","Toyota","Mazda","Ford","Dodge","Saturn")
@@ -28,6 +36,20 @@ barplot(t(Deal),beside=TRUE,legend=TRUE)
 detach(Dealers)
 remove(Deal)
 
+=======
+xtabs(~type + service, data = Dealers)
+T1 <- xtabs(~type + service, data = Dealers)
+T1
+addmargins(T1)
+pt <- prop.table(T1, margin = 1)
+pt
+barplot(t(pt),  col = c("red", "skyblue"), legend = colnames(T1))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

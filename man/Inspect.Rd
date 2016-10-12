@@ -13,10 +13,6 @@ dealer} \code{tire store}}
 \item{X70.85}{a numeric vector} 
 \item{great85}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 5.89
 }
@@ -28,6 +24,13 @@ Inspect
 chisq.test(Inspect[,2:4])
 detach(Inspect)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

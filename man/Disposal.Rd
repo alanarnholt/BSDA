@@ -3,14 +3,17 @@
 \docType{data}
 \name{Disposal}
 \alias{Disposal}
-\title{Toxic intensity for plants producing herbicidal preparations}
+\title{Toxic intensity for manufacturing plants producing herbicidal preparations}
 \format{A data frame with 29 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{pounds}{a numeric vector} 
+=======
+\item{pounds}{pounds of toxic waste per $1000 of shipments of its products} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Disposal
 }
 \description{
 Data for Exercise 1.127
@@ -18,12 +21,23 @@ Data for Exercise 1.127
 \examples{
 
 str(Disposal)
+<<<<<<< HEAD
 attach(Disposal)
 stem(pounds)
 fivenum(pounds)
 EDA(pounds)
 detach(Disposal)
 
+=======
+stem(Disposal$pounds)
+fivenum(Disposal$pounds)
+EDA(Disposal$pounds)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

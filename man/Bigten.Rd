@@ -4,6 +4,7 @@
 \name{Bigten}
 \alias{Bigten}
 \title{Graduation rates for student athletes and nonathletes in the Big Ten Conf.}
+<<<<<<< HEAD
 \format{A data frame with 11 observations on the following 5 variables.
 \describe{ 
 \item{School}{a factor with levels \code{Illinois}
@@ -14,16 +15,27 @@
 \item{X1984.85athletes}{a numeric vector}
 \item{X1993.94students}{a numeric vector}
 \item{X1993.94athletes}{a numeric vector} 
+=======
+\format{A data frame with 44 observations on the following four variables.
+\describe{ 
+\item{school}{a factor with levels \code{Illinois}
+\code{Indiana} \code{Iowa} \code{Michigan} \code{Michigan State}
+\code{Minnesota} \code{Northwestern} \code{Ohio State} \code{Penn State}
+\code{Purdue} \code{Wisconsin}} 
+\item{rate}{graduation rate} 
+\item{year}{factor with two levels \code{1984-1985} and \code{1993-1994}}
+\item{status}{factor with two levels \code{athlete} and \code{student}}
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Bigten
 }
 \description{
 Data for Exercises 1.124 and 2.94
 }
 \examples{
 
+<<<<<<< HEAD
 str(Bigten)
 attach(Bigten)
 boxplot(X1993.94students,X1993.94athletes,names=c("Students","Athletes"),
@@ -32,6 +44,18 @@ plot(X1993.94students,X1993.94athletes,xlab="1993-1994 students",
 ylab="1993-1994 athletes")
 detach(Bigten)
 
+=======
+boxplot(rate ~ status, data = subset(Bigten, year = "1993-1994"), 
+horizontal = TRUE, main = "Graduation Rates 1993-1994")
+with(data = Bigten,
+     tapply(rate, list(year, status), mean)
+    )
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

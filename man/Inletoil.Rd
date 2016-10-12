@@ -8,10 +8,6 @@
 \describe{ 
 \item{temp}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 5.91 and 6.48
 }
@@ -23,6 +19,13 @@ t.test(temp)$conf
 t.test(temp,mu=98,alternative="less")
 detach(Inletoil)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

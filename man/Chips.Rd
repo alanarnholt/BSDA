@@ -5,6 +5,7 @@
 \alias{Chips}
 \title{Four measurements on a first wafer and four measurements on a second wafer
 selected from 30 lots}
+<<<<<<< HEAD
 \format{A data frame with 30 observations on the following 8 variables.
 \describe{ 
 \item{wafer11}{a numeric vector} 
@@ -15,10 +16,26 @@ selected from 30 lots}
 \item{wafer22}{a numeric vector} 
 \item{wafer23}{a numeric vector} 
 \item{wafer24}{a numeric vector} 
+=======
+\format{A data frame with 30 observations on the following eight variables.
+\describe{ 
+\item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
+\item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
+\item{wafer13}{third measurement of thickness of the oxide layer for \code{wafer1}}
+\item{wafer14}{fourth measurement of thickness of the oxide layer for \code{wafer1}}
+\item{wafer21}{first measurement of thickness of the oxide layer for \code{wafer2}} 
+\item{wafer22}{second measurement of thickness of the oxide layer for \code{wafer2}} 
+\item{wafer23}{third measurement of thickness of the oxide layer for \code{wafer2}} 
+\item{wafer24}{fourth measurement of thickness of the oxide layer for \code{wafer2}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
 \source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
+for Monitoring Parameters of a Nested Random Effect Model.} 
+\emph{Journal of the American Statistical Association}, 90, 729-738.
+}
+\usage{
+Chips
 }
 \description{
 Data for Exercise 10.9
@@ -26,10 +43,21 @@ Data for Exercise 10.9
 \examples{
 
 str(Chips)
+<<<<<<< HEAD
 attach(Chips)
 boxplot(wafer11,wafer12,wafer13,wafer14,wafer21,wafer22,wafer23,wafer24)
 detach(Chips)
 
+=======
+with(data = Chips, 
+boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, wafer22, wafer23, wafer24)
+)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

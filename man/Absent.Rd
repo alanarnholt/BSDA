@@ -4,28 +4,45 @@
 \name{Absent}
 \alias{Absent}
 \title{Number of absent days for 20 employees}
+<<<<<<< HEAD
 \format{A data frame with 20 observations on the following 4 variables.
 \describe{ 
 \item{days}{a numeric vector} 
 \item{days_1}{a numeric vector} 
 \item{Count}{a numeric vector}
 \item{Percent}{a numeric vector} 
+=======
+\format{A data frame with 20 observations on one variable.
+\describe{ 
+\item{days}{a numeric vector} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Absent
 }
 \description{
 Data used in Exercise 1.28
 }
 \examples{
 
+<<<<<<< HEAD
 data(Absent)
 attach(Absent)
 table(days)
 barplot(table(days),col="pink")
 detach(Absent)
 
+=======
+CT <- xtabs(~ days, data = Absent)
+CT
+barplot(CT, col = "pink")
+plot(ecdf(Absent$days), main = "ECDF")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

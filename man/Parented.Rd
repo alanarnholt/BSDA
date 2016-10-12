@@ -12,10 +12,6 @@ degree} \code{Doctoral degree} \code{Grad degree} \code{H.S grad or less}
 \item{Mother}{a numeric vector} 
 \item{Father}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.32
 }
@@ -30,6 +26,13 @@ barplot(t(MAT),beside=TRUE,legend=TRUE,col=c("blue","red"))
 detach(Parented) 
 remove(MAT)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

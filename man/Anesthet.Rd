@@ -6,17 +6,21 @@
 \title{Recovery times for anesthetized patients}
 \format{A data frame with 10 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{recover}{a numeric vector} 
+=======
+\item{recover}{recovery time (in hours)} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Anesthet
 }
 \description{
 Data used in Exercise 5.58
 }
 \examples{
 
+<<<<<<< HEAD
 attach(Anesthet)
 str(Anesthet)
 qqnorm(recover)
@@ -24,6 +28,18 @@ qqline(recover)
 t.test(recover,conf.level=0.90)$conf
 detach(Anesthet)
 
+=======
+qqnorm(Anesthet$recover)
+qqline(Anesthet$recover)
+with(data = Anesthet,
+t.test(recover, conf.level = 0.90)$conf
+)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

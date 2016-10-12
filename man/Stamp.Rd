@@ -10,10 +10,6 @@
 \item{thick}{a numeric vector} 
 \item{freq}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Statistical Insight Chapter 1 and Exercise 5.110
 }
@@ -26,6 +22,13 @@ lines(density(thickness),lwd=2,col="blue")
 t.test(thickness,conf.level=.99)$conf
 detach(Stamp)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

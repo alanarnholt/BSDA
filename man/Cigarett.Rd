@@ -4,14 +4,20 @@
 \name{Cigarett}
 \alias{Cigarett}
 \title{Effect of mother's smoking on birth weight of newborn}
+<<<<<<< HEAD
 \format{A data frame with 16 observations on the following 2 variables.
 \describe{ 
 \item{cigarett}{a numeric vector} 
 \item{weight}{a numeric vector} 
+=======
+\format{A data frame with 16 observations on the following two variables.
+\describe{ 
+\item{cigarettes}{mothers' estimated average number of cigarettes smoked per day} 
+\item{weight}{children's birth weights (in pounds)} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Cigarett
 }
 \description{
 Data for Exercise 2.27
@@ -19,13 +25,23 @@ Data for Exercise 2.27
 \examples{
 
 str(Cigarett)
-attach(Cigarett)
-plot(cigarett,weight)
-model <- lm(weight~cigarett)
+plot(weight ~ cigarettes, data = Cigarett)
+model <- lm(weight ~ cigarettes, data = Cigarett)
 abline(model)
+<<<<<<< HEAD
 cor(weight,cigarett)
 detach(Cigarett)
 
+=======
+with(data = Cigarett,
+cor(weight, cigarettes)
+)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

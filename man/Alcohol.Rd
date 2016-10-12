@@ -6,22 +6,40 @@
 \title{Ages at which 14 female alcoholics began drinking}
 \format{A data frame with 14 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{age}{a numeric vector} }}
 \source{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
+=======
+\item{age}{age when individual started drinking} 
+}}
+\usage{
+Alcohol
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \description{
 Data used in Exercise 5.79
 }
 \examples{
 
+<<<<<<< HEAD
 attach(Alcohol)
 qqnorm(age)
 qqline(age)
 SIGN.test(age,md=20,conf.level=0.99)
 detach(Alcohol)
 
+=======
+qqnorm(Alcohol$age)
+qqline(Alcohol$age)
+SIGN.test(Alcohol$age, md = 20, conf.level = 0.99)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

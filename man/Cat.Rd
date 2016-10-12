@@ -6,11 +6,14 @@
 \title{Reading scores on the California achievement test for a group of 3rd graders}
 \format{A data frame with 17 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{score}{a numeric vector} 
+=======
+\item{score}{reading score on the California Achievement Test} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Cat
 }
 \description{
 Data for Exercise 1.116
@@ -18,12 +21,23 @@ Data for Exercise 1.116
 \examples{
 
 str(Cat)
+<<<<<<< HEAD
 attach(Cat)
 stem(score)
 fivenum(score)
 boxplot(score,main="Problem 1.116",col="green")
 detach(Cat)
 
+=======
+stem(Cat$score)
+fivenum(Cat$score)
+boxplot(Cat$score, main = "Problem 1.116", col = "green")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

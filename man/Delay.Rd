@@ -4,6 +4,7 @@
 \name{Delay}
 \alias{Delay}
 \title{Delay times on 20 flights from four major air carriers}
+<<<<<<< HEAD
 \format{A data frame with 80 observations on the following 6 variables.
 \describe{ 
 \item{CarrierA}{a numeric vector}
@@ -12,10 +13,15 @@
 \item{CarrierD}{a numeric vector} 
 \item{delay}{a numeric vector} 
 \item{Carrier}{a numeric vector} 
+=======
+\format{A data frame with 80 observations on the following two variables.
+\describe{ 
+\item{delay}{the delay time (in minutes) for 80 randomly selected flights}
+\item{carrier}{a factor with levels \code{A}, \code{B}, \code{C}, and \code{D}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Delay
 }
 \description{
 Data for Exercise 10.55
@@ -23,11 +29,21 @@ Data for Exercise 10.55
 \examples{
 
 str(Delay)
+<<<<<<< HEAD
 attach(Delay)
 boxplot(delay~Carrier)
 kruskal.test(delay~as.factor(Carrier))
 detach(Delay)
 
+=======
+boxplot(delay ~ carrier, data = Delay)
+kruskal.test(delay ~carrier, data = Delay)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

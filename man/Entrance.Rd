@@ -6,11 +6,14 @@
 \title{College entrance exam scores for 24 high school seniors}
 \format{A data frame with 24 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{score}{a numeric vector} 
+=======
+\item{score}{college entrance exam score} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Entrance
 }
 \description{
 Data for Example 1.8
@@ -18,10 +21,20 @@ Data for Example 1.8
 \examples{
 
 str(Entrance)
+<<<<<<< HEAD
 attach(Entrance)
 stem(score)
 detach(Entrance)
 
+=======
+stem(Entrance$score)
+stem(Entrance$score, scale = 2)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

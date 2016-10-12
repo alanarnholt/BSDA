@@ -23,10 +23,6 @@ illustration of Simpson's paradox}
 \item{gradept}{a numeric vector} 
 \item{gender2}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Example 1.18
 }
@@ -43,6 +39,13 @@ ylab="Grade Point Average",main="GPA vs Gender by Sports")
 par(mfrow=c(1,1))
 detach(Simpson)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

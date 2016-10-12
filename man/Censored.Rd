@@ -5,6 +5,7 @@
 \alias{Censored}
 \title{Entry age and survival time of patients with small cell lung cancer under
 two different treatments}
+<<<<<<< HEAD
 \format{A data frame with 121 observations on the following 8 variables.
 \describe{ 
 \item{survivA}{a numeric vector} 
@@ -15,10 +16,21 @@ two different treatments}
 \item{censorB}{a numeric vector} 
 \item{survival}{a numeric vector} 
 \item{group}{a numeric vector} 
+=======
+\format{A data frame with 121 observations on the following 3 variables.
+\describe{ 
+\item{survival}{survival time (in days) of patients with small cell lung cancer} 
+\item{treatment}{a factor with levels \code{armA} and \code{armB} indicating the 
+treatment a patient received} 
+\item{age}{the age of the patient} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
 \source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Ying, Z., Jung, S., Wei, L. 1995. \dQuote{Survival Analysis with Median Regression Models.} 
+\emph{Journal of the American Statistical Association}, 90, 178-184.
+}
+\usage{
+Censored
 }
 \description{
 Data for Exercises 7.34 and 7.48
@@ -26,10 +38,20 @@ Data for Exercises 7.34 and 7.48
 \examples{
 
 str(Censored)
+<<<<<<< HEAD
 attach(Censored)
 boxplot(survival~group)
 detach(Censored)
 
+=======
+boxplot(survival ~ treatment, data = Censored)
+wilcox.test(survival ~ treatment, data = Censored, alternative = "greater")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

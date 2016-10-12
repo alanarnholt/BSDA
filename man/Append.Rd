@@ -6,17 +6,21 @@
 \title{Median costs of an appendectomy at 20 hospitals in North Carolina}
 \format{A data frame with 20 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{fee}{a numeric vector} 
+=======
+\item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Append
 }
 \description{
 Data for Exercise 1.119
 }
 \examples{
 
+<<<<<<< HEAD
 str(Append)
 attach(Append)
 ll <- mean(fee)-2*sd(fee)
@@ -26,6 +30,19 @@ limits
 fee[fee<ll | fee>ul]
 detach(Append)
 
+=======
+fee <- Append$fee
+ll <- mean(fee) - 2*sd(fee)
+ul <- mean(fee) + 2*sd(fee)
+limits <-c(ll, ul)
+limits
+fee[fee < ll | fee > ul]
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

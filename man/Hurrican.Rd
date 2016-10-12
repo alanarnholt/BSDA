@@ -13,10 +13,6 @@
 \code{warm}} 
 \item{code}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercises 1.38, 10.19, and Example 1.6
 }
@@ -30,6 +26,13 @@ boxplot(storms~ElNino)
 anova(lm(storms~ElNino))
 detach(Hurrican)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

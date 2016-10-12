@@ -5,21 +5,29 @@
 \alias{Cabinets}
 \title{Estimates of costs of kitchen cabinets by two suppliers on 20 prospective
 homes}
+<<<<<<< HEAD
 \format{A data frame with 20 observations on the following 3 variables.
 \describe{ 
 \item{Home}{a numeric vector} 
 \item{SupplA}{a numeric vector} 
 \item{SupplB}{a numeric vector} 
+=======
+\format{A data frame with 20 observations on the following three variables.
+\describe{ 
+\item{home}{a numeric vector} 
+\item{supplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
+\item{supplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Cabinets
 }
 \description{
 Data for Exercise 7.83
 }
 \examples{
 
+<<<<<<< HEAD
 str(Cabinets)
 attach(Cabinets)
 DIF <- SupplA - SupplB
@@ -31,6 +39,24 @@ wilcox.test(SupplA,SupplB,paired=TRUE)
 detach(Cabinets)
 remove(DIF)
 
+=======
+DIF <- Cabinets$supplA - Cabinets$supplB
+qqnorm(DIF)
+qqline(DIF)
+shapiro.test(DIF)
+with(data = Cabinets, 
+     t.test(supplA, supplB, paired = TRUE)
+)
+with(data = Cabinets,
+     wilcox.test(supplA, supplB, paired = TRUE)
+)
+rm(DIF)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

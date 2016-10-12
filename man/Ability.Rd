@@ -4,6 +4,7 @@
 \name{Ability}
 \alias{Ability}
 \title{Perceived math ability for 13-year olds by gender}
+<<<<<<< HEAD
 \format{A data frame with 2 observations on the following 6 variables.
 \describe{ 
 \item{gender}{a factor with levels \code{boys} \code{girls}} 
@@ -12,19 +13,35 @@
 \item{average}{a numeric vector} 
 \item{aboveavg}{a numeric vector} 
 \item{superior}{a numeric vector} 
+=======
+\format{A data frame with 400 observations on two variables.
+\describe{ 
+\item{gender}{a factor with levels \code{girls} and \code{boys}} 
+\item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Ability
 }
 \description{
 Data used in Exercise 8.57
 }
 \examples{
 
+<<<<<<< HEAD
 X <- as.matrix(Ability[1:2,2:6])
 chisq.test(X)
 
+=======
+CT <- xtabs(~gender + ability, data = Ability)
+CT
+chisq.test(CT)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

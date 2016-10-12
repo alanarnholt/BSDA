@@ -4,6 +4,7 @@
 \name{Crime}
 \alias{Crime}
 \title{Violent crime rates for the states in 1983 and 1993}
+<<<<<<< HEAD
 \format{A data frame with 51 observations on the following 3 variables.
 \describe{ 
 \item{State}{a factor with levels \code{Alabama}
@@ -21,10 +22,28 @@
 Virginia} \code{Wisconsin} \code{Wyoming}} 
 \item{X1983}{a numeric vector} 
 \item{X1993}{a numeric vector} 
+=======
+\format{A data frame with 102 observations on the following three variables.
+\describe{ 
+\item{state}{a factor with levels \code{Alabama},
+\code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+\code{Colorado}, \code{Connecticut}, \code{DC}, \code{Delaware}, \code{Florida},
+\code{Georgia}, \code{Hawaii}, \code{Idaho}, \code{Illinois}, \code{Indiana},
+\code{Iowa}, \code{Kansas}, \code{Kentucky}, \code{Louisiana}, \code{Maine},
+\code{Maryland}, \code{Massachusetts}, \code{Michigan}, \code{Minnesota},
+\code{Mississippi}, \code{Missour}, \code{Montana}, \code{Nebraska},
+\code{Nevada}, \code{New Hampshire}, \code{New Jersey}, \code{New Mexico},
+\code{New York}, \code{North Carolina}, \code{North Dakota}, \code{Ohio},
+\code{Oklahoma}, \code{Oregon}, \code{Pennsylvania}, \code{Rhode Island},
+\code{South Carolina}, \code{South Dakota}, \code{Tennessee}, \code{Texas},
+\code{Utah}, \code{Vermont}, \code{Virginia}, \code{Washington}, \code{West
+Virginia}, \code{Wisconsin}, and \code{Wyoming}}
+\item{year}{a factor with levels \code{1983} and \code{1993}} 
+\item{rate}{crime rate per 100,000 inhabitants} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Crime
 }
 \description{
 Data for Exercises 1.90, 2.32, 3.64, and 5.113
@@ -32,12 +51,21 @@ Data for Exercises 1.90, 2.32, 3.64, and 5.113
 \examples{
 
 str(Crime)
+<<<<<<< HEAD
 attach(Crime)
 boxplot(X1983,X1993,names=c("1983","1993"),xlab="Year",
 ylab="Crime Rate per 100,000 Inhabitants",main="Problem 1.90")
 plot(X1983,X1993)
 detach(Crime)
 
+=======
+boxplot(rate ~ year, data = Crime)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

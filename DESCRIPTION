@@ -1,7 +1,7 @@
 Package: BSDA
 Type: Package
 Title: Basic Statistics and Data Analysis
-Version: 1.02
+Version: 1.0.2
 Date: 2016-02-25
 LazyData: yes
 Author: Alan T. Arnholt
@@ -13,4 +13,11 @@ Depends:
 Imports:
     e1071
 License: GPL (>= 2)
+    lattice,
+    R (>= 2.10)
+Imports:
+    e1071
+License: GPL (>= 2)
+Suggests:
+    ggplot2 (>= 2.1.0)
 RoxygenNote: 5.0.1

@@ -18,22 +18,18 @@ NULL
 #' @docType data
 #' @format A data frame with 50 observations on the following variable.
 #' \describe{ 
-#' \item{C1}{a numeric vector} 
+#' \item{price}{daily price returns (in pence) of Abbey National shares} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Abbey)
-#' EDA(C1)
-#' t.test(C1,mu=300)
-#' detach(Abbey)
+#' qqnorm(Abbey$price)
+#' qqline(Abbey$price)
+#' t.test(Abbey$price, mu = 300)
 #' 
-NULL
-
-
-
+"Abbey"
 
 
 #' Three samples to illustrate analysis of variance
@@ -43,26 +39,20 @@ NULL
 #' 
 #' @name Abc
 #' @docType data
-#' @format A data frame with 18 observations on the following 3 variables.
+#' @format A data frame with 51 observations on two variables.
 #' \describe{ 
-#' \item{GroupA}{a numeric vector}
-#' \item{GroupB}{a numeric vector}
-#' \item{GroupC}{a numeric vector}
+#' \item{response}{a numeric vector}
+#' \item{group}{a factor with levels \code{A}, \code{B}, and \code{C}}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Abc)
-#' STACKED <-stack(Abc)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Abc)
+#' boxplot(response ~ group, col=c("red", "blue", "green"), data = Abc )
+#' anova(lm(response ~ group, data = Abc))
 #' 
-NULL
+"Abc"
 
 
 
@@ -75,31 +65,37 @@ NULL
 #' 
 #' @name Abilene
 #' @docType data
-#' @format A data frame with 8 observations on the following 5 variables.
+#' @format A data frame with 16 observations on three variables.
 #' \describe{ 
-#' \item{Crime}{a factor with levels \code{Aggravated
-#' assault} \code{Arson} \code{Burglary} \code{Forcible rape} \code{Larceny
-#' theft} \code{Murder} \code{Robbery} \code{Vehicle theft}}
-#' \item{X1992}{a numeric vector} 
-#' \item{X92percent}{a numeric vector} 
-#' \item{X1999}{a numeric vector} 
-#' \item{X99percent}{a numeric vector} }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' \item{crimetype}{a factor with levels \code{Aggravated
+#' assault}, \code{Arson}, \code{Burglary}, \code{Forcible rape}, \code{Larceny
+#' theft}, \code{Murder}, \code{Robbery}, and \code{Vehicle theft}.}
+#' \item{year}{a factor with levels \code{1992} and \code{1999}} 
+#' \item{number}{number of reported crimes} 
+#' }
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Abilene)
-#' attach(Abilene)
-#' par(mfrow=c(2,1))
-#' barplot(X1992,names.arg=c("Murder","Rape","Robbery","Assault","Burglary",
-#' "Larceny","V.Theft","Arson"),col="blue",main="Crime 1992")
-#' barplot(X1999,names.arg=c("Murder","Rape","Robbery","Assault","Burglary",
-#' "Larceny","V.Theft","Arson"),col="red",main="Crime 1999")
-#' par(mfrow=c(1,1))
-#' detach(Abilene)
+#' par(mfrow = c(2, 1))
+#' barplot(Abilene$number[Abilene$year=="1992"],
+#' names.arg = Abilene$crimetype[Abilene$year == "1992"],
+#' main = "1992 Crime Stats", col = "red")
+#' barplot(Abilene$number[Abilene$year=="1999"],
+#' names.arg = Abilene$crimetype[Abilene$year == "1999"],
+#' main = "1999 Crime Stats", col = "blue")
+#' par(mfrow = c(1, 1))
 #' 
-NULL
+#' \dontrun{
+#' library(ggplot2)
+#' ggplot(data = Abilene, aes(x = crimetype, y = number, fill = year)) +
+#' geom_bar(stat = "identity", position = "dodge") +
+#' theme_bw() +
+#' theme(axis.text.x = element_text(angle = 30, hjust = 1))
+#' }
+#' 
+"Abilene"
 
 
 
@@ -112,24 +108,21 @@ NULL
 #' 
 #' @name Ability
 #' @docType data
-#' @format A data frame with 2 observations on the following 6 variables.
+#' @format A data frame with 400 observations on two variables.
 #' \describe{ 
-#' \item{gender}{a factor with levels \code{boys} \code{girls}} 
-#' \item{hopeless}{a numeric vector}
-#' \item{belowavg}{a numeric vector} 
-#' \item{average}{a numeric vector} 
-#' \item{aboveavg}{a numeric vector} 
-#' \item{superior}{a numeric vector} 
+#' \item{gender}{a factor with levels \code{girls} and \code{boys}} 
+#' \item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' X <- as.matrix(Ability[1:2,2:6])
-#' chisq.test(X)
+#' CT <- xtabs(~gender + ability, data = Ability)
+#' CT
+#' chisq.test(CT)
 #' 
-NULL
+"Ability"
 
 
 
@@ -137,12 +130,12 @@ NULL
 
 #' Abortion rate by region of country
 #' 
-#' Data use in Exercise 8.51
+#' Data used in Exercise 8.51
 #' 
 #' 
 #' @name Abortion
 #' @docType data
-#' @format A data frame with 51 observations on the following 9 variables.
+#' @format A data frame with 51 observations on the following 10 variables.
 #' \describe{ 
 #' \item{state}{a factor with levels \code{alabama}
 #' \code{alaska} \code{arizona} \code{arkansas} \code{california}
@@ -160,27 +153,24 @@ NULL
 #' \item{region}{a factor with levels \code{midwest} \code{northeast}
 #' \code{south} \code{west}} 
 #' \item{regcode}{a numeric vector}
-#' \item{X88rate}{a numeric vector} 
-#' \item{X92rate}{a numeric vector} 
-#' \item{X96rate}{a numeric vector} 
-#' \item{X88provid}{a numeric vector} 
-#' \item{X92provid}{a numeric vector}
+#' \item{rate1988}{a numeric vector} 
+#' \item{rate1992}{a numeric vector} 
+#' \item{rate1996}{a numeric vector} 
+#' \item{provide1988}{a numeric vector} 
+#' \item{provide1992}{a numeric vector}
 #' \item{lowhigh}{a numeric vector} 
+#' \item{rate}{a factor with levels \code{Low} and \code{High}}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Abortion)
-#' AbortionRate <- cut(X96rate,breaks=c(0,20,10000) )
-#' levels(AbortionRate) <- c("Low","High")
-#' table(region,AbortionRate)
-#' chisq.test(table(region,AbortionRate))
-#' detach(Abortion)
+#' T1 <- xtabs(~region + rate, data = Abortion)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
-
+"Abortion"
 
 
 
@@ -192,25 +182,21 @@ NULL
 #' 
 #' @name Absent
 #' @docType data
-#' @format A data frame with 20 observations on the following 4 variables.
+#' @format A data frame with 20 observations on one variable.
 #' \describe{ 
 #' \item{days}{a numeric vector} 
-#' \item{days_1}{a numeric vector} 
-#' \item{Count}{a numeric vector}
-#' \item{Percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Absent)
-#' attach(Absent)
-#' table(days)
-#' barplot(table(days),col="pink")
-#' detach(Absent)
+#' CT <- xtabs(~ days, data = Absent)
+#' CT
+#' barplot(CT, col = "pink")
+#' plot(ecdf(Absent$days), main = "ECDF")
 #' 
-NULL
+"Absent"
 
 
 
@@ -223,25 +209,20 @@ NULL
 #' 
 #' @name Achieve
 #' @docType data
-#' @format A data frame with 25 observations on the following 4 variables.
+#' @format A data frame with 25 observations on the following two variables.
 #' \describe{ 
-#' \item{Score}{a numeric vector} 
-#' \item{Gender}{a numeric vector} 
-#' \item{Female}{a numeric vector}
-#' \item{Male}{a numeric vector} 
+#' \item{score}{mathematics achiement score} 
+#' \item{gender}{a factor with 2 levels \code{boys} and \code{girls}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Achieve)
-#' attach(Achieve)
-#' anova(lm(Score~Gender))
-#' t.test(Female,Male,var.equal=TRUE)
-#' detach(Achieve)
+#' anova(lm(score ~ gender, data = Achieve))
+#' t.test(score ~ gender, var.equal = TRUE, data = Achieve)
 #' 
-NULL
+"Achieve"
 
 
 
@@ -254,24 +235,24 @@ NULL
 #' 
 #' @name Adsales
 #' @docType data
-#' @format A data frame with 6 observations on the following 2 variables.
+#' @format A data frame with six observations on the following three variables.
 #' \describe{ 
-#' \item{ads}{a numeric vector} 
-#' \item{sales}{a numeric vector} 
+#' \item{month}{a character vector listing month}
+#' \item{ads}{a numeric vector containing number of ads} 
+#' \item{sales}{a numeric vector containing number of sales} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Adsales)
-#' plot(ads,sales)
-#' linmod <- lm(sales~ads)
-#' abline(linmod)
-#' summary(linmod)
-#' detach(Adsales)
+#' plot(sales ~ ads, data = Adsales)
+#' mod <- lm(sales ~ ads, data = Adsales)
+#' abline(mod)
+#' summary(mod)
+#' predict(mod, newdata = data.frame(ads = 6), interval = "conf", level = 0.99)
 #' 
-NULL
+"Adsales"
 
 
 
@@ -279,29 +260,28 @@ NULL
 
 #' Agressive tendency scores for a group of teenage members of a street gang
 #' 
-#' Data used in Exercises 1.61 and 1.81
+#' Data used in Exercises 1.66 and 1.81
 #' 
 #' 
 #' @name Aggress
 #' @docType data
 #' @format A data frame with 28 observations on the following variable.
 #' \describe{ 
-#' \item{aggres}{a numeric vector} 
+#' \item{aggres}{measure of aggresive tendency} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Aggress)
-#' attach(Aggress)
-#' EDA(aggres)
+#' with(data = Aggress,
+#'      EDA(aggres))
 #' # OR
-#' IQR(aggres)
-#' diff(range(aggres))
-#' detach(Aggress)
-#' 
-NULL
+#' IQR(Aggress$aggres)
+#' diff(range(Aggress$aggres))
+#'
+"Aggress"
 
 
 
@@ -314,9 +294,9 @@ NULL
 #' 
 #' @name Aid
 #' @docType data
-#' @format A data frame with 51 observations on the following 2 variables.
+#' @format A data frame with 51 observations on the following two variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
+#' \item{state}{a factor with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 #' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
 #' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
@@ -329,22 +309,20 @@ NULL
 #' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
 #' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-#' \item{payment}{a numeric vector} 
+#' \item{payment}{average monthly payment per person in a family} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Aid)
-#' attach(Aid)
-#' hist(payment)
-#' boxplot(payment)
-#' library(lattice)
-#' dotplot(State~payment)
-#' detach(Aid)
+#' hist(Aid$payment, xlab = "payment", main = "Your Title Here", 
+#' col = "lightblue")
+#' boxplot(Aid$payment)
+#' dotplot(state ~ payment, data = Aid)
 #' 
-NULL
+"Aid"
 
 
 
@@ -358,31 +336,27 @@ NULL
 #' 
 #' @name Aids
 #' @docType data
-#' @format A data frame with 295 observations on the following 11 variables.
+#' @format A data frame with 295 observations on the following three variables.
 #' \describe{ 
-#' \item{duration}{a numeric vector} 
-#' \item{age}{a numeric vector} 
+#' \item{duration}{time (in months) from HIV infection to the clinical manifestation of full-blown AIDS} 
+#' \item{age}{age (in years) of patient} 
 #' \item{group}{a numeric vector}
-#' \item{duratio1}{a numeric vector} 
-#' \item{children}{a numeric vector} 
-#' \item{duratio2}{a numeric vector} 
-#' \item{adults}{a numeric vector} 
-#' \item{duratio3}{a numeric vector}
-#' \item{elderly}{a numeric vector} 
-#' \item{SRES1}{a numeric vector} 
-#' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Aids)
-#' attach(Aids)
+#' with(data = Aids,
 #' EDA(duration)
-#' t.test(duration,mu=30,alternative="greater")
-#' SIGN.test(duration,md=24,alternative="greater")
-#' detach(Aids)
+#' )
+#' with(data = Aids, 
+#' t.test(duration, mu = 30, alternative = "greater")
+#' )
+#' with(data = Aids, 
+#' SIGN.test(duration, md = 24, alternative = "greater")
+#' )
 #' 
 NULL
 
@@ -397,33 +371,26 @@ NULL
 #' 
 #' @name Airdisasters
 #' @docType data
-#' @format A data frame with 141 observations on the following 7 variables.
+#' @format A data frame with 141 observations on the following seven variables.
 #' \describe{ 
-#' \item{year}{a numeric vector} 
-#' \item{deaths}{a numeric vector} 
-#' \item{X1950}{a numeric vector}
-#' \item{X1960}{a numeric vector} 
-#' \item{X1970}{a numeric vector} 
-#' \item{X1980}{a numeric vector} 
-#' \item{X1990}{a numeric vector} 
+#' \item{year}{a numeric vector indicating the year of an aircraft accident} 
+#' \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
+#' \item{decade}{a character vector indicating the decade of an aircraft accident} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Airdisasters)
-#' STA <- stack(Airdisasters[ ,3:7])
-#' library(lattice)
-#' dotplot(ind ~ values, data = STA)
-#' stripchart(x = list(X1950, X1960, X1970, X1980, X1990), 
-#' method = "stack", main = "", pch = 1, col = "red", 
-#' group.names = c("1950", "1960", "1970", "1980", "1990"),
-#' xlab = "Number of Fatalities")
-#' title(main = "Aircraft Disasters 1950-1990") 
-#' detach(Airdisasters)
+#' par(las = 1)
+#' stripchart(deaths ~ decade, data = Airdisasters, 
+#'            subset = decade != "1930s" & decade != "1940s", 
+#'            method = "stack", pch = 19, cex = 0.5, col = "red", 
+#'            main = "Aircraft Disasters 1950 - 1990", 
+#'            xlab = "Number of fatalities")
+#' par(las = 0)
 #' 
-NULL
+"Airdisasters"
 
 
 
@@ -436,27 +403,27 @@ NULL
 #' 
 #' @name Airline
 #' @docType data
-#' @format A data frame with 11 observations on the following 3 variables.
+#' @format A data frame with 11 observations on the following three variables.
 #' \describe{ 
-#' \item{airline}{a factor with levels \code{Alaska}
+#' \item{airline}{a charater variable with values \code{Alaska}
 #' \code{Amer West} \code{American} \code{Continental} \code{Delta}
 #' \code{Northwest} \code{Pan Am} \code{Southwest} \code{TWA} \code{United}
 #' \code{USAir}} 
 #' \item{ontime}{a numeric vector}
-#' \item{complnt}{a numeric vector} 
+#' \item{complaints}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Airline)
-#' attach(Airline)
-#' barplot(complnt,names.arg=airline,col="lightblue")
-#' plot(ontime,complnt)
-#' detach(Airline)
+#' with(data = Airline, 
+#' barplot(complaints, names.arg = airline, col = "lightblue")
+#' )
+#' plot(complaints ~ ontime, data = Airline, pch = 19, col = "red",
+#' xlab = "On time", ylab = "Complaints")
 #' 
-NULL
+"Airline"
 
 
 
@@ -471,22 +438,18 @@ NULL
 #' @docType data
 #' @format A data frame with 14 observations on the following variable.
 #' \describe{ 
-#' \item{age}{a numeric vector} }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' \item{age}{age when individual started drinking} 
+#' }
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Alcohol)
-#' qqnorm(age)
-#' qqline(age)
-#' SIGN.test(age,md=20,conf.level=0.99)
-#' detach(Alcohol)
+#' qqnorm(Alcohol$age)
+#' qqline(Alcohol$age)
+#' SIGN.test(Alcohol$age, md = 20, conf.level = 0.99)
 #' 
-NULL
-
-
-
+"Alcohol"
 
 
 #' Allergy medicines by adverse events
@@ -496,27 +459,23 @@ NULL
 #' 
 #' @name Allergy
 #' @docType data
-#' @format A data frame with 3 observations on the following 4 variables.
+#' @format A data frame with 406 observations on two variables.
 #' \describe{ 
-#' \item{C1.T}{a factor with levels \code{Drowsiness}
-#' \code{Headache} \code{Insomnia}} 
-#' \item{Seldane}{a numeric vector}
-#' \item{Pseudoep}{a numeric vector} 
-#' \item{Placebo}{a numeric vector}
+#' \item{event}{a factor with levels \code{insomnia},
+#' \code{headache}, and \code{drowsiness}} 
+#' \item{medication}{a factor with levels \code{seldane-d},
+#' \code{pseudoephedrine}, and \code{placebo}}
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Allergy)
-#' X <- as.matrix(Allergy[1:3, 2:4])
-#' chisq.test(X)
-#' Xr <- as.matrix(Allergy[2:3, 2:4])
-#' chisq.test(Xr)
-#' detach(Allergy)
+#' T1 <- xtabs(~event + medication, data = Allergy)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Allergy"
 
 
 
@@ -531,21 +490,20 @@ NULL
 #' @docType data
 #' @format A data frame with 10 observations on the following variable.
 #' \describe{ 
-#' \item{recover}{a numeric vector} 
+#' \item{recover}{recovery time (in hours)} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Anesthet)
-#' str(Anesthet)
-#' qqnorm(recover)
-#' qqline(recover)
-#' t.test(recover,conf.level=0.90)$conf
-#' detach(Anesthet)
+#' qqnorm(Anesthet$recover)
+#' qqline(Anesthet$recover)
+#' with(data = Anesthet,
+#' t.test(recover, conf.level = 0.90)$conf
+#' )
 #' 
-NULL
+"Anesthet"
 
 
 
@@ -558,25 +516,25 @@ NULL
 #' 
 #' @name Anxiety
 #' @docType data
-#' @format A data frame with 20 observations on the following 2 variables.
+#' @format A data frame with 20 observations on the following two variables.
 #' \describe{ 
-#' \item{anxiety}{a numeric vector} 
-#' \item{math}{a numeric vector} 
+#' \item{anxiety}{anxiety score before a major math test} 
+#' \item{math}{math test score} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Anxiety)
-#' plot(anxiety,math)
-#' cor(anxiety,math)
-#' linmod <- lm(math~anxiety)
+#' plot(math ~ anxiety, data = Anxiety)
+#' with(data = Anxiety,
+#' cor(math, anxiety)
+#' )
+#' linmod <- lm(math ~ anxiety, data = Anxiety)
 #' abline(linmod)
 #' summary(linmod)
-#' detach(Anxiety)
 #' 
-NULL
+"Anxiety"
 
 
 
@@ -590,63 +548,27 @@ NULL
 #' 
 #' @name Apolipop
 #' @docType data
-#' @format A data frame with 15 observations on the following 4 variables.
+#' @format A data frame with 15 observations on the following two variables.
 #' \describe{ 
-#' \item{coffee}{a numeric vector} 
-#' \item{apolipB}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
+#' \item{coffee}{number of cups of coffee per day} 
+#' \item{apolipB}{level of apoliprotein B} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Apolipop)
-#' str(Apolipop)
-#' plot(coffee,apolipB)
-#' linmod <- lm(apolipB~coffee)
+#' plot(apolipB ~ coffee, data = Apolipop)
+#' linmod <- lm(apolipB ~ coffee, data = Apolipop)
 #' summary(linmod)
-#' # plot(linmod)
-#' detach(Apolipop)
+#' summary(linmod)$sigma
+#' anova(linmod)
+#' anova(linmod)[2, 3]^.5
+#' par(mfrow = c(2, 2))
+#' plot(linmod)
+#' par(mfrow = c(1, 1))
 #' 
-NULL
-
-
-
-
-
-#' Median costs of appendectomies at three different types of North Carolina
-#' hospitals
-#' 
-#' Data for Exercise 10.60
-#' 
-#' 
-#' @name Appendec
-#' @docType data
-#' @format A data frame with 59 observations on the following 5 variables.
-#' \describe{ 
-#' \item{Cost}{a numeric vector} 
-#' \item{Region}{a numeric vector} 
-#' \item{Rural}{a numeric vector}
-#' \item{Regional}{a numeric vector} 
-#' \item{Metropol}{a numeric vector} 
-#' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
-#' @keywords datasets
-#' @examples
-#' 
-#' str(Appendec)
-#' attach(Appendec)
-#' boxplot(Cost~Region)
-#' anova(lm(Cost~as.factor(Region)))
-#' detach(Appendec)
-#' 
-NULL
-
-
-
+"Apolipop"
 
 
 #' Median costs of an appendectomy at 20 hospitals in North Carolina
@@ -658,59 +580,77 @@ NULL
 #' @docType data
 #' @format A data frame with 20 observations on the following variable.
 #' \describe{ 
-#' \item{fee}{a numeric vector} 
+#' \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Append)
-#' attach(Append)
-#' ll <- mean(fee)-2*sd(fee)
-#' ul <- mean(fee)+2*sd(fee)
-#' limits <-c(ll,ul)
+#' fee <- Append$fee
+#' ll <- mean(fee) - 2*sd(fee)
+#' ul <- mean(fee) + 2*sd(fee)
+#' limits <-c(ll, ul)
 #' limits
-#' fee[fee<ll | fee>ul]
-#' detach(Append)
+#' fee[fee < ll | fee > ul]
 #' 
-NULL
+"Append"
 
 
+#' Median costs of appendectomies at three different types of North Carolina
+#' hospitals
+#' 
+#' Data for Exercise 10.60
+#' 
+#' 
+#' @name Appendec
+#' @docType data
+#' @format A data frame with 59 observations on the following two variables.
+#' \describe{ 
+#' \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
+#' \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
+#' }
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' Duxbury
+#' @keywords datasets
+#' @examples
+#' 
+#' str(Appendec)
+#' Appendec$regionc <- ifelse(Appendec$region == 1, "rural", 
+#'                     ifelse(Appendec$region == 2, "regional", "metropolitan"))
+#' boxplot(cost ~ regionc, data = Appendec, col = c("red", "blue", "cyan"))
+#' anova(lm(cost ~ as.factor(regionc), data = Appendec))
+#' 
+"Appendec"
 
 
 
 #' Aptitude test scores versus productivity in a factory
 #' 
-#' Data for Exercises 2.1, 2.35 and 2.51
+#' Data for Exercises 2.1, 2.26, 2.35 and 2.51
 #' 
 #' 
 #' @name Aptitude
 #' @docType data
-#' @format A data frame with 8 observations on the following 4 variables.
+#' @format A data frame with 8 observations on the following two variables.
 #' \describe{ 
-#' \item{aptitude}{a numeric vector}
-#' \item{product}{a numeric vector} 
-#' \item{SRES1}{a numeric vector} 
-#' \item{FITS1}{a numeric vector} 
+#' \item{aptitude}{aptitude test scores}
+#' \item{product}{productivity scores} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Aptitude)
-#' attach(Aptitude)
-#' plot(aptitude,product,main="Exercise 2.1")
-#' model1 <- lm(product~aptitude)
+#' plot(product ~ aptitude, data = Aptitude, main = "Exercise 2.1")
+#' model1 <- lm(product ~ aptitude, data = Aptitude)
 #' model1
-#' abline(model1,col="red",lwd=3)
+#' abline(model1, col = "red", lwd=3)
 #' resid(model1)
 #' fitted(model1)
-#' cor(product,aptitude)
-#' detach(Aptitude)
+#' cor(Aptitude$product, Aptitude$aptitude)
 #' 
-NULL
+"Aptitude"
 
 
 
@@ -723,27 +663,21 @@ NULL
 #' 
 #' @name Archaeo
 #' @docType data
-#' @format A data frame with 60 observations on the following 6 variables.
+#' @format A data frame with 60 observations on the following two variables.
 #' \describe{ 
-#' \item{phase1}{a numeric vector} 
-#' \item{phase2}{a numeric vector} 
-#' \item{phase3}{a numeric vector}
-#' \item{phase4}{a numeric vector} 
-#' \item{age}{a numeric vector}
-#' \item{phase}{a numeric vector} 
+#' \item{age}{number of years before 1983 - the year the data were obtained}
+#' \item{phase}{Ceramic Phase numbers} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Archaeo)
-#' attach(Archaeo)
-#' boxplot(age~phase,col="yellow",main="Example 1.16",xlab="Phase",ylab="Age")
-#' anova(lm(age~as.factor(phase)))
-#' detach(Archaeo)
+#' boxplot(age ~ phase, data = Archaeo, col = "yellow", 
+#'         main = "Example 1.16", xlab = "Ceramic Phase", ylab = "Age")
+#' anova(lm(age ~ as.factor(phase), data= Archaeo))
 #' 
-NULL
+"Archaeo"
 
 
 
@@ -751,31 +685,25 @@ NULL
 
 #' Time of relief for three treatments of arthritis
 #' 
-#' Data for Exercise
+#' Data for Exercise 10.58
 #' 
 #' 
 #' @name Arthriti
 #' @docType data
-#' @format A data frame with 51 observations on the following 5 variables.
+#' @format A data frame with 51 observations on the following two variables.
 #' \describe{ 
-#' \item{TreatA}{a numeric vector} 
-#' \item{TreatB}{a numeric vector} 
-#' \item{TreatC}{a numeric vector}
-#' \item{Time}{a numeric vector} 
-#' \item{Treatmnt}{a numeric vector} 
+#' \item{time}{time (measured in days) until an arthritis sufferer experienced relief} 
+#' \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Arthriti)
-#' attach(Arthriti)
-#' boxplot(Time~Treatmnt)
-#' anova(lm(Time~as.factor(Treatmnt)))
-#' detach(Arthriti)
+#' boxplot(time ~ treatment, data = Arthriti)
+#' anova(lm(time ~ treatment, data = Arthriti))
 #' 
-NULL
+"Arthriti"
 
 
 
@@ -790,24 +718,20 @@ NULL
 #' @docType data
 #' @format A data frame with 15 observations on the following variable.
 #' \describe{ 
-#' \item{duration}{a numeric vector} 
+#' \item{duration}{duration (in hours) for transplant} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Artifici)
-#' attach(Artifici)
-#' stem(duration)
-#' summary(duration)
-#' values <- duration[duration<6.5]
+#' stem(Artifici$duration, 2)
+#' summary(Artifici$duration)
+#' values <- Artifici$duration[Artifici$duration < 6.5]
 #' values
 #' summary(values)
-#' detach(Artifici)
-#' remove(values)
 #' 
-NULL
+"Artifici"
 
 
 
@@ -820,59 +744,52 @@ NULL
 #' 
 #' @name Asprin
 #' @docType data
-#' @format A data frame with 5 observations on the following 3 variables.
+#' @format A data frame with 15 observations on two variables.
 #' \describe{ 
-#' \item{X1.}{a numeric vector} 
-#' \item{X5.}{a numeric vector} 
-#' \item{X10.}{a numeric vector} 
+#' \item{time}{time (in seconds) for aspirin to dissolve} 
+#' \item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Asprin)
-#' attach(Asprin)
-#' STACKED <-stack(Asprin)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Asprin)
+#' boxplot(time ~ impurity, data = Asprin, 
+#'         col = c("red", "blue", "green"))
 #' 
-NULL
+"Asprin"
 
 
 
 
 
-#' Asthmatic relief index on 9 subjects given a drug and a placebo
+#' Asthmatic relief index on nine subjects given a drug and a placebo
 #' 
 #' Data for Exercise 7.52
 #' 
 #' 
 #' @name Asthmati
 #' @docType data
-#' @format A data frame with 9 observations on the following 3 variables.
+#' @format A data frame with nine observations on the following three variables.
 #' \describe{
-#' \item{Drug}{a numeric vector} 
-#' \item{Placebo}{a numeric vector} 
-#' \item{differ}{a numeric vector} 
+#' \item{drug}{asthmatic relief index for patients given a drug} 
+#' \item{placebo}{asthmatic relief index for patients given a placebo} 
+#' \item{difference}{difference between the \code{placebo} and \code{drug}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Asthmati)
-#' attach(Asthmati)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' t.test(Placebo,Drug,paired=TRUE,mu=0,alternative="greater")
-#' detach(Asthmati)
+#' qqnorm(Asthmati$difference)
+#' qqline(Asthmati$difference)
+#' shapiro.test(Asthmati$difference)
+#' with(data = Asthmati,
+#' t.test(placebo, drug, paired = TRUE, mu = 0, 
+#' alternative = "greater")
+#' )
 #' 
-NULL
+"Asthmati"
 
 
 
@@ -880,56 +797,54 @@ NULL
 
 #' Number of convictions reported by U.S. attorney's offices
 #' 
-#' Data for Exercises 2.2, 2.43 and 2.57
+#' Data for Example 2.2 and Exercises 2.43 and 2.57
 #' 
 #' 
 #' @name Attorney
 #' @docType data
-#' @format A data frame with 88 observations on the following 3 variables.
+#' @format A data frame with 88 observations on the following three variables.
 #' \describe{ 
-#' \item{Staff}{a numeric vector} 
-#' \item{Convict}{a numeric vector} 
-#' \item{District}{a factor with levels
-#' \code{Albuquerque} \code{Alexandria, va} \code{Anchorage} \code{Asheville,
-#' NC} \code{Atlanta} \code{Baltimore} \code{Baton Rouge} \code{Billings, Mt}
-#' \code{Birmingham, Al} \code{Boise, Id} \code{Boston} \code{Buffalo}
-#' \code{Burlington, Vt} \code{Cedar Rapids} \code{Charleston, WVA}
-#' \code{Cheyenne, Wy} \code{Chicago} \code{Cincinnati} \code{Cleveland}
-#' \code{Columbia, SC} \code{Concord, NH} \code{Denver} \code{Des Moines}
-#' \code{Detroit} \code{East St. Louis} \code{Fargo, ND} \code{Fort Smith, Ark}
-#' \code{Fort Worth} \code{Grand Rapids, Mi} \code{Greensboro, NC}
-#' \code{Honolulu} \code{Houston} \code{Indianapolis} \code{Jackson, Miss}
-#' \code{Kansas City} \code{Knoxville, Tn} \code{Las Vegas} \code{Lexington,
-#' Ky} \code{Little Rock} \code{Los Angeles} \code{Louisville} \code{Memphis}
-#' \code{Miami} \code{Milwaukee} \code{Minneapolis} \code{Mobile, Ala}
-#' \code{Montgomery, Ala} \code{Muskogee, Ok} \code{Nashville} \code{New Haven,
-#' Conn} \code{New Orleans} \code{New York (Brooklyn)} \code{New York
-#' (Manhattan)} \code{Newark, NJ} \code{Oklahoma City} \code{Omaha}
-#' \code{Oxford, Miss} \code{Pensacola, Fl} \code{Philadelphia} \code{Phoenix}
-#' \code{Pittsburgh} \code{Portland, Maine} \code{Portland, Ore}
-#' \code{Providence, RI} \code{Raleigh, NC} \code{Roanoke, Va}
-#' \code{Sacramento} \code{Salt Lake City} \code{San Antonio} \code{San Diego}
-#' \code{San Francisco} \code{Savannah, Ga} \code{Scranton, Pa} \code{Seattle}
-#' \code{Shreveport, La} \code{Sioux Falls, SD} \code{South Bend, Ind}
-#' \code{Spokane, Wash} \code{Springfield, Ill} \code{St. Louis}
-#' \code{Syracuse, NY} \code{Tampa} \code{Topeka, Kan} \code{Tulsa}
-#' \code{Tyler, Tex} \code{Washington} \code{Wheeling, WVa} \code{Wilmington,
+#' \item{staff}{U.S. attorneys' office staff per 1 million population} 
+#' \item{convict}{U.S. attorneys' office convictions per 1 million population} 
+#' \item{district}{a factor with levels
+#' \code{Albuquerque}, \code{Alexandria, Va}, \code{Anchorage}, \code{Asheville,
+#' NC}, \code{Atlanta}, \code{Baltimore}, \code{Baton Rouge}, \code{Billings, Mt},
+#' \code{Birmingham, Al}, \code{Boise, Id}, \code{Boston}, \code{Buffalo},
+#' \code{Burlington, Vt}, \code{Cedar Rapids}, \code{Charleston, WVA},
+#' \code{Cheyenne, Wy}, \code{Chicago}, \code{Cincinnati}, \code{Cleveland},
+#' \code{Columbia, SC}, \code{Concord, NH}, \code{Denver}, \code{Des Moines},
+#' \code{Detroit}, \code{East St. Louis}, \code{Fargo, ND}, \code{Fort Smith, Ark},
+#' \code{Fort Worth}, \code{Grand Rapids, Mi}, \code{Greensboro, NC},
+#' \code{Honolulu}, \code{Houston}, \code{Indianapolis}, \code{Jackson, Miss},
+#' \code{Kansas City}, \code{Knoxville, Tn}, \code{Las Vegas}, \code{Lexington,
+#' Ky}, \code{Little Rock}, \code{Los Angeles}, \code{Louisville}, \code{Memphis},
+#' \code{Miami}, \code{Milwaukee}, \code{Minneapolis}, \code{Mobile, Ala},
+#' \code{Montgomery, Ala}, \code{Muskogee, Ok}, \code{Nashville}, \code{New Haven,
+#' Conn}, \code{New Orleans}, \code{New York (Brooklyn)}, \code{New York
+#' (Manhattan)}, \code{Newark, NJ}, \code{Oklahoma City}, \code{Omaha},
+#' \code{Oxford, Miss}, \code{Pensacola, Fl}, \code{Philadelphia}, \code{Phoenix},
+#' \code{Pittsburgh}, \code{Portland, Maine}, \code{Portland, Ore},
+#' \code{Providence, RI}, \code{Raleigh, NC}, \code{Roanoke, Va},
+#' \code{Sacramento}, \code{Salt Lake City}, \code{San Antonio}, \code{San Diego},
+#' \code{San Francisco}, \code{Savannah, Ga}, \code{Scranton, Pa}, \code{Seattle},
+#' \code{Shreveport, La}, \code{Sioux Falls, SD}, \code{South Bend, Ind},
+#' \code{Spokane, Wash} ,\code{Springfield, Ill}, \code{St. Louis},
+#' \code{Syracuse, NY}, \code{Tampa}, \code{Topeka, Kan}, \code{Tulsa},
+#' \code{Tyler, Tex}, \code{Washington}, \code{Wheeling, WVa}, and \code{Wilmington,
 #' Del}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Attorney)
-#' attach(Attorney)
-#' par(mfrow=c(1,2))
-#' plot(Staff,Convict,main="With Washington, D.C.")
-#' plot(Staff[-86],Convict[-86],main="Without Washington, D.C.")
-#' par(mfrow=c(1,1))
-#' detach(Attorney)
+#' par(mfrow=c(1, 2))
+#' plot(convict ~ staff, data = Attorney, main = "With Washington, D.C.")
+#' plot(convict[-86] ~staff[-86], data = Attorney, 
+#' main = "Without Washington, D.C.")
+#' par(mfrow=c(1, 1))
 #' 
-NULL
+"Attorney"
 
 
 
@@ -944,22 +859,19 @@ NULL
 #' @docType data
 #' @format A data frame with 20 observations on the following 2 variables.
 #' \describe{ 
-#' \item{A}{a numeric vector} 
-#' \item{B}{a numeric vector} 
+#' \item{defectives}{number of defective gears in the production of 100 gears per day} 
+#' \item{manufacturer}{a factor with levels \code{A} and \code{B}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Autogear)
-#' attach(Autogear)
-#' t.test(A,B)
-#' wilcox.test(A,B)
-#' t.test(A,B,var.equal=TRUE)
-#' detach(Autogear)
+#' t.test(defectives ~ manufacturer, data = Autogear)
+#' wilcox.test(defectives ~ manufacturer, data = Autogear)
+#' t.test(defectives ~ manufacturer, var.equal = TRUE, data = Autogear)
 #' 
-NULL
+"Autogear"
 
 
 
@@ -972,23 +884,20 @@ NULL
 #' 
 #' @name Backtoback
 #' @docType data
-#' @format A data frame with 24 observations on the following 3 variables.
+#' @format A data frame with 24 observations on the following two variables.
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' \item{group}{a numeric vector} 
-#' \item{ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Backtoback)
-#' attach(Backtoback)
-#' wilcox.test(score~group)
-#' detach(Backtoback)
+#' wilcox.test(score ~ group, data = Backtoback)
+#' t.test(score ~ group, data = Backtoback)
 #' 
-NULL
+"Backtoback"
 
 
 
@@ -1001,28 +910,21 @@ NULL
 #' 
 #' @name Bbsalaries
 #' @docType data
-#' @format A data frame with 33 observations on the following 5 variables.
+#' @format A data frame with 142 observations on two variables.
 #' \describe{ 
-#' \item{ANGLES}{a numeric vector} 
-#' \item{ORIOLES}{a numeric vector} 
-#' \item{REDSOXS}{a numeric vector}
-#' \item{WHITESOXS}{a numeric vector} 
-#' \item{INDIANS}{a numeric vector} 
+#' \item{salary}{1999 salary for baseball player} 
+#' \item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bbsalaries)
-#' attach(Bbsalaries)
-#' stripchart(x=list(INDIANS,WHITESOXS,REDSOXS,ORIOLES,ANGLES),xlab="Salary",
-#' method="stack",main="",pch=1,col="blue", group.names=c("Indians","White Sox", 
-#' "Red Sox", "Orioles","Angels"))
-#' title(main="Major League Salaries")
-#' detach(Bbsalaries)
+#' stripchart(salary ~ team, data = Bbsalaries, method = "stack", 
+#'            pch = 19, col = "blue", cex = 0.75)
+#' title(main = "Major League Salaries")
 #' 
-NULL
+"Bbsalaries"
 
 
 
@@ -1035,31 +937,28 @@ NULL
 #' 
 #' @name Bigten
 #' @docType data
-#' @format A data frame with 11 observations on the following 5 variables.
+#' @format A data frame with 44 observations on the following four variables.
 #' \describe{ 
-#' \item{School}{a factor with levels \code{Illinois}
+#' \item{school}{a factor with levels \code{Illinois}
 #' \code{Indiana} \code{Iowa} \code{Michigan} \code{Michigan State}
 #' \code{Minnesota} \code{Northwestern} \code{Ohio State} \code{Penn State}
 #' \code{Purdue} \code{Wisconsin}} 
-#' \item{X1984.85students}{a numeric vector} 
-#' \item{X1984.85athletes}{a numeric vector}
-#' \item{X1993.94students}{a numeric vector}
-#' \item{X1993.94athletes}{a numeric vector} 
+#' \item{rate}{graduation rate} 
+#' \item{year}{factor with two levels \code{1984-1985} and \code{1993-1994}}
+#' \item{status}{factor with two levels \code{athlete} and \code{student}}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bigten)
-#' attach(Bigten)
-#' boxplot(X1993.94students,X1993.94athletes,names=c("Students","Athletes"),
-#' ylab="1993-1994 Graduation Rates")
-#' plot(X1993.94students,X1993.94athletes,xlab="1993-1994 students",
-#' ylab="1993-1994 athletes")
-#' detach(Bigten)
+#' boxplot(rate ~ status, data = subset(Bigten, year = "1993-1994"), 
+#' horizontal = TRUE, main = "Graduation Rates 1993-1994")
+#' with(data = Bigten,
+#'      tapply(rate, list(year, status), mean)
+#'     )
 #' 
-NULL
+"Bigten"
 
 
 
@@ -1074,20 +973,18 @@ NULL
 #' @docType data
 #' @format A data frame with 30 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{test scores on the first test in a beginning biology class} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Biology)
-#' attach(Biology)
-#' hist(score,breaks="scott",col="brown",prob=TRUE,main="Problem 1.49")
-#' lines(density(score),lwd=3)
-#' detach(Biology)
+#' hist(Biology$score, breaks = "scott", col = "brown", freq = FALSE, 
+#' main = "Problem 1.49", xlab = "Test Score")
+#' lines(density(Biology$score), lwd=3)
 #' 
-NULL
+"Biology"
 
 
 
@@ -1100,9 +997,9 @@ NULL
 #' 
 #' @name Birth
 #' @docType data
-#' @format A data frame with 51 observations on the following 3 variables.
+#' @format A data frame with 51 observations on the following three variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
+#' \item{state}{a character with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 #' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
 #' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
@@ -1115,25 +1012,23 @@ NULL
 #' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
 #' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-#' \item{X1990rate}{a numeric vector} 
-#' \item{X1998rate}{a numeric vector} 
+#' \item{rate}{live birth rates per 1000 population} 
+#' \item{year}{a factor with levels \code{1990} and \code{1998}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Birth)
-#' attach(Birth)
-#' stem(X1998rate)
-#' hist(X1998rate,breaks=seq(10.9,21.9,1.0),xlab="1998 Birth Rate",
-#' main="Figure 1.14 in BSDA",col="pink")
-#' hist(X1998rate,breaks=seq(10.9,21.9,1.0),xlab="1998 Birth Rate",
-#' main="Figure 1.14 in BSDA",col="pink",prob=TRUE)
-#' lines(density(X1998rate),col="red",lwd=2)
-#' detach(Birth)
+#' rate1998 <- subset(Birth, year == "1998", select = rate, drop = TRUE)
+#' stem(x = rate1998, scale = 2)
+#' hist(rate1998, breaks = seq(10.9, 21.9, 1.0), xlab = "1998 Birth Rate",
+#'      main = "Figure 1.14 in BSDA", col = "pink")
+#' hist(rate1998, breaks = seq(10.9, 21.9, 1.0), xlab = "1998 Birth Rate",
+#'      main = "Figure 1.16 in BSDA", col = "pink", freq = FALSE)      
+#' lines(density(rate1998), lwd = 3)
 #' 
-NULL
+"Birth"
 
 
 
@@ -1146,26 +1041,23 @@ NULL
 #' 
 #' @name Blackedu
 #' @docType data
-#' @format A data frame with 5 observations on the following 3 variables.
-#' \describe{ 
-#' \item{education}{a factor with levels \code{bachelor deg}
-#' \code{graduate deg} \code{high sch dropout} \code{high sch graduate}
-#' \code{some college}} 
-#' \item{female}{a numeric vector}
-#' \item{male}{a numeric vector} 
+#' @format A data frame with 3800 observations on two variables.
+#' \describe{
+#' \item{gender}{a factor with levels \code{Female} and \code{Male}}
+#' \item{education}{a factor with levels \code{High school dropout},
+#' \code{High school graudate}, \code{Some college}, \code{Bachelor}'\code{s degree}, and
+#' \code{Graduate degree}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Blackedu)
-#' attach(Blackedu)
-#' Blackedu
-#' chisq.test(Blackedu[,2:3])
-#' detach(Blackedu)
+#' T1 <- xtabs(~gender + education, data = Blackedu)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Blackedu"
 
 
 
@@ -1178,27 +1070,24 @@ NULL
 #' 
 #' @name Blood
 #' @docType data
-#' @format A data frame with 15 observations on the following 2 variables.
+#' @format A data frame with 15 observations on the following two variables.
 #' \describe{ 
-#' \item{Machine}{a numeric vector} 
-#' \item{Expert}{a numeric vector} 
+#' \item{machine}{blood pressure recorded from an automated blood pressure machine} 
+#' \item{expert}{blood pressure recorded by an expert using an at-home device} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Blood)
-#' attach(Blood)
-#' DIF <- Machine - Expert
-#' qqnorm(DIF)
-#' qqline(DIF)
-#' shapiro.test(DIF)
-#' t.test(Machine,Expert,paired=TRUE)
-#' detach(Blood)
-#' remove(DIF)
+#' DIFF <- Blood$machine - Blood$expert
+#' shapiro.test(DIFF)
+#' qqnorm(DIFF)
+#' qqline(DIFF)
+#' rm(DIFF)
+#' t.test(Blood$machine, Blood$expert, paired = TRUE)
 #' 
-NULL
+"Blood"
 
 
 
@@ -1211,58 +1100,48 @@ NULL
 #' 
 #' @name Board
 #' @docType data
-#' @format A data frame with 7 observations on the following 3 variables.
+#' @format A data frame with 7 observations on the following three variables.
 #' \describe{ 
-#' \item{UnivA}{a numeric vector} 
-#' \item{UnivB}{a numeric vector} 
-#' \item{UnivC}{a numeric vector} 
+#' \item{salary}{1999 salary (in $1000) for board directors} 
+#' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Board)
-#' attach(Board)
-#' STACKED <-stack(Board)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' remove(STACKED)
-#' detach(Board)
+#' boxplot(salary ~ university, data = Board, col = c("red", "blue", "green"), 
+#'         ylab = "Income")
+#' tapply(Board$salary, Board$university, summary)
+#' anova(lm(salary ~ university, data = Board))
 #' 
-NULL
-
-
+"Board"
 
 
 
 #' Bone density measurements of 35 physically active and 35 non-active women
 #' 
-#' Data for Exercise 7.22
+#' Data for Example 7.22
 #' 
 #' 
 #' @name Bones
 #' @docType data
-#' @format A data frame with 70 observations on the following 5 variables.
+#' @format A data frame with 70 observations on two variables.
 #' \describe{ 
-#' \item{Active}{a numeric vector}
-#' \item{Nonactive}{a numeric vector} 
-#' \item{Density}{a numeric vector} 
-#' \item{group}{a numeric vector} 
-#' \item{Ranks}{a numeric vector} 
+#' \item{density}{bone density measurements}
+#' \item{group}{a factor with levels \code{active} and \code{nonactive}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bones)
-#' attach(Bones)
-#' t.test(Active,Nonactive,alternative="greater")
-#' wilcox.test(Active,Nonactive,alternative="greater")
-#' detach(Bones)
+#' t.test(density ~ group, data = Bones, alternative = "greater")
+#' t.test(rank(density) ~ group, data = Bones, alternative = "greater")
+#' wilcox.test(density ~ group, data = Bones, alternative = "greater")
 #' 
-NULL
+#' 
+"Bones"
 
 
 
@@ -1275,19 +1154,22 @@ NULL
 #' 
 #' @name Books
 #' @docType data
-#' @format A data frame with 17 observations on the following 2 variables.
+#' @format A data frame with 17 observations on the following two variables.
 #' \describe{ 
-#' \item{book}{a numeric vector} 
-#' \item{spelling}{a numeric vector} 
+#' \item{book}{number of books read} 
+#' \item{spelling}{spelling score} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Books)
+#' plot(spelling ~ book, data = Books)
+#' mod <- lm(spelling ~ book, data = Books)
+#' summary(mod)
+#' abline(mod, col = "blue", lwd = 2)
 #' 
-NULL
+"Books"
 
 
 
@@ -1300,27 +1182,21 @@ NULL
 #' 
 #' @name Bookstor
 #' @docType data
-#' @format A data frame with 72 observations on the following 6 variables.
+#' @format A data frame with 72 observations on 2 variables.
 #' \describe{ 
-#' \item{StoreA}{a numeric vector} 
-#' \item{StoreB}{a numeric vector} 
-#' \item{StoreC}{a numeric vector}
-#' \item{Dollars}{a numeric vector} 
-#' \item{Store}{a numeric vector} 
-#' \item{Ranks}{a numeric vector}
+#' \item{dollars}{money obtained for selling textbooks} 
+#' \item{store}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bookstor)
-#' attach(Bookstor)
-#' boxplot(Dollars~Store)
-#' kruskal.test(Dollars~as.factor(Store))
-#' detach(Bookstor)
+#' boxplot(dollars ~ store, data = Bookstor, 
+#'         col = c("purple", "lightblue", "cyan"))
+#' kruskal.test(dollars ~ store, data = Bookstor)
 #' 
-NULL
+"Bookstor"
 
 
 
@@ -1333,33 +1209,30 @@ NULL
 #' 
 #' @name Brain
 #' @docType data
-#' @format A data frame with 28 observations on the following 5 variables.
+#' @format A data frame with 28 observations on the following three variables.
 #' \describe{ 
-#' \item{Species}{a factor with levels \code{Africian
-#' elephant} \code{Asian Elephant} \code{Brachiosaurus} \code{Cat}
-#' \code{Chimpanzee} \code{Cow} \code{Diplodocus} \code{Donkey} \code{Giraffe}
-#' \code{Goat} \code{Gorilla} \code{Gray wolf} \code{Guinea Pig} \code{Hamster}
-#' \code{Horse} \code{Human} \code{Jaguar} \code{Kangaroo} \code{Mole}
-#' \code{Mouse} \code{Mt Beaver} \code{Pig} \code{Potar monkey} \code{Rabbit}
-#' \code{Rat} \code{Rhesus monkey} \code{Sheep} \code{Triceratops}}
-#' \item{body.wt}{a numeric vector} 
-#' \item{brain.wt}{a numeric vector} 
-#' \item{logbody}{a numeric vector} 
-#' \item{logbrain}{a numeric vector} 
+#' \item{species}{a factor with levels \code{African
+#' elephant}, \code{Asian Elephant}, \code{Brachiosaurus}, \code{Cat},
+#' \code{Chimpanzee}, \code{Cow}, \code{Diplodocus}, \code{Donkey}, \code{Giraffe},
+#' \code{Goat}, \code{Gorilla}, \code{Gray wolf}, \code{Guinea Pig}, \code{Hamster},
+#' \code{Horse}, \code{Human}, \code{Jaguar}, \code{Kangaroo}, \code{Mole},
+#' \code{Mouse}, \code{Mt Beaver}, \code{Pig}, \code{Potar monkey}, \code{Rabbit},
+#' \code{Rat}, \code{Rhesus monkey}, \code{Sheep}, and \code{Triceratops}}
+#' \item{bodyweight}{body weight (in kg)} 
+#' \item{brainweight}{brain weight (in g)} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Brain)
-#' attach(Brain)
-#' plot(logbody,logbrain,pch=19,col="blue",main="Example 2.3")
-#' model <- lm(logbrain~logbody)
-#' abline(model)
-#' detach(Brain)
+#' plot(log(brainweight) ~ log(bodyweight), data = Brain, 
+#'      pch = 19, col = "blue", main = "Example 2.3")
+#' mod <- lm(log(brainweight) ~ log(bodyweight), data = Brain)      
+#' abline(mod, lty = "dashed", col = "blue")
 #' 
-NULL
+#' 
+"Brain"
 
 
 
@@ -1386,9 +1259,6 @@ NULL
 NULL
 
 
-
-
-
 #' Repair costs of vehicles crashed into a barrier at 5 miles per hour
 #' 
 #' Data for Exercise 1.73
@@ -1396,34 +1266,29 @@ NULL
 #' 
 #' @name Bumpers
 #' @docType data
-#' @format A data frame with 23 observations on the following 2 variables.
+#' @format A data frame with 23 observations on the following two variables.
 #' \describe{ 
-#' \item{Car}{a factor with levels \code{Buick Century}
-#' \code{Buick Skylark} \code{Chevrolet Cavalier} \code{Chevrolet Corsica}
-#' \code{Chevrolet Lumina} \code{Dodge Dynasty} \code{Dodge Monaco} \code{Ford
-#' Taurus} \code{Ford Tempo} \code{Honda Accord} \code{Hyundai Sonata}
-#' \code{Mazda 626} \code{Mitsubishi Galant} \code{Nissan Stanza}
-#' \code{Oldsmobile Calais} \code{Oldsmobile Ciere} \code{Plymouth Acclaim}
-#' \code{Pontiac 6000} \code{Pontiac Grand Am} \code{Pontiac Sunbird}
-#' \code{Saturn SL2} \code{Subaru Legacy} \code{Toyota Camry}}
-#' \item{repair}{a numeric vector} 
+#' \item{car}{a factor with levels \code{Buick Century},
+#' \code{Buick Skylark}, \code{Chevrolet Cavalier}, \code{Chevrolet Corsica},
+#' \code{Chevrolet Lumina}, \code{Dodge Dynasty}, \code{Dodge Monaco}, \code{Ford
+#' Taurus}, \code{Ford Tempo}, \code{Honda Accord}, \code{Hyundai Sonata},
+#' \code{Mazda 626}, \code{Mitsubishi Galant}, \code{Nissan Stanza},
+#' \code{Oldsmobile Calais}, \code{Oldsmobile Ciere}, \code{Plymouth Acclaim},
+#' \code{Pontiac 6000}, \code{Pontiac Grand Am}, \code{Pontiac Sunbird},
+#' \code{Saturn SL2}, \code{Subaru Legacy}, and \code{Toyota Camry}}
+#' \item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bumpers)
-#' attach(Bumpers)
-#' EDA(repair)
-#' sum(repair>(mean(repair)-sd(repair)) & 
-#' repair < (mean(repair)+sd(repair)))/length(repair)
-#' stripchart(repair,method="stack")
+#' EDA(Bumpers$repair)
+#' stripchart(Bumpers$repair, method = "stack", pch = 19, col = "blue")
 #' library(lattice)
-#' dotplot(Car~repair)
-#' detach(Bumpers)
+#' dotplot(car ~ repair, data = Bumpers)
 #' 
-NULL
+"Bumpers"
 
 
 
@@ -1436,28 +1301,22 @@ NULL
 #' 
 #' @name Bus
 #' @docType data
-#' @format A data frame with 2 observations on the following 6 variables.
+#' @format A data frame with 29363 observations on two variables.
 #' \describe{ 
-#' \item{Attend}{a factor with levels \code{Absent}
-#' \code{Present}} 
-#' \item{AM}{a numeric vector} 
-#' \item{Noon}{a numeric vector} 
-#' \item{PM}{a numeric vector} 
-#' \item{Swing}{a numeric vector} 
-#' \item{Split}{a numeric vector} 
+#' \item{attendance}{a factor with levels \code{absent} and
+#' \code{present}} 
+#' \item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, \code{swing}, and \code{split}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bus)
-#' attach(Bus)
-#' Bus
-#' chisq.test(Bus[,2:6])
-#' detach(Bus)
+#' T1 <- xtabs(~attendance + shift, data = Bus)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Bus"
 
 
 
@@ -1470,30 +1329,27 @@ NULL
 #' 
 #' @name Bypass
 #' @docType data
-#' @format A data frame with 17 observations on the following 2 variables.
+#' @format A data frame with 17 observations on the following two variables.
 #' \describe{ 
 #' \item{hospital}{a factor with levels \code{Carolinas Med
-#' Ct} \code{Duke Med Ct} \code{Durham Regional} \code{Forsyth Memorial}
-#' \code{Frye Regional} \code{High Point Regional} \code{Memorial Mission}
-#' \code{Mercy} \code{Moore Regional} \code{Moses Cone Memorial} \code{NC
-#' Baptist} \code{New Hanover Regional} \code{Pitt Co. Memorial}
-#' \code{Presbyterian} \code{Rex} \code{Univ of North Carolina} \code{Wake
+#' Ct}, \code{Duke Med Ct}, \code{Durham Regional}, \code{Forsyth Memorial},
+#' \code{Frye Regional}, \code{High Point Regional}, \code{Memorial Mission},
+#' \code{Mercy}, \code{Moore Regional}, \code{Moses Cone Memorial}, \code{NC
+#' Baptist}, \code{New Hanover Regional}, \code{Pitt Co. Memorial},
+#' \code{Presbyterian}, \code{Rex}, \code{Univ of North Carolina}, and \code{Wake
 #' County}}
-#' \item{charge}{a numeric vector} 
+#' \item{charge}{median charge for coronary bypass} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Bypass)
-#' attach(Bypass)
-#' EDA(charge)
-#' t.test(charge,conf.level=.90)$conf
-#' t.test(charge,mu=35000)
-#' detach(Bypass)
+#' EDA(Bypass$charge)
+#' t.test(Bypass$charge, conf.level=.90)$conf
+#' t.test(Bypass$charge, mu = 35000)
 #' 
-NULL
+"Bypass"
 
 
 
@@ -1507,29 +1363,30 @@ NULL
 #' 
 #' @name Cabinets
 #' @docType data
-#' @format A data frame with 20 observations on the following 3 variables.
+#' @format A data frame with 20 observations on the following three variables.
 #' \describe{ 
-#' \item{Home}{a numeric vector} 
-#' \item{SupplA}{a numeric vector} 
-#' \item{SupplB}{a numeric vector} 
+#' \item{home}{a numeric vector} 
+#' \item{supplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
+#' \item{supplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Cabinets)
-#' attach(Cabinets)
-#' DIF <- SupplA - SupplB
+#' DIF <- Cabinets$supplA - Cabinets$supplB
 #' qqnorm(DIF)
 #' qqline(DIF)
 #' shapiro.test(DIF)
-#' t.test(SupplA,SupplB,paired=TRUE)
-#' wilcox.test(SupplA,SupplB,paired=TRUE)
-#' detach(Cabinets)
-#' remove(DIF)
+#' with(data = Cabinets, 
+#'      t.test(supplA, supplB, paired = TRUE)
+#' )
+#' with(data = Cabinets,
+#'      wilcox.test(supplA, supplB, paired = TRUE)
+#')
+#' rm(DIF)
 #' 
-NULL
+"Cabinets"
 
 
 
@@ -1542,26 +1399,36 @@ NULL
 #' 
 #' @name Cancer
 #' @docType data
-#' @format A data frame with 17 observations on the following 5 variables.
+#' @format A data frame with 64 observations on two variables.
 #' \describe{ 
-#' \item{stomach}{a numeric vector}
-#' \item{bronchus}{a numeric vector} 
-#' \item{colon}{a numeric vector} 
-#' \item{ovary}{a numeric vector} 
-#' \item{breast}{a numeric vector} 
+#' \item{survival}{survival time (in days) of terminal patients 
+#' treated with vitamin C}
+#' \item{type}{a factor indicating type of cancer with levels 
+#' \code{breast}, \code{bronchus}, \code{colon}, \code{ovary}, and 
+#' \code{stomach}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @source Cameron, E and Pauling, L. 1978. \dQuote{Supplemental Ascorbate in the 
+#' Supportive Treatment of Cancer.} \emph{Proceedings of the National Academy of 
+#' Science}, 75, 4538-4542.
+#' 
+#' 
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Cancer)
-#' attach(Cancer)
-#' EDA(stomach)
-#' SIGN.test(stomach,md=100,alternative="greater")
-#' detach(Cancer)
+#' boxplot(survival ~ type, Cancer)
+#' stomach <- Cancer$survival[Cancer$type == "stomach"]
+#' bronchus <- Cancer$survival[Cancer$type == "bronchus"]
+#' boxplot(stomach, ylab = "Days")
+#' SIGN.test(stomach, md = 100, alternative = "greater")
+#' SIGN.test(bronchus, md = 100, alternative = "greater")
+#' rm(bronchus, stomach)
 #' 
-NULL
+#' 
+"Cancer"
 
 
 
@@ -1574,27 +1441,21 @@ NULL
 #' 
 #' @name Carbon
 #' @docType data
-#' @format A data frame with 24 observations on the following 6 variables.
+#' @format A data frame with 24 observations on two variables.
 #' \describe{ 
-#' \item{SiteA}{a numeric vector} 
-#' \item{SiteB}{a numeric vector} 
-#' \item{SiteC}{a numeric vector}
-#' \item{monoxide}{a numeric vector} 
-#' \item{Site}{a numeric vector} 
-#' \item{Ranks}{a numeric vector}
+#' \item{CO}{carbon monoxide measured (in parts per million)} 
+#' \item{site}{a factor with levels \code{SiteA}, \code{SiteB}, and \code{SiteC}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Carbon)
-#' attach(Carbon)
-#' boxplot(monoxide~Site)
-#' kruskal.test(monoxide~as.factor(Site))
-#' detach(Carbon)
+#' boxplot(CO ~ site, data = Carbon)
+#' kruskal.test(CO ~ site, data = Carbon)
 #' 
-NULL
+"Carbon"
 
 
 
@@ -1609,21 +1470,19 @@ NULL
 #' @docType data
 #' @format A data frame with 17 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{reading score on the California Achievement Test} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Cat)
-#' attach(Cat)
-#' stem(score)
-#' fivenum(score)
-#' boxplot(score,main="Problem 1.116",col="green")
-#' detach(Cat)
+#' stem(Cat$score)
+#' fivenum(Cat$score)
+#' boxplot(Cat$score, main = "Problem 1.116", col = "green")
 #' 
-NULL
+"Cat"
 
 
 
@@ -1637,28 +1496,27 @@ NULL
 #' 
 #' @name Censored
 #' @docType data
-#' @format A data frame with 121 observations on the following 8 variables.
+#' @format A data frame with 121 observations on the following 3 variables.
 #' \describe{ 
-#' \item{survivA}{a numeric vector} 
-#' \item{ageA}{a numeric vector} 
-#' \item{censorA}{a numeric vector}
-#' \item{survivB}{a numeric vector} 
-#' \item{ageB}{a numeric vector} 
-#' \item{censorB}{a numeric vector} 
-#' \item{survival}{a numeric vector} 
-#' \item{group}{a numeric vector} 
+#' \item{survival}{survival time (in days) of patients with small cell lung cancer} 
+#' \item{treatment}{a factor with levels \code{armA} and \code{armB} indicating the 
+#' treatment a patient received} 
+#' \item{age}{the age of the patient} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' 
+#' @source Ying, Z., Jung, S., Wei, L. 1995. \dQuote{Survival Analysis with Median Regression Models.} 
+#' \emph{Journal of the American Statistical Association}, 90, 178-184.
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Censored)
-#' attach(Censored)
-#' boxplot(survival~group)
-#' detach(Censored)
+#' boxplot(survival ~ treatment, data = Censored)
+#' wilcox.test(survival ~ treatment, data = Censored, alternative = "greater")
 #' 
-NULL
+"Censored"
 
 
 
@@ -1672,49 +1530,42 @@ NULL
 #' 
 #' @name Challeng
 #' @docType data
-#' @format A data frame with 25 observations on the following 4 variables.
+#' @format A data frame with 25 observations on the following four variables.
 #' \describe{ 
-#' \item{flight}{a factor with levels \code{1} \code{2}
-#' \code{3} \code{4} \code{41-b} \code{41-c} \code{41-d} \code{41-g} \code{5}
-#' \code{51-a} \code{51-b} \code{51-c} \code{51-d} \code{51-f} \code{51-g}
-#' \code{51-i} \code{51-j} \code{6} \code{61-a} \code{61-b} \code{61-c}
-#' \code{61-i} \code{7} \code{8} \code{9}} 
-#' \item{date}{a factor with
-#' levels \code{1/12/86} \code{1/24/85} \code{1/28/86} \code{10/3/85}
-#' \code{10/30/85} \code{10/5/84} \code{11/11/82} \code{11/12/81}
-#' \code{11/26/85} \code{11/28/83} \code{11/8/84} \code{2/3/84} \code{3/22/82}
-#' \code{4/12/81} \code{4/12/85} \code{4/29/85} \code{4/4/83} \code{4/6/84}
-#' \code{6/17/85} \code{6/18/83} \code{6/27/82} \code{7/29/85} \code{8/27/85}
-#' \code{8/30/83} \code{8/30/84}} 
-#' \item{temp}{a numeric vector}
-#' \item{Failures}{a numeric vector} 
+#' \item{flight}{a character variable indicating the flight}
+#' \item{date}{date of the flight} 
+#' \item{temp}{temperature (in fahrenheit)}
+#' \item{failures}{number of failures} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' 
+#' @source Dalal, S. R., Fowlkes, E. B., Hoadley, B. 1989. \dQuote{Risk Analysis of the Space Shuttle: Pre-Challenger 
+#' Prediction of Failure.} 
+#' \emph{Journal of the American Statistical Association}, 84, No. 408, 945-957.
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Challeng)
-#' attach(Challeng)
-#' stem(temp)
-#' summary(temp)
-#' IQR(temp)
-#' quantile(temp)
-#' fivenum(temp)
-#' stem(sort(temp)[-1])
-#' summary(sort(temp)[-1])
-#' IQR(sort(temp)[-1])
-#' quantile(sort(temp)[-1])
-#' fivenum(sort(temp)[-1])
-#' par(mfrow=c(1,2))
-#' qqnorm(temp)
-#' qqline(temp)
-#' qqnorm(sort(temp)[-1])
-#' qqline(sort(temp)[-1])
-#' par(mfrow=c(1,1))
-#' detach(Challeng)
+#' str(Challeng) 
+#' stem(Challeng$temp)
+#' summary(Challeng$temp)
+#' IQR(Challeng$temp)
+#' quantile(Challeng$temp)
+#' fivenum(Challeng$temp)
+#' stem(sort(Challeng$temp)[-1])
+#' summary(sort(Challeng$temp)[-1])
+#' IQR(sort(Challeng$temp)[-1])
+#' quantile(sort(Challeng$temp)[-1])
+#' fivenum(sort(Challeng$temp)[-1])
+#' par(mfrow=c(1, 2))
+#' qqnorm(Challeng$temp)
+#' qqline(Challeng$temp)
+#' qqnorm(sort(Challeng$temp)[-1])
+#' qqline(sort(Challeng$temp)[-1])
+#' par(mfrow=c(1, 1))
 #' 
-NULL
+"Challeng"
 
 
 
@@ -1729,19 +1580,17 @@ NULL
 #' @docType data
 #' @format A data frame with 50 observations on the following variable.
 #' \describe{ 
-#' \item{salary}{a numeric vector} 
+#' \item{salary}{starting salary (in dollars) for chemistry major} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Chemist)
-#' attach(Chemist)
-#' EDA(salary)
-#' detach(Chemist)
+#' EDA(Chemist$salary)
 #' 
-NULL
+"Chemist"
 
 
 
@@ -1750,29 +1599,32 @@ NULL
 #' Surface salinity measurements taken offshore from Annapolis, Maryland in
 #' 1927
 #' 
-#' Data for Exercise 6.46
+#' Data for Exercise 6.41
 #' 
 #' 
 #' @name Chesapea
 #' @docType data
 #' @format A data frame with 16 observations on the following variable.
 #' \describe{ 
-#' \item{salinity}{a numeric vector} 
+#' \item{salinity}{surface salinity measurements (in parts per 1000) for station 11, 
+#' offshore from Annanapolis, Maryland, on July 3-4, 1927.} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' 
+#' @source Davis, J. (1986) \emph{Statistics and Data Analysis in Geology, Second Edition}. 
+#' John Wiley and Sons, New York.
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Chesapea)
-#' attach(Chesapea)
-#' qqnorm(salinity)
-#' qqline(salinity)
-#' shapiro.test(salinity)
-#' t.test(salinity,mu=7)
-#' detach(Chesapea)
+#' qqnorm(Chesapea$salinity)
+#' qqline(Chesapea$salinity)
+#' shapiro.test(Chesapea$salinity)
+#' t.test(Chesapea$salinity, mu = 7)
 #' 
-NULL
+"Chesapea"
 
 
 
@@ -1785,28 +1637,24 @@ NULL
 #' 
 #' @name Chevy
 #' @docType data
-#' @format A data frame with 2 observations on the following 6 variables.
+#' @format A data frame with 67 observations on two variables.
 #' \describe{ 
-#' \item{year}{a factor with levels \code{88-90}
-#' \code{91-93}} 
-#' \item{A}{a numeric vector} 
-#' \item{B}{a numeric vector} 
-#' \item{C}{a numeric vector} 
-#' \item{D}{a numeric vector} 
-#' \item{F}{a numeric vector} 
+#' \item{year}{a factor with levels \code{1988-90} and
+#' \code{1991-93}} 
+#' \item{frequency}{a factor with levels \code{much better than average}, \code{above average},
+#' \code{average}, \code{below average}, and \code{much worse than average}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Chevy)
-#' attach(Chevy)
-#' Chevy
-#' chisq.test(Chevy[,2:6])
-#' detach(Chevy)
+#' T1 <- xtabs(~year + frequency, data = Chevy)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Chevy"
 
 
 
@@ -1819,27 +1667,22 @@ NULL
 #' 
 #' @name Chicken
 #' @docType data
-#' @format A data frame with 13 observations on the following 3 variables.
+#' @format A data frame with 13 observations on the following three variables.
 #' \describe{ 
-#' \item{Ration1}{a numeric vector} 
-#' \item{Ration2}{a numeric vector} 
-#' \item{Ration3}{a numeric vector} 
+#' \item{gain}{weight gain over a specified period} 
+#' \item{feed}{a factor with levels \code{ration1}, \code{ration2}, 
+#' and \code{ration3}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Chicken)
-#' attach(Chicken)
-#' STACKED <-stack(Chicken)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Chicken)
+#' boxplot(gain ~ feed, col = c("red","blue","green"), data = Chicken)
+#' anova(lm(gain ~ feed, data = Chicken))
 #' 
-NULL
+"Chicken"
 
 
 
@@ -1853,28 +1696,32 @@ NULL
 #' 
 #' @name Chipavg
 #' @docType data
-#' @format A data frame with 30 observations on the following 3 variables.
+#' @format A data frame with 30 observations on the following three variables.
 #' \describe{ 
-#' \item{wafer1}{a numeric vector} 
-#' \item{wafer2}{a numeric vector} 
-#' \item{thickness}{a numeric vector} 
+#' \item{wafer1}{thickness of the oxide layer for \code{wafer1}} 
+#' \item{wafer2}{thickness of the oxide layer for \code{wafer2}}
+#' \item{thickness}{average thickness of the oxide layer of the eight measurements
+#' obtained from each set of two wafers} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' 
+#' @source Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
+#' for Monitoring Parameters of a Nested Random Effect Model.} 
+#' \emph{Journal of the American Statistical Association}, 90, 729-738.
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Chipavg)
-#' attach(Chipavg)
-#' EDA(thickness)
-#' t.test(thickness,mu=1000)
-#' boxplot(wafer1,wafer2,name=c("Wafer 1","Wafer 2"))
-#' shapiro.test(wafer1)
-#' shapiro.test(wafer2)
-#' t.test(wafer1,wafer2,var.equal=TRUE)
-#' detach(Chipavg)
+#' EDA(Chipavg$thickness)
+#' t.test(Chipavg$thickness, mu = 1000)
+#' boxplot(Chipavg$wafer1, Chipavg$wafer2, name = c("Wafer 1", "Wafer 2"))
+#' shapiro.test(Chipavg$wafer1)
+#' shapiro.test(Chipavg$wafer2)
+#' t.test(Chipavg$wafer1, Chipavg$wafer2, var.equal = TRUE)
 #' 
-NULL
+"Chipavg"
 
 
 
@@ -1888,28 +1735,33 @@ NULL
 #' 
 #' @name Chips
 #' @docType data
-#' @format A data frame with 30 observations on the following 8 variables.
+#' @format A data frame with 30 observations on the following eight variables.
 #' \describe{ 
-#' \item{wafer11}{a numeric vector} 
-#' \item{wafer12}{a numeric vector} 
-#' \item{wafer13}{a numeric vector}
-#' \item{wafer14}{a numeric vector} 
-#' \item{wafer21}{a numeric vector} 
-#' \item{wafer22}{a numeric vector} 
-#' \item{wafer23}{a numeric vector} 
-#' \item{wafer24}{a numeric vector} 
+#' \item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
+#' \item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
+#' \item{wafer13}{third measurement of thickness of the oxide layer for \code{wafer1}}
+#' \item{wafer14}{fourth measurement of thickness of the oxide layer for \code{wafer1}}
+#' \item{wafer21}{first measurement of thickness of the oxide layer for \code{wafer2}} 
+#' \item{wafer22}{second measurement of thickness of the oxide layer for \code{wafer2}} 
+#' \item{wafer23}{third measurement of thickness of the oxide layer for \code{wafer2}} 
+#' \item{wafer24}{fourth measurement of thickness of the oxide layer for \code{wafer2}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' 
+#' @source Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
+#' for Monitoring Parameters of a Nested Random Effect Model.} 
+#' \emph{Journal of the American Statistical Association}, 90, 729-738.
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Chips)
-#' attach(Chips)
-#' boxplot(wafer11,wafer12,wafer13,wafer14,wafer21,wafer22,wafer23,wafer24)
-#' detach(Chips)
+#' with(data = Chips, 
+#' boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, wafer22, wafer23, wafer24)
+#' )
 #' 
-NULL
+"Chips"
 
 
 
@@ -1922,25 +1774,25 @@ NULL
 #' 
 #' @name Cigarett
 #' @docType data
-#' @format A data frame with 16 observations on the following 2 variables.
+#' @format A data frame with 16 observations on the following two variables.
 #' \describe{ 
-#' \item{cigarett}{a numeric vector} 
-#' \item{weight}{a numeric vector} 
+#' \item{cigarettes}{mothers' estimated average number of cigarettes smoked per day} 
+#' \item{weight}{children's birth weights (in pounds)} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Cigarett)
-#' attach(Cigarett)
-#' plot(cigarett,weight)
-#' model <- lm(weight~cigarett)
+#' plot(weight ~ cigarettes, data = Cigarett)
+#' model <- lm(weight ~ cigarettes, data = Cigarett)
 #' abline(model)
-#' cor(weight,cigarett)
-#' detach(Cigarett)
+#' with(data = Cigarett,
+#' cor(weight, cigarettes)
+#' )
 #' 
-NULL
+"Cigarett"
 
 
 
@@ -1953,27 +1805,22 @@ NULL
 #' 
 #' @name Cigar
 #' @docType data
-#' @format A data frame with 100 observations on the following 6 variables.
+#' @format A data frame with 100 observations on the following two variables.
 #' \describe{ 
-#' \item{brandA}{a numeric vector} 
-#' \item{brandB}{a numeric vector} 
-#' \item{brandC}{a numeric vector}
-#' \item{brandD}{a numeric vector} 
-#' \item{tar}{a numeric vector}
-#' \item{brand}{a numeric vector} 
+#' \item{tar}{amount of tar (measured in milligrams)}
+#' \item{brand}{a factor indicating cigarette brand with levels \code{brandA}, \code{brandB},
+#' \code{brandC}, and \code{brandD}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Cigar)
-#' attach(Cigar)
-#' boxplot(tar~brand)
-#' anova(lm(tar~as.factor(brand)))
-#' detach(Cigar)
+#' boxplot(tar ~ brand, data = Cigar)
+#' anova(lm(tar ~ brand, data = Cigar))
 #' 
-NULL
+"Cigar"
 
 
 
@@ -1986,25 +1833,23 @@ NULL
 #' 
 #' @name Citrus
 #' @docType data
-#' @format A data frame with 9 observations on the following 2 variables.
+#' @format A data frame with nine observations on the following two variables.
 #' \describe{ 
-#' \item{age}{a numeric vector} 
-#' \item{percent}{a numeric vector} 
+#' \item{age}{age of children} 
+#' \item{percent}{percent peak bone density} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Citrus)
-#' attach(Citrus)
-#' model <- lm(percent~age)
+#' model <- lm(percent ~ age, data = Citrus)
 #' summary(model)
 #' anova(model)
-#' detach(Citrus)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Citrus"
 
 
 
@@ -2017,26 +1862,21 @@ NULL
 #' 
 #' @name Clean
 #' @docType data
-#' @format A data frame with 45 observations on the following 5 variables.
+#' @format A data frame with 45 observations on the following two variables.
 #' \describe{ 
-#' \item{A}{a numeric vector} 
-#' \item{B}{a numeric vector} 
-#' \item{C}{a numeric vector} 
-#' \item{clean}{a numeric vector} 
-#' \item{agent}{a numeric vector} 
+#' \item{clean}{residual contaminants} 
+#' \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Clean)
-#' attach(Clean)
-#' boxplot(clean~agent,col=c("red","blue","green"))
-#' anova(lm(clean~as.factor(agent)))
-#' detach(Clean)
+#' boxplot(clean ~ agent, col = c("red", "blue", "green"), data = Clean)
+#' anova(lm(clean ~ agent, data = Clean))
 #' 
-NULL
+"Clean"
 
 
 
@@ -2049,26 +1889,22 @@ NULL
 #' 
 #' @name Coaxial
 #' @docType data
-#' @format A data frame with 45 observations on the following 5 variables.
+#' @format A data frame with 45 observations on the following two variables.
 #' \describe{ 
-#' \item{Type.A}{a numeric vector} 
-#' \item{Type.B}{a numeric vector} 
-#' \item{Type.C}{a numeric vector}
-#' \item{Signal}{a numeric vector} 
-#' \item{Cable}{a numeric vector} 
+#' \item{signal}{signal loss per 1000 feet} 
+#' \item{cable}{factor with three levels of coaxial cable \code{typeA}, 
+#' \code{typeB}, and \code{typeC}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Coaxial)
-#' attach(Coaxial)
-#' boxplot(Signal~Cable)
-#' kruskal.test(Signal~as.factor(Cable))
-#' detach(Coaxial)
+#' boxplot(signal ~ cable, data = Coaxial, col = c("red", "green", "yellow"))
+#' kruskal.test(signal ~ cable, data = Coaxial)
 #' 
-NULL
+"Coaxial"
 
 
 
@@ -2081,28 +1917,27 @@ NULL
 #' 
 #' @name Coffee
 #' @docType data
-#' @format A data frame with 9 observations on the following 4 variables.
+#' @format A data frame with 9 observations on the following two variables.
 #' \describe{ 
-#' \item{Without}{a numeric vector} 
-#' \item{With}{a numeric vector} 
-#' \item{differ}{a numeric vector}
-#' \item{sgnrnks}{a numeric vector} 
+#' \item{without}{workers' productivity scores without a coffee break} 
+#' \item{with}{workers' productivity scores with a coffee break} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Coffee)
-#' attach(Coffee)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' t.test(With,Without,paired=TRUE,alternative="greater")
-#' wilcox.test(With,Without,paired=TRUE,alternative="greater")
-#' detach(Coffee)
+#' differences <- Coffee$with - Coffee$without
+#' qqnorm(differences)
+#' qqline(differences)
+#' shapiro.test(differences)
+#' t.test(Coffee$with, Coffee$without, paired = TRUE, alternative = "greater")
+#' wilcox.test(Coffee$with, Coffee$without, paired = TRUE, 
+#'             alterantive = "greater")
+#' rm(differences)
 #' 
-NULL
+"Coffee"
 
 
 
@@ -2117,21 +1952,18 @@ NULL
 #' @docType data
 #' @format A data frame with 12 observations on the following variable.
 #' \describe{ 
-#' \item{coins}{a numeric vector} 
+#' \item{return}{yearly returns on each of 12 possible investments} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Coins)
-#' attach(Coins)
-#' qqnorm(coins)
-#' qqline(coins)
-#' EDA(coins)
-#' detach(Coins)
+#' qqnorm(Coins$return)
+#' qqline(Coins$return)
 #' 
-NULL
+"Coins"
 
 
 
@@ -2144,44 +1976,42 @@ NULL
 #' 
 #' @name Commute
 #' @docType data
-#' @format A data frame with 39 observations on the following 3 variables.
+#' @format A data frame with 39 observations on the following three variables.
 #' \describe{ 
-#' \item{City}{a factor with levels \code{Atlanta}
-#' \code{Baltimore} \code{Boston} \code{Buffalo} \code{Charlotte}
-#' \code{Chicago} \code{Cincinnati} \code{Cleveland} \code{Columbus}
-#' \code{Dallas} \code{Denver} \code{Detroit} \code{Hartford} \code{Houston}
-#' \code{Indianapolis} \code{Kansas City} \code{Los Angeles} \code{Miami}
-#' \code{Milwaukee} \code{Minneapolis} \code{New Orleans} \code{New York}
-#' \code{Norfolk} \code{Orlando} \code{Philadelphia} \code{Phoenix}
-#' \code{Pittsburgh} \code{Portland} \code{Providence} \code{Rochester}
-#' \code{Sacramento} \code{Salt Lake City} \code{San Antonio} \code{San Diego}
-#' \code{San Francisco} \code{Seattle} \code{St. Louis} \code{Tampa}
+#' \item{city}{a factor with levels \code{Atlanta},
+#' \code{Baltimore}, \code{Boston}, \code{Buffalo}, \code{Charlotte},
+#' \code{Chicago}, \code{Cincinnati}, \code{Cleveland}, \code{Columbus},
+#' \code{Dallas}, \code{Denver}, \code{Detroit}, \code{Hartford}, \code{Houston},
+#' \code{Indianapolis}, \code{Kansas City}, \code{Los Angeles}, \code{Miami},
+#' \code{Milwaukee}, \code{Minneapolis}, \code{New Orleans}, \code{New York},
+#' \code{Norfolk}, \code{Orlando}, \code{Philadelphia}, \code{Phoenix},
+#' \code{Pittsburgh}, \code{Portland}, \code{Providence}, \code{Rochester},
+#' \code{Sacramento}, \code{Salt Lake City}, \code{San Antonio}, \code{San Diego},
+#' \code{San Francisco}, \code{Seattle}, \code{St. Louis}, \code{Tampa}, and
 #' \code{Washington}}
-#' \item{X1980}{a numeric vector}
-#' \item{X1990}{a numeric vector}
+#' \item{year1980}{urban commute times for the year 1980}
+#' \item{year1990}{urban commute times for the year 1990}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Commute)
-#' attach(Commute)
-#' stripchart(x=list(X1980,X1990),method="stack",pch=1,cex=2,col=c("red","blue"),
-#' group.names=c("1980","1990"),main="",xlab="minutes")
-#' title(main="Commute Time")
-#' boxplot(X1980,X1990,col=c("red","blue"),names=c("1980","1990"),horizontal=TRUE,las=1)
-#' library(lattice)
 #' commute <- stack(Commute)
-#' commute[1:5,]
-#' attach(commute)
-#' stripplot(ind~values,jitter=TRUE)
-#' dotplot(ind~values)
-#' bwplot(ind~values)
-#' remove(commute)
-#' detach(Commute)
+#' str(commute)
+#' stripplot(ind ~ values, data = commute, jitter = TRUE)
+#' dotplot(ind ~ values, data = commute)
+#' bwplot(ind ~ values, data = commute)
+#' stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
+#'           col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
+#'           xlab = "minutes")
+#' title(main = "Commute Time")
+#' boxplot(values ~ ind, data = commute, names=c("1980", "1990"), 
+#'        horizontal = TRUE, las = 1)
+#' rm(commute)
 #' 
-NULL
+#' 
+"Commute"
 
 
 
@@ -2196,26 +2026,24 @@ NULL
 #' @docType data
 #' @format A data frame with 28 observations on the following variable.
 #' \describe{ 
-#' \item{self}{a numeric vector} 
+#' \item{self}{Tennessee self concept scores} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Concept)
-#' attach(Concept)
-#' summary(self)
-#' sd(self)
-#' diff(range(self))
-#' IQR(self)
-#' summary(self/10)
-#' IQR(self/10)
-#' sd(self/10)
-#' diff(range(self/10))
-#' detach(Concept)
+#' summary(Concept$self)
+#' sd(Concept$self)
+#' diff(range(Concept$self))
+#' IQR(Concept$self)
+#' summary(Concept$self/10)
+#' IQR(Concept$self/10)
+#' sd(Concept$self/10)
+#' diff(range(Concept$self/10))
 #' 
-NULL
+"Concept"
 
 
 
@@ -2228,23 +2056,21 @@ NULL
 #' 
 #' @name Concrete
 #' @docType data
-#' @format A data frame with 20 observations on the following 3 variables.
+#' @format A data frame with 20 observations on the following 2twovariables.
 #' \describe{ 
-#' \item{Strength}{a numeric vector} 
-#' \item{Method}{a numeric vector} 
-#' \item{Ranks}{a numeric vector} 
+#' \item{strength}{comprehensive strength (in pounds per square inch)} 
+#' \item{method}{factor with levels \code{new} and \code{old} indicating the 
+#' method used to construct a concrete block} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Concrete)
-#' attach(Concrete)
-#' wilcox.test(Strength~Method,alternative="greater")
-#' detach(Concrete)
+#' wilcox.test(strength ~ method, data = Concrete, alternative = "greater")
 #' 
-NULL
+"Concrete"
 
 
 
@@ -2258,27 +2084,27 @@ NULL
 #' 
 #' @name Corn
 #' @docType data
-#' @format A data frame with 12 observations on the following 3 variables.
+#' @format A data frame with 12 observations on the following three variables.
 #' \describe{ 
-#' \item{New}{a numeric vector} 
-#' \item{Standard}{a numeric vector} 
-#' \item{differ}{a numeric vector} 
+#' \item{plot}{number of plot} 
+#' \item{new}{corn yield with new meathod} 
+#' \item{standard}{corn yield with standard method} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Corn)
-#' attach(Corn)
+#' differ <- Corn$new - Corn$standard
 #' boxplot(differ)
 #' qqnorm(differ)
 #' qqline(differ)
 #' shapiro.test(differ)
-#' t.test(New,Standard,paired=TRUE,alternative="greater")
-#' detach(Corn)
+#' t.test(Corn$new, Corn$standard, paired = TRUE, alternative = "greater")
+#' rm(differ)
 #' 
-NULL
+"Corn"
 
 
 
@@ -2291,24 +2117,22 @@ NULL
 #' 
 #' @name Correlat
 #' @docType data
-#' @format A data frame with 13 observations on the following 2 variables.
+#' @format A data frame with 13 observations on the following two variables.
 #' \describe{ 
 #' \item{X}{a numeric vector} 
 #' \item{Y}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Correlat)
-#' attach(Correlat)
-#' plot(X,Y)
-#' model <- lm(Y~X)
+#' plot(Y ~ X, data = Correlat)
+#' model <- lm(Y ~ X, data = Correlat)
 #' abline(model)
-#' detach(Correlat)
 #' 
-NULL
+"Correlat"
 
 
 
@@ -2323,20 +2147,18 @@ NULL
 #' @docType data
 #' @format A data frame with 18 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{standardized psychology scores after a counseling process} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Counsel)
-#' attach(Counsel)
-#' EDA(score)
-#' t.test(score,mu=70)
-#' detach(Counsel)
+#' EDA(Counsel$score)
+#' t.test(Counsel$score, mu = 70)
 #' 
-NULL
+"Counsel"
 
 
 
@@ -2349,24 +2171,21 @@ NULL
 #' 
 #' @name Cpi
 #' @docType data
-#' @format A data frame with 20 observations on the following 2 variables.
+#' @format A data frame with 20 observations on the following two variables.
 #' \describe{ 
-#' \item{Year}{a numeric vector} 
-#' \item{CPI}{a numeric vector} 
+#' \item{year}{year} 
+#' \item{cpi}{consumer price index} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Cpi)
-#' attach(Cpi)  
-#' plot(Year,CPI,type="l",lty=2,lwd=2,col="red")   
-#' names(CPI) <- Year
-#' barplot(CPI,col="pink",las=2,main="Problem 1.34")   
-#' detach(Cpi)
+#' plot(cpi ~ year, data = Cpi, type = "l", lty = 2, lwd = 2, col = "red")   
+#' barplot(Cpi$cpi, col = "pink", las = 2, main = "Problem 1.34")   
 #' 
-NULL
+"Cpi"
 
 
 
@@ -2379,37 +2198,33 @@ NULL
 #' 
 #' @name Crime
 #' @docType data
-#' @format A data frame with 51 observations on the following 3 variables.
+#' @format A data frame with 102 observations on the following three variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{DC} \code{Delaware} \code{Florida}
-#' \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
-#' \code{Iowa} \code{Kansas} \code{Kentucky} \code{Louisiana} \code{Maine}
-#' \code{Maryland} \code{Massachusetts} \code{Michigan} \code{Minnesota}
-#' \code{Mississippi} \code{Missour} \code{Montana} \code{Nebraska}
-#' \code{Nevada} \code{New Hampshire} \code{New Jersey} \code{New Mexico}
-#' \code{New York} \code{North Carolina} \code{North Dakota} \code{Ohio}
-#' \code{Oklahoma} \code{Oregon} \code{Pennsylvania} \code{Rhode Island}
-#' \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
-#' \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
-#' Virginia} \code{Wisconsin} \code{Wyoming}} 
-#' \item{X1983}{a numeric vector} 
-#' \item{X1993}{a numeric vector} 
+#' \item{state}{a factor with levels \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{DC}, \code{Delaware}, \code{Florida},
+#' \code{Georgia}, \code{Hawaii}, \code{Idaho}, \code{Illinois}, \code{Indiana},
+#' \code{Iowa}, \code{Kansas}, \code{Kentucky}, \code{Louisiana}, \code{Maine},
+#' \code{Maryland}, \code{Massachusetts}, \code{Michigan}, \code{Minnesota},
+#' \code{Mississippi}, \code{Missour}, \code{Montana}, \code{Nebraska},
+#' \code{Nevada}, \code{New Hampshire}, \code{New Jersey}, \code{New Mexico},
+#' \code{New York}, \code{North Carolina}, \code{North Dakota}, \code{Ohio},
+#' \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania}, \code{Rhode Island},
+#' \code{South Carolina}, \code{South Dakota}, \code{Tennessee}, \code{Texas},
+#' \code{Utah}, \code{Vermont}, \code{Virginia}, \code{Washington}, \code{West
+#' Virginia}, \code{Wisconsin}, and \code{Wyoming}}
+#' \item{year}{a factor with levels \code{1983} and \code{1993}} 
+#' \item{rate}{crime rate per 100,000 inhabitants} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Crime)
-#' attach(Crime)
-#' boxplot(X1983,X1993,names=c("1983","1993"),xlab="Year",
-#' ylab="Crime Rate per 100,000 Inhabitants",main="Problem 1.90")
-#' plot(X1983,X1993)
-#' detach(Crime)
+#' boxplot(rate ~ year, data = Crime)
 #' 
-NULL
+"Crime"
 
 
 
@@ -2422,30 +2237,26 @@ NULL
 #' 
 #' @name Darwin
 #' @docType data
-#' @format A data frame with 30 observations on the following 7 variables.
+#' @format A data frame with 15 observations on the following three variables.
 #' \describe{ 
-#' \item{pot}{a numeric vector} 
-#' \item{cross}{a numeric vector} 
-#' \item{self}{a numeric vector}
-#' \item{height}{a numeric vector} 
-#' \item{method}{a numeric vector} 
-#' \item{differ}{a numeric vector} 
-#' \item{sgnrnks}{a numeric vector} 
+#' \item{pot}{number of pot} 
+#' \item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
+#' \item{self}{height of plant (in inches) after a fixed period of time when self-fertilized}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Darwin)
-#' attach(Darwin)
+#' differ <- Darwin$cross - Darwin$self
 #' qqnorm(differ)
 #' qqline(differ)
 #' shapiro.test(differ)
-#' wilcox.test(cross,self,paired=TRUE)
-#' detach(Darwin)
+#' wilcox.test(Darwin$cross, Darwin$self, paired = TRUE)
+#' rm(differ)
 #' 
-NULL
+"Darwin"
 
 
 
@@ -2459,26 +2270,27 @@ NULL
 #' 
 #' @name Dealers
 #' @docType data
-#' @format A data frame with 6 observations on the following 2 variables.
+#' @format A data frame with 122 observations on the following two variables.
 #' \describe{ 
-#' \item{Replace}{a numeric vector} 
-#' \item{Recomnd}{a numeric vector} 
+#' \item{type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
+#' \code{Ford}, \code{Dodge}, and \code{Saturn}} 
+#' \item{service}{a factor with levels \code{Replaces unnecessarily} and \code{Follows manufacturer guidelines}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Dealers)
-#' attach(Dealers)
-#' Deal <- as.matrix(Dealers)
-#' rownames(Deal) <- c("Honda","Toyota","Mazda","Ford","Dodge","Saturn")
-#' Dealers
-#' barplot(t(Deal),beside=TRUE,legend=TRUE)
-#' detach(Dealers)
-#' remove(Deal)
+#' xtabs(~type + service, data = Dealers)
+#' T1 <- xtabs(~type + service, data = Dealers)
+#' T1
+#' addmargins(T1)
+#' pt <- prop.table(T1, margin = 1)
+#' pt
+#' barplot(t(pt),  col = c("red", "skyblue"), legend = colnames(T1))
 #' 
-NULL
+"Dealers"
 
 
 
@@ -2491,30 +2303,22 @@ NULL
 #' 
 #' @name Defectiv
 #' @docType data
-#' @format A data frame with 20 observations on the following 4 variables.
+#' @format A data frame with 20 observations on one variable.
 #' \describe{ 
-#' \item{C1}{a numeric vector} 
-#' \item{number}{a numeric vector} 
-#' \item{Count}{a numeric vector}
-#' \item{Percent}{a numeric vector} 
+#' \item{number}{number of defective items produced by the employees in a small business firm} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Defectiv)
-#' attach(Defectiv)
-#' table(C1)
-#' barplot(table(C1),col="pink",ylab="Frequency",
-#' xlab="Defective Items Produced by Employees",main="Problem 1.27")
-#' detach(Defectiv)
+#' T1 <- xtabs(~ number, data = Defectiv)
+#' T1
+#' barplot(T1, col = "pink", ylab = "Frequency",
+#' xlab = "Defective Items Produced by Employees", main = "Problem 1.27")
 #' 
-NULL
-
-
-
-
+"Defectiv"
 
 #' Percent of bachelor's degrees awarded women in 1970 versus 1990
 #' 
@@ -2523,31 +2327,25 @@ NULL
 #' 
 #' @name Degree
 #' @docType data
-#' @format A data frame with 11 observations on the following 3 variables.
+#' @format A data frame with 1064 observations on the following two variables.
 #' \describe{ 
-#' \item{Field}{a factor with levels \code{All fields}
-#' \code{Business} \code{Education} \code{Engineering} \code{Fine Arts}
-#' \code{Foreign Lng} \code{Health} \code{Life Sciences} \code{Physical Sci}
-#' \code{Psychology} \code{Social Science}} 
-#' \item{X1970}{a numeric vector} 
-#' \item{X1990}{a numeric vector} 
+#' \item{field}{a factor with levels \code{Health},
+#' \code{Education}, \code{Foreign Language}, \code{Psychology}, \code{Fine Arts},
+#' \code{Life Sciences}, \code{Business}, \code{Social Science}, \code{Physical Sciences},
+#' \code{Engineering}, and \code{All Fields}} 
+#' \item{awarded}{a factor with levels \code{1970} and \code{1990}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Degree)
-#' attach(Degree)
-#' Dmat <- as.matrix(Degree[,2:3])
-#' rownames(Dmat) <- Field
-#' colnames(Dmat) <- c("1970","1990")
-#' Dmat
-#' barplot(t(Dmat),beside=TRUE,legend=TRUE,cex.names=.5)
-#' detach(Degree)
-#' remove(Dmat)
+#' T1 <- xtabs(~field + awarded, data = Degree)
+#' T1
+#' barplot(t(T1), beside = TRUE, col = c("red", "skyblue"), legend = colnames(T1))
 #' 
-NULL
+"Degree"
 
 
 
@@ -2560,27 +2358,21 @@ NULL
 #' 
 #' @name Delay
 #' @docType data
-#' @format A data frame with 80 observations on the following 6 variables.
+#' @format A data frame with 80 observations on the following two variables.
 #' \describe{ 
-#' \item{CarrierA}{a numeric vector}
-#' \item{CarrierB}{a numeric vector} 
-#' \item{CarrierC}{a numeric vector} 
-#' \item{CarrierD}{a numeric vector} 
-#' \item{delay}{a numeric vector} 
-#' \item{Carrier}{a numeric vector} 
+#' \item{delay}{the delay time (in minutes) for 80 randomly selected flights}
+#' \item{carrier}{a factor with levels \code{A}, \code{B}, \code{C}, and \code{D}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Delay)
-#' attach(Delay)
-#' boxplot(delay~Carrier)
-#' kruskal.test(delay~as.factor(Carrier))
-#' detach(Delay)
+#' boxplot(delay ~ carrier, data = Delay)
+#' kruskal.test(delay ~carrier, data = Delay)
 #' 
-NULL
+"Delay"
 
 
 
@@ -2593,26 +2385,22 @@ NULL
 #' 
 #' @name Depend
 #' @docType data
-#' @format A data frame with 50 observations on the following 4 variables.
+#' @format A data frame with 50 observations on one variable.
 #' \describe{ 
-#' \item{C1}{a numeric vector} 
-#' \item{number}{a numeric vector} 
-#' \item{Count}{a numeric vector}
-#' \item{Percent}{a numeric vector} 
+#' \item{number}{number of dependent children in a family} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Depend)
-#' attach(Depend)
-#' table(C1)
-#' barplot(table(C1),col="lightblue",main="Problem 1.26",
-#' xlab="Number of Dependent Children",ylab="Frequency")
-#' detach(Depend)
+#' T1 <- xtabs(~ number, data = Depend)
+#' T1
+#' barplot(T1, col = "lightblue", main = "Problem 1.26",
+#' xlab = "Number of Dependent Children", ylab = "Frequency")
 #' 
-NULL
+"Depend"
 
 
 
@@ -2627,19 +2415,17 @@ NULL
 #' @docType data
 #' @format A data frame with 40 observations on the following variable.
 #' \describe{ 
-#' \item{educ}{a numeric vector} 
+#' \item{educ}{the educational level (in years) of a sample of 40 auto workers in a plant in Detroit} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Detroit)
-#' attach(Detroit)
-#' EDA(educ)
-#' detach(Detroit)
+#' EDA(Detroit$educ)
 #' 
-NULL
+"Detroit"
 
 
 
@@ -2653,18 +2439,22 @@ NULL
 #' 
 #' @name Develop
 #' @docType data
-#' @format The format is: num [1:5, 1:2] 545 24 71 142 1587 ...  - attr(*,
-#' "dimnames")=List of 2 ..$ : chr [1:5] "African America" "American Indian"
-#' "Asian" "Latino" ...  ..$ : chr [1:2] "Two-year" "Four-year"
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @format A data frame with 5656 observations on the following two variables.
+#' \describe{ 
+#' \item{race}{a factor with levels \code{African American}, \code{American Indian},
+#' \code{Asian}, \code{Latino}, and \code{White}} 
+#' \item{college}{a factor with levels \code{Two-year} and \code{Four-year}}
+#' }
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' Develop
-#' chisq.test(Develop)
-#' 
-NULL
+#' str(Develop)
+#' T1 <- xtabs(~race + college, data = Develop)
+#' T1
+#' chisq.test(T1)
+"Develop"
 
 
 
@@ -2680,20 +2470,18 @@ NULL
 #' @docType data
 #' @format A data frame with 40 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{first exam score} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Devmath)
-#' attach(Devmath)
-#' EDA(score)
-#' t.test(score,mu=80,alternative="less")
-#' detach(Devmath)
+#' EDA(Devmath$score)
+#' t.test(Devmath$score, mu = 80, alternative = "less")
 #' 
-NULL
+"Devmath"
 
 
 
@@ -2706,26 +2494,25 @@ NULL
 #' 
 #' @name Dice
 #' @docType data
-#' @format A data frame with 11 observations on the following 2 variables.
+#' @format A data frame with 11 observations on the following two variables.
 #' \describe{ 
-#' \item{x}{a numeric vector} 
-#' \item{P.x.}{a numeric vector} 
+#' \item{x}{possible outcomes for the sum of two dice} 
+#' \item{Px}{probability for outcome \code{x}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Dice)
-#' attach(Dice)
-#' roll1 <- sample(1:6,2000,replace=TRUE)
-#' roll2 <- sample(1:6,2000,replace=TRUE)
-#' outcome <- roll1+roll2
-#' table(outcome)/length(outcome)
-#' detach(Dice)
-#' remove(roll1,roll2,outcome)
-#' 
-NULL
+#' roll1 <- sample(1:6, 20000, replace = TRUE)
+#' roll2 <- sample(1:6, 20000, replace = TRUE)
+#' outcome <- roll1 + roll2
+#' T1 <- table(outcome)/length(outcome)
+#' remove(roll1, roll2, outcome)
+#' T1
+#' round(t(Dice), 5)
+"Dice"
 
 
 
@@ -2738,48 +2525,37 @@ NULL
 #' 
 #' @name Diesel
 #' @docType data
-#' @format A data frame with 65 observations on the following 11 variables.
+#' @format A data frame with 650 observations on the following three variables.
 #' \describe{ 
-#' \item{Date}{a factor with levels \code{1/03/2000}
-#' \code{1/04/1999} \code{1/10/2000} \code{1/11/1999} \code{1/17/2000}
-#' \code{1/18/1999} \code{1/24/2000} \code{1/25/1999} \code{1/31/2000}
-#' \code{10/04/1999} \code{10/11/1999} \code{10/18/1999} \code{10/25/1999}
-#' \code{11/01/1999} \code{11/08/1999} \code{11/15/1999} \code{11/22/1999}
-#' \code{11/29/1999} \code{12/06/1999} \code{12/07/1998} \code{12/13/1999}
-#' \code{12/14/1998} \code{12/20/1999} \code{12/21/1998} \code{12/27/1999}
-#' \code{12/28/1998} \code{2/01/1999} \code{2/07/2000} \code{2/08/1999}
-#' \code{2/14/2000} \code{2/15/1999} \code{2/21/2000} \code{2/22/1999}
-#' \code{2/28/2000} \code{3/01/1999} \code{3/08/1999} \code{3/15/1999}
-#' \code{3/22/1999} \code{3/29/1999} \code{4/05/1999} \code{4/12/1999}
-#' \code{4/19/1999} \code{4/26/1999} \code{5/03/1999} \code{5/10/1999}
-#' \code{5/17/1999} \code{5/24/1999} \code{5/31/1999} \code{6/07/1999}
-#' \code{6/14/1999} \code{6/21/1999} \code{6/28/1999} \code{7/05/1999}
-#' \code{7/12/1999} \code{7/19/1999} \code{7/26/1999} \code{8/02/1999}
-#' \code{8/09/1999} \code{8/16/1999} \code{8/23/1999} \code{8/30/1999}
-#' \code{9/06/1999} \code{9/13/1999} \code{9/20/1999} \code{9/27/1999}}
-#' \item{NatAvg}{a numeric vector} 
-#' \item{EstCst}{a numeric vector} 
-#' \item{NE}{a numeric vector} 
-#' \item{CltAtl}{a numeric vector} 
-#' \item{LwrAtl}{a numeric vector} 
-#' \item{Gulf}{a numeric vector} 
-#' \item{Rocky}{a numeric vector}
-#' \item{WstMt}{a numeric vector} 
-#' \item{Coast}{a numeric vector} 
-#' \item{Calif}{a numeric vector}
+#' \item{date}{date when price was recorded}
+#' \item{pricepergallon}{price per gallon (in dollars)}
+#' \item{location}{a factor with levels \code{California}, \code{CentralAtlantic},
+#' \code{Coast}, \code{EastCoast}, \code{Gulf}, \code{LowerAtlantic}, \code{NatAvg},
+#' \code{NorthEast}, \code{Rocky}, and \code{WesternMountain}}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Diesel)
-#' attach(Diesel)
-#' boxplot(NatAvg,EstCst,Gulf,Rocky,Calif,
-#' names=c("National Average","East Coast","Gulf","Rocky","California"),col="pink")
-#' 
-#' 
-NULL
+#' par(las = 2)
+#' boxplot(pricepergallon ~ location, data = Diesel)
+#' boxplot(pricepergallon ~ location, 
+#'          data = droplevels(Diesel[Diesel$location == "EastCoast" | 
+#'          Diesel$location == "Gulf" | Diesel$location == "NatAvg" | 
+#'          Diesel$location == "Rocky" | Diesel$location == "California", ]), 
+#'          col = "pink", main = "Exercise 2.8")
+#' par(las = 1) 
+#' \dontrun{
+#' ggplot2::ggplot(data = Diesel, aes(x = date, y = pricepergallon, 
+#'                color = location)) + 
+#'                geom_point() + 
+#'                geom_smooth(se = FALSE) + 
+#'                theme_bw() + 
+#'                labs(y = "Price per Gallon (in dollars)")
+#' }         
+"Diesel"
 
 
 
@@ -2787,44 +2563,52 @@ NULL
 
 #' Parking tickets issued to diplomats
 #' 
-#' Data for Exercises 1.14 and 1.47
+#' Data for Exercises 1.14 and 1.37
 #' 
 #' 
 #' @name Diplomat
 #' @docType data
-#' @format A data frame with 10 observations on the following 4 variables.
+#' @format A data frame with 10 observations on the following three variables.
 #' \describe{ 
-#' \item{Country}{a factor with levels \code{Brazil}
+#' \item{country}{a factor with levels \code{Brazil}
 #' \code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
 #' \code{Russia} \code{S. Korea} \code{Ukraine} \code{Venezuela}}
-#' \item{Number}{a numeric vector} 
-#' \item{rate}{a numeric vector} 
-#' \item{Code}{a factor with levels \code{Br} \code{Bu}
-#' \code{Eg} \code{In} \code{Is} \code{Ni} \code{Ru} \code{SK} \code{Uk}
-#' \code{Ve}} 
+#' \item{number}{total number of tickets} 
+#' \item{rate}{number of tickets per vehicle per month} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Diplomat)
-#' attach(Diplomat)
-#' par(mfrow=c(1,2))
-#' names(Number) <- Country
-#' dotchart(Number,main="Number of Tickets",col="blue",pch=1)
-#' names(rate) <- Country
-#' dotchart(rate,main="Tickets/Vehicle/Month",col="red",pch=2)
-#' barplot(rate,col="pink")
-#' detach(Diplomat)
-#' 
-NULL
+#' par(las = 2, mfrow = c(2, 2))
+#' stripchart(number ~ country, data = Diplomat, pch = 19, 
+#'            col= "red", vertical = TRUE)
+#' stripchart(rate ~ country, data = Diplomat, pch = 19, 
+#'            col= "blue", vertical = TRUE) 
+#' with(data = Diplomat, 
+#'      barplot(number, names.arg = country, col = "red"))
+#' with(data = Diplomat, 
+#'      barplot(rate, names.arg = country, col = "blue"))           
+#' par(las = 1, mfrow = c(1, 1))
+#' \dontrun{
+#' ggplot2::ggplot(data = Diplomat, aes(x = reorder(country, number), 
+#'                  y = number)) + 
+#'            geom_bar(stat = "identity", fill = "pink", color = "black") + 
+#'            theme_bw() + labs(x = "", y = "Total Number of Tickets")
+#' ggplot2::ggplot(data = Diplomat, aes(x = reorder(country, rate), 
+#'                  y = rate)) +
+#'            geom_bar(stat = "identity", fill = "pink", color = "black") + 
+#'            theme_bw() + labs(x = "", y = "Tickets per vehicle per month")
+#' }
+"Diplomat"
 
 
 
 
 
-#' Toxic intensity for plants producing herbicidal preparations
+#' Toxic intensity for manufacturing plants producing herbicidal preparations
 #' 
 #' Data for Exercise 1.127
 #' 
@@ -2833,21 +2617,19 @@ NULL
 #' @docType data
 #' @format A data frame with 29 observations on the following variable.
 #' \describe{ 
-#' \item{pounds}{a numeric vector} 
+#' \item{pounds}{pounds of toxic waste per $1000 of shipments of its products} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Disposal)
-#' attach(Disposal)
-#' stem(pounds)
-#' fivenum(pounds)
-#' EDA(pounds)
-#' detach(Disposal)
+#' stem(Disposal$pounds)
+#' fivenum(Disposal$pounds)
+#' EDA(Disposal$pounds)
 #' 
-NULL
+"Disposal"
 
 
 
@@ -2860,30 +2642,33 @@ NULL
 #' 
 #' @name Dogs
 #' @docType data
-#' @format A data frame with 20 observations on the following 5 variables.
+#' @format A data frame with 20 observations on the following three variables.
 #' \describe{ 
-#' \item{Dog}{a factor with levels \code{Beagle}
-#' \code{Boxer} \code{Chihuahua} \code{Chow} \code{Dachshund} \code{Dalmatian}
-#' \code{Doberman} \code{Huskie} \code{Labrador} \code{Pomeranian}
-#' \code{Poodle} \code{Retriever} \code{Rotweiler} \code{Schnauzer}
-#' \code{Shepherd} \code{Shetland} \code{ShihTzu} \code{Spaniel}
-#' \code{Springer} \code{Yorkshire}}
-#' \item{X1992}{a numeric vector}
-#' \item{X1993}{a numeric vector} 
-#' \item{X1997}{a numeric vector} 
-#' \item{X1998}{a numeric vector} 
+#' \item{breed}{a factor with levels \code{Beagle},
+#' \code{Boxer}, \code{Chihuahua}, \code{Chow}, \code{Dachshund}, 
+#' \code{Dalmatian}, \code{Doberman}, \code{Huskie}, \code{Labrador}, 
+#' \code{Pomeranian}, \code{Poodle}, \code{Retriever}, \code{Rotweiler}, 
+#' \code{Schnauzer}, \code{Shepherd}, \code{Shetland}, \code{ShihTzu}, 
+#' \code{Spaniel}, \code{Springer}, and  \code{Yorkshire}}
+#' \item{ranking}{numeric ranking}
+#' \item{year}{a factor with levels \code{1992}, \code{1993}, \code{1997}, 
+#' and \code{1998}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Dogs)
-#' attach(Dogs)
-#' cor(Dogs[,2:5])
-#' detach(Dogs)
-#' 
-NULL
+#' cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
+#' cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
+#' \dontrun{
+#' ggplot2::ggplot(data = Dogs, aes(x = reorder(breed, ranking), y = ranking)) + 
+#'      geom_bar(stat = "identity") + 
+#'      facet_grid(year ~. ) + 
+#'      theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) 
+#' }
+"Dogs"
 
 
 
@@ -2896,25 +2681,26 @@ NULL
 #' 
 #' @name Domestic
 #' @docType data
-#' @format A data frame with 5 observations on the following 2 variables.
+#' @format A data frame with 5 observations on the following two variables.
 #' \describe{ 
-#' \item{Age}{a factor with levels \code{12-19} \code{20-24}
-#' \code{25-34} \code{35-49} \code{50-64}} 
-#' \item{Rate}{a numeric vector} 
+#' \item{age}{a factor with levels \code{12-19}, \code{20-24},
+#' \code{25-34}, \code{35-49}, and \code{50-64}} 
+#' \item{rate}{rate of domestic violence per 1000 women} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Domestic)
-#' attach(Domestic)
-#' names(Rate) <- Age
-#' barplot(Rate,col="gold")
-#' pie(Rate)
-#' detach(Domestic)
-#' 
-NULL
+#' barplot(Domestic$rate, names.arg = Domestic$age)
+#' \dontrun{
+#' ggplot2::ggplot(data = Domestic, aes(x = age, y = rate)) + 
+#'      geom_bar(stat = "identity", fill = "purple", color = "black") + 
+#'      labs(x = "", y = "Domestic violence per 1000 women") + 
+#'      theme_bw()
+#' }
+"Domestic"
 
 
 
@@ -2928,25 +2714,21 @@ NULL
 #' 
 #' @name Dopamine
 #' @docType data
-#' @format A data frame with 25 observations on the following 4 variables.
+#' @format A data frame with 25 observations on the following two variables.
 #' \describe{ 
-#' \item{nonpsych}{a numeric vector}
-#' \item{psychotic}{a numeric vector} 
-#' \item{DBH}{a numeric vector} 
-#' \item{group}{a numeric vector} 
+#' \item{dbh}{dopamine b-hydroxylase activity (units are nmol/(ml)(h)/(mg) of protein)} 
+#' \item{group}{a factor with levels \code{nonpsychotic} and \code{psychotic}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Dopamine)
-#' attach(Dopamine)
-#' boxplot(DBH~group,names=c("Non Psychotic","Psychotic"))
-#' t.test(DBH~group,var.equal=TRUE)
-#' detach(Dopamine)
+#' boxplot(dbh ~ group, data = Dopamine)
+#' t.test(dbh ~ group, data = Dopamine, var.equal = TRUE)
 #' 
-NULL
+"Dopamine"
 
 
 
@@ -2961,25 +2743,25 @@ NULL
 #' @docType data
 #' @format A data frame with 105 observations on the following 3 variables.
 #' \describe{ 
-#' \item{year}{a numeric vector} 
-#' \item{close}{a numeric vector} 
-#' \item{X.change}{a numeric vector} 
+#' \item{year}{date} 
+#' \item{close}{Dow Jones closing price} 
+#' \item{change}{percent change from previous year} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Dowjones)
-#' attach(Dowjones)  
-#' plot(year,close,type="l",lty=2,lwd=2,col="blue")     
-#' barplot(close,col="blue",las=2,main="Problem 1.35",names.arg=FALSE)      
-#' detach(Dowjones) 
-#' 
-NULL
-
-
-
+#' plot(close ~ year, data = Dowjones, type = "l", main = "Exercise 1.35")
+#' \dontrun{
+#' ggplot2::ggplot(data = Dowjones, aes(x = year, y = close)) +
+#' geom_point(size = 0.5) + 
+#' geom_line(color = "red") + 
+#' theme_bw() + 
+#' labs(y = "Dow Jones Closing Price")
+#' }
+"Dowjones"
 
 
 #' Opinion on referendum by view on moral issue of selling alcoholic beverages
@@ -2989,26 +2771,23 @@ NULL
 #' 
 #' @name Drink
 #' @docType data
-#' @format A data frame with 3 observations on the following 4 variables.
+#' @format A data frame with 472 observations on two variables.
 #' \describe{ 
-#' \item{drink}{a factor with levels \code{immoral}
-#' \code{ok} \code{tolerated}} 
-#' \item{For}{a numeric vector}
-#' \item{Against}{a numeric vector} 
-#' \item{undecide}{a numeric vector} 
+#' \item{drinking}{a factor with levels \code{ok},
+#' \code{tolerated}, and \code{immoral}} 
+#' \item{referendum}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Drink)
-#' attach(Drink)
-#' Drink
-#' chisq.test(Drink[,2:4])
-#' detach(Drink)
+#' T1 <- xtabs(~drinking + referendum, data = Drink)
+#' T1
+#' chisq.test(T1)
 #' 
-NULL
+"Drink"
 
 
 
@@ -3022,23 +2801,22 @@ NULL
 #' 
 #' @name Drug
 #' @docType data
-#' @format A data frame with 28 observations on the following 2 variables.
+#' @format A data frame with 28 observations on the following two variables.
 #' \describe{ 
-#' \item{trials}{a numeric vector} 
-#' \item{group}{a numeric vector} 
+#' \item{trials}{number of trials to master a task} 
+#' \item{group}{a factor with levels \code{control} and \code{experimental}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Drug)
-#' attach(Drug)
-#' boxplot(trials~group)
-#' wilcox.test(trials~group)
-#' detach(Drug)
+#' boxplot(trials ~ group, data = Drug)
+#' wilcox.test(trials ~ group, data = Drug)
+#' t.test(rank(trials) ~ group, data = Drug, var.equal = TRUE)
 #' 
-NULL
+"Drug"
 
 
 
@@ -3051,29 +2829,27 @@ NULL
 #' 
 #' @name Dyslexia
 #' @docType data
-#' @format A data frame with 8 observations on the following 7 variables.
+#' @format A data frame with 8 observations on the following seven variables.
 #' \describe{ 
-#' \item{words}{a numeric vector} 
-#' \item{age}{a numeric vector} 
-#' \item{gender}{a factor with levels \code{f}
-#' \code{m}} 
-#' \item{handed}{a factor with levels \code{l} \code{r}}
-#' \item{weight}{a numeric vector} 
-#' \item{height}{a numeric vector} 
-#' \item{children}{a numeric vector} 
+#' \item{words}{number of words read per minute} 
+#' \item{age}{age of participant} 
+#' \item{gender}{a factor with levels \code{female} and 
+#' \code{male}} 
+#' \item{handed}{a factor with levels \code{left} and \code{right}}
+#' \item{weight}{weight of participant (in pounds)} 
+#' \item{height}{height of participant (in inches)} 
+#' \item{children}{number of children in family} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Dyslexia)
-#' attach(Dyslexia)
-#' plot(weight,height)
-#' plot(handed,words)
-#' detach(Dyslexia)
+#' plot(height ~ weight, data = Dyslexia)
+#' plot(words ~ handed, data = Dyslexia)
 #' 
-NULL
+"Dyslexia"
 
 
 
@@ -3086,23 +2862,21 @@ NULL
 #' 
 #' @name Earthqk
 #' @docType data
-#' @format A data frame with 100 observations on the following 2 variables.
+#' @format A data frame with 100 observations on the following two variables.
 #' \describe{ 
-#' \item{year}{a numeric vector} 
-#' \item{severity}{a numeric vector} 
+#' \item{year}{year seimic activity recorded} 
+#' \item{severity}{annual incidence of sever earthquakes} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Earthqk)
-#' attach(Earthqk)
-#' EDA(severity)
-#' t.test(severity,mu=100,alternative="greater")
-#' detach(Earthqk)
+#' EDA(Earthqk$severity)
+#' t.test(Earthqk$severity, mu = 100, alternative = "greater")
 #' 
-NULL
+"Earthqk"
 
 
 
@@ -3116,35 +2890,35 @@ NULL
 #' 
 #' @name Educat
 #' @docType data
-#' @format A data frame with 51 observations on the following 3 variables.
+#' @format A data frame with 51 observations on the following three variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{DC} \code{Delaware} \code{Florida}
-#' \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
-#' \code{Iowa} \code{Kansas} \code{Kentucky} \code{Louisiana} \code{Maine}
-#' \code{Maryland} \code{Massachusetts} \code{Michigan} \code{Minnesota}
-#' \code{Mississippi} \code{Missour} \code{Montana} \code{Nebraska}
-#' \code{Nevada} \code{New Hampshire} \code{New Jersey} \code{New Mexico}
-#' \code{New York} \code{North Carolina} \code{North Dakota} \code{Ohio}
-#' \code{Oklahoma} \code{Oregon} \code{Pennsylvania} \code{Rhode Island}
-#' \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
-#' \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
-#' Virginia} \code{Wisconsin} \code{Wyoming}} 
-#' \item{nodegree}{a numeric vector} 
-#' \item{crime}{a numeric vector} 
+#' \item{state}{a factor with levels \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{DC}, \code{Delaware}, \code{Florida},
+#' \code{Georgia}, \code{Hawaii}, \code{Idaho}, \code{Illinois}, \code{Indiana},
+#' \code{Iowa}, \code{Kansas}, \code{Kentucky}, \code{Louisiana}, \code{Maine},
+#' \code{Maryland}, \code{Massachusetts}, \code{Michigan}, \code{Minnesota},
+#' \code{Mississippi}, \code{Missour}, \code{Montana}, \code{Nebraska},
+#' \code{Nevada}, \code{New Hampshire}, \code{New Jersey}, \code{New Mexico},
+#' \code{New York}, \code{North Carolina}, \code{North Dakota}, \code{Ohio},
+#' \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania}, \code{Rhode Island},
+#' \code{South Carolina}, \code{South Dakota}, \code{Tennessee}, \code{Texas},
+#' \code{Utah}, \code{Vermont}, \code{Virginia}, \code{Washington}, \code{West
+#' Virginia}, \code{Wisconsin}, and \code{Wyoming}} 
+#' \item{nodegree}{percent of the population without a high school degree} 
+#' \item{crime}{violent crimes per 100,000 population} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Educat)
-#' attach(Educat)
-#' plot(nodegree,crime,xlab="No Crime",ylab="Violent Crime Rate per 100,000")
-#' detach(Educat)
+#' plot(crime ~ nodegree, data = Educat, 
+#'      xlab = "Percent of population without high school degree",
+#'      ylab = "Violent Crime Rate per 100,000")
 #' 
-NULL
+"Educat"
 
 
 
@@ -3157,31 +2931,24 @@ NULL
 #' 
 #' @name Eggs
 #' @docType data
-#' @format A data frame with 12 observations on the following 7 variables.
+#' @format A data frame with 12 observations on the following two variables.
 #' \describe{ 
-#' \item{feed}{a numeric vector} 
-#' \item{eggs}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
-#' \item{c1sq}{a numeric vector}
-#' \item{SRES2}{a numeric vector} 
-#' \item{FITS2}{a numeric vector} 
+#' \item{feed}{amount of feed supplement} 
+#' \item{eggs}{number of eggs per day for 100 chickens} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Eggs)
-#' attach(Eggs)
-#' plot(feed,eggs)
-#' model <- lm(eggs~feed)
+#' plot(eggs ~ feed, data = Eggs)
+#' model <- lm(eggs ~ feed, data = Eggs)
 #' abline(model)
 #' summary(model)
-#' detach(Eggs)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Eggs"
 
 
 
@@ -3194,37 +2961,40 @@ NULL
 #' 
 #' @name Elderly
 #' @docType data
-#' @format A data frame with 51 observations on the following 3 variables.
+#' @format A data frame with 51 observations on the following three variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
-#' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
-#' \code{Illinois} \code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky}
-#' \code{Louisiana} \code{Maine} \code{Maryland} \code{Massachusetts}
-#' \code{Michigan} \code{Minnesota} \code{Mississippi} \code{Missour}
-#' \code{Montana} \code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New
-#' Jersey} \code{New Mexico} \code{New York} \code{North Carolina} \code{North
-#' Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
-#' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
-#' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
-#' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-#' \item{X85percent}{a numeric vector} 
-#' \item{X98percent}{a numeric vector} 
+#' \item{state}{a factor with levels \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{Delaware}, \code{District of
+#' Colunbia}, \code{Florida}, \code{Georgia}, \code{Hawaii}, \code{Idaho},
+#' \code{Illinois}, \code{Indiana}, \code{Iowa}, \code{Kansas}, \code{Kentucky},
+#' \code{Louisiana}, \code{Maine}, \code{Maryland}, \code{Massachusetts},
+#' \code{Michigan}, \code{Minnesota}, \code{Mississippi}, \code{Missour},
+#' \code{Montana}, \code{Nebraska}, \code{Nevada}, \code{New Hampshire}, \code{New
+#' Jersey}, \code{New Mexico}, \code{New York}, \code{North Carolina}, \code{North
+#' Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
+#' \code{Rhode Island}, \code{South Carolina}, \code{South Dakota},
+#' \code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia},
+#' \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
+#' \item{percent1985}{percent of the population over the age of 65 in 1985} 
+#' \item{percent1998}{percent of the population over the age of 65 in 1998} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Elderly)
-#' attach(Elderly)
-#' stripchart(x=list(X98percent,X85percent),method="stack",pch=19,
-#' col=c("red","blue"),group.names=c("1998","1985"))
-#' cor(X98percent,X85percent)
-#' detach(Elderly)
-#' 
-NULL
+#' with(data = Elderly, 
+#' stripchart(x = list(percent1998, percent1985), method = "stack", pch = 19,
+#'            col = c("red","blue"), group.names = c("1998", "1985"))
+#'            )
+#' with(data = Elderly, cor(percent1998, percent1985))
+#' \dontrun{
+#' ggplot2::ggplot(data = Elderly, aes(x = percent1985, y = percent1998)) +
+#'                geom_point() + theme_bw()
+#' }
+"Elderly"
 
 
 
@@ -3237,31 +3007,23 @@ NULL
 #' 
 #' @name Energy
 #' @docType data
-#' @format A data frame with 12 observations on the following 5 variables.
+#' @format A data frame with 12 observations on the following two variables.
 #' \describe{ 
-#' \item{Size}{a numeric vector} 
-#' \item{kilowatt}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
-#' \item{Residuals}{a numeric vector} 
+#' \item{size}{size of home (in square feet)} 
+#' \item{kilowatt}{killowatt-hours per month} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Energy)
-#' attach(Energy)
-#' plot(Size,kilowatt)
-#' cor(Size,kilowatt)
-#' model <- lm(kilowatt~Size)
-#' plot(Size,resid(model))
-#' detach(Energy)
+#' plot(kilowatt ~ size, data = Energy)
+#' with(data = Energy, cor(size, kilowatt))
+#' model <- lm(kilowatt ~ size, data = Energy)
+#' plot(Energy$size, resid(model))
 #' 
-NULL
-
-
-
+"Energy"
 
 
 #' Salaries after 10 years for graduates of three different universities
@@ -3271,27 +3033,23 @@ NULL
 #' 
 #' @name Engineer
 #' @docType data
-#' @format A data frame with 51 observations on the following 6 variables.
+#' @format A data frame with 51 observations on the following two variables.
 #' \describe{ 
-#' \item{UnivA}{a numeric vector} 
-#' \item{UnivB}{a numeric vector} 
-#' \item{UnivC}{a numeric vector}
-#' \item{salary}{a numeric vector} 
-#' \item{university}{a numeric vector} 
-#' \item{ranks}{a numeric vector} 
+#' \item{salary}{salary (in $1000) 10 years after graduation} 
+#' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Engineer)
-#' attach(Engineer)
-#' boxplot(salary~university)
-#' kruskal.test(salary~as.factor(university))
-#' detach(Engineer)
+#' boxplot(salary ~ university, data = Engineer)
+#' kruskal.test(salary ~ university, data = Engineer)
+#' anova(lm(salary ~ university, data = Engineer))
+#' anova(lm(rank(salary) ~ university, data = Engineer))
 #' 
-NULL
+"Engineer"
 
 
 
@@ -3306,19 +3064,18 @@ NULL
 #' @docType data
 #' @format A data frame with 24 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{college entrance exam score} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
 #' str(Entrance)
-#' attach(Entrance)
-#' stem(score)
-#' detach(Entrance)
+#' stem(Entrance$score)
+#' stem(Entrance$score, scale = 2)
 #' 
-NULL
+"Entrance"
 
 
 
@@ -3351,7 +3108,7 @@ NULL
 #' \item{hwy}{a numeric vector} 
 #' \item{cmb}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3398,7 +3155,7 @@ NULL
 #' \item{hwy}{a numeric vector} 
 #' \item{cmb}{a numeric vector} 
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3425,7 +3182,7 @@ NULL
 #' \describe{ 
 #' \item{Age}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3452,7 +3209,7 @@ NULL
 #' \describe{ 
 #' \item{loss}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3482,7 +3239,7 @@ NULL
 #' \item{With}{a numeric vector} 
 #' \item{Without}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3515,7 +3272,7 @@ NULL
 #' \item{Time}{a numeric vector} 
 #' \item{Eruption}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3545,7 +3302,7 @@ NULL
 #' \item{Number}{a numeric vector} 
 #' \item{Cost}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3578,7 +3335,7 @@ NULL
 #' \item{Mond.Fer}{a numeric vector} 
 #' \item{undecide}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3610,7 +3367,7 @@ NULL
 #' \item{Ferraro}{a numeric vector} 
 #' \item{undecide}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3651,7 +3408,7 @@ NULL
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 #' \item{rate}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3682,7 +3439,7 @@ NULL
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3713,7 +3470,7 @@ NULL
 #' \item{smallmesh}{a numeric vector} 
 #' \item{largemesh}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3747,7 +3504,7 @@ NULL
 #' \item{Before}{a numeric vector} 
 #' \item{After}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3803,7 +3560,7 @@ NULL
 #' \item{PHILLIPS}{a numeric vector}
 #' \item{Total}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3841,7 +3598,7 @@ NULL
 #' \item{group}{a numeric vector} 
 #' \item{ln.resp.}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3869,7 +3626,7 @@ NULL
 #' \describe{ 
 #' \item{food}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3896,7 +3653,7 @@ NULL
 #' \describe{ 
 #' \item{cholest}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3927,7 +3684,7 @@ NULL
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3958,7 +3715,7 @@ NULL
 #' \item{Average}{a numeric vector} 
 #' \item{More}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -3986,7 +3743,7 @@ NULL
 #' \describe{ 
 #' \item{velocity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4032,7 +3789,7 @@ NULL
 #' \item{No.Crime4}{a numeric vector} 
 #' \item{No.Opinion4}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4069,7 +3826,7 @@ NULL
 #' \describe{ 
 #' \item{price}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4100,7 +3857,7 @@ NULL
 #' \item{differ}{a numeric vector}
 #' \item{sgnrnks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4130,7 +3887,7 @@ NULL
 #' \describe{ 
 #' \item{yards}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4172,7 +3929,7 @@ NULL
 #' \item{X1994salary}{a numeric vector} 
 #' \item{X1999salary}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4200,7 +3957,7 @@ NULL
 #' \item{HSGPA}{a numeric vector} 
 #' \item{CollGPA}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4235,7 +3992,7 @@ NULL
 #' \describe{ 
 #' \item{grades}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4268,7 +4025,7 @@ NULL
 #' \code{LSt} \code{Mi} \code{MSt} \code{SC} \code{Te} \code{Va}}
 #' \item{Percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4297,7 +4054,7 @@ NULL
 #' \describe{ 
 #' \item{thick}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4326,7 +4083,7 @@ NULL
 #' \describe{ 
 #' \item{thick}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4357,7 +4114,7 @@ NULL
 #' \item{GroupB}{a numeric vector} 
 #' \item{GroupC}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4390,7 +4147,7 @@ NULL
 #' \item{GroupB}{a numeric vector} 
 #' \item{GroupC}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4423,7 +4180,7 @@ NULL
 #' \item{number}{a numeric vector} 
 #' \item{x.}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4456,7 +4213,7 @@ NULL
 #' \item{differ}{a numeric vector} 
 #' \item{signrks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4487,7 +4244,7 @@ NULL
 #' \describe{ 
 #' \item{concent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4517,7 +4274,7 @@ NULL
 #' \describe{ 
 #' \item{receipt}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4555,7 +4312,7 @@ NULL
 #' 1.100000000e+001} \code{5.310000000e+001 9.000000000e+000}
 #' \code{6.300000000e+000 1.000000000e+000}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4587,7 +4344,7 @@ NULL
 #' \item{Type}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4621,7 +4378,7 @@ NULL
 #' \item{All.US}{a numeric vector} 
 #' \item{Not.Rese}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4659,7 +4416,7 @@ NULL
 #' \item{Partial}{a numeric vector} 
 #' \item{None}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4715,7 +4472,7 @@ NULL
 #' \item{X2000}{a numeric vector}
 #' \item{difference}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4746,7 +4503,7 @@ NULL
 #' \item{Private}{a numeric vector} 
 #' \item{Public}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4774,7 +4531,7 @@ NULL
 #' \describe{ 
 #' \item{mileage}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4807,7 +4564,7 @@ NULL
 #' \item{Type}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4846,7 +4603,7 @@ NULL
 #' \item{X1984}{a numeric vector} 
 #' \item{X1993}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4902,7 +4659,7 @@ NULL
 #' \code{warm}} 
 #' \item{code}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4937,7 +4694,7 @@ NULL
 #' \item{Newfound}{a numeric vector}
 #' \item{GrandBk}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -4982,7 +4739,7 @@ NULL
 #' \item{freq}{a numeric vector}
 #' \item{percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5015,7 +4772,7 @@ NULL
 #' \item{group}{a numeric vector} 
 #' \item{ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5049,7 +4806,7 @@ NULL
 #' \item{income}{a numeric vector} 
 #' \item{poverty}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5082,7 +4839,7 @@ NULL
 #' \item{speed}{a numeric vector} 
 #' \item{yr.1960}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5120,7 +4877,7 @@ NULL
 #' \item{starts}{a numeric vector} 
 #' \item{group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5153,7 +4910,7 @@ NULL
 #' \item{inflation}{a numeric vector} 
 #' \item{C6.T}{a factor with levels \code{alow} \code{bmiddle} \code{high}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5181,7 +4938,7 @@ NULL
 #' \describe{ 
 #' \item{temp}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5214,7 +4971,7 @@ NULL
 #' \item{cocaine}{a numeric vector} 
 #' \item{marijuan}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5247,7 +5004,7 @@ NULL
 #' \item{X70.85}{a numeric vector} 
 #' \item{great85}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5276,7 +5033,7 @@ NULL
 #' \item{temp}{a numeric vector} 
 #' \item{loss}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5304,7 +5061,7 @@ NULL
 #' \item{IQ}{a numeric vector} 
 #' \item{GPA}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5348,7 +5105,7 @@ NULL
 #' \item{sepalL}{a numeric vector}
 #' \item{sample}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5384,7 +5141,7 @@ NULL
 #' \item{X1994}{a numeric vector} 
 #' \item{X1995}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5416,7 +5173,7 @@ NULL
 #' \item{WSPT}{a numeric vector} 
 #' \item{satisfac}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5448,7 +5205,7 @@ NULL
 #' \item{gender}{a numeric vector} 
 #' \item{smoke}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5490,7 +5247,7 @@ NULL
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 #' \item{rate}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5520,7 +5277,7 @@ NULL
 #' \item{Kinder}{a numeric vector} 
 #' \item{NoKinder}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5556,7 +5313,7 @@ NULL
 #'  \item{Regional}{a numeric vector} 
 #'  \item{Metropol}{a numeric vector} 
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5585,7 +5342,7 @@ NULL
 #' \item{under35}{a numeric vector} 
 #' \item{over35}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5615,7 +5372,7 @@ NULL
 #' \item{exposed}{a numeric vector} 
 #' \item{control}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5642,7 +5399,7 @@ NULL
 #' \describe{ 
 #' \item{survival}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5671,7 +5428,7 @@ NULL
 #' \item{Men}{a numeric vector} 
 #' \item{Women}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5705,7 +5462,7 @@ NULL
 #' \item{RESI1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5744,7 +5501,7 @@ NULL
 #' \item{injuries}{a numeric vector}
 #' \item{damage}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5776,7 +5533,7 @@ NULL
 #' \item{Site}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5809,7 +5566,7 @@ NULL
 #' \item{Group}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5840,7 +5597,7 @@ NULL
 #' \item{Experimt}{a numeric vector} 
 #' \item{Control}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5875,7 +5632,7 @@ NULL
 #' \item{SRES1}{a numeric vector} 
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5906,7 +5663,7 @@ NULL
 #' \describe{ 
 #' \item{award}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5933,7 +5690,7 @@ NULL
 #' \describe{ 
 #' \item{salary}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5961,7 +5718,7 @@ NULL
 #' \describe{ 
 #' \item{percent}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -5991,7 +5748,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6046,7 +5803,7 @@ NULL
 #' \item{Profic}{a numeric vector} 
 #' \item{Group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6077,7 +5834,7 @@ NULL
 #' \describe{ 
 #' \item{math}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6113,7 +5870,7 @@ NULL
 #' \item{condition}{a factor with levels \code{CondA}
 #' \code{CondB} \code{CondC} \code{CondD}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6143,7 +5900,7 @@ NULL
 #' \item{Sample2}{a numeric vector} 
 #' \item{Sample3}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6175,7 +5932,7 @@ NULL
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6202,7 +5959,7 @@ NULL
 #' \describe{ 
 #' \item{mercury}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6229,7 +5986,7 @@ NULL
 #' \describe{ 
 #' \item{rent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6257,7 +6014,7 @@ NULL
 #' \describe{ 
 #' \item{miller}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6286,7 +6043,7 @@ NULL
 #' \describe{ 
 #' \item{miller}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6321,7 +6078,7 @@ NULL
 #' \item{lnmoist}{a numeric vector}
 #' \item{depthsq}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6351,7 +6108,7 @@ NULL
 #' \item{manufac}{a numeric vector} 
 #' \item{compet}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6381,7 +6138,7 @@ NULL
 #' \item{After}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6415,7 +6172,7 @@ NULL
 #' \item{Method2}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6457,7 +6214,7 @@ NULL
 #' \item{value}{a numeric vector}
 #' \item{revenue}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6494,7 +6251,7 @@ NULL
 #' \item{Team}{a numeric vector} 
 #' \item{Ranks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6523,7 +6280,7 @@ NULL
 #' \item{react}{a numeric vector} 
 #' \item{drug}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6551,7 +6308,7 @@ NULL
 #' \describe{ 
 #' \item{profit}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6621,7 +6378,7 @@ NULL
 #' \code{7.500000000e+000 4.940000000e+000 2.760000000e+002}
 #' \code{8.200000000e+000 4.720000000e+000 3.130000000e+002}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6675,7 +6432,7 @@ NULL
 #' \code{7.200000000e+000 5.200000000e+000 3.150000000e+002}
 #' \code{7.600000000e+000 5.150000000e+000 3.030000000e+002}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6702,7 +6459,7 @@ NULL
 #' \item{nicotine}{a numeric vector} 
 #' \item{sales}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6732,7 +6489,7 @@ NULL
 #' \item{harvest}{a numeric vector} 
 #' \item{price}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6771,7 +6528,7 @@ NULL
 #' \code{Webster}} 
 #' \item{X1999salary}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6797,7 +6554,7 @@ NULL
 #' \item{Before}{a numeric vector} 
 #' \item{After}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6832,7 +6589,7 @@ NULL
 #' \item{Mother}{a numeric vector} 
 #' \item{Father}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6870,7 +6627,7 @@ NULL
 #' \item{SRES2}{a numeric vector} 
 #' \item{FITS2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6900,7 +6657,7 @@ NULL
 #' \item{brother}{a numeric vector} 
 #' \item{sister}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6928,7 +6685,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6961,7 +6718,7 @@ NULL
 #' \code{Plants}} 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -6989,7 +6746,7 @@ NULL
 #' \item{Party}{a numeric vector} 
 #' \item{Gender}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7017,7 +6774,7 @@ NULL
 #' \describe{ 
 #' \item{inde}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7046,7 +6803,7 @@ NULL
 #' \describe{ 
 #' \item{porosity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7085,7 +6842,7 @@ NULL
 #' \item{popu}{a numeric vector} 
 #' \item{ratio}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7117,7 +6874,7 @@ NULL
 #' \item{rate}{a numeric vector} 
 #' \item{income}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7147,7 +6904,7 @@ NULL
 #' \describe{ 
 #' \item{prejud}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7191,7 +6948,7 @@ NULL
 #' \item{Inaugage}{a numeric vector} 
 #' \item{Deathage}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7225,7 +6982,7 @@ NULL
 #' \item{SRES1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7253,7 +7010,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7285,7 +7042,7 @@ NULL
 #' \item{Method3}{a numeric vector}
 #' \item{Method4}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7319,7 +7076,7 @@ NULL
 #' \item{SRES1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7347,7 +7104,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7375,7 +7132,7 @@ NULL
 #' \describe{ 
 #' \item{income}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7404,7 +7161,7 @@ NULL
 #' \item{placebo}{a numeric vector}
 #' \item{treatmen}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7435,7 +7192,7 @@ NULL
 #' \item{Process1}{a numeric vector}
 #' \item{Process2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7472,7 +7229,7 @@ NULL
 #' \item{x3}{a numeric vector} 
 #' \item{x4}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7504,7 +7261,7 @@ NULL
 #' \item{FITS1}{a numeric vector} 
 #' \item{RESI1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7542,7 +7299,7 @@ NULL
 #' \item{Rating}{a factor with levels \code{A} \code{B} \code{C} \code{D} \code{F}}
 #' \item{GPA}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7569,7 +7326,7 @@ NULL
 #' \describe{ 
 #' \item{survival.time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7600,7 +7357,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7630,7 +7387,7 @@ NULL
 #' \item{trimmed}{a numeric vector}
 #' \item{winsoriz}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7658,7 +7415,7 @@ NULL
 #' \item{reading}{a numeric vector} 
 #' \item{IQ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7691,7 +7448,7 @@ NULL
 #' \item{Against}{a numeric vector} 
 #' \item{undecide}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7723,7 +7480,7 @@ NULL
 #'  \item{Region}{a numeric vector}
 #'  \item{Ranks}{a numeric vector} 
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7754,7 +7511,7 @@ NULL
 #' \item{SRES1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7786,7 +7543,7 @@ NULL
 #' \item{Psych2}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7819,7 +7576,7 @@ NULL
 #' \item{female}{a numeric vector} 
 #' \item{male}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7848,7 +7605,7 @@ NULL
 #' \describe{ 
 #' \item{rent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7875,7 +7632,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7905,7 +7662,7 @@ NULL
 #' \item{months}{a numeric vector}
 #' \item{sales}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7943,7 +7700,7 @@ NULL
 #' \item{upsalinity2}{a numeric vector} 
 #' \item{updensity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -7975,7 +7732,7 @@ NULL
 #' \item{secondarysalinity}{a numeric vector} 
 #' \item{density}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8006,7 +7763,7 @@ NULL
 #' \item{score}{a numeric vector} 
 #' \item{code}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8034,7 +7791,7 @@ NULL
 #' \describe{ 
 #' \item{salary}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8058,7 +7815,7 @@ NULL
 #' \describe{ 
 #' \item{salinity}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8114,7 +7871,7 @@ NULL
 #' \item{code99}{a numeric vector} 
 #' \item{expend99}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8147,7 +7904,7 @@ NULL
 #' \item{state}{a numeric vector}
 #' \item{ranks}{a numeric vector}
 #'  }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8178,7 +7935,7 @@ NULL
 #' \code{C} \code{D}} 
 #' \item{reading}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8206,7 +7963,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8235,7 +7992,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8268,7 +8025,7 @@ NULL
 #' \item{Minor}{a numeric vector}
 #' \item{Major}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8299,7 +8056,7 @@ NULL
 #' \item{Before}{a numeric vector} 
 #' \item{After}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8331,7 +8088,7 @@ NULL
 #' \describe{ 
 #' \item{reaction}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8359,7 +8116,7 @@ NULL
 #' \describe{ 
 #' \item{months}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8398,7 +8155,7 @@ NULL
 #' \code{NoDrug/S}} 
 #' \item{Response}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8428,7 +8185,7 @@ NULL
 #' \item{Group2}{a numeric vector} 
 #' \item{Group3}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8461,7 +8218,7 @@ NULL
 #' \item{sales}{a numeric vector} 
 #' \item{loss}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8497,7 +8254,7 @@ NULL
 #' \item{Parallax}{a numeric vector} 
 #' \item{Sample}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8529,7 +8286,7 @@ NULL
 #' \item{shuttle}{a numeric vector} 
 #' \item{autos}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8573,7 +8330,7 @@ NULL
 #' \item{gradept}{a numeric vector} 
 #' \item{gender2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8606,7 +8363,7 @@ NULL
 #' \describe{ 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8638,7 +8395,7 @@ NULL
 #' \item{C1}{a numeric vector} 
 #' \item{C2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8667,7 +8424,7 @@ NULL
 #' \item{close}{a numeric vector} 
 #' \item{poor}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8698,7 +8455,7 @@ NULL
 #' \describe{ 
 #' \item{SLC}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8729,7 +8486,7 @@ NULL
 #' \item{SRES1}{a numeric vector} 
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8767,7 +8524,7 @@ NULL
 #' \item{nearly}{a numeric vector} 
 #' \item{every}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8797,7 +8554,7 @@ NULL
 #' \item{concent}{a numeric vector}
 #' \item{site}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8824,7 +8581,7 @@ NULL
 #' \describe{ 
 #' \item{weight}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8853,7 +8610,7 @@ NULL
 #' \describe{ 
 #' \item{income}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8884,7 +8641,7 @@ NULL
 #' \item{SAT}{a numeric vector} 
 #' \item{Exam}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8911,7 +8668,7 @@ NULL
 #' \describe{ 
 #' \item{rate}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8941,7 +8698,7 @@ NULL
 #' \item{differ}{a numeric vector}
 #' \item{signrnks}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -8973,7 +8730,7 @@ NULL
 #' \item{Fourth}{a numeric vector} 
 #' \item{Colleag}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9003,7 +8760,7 @@ NULL
 #' \item{After}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9036,7 +8793,7 @@ NULL
 #' 2.600000000e+001} \code{male 3.300000000e+001 3.800000000e+001
 #' 2.400000000e+001 5.000000000e+000}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9066,7 +8823,7 @@ NULL
 #' \item{husband}{a numeric vector} 
 #' \item{wife}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9094,7 +8851,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9124,7 +8881,7 @@ NULL
 #' \item{thick}{a numeric vector} 
 #' \item{freq}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9154,7 +8911,7 @@ NULL
 #' \item{X9am}{a numeric vector} 
 #' \item{X2pm}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9195,7 +8952,7 @@ NULL
 #' Virginia} \code{Wisconsin} \code{Wyoming}} 
 #' \item{cost}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9225,7 +8982,7 @@ NULL
 #' \item{Class1}{a numeric vector} 
 #' \item{Class2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9253,7 +9010,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9283,7 +9040,7 @@ NULL
 #' \item{Prestre}{a numeric vector}
 #' \item{Poststre}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9315,7 +9072,7 @@ NULL
 #' \describe{ 
 #' \item{hours}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9345,7 +9102,7 @@ NULL
 #' \item{reported}{a numeric vector} 
 #' \item{actual}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9376,7 +9133,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9404,7 +9161,7 @@ NULL
 #' \item{year}{a numeric vector} 
 #' \item{sunspots}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9450,7 +9207,7 @@ NULL
 #' \item{loser.score}{a numeric vector} 
 #' \item{margin}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9483,7 +9240,7 @@ NULL
 #' \item{speed}{a numeric vector} 
 #' \item{car}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9531,7 +9288,7 @@ NULL
 #' \item{gas}{a numeric vector} 
 #' \item{air}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9574,7 +9331,7 @@ NULL
 #' \item{X1983.84}{a numeric vector} 
 #' \item{X1993.94}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9602,7 +9359,7 @@ NULL
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9634,7 +9391,7 @@ NULL
 #' \item{Tensile}{a numeric vector}
 #' \item{Run}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9664,7 +9421,7 @@ NULL
 #' \describe{ 
 #' \item{test1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9693,7 +9450,7 @@ NULL
 #' \item{loss}{a numeric vector} 
 #' \item{x}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9815,7 +9572,7 @@ NULL
 #' \code{9/25/1999} \code{9/26/1999} \code{9/27/1999} \code{9/28/1999}
 #' \code{9/29/1999} \code{9/30/1999}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9839,7 +9596,7 @@ NULL
 #' \describe{ 
 #' \item{time}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9874,7 +9631,7 @@ NULL
 #' \item{score}{a numeric vector}
 #' \item{cost}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9901,7 +9658,7 @@ NULL
 #' \item{Carrier}{a numeric vector}
 #' \item{Non.carrier}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9949,7 +9706,7 @@ NULL
 #' \item{torts}{a numeric vector} 
 #' \item{rate}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -9993,7 +9750,7 @@ NULL
 #' \item{minority}{a numeric vector} 
 #' \item{percent}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10025,7 +9782,7 @@ NULL
 #' \item{Year}{a numeric vector} 
 #' \item{X1500m}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10071,7 +9828,7 @@ NULL
 #' \item{X3000m}{a numeric vector} 
 #' \item{marathon}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10103,7 +9860,7 @@ NULL
 #' \item{Treatmnt}{a numeric vector} 
 #' \item{Group}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10130,7 +9887,7 @@ NULL
 #' \describe{ 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10163,7 +9920,7 @@ NULL
 #' \item{gas.mileage}{a numeric vector} 
 #' \item{truck}{a factor with levels \code{chevy} \code{dodge} \code{ford}} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10205,7 +9962,7 @@ NULL
 #' \item{percent}{a numeric vector} 
 #' \item{test}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10236,7 +9993,7 @@ NULL
 #' \item{TwinB}{a numeric vector} 
 #' \item{differ}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10275,7 +10032,7 @@ NULL
 #' \item{SAT}{a numeric vector} 
 #' \item{Drops}{a numeric vector}
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10310,7 +10067,7 @@ NULL
 #' \describe{ 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10342,7 +10099,7 @@ NULL
 #' Carolina} \code{Tennessee} \code{Texas}} 
 #' \item{number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10382,7 +10139,7 @@ NULL
 #' \item{D}{a numeric vector} 
 #' \item{F}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10414,7 +10171,7 @@ NULL
 #' \item{SRES1}{a numeric vector}
 #' \item{FITS1}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10446,7 +10203,7 @@ NULL
 #' \item{level}{a numeric vector} 
 #' \item{sunspot}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10478,7 +10235,7 @@ NULL
 #' \item{first}{a numeric vector} 
 #' \item{second}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10505,7 +10262,7 @@ NULL
 #' \describe{ 
 #' \item{visual}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10536,7 +10293,7 @@ NULL
 #' \item{First}{a numeric vector} 
 #' \item{Second}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10572,7 +10329,7 @@ NULL
 #' \item{ln.no.}{a numeric vector}
 #' \item{index}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10605,7 +10362,7 @@ NULL
 #' \code{Tornado} \code{Winter weather}} 
 #' \item{Number}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10637,7 +10394,7 @@ NULL
 #' \item{earnings}{a numeric vector} 
 #' \item{price}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10673,7 +10430,7 @@ NULL
 #' \item{SRES2}{a numeric vector} 
 #' \item{FITS2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10701,7 +10458,7 @@ NULL
 #' \item{Window}{a numeric vector} 
 #' \item{Leakage}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10740,7 +10497,7 @@ NULL
 #' \item{errors}{a numeric vector} 
 #' \item{era}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10772,7 +10529,7 @@ NULL
 #' \item{Type.1}{a numeric vector} 
 #' \item{Type.2}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
@@ -10822,7 +10579,7 @@ NULL
 #' \item{SSN}{a numeric vector} 
 #' \item{year}{a numeric vector} 
 #' }
-#' @source Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples

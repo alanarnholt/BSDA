@@ -4,6 +4,7 @@
 \name{Engineer}
 \alias{Engineer}
 \title{Salaries after 10 years for graduates of three different universities}
+<<<<<<< HEAD
 \format{A data frame with 51 observations on the following 6 variables.
 \describe{ 
 \item{UnivA}{a numeric vector} 
@@ -12,10 +13,15 @@
 \item{salary}{a numeric vector} 
 \item{university}{a numeric vector} 
 \item{ranks}{a numeric vector} 
+=======
+\format{A data frame with 51 observations on the following two variables.
+\describe{ 
+\item{salary}{salary (in $1000) 10 years after graduation} 
+\item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Engineer
 }
 \description{
 Data for Example 10.7
@@ -23,11 +29,23 @@ Data for Example 10.7
 \examples{
 
 str(Engineer)
+<<<<<<< HEAD
 attach(Engineer)
 boxplot(salary~university)
 kruskal.test(salary~as.factor(university))
 detach(Engineer)
 
+=======
+boxplot(salary ~ university, data = Engineer)
+kruskal.test(salary ~ university, data = Engineer)
+anova(lm(salary ~ university, data = Engineer))
+anova(lm(rank(salary) ~ university, data = Engineer))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

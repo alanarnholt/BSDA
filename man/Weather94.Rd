@@ -12,10 +12,6 @@ Temp} \code{Flash flood} \code{Fog} \code{High wind} \code{Hurricane}
 \code{Tornado} \code{Winter weather}} 
 \item{Number}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 1.30
 }
@@ -28,6 +24,13 @@ barplot(Number,col="lightblue",las=2,cex.names=.65,main="Problem 1.30")
 # las=2 places bar names vertically
 detach(Weather94)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

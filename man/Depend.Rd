@@ -4,16 +4,21 @@
 \name{Depend}
 \alias{Depend}
 \title{Number of dependent children for 50 families}
+<<<<<<< HEAD
 \format{A data frame with 50 observations on the following 4 variables.
 \describe{ 
 \item{C1}{a numeric vector} 
 \item{number}{a numeric vector} 
 \item{Count}{a numeric vector}
 \item{Percent}{a numeric vector} 
+=======
+\format{A data frame with 50 observations on one variable.
+\describe{ 
+\item{number}{number of dependent children in a family} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Depend
 }
 \description{
 Data for Exercise 1.26
@@ -21,12 +26,24 @@ Data for Exercise 1.26
 \examples{
 
 str(Depend)
+<<<<<<< HEAD
 attach(Depend)
 table(C1)
 barplot(table(C1),col="lightblue",main="Problem 1.26",
 xlab="Number of Dependent Children",ylab="Frequency")
 detach(Depend)
 
+=======
+T1 <- xtabs(~ number, data = Depend)
+T1
+barplot(T1, col = "lightblue", main = "Problem 1.26",
+xlab = "Number of Dependent Children", ylab = "Frequency")
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

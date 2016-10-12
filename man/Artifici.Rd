@@ -6,17 +6,21 @@
 \title{Durations of operation for 15 artificial heart transplants}
 \format{A data frame with 15 observations on the following variable.
 \describe{ 
+<<<<<<< HEAD
 \item{duration}{a numeric vector} 
+=======
+\item{duration}{duration (in hours) for transplant} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Artifici
 }
 \description{
 Data for Exercise 1.107
 }
 \examples{
 
+<<<<<<< HEAD
 str(Artifici)
 attach(Artifici)
 stem(duration)
@@ -27,6 +31,18 @@ summary(values)
 detach(Artifici)
 remove(values)
 
+=======
+stem(Artifici$duration, 2)
+summary(Artifici$duration)
+values <- Artifici$duration[Artifici$duration < 6.5]
+values
+summary(values)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

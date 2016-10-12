@@ -4,6 +4,7 @@
 \name{Bookstor}
 \alias{Bookstor}
 \title{Prices paid for used books at three different bookstores}
+<<<<<<< HEAD
 \format{A data frame with 72 observations on the following 6 variables.
 \describe{ 
 \item{StoreA}{a numeric vector} 
@@ -12,22 +13,38 @@
 \item{Dollars}{a numeric vector} 
 \item{Store}{a numeric vector} 
 \item{Ranks}{a numeric vector}
+=======
+\format{A data frame with 72 observations on 2 variables.
+\describe{ 
+\item{dollars}{money obtained for selling textbooks} 
+\item{store}{a factor with levels \code{A}, \code{B}, and \code{C}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Bookstor
 }
 \description{
 Data for Exercise 10.30 and 10.31
 }
 \examples{
 
+<<<<<<< HEAD
 str(Bookstor)
 attach(Bookstor)
 boxplot(Dollars~Store)
 kruskal.test(Dollars~as.factor(Store))
 detach(Bookstor)
 
+=======
+boxplot(dollars ~ store, data = Bookstor, 
+        col = c("purple", "lightblue", "cyan"))
+kruskal.test(dollars ~ store, data = Bookstor)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

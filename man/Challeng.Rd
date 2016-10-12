@@ -5,6 +5,7 @@
 \alias{Challeng}
 \title{Temperatures and O-ring failures for the launches of the space shuttle
 Challenger}
+<<<<<<< HEAD
 \format{A data frame with 25 observations on the following 4 variables.
 \describe{ 
 \item{flight}{a factor with levels \code{1} \code{2}
@@ -21,16 +22,29 @@ levels \code{1/12/86} \code{1/24/85} \code{1/28/86} \code{10/3/85}
 \code{8/30/83} \code{8/30/84}} 
 \item{temp}{a numeric vector}
 \item{Failures}{a numeric vector} 
+=======
+\format{A data frame with 25 observations on the following four variables.
+\describe{ 
+\item{flight}{a character variable indicating the flight}
+\item{date}{date of the flight} 
+\item{temp}{temperature (in fahrenheit)}
+\item{failures}{number of failures} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
 \source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Dalal, S. R., Fowlkes, E. B., Hoadley, B. 1989. \dQuote{Risk Analysis of the Space Shuttle: Pre-Challenger 
+Prediction of Failure.} 
+\emph{Journal of the American Statistical Association}, 84, No. 408, 945-957.
+}
+\usage{
+Challeng
 }
 \description{
 Data for Examples 1.11, 1.12, 1.13, 2.11 and 5.1
 }
 \examples{
 
+<<<<<<< HEAD
 str(Challeng)
 attach(Challeng)
 stem(temp)
@@ -51,6 +65,30 @@ qqline(sort(temp)[-1])
 par(mfrow=c(1,1))
 detach(Challeng)
 
+=======
+str(Challeng) 
+stem(Challeng$temp)
+summary(Challeng$temp)
+IQR(Challeng$temp)
+quantile(Challeng$temp)
+fivenum(Challeng$temp)
+stem(sort(Challeng$temp)[-1])
+summary(sort(Challeng$temp)[-1])
+IQR(sort(Challeng$temp)[-1])
+quantile(sort(Challeng$temp)[-1])
+fivenum(sort(Challeng$temp)[-1])
+par(mfrow=c(1, 2))
+qqnorm(Challeng$temp)
+qqline(Challeng$temp)
+qqnorm(sort(Challeng$temp)[-1])
+qqline(sort(Challeng$temp)[-1])
+par(mfrow=c(1, 1))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -4,14 +4,20 @@
 \name{Citrus}
 \alias{Citrus}
 \title{Percent of peak bone density of different aged children}
+<<<<<<< HEAD
 \format{A data frame with 9 observations on the following 2 variables.
 \describe{ 
 \item{age}{a numeric vector} 
 \item{percent}{a numeric vector} 
+=======
+\format{A data frame with nine observations on the following two variables.
+\describe{ 
+\item{age}{age of children} 
+\item{percent}{percent peak bone density} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Citrus
 }
 \description{
 Data for Exercise 9.7
@@ -19,13 +25,21 @@ Data for Exercise 9.7
 \examples{
 
 str(Citrus)
-attach(Citrus)
-model <- lm(percent~age)
+model <- lm(percent ~ age, data = Citrus)
 summary(model)
 anova(model)
+<<<<<<< HEAD
 detach(Citrus)
 remove(model)
 
+=======
+rm(model)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

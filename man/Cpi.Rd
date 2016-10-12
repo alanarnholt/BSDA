@@ -4,14 +4,20 @@
 \name{Cpi}
 \alias{Cpi}
 \title{Consumer price index from 1979 to 1998}
+<<<<<<< HEAD
 \format{A data frame with 20 observations on the following 2 variables.
 \describe{ 
 \item{Year}{a numeric vector} 
 \item{CPI}{a numeric vector} 
+=======
+\format{A data frame with 20 observations on the following two variables.
+\describe{ 
+\item{year}{year} 
+\item{cpi}{consumer price index} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Cpi
 }
 \description{
 Data for Exercise 1.34
@@ -19,12 +25,22 @@ Data for Exercise 1.34
 \examples{
 
 str(Cpi)
+<<<<<<< HEAD
 attach(Cpi)  
 plot(Year,CPI,type="l",lty=2,lwd=2,col="red")   
 names(CPI) <- Year
 barplot(CPI,col="pink",las=2,main="Problem 1.34")   
 detach(Cpi)
 
+=======
+plot(cpi ~ year, data = Cpi, type = "l", lty = 2, lwd = 2, col = "red")   
+barplot(Cpi$cpi, col = "pink", las = 2, main = "Problem 1.34")   
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -8,10 +8,6 @@
 \describe{ 
 \item{score}{a numeric vector} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 6.56
 }
@@ -24,6 +20,13 @@ t.test(score,mu=30,alternative="less")
 SIGN.test(score,md=30,alternative="less")
 detach(Tenness)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

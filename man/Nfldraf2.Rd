@@ -50,10 +50,6 @@
 \code{7.500000000e+000 4.940000000e+000 2.760000000e+002}
 \code{8.200000000e+000 4.720000000e+000 3.130000000e+002}} 
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
-}
 \description{
 Data for Exercise 9.63
 }
@@ -61,6 +57,13 @@ Data for Exercise 9.63
 
 data(Nfldraf2)
 
+<<<<<<< HEAD
+=======
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

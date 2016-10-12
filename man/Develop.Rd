@@ -5,21 +5,34 @@
 \alias{Develop}
 \title{Demographic characteristics of developmental students at 2-year colleges and
 4-year colleges}
-\format{The format is: num [1:5, 1:2] 545 24 71 142 1587 ...  - attr(*,
-"dimnames")=List of 2 ..$ : chr [1:5] "African America" "American Indian"
-"Asian" "Latino" ...  ..$ : chr [1:2] "Two-year" "Four-year"}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\format{A data frame with 5656 observations on the following two variables.
+\describe{ 
+\item{race}{a factor with levels \code{African American}, \code{American Indian},
+\code{Asian}, \code{Latino}, and \code{White}} 
+\item{college}{a factor with levels \code{Two-year} and \code{Four-year}}
+}}
+\usage{
+Develop
 }
 \description{
 Data used for Exercise 8.50
 }
 \examples{
 
+<<<<<<< HEAD
 Develop
 chisq.test(Develop)
 
+=======
+str(Develop)
+T1 <- xtabs(~race + college, data = Develop)
+T1
+chisq.test(T1)
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

@@ -3,22 +3,28 @@
 \docType{data}
 \name{Asthmati}
 \alias{Asthmati}
-\title{Asthmatic relief index on 9 subjects given a drug and a placebo}
-\format{A data frame with 9 observations on the following 3 variables.
+\title{Asthmatic relief index on nine subjects given a drug and a placebo}
+\format{A data frame with nine observations on the following three variables.
 \describe{
+<<<<<<< HEAD
 \item{Drug}{a numeric vector} 
 \item{Placebo}{a numeric vector} 
 \item{differ}{a numeric vector} 
+=======
+\item{drug}{asthmatic relief index for patients given a drug} 
+\item{placebo}{asthmatic relief index for patients given a placebo} 
+\item{difference}{difference between the \code{placebo} and \code{drug}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Asthmati
 }
 \description{
 Data for Exercise 7.52
 }
 \examples{
 
+<<<<<<< HEAD
 str(Asthmati)
 attach(Asthmati)
 qqnorm(differ)
@@ -27,6 +33,20 @@ shapiro.test(differ)
 t.test(Placebo,Drug,paired=TRUE,mu=0,alternative="greater")
 detach(Asthmati)
 
+=======
+qqnorm(Asthmati$difference)
+qqline(Asthmati$difference)
+shapiro.test(Asthmati$difference)
+with(data = Asthmati,
+t.test(placebo, drug, paired = TRUE, mu = 0, 
+alternative = "greater")
+)
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 

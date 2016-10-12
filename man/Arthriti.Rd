@@ -4,6 +4,7 @@
 \name{Arthriti}
 \alias{Arthriti}
 \title{Time of relief for three treatments of arthritis}
+<<<<<<< HEAD
 \format{A data frame with 51 observations on the following 5 variables.
 \describe{ 
 \item{TreatA}{a numeric vector} 
@@ -11,22 +12,37 @@
 \item{TreatC}{a numeric vector}
 \item{Time}{a numeric vector} 
 \item{Treatmnt}{a numeric vector} 
+=======
+\format{A data frame with 51 observations on the following two variables.
+\describe{ 
+\item{time}{time (measured in days) until an arthritis sufferer experienced relief} 
+\item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }}
-\source{
-Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+\usage{
+Arthriti
 }
 \description{
-Data for Exercise
+Data for Exercise 10.58
 }
 \examples{
 
+<<<<<<< HEAD
 str(Arthriti)
 attach(Arthriti)
 boxplot(Time~Treatmnt)
 anova(lm(Time~as.factor(Treatmnt)))
 detach(Arthriti)
 
+=======
+boxplot(time ~ treatment, data = Arthriti)
+anova(lm(time ~ treatment, data = Arthriti))
+
+}
+\references{
+Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+Duxbury
+>>>>>>> 832da852208a5c5dc5d4420208e4ca0f661b9051
 }
 \keyword{datasets}
 
