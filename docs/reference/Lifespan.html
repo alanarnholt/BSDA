@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lifespan. BSDA</title>
+<title>Life span of electronic components used in a spacecraft versus heat — Lifespan • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,6 +21,7 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,10 +34,9 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,8 +55,12 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
+</li>
+<li>
   <a href="https://github.com/alanarnholt/BSDA/">
     <span class="fa fa-github fa-lg"></span>
      
@@ -67,47 +70,44 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Life span of electronic components used in a spacecraft versus heat</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Life span of electronic components used in a spacecraft versus heat</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 2.4, 2.37, and 2.49</p>
     
 
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 6 observations on the following 4 variables.
+    <p>A data frame with 6 observations on the following 4 variables.
 <dl class='dl-horizontal'>
 <dt>heat</dt><dd>a numeric vector</dd> 
 <dt>life</dt><dd>a numeric vector</dd> 
 <dt>RESI1</dt><dd>a numeric vector</dd>
 <dt>FITS1</dt><dd>a numeric vector</dd> 
 </dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Lifespan</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	6 obs. of  4 variables:
 #&gt;  $ heat : int  50 100 150 200 250 300
 #&gt;  $ life : int  875 884 762 424 365 128
 #&gt;  $ RESI1: num  -100.1 69.7 108.6 -68.6 33.3 ...
-#&gt;  $ FITS1: num  975 814 653 493 332 ...
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Lifespan</span>)
+#&gt;  $ FITS1: num  975 814 653 493 332 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Lifespan</span>)
 <span class='fu'>plot</span>(<span class='no'>heat</span>,<span class='no'>life</span>)</div><img src='Lifespan-4.png' alt='' width='540' height='400' /><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>life</span>~<span class='no'>heat</span>)
 <span class='no'>model</span></div><div class='output co'>#&gt; 
 #&gt; Call:
@@ -116,27 +116,40 @@ Duxbury</p>
 #&gt; Coefficients:
 #&gt; (Intercept)         heat  
 #&gt;    1136.000       -3.217  
-#&gt; 
 #&gt; </div><div class='input'><span class='fu'>resid</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt;          1          2          3          4          5          6 
-#&gt; -100.14286   69.71429  108.57143  -68.57143   33.28571  -42.85714 
-#&gt; </div><div class='input'><span class='fu'>sum</span>((<span class='fu'>resid</span>(<span class='no'>model</span>))^<span class='fl'>2</span>)</div><div class='output co'>#&gt; [1] 34323.14
-#&gt; </div><div class='input'><span class='fu'>anova</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
+#&gt; -100.14286   69.71429  108.57143  -68.57143   33.28571  -42.85714 </div><div class='input'><span class='fu'>sum</span>((<span class='fu'>resid</span>(<span class='no'>model</span>))^<span class='fl'>2</span>)</div><div class='output co'>#&gt; [1] 34323.14</div><div class='input'><span class='fu'>anova</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: life
 #&gt;           Df Sum Sq Mean Sq F value   Pr(&gt;F)   
 #&gt; heat       1 452813  452813  52.771 0.001907 **
 #&gt; Residuals  4  34323    8581                    
 #&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-#&gt; </div><div class='input'><span class='co'># plot(model)  # Used for diagnostic purposes</span>
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='co'># plot(model)  # Used for diagnostic purposes</span>
 <span class='fu'>detach</span>(<span class='no'>Lifespan</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

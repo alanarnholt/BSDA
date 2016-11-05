@@ -4,10 +4,12 @@ Title: Basic Statistics and Data Analysis
 Version: 1.0.2
 Date: 2016-02-25
 LazyData: yes
-Author: Alan T. Arnholt
+Authors@R: c(
+    person("Alan", "Arnholt", email = "arnholtat@appstate.edu", role = c("aut", "cre"))
+    )
+Maintainer: Alan T. Arnholt <arnholtat@appstate.edu>   
 Description: Data sets for book "Basic Statistics and Data Analysis" by
     Larry J. Kitchens.
-Maintainer: Alan T. Arnholt <arnholt@math.appstate.edu>
 Depends:
     lattice,
     R (>= 2.10)

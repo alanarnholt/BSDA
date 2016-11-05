@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Laminect. BSDA</title>
+<title>Median costs of laminectomies at hospitals across North Carolina in 1992 — Laminect • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,6 +21,7 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,10 +34,9 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,8 +55,12 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
+</li>
+<li>
   <a href="https://github.com/alanarnholt/BSDA/">
     <span class="fa fa-github fa-lg"></span>
      
@@ -67,24 +70,24 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Median costs of laminectomies at hospitals across North Carolina in 1992</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Median costs of laminectomies at hospitals across North Carolina in 1992</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 10.18</p>
     
 
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 46 observations on the following 5 variables.
+    <p>A data frame with 46 observations on the following 5 variables.
 <dl class='dl-horizontal'>
  <dt>cost</dt><dd>a numeric vector</dd> 
  <dt>class</dt><dd>a numeric vector</dd> 
@@ -92,40 +95,52 @@
  <dt>Regional</dt><dd>a numeric vector</dd> 
  <dt>Metropol</dt><dd>a numeric vector</dd> 
  </dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Laminect</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	46 obs. of  5 variables:
 #&gt;  $ cost    : int  7455 5223 4142 6278 9158 5807 7733 5782 8892 4288 ...
 #&gt;  $ class   : int  2 1 2 2 2 3 2 1 1 2 ...
 #&gt;  $ Rural   : int  5223 5782 8892 7405 8460 4353 9296 5227 6535 10238 ...
 #&gt;  $ Regional: int  7455 4142 6278 9158 7733 4288 7054 8308 11391 3339 ...
-#&gt;  $ Metropol: int  5807 6943 4925 4556 2696 6177 5477 5656 5621 4324 ...
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Laminect</span>)</div><div class='output'><strong class='text-info'>The following object is masked from package:BSDA:
-
-    Rural
-</strong></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>cost</span>~<span class='no'>class</span>)</div><img src='Laminect-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>cost</span>~<span class='fu'>as.factor</span>(<span class='no'>class</span>)))</div><div class='output co'>#&gt; Analysis of Variance Table
+#&gt;  $ Metropol: int  5807 6943 4925 4556 2696 6177 5477 5656 5621 4324 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Laminect</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    Rural</span></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>cost</span>~<span class='no'>class</span>)</div><img src='Laminect-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>cost</span>~<span class='fu'>as.factor</span>(<span class='no'>class</span>)))</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: cost
 #&gt;                  Df    Sum Sq Mean Sq F value Pr(&gt;F)
 #&gt; as.factor(class)  2  12838182 6419091  1.6658  0.201
-#&gt; Residuals        43 165698288 3853449               
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Laminect</span>)</div></pre>
+#&gt; Residuals        43 165698288 3853449               </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Laminect</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

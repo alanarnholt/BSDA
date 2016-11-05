@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Disposal. BSDA</title>
+<title>Toxic intensity for manufacturing plants producing herbicidal preparations — Disposal • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,6 +21,7 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,10 +34,9 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,8 +55,12 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
+</li>
+<li>
   <a href="https://github.com/alanarnholt/BSDA/">
     <span class="fa fa-github fa-lg"></span>
      
@@ -67,42 +70,39 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Toxic intensity for manufacturing plants producing herbicidal preparations</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Toxic intensity for manufacturing plants producing herbicidal preparations</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 1.127</p>
     
 
     <pre><span class='no'>Disposal</span></pre>
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 29 observations on the following variable.
+    <p>A data frame with 29 observations on the following variable.
 <dl class='dl-horizontal'>
 <dt>pounds</dt><dd>pounds of toxic waste per $1000 of shipments of its products</dd> 
 </dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Disposal</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	29 obs. of  1 variable:
-#&gt;  $ pounds: num  1.45 1.38 4.37 2.97 1.06 0.44 2.2 1.25 2.23 3.96 ...
-#&gt; </div><div class='input'><span class='fu'>stem</span>(<span class='no'>Disposal</span>$<span class='no'>pounds</span>)</div><div class='output co'>#&gt; 
+#&gt;  $ pounds: num  1.45 1.38 4.37 2.97 1.06 0.44 2.2 1.25 2.23 3.96 ...</div><div class='input'><span class='fu'>stem</span>(<span class='no'>Disposal</span>$<span class='no'>pounds</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is at the |
 #&gt; 
 #&gt;   0 | 3348
@@ -115,24 +115,37 @@ Duxbury</p>
 #&gt;   7 | 
 #&gt;   8 | 
 #&gt;   9 | 1
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>fivenum</span>(<span class='no'>Disposal</span>$<span class='no'>pounds</span>)</div><div class='output co'>#&gt; [1] 0.28 1.39 2.43 3.57 9.12
-#&gt; </div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Disposal</span>$<span class='no'>pounds</span>)</div><div class='output co'>#&gt; [1] &quot;Disposal$pounds&quot;
-#&gt; </div><img src='Disposal-9.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+#&gt; </div><div class='input'><span class='fu'>fivenum</span>(<span class='no'>Disposal</span>$<span class='no'>pounds</span>)</div><div class='output co'>#&gt; [1] 0.28 1.39 2.43 3.57 9.12</div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Disposal</span>$<span class='no'>pounds</span>)</div><div class='output co'>#&gt; [1] &quot;Disposal$pounds&quot;</div><img src='Disposal-9.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   29.000    0.000    0.280    1.385    2.757    2.430    2.613    3.765 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;    9.120    1.913    3.659    0.355    2.380    8.840    1.960    1.226 
 #&gt; SW p-val 
-#&gt;    0.012 
-#&gt; </div><div class='input'>
+#&gt;    0.012 </div><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

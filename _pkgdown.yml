@@ -4,12 +4,14 @@ template:
   bootswatch: yeti
 
 navbar:
-  type: default
+  type: inverse
   left:
   - text: Home
     href: index.html
   - text: Reference
     href: reference/index.html
   right:
+    - text: "Alan T. Arnholt"
+      href: https://alanarnholt.github.io/
     - icon: fa-github fa-lg
       href: https://github.com/alanarnholt/BSDA/

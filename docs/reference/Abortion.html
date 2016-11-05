@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Abortion. BSDA</title>
+<title>Abortion rate by region of country — Abortion • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,6 +21,7 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,10 +34,9 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,8 +55,12 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
+</li>
+<li>
   <a href="https://github.com/alanarnholt/BSDA/">
     <span class="fa fa-github fa-lg"></span>
      
@@ -67,25 +70,25 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Abortion rate by region of country</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Abortion rate by region of country</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data used in Exercise 8.51</p>
     
 
     <pre><span class='no'>Abortion</span></pre>
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 51 observations on the following 10 variables.
+    <p>A data frame with 51 observations on the following 10 variables.
 <dl class='dl-horizontal'>
 <dt>state</dt><dd>a factor with levels <code>alabama</code>
 <code>alaska</code> <code>arizona</code> <code>arkansas</code> <code>california</code>
@@ -111,16 +114,14 @@ island</code> <code>south carolina</code> <code>south dakota</code> <code>tennes
 <dt>lowhigh</dt><dd>a numeric vector</dd> 
 <dt>rate</dt><dd>a factor with levels <code>Low</code> and <code>High</code></dd>
 </dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='no'>T1</span> <span class='kw'>&lt;-</span> <span class='fu'>xtabs</span>(~<span class='no'>region</span> + <span class='no'>rate</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Abortion</span>)
 <span class='no'>T1</span></div><div class='output co'>#&gt;            rate
@@ -128,22 +129,37 @@ Duxbury</p>
 #&gt;   midwest      3   9
 #&gt;   northeast    8   3
 #&gt;   south        6   9
-#&gt;   west         7   6
-#&gt; </div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>T1</span>)</div><div class='output co'>#&gt; 
+#&gt;   west         7   6</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>T1</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Pearson&#39;s Chi-squared test
 #&gt; 
 #&gt; data:  T1
 #&gt; X-squared = 5.7932, df = 3, p-value = 0.1221
-#&gt; 
 #&gt; </div><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

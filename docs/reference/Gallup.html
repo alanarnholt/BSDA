@@ -6,14 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gallup. BSDA</title>
+<title>Results of a Gallup poll on possession of marijuana as a criminal offense
+ — Gallup • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,6 +22,7 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,10 +35,9 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,8 +56,12 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
+</li>
+<li>
   <a href="https://github.com/alanarnholt/BSDA/">
     <span class="fa fa-github fa-lg"></span>
      
@@ -67,25 +71,25 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Results of a Gallup poll on possession of marijuana as a criminal offense
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Results of a Gallup poll on possession of marijuana as a criminal offense
 </h1>
-</div>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 2.76</p>
     
 
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 4 observations on the following 16 variables.
+    <p>A data frame with 4 observations on the following 16 variables.
 <dl class='dl-horizontal'>
 <dt>Gender</dt><dd>a factor with levels <code></code> <code>Female</code>
 <code>Male</code></dd> 
@@ -107,16 +111,14 @@
 <dt>No.Crime4</dt><dd>a numeric vector</dd> 
 <dt>No.Opinion4</dt><dd>a numeric vector</dd> 
 </dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='no'>INFO</span> <span class='kw'>&lt;-</span> <span class='fu'>c</span>(<span class='fl'>43</span>,<span class='fl'>52</span>,<span class='fl'>5</span>,<span class='fl'>42</span>,<span class='fl'>53</span>,<span class='fl'>5</span>,<span class='fl'>44</span>,<span class='fl'>51</span>,<span class='fl'>5</span>,<span class='fl'>30</span>,<span class='fl'>67</span>,<span class='fl'>3</span>,<span class='fl'>45</span>,<span class='fl'>50</span>,<span class='fl'>5</span>,<span class='fl'>58</span>,<span class='fl'>33</span>,<span class='fl'>9</span>,<span class='fl'>27</span>,<span class='fl'>67</span>,<span class='fl'>6</span>,<span class='fl'>26</span>,<span class='fl'>70</span>,<span class='fl'>4</span>,<span class='fl'>45</span>,
 <span class='fl'>52</span>,<span class='fl'>3</span>,<span class='fl'>54</span>,<span class='fl'>39</span>,<span class='fl'>7</span>,<span class='fl'>49</span>,<span class='fl'>47</span>,<span class='fl'>4</span>,<span class='fl'>39</span>,<span class='fl'>55</span>,<span class='fl'>6</span>)
@@ -133,8 +135,7 @@ Duxbury</p>
 #&gt;  [9,]   45   52    3
 #&gt; [10,]   54   39    7
 #&gt; [11,]   49   47    4
-#&gt; [12,]   39   55    6
-#&gt; </div><div class='input'><span class='fu'>rownames</span>(<span class='no'>INFOmat</span>) <span class='kw'>&lt;-</span> <span class='fu'>c</span>(<span class='st'>"National"</span>,<span class='st'>"Gender: Male"</span>,<span class='st'>"Gender: Female"</span>,
+#&gt; [12,]   39   55    6</div><div class='input'><span class='fu'>rownames</span>(<span class='no'>INFOmat</span>) <span class='kw'>&lt;-</span> <span class='fu'>c</span>(<span class='st'>"National"</span>,<span class='st'>"Gender: Male"</span>,<span class='st'>"Gender: Female"</span>,
 <span class='st'>"Education: College"</span>,<span class='st'>"Education: High School"</span>,<span class='st'>"Education: Grade School"</span>,
 <span class='st'>"Age: 18-24"</span>, <span class='st'>"Age: 25-29"</span>, <span class='st'>"Age: 30-49"</span>, <span class='st'>"Age: 50-older"</span>, <span class='st'>"Religion: Protestant"</span>,
 <span class='st'>"Religion: Catholic"</span>)
@@ -151,16 +152,32 @@ Duxbury</p>
 #&gt; Age: 30-49                    45           52          3
 #&gt; Age: 50-older                 54           39          7
 #&gt; Religion: Protestant          49           47          4
-#&gt; Religion: Catholic            39           55          6
-#&gt; </div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>INFOmat</span>[<span class='fl'>2</span>:<span class='fl'>3</span>,]),<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Male"</span>,<span class='st'>"Female"</span>),
+#&gt; Religion: Catholic            39           55          6</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>INFOmat</span>[<span class='fl'>2</span>:<span class='fl'>3</span>,]),<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Male"</span>,<span class='st'>"Female"</span>),
 <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Percent of Population Opining"</span>)</div><img src='Gallup-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>barplot</span>((<span class='no'>INFOmat</span>[<span class='fl'>2</span>:<span class='fl'>3</span>,]),<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Percent of Population Opining"</span> )</div><img src='Gallup-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>remove</span>(<span class='no'>INFO</span>,<span class='no'>INFOmat</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

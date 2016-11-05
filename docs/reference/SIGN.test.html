@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SIGN.test. BSDA</title>
+<title>Sign Test — SIGN.test • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,6 +21,7 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,10 +34,9 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,8 +55,12 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
+</li>
+<li>
   <a href="https://github.com/alanarnholt/BSDA/">
     <span class="fa fa-github fa-lg"></span>
      
@@ -67,15 +70,16 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Sign Test</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Sign Test</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>This function will test a hypothesis based on the sign test and reports
 linearly interpolated confidence intervals for one sample problems.</p>
@@ -84,7 +88,7 @@ linearly interpolated confidence intervals for one sample problems.</p>
     <pre><span class='fu'>SIGN.test</span>(<span class='no'>x</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>md</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"two.sided"</span>,
   <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.95</span>)</pre>
     
-    <h2>Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <dl class="dl-horizontal">
       <dt>x</dt>
       <dd>numeric vector; <code>NA</code>s and <code>Inf</code>s are allowed but will be
@@ -106,59 +110,48 @@ in relation to the hypothesized value of the median.</dd>
 restricted to lie between zero and one</dd>
     </dl>
     
-    <div class="Value">
-      <h2>Value</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-      <p>A list of class <code>htest</code>, containing the following components:</p>
-    </div>
+    <p>A list of class <code>htest</code>, containing the following components:</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <div class="Details">
-      <h2>Details</h2>
-
-      <p>Computes a &#8220;Dependent-samples Sign-Test&#8221; if both <code>x</code> and
+    <p>Computes a &#8220;Dependent-samples Sign-Test&#8221; if both <code>x</code> and
 <code>y</code> are provided.  If only <code>x</code> is provided, computes the
 &#8220;Sign-Test&#8221;.</p>
-    </div>
+    
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <div class="Note">
-      <h2>Note</h2>
-
-      <p>The reported confidence interval is based on linear interpolation. The
+    <p>The reported confidence interval is based on linear interpolation. The
 lower and upper confidence levels are exact.</p>
-    </div>
+    
+    <h2 class="hasAnchor" id="null-hypothesis"><a class="anchor" href="#null-hypothesis"></a>Null Hypothesis</h2>
 
-    <div class="Null Hypothesis">
-      <h2>Null Hypothesis</h2>
-
-      <p>For the one-sample sign-test, the null hypothesis
+    <p>For the one-sample sign-test, the null hypothesis
 is that the median of the population from which <code>x</code> is drawn is
 <code>md</code>. For the two-sample dependent case, the null hypothesis is that
 the median for the differences of the populations from which <code>x</code> and
 <code>y</code> are drawn is <code>md</code>. The alternative hypothesis indicates the
 direction of divergence of the population median for <code>x</code> from <code>md</code>
 (i.e., <code>&quot;greater&quot;</code>, <code>&quot;less&quot;</code>, <code>&quot;two.sided&quot;</code>.)</p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Gibbons, J.D. and Chakraborti, S. (1992). <em>Nonparametric
-Statistical Inference</em>. Marcel Dekker Inc., New York.</p>
-      <p>Kitchens, L.J.(2003). <em>Basic Statistics and Data Analysis</em>. Duxbury.</p>
-      <p>Conover, W. J. (1980). <em>Practical Nonparametric Statistics, 2nd ed</em>.
-Wiley, New York.</p>
-      <p>Lehmann, E. L. (1975). <em>Nonparametrics: Statistical Methods Based on
-Ranks</em>. Holden and Day, San Francisco.</p>
-    </div>
-
-    <div class="See also">
-      <h2>See also</h2>
-
-      <p><code><a href='z.test.html'>z.test</a></code>, <code><a href='zsum.test.html'>zsum.test</a></code>,
-<code><a href='tsum.test.html'>tsum.test</a></code></p>
-    </div>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Gibbons, J.D. and Chakraborti, S. (1992). <em>Nonparametric
+Statistical Inference</em>. Marcel Dekker Inc., New York.</p>
+    <p>Kitchens, L.J.(2003). <em>Basic Statistics and Data Analysis</em>. Duxbury.</p>
+    <p>Conover, W. J. (1980). <em>Practical Nonparametric Statistics, 2nd ed</em>.
+Wiley, New York.</p>
+    <p>Lehmann, E. L. (1975). <em>Nonparametrics: Statistical Methods Based on
+Ranks</em>. Holden and Day, San Francisco.</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <p><code><a href='z.test.html'>z.test</a></code>, <code><a href='zsum.test.html'>zsum.test</a></code>,
+<code><a href='tsum.test.html'>tsum.test</a></code></p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'>c</span>(<span class='fl'>7.8</span>, <span class='fl'>6.6</span>, <span class='fl'>6.5</span>, <span class='fl'>7.4</span>, <span class='fl'>7.3</span>, <span class='fl'>7.</span>, <span class='fl'>6.4</span>, <span class='fl'>7.1</span>, <span class='fl'>6.7</span>, <span class='fl'>7.6</span>, <span class='fl'>6.8</span>)
 <span class='fu'>SIGN.test</span>(<span class='no'>x</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>6.5</span>)</div><div class='output co'>#&gt; 
@@ -172,12 +165,10 @@ Ranks</em>. Holden and Day, San Francisco.</p>
 #&gt; sample estimates:
 #&gt; median of x 
 #&gt;           7 
-#&gt; 
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
 #&gt; Lower Achieved CI     0.9346 6.6000 7.4000
 #&gt; Interpolated CI       0.9500 6.5713 7.4575
-#&gt; Upper Achieved CI     0.9883 6.5000 7.6000
-#&gt; </div><div class='input'>        <span class='co'># Computes two-sided sign-test for the null hypothesis </span>
+#&gt; Upper Achieved CI     0.9883 6.5000 7.6000</div><div class='input'>        <span class='co'># Computes two-sided sign-test for the null hypothesis </span>
         <span class='co'># that the population median for 'x' is 6.5. The alternative </span>
         <span class='co'># hypothesis is that the median is not 6.5. An interpolated 95% </span>
         <span class='co'># confidence interval for the population median will be computed.</span>
@@ -195,19 +186,36 @@ Ranks</em>. Holden and Day, San Francisco.</p>
 #&gt; sample estimates:
 #&gt; median of x 
 #&gt;       14.25 
-#&gt; 
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt  U.E.pt
 #&gt; Lower Achieved CI     0.9270   -Inf 14.7000
 #&gt; Interpolated CI       0.9500   -Inf 14.8285
-#&gt; Upper Achieved CI     0.9807   -Inf 15.0000
-#&gt; </div><div class='input'>        <span class='co'># Data from Example 6.11 page 330 of Kitchens BSDA.  </span>
+#&gt; Upper Achieved CI     0.9807   -Inf 15.0000</div><div class='input'>        <span class='co'># Data from Example 6.11 page 330 of Kitchens BSDA.  </span>
         <span class='co'># Computes one-sided sign-test for the null hypothesis </span>
         <span class='co'># that the population median is 15.  The alternative </span>
         <span class='co'># hypothesis is that the median is less than 15.  </span>
         <span class='co'># An interpolated upper 95% upper bound for the population </span>
         <span class='co'># median will be computed.</span></div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
+
+      <li><a href="#note">Note</a></li>
+
+      <li><a href="#null-hypothesis">Null Hypothesis</a></li>
+
+      <li><a href="#references">References</a></li>
+
+      <li><a href="#see-also">See also</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
     <h2>Author</h2>
     
 Alan T. Arnholt
@@ -216,7 +224,14 @@ Alan T. Arnholt
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

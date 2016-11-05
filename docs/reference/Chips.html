@@ -6,14 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chips. BSDA</title>
+<title>Four measurements on a first wafer and four measurements on a second wafer
+ — Chips • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,6 +22,7 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,10 +35,9 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,8 +56,12 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
+</li>
+<li>
   <a href="https://github.com/alanarnholt/BSDA/">
     <span class="fa fa-github fa-lg"></span>
      
@@ -67,26 +71,26 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Four measurements on a first wafer and four measurements on a second wafer
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Four measurements on a first wafer and four measurements on a second wafer
 </h1>
-</div>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 10.9</p>
     
 
     <pre><span class='no'>Chips</span></pre>
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 30 observations on the following eight variables.
+    <p>A data frame with 30 observations on the following eight variables.
 <dl class='dl-horizontal'>
 <dt>wafer11</dt><dd>first measurement of thickness of the oxide layer for <code>wafer1</code></dd> 
 <dt>wafer12</dt><dd>second measurement of thickness of the oxide layer for <code>wafer1</code></dd>
@@ -97,24 +101,20 @@
 <dt>wafer23</dt><dd>third measurement of thickness of the oxide layer for <code>wafer2</code></dd> 
 <dt>wafer24</dt><dd>fourth measurement of thickness of the oxide layer for <code>wafer2</code></dd> 
 </dl></p>
-    </div>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <div class="Source">
-      <h2>Source</h2>
-
-      <p>Yashchin, E. 1995. &#8220;Likelihood Ratio Methods 
+    <p>Yashchin, E. 1995. &#8220;Likelihood Ratio Methods 
 for Monitoring Parameters of a Nested Random Effect Model.&#8221; 
 <em>Journal of the American Statistical Association</em>, 90, 729-738.</p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Chips</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	30 obs. of  8 variables:
 #&gt;  $ wafer11: int  950 1050 940 990 980 900 1050 1100 1070 1000 ...
@@ -124,18 +124,36 @@ Duxbury</p>
 #&gt;  $ wafer21: int  1010 1050 1000 980 900 930 1110 1070 1020 1020 ...
 #&gt;  $ wafer22: int  980 1050 980 990 920 930 1130 1090 1070 980 ...
 #&gt;  $ wafer23: int  970 1050 960 1000 910 960 1100 1110 1090 990 ...
-#&gt;  $ wafer24: int  980 1060 1020 990 940 900 1140 1060 1050 1020 ...
-#&gt; </div><div class='input'><span class='fu'>with</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Chips</span>,
+#&gt;  $ wafer24: int  980 1060 1020 990 940 900 1140 1060 1050 1020 ...</div><div class='input'><span class='fu'>with</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Chips</span>,
 <span class='fu'>boxplot</span>(<span class='no'>wafer11</span>, <span class='no'>wafer12</span>, <span class='no'>wafer13</span>, <span class='no'>wafer14</span>, <span class='no'>wafer21</span>, <span class='no'>wafer22</span>, <span class='no'>wafer23</span>, <span class='no'>wafer24</span>)
 )</div><img src='Chips-4.png' alt='' width='540' height='400' /><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

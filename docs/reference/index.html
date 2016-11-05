@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference. BSDA</title>
+<title>Function reference • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,6 +21,7 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,10 +34,9 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-index">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,8 +55,12 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
+</li>
+<li>
   <a href="https://github.com/alanarnholt/BSDA/">
     <span class="fa fa-github fa-lg"></span>
      
@@ -67,757 +70,1765 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Function reference <small>version&nbsp;1.0.2</small></h1>
-</div>
-
-<div class="row">
+      <div class="row">
   <div class="col-md-9">
-    <div class="section ">
-      <h2>All functions</h2>
+    <div class="page-header">
+      <h1>Function reference</h1>
+      <h4>version&nbsp;1.0.2</h4>
+    </div>
+
+    <div class="contents">
+      <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
       <p class="section-desc"></p>
 
-      <dl class="dl-horizontal">
-        <dt><a href="Abbey.html">Abbey</a></dt>
-        <dd>Daily price returns (in pence) of Abbey National shares between 7/31/91 and
-</dd>
-        <dt><a href="Abc.html">Abc</a></dt>
-        <dd>Three samples to illustrate analysis of variance</dd>
-        <dt><a href="Abilene.html">Abilene</a></dt>
-        <dd>Crimes reported in Abilene, Texas</dd>
-        <dt><a href="Ability.html">Ability</a></dt>
-        <dd>Perceived math ability for 13-year olds by gender</dd>
-        <dt><a href="Abortion.html">Abortion</a></dt>
-        <dd>Abortion rate by region of country</dd>
-        <dt><a href="Absent.html">Absent</a></dt>
-        <dd>Number of absent days for 20 employees</dd>
-        <dt><a href="Achieve.html">Achieve</a></dt>
-        <dd>Math achievement test scores by gender for 25 high school students</dd>
-        <dt><a href="Adsales.html">Adsales</a></dt>
-        <dd>Number of ads versus number of sales for a retailer of satellite dishes</dd>
-        <dt><a href="Aggress.html">Aggress</a></dt>
-        <dd>Agressive tendency scores for a group of teenage members of a street gang</dd>
-        <dt><a href="Aid.html">Aid</a></dt>
-        <dd>Monthly payments per person for families in the AFDC federal program</dd>
-        <dt><a href="Aids.html">Aids</a></dt>
-        <dd>Incubation times for 295 patients thought to be infected with HIV by a blood
-</dd>
-        <dt><a href="Airdisasters.html">Airdisasters</a></dt>
-        <dd>Aircraft disasters in five different decades</dd>
-        <dt><a href="Airline.html">Airline</a></dt>
-        <dd>Percentage of on-time arrivals and number of complaints for 11 airlines</dd>
-        <dt><a href="Alcohol.html">Alcohol</a></dt>
-        <dd>Ages at which 14 female alcoholics began drinking</dd>
-        <dt><a href="Allergy.html">Allergy</a></dt>
-        <dd>Allergy medicines by adverse events</dd>
-        <dt><a href="Anesthet.html">Anesthet</a></dt>
-        <dd>Recovery times for anesthetized patients</dd>
-        <dt><a href="Anxiety.html">Anxiety</a></dt>
-        <dd>Math test scores versus anxiety scores before the test</dd>
-        <dt><a href="Apolipop.html">Apolipop</a></dt>
-        <dd>Level of apolipoprotein B and number of cups of coffee consumed per day for
-</dd>
-        <dt><a href="Append.html">Append</a></dt>
-        <dd>Median costs of an appendectomy at 20 hospitals in North Carolina</dd>
-        <dt><a href="Appendec.html">Appendec</a></dt>
-        <dd>Median costs of appendectomies at three different types of North Carolina
-</dd>
-        <dt><a href="Aptitude.html">Aptitude</a></dt>
-        <dd>Aptitude test scores versus productivity in a factory</dd>
-        <dt><a href="Archaeo.html">Archaeo</a></dt>
-        <dd>Radiocarbon ages of observations taken from an archaeological site</dd>
-        <dt><a href="Arthriti.html">Arthriti</a></dt>
-        <dd>Time of relief for three treatments of arthritis</dd>
-        <dt><a href="Artifici.html">Artifici</a></dt>
-        <dd>Durations of operation for 15 artificial heart transplants</dd>
-        <dt><a href="Asprin.html">Asprin</a></dt>
-        <dd>Dissolving time versus level of impurities in aspirin tablets</dd>
-        <dt><a href="Asthmati.html">Asthmati</a></dt>
-        <dd>Asthmatic relief index on nine subjects given a drug and a placebo</dd>
-        <dt><a href="Attorney.html">Attorney</a></dt>
-        <dd>Number of convictions reported by U.S. attorney's offices</dd>
-        <dt><a href="Autogear.html">Autogear</a></dt>
-        <dd>Number of defective auto gears produced by two manufacturers</dd>
-        <dt><a href="Backtoback.html">Backtoback</a></dt>
-        <dd>Illustrates inferences based on pooled t-test versus Wilcoxon rank sum test</dd>
-        <dt><a href="Bbsalaries.html">Bbsalaries</a></dt>
-        <dd>Baseball salaries for members of five major league teams</dd>
-        <dt><a href="Bigten.html">Bigten</a></dt>
-        <dd>Graduation rates for student athletes and nonathletes in the Big Ten Conf.</dd>
-        <dt><a href="Biology.html">Biology</a></dt>
-        <dd>Test scores on first exam in biology class</dd>
-        <dt><a href="Birth.html">Birth</a></dt>
-        <dd>Live birth rates in 1990 and 1998 for all states</dd>
-        <dt><a href="Blackedu.html">Blackedu</a></dt>
-        <dd>Education level of blacks by gender</dd>
-        <dt><a href="Blood.html">Blood</a></dt>
-        <dd>Blood pressure of 15 adult males taken by machine and by an expert</dd>
-        <dt><a href="Board.html">Board</a></dt>
-        <dd>Incomes of board members from three different universities</dd>
-        <dt><a href="Bones.html">Bones</a></dt>
-        <dd>Bone density measurements of 35 physically active and 35 non-active women</dd>
-        <dt><a href="Books.html">Books</a></dt>
-        <dd>Number of books read and final spelling scores for 17 third graders</dd>
-        <dt><a href="Bookstor.html">Bookstor</a></dt>
-        <dd>Prices paid for used books at three different bookstores</dd>
-        <dt><a href="Brain.html">Brain</a></dt>
-        <dd>Brain weight versus body weight of 28 animals</dd>
-        <dt><a href="BSDA-package.html">BSDA</a></dt><dt><a href="BSDA-package.html">BSDA-package</a></dt>
-        <dd>Basic Statistics and Data Analysis</dd>
-        <dt><a href="Bumpers.html">Bumpers</a></dt>
-        <dd>Repair costs of vehicles crashed into a barrier at 5 miles per hour</dd>
-        <dt><a href="Bus.html">Bus</a></dt>
-        <dd>Attendance of bus drivers versus attendance</dd>
-        <dt><a href="Bypass.html">Bypass</a></dt>
-        <dd>Median charges for coronary bypass at 17 hospitals in North Carolina</dd>
-        <dt><a href="Cabinets.html">Cabinets</a></dt>
-        <dd>Estimates of costs of kitchen cabinets by two suppliers on 20 prospective
-</dd>
-        <dt><a href="Cancer.html">Cancer</a></dt>
-        <dd>Survival times of terminal cancer patients treated with vitamin C</dd>
-        <dt><a href="Carbon.html">Carbon</a></dt>
-        <dd>Carbon monoxide level measured at three industrial sites</dd>
-        <dt><a href="Cat.html">Cat</a></dt>
-        <dd>Reading scores on the California achievement test for a group of 3rd graders</dd>
-        <dt><a href="Censored.html">Censored</a></dt>
-        <dd>Entry age and survival time of patients with small cell lung cancer under
-</dd>
-        <dt><a href="Challeng.html">Challeng</a></dt>
-        <dd>Temperatures and O-ring failures for the launches of the space shuttle
-</dd>
-        <dt><a href="Chemist.html">Chemist</a></dt>
-        <dd>Starting salaries of 50 chemistry majors</dd>
-        <dt><a href="Chesapea.html">Chesapea</a></dt>
-        <dd>Surface salinity measurements taken offshore from Annapolis, Maryland in
-</dd>
-        <dt><a href="Chevy.html">Chevy</a></dt>
-        <dd>Insurance injury ratings of Chevrolet vehicles for 1990 and 1993 models</dd>
-        <dt><a href="Chicken.html">Chicken</a></dt>
-        <dd>Weight gain of chickens fed three different rations</dd>
-        <dt><a href="Chipavg.html">Chipavg</a></dt>
-        <dd>Measurements of the thickness of the oxide layer of manufactured integrated
-</dd>
-        <dt><a href="Chips.html">Chips</a></dt>
-        <dd>Four measurements on a first wafer and four measurements on a second wafer
-</dd>
-        <dt><a href="Cigar.html">Cigar</a></dt>
-        <dd>Milligrams of tar in 25 cigarettes selected randomly from 4 different brands</dd>
-        <dt><a href="Cigarett.html">Cigarett</a></dt>
-        <dd>Effect of mother's smoking on birth weight of newborn</dd>
-        <dt><a href="CIsim.html">CIsim</a></dt>
-        <dd>Confidence Interval Simulation Program</dd>
-        <dt><a href="Citrus.html">Citrus</a></dt>
-        <dd>Percent of peak bone density of different aged children</dd>
-        <dt><a href="Clean.html">Clean</a></dt>
-        <dd>Residual contaminant following the use of three different cleansing agents</dd>
-        <dt><a href="Coaxial.html">Coaxial</a></dt>
-        <dd>Signal loss from three types of coxial cable</dd>
-        <dt><a href="Coffee.html">Coffee</a></dt>
-        <dd>Productivity of workers with and without a coffee break</dd>
-        <dt><a href="Coins.html">Coins</a></dt>
-        <dd>Yearly returns on 12 investments</dd>
-        <dt><a href="Combinations.html">Combinations</a></dt>
-        <dd>Combinations</dd>
-        <dt><a href="Commute.html">Commute</a></dt>
-        <dd>Commuting times for selected cities in 1980 and 1990</dd>
-        <dt><a href="Concept.html">Concept</a></dt>
-        <dd>Tennessee self concept scale scores for a group of teenage boys</dd>
-        <dt><a href="Concrete.html">Concrete</a></dt>
-        <dd>Compressive strength of concrete blocks made by two different methods</dd>
-        <dt><a href="Corn.html">Corn</a></dt>
-        <dd>Comparison of the yields of a new variety and a standard variety of corn
-</dd>
-        <dt><a href="Correlat.html">Correlat</a></dt>
-        <dd>Exercise to illustrate correlation</dd>
-        <dt><a href="Counsel.html">Counsel</a></dt>
-        <dd>Scores of 18 volunteers who participated in a counseling process</dd>
-        <dt><a href="Cpi.html">Cpi</a></dt>
-        <dd>Consumer price index from 1979 to 1998</dd>
-        <dt><a href="Crime.html">Crime</a></dt>
-        <dd>Violent crime rates for the states in 1983 and 1993</dd>
-        <dt><a href="Darwin.html">Darwin</a></dt>
-        <dd>Charles Darwin's study of cross-fertilized and self-fertilized plants</dd>
-        <dt><a href="Dealers.html">Dealers</a></dt>
-        <dd>Automobile dealers classified according to type dealership and service
-</dd>
-        <dt><a href="Defectiv.html">Defectiv</a></dt>
-        <dd>Number of defective items produced by 20 employees</dd>
-        <dt><a href="Degree.html">Degree</a></dt>
-        <dd>Percent of bachelor's degrees awarded women in 1970 versus 1990</dd>
-        <dt><a href="Delay.html">Delay</a></dt>
-        <dd>Delay times on 20 flights from four major air carriers</dd>
-        <dt><a href="Depend.html">Depend</a></dt>
-        <dd>Number of dependent children for 50 families</dd>
-        <dt><a href="Detroit.html">Detroit</a></dt>
-        <dd>Educational levels of a sample of 40 auto workers in Detroit</dd>
-        <dt><a href="Develop.html">Develop</a></dt>
-        <dd>Demographic characteristics of developmental students at 2-year colleges and
-</dd>
-        <dt><a href="Devmath.html">Devmath</a></dt>
-        <dd>Test scores for students who failed developmental mathematics in the fall
-</dd>
-        <dt><a href="Dice.html">Dice</a></dt>
-        <dd>Outcomes and probabilities of the roll of a pair of fair dice</dd>
-        <dt><a href="Diesel.html">Diesel</a></dt>
-        <dd>Diesel fuel prices in 1999-2000 in nine regions of the country</dd>
-        <dt><a href="Diplomat.html">Diplomat</a></dt>
-        <dd>Parking tickets issued to diplomats</dd>
-        <dt><a href="Disposal.html">Disposal</a></dt>
-        <dd>Toxic intensity for manufacturing plants producing herbicidal preparations</dd>
-        <dt><a href="Dogs.html">Dogs</a></dt>
-        <dd>Rankings of the favorite breeds of dogs</dd>
-        <dt><a href="Domestic.html">Domestic</a></dt>
-        <dd>Rates of domestic violence per 1,000 women by age groups</dd>
-        <dt><a href="Dopamine.html">Dopamine</a></dt>
-        <dd>Dopamine b-hydroxylase activity of schizophrenic patients treated with an
-</dd>
-        <dt><a href="Dowjones.html">Dowjones</a></dt>
-        <dd>Closing yearend Dow Jones Industrial averages from 1896 through 2000</dd>
-        <dt><a href="Drink.html">Drink</a></dt>
-        <dd>Opinion on referendum by view on moral issue of selling alcoholic beverages</dd>
-        <dt><a href="Drug.html">Drug</a></dt>
-        <dd>Number of trials to master a task for a group of 28 subjects assigned to a
-</dd>
-        <dt><a href="Dyslexia.html">Dyslexia</a></dt>
-        <dd>Data on a group of college students diagnosed with dyslexia</dd>
-        <dt><a href="Earthqk.html">Earthqk</a></dt>
-        <dd>One hundred year record of worldwide seismic activity(1770-1869)</dd>
-        <dt><a href="EDA.html">EDA</a></dt>
-        <dd>Exploratory Data Anaalysis</dd>
-        <dt><a href="Educat.html">Educat</a></dt>
-        <dd>Crime rates versus the percent of the population without a high school
-</dd>
-        <dt><a href="Eggs.html">Eggs</a></dt>
-        <dd>Number of eggs versus amounts of feed supplement</dd>
-        <dt><a href="Elderly.html">Elderly</a></dt>
-        <dd>Percent of the population over the age of 65</dd>
-        <dt><a href="Energy.html">Energy</a></dt>
-        <dd>Amount of energy consumed by homes versus their sizes</dd>
-        <dt><a href="Engineer.html">Engineer</a></dt>
-        <dd>Salaries after 10 years for graduates of three different universities</dd>
-        <dt><a href="Entrance.html">Entrance</a></dt>
-        <dd>College entrance exam scores for 24 high school seniors</dd>
-        <dt><a href="Epaminicompact.html">Epaminicompact</a></dt>
-        <dd>Fuel efficiency ratings for compact vehicles in 2001</dd>
-        <dt><a href="Epatwoseater.html">Epatwoseater</a></dt>
-        <dd>Fuel efficiency ratings for two-seater vehicles in 2001</dd>
-        <dt><a href="Executiv.html">Executiv</a></dt>
-        <dd>Ages of 25 executives</dd>
-        <dt><a href="Exercise.html">Exercise</a></dt>
-        <dd>Weight loss for 30 members of an exercise program</dd>
-        <dt><a href="Fabric.html">Fabric</a></dt>
-        <dd>Measures of softness of 10 different clothing garments washed with and
-</dd>
-        <dt><a href="Faithful.html">Faithful</a></dt>
-        <dd>Waiting times between successive eruptions of the Old Faithful geyser</dd>
-        <dt><a href="Family.html">Family</a></dt>
-        <dd>Size of family versus cost per person per week for groceries</dd>
-        <dt><a href="Ferraro1.html">Ferraro1</a></dt>
-        <dd>Choice of presidental ticket in 1984 by gender</dd>
-        <dt><a href="Ferraro2.html">Ferraro2</a></dt>
-        <dd>Choice of vice presidental candidate in 1984 by gender</dd>
-        <dt><a href="Fertility.html">Fertility</a></dt>
-        <dd>Fertility rates of all 50 states and DC</dd>
-        <dt><a href="Firstchi.html">Firstchi</a></dt>
-        <dd>Ages of women at the birth of their first child</dd>
-        <dt><a href="Fish.html">Fish</a></dt>
-        <dd>Length and number of fish caught with small and large mesh codend</dd>
-        <dt><a href="Fitness.html">Fitness</a></dt>
-        <dd>Number of sit-ups before and after a physical fitness course</dd>
-        <dt><a href="Florida2000.html">Florida2000</a></dt>
-        <dd>Florida voter results in the 2000 presidential election</dd>
-        <dt><a href="Fluid.html">Fluid</a></dt>
-        <dd>Breakdown times of an insulating fluid under various levels of voltage
-</dd>
-        <dt><a href="Food.html">Food</a></dt>
-        <dd>Annual food expenditures for 40 single households in Ohio</dd>
-        <dt><a href="Framingh.html">Framingh</a></dt>
-        <dd>Cholesterol values of 62 subjects in the Framingham Heart Study</dd>
-        <dt><a href="Freshman.html">Freshman</a></dt>
-        <dd>Ages of a random sample of 30 college freshmen</dd>
-        <dt><a href="Funeral.html">Funeral</a></dt>
-        <dd>Cost of funeral by region of country</dd>
-        <dt><a href="Galaxie.html">Galaxie</a></dt>
-        <dd>Velocities of 82 galaxies in the Corona Borealis region</dd>
-        <dt><a href="Gallup.html">Gallup</a></dt>
-        <dd>Results of a Gallup poll on possession of marijuana as a criminal offense
-</dd>
-        <dt><a href="Gasoline.html">Gasoline</a></dt>
-        <dd>Price of regular unleaded gasoline obtained from 25 service stations</dd>
-        <dt><a href="German.html">German</a></dt>
-        <dd>Number of errors in copying a German passage before and after an
-</dd>
-        <dt><a href="Golf.html">Golf</a></dt>
-        <dd>Distances a golf ball can be driven by 20 professional golfers</dd>
-        <dt><a href="Governor.html">Governor</a></dt>
-        <dd>Annual salaries for state governors in 1994</dd>
-        <dt><a href="Gpa.html">Gpa</a></dt>
-        <dd>High school GPA versus college GPA</dd>
-        <dt><a href="Grades.html">Grades</a></dt>
-        <dd>Test grades in a beginning statistics class</dd>
-        <dt><a href="Graduate.html">Graduate</a></dt>
-        <dd>Graduation rates for student athletes in the Southeastern Conf.</dd>
-        <dt><a href="Greenriv.html">Greenriv</a></dt>
-        <dd>Varve thickness from a sequence through an Eocene lake deposit in the Rocky
-</dd>
-        <dt><a href="Grnriv2.html">Grnriv2</a></dt>
-        <dd>Thickness of a varved section of the Green river oil shale deposit near a
-</dd>
-        <dt><a href="Groupabc.html">Groupabc</a></dt>
-        <dd>Group data to illustrate analysis of variance</dd>
-        <dt><a href="Groups.html">Groups</a></dt>
-        <dd>An illustration of analysis of variance</dd>
-        <dt><a href="Gym.html">Gym</a></dt>
-        <dd>Children's age versus number of completed gymnastic activities</dd>
-        <dt><a href="Habits.html">Habits</a></dt>
-        <dd>Study habits of students in two matched school districts</dd>
-        <dt><a href="Haptologo.html">Haptologo</a></dt>
-        <dd>Haptoglobin concentration in blood serum of 8 healthy adults</dd>
-        <dt><a href="Hardware.html">Hardware</a></dt>
-        <dd>Daily receipts for a small hardware store for 31 working days</dd>
-        <dt><a href="Hardwood.html">Hardwood</a></dt>
-        <dd>Tensile strength of Kraft paper for different percentages of hardwood in the
-</dd>
-        <dt><a href="Heat.html">Heat</a></dt>
-        <dd>Primary heating sources of homes on indian reservations versus all
-</dd>
-        <dt><a href="Heating.html">Heating</a></dt>
-        <dd>Fuel efficiency ratings for three types of oil heaters</dd>
-        <dt><a href="Hodgkin.html">Hodgkin</a></dt>
-        <dd>Results of treatments for Hodgkin's disease</dd>
-        <dt><a href="Homes.html">Homes</a></dt>
-        <dd>Median prices of single-family homes in 65 metropolitan statistical areas</dd>
-        <dt><a href="Homework.html">Homework</a></dt>
-        <dd>Number of hours per week spent on homework for private and public high
-</dd>
-        <dt><a href="Honda.html">Honda</a></dt>
-        <dd>Miles per gallon for a Honda Civic on 35 different occasions</dd>
-        <dt><a href="Hostile.html">Hostile</a></dt>
-        <dd>Hostility levels of high school students from rural, suburban, and urban
-</dd>
-        <dt><a href="Housing.html">Housing</a></dt>
-        <dd>Median home prices for 1984 and 1993 in 37 markets across the U.S.</dd>
-        <dt><a href="Hurrican.html">Hurrican</a></dt>
-        <dd>Number of storms, hurricanes and El Nino effects from 1950 through 1995</dd>
-        <dt><a href="Iceberg.html">Iceberg</a></dt>
-        <dd>Number of icebergs sighted each month south of Newfoundland and south of the
-</dd>
-        <dt><a href="Income.html">Income</a></dt>
-        <dd>Percent change in personal income from 1st to 2nd quarter in 2000</dd>
-        <dt><a href="Independent.html">Independent</a></dt>
-        <dd>Illustrates a comparison problem for long-tailed distributions</dd>
-        <dt><a href="Indian.html">Indian</a></dt>
-        <dd>Educational attainment versus per capita income and poverty rate for
-</dd>
-        <dt><a href="Indiapol.html">Indiapol</a></dt>
-        <dd>Average miles per hour for the winners of the Indianapolis 500 race</dd>
-        <dt><a href="Indy500.html">Indy500</a></dt>
-        <dd>Qualifying miles per hour and number of previous starts for drivers in 79th
-</dd>
-        <dt><a href="Inflatio.html">Inflatio</a></dt>
-        <dd>Private pay increase of salaried employees versus inflation rate</dd>
-        <dt><a href="Inletoil.html">Inletoil</a></dt>
-        <dd>Inlet oil temperature through a valve</dd>
-        <dt><a href="Inmate.html">Inmate</a></dt>
-        <dd>Type of drug offense by race</dd>
-        <dt><a href="Inspect.html">Inspect</a></dt>
-        <dd>Percent of vehicles passing inspection by type inspection station</dd>
-        <dt><a href="Insulate.html">Insulate</a></dt>
-        <dd>Heat loss through a new insulating medium</dd>
-        <dt><a href="Iqgpa.html">Iqgpa</a></dt>
-        <dd>GPA versus IQ for 12 individuals</dd>
-        <dt><a href="Irises.html">Irises</a></dt>
-        <dd>R.A. Fishers famous data on sepal length of a species of Iris Setosa</dd>
-        <dt><a href="Jdpower.html">Jdpower</a></dt>
-        <dd>Number of problems reported per 100 cars in 1994 versus 1995s</dd>
-        <dt><a href="Jobsat.html">Jobsat</a></dt>
-        <dd>Job satisfaction and stress level for 9 school teachers</dd>
-        <dt><a href="Kidsmoke.html">Kidsmoke</a></dt>
-        <dd>Smoking habits of boys and girls ages 12 to 18</dd>
-        <dt><a href="Kilowatt.html">Kilowatt</a></dt>
-        <dd>Rates per kilowatt-hour for each of the 50 states and DC</dd>
-        <dt><a href="Kinder.html">Kinder</a></dt>
-        <dd>Reading scores for first grade children who attended kindergarten versus
-</dd>
-        <dt><a href="Laminect.html">Laminect</a></dt>
-        <dd>Median costs of laminectomies at hospitals across North Carolina in 1992</dd>
-        <dt><a href="Lead.html">Lead</a></dt>
-        <dd>Lead levels in children's blood whose parents worked in a battery factory</dd>
-        <dt><a href="Leader.html">Leader</a></dt>
-        <dd>Leadership exam scores by age for employees on an industrial plant</dd>
-        <dt><a href="Lethal.html">Lethal</a></dt>
-        <dd>Survival time of mice injected with an experimental lethal drug</dd>
-        <dt><a href="Life.html">Life</a></dt>
-        <dd>Life expectancy of men and women in U.S.</dd>
-        <dt><a href="Lifespan.html">Lifespan</a></dt>
-        <dd>Life span of electronic components used in a spacecraft versus heat</dd>
-        <dt><a href="Ligntmonth.html">Ligntmonth</a></dt>
-        <dd>Relationship between damage reports and deaths caused by lightning</dd>
-        <dt><a href="Lodge.html">Lodge</a></dt>
-        <dd>Measured traffic at three prospective locations for a motor lodge</dd>
-        <dt><a href="Longtail.html">Longtail</a></dt>
-        <dd>Long-tailed distributions to illustrate Kruskal Wallis test</dd>
-        <dt><a href="Lowabil.html">Lowabil</a></dt>
-        <dd>Reading skills of 24 matched low ability students</dd>
-        <dt><a href="Magnesiu.html">Magnesiu</a></dt>
-        <dd>Magnesium concentration and distances between samples</dd>
-        <dt><a href="Malpract.html">Malpract</a></dt>
-        <dd>Amounts awarded in 17 malpractice cases</dd>
-        <dt><a href="Manager.html">Manager</a></dt>
-        <dd>Advertised salaries offered general managers of major corporations in 1995</dd>
-        <dt><a href="Marked.html">Marked</a></dt>
-        <dd>Percent of marked cars in 65 police departments in Florida</dd>
-        <dt><a href="MATH.html">MATH</a></dt>
-        <dd>Standardized math test scores for 30 students</dd>
-        <dt><a href="Mathcomp.html">Mathcomp</a></dt>
-        <dd>Standardized math competency for a group of entering freshmen at a small
-</dd>
-        <dt><a href="Mathpro.html">Mathpro</a></dt>
-        <dd>Math proficiency and SAT scores by states</dd>
-        <dt><a href="Maze.html">Maze</a></dt>
-        <dd>Error scores for four groups of experimental animals running a maze</dd>
-        <dt><a href="Median.html">Median</a></dt>
-        <dd>Illustrates test of equality of medians with the Kruskal Wallis test</dd>
-        <dt><a href="Mental.html">Mental</a></dt>
-        <dd>Median mental ages of 16 girls</dd>
-        <dt><a href="Mercury.html">Mercury</a></dt>
-        <dd>Concentration of mercury in 25 lake trout</dd>
-        <dt><a href="Metrent.html">Metrent</a></dt>
-        <dd>Monthly rental costs in metro areas with 1 million or more persons</dd>
-        <dt><a href="Miller.html">Miller</a></dt>
-        <dd>Miller personality test scores for a group of college students applying for
-</dd>
-        <dt><a href="Miller1.html">Miller1</a></dt>
-        <dd>Twenty scores on the Miller personality test</dd>
-        <dt><a href="Moisture.html">Moisture</a></dt>
-        <dd>Moisture content and depth of core sample for marine muds in eastern
-</dd>
-        <dt><a href="Monoxide.html">Monoxide</a></dt>
-        <dd>Carbon monoxide emitted by smoke stacks of a manufacturer and a competitor</dd>
-        <dt><a href="Movie.html">Movie</a></dt>
-        <dd>Moral attitude scale on 15 subjects before and after viewing a movie</dd>
-        <dt><a href="Music.html">Music</a></dt>
-        <dd>Improvement scores for identical twins taught music recognition by two
-</dd>
-        <dt><a href="Name.html">Name</a></dt>
-        <dd>Estimated value of a brand name product and the conpany's revenue</dd>
-        <dt><a href="Nascar.html">Nascar</a></dt>
-        <dd>Efficiency of pit crews for three major NASCAR teams</dd>
-        <dt><a href="Nervous.html">Nervous</a></dt>
-        <dd>Reaction effects of 4 drugs on 25 subjects with a nervous disorder</dd>
-        <dt><a href="Newsstand.html">Newsstand</a></dt>
-        <dd>Daily profits for 20 newsstands</dd>
-        <dt><a href="Nfldraf2.html">Nfldraf2</a></dt>
-        <dd>Rating, time in 40-yard dash, and weight of top defensive linemen in the
-</dd>
-        <dt><a href="Nfldraft.html">Nfldraft</a></dt>
-        <dd>Rating, time in 40-yard dash, and weight of top offensive linemen in the
-</dd>
-        <dt><a href="Nicotine.html">Nicotine</a></dt>
-        <dd>Nicotine content versus sales for 8 major brands of cigarettes</dd>
-        <dt><a href="normarea.html">normarea</a></dt>
-        <dd>Normal Area</dd>
-        <dt><a href="nsize.html">nsize</a></dt>
-        <dd>Required Sample Size</dd>
-        <dt><a href="ntester.html">ntester</a></dt>
-        <dd>Normality Tester</dd>
-        <dt><a href="Orange.html">Orange</a></dt>
-        <dd>Price of oranges versus size of the harvest</dd>
-        <dt><a href="Orioles.html">Orioles</a></dt>
-        <dd>Salaries of members of the Baltimore Orioles baseball team</dd>
-        <dt><a href="Oxytocin.html">Oxytocin</a></dt>
-        <dd>Arterial blood pressure of 11 subjects before and after receiving oxytocin</dd>
-        <dt><a href="Parented.html">Parented</a></dt>
-        <dd>Education backgrounds of parents of entering freshmen at a state university</dd>
-        <dt><a href="Patrol.html">Patrol</a></dt>
-        <dd>Years of experience and number of tickets given by patrolpersons in New York
-</dd>
-        <dt><a href="Pearson.html">Pearson</a></dt>
-        <dd>Karl Pearson's data on heights of brothers and sisters</dd>
-        <dt><a href="Phone.html">Phone</a></dt>
-        <dd>Length of long-distance phone calls for a small business firm</dd>
-        <dt><a href="Poison.html">Poison</a></dt>
-        <dd>Number of poisonings reported to 16 poison control centers</dd>
-        <dt><a href="Politic.html">Politic</a></dt>
-        <dd>Political party and gender in a voting district</dd>
-        <dt><a href="Pollutio.html">Pollutio</a></dt>
-        <dd>Air pollution index for 15 randomly selected days for a major western city</dd>
-        <dt><a href="Porosity.html">Porosity</a></dt>
-        <dd>Porosity measurements on 20 samples of Tensleep Sandstone, Pennsylvanian
-</dd>
-        <dt><a href="Poverty.html">Poverty</a></dt>
-        <dd>Percent poverty and crime rate for selected cities</dd>
-        <dt><a href="Precinct.html">Precinct</a></dt>
-        <dd>Robbery rates versus percent low income in 8 precincts</dd>
-        <dt><a href="Prejudic.html">Prejudic</a></dt>
-        <dd>Racial prejudice measured on a sample of 25 high school students</dd>
-        <dt><a href="Presiden.html">Presiden</a></dt>
-        <dd>Ages at inauguration and death of U.S. presidents</dd>
-        <dt><a href="Press.html">Press</a></dt>
-        <dd>Degree of confidence in the press versus education level for 20 randomly
-</dd>
-        <dt><a href="Prognost.html">Prognost</a></dt>
-        <dd>Klopfer's prognostic rating scale for subjects receiving behavior
-</dd>
-        <dt><a href="Program.html">Program</a></dt>
-        <dd>Effects of four different methods of programmed learning for statistics
-</dd>
-        <dt><a href="Psat.html">Psat</a></dt>
-        <dd>PSAT scores versus SAT scores</dd>
-        <dt><a href="Psych.html">Psych</a></dt>
-        <dd>Correct responses for 24 students in a psychology experiment</dd>
-        <dt><a href="Puerto.html">Puerto</a></dt>
-        <dd>Weekly incomes of a random sample of 50 Puerto Rican families in Miami</dd>
-        <dt><a href="Quail.html">Quail</a></dt>
-        <dd>Plasma LDL levels in two groups of quail</dd>
-        <dt><a href="Quality.html">Quality</a></dt>
-        <dd>Quality control test scores on two manufacturing processes</dd>
-        <dt><a href="Rainks.html">Rainks</a></dt>
-        <dd>Rainfall in an area of west central Kansas and four surrounding counties</dd>
-        <dt><a href="Randd.html">Randd</a></dt>
-        <dd>Research and development expenditures and sales of a large company</dd>
-        <dt><a href="Rat.html">Rat</a></dt>
-        <dd>Survival times of 20 rats exposed to high levels of radiation</dd>
-        <dt><a href="Ratings.html">Ratings</a></dt>
-        <dd>Grade point averages versus teacher's ratings</dd>
-        <dt><a href="Reaction.html">Reaction</a></dt>
-        <dd>Threshold reaction time for persons subjected to emotional stress</dd>
-        <dt><a href="Reading.html">Reading</a></dt>
-        <dd>Standardized reading scores for 30 fifth graders</dd>
-        <dt><a href="Readiq.html">Readiq</a></dt>
-        <dd>Reading scores versus IQ scores</dd>
-        <dt><a href="Referend.html">Referend</a></dt>
-        <dd>Opinion on referendum by view on freedom of the press</dd>
-        <dt><a href="Region.html">Region</a></dt>
-        <dd>Pollution index taken in three regions of the country</dd>
-        <dt><a href="Register.html">Register</a></dt>
-        <dd>Maintenance cost versus age of cash registers in a department store</dd>
-        <dt><a href="Rehab.html">Rehab</a></dt>
-        <dd>Rehabilitative potential of 20 prison inmates as judged by two psychiatrists</dd>
-        <dt><a href="Remedial.html">Remedial</a></dt>
-        <dd>Math placement test score for 35 freshmen females and 42 freshmen males</dd>
-        <dt><a href="Rentals.html">Rentals</a></dt>
-        <dd>Weekly rentals for 45 apartments</dd>
-        <dt><a href="Repair.html">Repair</a></dt>
-        <dd>Recorded times for repairing 22 automobiles involved in wrecks</dd>
-        <dt><a href="Retail.html">Retail</a></dt>
-        <dd>Length of employment versus gross sales for 10 employees of a large retail
-</dd>
-        <dt><a href="Ronbrown1.html">Ronbrown1</a></dt>
-        <dd>Oceanography data obtained at site 1 by scientist aboard the ship Ron Brown</dd>
-        <dt><a href="Ronbrown2.html">Ronbrown2</a></dt>
-        <dd>Oceanography data obtained at site 2 by scientist aboard the ship Ron Brown</dd>
-        <dt><a href="Rural.html">Rural</a></dt>
-        <dd>Social adjustment scores for a rural group and a city group of children</dd>
-        <dt><a href="Salary.html">Salary</a></dt>
-        <dd>Starting salaries for 25 new PhD psychologist</dd>
-        <dt><a href="Salinity.html">Salinity</a></dt>
-        <dd>Surface-water salinity measurements from Whitewater Bay, Florida</dd>
-        <dt><a href="Sat.html">Sat</a></dt>
-        <dd>SAT scores, percent taking exam and state funding per student by state for
-</dd>
-        <dt><a href="Saving.html">Saving</a></dt>
-        <dd>Problem asset ration for savings and loan companies in California, New York,
-</dd>
-        <dt><a href="Scales.html">Scales</a></dt>
-        <dd>Readings obtained from a 100 pound weight placed on four brands of bathroom
-</dd>
-        <dt><a href="Schizop2.html">Schizop2</a></dt>
-        <dd>Exam scores for 17 patients to assess the learning ability of schizophrenics
-</dd>
-        <dt><a href="Schizoph.html">Schizoph</a></dt>
-        <dd>Standardized exam scores for 13 patients to investigate the learning ability
-</dd>
-        <dt><a href="Seatbelt.html">Seatbelt</a></dt>
-        <dd>Injury level versus seatbelt usage</dd>
-        <dt><a href="Selfdefe.html">Selfdefe</a></dt>
-        <dd>Self-confidence scores for 9 women before and after instructions on
-</dd>
-        <dt><a href="Senior.html">Senior</a></dt>
-        <dd>Reaction times of 30 senior citizens applying for drivers license renewals</dd>
-        <dt><a href="Sentence.html">Sentence</a></dt>
-        <dd>Sentences of 41 prisoners convicted of a homicide offense</dd>
-        <dt><a href="Shkdrug.html">Shkdrug</a></dt>
-        <dd>Effects of a drug and electroshock therapy on the ability to solve simple
-</dd>
-        <dt><a href="Shock.html">Shock</a></dt>
-        <dd>Effect of experimental shock on time to complete difficult task</dd>
-        <dt><a href="Shoplift.html">Shoplift</a></dt>
-        <dd>Sales receipts versus shoplifting losses for a department store</dd>
-        <dt><a href="Short.html">Short</a></dt>
-        <dd>James Short's measurements of the parallax of the sun</dd>
-        <dt><a href="Shuttle.html">Shuttle</a></dt>
-        <dd>Number of people riding shuttle versus number of automobiles in the downtown
-</dd>
-        <dt><a href="SIGN.test.html">SIGN.test</a></dt>
-        <dd>Sign Test</dd>
-        <dt><a href="Simpson.html">Simpson</a></dt>
-        <dd>Grade point averages of men and women participating in various sports-an
-</dd>
-        <dt><a href="Situp.html">Situp</a></dt>
-        <dd>Maximum number of situps by participants in an exercise class</dd>
-        <dt><a href="Skewed.html">Skewed</a></dt>
-        <dd>Illustrates the Wilcoxon Rank Sum test</dd>
-        <dt><a href="Skin.html">Skin</a></dt>
-        <dd>Survival times of closely and poorly matched skin grafts on burn patients</dd>
-        <dt><a href="Slc.html">Slc</a></dt>
-        <dd>Sodium-lithium countertransport activity on 190 individuals from six large
-</dd>
-        <dt><a href="Smokyph.html">Smokyph</a></dt>
-        <dd>Water pH levels of 75 water samples taken in the Great Smoky Mountains</dd>
-        <dt><a href="Snore.html">Snore</a></dt>
-        <dd>Snoring versus heart disease</dd>
-        <dt><a href="Snow.html">Snow</a></dt>
-        <dd>Concentration of microparticles in snowfields of Greenland and Antarctica</dd>
-        <dt><a href="Soccer.html">Soccer</a></dt>
-        <dd>Weights of 25 soccer players</dd>
-        <dt><a href="Social.html">Social</a></dt>
-        <dd>Median income level for 25 social workers from North Carolina</dd>
-        <dt><a href="Sophomor.html">Sophomor</a></dt>
-        <dd>Grade point averages, SAT scores and final grade in college algebra for 20
-</dd>
-        <dt><a href="South.html">South</a></dt>
-        <dd>Murder rates for 30 cities in the South</dd>
-        <dt><a href="Speed.html">Speed</a></dt>
-        <dd>Speed reading scores before and after a course on speed reading</dd>
-        <dt><a href="Spellers.html">Spellers</a></dt>
-        <dd>Standardized spelling test scores for two fourth grade classes</dd>
-        <dt><a href="Spelling.html">Spelling</a></dt>
-        <dd>Spelling scores for 9 eighth graders before and after a 2-week course of
-</dd>
-        <dt><a href="Sports.html">Sports</a></dt>
-        <dd>Favorite sport by gender</dd>
-        <dt><a href="Spouse.html">Spouse</a></dt>
-        <dd>Convictions in spouse murder cases by gender</dd>
-        <dt><a href="SRS.html">SRS</a></dt>
-        <dd>Simple Random Sampling</dd>
-        <dt><a href="Stable.html">Stable</a></dt>
-        <dd>Times of a 2-year old stallion on a one mile run</dd>
-        <dt><a href="Stamp.html">Stamp</a></dt>
-        <dd>Thicknesses of 1872 Hidalgo stamps issued in Mexico</dd>
-        <dt><a href="Statclas.html">Statclas</a></dt>
-        <dd>Grades for two introductory statistics classes</dd>
-        <dt><a href="Statelaw.html">Statelaw</a></dt>
-        <dd>Operating expenditures per resident for each of the state law enforcement
-</dd>
-        <dt><a href="Statisti.html">Statisti</a></dt>
-        <dd>Test scores for two beginning statistics classes</dd>
-        <dt><a href="Step.html">Step</a></dt>
-        <dd>STEP science test scores for a class of ability-grouped students</dd>
-        <dt><a href="Stress.html">Stress</a></dt>
-        <dd>Short-term memory test scores on 12 subjects before and after a stressful
-</dd>
-        <dt><a href="Study.html">Study</a></dt>
-        <dd>Number of hours studied per week by a sample of 50 freshmen</dd>
-        <dt><a href="Submarin.html">Submarin</a></dt>
-        <dd>Number of German submarines sunk by U.S. Navy in World War II</dd>
-        <dt><a href="Subway.html">Subway</a></dt>
-        <dd>Time it takes a subway to travel from the airport to downtown</dd>
-        <dt><a href="Sunspot.html">Sunspot</a></dt>
-        <dd>Wolfer sunspot numbers from 1700 through 2000</dd>
-        <dt><a href="Superbowl.html">Superbowl</a></dt>
-        <dd>Margin of victory in Superbowls I to XXXV</dd>
-        <dt><a href="Supercar.html">Supercar</a></dt>
-        <dd>Top speeds attained by five makes of supercars</dd>
-        <dt><a href="Tablrock.html">Tablrock</a></dt>
-        <dd>Ozone concentrations at Mt. Mitchell, North Carolina</dd>
-        <dt><a href="Teacher.html">Teacher</a></dt>
-        <dd>Average teacher's salaries across the states in the 70s 80s and 90s</dd>
-        <dt><a href="Tenness.html">Tenness</a></dt>
-        <dd>Tennessee self concept scores for 20 gifted high school students</dd>
-        <dt><a href="Tensile.html">Tensile</a></dt>
-        <dd>Tensile strength of plastic bags from two production runs</dd>
-        <dt><a href="Test1.html">Test1</a></dt>
-        <dd>Grades on the first test in a statistics class</dd>
-        <dt><a href="Thermal.html">Thermal</a></dt>
-        <dd>Heat loss of thermal pane windows versus outside temperature</dd>
-        <dt><a href="Tiaa.html">Tiaa</a></dt>
-        <dd>1999-2000 closing prices for TIAA-CREF stocks</dd>
-        <dt><a href="Ticket.html">Ticket</a></dt>
-        <dd>Time to complete an airline ticket reservation</dd>
-        <dt><a href="Toaster.html">Toaster</a></dt>
-        <dd>Consumer Reports (Oct 94) rating of toaster ovens versus the cost</dd>
-        <dt><a href="Tonsils.html">Tonsils</a></dt>
-        <dd>Size of tonsils collected from 1,398 children</dd>
-        <dt><a href="Tort.html">Tort</a></dt>
-        <dd>The number of torts, average number of months to process a tort, and county
-</dd>
-        <dt><a href="Toxic.html">Toxic</a></dt>
-        <dd>Hazardous waste sites near minority communities</dd>
-        <dt><a href="Track.html">Track</a></dt>
-        <dd>National Olympic records for women in several races</dd>
-        <dt><a href="Track15.html">Track15</a></dt>
-        <dd>Olympic winning times for the men's 1500-meter run</dd>
-        <dt><a href="Treatments.html">Treatments</a></dt>
-        <dd>Illustrates analysis of variance for three treatment groups</dd>
-        <dt><a href="Trees.html">Trees</a></dt>
-        <dd>Number of trees in 20 grids</dd>
-        <dt><a href="Trucks.html">Trucks</a></dt>
-        <dd>Miles per gallon for standard 4-wheel drive trucks manufactured by
-</dd>
-        <dt><a href="tsum.test.html">tsum.test</a></dt>
-        <dd>Summarized t-test</dd>
-        <dt><a href="Tv.html">Tv</a></dt>
-        <dd>Percent of students that watch more than 6 hours of TV per day versus
-</dd>
-        <dt><a href="Twin.html">Twin</a></dt>
-        <dd>Intelligence test scores for identical twins in which one twin is given a
-</dd>
-        <dt><a href="Undergrad.html">Undergrad</a></dt>
-        <dd>Data set describing a sample of undergraduate students</dd>
-        <dt><a href="Vacation.html">Vacation</a></dt>
-        <dd>Number of days of paid holidays and vacation leave for sample of 35 textile
-</dd>
-        <dt><a href="Vaccine.html">Vaccine</a></dt>
-        <dd>Reported serious reactions due to vaccines in 11 southern states</dd>
-        <dt><a href="Vehicle.html">Vehicle</a></dt>
-        <dd>Fatality ratings for foreign and domestic vehicles</dd>
-        <dt><a href="Verbal.html">Verbal</a></dt>
-        <dd>Verbal test scores and number of library books checked out for 15 eighth
-</dd>
-        <dt><a href="Victoria.html">Victoria</a></dt>
-        <dd>Number of sunspots versus mean annual level of Lake Victoria Nyanza from
-</dd>
-        <dt><a href="Viscosit.html">Viscosit</a></dt>
-        <dd>Viscosity measurements of a substance on two different days</dd>
-        <dt><a href="Visual.html">Visual</a></dt>
-        <dd>Visual acuity of a group of subjects tested under a specified dose of a drug</dd>
-        <dt><a href="Vocab.html">Vocab</a></dt>
-        <dd>Reading scores before and after vocabulary training for 14 employees who did
-</dd>
-        <dt><a href="Wastewat.html">Wastewat</a></dt>
-        <dd>Volume of injected waste water from Rocky Mountain Arsenal and number of
-</dd>
-        <dt><a href="Weather94.html">Weather94</a></dt>
-        <dd>Weather casualties in 1994</dd>
-        <dt><a href="Wheat.html">Wheat</a></dt>
-        <dd>Price of a bushel of wheat versus the national weekly earnings of production
-</dd>
-        <dt><a href="Windmill.html">Windmill</a></dt>
-        <dd>Direct current produced by different wind velocities</dd>
-        <dt><a href="Window.html">Window</a></dt>
-        <dd>Wind leakage for storm windows exposed to a 50 mph wind</dd>
-        <dt><a href="Wins.html">Wins</a></dt>
-        <dd>Baseball team wins versus 7 independent variables for National league teams
-</dd>
-        <dt><a href="Wool.html">Wool</a></dt>
-        <dd>Strength tests of two types of wool fabric</dd>
-        <dt><a href="Yearsunspot.html">Yearsunspot</a></dt>
-        <dd>Monthly sunspot activity from 1974 to 2000</dd>
-        <dt><a href="z.test.html">z.test</a></dt>
-        <dd>Z-test</dd>
-        <dt><a href="zsum.test.html">zsum.test</a></dt>
-        <dd>Summarized z-test</dd>
-      </dl>
+      
+      <p><a href="Abbey.html">Daily price returns (in pence) of Abbey National shares between 7/31/91 and
+</a></p>
+      <ul>
+        <li><code><a href="Abbey.html">Abbey</a></code></li>
+      </ul>
+      
+      <p><a href="Abc.html">Three samples to illustrate analysis of variance</a></p>
+      <ul>
+        <li><code><a href="Abc.html">Abc</a></code></li>
+      </ul>
+      
+      <p><a href="Abilene.html">Crimes reported in Abilene, Texas</a></p>
+      <ul>
+        <li><code><a href="Abilene.html">Abilene</a></code></li>
+      </ul>
+      
+      <p><a href="Ability.html">Perceived math ability for 13-year olds by gender</a></p>
+      <ul>
+        <li><code><a href="Ability.html">Ability</a></code></li>
+      </ul>
+      
+      <p><a href="Abortion.html">Abortion rate by region of country</a></p>
+      <ul>
+        <li><code><a href="Abortion.html">Abortion</a></code></li>
+      </ul>
+      
+      <p><a href="Absent.html">Number of absent days for 20 employees</a></p>
+      <ul>
+        <li><code><a href="Absent.html">Absent</a></code></li>
+      </ul>
+      
+      <p><a href="Achieve.html">Math achievement test scores by gender for 25 high school students</a></p>
+      <ul>
+        <li><code><a href="Achieve.html">Achieve</a></code></li>
+      </ul>
+      
+      <p><a href="Adsales.html">Number of ads versus number of sales for a retailer of satellite dishes</a></p>
+      <ul>
+        <li><code><a href="Adsales.html">Adsales</a></code></li>
+      </ul>
+      
+      <p><a href="Aggress.html">Agressive tendency scores for a group of teenage members of a street gang</a></p>
+      <ul>
+        <li><code><a href="Aggress.html">Aggress</a></code></li>
+      </ul>
+      
+      <p><a href="Aid.html">Monthly payments per person for families in the AFDC federal program</a></p>
+      <ul>
+        <li><code><a href="Aid.html">Aid</a></code></li>
+      </ul>
+      
+      <p><a href="Aids.html">Incubation times for 295 patients thought to be infected with HIV by a blood
+</a></p>
+      <ul>
+        <li><code><a href="Aids.html">Aids</a></code></li>
+      </ul>
+      
+      <p><a href="Airdisasters.html">Aircraft disasters in five different decades</a></p>
+      <ul>
+        <li><code><a href="Airdisasters.html">Airdisasters</a></code></li>
+      </ul>
+      
+      <p><a href="Airline.html">Percentage of on-time arrivals and number of complaints for 11 airlines</a></p>
+      <ul>
+        <li><code><a href="Airline.html">Airline</a></code></li>
+      </ul>
+      
+      <p><a href="Alcohol.html">Ages at which 14 female alcoholics began drinking</a></p>
+      <ul>
+        <li><code><a href="Alcohol.html">Alcohol</a></code></li>
+      </ul>
+      
+      <p><a href="Allergy.html">Allergy medicines by adverse events</a></p>
+      <ul>
+        <li><code><a href="Allergy.html">Allergy</a></code></li>
+      </ul>
+      
+      <p><a href="Anesthet.html">Recovery times for anesthetized patients</a></p>
+      <ul>
+        <li><code><a href="Anesthet.html">Anesthet</a></code></li>
+      </ul>
+      
+      <p><a href="Anxiety.html">Math test scores versus anxiety scores before the test</a></p>
+      <ul>
+        <li><code><a href="Anxiety.html">Anxiety</a></code></li>
+      </ul>
+      
+      <p><a href="Apolipop.html">Level of apolipoprotein B and number of cups of coffee consumed per day for
+</a></p>
+      <ul>
+        <li><code><a href="Apolipop.html">Apolipop</a></code></li>
+      </ul>
+      
+      <p><a href="Append.html">Median costs of an appendectomy at 20 hospitals in North Carolina</a></p>
+      <ul>
+        <li><code><a href="Append.html">Append</a></code></li>
+      </ul>
+      
+      <p><a href="Appendec.html">Median costs of appendectomies at three different types of North Carolina
+</a></p>
+      <ul>
+        <li><code><a href="Appendec.html">Appendec</a></code></li>
+      </ul>
+      
+      <p><a href="Aptitude.html">Aptitude test scores versus productivity in a factory</a></p>
+      <ul>
+        <li><code><a href="Aptitude.html">Aptitude</a></code></li>
+      </ul>
+      
+      <p><a href="Archaeo.html">Radiocarbon ages of observations taken from an archaeological site</a></p>
+      <ul>
+        <li><code><a href="Archaeo.html">Archaeo</a></code></li>
+      </ul>
+      
+      <p><a href="Arthriti.html">Time of relief for three treatments of arthritis</a></p>
+      <ul>
+        <li><code><a href="Arthriti.html">Arthriti</a></code></li>
+      </ul>
+      
+      <p><a href="Artifici.html">Durations of operation for 15 artificial heart transplants</a></p>
+      <ul>
+        <li><code><a href="Artifici.html">Artifici</a></code></li>
+      </ul>
+      
+      <p><a href="Asprin.html">Dissolving time versus level of impurities in aspirin tablets</a></p>
+      <ul>
+        <li><code><a href="Asprin.html">Asprin</a></code></li>
+      </ul>
+      
+      <p><a href="Asthmati.html">Asthmatic relief index on nine subjects given a drug and a placebo</a></p>
+      <ul>
+        <li><code><a href="Asthmati.html">Asthmati</a></code></li>
+      </ul>
+      
+      <p><a href="Attorney.html">Number of convictions reported by U.S. attorney's offices</a></p>
+      <ul>
+        <li><code><a href="Attorney.html">Attorney</a></code></li>
+      </ul>
+      
+      <p><a href="Autogear.html">Number of defective auto gears produced by two manufacturers</a></p>
+      <ul>
+        <li><code><a href="Autogear.html">Autogear</a></code></li>
+      </ul>
+      
+      <p><a href="Backtoback.html">Illustrates inferences based on pooled t-test versus Wilcoxon rank sum test</a></p>
+      <ul>
+        <li><code><a href="Backtoback.html">Backtoback</a></code></li>
+      </ul>
+      
+      <p><a href="Bbsalaries.html">Baseball salaries for members of five major league teams</a></p>
+      <ul>
+        <li><code><a href="Bbsalaries.html">Bbsalaries</a></code></li>
+      </ul>
+      
+      <p><a href="Bigten.html">Graduation rates for student athletes and nonathletes in the Big Ten Conf.</a></p>
+      <ul>
+        <li><code><a href="Bigten.html">Bigten</a></code></li>
+      </ul>
+      
+      <p><a href="Biology.html">Test scores on first exam in biology class</a></p>
+      <ul>
+        <li><code><a href="Biology.html">Biology</a></code></li>
+      </ul>
+      
+      <p><a href="Birth.html">Live birth rates in 1990 and 1998 for all states</a></p>
+      <ul>
+        <li><code><a href="Birth.html">Birth</a></code></li>
+      </ul>
+      
+      <p><a href="Blackedu.html">Education level of blacks by gender</a></p>
+      <ul>
+        <li><code><a href="Blackedu.html">Blackedu</a></code></li>
+      </ul>
+      
+      <p><a href="Blood.html">Blood pressure of 15 adult males taken by machine and by an expert</a></p>
+      <ul>
+        <li><code><a href="Blood.html">Blood</a></code></li>
+      </ul>
+      
+      <p><a href="Board.html">Incomes of board members from three different universities</a></p>
+      <ul>
+        <li><code><a href="Board.html">Board</a></code></li>
+      </ul>
+      
+      <p><a href="Bones.html">Bone density measurements of 35 physically active and 35 non-active women</a></p>
+      <ul>
+        <li><code><a href="Bones.html">Bones</a></code></li>
+      </ul>
+      
+      <p><a href="Books.html">Number of books read and final spelling scores for 17 third graders</a></p>
+      <ul>
+        <li><code><a href="Books.html">Books</a></code></li>
+      </ul>
+      
+      <p><a href="Bookstor.html">Prices paid for used books at three different bookstores</a></p>
+      <ul>
+        <li><code><a href="Bookstor.html">Bookstor</a></code></li>
+      </ul>
+      
+      <p><a href="Brain.html">Brain weight versus body weight of 28 animals</a></p>
+      <ul>
+        <li><code><a href="Brain.html">Brain</a></code></li>
+      </ul>
+      
+      <p><a href="BSDA-package.html">Basic Statistics and Data Analysis</a></p>
+      <ul>
+        <li><code><a href="BSDA-package.html">BSDA</a></code></li><li><code><a href="BSDA-package.html">BSDA-package</a></code></li>
+      </ul>
+      
+      <p><a href="Bumpers.html">Repair costs of vehicles crashed into a barrier at 5 miles per hour</a></p>
+      <ul>
+        <li><code><a href="Bumpers.html">Bumpers</a></code></li>
+      </ul>
+      
+      <p><a href="Bus.html">Attendance of bus drivers versus attendance</a></p>
+      <ul>
+        <li><code><a href="Bus.html">Bus</a></code></li>
+      </ul>
+      
+      <p><a href="Bypass.html">Median charges for coronary bypass at 17 hospitals in North Carolina</a></p>
+      <ul>
+        <li><code><a href="Bypass.html">Bypass</a></code></li>
+      </ul>
+      
+      <p><a href="Cabinets.html">Estimates of costs of kitchen cabinets by two suppliers on 20 prospective
+</a></p>
+      <ul>
+        <li><code><a href="Cabinets.html">Cabinets</a></code></li>
+      </ul>
+      
+      <p><a href="Cancer.html">Survival times of terminal cancer patients treated with vitamin C</a></p>
+      <ul>
+        <li><code><a href="Cancer.html">Cancer</a></code></li>
+      </ul>
+      
+      <p><a href="Carbon.html">Carbon monoxide level measured at three industrial sites</a></p>
+      <ul>
+        <li><code><a href="Carbon.html">Carbon</a></code></li>
+      </ul>
+      
+      <p><a href="Cat.html">Reading scores on the California achievement test for a group of 3rd graders</a></p>
+      <ul>
+        <li><code><a href="Cat.html">Cat</a></code></li>
+      </ul>
+      
+      <p><a href="Censored.html">Entry age and survival time of patients with small cell lung cancer under
+</a></p>
+      <ul>
+        <li><code><a href="Censored.html">Censored</a></code></li>
+      </ul>
+      
+      <p><a href="Challeng.html">Temperatures and O-ring failures for the launches of the space shuttle
+</a></p>
+      <ul>
+        <li><code><a href="Challeng.html">Challeng</a></code></li>
+      </ul>
+      
+      <p><a href="Chemist.html">Starting salaries of 50 chemistry majors</a></p>
+      <ul>
+        <li><code><a href="Chemist.html">Chemist</a></code></li>
+      </ul>
+      
+      <p><a href="Chesapea.html">Surface salinity measurements taken offshore from Annapolis, Maryland in
+</a></p>
+      <ul>
+        <li><code><a href="Chesapea.html">Chesapea</a></code></li>
+      </ul>
+      
+      <p><a href="Chevy.html">Insurance injury ratings of Chevrolet vehicles for 1990 and 1993 models</a></p>
+      <ul>
+        <li><code><a href="Chevy.html">Chevy</a></code></li>
+      </ul>
+      
+      <p><a href="Chicken.html">Weight gain of chickens fed three different rations</a></p>
+      <ul>
+        <li><code><a href="Chicken.html">Chicken</a></code></li>
+      </ul>
+      
+      <p><a href="Chipavg.html">Measurements of the thickness of the oxide layer of manufactured integrated
+</a></p>
+      <ul>
+        <li><code><a href="Chipavg.html">Chipavg</a></code></li>
+      </ul>
+      
+      <p><a href="Chips.html">Four measurements on a first wafer and four measurements on a second wafer
+</a></p>
+      <ul>
+        <li><code><a href="Chips.html">Chips</a></code></li>
+      </ul>
+      
+      <p><a href="Cigar.html">Milligrams of tar in 25 cigarettes selected randomly from 4 different brands</a></p>
+      <ul>
+        <li><code><a href="Cigar.html">Cigar</a></code></li>
+      </ul>
+      
+      <p><a href="Cigarett.html">Effect of mother's smoking on birth weight of newborn</a></p>
+      <ul>
+        <li><code><a href="Cigarett.html">Cigarett</a></code></li>
+      </ul>
+      
+      <p><a href="CIsim.html">Confidence Interval Simulation Program</a></p>
+      <ul>
+        <li><code><a href="CIsim.html">CIsim</a></code></li>
+      </ul>
+      
+      <p><a href="Citrus.html">Percent of peak bone density of different aged children</a></p>
+      <ul>
+        <li><code><a href="Citrus.html">Citrus</a></code></li>
+      </ul>
+      
+      <p><a href="Clean.html">Residual contaminant following the use of three different cleansing agents</a></p>
+      <ul>
+        <li><code><a href="Clean.html">Clean</a></code></li>
+      </ul>
+      
+      <p><a href="Coaxial.html">Signal loss from three types of coxial cable</a></p>
+      <ul>
+        <li><code><a href="Coaxial.html">Coaxial</a></code></li>
+      </ul>
+      
+      <p><a href="Coffee.html">Productivity of workers with and without a coffee break</a></p>
+      <ul>
+        <li><code><a href="Coffee.html">Coffee</a></code></li>
+      </ul>
+      
+      <p><a href="Coins.html">Yearly returns on 12 investments</a></p>
+      <ul>
+        <li><code><a href="Coins.html">Coins</a></code></li>
+      </ul>
+      
+      <p><a href="Combinations.html">Combinations</a></p>
+      <ul>
+        <li><code><a href="Combinations.html">Combinations</a></code></li>
+      </ul>
+      
+      <p><a href="Commute.html">Commuting times for selected cities in 1980 and 1990</a></p>
+      <ul>
+        <li><code><a href="Commute.html">Commute</a></code></li>
+      </ul>
+      
+      <p><a href="Concept.html">Tennessee self concept scale scores for a group of teenage boys</a></p>
+      <ul>
+        <li><code><a href="Concept.html">Concept</a></code></li>
+      </ul>
+      
+      <p><a href="Concrete.html">Compressive strength of concrete blocks made by two different methods</a></p>
+      <ul>
+        <li><code><a href="Concrete.html">Concrete</a></code></li>
+      </ul>
+      
+      <p><a href="Corn.html">Comparison of the yields of a new variety and a standard variety of corn
+</a></p>
+      <ul>
+        <li><code><a href="Corn.html">Corn</a></code></li>
+      </ul>
+      
+      <p><a href="Correlat.html">Exercise to illustrate correlation</a></p>
+      <ul>
+        <li><code><a href="Correlat.html">Correlat</a></code></li>
+      </ul>
+      
+      <p><a href="Counsel.html">Scores of 18 volunteers who participated in a counseling process</a></p>
+      <ul>
+        <li><code><a href="Counsel.html">Counsel</a></code></li>
+      </ul>
+      
+      <p><a href="Cpi.html">Consumer price index from 1979 to 1998</a></p>
+      <ul>
+        <li><code><a href="Cpi.html">Cpi</a></code></li>
+      </ul>
+      
+      <p><a href="Crime.html">Violent crime rates for the states in 1983 and 1993</a></p>
+      <ul>
+        <li><code><a href="Crime.html">Crime</a></code></li>
+      </ul>
+      
+      <p><a href="Darwin.html">Charles Darwin's study of cross-fertilized and self-fertilized plants</a></p>
+      <ul>
+        <li><code><a href="Darwin.html">Darwin</a></code></li>
+      </ul>
+      
+      <p><a href="Dealers.html">Automobile dealers classified according to type dealership and service
+</a></p>
+      <ul>
+        <li><code><a href="Dealers.html">Dealers</a></code></li>
+      </ul>
+      
+      <p><a href="Defectiv.html">Number of defective items produced by 20 employees</a></p>
+      <ul>
+        <li><code><a href="Defectiv.html">Defectiv</a></code></li>
+      </ul>
+      
+      <p><a href="Degree.html">Percent of bachelor's degrees awarded women in 1970 versus 1990</a></p>
+      <ul>
+        <li><code><a href="Degree.html">Degree</a></code></li>
+      </ul>
+      
+      <p><a href="Delay.html">Delay times on 20 flights from four major air carriers</a></p>
+      <ul>
+        <li><code><a href="Delay.html">Delay</a></code></li>
+      </ul>
+      
+      <p><a href="Depend.html">Number of dependent children for 50 families</a></p>
+      <ul>
+        <li><code><a href="Depend.html">Depend</a></code></li>
+      </ul>
+      
+      <p><a href="Detroit.html">Educational levels of a sample of 40 auto workers in Detroit</a></p>
+      <ul>
+        <li><code><a href="Detroit.html">Detroit</a></code></li>
+      </ul>
+      
+      <p><a href="Develop.html">Demographic characteristics of developmental students at 2-year colleges and
+</a></p>
+      <ul>
+        <li><code><a href="Develop.html">Develop</a></code></li>
+      </ul>
+      
+      <p><a href="Devmath.html">Test scores for students who failed developmental mathematics in the fall
+</a></p>
+      <ul>
+        <li><code><a href="Devmath.html">Devmath</a></code></li>
+      </ul>
+      
+      <p><a href="Dice.html">Outcomes and probabilities of the roll of a pair of fair dice</a></p>
+      <ul>
+        <li><code><a href="Dice.html">Dice</a></code></li>
+      </ul>
+      
+      <p><a href="Diesel.html">Diesel fuel prices in 1999-2000 in nine regions of the country</a></p>
+      <ul>
+        <li><code><a href="Diesel.html">Diesel</a></code></li>
+      </ul>
+      
+      <p><a href="Diplomat.html">Parking tickets issued to diplomats</a></p>
+      <ul>
+        <li><code><a href="Diplomat.html">Diplomat</a></code></li>
+      </ul>
+      
+      <p><a href="Disposal.html">Toxic intensity for manufacturing plants producing herbicidal preparations</a></p>
+      <ul>
+        <li><code><a href="Disposal.html">Disposal</a></code></li>
+      </ul>
+      
+      <p><a href="Dogs.html">Rankings of the favorite breeds of dogs</a></p>
+      <ul>
+        <li><code><a href="Dogs.html">Dogs</a></code></li>
+      </ul>
+      
+      <p><a href="Domestic.html">Rates of domestic violence per 1,000 women by age groups</a></p>
+      <ul>
+        <li><code><a href="Domestic.html">Domestic</a></code></li>
+      </ul>
+      
+      <p><a href="Dopamine.html">Dopamine b-hydroxylase activity of schizophrenic patients treated with an
+</a></p>
+      <ul>
+        <li><code><a href="Dopamine.html">Dopamine</a></code></li>
+      </ul>
+      
+      <p><a href="Dowjones.html">Closing yearend Dow Jones Industrial averages from 1896 through 2000</a></p>
+      <ul>
+        <li><code><a href="Dowjones.html">Dowjones</a></code></li>
+      </ul>
+      
+      <p><a href="Drink.html">Opinion on referendum by view on moral issue of selling alcoholic beverages</a></p>
+      <ul>
+        <li><code><a href="Drink.html">Drink</a></code></li>
+      </ul>
+      
+      <p><a href="Drug.html">Number of trials to master a task for a group of 28 subjects assigned to a
+</a></p>
+      <ul>
+        <li><code><a href="Drug.html">Drug</a></code></li>
+      </ul>
+      
+      <p><a href="Dyslexia.html">Data on a group of college students diagnosed with dyslexia</a></p>
+      <ul>
+        <li><code><a href="Dyslexia.html">Dyslexia</a></code></li>
+      </ul>
+      
+      <p><a href="Earthqk.html">One hundred year record of worldwide seismic activity(1770-1869)</a></p>
+      <ul>
+        <li><code><a href="Earthqk.html">Earthqk</a></code></li>
+      </ul>
+      
+      <p><a href="EDA.html">Exploratory Data Anaalysis</a></p>
+      <ul>
+        <li><code><a href="EDA.html">EDA</a></code></li>
+      </ul>
+      
+      <p><a href="Educat.html">Crime rates versus the percent of the population without a high school
+</a></p>
+      <ul>
+        <li><code><a href="Educat.html">Educat</a></code></li>
+      </ul>
+      
+      <p><a href="Eggs.html">Number of eggs versus amounts of feed supplement</a></p>
+      <ul>
+        <li><code><a href="Eggs.html">Eggs</a></code></li>
+      </ul>
+      
+      <p><a href="Elderly.html">Percent of the population over the age of 65</a></p>
+      <ul>
+        <li><code><a href="Elderly.html">Elderly</a></code></li>
+      </ul>
+      
+      <p><a href="Energy.html">Amount of energy consumed by homes versus their sizes</a></p>
+      <ul>
+        <li><code><a href="Energy.html">Energy</a></code></li>
+      </ul>
+      
+      <p><a href="Engineer.html">Salaries after 10 years for graduates of three different universities</a></p>
+      <ul>
+        <li><code><a href="Engineer.html">Engineer</a></code></li>
+      </ul>
+      
+      <p><a href="Entrance.html">College entrance exam scores for 24 high school seniors</a></p>
+      <ul>
+        <li><code><a href="Entrance.html">Entrance</a></code></li>
+      </ul>
+      
+      <p><a href="Epaminicompact.html">Fuel efficiency ratings for compact vehicles in 2001</a></p>
+      <ul>
+        <li><code><a href="Epaminicompact.html">Epaminicompact</a></code></li>
+      </ul>
+      
+      <p><a href="Epatwoseater.html">Fuel efficiency ratings for two-seater vehicles in 2001</a></p>
+      <ul>
+        <li><code><a href="Epatwoseater.html">Epatwoseater</a></code></li>
+      </ul>
+      
+      <p><a href="Executiv.html">Ages of 25 executives</a></p>
+      <ul>
+        <li><code><a href="Executiv.html">Executiv</a></code></li>
+      </ul>
+      
+      <p><a href="Exercise.html">Weight loss for 30 members of an exercise program</a></p>
+      <ul>
+        <li><code><a href="Exercise.html">Exercise</a></code></li>
+      </ul>
+      
+      <p><a href="Fabric.html">Measures of softness of 10 different clothing garments washed with and
+</a></p>
+      <ul>
+        <li><code><a href="Fabric.html">Fabric</a></code></li>
+      </ul>
+      
+      <p><a href="Faithful.html">Waiting times between successive eruptions of the Old Faithful geyser</a></p>
+      <ul>
+        <li><code><a href="Faithful.html">Faithful</a></code></li>
+      </ul>
+      
+      <p><a href="Family.html">Size of family versus cost per person per week for groceries</a></p>
+      <ul>
+        <li><code><a href="Family.html">Family</a></code></li>
+      </ul>
+      
+      <p><a href="Ferraro1.html">Choice of presidental ticket in 1984 by gender</a></p>
+      <ul>
+        <li><code><a href="Ferraro1.html">Ferraro1</a></code></li>
+      </ul>
+      
+      <p><a href="Ferraro2.html">Choice of vice presidental candidate in 1984 by gender</a></p>
+      <ul>
+        <li><code><a href="Ferraro2.html">Ferraro2</a></code></li>
+      </ul>
+      
+      <p><a href="Fertility.html">Fertility rates of all 50 states and DC</a></p>
+      <ul>
+        <li><code><a href="Fertility.html">Fertility</a></code></li>
+      </ul>
+      
+      <p><a href="Firstchi.html">Ages of women at the birth of their first child</a></p>
+      <ul>
+        <li><code><a href="Firstchi.html">Firstchi</a></code></li>
+      </ul>
+      
+      <p><a href="Fish.html">Length and number of fish caught with small and large mesh codend</a></p>
+      <ul>
+        <li><code><a href="Fish.html">Fish</a></code></li>
+      </ul>
+      
+      <p><a href="Fitness.html">Number of sit-ups before and after a physical fitness course</a></p>
+      <ul>
+        <li><code><a href="Fitness.html">Fitness</a></code></li>
+      </ul>
+      
+      <p><a href="Florida2000.html">Florida voter results in the 2000 presidential election</a></p>
+      <ul>
+        <li><code><a href="Florida2000.html">Florida2000</a></code></li>
+      </ul>
+      
+      <p><a href="Fluid.html">Breakdown times of an insulating fluid under various levels of voltage
+</a></p>
+      <ul>
+        <li><code><a href="Fluid.html">Fluid</a></code></li>
+      </ul>
+      
+      <p><a href="Food.html">Annual food expenditures for 40 single households in Ohio</a></p>
+      <ul>
+        <li><code><a href="Food.html">Food</a></code></li>
+      </ul>
+      
+      <p><a href="Framingh.html">Cholesterol values of 62 subjects in the Framingham Heart Study</a></p>
+      <ul>
+        <li><code><a href="Framingh.html">Framingh</a></code></li>
+      </ul>
+      
+      <p><a href="Freshman.html">Ages of a random sample of 30 college freshmen</a></p>
+      <ul>
+        <li><code><a href="Freshman.html">Freshman</a></code></li>
+      </ul>
+      
+      <p><a href="Funeral.html">Cost of funeral by region of country</a></p>
+      <ul>
+        <li><code><a href="Funeral.html">Funeral</a></code></li>
+      </ul>
+      
+      <p><a href="Galaxie.html">Velocities of 82 galaxies in the Corona Borealis region</a></p>
+      <ul>
+        <li><code><a href="Galaxie.html">Galaxie</a></code></li>
+      </ul>
+      
+      <p><a href="Gallup.html">Results of a Gallup poll on possession of marijuana as a criminal offense
+</a></p>
+      <ul>
+        <li><code><a href="Gallup.html">Gallup</a></code></li>
+      </ul>
+      
+      <p><a href="Gasoline.html">Price of regular unleaded gasoline obtained from 25 service stations</a></p>
+      <ul>
+        <li><code><a href="Gasoline.html">Gasoline</a></code></li>
+      </ul>
+      
+      <p><a href="German.html">Number of errors in copying a German passage before and after an
+</a></p>
+      <ul>
+        <li><code><a href="German.html">German</a></code></li>
+      </ul>
+      
+      <p><a href="Golf.html">Distances a golf ball can be driven by 20 professional golfers</a></p>
+      <ul>
+        <li><code><a href="Golf.html">Golf</a></code></li>
+      </ul>
+      
+      <p><a href="Governor.html">Annual salaries for state governors in 1994</a></p>
+      <ul>
+        <li><code><a href="Governor.html">Governor</a></code></li>
+      </ul>
+      
+      <p><a href="Gpa.html">High school GPA versus college GPA</a></p>
+      <ul>
+        <li><code><a href="Gpa.html">Gpa</a></code></li>
+      </ul>
+      
+      <p><a href="Grades.html">Test grades in a beginning statistics class</a></p>
+      <ul>
+        <li><code><a href="Grades.html">Grades</a></code></li>
+      </ul>
+      
+      <p><a href="Graduate.html">Graduation rates for student athletes in the Southeastern Conf.</a></p>
+      <ul>
+        <li><code><a href="Graduate.html">Graduate</a></code></li>
+      </ul>
+      
+      <p><a href="Greenriv.html">Varve thickness from a sequence through an Eocene lake deposit in the Rocky
+</a></p>
+      <ul>
+        <li><code><a href="Greenriv.html">Greenriv</a></code></li>
+      </ul>
+      
+      <p><a href="Grnriv2.html">Thickness of a varved section of the Green river oil shale deposit near a
+</a></p>
+      <ul>
+        <li><code><a href="Grnriv2.html">Grnriv2</a></code></li>
+      </ul>
+      
+      <p><a href="Groupabc.html">Group data to illustrate analysis of variance</a></p>
+      <ul>
+        <li><code><a href="Groupabc.html">Groupabc</a></code></li>
+      </ul>
+      
+      <p><a href="Groups.html">An illustration of analysis of variance</a></p>
+      <ul>
+        <li><code><a href="Groups.html">Groups</a></code></li>
+      </ul>
+      
+      <p><a href="Gym.html">Children's age versus number of completed gymnastic activities</a></p>
+      <ul>
+        <li><code><a href="Gym.html">Gym</a></code></li>
+      </ul>
+      
+      <p><a href="Habits.html">Study habits of students in two matched school districts</a></p>
+      <ul>
+        <li><code><a href="Habits.html">Habits</a></code></li>
+      </ul>
+      
+      <p><a href="Haptologo.html">Haptoglobin concentration in blood serum of 8 healthy adults</a></p>
+      <ul>
+        <li><code><a href="Haptologo.html">Haptologo</a></code></li>
+      </ul>
+      
+      <p><a href="Hardware.html">Daily receipts for a small hardware store for 31 working days</a></p>
+      <ul>
+        <li><code><a href="Hardware.html">Hardware</a></code></li>
+      </ul>
+      
+      <p><a href="Hardwood.html">Tensile strength of Kraft paper for different percentages of hardwood in the
+</a></p>
+      <ul>
+        <li><code><a href="Hardwood.html">Hardwood</a></code></li>
+      </ul>
+      
+      <p><a href="Heat.html">Primary heating sources of homes on indian reservations versus all
+</a></p>
+      <ul>
+        <li><code><a href="Heat.html">Heat</a></code></li>
+      </ul>
+      
+      <p><a href="Heating.html">Fuel efficiency ratings for three types of oil heaters</a></p>
+      <ul>
+        <li><code><a href="Heating.html">Heating</a></code></li>
+      </ul>
+      
+      <p><a href="Hodgkin.html">Results of treatments for Hodgkin's disease</a></p>
+      <ul>
+        <li><code><a href="Hodgkin.html">Hodgkin</a></code></li>
+      </ul>
+      
+      <p><a href="Homes.html">Median prices of single-family homes in 65 metropolitan statistical areas</a></p>
+      <ul>
+        <li><code><a href="Homes.html">Homes</a></code></li>
+      </ul>
+      
+      <p><a href="Homework.html">Number of hours per week spent on homework for private and public high
+</a></p>
+      <ul>
+        <li><code><a href="Homework.html">Homework</a></code></li>
+      </ul>
+      
+      <p><a href="Honda.html">Miles per gallon for a Honda Civic on 35 different occasions</a></p>
+      <ul>
+        <li><code><a href="Honda.html">Honda</a></code></li>
+      </ul>
+      
+      <p><a href="Hostile.html">Hostility levels of high school students from rural, suburban, and urban
+</a></p>
+      <ul>
+        <li><code><a href="Hostile.html">Hostile</a></code></li>
+      </ul>
+      
+      <p><a href="Housing.html">Median home prices for 1984 and 1993 in 37 markets across the U.S.</a></p>
+      <ul>
+        <li><code><a href="Housing.html">Housing</a></code></li>
+      </ul>
+      
+      <p><a href="Hurrican.html">Number of storms, hurricanes and El Nino effects from 1950 through 1995</a></p>
+      <ul>
+        <li><code><a href="Hurrican.html">Hurrican</a></code></li>
+      </ul>
+      
+      <p><a href="Iceberg.html">Number of icebergs sighted each month south of Newfoundland and south of the
+</a></p>
+      <ul>
+        <li><code><a href="Iceberg.html">Iceberg</a></code></li>
+      </ul>
+      
+      <p><a href="Income.html">Percent change in personal income from 1st to 2nd quarter in 2000</a></p>
+      <ul>
+        <li><code><a href="Income.html">Income</a></code></li>
+      </ul>
+      
+      <p><a href="Independent.html">Illustrates a comparison problem for long-tailed distributions</a></p>
+      <ul>
+        <li><code><a href="Independent.html">Independent</a></code></li>
+      </ul>
+      
+      <p><a href="Indian.html">Educational attainment versus per capita income and poverty rate for
+</a></p>
+      <ul>
+        <li><code><a href="Indian.html">Indian</a></code></li>
+      </ul>
+      
+      <p><a href="Indiapol.html">Average miles per hour for the winners of the Indianapolis 500 race</a></p>
+      <ul>
+        <li><code><a href="Indiapol.html">Indiapol</a></code></li>
+      </ul>
+      
+      <p><a href="Indy500.html">Qualifying miles per hour and number of previous starts for drivers in 79th
+</a></p>
+      <ul>
+        <li><code><a href="Indy500.html">Indy500</a></code></li>
+      </ul>
+      
+      <p><a href="Inflatio.html">Private pay increase of salaried employees versus inflation rate</a></p>
+      <ul>
+        <li><code><a href="Inflatio.html">Inflatio</a></code></li>
+      </ul>
+      
+      <p><a href="Inletoil.html">Inlet oil temperature through a valve</a></p>
+      <ul>
+        <li><code><a href="Inletoil.html">Inletoil</a></code></li>
+      </ul>
+      
+      <p><a href="Inmate.html">Type of drug offense by race</a></p>
+      <ul>
+        <li><code><a href="Inmate.html">Inmate</a></code></li>
+      </ul>
+      
+      <p><a href="Inspect.html">Percent of vehicles passing inspection by type inspection station</a></p>
+      <ul>
+        <li><code><a href="Inspect.html">Inspect</a></code></li>
+      </ul>
+      
+      <p><a href="Insulate.html">Heat loss through a new insulating medium</a></p>
+      <ul>
+        <li><code><a href="Insulate.html">Insulate</a></code></li>
+      </ul>
+      
+      <p><a href="Iqgpa.html">GPA versus IQ for 12 individuals</a></p>
+      <ul>
+        <li><code><a href="Iqgpa.html">Iqgpa</a></code></li>
+      </ul>
+      
+      <p><a href="Irises.html">R.A. Fishers famous data on sepal length of a species of Iris Setosa</a></p>
+      <ul>
+        <li><code><a href="Irises.html">Irises</a></code></li>
+      </ul>
+      
+      <p><a href="Jdpower.html">Number of problems reported per 100 cars in 1994 versus 1995s</a></p>
+      <ul>
+        <li><code><a href="Jdpower.html">Jdpower</a></code></li>
+      </ul>
+      
+      <p><a href="Jobsat.html">Job satisfaction and stress level for 9 school teachers</a></p>
+      <ul>
+        <li><code><a href="Jobsat.html">Jobsat</a></code></li>
+      </ul>
+      
+      <p><a href="Kidsmoke.html">Smoking habits of boys and girls ages 12 to 18</a></p>
+      <ul>
+        <li><code><a href="Kidsmoke.html">Kidsmoke</a></code></li>
+      </ul>
+      
+      <p><a href="Kilowatt.html">Rates per kilowatt-hour for each of the 50 states and DC</a></p>
+      <ul>
+        <li><code><a href="Kilowatt.html">Kilowatt</a></code></li>
+      </ul>
+      
+      <p><a href="Kinder.html">Reading scores for first grade children who attended kindergarten versus
+</a></p>
+      <ul>
+        <li><code><a href="Kinder.html">Kinder</a></code></li>
+      </ul>
+      
+      <p><a href="Laminect.html">Median costs of laminectomies at hospitals across North Carolina in 1992</a></p>
+      <ul>
+        <li><code><a href="Laminect.html">Laminect</a></code></li>
+      </ul>
+      
+      <p><a href="Lead.html">Lead levels in children's blood whose parents worked in a battery factory</a></p>
+      <ul>
+        <li><code><a href="Lead.html">Lead</a></code></li>
+      </ul>
+      
+      <p><a href="Leader.html">Leadership exam scores by age for employees on an industrial plant</a></p>
+      <ul>
+        <li><code><a href="Leader.html">Leader</a></code></li>
+      </ul>
+      
+      <p><a href="Lethal.html">Survival time of mice injected with an experimental lethal drug</a></p>
+      <ul>
+        <li><code><a href="Lethal.html">Lethal</a></code></li>
+      </ul>
+      
+      <p><a href="Life.html">Life expectancy of men and women in U.S.</a></p>
+      <ul>
+        <li><code><a href="Life.html">Life</a></code></li>
+      </ul>
+      
+      <p><a href="Lifespan.html">Life span of electronic components used in a spacecraft versus heat</a></p>
+      <ul>
+        <li><code><a href="Lifespan.html">Lifespan</a></code></li>
+      </ul>
+      
+      <p><a href="Ligntmonth.html">Relationship between damage reports and deaths caused by lightning</a></p>
+      <ul>
+        <li><code><a href="Ligntmonth.html">Ligntmonth</a></code></li>
+      </ul>
+      
+      <p><a href="Lodge.html">Measured traffic at three prospective locations for a motor lodge</a></p>
+      <ul>
+        <li><code><a href="Lodge.html">Lodge</a></code></li>
+      </ul>
+      
+      <p><a href="Longtail.html">Long-tailed distributions to illustrate Kruskal Wallis test</a></p>
+      <ul>
+        <li><code><a href="Longtail.html">Longtail</a></code></li>
+      </ul>
+      
+      <p><a href="Lowabil.html">Reading skills of 24 matched low ability students</a></p>
+      <ul>
+        <li><code><a href="Lowabil.html">Lowabil</a></code></li>
+      </ul>
+      
+      <p><a href="Magnesiu.html">Magnesium concentration and distances between samples</a></p>
+      <ul>
+        <li><code><a href="Magnesiu.html">Magnesiu</a></code></li>
+      </ul>
+      
+      <p><a href="Malpract.html">Amounts awarded in 17 malpractice cases</a></p>
+      <ul>
+        <li><code><a href="Malpract.html">Malpract</a></code></li>
+      </ul>
+      
+      <p><a href="Manager.html">Advertised salaries offered general managers of major corporations in 1995</a></p>
+      <ul>
+        <li><code><a href="Manager.html">Manager</a></code></li>
+      </ul>
+      
+      <p><a href="Marked.html">Percent of marked cars in 65 police departments in Florida</a></p>
+      <ul>
+        <li><code><a href="Marked.html">Marked</a></code></li>
+      </ul>
+      
+      <p><a href="MATH.html">Standardized math test scores for 30 students</a></p>
+      <ul>
+        <li><code><a href="MATH.html">MATH</a></code></li>
+      </ul>
+      
+      <p><a href="Mathcomp.html">Standardized math competency for a group of entering freshmen at a small
+</a></p>
+      <ul>
+        <li><code><a href="Mathcomp.html">Mathcomp</a></code></li>
+      </ul>
+      
+      <p><a href="Mathpro.html">Math proficiency and SAT scores by states</a></p>
+      <ul>
+        <li><code><a href="Mathpro.html">Mathpro</a></code></li>
+      </ul>
+      
+      <p><a href="Maze.html">Error scores for four groups of experimental animals running a maze</a></p>
+      <ul>
+        <li><code><a href="Maze.html">Maze</a></code></li>
+      </ul>
+      
+      <p><a href="Median.html">Illustrates test of equality of medians with the Kruskal Wallis test</a></p>
+      <ul>
+        <li><code><a href="Median.html">Median</a></code></li>
+      </ul>
+      
+      <p><a href="Mental.html">Median mental ages of 16 girls</a></p>
+      <ul>
+        <li><code><a href="Mental.html">Mental</a></code></li>
+      </ul>
+      
+      <p><a href="Mercury.html">Concentration of mercury in 25 lake trout</a></p>
+      <ul>
+        <li><code><a href="Mercury.html">Mercury</a></code></li>
+      </ul>
+      
+      <p><a href="Metrent.html">Monthly rental costs in metro areas with 1 million or more persons</a></p>
+      <ul>
+        <li><code><a href="Metrent.html">Metrent</a></code></li>
+      </ul>
+      
+      <p><a href="Miller.html">Miller personality test scores for a group of college students applying for
+</a></p>
+      <ul>
+        <li><code><a href="Miller.html">Miller</a></code></li>
+      </ul>
+      
+      <p><a href="Miller1.html">Twenty scores on the Miller personality test</a></p>
+      <ul>
+        <li><code><a href="Miller1.html">Miller1</a></code></li>
+      </ul>
+      
+      <p><a href="Moisture.html">Moisture content and depth of core sample for marine muds in eastern
+</a></p>
+      <ul>
+        <li><code><a href="Moisture.html">Moisture</a></code></li>
+      </ul>
+      
+      <p><a href="Monoxide.html">Carbon monoxide emitted by smoke stacks of a manufacturer and a competitor</a></p>
+      <ul>
+        <li><code><a href="Monoxide.html">Monoxide</a></code></li>
+      </ul>
+      
+      <p><a href="Movie.html">Moral attitude scale on 15 subjects before and after viewing a movie</a></p>
+      <ul>
+        <li><code><a href="Movie.html">Movie</a></code></li>
+      </ul>
+      
+      <p><a href="Music.html">Improvement scores for identical twins taught music recognition by two
+</a></p>
+      <ul>
+        <li><code><a href="Music.html">Music</a></code></li>
+      </ul>
+      
+      <p><a href="Name.html">Estimated value of a brand name product and the conpany's revenue</a></p>
+      <ul>
+        <li><code><a href="Name.html">Name</a></code></li>
+      </ul>
+      
+      <p><a href="Nascar.html">Efficiency of pit crews for three major NASCAR teams</a></p>
+      <ul>
+        <li><code><a href="Nascar.html">Nascar</a></code></li>
+      </ul>
+      
+      <p><a href="Nervous.html">Reaction effects of 4 drugs on 25 subjects with a nervous disorder</a></p>
+      <ul>
+        <li><code><a href="Nervous.html">Nervous</a></code></li>
+      </ul>
+      
+      <p><a href="Newsstand.html">Daily profits for 20 newsstands</a></p>
+      <ul>
+        <li><code><a href="Newsstand.html">Newsstand</a></code></li>
+      </ul>
+      
+      <p><a href="Nfldraf2.html">Rating, time in 40-yard dash, and weight of top defensive linemen in the
+</a></p>
+      <ul>
+        <li><code><a href="Nfldraf2.html">Nfldraf2</a></code></li>
+      </ul>
+      
+      <p><a href="Nfldraft.html">Rating, time in 40-yard dash, and weight of top offensive linemen in the
+</a></p>
+      <ul>
+        <li><code><a href="Nfldraft.html">Nfldraft</a></code></li>
+      </ul>
+      
+      <p><a href="Nicotine.html">Nicotine content versus sales for 8 major brands of cigarettes</a></p>
+      <ul>
+        <li><code><a href="Nicotine.html">Nicotine</a></code></li>
+      </ul>
+      
+      <p><a href="normarea.html">Normal Area</a></p>
+      <ul>
+        <li><code><a href="normarea.html">normarea</a></code></li>
+      </ul>
+      
+      <p><a href="nsize.html">Required Sample Size</a></p>
+      <ul>
+        <li><code><a href="nsize.html">nsize</a></code></li>
+      </ul>
+      
+      <p><a href="ntester.html">Normality Tester</a></p>
+      <ul>
+        <li><code><a href="ntester.html">ntester</a></code></li>
+      </ul>
+      
+      <p><a href="Orange.html">Price of oranges versus size of the harvest</a></p>
+      <ul>
+        <li><code><a href="Orange.html">Orange</a></code></li>
+      </ul>
+      
+      <p><a href="Orioles.html">Salaries of members of the Baltimore Orioles baseball team</a></p>
+      <ul>
+        <li><code><a href="Orioles.html">Orioles</a></code></li>
+      </ul>
+      
+      <p><a href="Oxytocin.html">Arterial blood pressure of 11 subjects before and after receiving oxytocin</a></p>
+      <ul>
+        <li><code><a href="Oxytocin.html">Oxytocin</a></code></li>
+      </ul>
+      
+      <p><a href="Parented.html">Education backgrounds of parents of entering freshmen at a state university</a></p>
+      <ul>
+        <li><code><a href="Parented.html">Parented</a></code></li>
+      </ul>
+      
+      <p><a href="Patrol.html">Years of experience and number of tickets given by patrolpersons in New York
+</a></p>
+      <ul>
+        <li><code><a href="Patrol.html">Patrol</a></code></li>
+      </ul>
+      
+      <p><a href="Pearson.html">Karl Pearson's data on heights of brothers and sisters</a></p>
+      <ul>
+        <li><code><a href="Pearson.html">Pearson</a></code></li>
+      </ul>
+      
+      <p><a href="Phone.html">Length of long-distance phone calls for a small business firm</a></p>
+      <ul>
+        <li><code><a href="Phone.html">Phone</a></code></li>
+      </ul>
+      
+      <p><a href="Poison.html">Number of poisonings reported to 16 poison control centers</a></p>
+      <ul>
+        <li><code><a href="Poison.html">Poison</a></code></li>
+      </ul>
+      
+      <p><a href="Politic.html">Political party and gender in a voting district</a></p>
+      <ul>
+        <li><code><a href="Politic.html">Politic</a></code></li>
+      </ul>
+      
+      <p><a href="Pollutio.html">Air pollution index for 15 randomly selected days for a major western city</a></p>
+      <ul>
+        <li><code><a href="Pollutio.html">Pollutio</a></code></li>
+      </ul>
+      
+      <p><a href="Porosity.html">Porosity measurements on 20 samples of Tensleep Sandstone, Pennsylvanian
+</a></p>
+      <ul>
+        <li><code><a href="Porosity.html">Porosity</a></code></li>
+      </ul>
+      
+      <p><a href="Poverty.html">Percent poverty and crime rate for selected cities</a></p>
+      <ul>
+        <li><code><a href="Poverty.html">Poverty</a></code></li>
+      </ul>
+      
+      <p><a href="Precinct.html">Robbery rates versus percent low income in 8 precincts</a></p>
+      <ul>
+        <li><code><a href="Precinct.html">Precinct</a></code></li>
+      </ul>
+      
+      <p><a href="Prejudic.html">Racial prejudice measured on a sample of 25 high school students</a></p>
+      <ul>
+        <li><code><a href="Prejudic.html">Prejudic</a></code></li>
+      </ul>
+      
+      <p><a href="Presiden.html">Ages at inauguration and death of U.S. presidents</a></p>
+      <ul>
+        <li><code><a href="Presiden.html">Presiden</a></code></li>
+      </ul>
+      
+      <p><a href="Press.html">Degree of confidence in the press versus education level for 20 randomly
+</a></p>
+      <ul>
+        <li><code><a href="Press.html">Press</a></code></li>
+      </ul>
+      
+      <p><a href="Prognost.html">Klopfer's prognostic rating scale for subjects receiving behavior
+</a></p>
+      <ul>
+        <li><code><a href="Prognost.html">Prognost</a></code></li>
+      </ul>
+      
+      <p><a href="Program.html">Effects of four different methods of programmed learning for statistics
+</a></p>
+      <ul>
+        <li><code><a href="Program.html">Program</a></code></li>
+      </ul>
+      
+      <p><a href="Psat.html">PSAT scores versus SAT scores</a></p>
+      <ul>
+        <li><code><a href="Psat.html">Psat</a></code></li>
+      </ul>
+      
+      <p><a href="Psych.html">Correct responses for 24 students in a psychology experiment</a></p>
+      <ul>
+        <li><code><a href="Psych.html">Psych</a></code></li>
+      </ul>
+      
+      <p><a href="Puerto.html">Weekly incomes of a random sample of 50 Puerto Rican families in Miami</a></p>
+      <ul>
+        <li><code><a href="Puerto.html">Puerto</a></code></li>
+      </ul>
+      
+      <p><a href="Quail.html">Plasma LDL levels in two groups of quail</a></p>
+      <ul>
+        <li><code><a href="Quail.html">Quail</a></code></li>
+      </ul>
+      
+      <p><a href="Quality.html">Quality control test scores on two manufacturing processes</a></p>
+      <ul>
+        <li><code><a href="Quality.html">Quality</a></code></li>
+      </ul>
+      
+      <p><a href="Rainks.html">Rainfall in an area of west central Kansas and four surrounding counties</a></p>
+      <ul>
+        <li><code><a href="Rainks.html">Rainks</a></code></li>
+      </ul>
+      
+      <p><a href="Randd.html">Research and development expenditures and sales of a large company</a></p>
+      <ul>
+        <li><code><a href="Randd.html">Randd</a></code></li>
+      </ul>
+      
+      <p><a href="Rat.html">Survival times of 20 rats exposed to high levels of radiation</a></p>
+      <ul>
+        <li><code><a href="Rat.html">Rat</a></code></li>
+      </ul>
+      
+      <p><a href="Ratings.html">Grade point averages versus teacher's ratings</a></p>
+      <ul>
+        <li><code><a href="Ratings.html">Ratings</a></code></li>
+      </ul>
+      
+      <p><a href="Reaction.html">Threshold reaction time for persons subjected to emotional stress</a></p>
+      <ul>
+        <li><code><a href="Reaction.html">Reaction</a></code></li>
+      </ul>
+      
+      <p><a href="Reading.html">Standardized reading scores for 30 fifth graders</a></p>
+      <ul>
+        <li><code><a href="Reading.html">Reading</a></code></li>
+      </ul>
+      
+      <p><a href="Readiq.html">Reading scores versus IQ scores</a></p>
+      <ul>
+        <li><code><a href="Readiq.html">Readiq</a></code></li>
+      </ul>
+      
+      <p><a href="Referend.html">Opinion on referendum by view on freedom of the press</a></p>
+      <ul>
+        <li><code><a href="Referend.html">Referend</a></code></li>
+      </ul>
+      
+      <p><a href="Region.html">Pollution index taken in three regions of the country</a></p>
+      <ul>
+        <li><code><a href="Region.html">Region</a></code></li>
+      </ul>
+      
+      <p><a href="Register.html">Maintenance cost versus age of cash registers in a department store</a></p>
+      <ul>
+        <li><code><a href="Register.html">Register</a></code></li>
+      </ul>
+      
+      <p><a href="Rehab.html">Rehabilitative potential of 20 prison inmates as judged by two psychiatrists</a></p>
+      <ul>
+        <li><code><a href="Rehab.html">Rehab</a></code></li>
+      </ul>
+      
+      <p><a href="Remedial.html">Math placement test score for 35 freshmen females and 42 freshmen males</a></p>
+      <ul>
+        <li><code><a href="Remedial.html">Remedial</a></code></li>
+      </ul>
+      
+      <p><a href="Rentals.html">Weekly rentals for 45 apartments</a></p>
+      <ul>
+        <li><code><a href="Rentals.html">Rentals</a></code></li>
+      </ul>
+      
+      <p><a href="Repair.html">Recorded times for repairing 22 automobiles involved in wrecks</a></p>
+      <ul>
+        <li><code><a href="Repair.html">Repair</a></code></li>
+      </ul>
+      
+      <p><a href="Retail.html">Length of employment versus gross sales for 10 employees of a large retail
+</a></p>
+      <ul>
+        <li><code><a href="Retail.html">Retail</a></code></li>
+      </ul>
+      
+      <p><a href="Ronbrown1.html">Oceanography data obtained at site 1 by scientist aboard the ship Ron Brown</a></p>
+      <ul>
+        <li><code><a href="Ronbrown1.html">Ronbrown1</a></code></li>
+      </ul>
+      
+      <p><a href="Ronbrown2.html">Oceanography data obtained at site 2 by scientist aboard the ship Ron Brown</a></p>
+      <ul>
+        <li><code><a href="Ronbrown2.html">Ronbrown2</a></code></li>
+      </ul>
+      
+      <p><a href="Rural.html">Social adjustment scores for a rural group and a city group of children</a></p>
+      <ul>
+        <li><code><a href="Rural.html">Rural</a></code></li>
+      </ul>
+      
+      <p><a href="Salary.html">Starting salaries for 25 new PhD psychologist</a></p>
+      <ul>
+        <li><code><a href="Salary.html">Salary</a></code></li>
+      </ul>
+      
+      <p><a href="Salinity.html">Surface-water salinity measurements from Whitewater Bay, Florida</a></p>
+      <ul>
+        <li><code><a href="Salinity.html">Salinity</a></code></li>
+      </ul>
+      
+      <p><a href="Sat.html">SAT scores, percent taking exam and state funding per student by state for
+</a></p>
+      <ul>
+        <li><code><a href="Sat.html">Sat</a></code></li>
+      </ul>
+      
+      <p><a href="Saving.html">Problem asset ration for savings and loan companies in California, New York,
+</a></p>
+      <ul>
+        <li><code><a href="Saving.html">Saving</a></code></li>
+      </ul>
+      
+      <p><a href="Scales.html">Readings obtained from a 100 pound weight placed on four brands of bathroom
+</a></p>
+      <ul>
+        <li><code><a href="Scales.html">Scales</a></code></li>
+      </ul>
+      
+      <p><a href="Schizop2.html">Exam scores for 17 patients to assess the learning ability of schizophrenics
+</a></p>
+      <ul>
+        <li><code><a href="Schizop2.html">Schizop2</a></code></li>
+      </ul>
+      
+      <p><a href="Schizoph.html">Standardized exam scores for 13 patients to investigate the learning ability
+</a></p>
+      <ul>
+        <li><code><a href="Schizoph.html">Schizoph</a></code></li>
+      </ul>
+      
+      <p><a href="Seatbelt.html">Injury level versus seatbelt usage</a></p>
+      <ul>
+        <li><code><a href="Seatbelt.html">Seatbelt</a></code></li>
+      </ul>
+      
+      <p><a href="Selfdefe.html">Self-confidence scores for 9 women before and after instructions on
+</a></p>
+      <ul>
+        <li><code><a href="Selfdefe.html">Selfdefe</a></code></li>
+      </ul>
+      
+      <p><a href="Senior.html">Reaction times of 30 senior citizens applying for drivers license renewals</a></p>
+      <ul>
+        <li><code><a href="Senior.html">Senior</a></code></li>
+      </ul>
+      
+      <p><a href="Sentence.html">Sentences of 41 prisoners convicted of a homicide offense</a></p>
+      <ul>
+        <li><code><a href="Sentence.html">Sentence</a></code></li>
+      </ul>
+      
+      <p><a href="Shkdrug.html">Effects of a drug and electroshock therapy on the ability to solve simple
+</a></p>
+      <ul>
+        <li><code><a href="Shkdrug.html">Shkdrug</a></code></li>
+      </ul>
+      
+      <p><a href="Shock.html">Effect of experimental shock on time to complete difficult task</a></p>
+      <ul>
+        <li><code><a href="Shock.html">Shock</a></code></li>
+      </ul>
+      
+      <p><a href="Shoplift.html">Sales receipts versus shoplifting losses for a department store</a></p>
+      <ul>
+        <li><code><a href="Shoplift.html">Shoplift</a></code></li>
+      </ul>
+      
+      <p><a href="Short.html">James Short's measurements of the parallax of the sun</a></p>
+      <ul>
+        <li><code><a href="Short.html">Short</a></code></li>
+      </ul>
+      
+      <p><a href="Shuttle.html">Number of people riding shuttle versus number of automobiles in the downtown
+</a></p>
+      <ul>
+        <li><code><a href="Shuttle.html">Shuttle</a></code></li>
+      </ul>
+      
+      <p><a href="SIGN.test.html">Sign Test</a></p>
+      <ul>
+        <li><code><a href="SIGN.test.html">SIGN.test</a></code></li>
+      </ul>
+      
+      <p><a href="Simpson.html">Grade point averages of men and women participating in various sports-an
+</a></p>
+      <ul>
+        <li><code><a href="Simpson.html">Simpson</a></code></li>
+      </ul>
+      
+      <p><a href="Situp.html">Maximum number of situps by participants in an exercise class</a></p>
+      <ul>
+        <li><code><a href="Situp.html">Situp</a></code></li>
+      </ul>
+      
+      <p><a href="Skewed.html">Illustrates the Wilcoxon Rank Sum test</a></p>
+      <ul>
+        <li><code><a href="Skewed.html">Skewed</a></code></li>
+      </ul>
+      
+      <p><a href="Skin.html">Survival times of closely and poorly matched skin grafts on burn patients</a></p>
+      <ul>
+        <li><code><a href="Skin.html">Skin</a></code></li>
+      </ul>
+      
+      <p><a href="Slc.html">Sodium-lithium countertransport activity on 190 individuals from six large
+</a></p>
+      <ul>
+        <li><code><a href="Slc.html">Slc</a></code></li>
+      </ul>
+      
+      <p><a href="Smokyph.html">Water pH levels of 75 water samples taken in the Great Smoky Mountains</a></p>
+      <ul>
+        <li><code><a href="Smokyph.html">Smokyph</a></code></li>
+      </ul>
+      
+      <p><a href="Snore.html">Snoring versus heart disease</a></p>
+      <ul>
+        <li><code><a href="Snore.html">Snore</a></code></li>
+      </ul>
+      
+      <p><a href="Snow.html">Concentration of microparticles in snowfields of Greenland and Antarctica</a></p>
+      <ul>
+        <li><code><a href="Snow.html">Snow</a></code></li>
+      </ul>
+      
+      <p><a href="Soccer.html">Weights of 25 soccer players</a></p>
+      <ul>
+        <li><code><a href="Soccer.html">Soccer</a></code></li>
+      </ul>
+      
+      <p><a href="Social.html">Median income level for 25 social workers from North Carolina</a></p>
+      <ul>
+        <li><code><a href="Social.html">Social</a></code></li>
+      </ul>
+      
+      <p><a href="Sophomor.html">Grade point averages, SAT scores and final grade in college algebra for 20
+</a></p>
+      <ul>
+        <li><code><a href="Sophomor.html">Sophomor</a></code></li>
+      </ul>
+      
+      <p><a href="South.html">Murder rates for 30 cities in the South</a></p>
+      <ul>
+        <li><code><a href="South.html">South</a></code></li>
+      </ul>
+      
+      <p><a href="Speed.html">Speed reading scores before and after a course on speed reading</a></p>
+      <ul>
+        <li><code><a href="Speed.html">Speed</a></code></li>
+      </ul>
+      
+      <p><a href="Spellers.html">Standardized spelling test scores for two fourth grade classes</a></p>
+      <ul>
+        <li><code><a href="Spellers.html">Spellers</a></code></li>
+      </ul>
+      
+      <p><a href="Spelling.html">Spelling scores for 9 eighth graders before and after a 2-week course of
+</a></p>
+      <ul>
+        <li><code><a href="Spelling.html">Spelling</a></code></li>
+      </ul>
+      
+      <p><a href="Sports.html">Favorite sport by gender</a></p>
+      <ul>
+        <li><code><a href="Sports.html">Sports</a></code></li>
+      </ul>
+      
+      <p><a href="Spouse.html">Convictions in spouse murder cases by gender</a></p>
+      <ul>
+        <li><code><a href="Spouse.html">Spouse</a></code></li>
+      </ul>
+      
+      <p><a href="SRS.html">Simple Random Sampling</a></p>
+      <ul>
+        <li><code><a href="SRS.html">SRS</a></code></li>
+      </ul>
+      
+      <p><a href="Stable.html">Times of a 2-year old stallion on a one mile run</a></p>
+      <ul>
+        <li><code><a href="Stable.html">Stable</a></code></li>
+      </ul>
+      
+      <p><a href="Stamp.html">Thicknesses of 1872 Hidalgo stamps issued in Mexico</a></p>
+      <ul>
+        <li><code><a href="Stamp.html">Stamp</a></code></li>
+      </ul>
+      
+      <p><a href="Statclas.html">Grades for two introductory statistics classes</a></p>
+      <ul>
+        <li><code><a href="Statclas.html">Statclas</a></code></li>
+      </ul>
+      
+      <p><a href="Statelaw.html">Operating expenditures per resident for each of the state law enforcement
+</a></p>
+      <ul>
+        <li><code><a href="Statelaw.html">Statelaw</a></code></li>
+      </ul>
+      
+      <p><a href="Statisti.html">Test scores for two beginning statistics classes</a></p>
+      <ul>
+        <li><code><a href="Statisti.html">Statisti</a></code></li>
+      </ul>
+      
+      <p><a href="Step.html">STEP science test scores for a class of ability-grouped students</a></p>
+      <ul>
+        <li><code><a href="Step.html">Step</a></code></li>
+      </ul>
+      
+      <p><a href="Stress.html">Short-term memory test scores on 12 subjects before and after a stressful
+</a></p>
+      <ul>
+        <li><code><a href="Stress.html">Stress</a></code></li>
+      </ul>
+      
+      <p><a href="Study.html">Number of hours studied per week by a sample of 50 freshmen</a></p>
+      <ul>
+        <li><code><a href="Study.html">Study</a></code></li>
+      </ul>
+      
+      <p><a href="Submarin.html">Number of German submarines sunk by U.S. Navy in World War II</a></p>
+      <ul>
+        <li><code><a href="Submarin.html">Submarin</a></code></li>
+      </ul>
+      
+      <p><a href="Subway.html">Time it takes a subway to travel from the airport to downtown</a></p>
+      <ul>
+        <li><code><a href="Subway.html">Subway</a></code></li>
+      </ul>
+      
+      <p><a href="Sunspot.html">Wolfer sunspot numbers from 1700 through 2000</a></p>
+      <ul>
+        <li><code><a href="Sunspot.html">Sunspot</a></code></li>
+      </ul>
+      
+      <p><a href="Superbowl.html">Margin of victory in Superbowls I to XXXV</a></p>
+      <ul>
+        <li><code><a href="Superbowl.html">Superbowl</a></code></li>
+      </ul>
+      
+      <p><a href="Supercar.html">Top speeds attained by five makes of supercars</a></p>
+      <ul>
+        <li><code><a href="Supercar.html">Supercar</a></code></li>
+      </ul>
+      
+      <p><a href="Tablrock.html">Ozone concentrations at Mt. Mitchell, North Carolina</a></p>
+      <ul>
+        <li><code><a href="Tablrock.html">Tablrock</a></code></li>
+      </ul>
+      
+      <p><a href="Teacher.html">Average teacher's salaries across the states in the 70s 80s and 90s</a></p>
+      <ul>
+        <li><code><a href="Teacher.html">Teacher</a></code></li>
+      </ul>
+      
+      <p><a href="Tenness.html">Tennessee self concept scores for 20 gifted high school students</a></p>
+      <ul>
+        <li><code><a href="Tenness.html">Tenness</a></code></li>
+      </ul>
+      
+      <p><a href="Tensile.html">Tensile strength of plastic bags from two production runs</a></p>
+      <ul>
+        <li><code><a href="Tensile.html">Tensile</a></code></li>
+      </ul>
+      
+      <p><a href="Test1.html">Grades on the first test in a statistics class</a></p>
+      <ul>
+        <li><code><a href="Test1.html">Test1</a></code></li>
+      </ul>
+      
+      <p><a href="Thermal.html">Heat loss of thermal pane windows versus outside temperature</a></p>
+      <ul>
+        <li><code><a href="Thermal.html">Thermal</a></code></li>
+      </ul>
+      
+      <p><a href="Tiaa.html">1999-2000 closing prices for TIAA-CREF stocks</a></p>
+      <ul>
+        <li><code><a href="Tiaa.html">Tiaa</a></code></li>
+      </ul>
+      
+      <p><a href="Ticket.html">Time to complete an airline ticket reservation</a></p>
+      <ul>
+        <li><code><a href="Ticket.html">Ticket</a></code></li>
+      </ul>
+      
+      <p><a href="Toaster.html">Consumer Reports (Oct 94) rating of toaster ovens versus the cost</a></p>
+      <ul>
+        <li><code><a href="Toaster.html">Toaster</a></code></li>
+      </ul>
+      
+      <p><a href="Tonsils.html">Size of tonsils collected from 1,398 children</a></p>
+      <ul>
+        <li><code><a href="Tonsils.html">Tonsils</a></code></li>
+      </ul>
+      
+      <p><a href="Tort.html">The number of torts, average number of months to process a tort, and county
+</a></p>
+      <ul>
+        <li><code><a href="Tort.html">Tort</a></code></li>
+      </ul>
+      
+      <p><a href="Toxic.html">Hazardous waste sites near minority communities</a></p>
+      <ul>
+        <li><code><a href="Toxic.html">Toxic</a></code></li>
+      </ul>
+      
+      <p><a href="Track.html">National Olympic records for women in several races</a></p>
+      <ul>
+        <li><code><a href="Track.html">Track</a></code></li>
+      </ul>
+      
+      <p><a href="Track15.html">Olympic winning times for the men's 1500-meter run</a></p>
+      <ul>
+        <li><code><a href="Track15.html">Track15</a></code></li>
+      </ul>
+      
+      <p><a href="Treatments.html">Illustrates analysis of variance for three treatment groups</a></p>
+      <ul>
+        <li><code><a href="Treatments.html">Treatments</a></code></li>
+      </ul>
+      
+      <p><a href="Trees.html">Number of trees in 20 grids</a></p>
+      <ul>
+        <li><code><a href="Trees.html">Trees</a></code></li>
+      </ul>
+      
+      <p><a href="Trucks.html">Miles per gallon for standard 4-wheel drive trucks manufactured by
+</a></p>
+      <ul>
+        <li><code><a href="Trucks.html">Trucks</a></code></li>
+      </ul>
+      
+      <p><a href="tsum.test.html">Summarized t-test</a></p>
+      <ul>
+        <li><code><a href="tsum.test.html">tsum.test</a></code></li>
+      </ul>
+      
+      <p><a href="Tv.html">Percent of students that watch more than 6 hours of TV per day versus
+</a></p>
+      <ul>
+        <li><code><a href="Tv.html">Tv</a></code></li>
+      </ul>
+      
+      <p><a href="Twin.html">Intelligence test scores for identical twins in which one twin is given a
+</a></p>
+      <ul>
+        <li><code><a href="Twin.html">Twin</a></code></li>
+      </ul>
+      
+      <p><a href="Undergrad.html">Data set describing a sample of undergraduate students</a></p>
+      <ul>
+        <li><code><a href="Undergrad.html">Undergrad</a></code></li>
+      </ul>
+      
+      <p><a href="Vacation.html">Number of days of paid holidays and vacation leave for sample of 35 textile
+</a></p>
+      <ul>
+        <li><code><a href="Vacation.html">Vacation</a></code></li>
+      </ul>
+      
+      <p><a href="Vaccine.html">Reported serious reactions due to vaccines in 11 southern states</a></p>
+      <ul>
+        <li><code><a href="Vaccine.html">Vaccine</a></code></li>
+      </ul>
+      
+      <p><a href="Vehicle.html">Fatality ratings for foreign and domestic vehicles</a></p>
+      <ul>
+        <li><code><a href="Vehicle.html">Vehicle</a></code></li>
+      </ul>
+      
+      <p><a href="Verbal.html">Verbal test scores and number of library books checked out for 15 eighth
+</a></p>
+      <ul>
+        <li><code><a href="Verbal.html">Verbal</a></code></li>
+      </ul>
+      
+      <p><a href="Victoria.html">Number of sunspots versus mean annual level of Lake Victoria Nyanza from
+</a></p>
+      <ul>
+        <li><code><a href="Victoria.html">Victoria</a></code></li>
+      </ul>
+      
+      <p><a href="Viscosit.html">Viscosity measurements of a substance on two different days</a></p>
+      <ul>
+        <li><code><a href="Viscosit.html">Viscosit</a></code></li>
+      </ul>
+      
+      <p><a href="Visual.html">Visual acuity of a group of subjects tested under a specified dose of a drug</a></p>
+      <ul>
+        <li><code><a href="Visual.html">Visual</a></code></li>
+      </ul>
+      
+      <p><a href="Vocab.html">Reading scores before and after vocabulary training for 14 employees who did
+</a></p>
+      <ul>
+        <li><code><a href="Vocab.html">Vocab</a></code></li>
+      </ul>
+      
+      <p><a href="Wastewat.html">Volume of injected waste water from Rocky Mountain Arsenal and number of
+</a></p>
+      <ul>
+        <li><code><a href="Wastewat.html">Wastewat</a></code></li>
+      </ul>
+      
+      <p><a href="Weather94.html">Weather casualties in 1994</a></p>
+      <ul>
+        <li><code><a href="Weather94.html">Weather94</a></code></li>
+      </ul>
+      
+      <p><a href="Wheat.html">Price of a bushel of wheat versus the national weekly earnings of production
+</a></p>
+      <ul>
+        <li><code><a href="Wheat.html">Wheat</a></code></li>
+      </ul>
+      
+      <p><a href="Windmill.html">Direct current produced by different wind velocities</a></p>
+      <ul>
+        <li><code><a href="Windmill.html">Windmill</a></code></li>
+      </ul>
+      
+      <p><a href="Window.html">Wind leakage for storm windows exposed to a 50 mph wind</a></p>
+      <ul>
+        <li><code><a href="Window.html">Window</a></code></li>
+      </ul>
+      
+      <p><a href="Wins.html">Baseball team wins versus 7 independent variables for National league teams
+</a></p>
+      <ul>
+        <li><code><a href="Wins.html">Wins</a></code></li>
+      </ul>
+      
+      <p><a href="Wool.html">Strength tests of two types of wool fabric</a></p>
+      <ul>
+        <li><code><a href="Wool.html">Wool</a></code></li>
+      </ul>
+      
+      <p><a href="Yearsunspot.html">Monthly sunspot activity from 1974 to 2000</a></p>
+      <ul>
+        <li><code><a href="Yearsunspot.html">Yearsunspot</a></code></li>
+      </ul>
+      
+      <p><a href="z.test.html">Z-test</a></p>
+      <ul>
+        <li><code><a href="z.test.html">z.test</a></code></li>
+      </ul>
+      
+      <p><a href="zsum.test.html">Summarized z-test</a></p>
+      <ul>
+        <li><code><a href="zsum.test.html">zsum.test</a></code></li>
+      </ul>
+    
     </div>
+  </div>
+
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#section-all-functions">All functions</a></li>
+    </ul>
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 
