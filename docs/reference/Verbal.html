@@ -6,14 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Verbal test scores and number of library books checked out for 15 eighth
- — Verbal • BSDA</title>
+<title>Verbal. BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,7 +22,6 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -35,9 +34,10 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,7 +56,6 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -71,47 +70,51 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
-    <h1>Verbal test scores and number of library books checked out for 15 eighth
+      <div class="page-header">
+  <h1>Verbal test scores and number of library books checked out for 15 eighth
 </h1>
-    </div>
+</div>
 
+<div class="row">
+  <div class="col-md-9">
     
     <p>Data for Exercise 9.30</p>
     
 
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <div class="Format">
+      <h2>Format</h2>
 
-    <p>A data frame with 15 observations on the following 4 variables.
+      <p>A data frame with 15 observations on the following 4 variables.
 <dl class='dl-horizontal'>
 <dt>number</dt><dd>a numeric vector</dd> 
 <dt>verbal</dt><dd>a numeric vector</dd> 
 <dt>SRES1</dt><dd>a numeric vector</dd>
 <dt>FITS1</dt><dd>a numeric vector</dd> 
 </dl></p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    </div>
 
-    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+    <div class="References">
+      <h2>References</h2>
+
+      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
 Duxbury</p>
+    </div>
     
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Verbal</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	15 obs. of  4 variables:
 #&gt;  $ number: int  12 15 3 7 10 5 22 9 13 7 ...
 #&gt;  $ verbal: int  77 85 48 59 75 41 94 72 80 70 ...
 #&gt;  $ SRES1 : num  0.474 0.606 -0.771 -0.485 0.909 ...
-#&gt;  $ FITS1 : num  73.9 81.1 52.5 62 69.2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Verbal</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    number</span></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>verbal</span>~<span class='no'>number</span>)
+#&gt;  $ FITS1 : num  73.9 81.1 52.5 62 69.2 ...
+#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Verbal</span>)</div><div class='output'><strong class='text-info'>The following object is masked from Poison:
+
+    number
+</strong></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>verbal</span>~<span class='no'>number</span>)
 <span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
 #&gt; lm(formula = verbal ~ number)
@@ -130,32 +133,16 @@ Duxbury</p>
 #&gt; Residual standard error: 6.695 on 13 degrees of freedom
 #&gt; Multiple R-squared:  0.8523,	Adjusted R-squared:  0.841 
 #&gt; F-statistic: 75.03 on 1 and 13 DF,  p-value: 9.265e-07
+#&gt; 
 #&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Verbal</span>)
 <span class='fu'>remove</span>(<span class='no'>model</span>)</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3">
   </div>
 </div>
 
       <footer>
-      <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
-</div>
-
-<div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
-</div>
-
+      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
       </footer>
    </div>
 

@@ -6,13 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Simple Random Sampling — SRS • BSDA</title>
+<title>SRS. BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -21,7 +22,6 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,9 +34,10 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -55,7 +56,6 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,16 +70,15 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
-    <h1>Simple Random Sampling</h1>
-    </div>
+      <div class="page-header">
+  <h1>Simple Random Sampling</h1>
+</div>
 
+<div class="row">
+  <div class="col-md-9">
     
     <p>Computes all possible samples from a given population using simple random
 sampling.</p>
@@ -87,7 +86,7 @@ sampling.</p>
 
     <pre><span class='fu'>SRS</span>(<span class='no'>POPvalues</span>, <span class='no'>n</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2>Arguments</h2>
     <dl class="dl-horizontal">
       <dt>POPvalues</dt>
       <dd>vector containing the poulation values.</dd>
@@ -95,36 +94,29 @@ sampling.</p>
       <dd>the sample size.</dd>
     </dl>
     
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <div class="Value">
+      <h2>Value</h2>
 
-    <p>Returns a matrix containing the possible simple random samples of
+      <p>Returns a matrix containing the possible simple random samples of
 size <code>n</code> taken from a population <code>POPvalues</code>.</p>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    </div>
 
-    <p><code><a href='Combinations.html'>Combinations</a></code></p>
-    
+    <div class="See also">
+      <h2>See also</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+      <p><code><a href='Combinations.html'>Combinations</a></code></p>
+    </div>
+    
+    <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>SRS</span>(<span class='fu'>c</span>(<span class='fl'>5</span>,<span class='fl'>8</span>,<span class='fl'>3</span>),<span class='fl'>2</span>)</div><div class='output co'>#&gt;      [,1] [,2]
 #&gt; [1,]    5    8
 #&gt; [2,]    5    3
-#&gt; [3,]    8    3</div><div class='input'>    <span class='co'># The rows in the matrix list the values for the 3 possible</span>
+#&gt; [3,]    8    3
+#&gt; </div><div class='input'>    <span class='co'># The rows in the matrix list the values for the 3 possible</span>
     <span class='co'># simple random samples of size 2 from the population of 5,8, and 3.</span></div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3">
     <h2>Author</h2>
     
 Alan T. Arnholt
@@ -133,14 +125,7 @@ Alan T. Arnholt
 </div>
 
       <footer>
-      <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
-</div>
-
-<div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
-</div>
-
+      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
       </footer>
    </div>
 

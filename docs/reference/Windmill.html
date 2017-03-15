@@ -6,13 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Direct current produced by different wind velocities — Windmill • BSDA</title>
+<title>Windmill. BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -21,7 +22,6 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,9 +34,10 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -55,7 +56,6 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,24 +70,24 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
-    <h1>Direct current produced by different wind velocities</h1>
-    </div>
+      <div class="page-header">
+  <h1>Direct current produced by different wind velocities</h1>
+</div>
 
+<div class="row">
+  <div class="col-md-9">
     
     <p>Data for Exercise 9.34</p>
     
 
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <div class="Format">
+      <h2>Format</h2>
 
-    <p>A data frame with 25 observations on the following 7 variables.
+      <p>A data frame with 25 observations on the following 7 variables.
 <dl class='dl-horizontal'>
 <dt>velocity</dt><dd>a numeric vector</dd> 
 <dt>output</dt><dd>a numeric vector</dd> 
@@ -97,14 +97,16 @@
 <dt>SRES2</dt><dd>a numeric vector</dd> 
 <dt>FITS2</dt><dd>a numeric vector</dd> 
 </dl></p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    </div>
 
-    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+    <div class="References">
+      <h2>References</h2>
+
+      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
 Duxbury</p>
+    </div>
     
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Windmill</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	25 obs. of  7 variables:
 #&gt;  $ velocity   : num  2.45 2.7 2.9 3.05 3.4 3.6 3.95 4.1 4.6 5 ...
@@ -113,7 +115,8 @@ Duxbury</p>
 #&gt;  $ FITS1      : num  0.722 0.782 0.83 0.866 0.951 ...
 #&gt;  $ X1.velocity: num  0.408 0.37 0.345 0.328 0.294 ...
 #&gt;  $ SRES2      : num  -0.313 1.052 0.75 -1.668 1.307 ...
-#&gt;  $ FITS2      : num  0.148 0.411 0.588 0.705 0.939 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Windmill</span>)
+#&gt;  $ FITS2      : num  0.148 0.411 0.588 0.705 0.939 ...
+#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Windmill</span>)
 <span class='fu'>summary</span>(<span class='fu'>lm</span>(<span class='no'>output</span>~<span class='no'>velocity</span>))</div><div class='output co'>#&gt; 
 #&gt; Call:
 #&gt; lm(formula = output ~ velocity)
@@ -132,31 +135,15 @@ Duxbury</p>
 #&gt; Residual standard error: 0.2361 on 23 degrees of freedom
 #&gt; Multiple R-squared:  0.8745,	Adjusted R-squared:  0.869 
 #&gt; F-statistic: 160.3 on 1 and 23 DF,  p-value: 7.546e-12
+#&gt; 
 #&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Windmill</span>)</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3">
   </div>
 </div>
 
       <footer>
-      <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
-</div>
-
-<div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
-</div>
-
+      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
       </footer>
    </div>
 

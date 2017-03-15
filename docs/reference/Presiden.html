@@ -6,13 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ages at inauguration and death of U.S. presidents — Presiden • BSDA</title>
+<title>Presiden. BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -21,7 +22,6 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,9 +34,10 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -55,7 +56,6 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,24 +70,24 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
-    <h1>Ages at inauguration and death of U.S. presidents</h1>
-    </div>
+      <div class="page-header">
+  <h1>Ages at inauguration and death of U.S. presidents</h1>
+</div>
 
+<div class="row">
+  <div class="col-md-9">
     
     <p>Data for Exercise 1.126</p>
     
 
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <div class="Format">
+      <h2>Format</h2>
 
-    <p>A data frame with 43 observations on the following 5 variables.
+      <p>A data frame with 43 observations on the following 5 variables.
 <dl class='dl-horizontal'>
 <dt>firs</dt><dd>a factor with levels <code>A.</code> <code>B.</code>
 <code>C.</code> <code>D.</code> <code>F.</code> <code>G.</code> <code>G. W.</code> <code>H.</code> <code>J.</code>
@@ -108,52 +108,40 @@
 <dt>Inaugage</dt><dd>a numeric vector</dd> 
 <dt>Deathage</dt><dd>a numeric vector</dd> 
 </dl></p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    </div>
 
-    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+    <div class="References">
+      <h2>References</h2>
+
+      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
 Duxbury</p>
+    </div>
     
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Presiden</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	43 obs. of  5 variables:
 #&gt;  $ firs    : Factor w/ 16 levels &quot;A.&quot;,&quot;B.&quot;,&quot;C.&quot;,..: 6 9 13 9 9 9 1 11 15 9 ...
 #&gt;  $ Presiden: Factor w/ 37 levels &quot;Adams&quot;,&quot;Arthur&quot;,..: 36 1 19 23 25 1 18 35 15 34 ...
 #&gt;  $ Birt    : Factor w/ 20 levels &quot;ARK&quot;,&quot;CAL&quot;,&quot;CONN&quot;,..: 19 8 19 19 19 8 17 14 19 19 ...
 #&gt;  $ Inaugage: int  57 61 57 57 58 57 61 54 68 51 ...
-#&gt;  $ Deathage: int  67 90 83 85 73 80 78 79 68 71 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Presiden</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Presiden</span></div><div class='input'><span class='fu'>table</span>(<span class='no'>Birt</span>)</div><div class='output co'>#&gt; Birt
+#&gt;  $ Deathage: int  67 90 83 85 73 80 78 79 68 71 ...
+#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Presiden</span>)</div><div class='output'><strong class='text-info'>The following object is masked from package:BSDA:
+
+    Presiden
+</strong></div><div class='input'><span class='fu'>table</span>(<span class='no'>Birt</span>)</div><div class='output co'>#&gt; Birt
 #&gt;  ARK  CAL CONN   GA   IA  ILL   KY MASS   MO   NC  NEB   NH   NJ   NY   OH   PA 
 #&gt;    1    1    1    1    1    1    1    4    1    2    1    1    2    4    7    1 
 #&gt;   SC  TEX   VA   VT 
-#&gt;    1    2    8    2 </div><div class='input'><span class='fu'>pie</span>(<span class='fu'>table</span>(<span class='no'>Birt</span>))</div><img src='Presiden-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>stripchart</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='no'>Inaugage</span>,<span class='no'>Deathage</span>),<span class='kw'>method</span><span class='kw'>=</span><span class='st'>"stack"</span>,
+#&gt;    1    2    8    2 
+#&gt; </div><div class='input'><span class='fu'>pie</span>(<span class='fu'>table</span>(<span class='no'>Birt</span>))</div><img src='Presiden-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>stripchart</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='no'>Inaugage</span>,<span class='no'>Deathage</span>),<span class='kw'>method</span><span class='kw'>=</span><span class='st'>"stack"</span>,
 <span class='kw'>group.names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Inaugural Age"</span>,<span class='st'>"Death Age"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"green"</span>,<span class='st'>"brown"</span>),<span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>)</div><img src='Presiden-10.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Presiden</span>)</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3">
   </div>
 </div>
 
       <footer>
-      <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
-</div>
-
-<div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
-</div>
-
+      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
       </footer>
    </div>
 
