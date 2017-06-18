@@ -4,7 +4,7 @@
 \name{Books}
 \alias{Books}
 \title{Number of books read and final spelling scores for 17 third graders}
-\format{A data frame with 17 observations on the following two variables.
+\format{A data frame/tibble  with 17 observations on the following two variables.
 \describe{ 
 \item{book}{number of books read} 
 \item{spelling}{spelling score} 

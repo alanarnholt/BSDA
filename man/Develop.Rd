@@ -5,7 +5,7 @@
 \alias{Develop}
 \title{Demographic characteristics of developmental students at 2-year colleges and
 4-year colleges}
-\format{A data frame with 5656 observations on the following two variables.
+\format{A data frame/tibble  with 5656 observations on the following two variables.
 \describe{ 
 \item{race}{a factor with levels \code{African American}, \code{American Indian},
 \code{Asian}, \code{Latino}, and \code{White}} 
@@ -19,10 +19,11 @@ Data used for Exercise 8.50
 }
 \examples{
 
-str(Develop)
 T1 <- xtabs(~race + college, data = Develop)
 T1
 chisq.test(T1)
+rm(T1)
+
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

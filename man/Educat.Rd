@@ -5,7 +5,7 @@
 \alias{Educat}
 \title{Crime rates versus the percent of the population without a high school
 degree}
-\format{A data frame with 51 observations on the following three variables.
+\format{A data frame/tibble  with 51 observations on the following three variables.
 \describe{ 
 \item{state}{a factor with levels \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -31,7 +31,6 @@ Data for Exercise 2.41
 }
 \examples{
 
-str(Educat)
 plot(crime ~ nodegree, data = Educat, 
      xlab = "Percent of population without high school degree",
      ylab = "Violent Crime Rate per 100,000")

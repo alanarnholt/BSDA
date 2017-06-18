@@ -4,7 +4,7 @@
 \name{Entrance}
 \alias{Entrance}
 \title{College entrance exam scores for 24 high school seniors}
-\format{A data frame with 24 observations on the following variable.
+\format{A data frame/tibble  with 24 observations on the following variable.
 \describe{ 
 \item{score}{college entrance exam score} 
 }}
@@ -16,7 +16,6 @@ Data for Example 1.8
 }
 \examples{
 
-str(Entrance)
 stem(Entrance$score)
 stem(Entrance$score, scale = 2)
 

@@ -4,7 +4,7 @@
 \name{Chevy}
 \alias{Chevy}
 \title{Insurance injury ratings of Chevrolet vehicles for 1990 and 1993 models}
-\format{A data frame with 67 observations on two variables.
+\format{A data frame/tibble  with 67 observations on two variables.
 \describe{ 
 \item{year}{a factor with levels \code{1988-90} and
 \code{1991-93}} 
@@ -19,10 +19,10 @@ Data for Exercise 8.35
 }
 \examples{
 
-str(Chevy)
 T1 <- xtabs(~year + frequency, data = Chevy)
 T1
 chisq.test(T1)
+rm(T1)
 
 }
 \references{

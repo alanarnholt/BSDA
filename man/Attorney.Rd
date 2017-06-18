@@ -4,7 +4,7 @@
 \name{Attorney}
 \alias{Attorney}
 \title{Number of convictions reported by U.S. attorney's offices}
-\format{A data frame with 88 observations on the following three variables.
+\format{A data frame/tibble  with 88 observations on the following three variables.
 \describe{ 
 \item{staff}{U.S. attorneys' office staff per 1 million population} 
 \item{convict}{U.S. attorneys' office convictions per 1 million population} 

@@ -68,7 +68,12 @@ chisq.test(CT)
 rm(CT)
 #################################
 Abortion <- read_csv("ABORTION.csv")
-str(Abortion)
+Abortion <- Abortion %>%
+  select(state, region, regcode, rate1988 = `88rate`, 
+         rate1992 = `92rate`, rate1996 = `96rate`,
+         provide1988 = `88provid`, provide1992 = `92provid`, lowhigh)
+Abortion$rate <- ifelse(Abortion$rate1996 <= 17, "low", "high")
+Abortion
 devtools::use_data(Abortion, overwrite = TRUE)
 # Examples
 T1 <- xtabs(~region + rate, data = Abortion)
@@ -228,6 +233,8 @@ summary(linmod)
 rm(linmod)
 #################################
 Apolipop <- read_csv("APOLIPOP.csv")
+Apolipop <- Apolipop %>%
+  select(coffee, apolipB)
 devtools::use_data(Apolipop, overwrite = TRUE)
 # Examples
 plot(apolipB ~ coffee, data = Apolipop)
@@ -305,10 +312,10 @@ values
 summary(values)
 rm(values)
 #################################
-Aspirin <- read_csv("Aspirin.csv")
-devtools::use_data(Aspirin, overwrite = TRUE)
+Asprin <- read_csv("Aspirin.csv")
+devtools::use_data(Asprin, overwrite = TRUE)
 # Examples
-boxplot(time ~ impurity, data = Aspirin, 
+boxplot(time ~ impurity, data = Asprin, 
         col = c("red", "blue", "green"))
 #################################
 Asthmati <- read_csv("Asthmati.csv")
@@ -831,7 +838,8 @@ barplot(Cpi$cpi, col = "pink", las = 2, main = "Problem 1.34")
 #################################
 Crime <- read_csv("Crime.csv")
 Crime <- Crime %>%
-  gather(`1983`, `1993`, key = "year", value = "rate")
+  gather(`1983`, `1993`, key = "year", value = "rate") %>%
+  select(rate, state = State, year)
 devtools::use_data(Crime, overwrite = TRUE)
 # Examples
 boxplot(rate ~ year, data = Crime)

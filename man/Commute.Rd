@@ -4,7 +4,7 @@
 \name{Commute}
 \alias{Commute}
 \title{Commuting times for selected cities in 1980 and 1990}
-\format{A data frame with 39 observations on the following three variables.
+\format{A data frame/tibble  with 39 observations on the following three variables.
 \describe{ 
 \item{city}{a factor with levels \code{Atlanta},
 \code{Baltimore}, \code{Boston}, \code{Buffalo}, \code{Charlotte},
@@ -17,8 +17,8 @@
 \code{Sacramento}, \code{Salt Lake City}, \code{San Antonio}, \code{San Diego},
 \code{San Francisco}, \code{Seattle}, \code{St. Louis}, \code{Tampa}, and
 \code{Washington}}
-\item{year1980}{urban commute times for the year 1980}
-\item{year1990}{urban commute times for the year 1990}
+\item{year}{year}
+\item{time}{commute times}
 }}
 \usage{
 Commute
@@ -28,18 +28,16 @@ Data for Exercises 1.13, and 7.85
 }
 \examples{
 
-commute <- stack(Commute)
-str(commute)
-stripplot(ind ~ values, data = commute, jitter = TRUE)
-dotplot(ind ~ values, data = commute)
-bwplot(ind ~ values, data = commute)
-stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
-          col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
-          xlab = "minutes")
-title(main = "Commute Time")
-boxplot(values ~ ind, data = commute, names=c("1980", "1990"), 
-       horizontal = TRUE, las = 1)
-rm(commute)
+stripplot(year ~ time, data = Commute, jitter = TRUE) 
+dotplot(year ~ time, data = Commute)
+bwplot(year ~ time, data = Commute)
+stripchart(time ~ year, data = Commute, method = "stack", pch = 1, 
+           cex = 2, col = c("red", "blue"), 
+           group.names = c("1980", "1990"), 
+           main = "", xlab = "minutes")
+title(main = "Commute Time") 
+boxplot(time ~ year, data = Commute, names=c("1980", "1990"),
+        horizontal = TRUE, las = 1)
 
 
 }

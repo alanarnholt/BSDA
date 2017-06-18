@@ -5,7 +5,7 @@
 \alias{Chesapea}
 \title{Surface salinity measurements taken offshore from Annapolis, Maryland in
 1927}
-\format{A data frame with 16 observations on the following variable.
+\format{A data frame/tibble  with 16 observations on the following variable.
 \describe{ 
 \item{salinity}{surface salinity measurements (in parts per 1000) for station 11, 
 offshore from Annanapolis, Maryland, on July 3-4, 1927.} 
@@ -22,7 +22,6 @@ Data for Exercise 6.41
 }
 \examples{
 
-str(Chesapea)
 qqnorm(Chesapea$salinity)
 qqline(Chesapea$salinity)
 shapiro.test(Chesapea$salinity)

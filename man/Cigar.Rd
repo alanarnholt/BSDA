@@ -4,7 +4,7 @@
 \name{Cigar}
 \alias{Cigar}
 \title{Milligrams of tar in 25 cigarettes selected randomly from 4 different brands}
-\format{A data frame with 100 observations on the following two variables.
+\format{A data frame/tibble  with 100 observations on the following two variables.
 \describe{ 
 \item{tar}{amount of tar (measured in milligrams)}
 \item{brand}{a factor indicating cigarette brand with levels \code{brandA}, \code{brandB},
@@ -18,7 +18,6 @@ Data for Example 10.4
 }
 \examples{
 
-str(Cigar)
 boxplot(tar ~ brand, data = Cigar)
 anova(lm(tar ~ brand, data = Cigar))
 

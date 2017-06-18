@@ -4,7 +4,7 @@
 \name{Concrete}
 \alias{Concrete}
 \title{Compressive strength of concrete blocks made by two different methods}
-\format{A data frame with 20 observations on the following 2twovariables.
+\format{A data frame/tibble  with 20 observations on the following 2twovariables.
 \describe{ 
 \item{strength}{comprehensive strength (in pounds per square inch)} 
 \item{method}{factor with levels \code{new} and \code{old} indicating the 
@@ -18,7 +18,6 @@ Data for Exercise 7.17
 }
 \examples{
 
-str(Concrete)
 wilcox.test(strength ~ method, data = Concrete, alternative = "greater")
 
 }

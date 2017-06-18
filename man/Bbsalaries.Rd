@@ -4,7 +4,7 @@
 \name{Bbsalaries}
 \alias{Bbsalaries}
 \title{Baseball salaries for members of five major league teams}
-\format{A data frame with 142 observations on two variables.
+\format{A data frame/tibble  with 142 observations on two variables.
 \describe{ 
 \item{salary}{1999 salary for baseball player} 
 \item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 

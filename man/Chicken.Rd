@@ -4,7 +4,7 @@
 \name{Chicken}
 \alias{Chicken}
 \title{Weight gain of chickens fed three different rations}
-\format{A data frame with 13 observations on the following three variables.
+\format{A data frame/tibble  with 13 observations on the following three variables.
 \describe{ 
 \item{gain}{weight gain over a specified period} 
 \item{feed}{a factor with levels \code{ration1}, \code{ration2}, 
@@ -18,7 +18,6 @@ Data for Exercise 10.15
 }
 \examples{
 
-str(Chicken)
 boxplot(gain ~ feed, col = c("red","blue","green"), data = Chicken)
 anova(lm(gain ~ feed, data = Chicken))
 

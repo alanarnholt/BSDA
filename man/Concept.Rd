@@ -4,7 +4,7 @@
 \name{Concept}
 \alias{Concept}
 \title{Tennessee self concept scale scores for a group of teenage boys}
-\format{A data frame with 28 observations on the following variable.
+\format{A data frame/tibble  with 28 observations on the following variable.
 \describe{ 
 \item{self}{Tennessee self concept scores} 
 }}
@@ -16,7 +16,6 @@ Data for Exercise 16.8 and 1.82
 }
 \examples{
 
-str(Concept)
 summary(Concept$self)
 sd(Concept$self)
 diff(range(Concept$self))

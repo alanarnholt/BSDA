@@ -4,7 +4,7 @@
 \name{Dyslexia}
 \alias{Dyslexia}
 \title{Data on a group of college students diagnosed with dyslexia}
-\format{A data frame with 8 observations on the following seven variables.
+\format{A data frame/tibble  with 8 observations on the following seven variables.
 \describe{ 
 \item{words}{number of words read per minute} 
 \item{age}{age of participant} 
@@ -23,9 +23,8 @@ Data for Exercise 2.90
 }
 \examples{
 
-str(Dyslexia)
 plot(height ~ weight, data = Dyslexia)
-plot(words ~ handed, data = Dyslexia)
+plot(words ~ factor(handed), data = Dyslexia)
 
 }
 \references{

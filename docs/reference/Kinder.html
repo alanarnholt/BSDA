@@ -6,14 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kinder. BSDA</title>
+<title>Reading scores for first grade children who attended kindergarten versus
+those who did not — Kinder • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,22 +22,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,6 +59,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,55 +74,49 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Reading scores for first grade children who attended kindergarten versus
-</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Reading scores for first grade children who attended kindergarten versus
+those who did not</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 7.68</p>
     
 
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 8 observations on the following 3 variables.
-<dl class='dl-horizontal'>
-<dt>Pair</dt><dd>a numeric vector</dd> 
-<dt>Kinder</dt><dd>a numeric vector</dd> 
-<dt>NoKinder</dt><dd>a numeric vector</dd> 
-</dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
+    <p>A data frame with 8 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>Pair</dt><dd><p>a numeric vector</p></dd> 
+<dt>Kinder</dt><dd><p>a numeric vector</p></dd> 
+<dt>NoKinder</dt><dd><p>a numeric vector</p></dd> 
+</dl>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Kinder</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	8 obs. of  3 variables:
+<span class='fu'>str</span>(<span class='no'>Kinder</span>)</div><div class='output co'>#&gt; 'data.frame':	8 obs. of  3 variables:
 #&gt;  $ Pair    : int  1 2 3 4 5 6 7 8
 #&gt;  $ Kinder  : int  83 74 67 64 70 67 81 64
-#&gt;  $ NoKinder: int  78 74 63 66 68 63 77 65
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Kinder</span>)</div><div class='output'><strong class='text-info'>The following object is masked from package:BSDA:
-
-    Kinder
-</strong></div><div class='input'><span class='no'>DIF</span> <span class='kw'>&lt;-</span> <span class='no'>Kinder</span> - <span class='no'>NoKinder</span>
+#&gt;  $ NoKinder: int  78 74 63 66 68 63 77 65</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Kinder</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    Kinder</span></div><div class='input'><span class='no'>DIF</span> <span class='kw'>&lt;-</span> <span class='no'>Kinder</span> - <span class='no'>NoKinder</span>
 <span class='fu'>qqnorm</span>(<span class='no'>DIF</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>DIF</span>)</div><img src='Kinder-7.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Shapiro-Wilk normality test
 #&gt; 
 #&gt; data:  DIF
 #&gt; W = 0.87923, p-value = 0.1852
-#&gt; 
 #&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Kinder</span>, <span class='no'>NoKinder</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Paired t-test
 #&gt; 
@@ -130,16 +128,32 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of the differences 
 #&gt;                       2 
-#&gt; 
 #&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Kinder</span>)
 <span class='fu'>remove</span>(<span class='no'>DIF</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

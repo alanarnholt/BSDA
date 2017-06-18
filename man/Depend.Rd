@@ -4,7 +4,7 @@
 \name{Depend}
 \alias{Depend}
 \title{Number of dependent children for 50 families}
-\format{A data frame with 50 observations on one variable.
+\format{A data frame/tibble  with 50 observations on one variable.
 \describe{ 
 \item{number}{number of dependent children in a family} 
 }}
@@ -16,11 +16,11 @@ Data for Exercise 1.26
 }
 \examples{
 
-str(Depend)
 T1 <- xtabs(~ number, data = Depend)
 T1
 barplot(T1, col = "lightblue", main = "Problem 1.26",
 xlab = "Number of Dependent Children", ylab = "Frequency")
+rm(T1)
 
 }
 \references{

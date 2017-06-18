@@ -4,7 +4,7 @@
 \name{Energy}
 \alias{Energy}
 \title{Amount of energy consumed by homes versus their sizes}
-\format{A data frame with 12 observations on the following two variables.
+\format{A data frame/tibble  with 12 observations on the following two variables.
 \describe{ 
 \item{size}{size of home (in square feet)} 
 \item{kilowatt}{killowatt-hours per month} 
@@ -17,7 +17,6 @@ Data for Exercises 2.5, 2.24, and 2.55
 }
 \examples{
 
-str(Energy)
 plot(kilowatt ~ size, data = Energy)
 with(data = Energy, cor(size, kilowatt))
 model <- lm(kilowatt ~ size, data = Energy)

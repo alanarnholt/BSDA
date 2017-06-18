@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Yearsunspot. BSDA</title>
+<title>Monthly sunspot activity from 1974 to 2000 — Yearsunspot • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,22 +21,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,6 +58,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,63 +73,60 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Monthly sunspot activity from 1974 to 2000</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Monthly sunspot activity from 1974 to 2000</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 2.7</p>
     
 
-    <pre><span class='no'>Yearsunspot</span></pre>
+    <pre class="usage"><span class='no'>Yearsunspot</span></pre>
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 252 observations on the following 24 variables.
-<dl class='dl-horizontal'>
-<dt>X1979</dt><dd>a numeric vector</dd> 
-<dt>X1980</dt><dd>a numeric vector</dd> 
-<dt>X1981</dt><dd>a numeric vector</dd>
-<dt>X1982</dt><dd>a numeric vector</dd> 
-<dt>X1983</dt><dd>a numeric vector</dd> 
-<dt>X1984</dt><dd>a numeric vector</dd> 
-<dt>X1985</dt><dd>a numeric vector</dd> 
-<dt>X1986</dt><dd>a numeric vector</dd>
-<dt>X1987</dt><dd>a numeric vector</dd> 
-<dt>X1988</dt><dd>a numeric vector</dd> 
-<dt>X1989</dt><dd>a numeric vector</dd> 
-<dt>X1990</dt><dd>a numeric vector</dd> 
-<dt>X1991</dt><dd>a numeric vector</dd>
-<dt>X1992</dt><dd>a numeric vector</dd> 
-<dt>X1993</dt><dd>a numeric vector</dd> 
-<dt>X1994</dt><dd>a numeric vector</dd> 
-<dt>X1995</dt><dd>a numeric vector</dd> 
-<dt>X1996</dt><dd>a numeric vector</dd>
-<dt>X1997</dt><dd>a numeric vector</dd>
-<dt>X1998</dt><dd>a numeric vector</dd> 
-<dt>X1999</dt><dd>a numeric vector</dd> 
-<dt>X2000</dt><dd>a numeric vector</dd> 
-<dt>SSN</dt><dd>a numeric vector</dd> 
-<dt>year</dt><dd>a numeric vector</dd> 
-</dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
+    <p>A data frame with 252 observations on the following 24 variables.</p><dl class='dl-horizontal'>
+<dt>X1979</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1980</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1981</dt><dd><p>a numeric vector</p></dd>
+<dt>X1982</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1983</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1984</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1985</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1986</dt><dd><p>a numeric vector</p></dd>
+<dt>X1987</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1988</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1989</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1990</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1991</dt><dd><p>a numeric vector</p></dd>
+<dt>X1992</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1993</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1994</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1995</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1996</dt><dd><p>a numeric vector</p></dd>
+<dt>X1997</dt><dd><p>a numeric vector</p></dd>
+<dt>X1998</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1999</dt><dd><p>a numeric vector</p></dd> 
+<dt>X2000</dt><dd><p>a numeric vector</p></dd> 
+<dt>SSN</dt><dd><p>a numeric vector</p></dd> 
+<dt>year</dt><dd><p>a numeric vector</p></dd> 
+</dl>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Yearsunspot</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	252 obs. of  24 variables:
+<span class='fu'>str</span>(<span class='no'>Yearsunspot</span>)</div><div class='output co'>#&gt; 'data.frame':	252 obs. of  24 variables:
 #&gt;  $ X1979: num  167 138 138 102 134 ...
 #&gt;  $ X1980: num  160 155 126 164 180 ...
 #&gt;  $ X1981: num  114 141 136 156 128 ...
@@ -150,16 +150,32 @@ Duxbury</p>
 #&gt;  $ X1999: num  62 66.3 68.8 63.7 106.4 ...
 #&gt;  $ X2000: num  90.2 112.3 138.2 NA NA ...
 #&gt;  $ SSN  : num  167 138 138 102 134 ...
-#&gt;  $ year : int  79 79 79 79 79 79 79 79 79 79 ...
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Yearsunspot</span>)
+#&gt;  $ year : int  79 79 79 79 79 79 79 79 79 79 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Yearsunspot</span>)
 <span class='fu'>boxplot</span>(<span class='no'>SSN</span>~<span class='no'>year</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Exercise 2.7"</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"lightblue"</span>)</div><img src='Yearsunspot-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Yearsunspot</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

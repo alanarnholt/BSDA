@@ -4,7 +4,7 @@
 \name{Carbon}
 \alias{Carbon}
 \title{Carbon monoxide level measured at three industrial sites}
-\format{A data frame with 24 observations on two variables.
+\format{A data frame/tibble  with 24 observations on two variables.
 \describe{ 
 \item{CO}{carbon monoxide measured (in parts per million)} 
 \item{site}{a factor with levels \code{SiteA}, \code{SiteB}, and \code{SiteC}} 
@@ -17,7 +17,6 @@ Data for Exercise 10.28 and 10.29
 }
 \examples{
 
-str(Carbon)
 boxplot(CO ~ site, data = Carbon)
 kruskal.test(CO ~ site, data = Carbon)
 

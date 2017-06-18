@@ -5,7 +5,7 @@
 \alias{Chipavg}
 \title{Measurements of the thickness of the oxide layer of manufactured integrated
 circuits}
-\format{A data frame with 30 observations on the following three variables.
+\format{A data frame/tibble  with 30 observations on the following three variables.
 \describe{ 
 \item{wafer1}{thickness of the oxide layer for \code{wafer1}} 
 \item{wafer2}{thickness of the oxide layer for \code{wafer2}}
@@ -25,7 +25,6 @@ Data for Exercises 6.49 and 7.47
 }
 \examples{
 
-str(Chipavg)
 EDA(Chipavg$thickness)
 t.test(Chipavg$thickness, mu = 1000)
 boxplot(Chipavg$wafer1, Chipavg$wafer2, name = c("Wafer 1", "Wafer 2"))

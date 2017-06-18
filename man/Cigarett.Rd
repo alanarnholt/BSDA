@@ -4,7 +4,7 @@
 \name{Cigarett}
 \alias{Cigarett}
 \title{Effect of mother's smoking on birth weight of newborn}
-\format{A data frame with 16 observations on the following two variables.
+\format{A data frame/tibble  with 16 observations on the following two variables.
 \describe{ 
 \item{cigarettes}{mothers' estimated average number of cigarettes smoked per day} 
 \item{weight}{children's birth weights (in pounds)} 
@@ -17,13 +17,13 @@ Data for Exercise 2.27
 }
 \examples{
 
-str(Cigarett)
 plot(weight ~ cigarettes, data = Cigarett)
 model <- lm(weight ~ cigarettes, data = Cigarett)
 abline(model)
 with(data = Cigarett,
 cor(weight, cigarettes)
 )
+rm(model)
 
 }
 \references{

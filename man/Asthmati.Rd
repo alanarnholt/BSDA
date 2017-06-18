@@ -4,7 +4,7 @@
 \name{Asthmati}
 \alias{Asthmati}
 \title{Asthmatic relief index on nine subjects given a drug and a placebo}
-\format{A data frame with nine observations on the following three variables.
+\format{A data frame/tibble  with nine observations on the following three variables.
 \describe{
 \item{drug}{asthmatic relief index for patients given a drug} 
 \item{placebo}{asthmatic relief index for patients given a placebo} 

@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Birth. BSDA</title>
+<title>Live birth rates in 1990 and 1998 for all states — Birth • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,22 +21,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,6 +58,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,27 +73,26 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Live birth rates in 1990 and 1998 for all states</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Live birth rates in 1990 and 1998 for all states</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 1.10</p>
     
 
-    <pre><span class='no'>Birth</span></pre>
+    <pre class="usage"><span class='no'>Birth</span></pre>
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 51 observations on the following three variables.
-<dl class='dl-horizontal'>
-<dt>state</dt><dd>a character with levels <code>Alabama</code>
+    <p>A data frame/tibble  with 51 observations on the following three variables.</p><dl class='dl-horizontal'>
+<dt>state</dt><dd><p>a character with levels <code>Alabama</code>
 <code>Alaska</code> <code>Arizona</code> <code>Arkansas</code> <code>California</code>
 <code>Colorado</code> <code>Connecticut</code> <code>Delaware</code> <code>District of
 Colunbia</code> <code>Florida</code> <code>Georgia</code> <code>Hawaii</code> <code>Idaho</code>
@@ -102,48 +104,47 @@ Jersey</code> <code>New Mexico</code> <code>New York</code> <code>North Carolina
 Dakota</code> <code>Ohio</code> <code>Oklahoma</code> <code>Oregon</code> <code>Pennsylvania</code>
 <code>Rhode Island</code> <code>South Carolina</code> <code>South Dakota</code>
 <code>Tennessee</code> <code>Texas</code> <code>Utah</code> <code>Vermont</code> <code>Virginia</code>
-<code>Washington</code> <code>West Virginia</code> <code>Wisconsin</code> <code>Wyoming</code></dd>
-<dt>rate</dt><dd>live birth rates per 1000 population</dd> 
-<dt>year</dt><dd>a factor with levels <code>1990</code> and <code>1998</code></dd> 
-</dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
+<code>Washington</code> <code>West Virginia</code> <code>Wisconsin</code> <code>Wyoming</code></p></dd>
+<dt>rate</dt><dd><p>live birth rates per 1000 population</p></dd> 
+<dt>year</dt><dd><p>a factor with levels <code>1990</code> and <code>1998</code></p></dd> 
+</dl>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='no'>rate1998</span> <span class='kw'>&lt;-</span> <span class='fu'>subset</span>(<span class='no'>Birth</span>, <span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"1998"</span>, <span class='kw'>select</span> <span class='kw'>=</span> <span class='no'>rate</span>, <span class='kw'>drop</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-<span class='fu'>stem</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>rate1998</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; 
-#&gt;   The decimal point is at the |
-#&gt; 
-#&gt;   11 | 015
-#&gt;   12 | 223479
-#&gt;   13 | 0012466888999
-#&gt;   14 | 0001222334567788
-#&gt;   15 | 023678
-#&gt;   16 | 00248
-#&gt;   17 | 3
-#&gt;   18 | 
-#&gt;   19 | 
-#&gt;   20 | 
-#&gt;   21 | 5
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>hist</span>(<span class='no'>rate1998</span>, <span class='kw'>breaks</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>10.9</span>, <span class='fl'>21.9</span>, <span class='fl'>1.0</span>), <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"1998 Birth Rate"</span>,
-     <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Figure 1.14 in BSDA"</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"pink"</span>)</div><img src='Birth-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>hist</span>(<span class='no'>rate1998</span>, <span class='kw'>breaks</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>10.9</span>, <span class='fl'>21.9</span>, <span class='fl'>1.0</span>), <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"1998 Birth Rate"</span>,
-     <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Figure 1.16 in BSDA"</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"pink"</span>, <span class='kw'>freq</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>rate1998</span>), <span class='kw'>lwd</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><img src='Birth-7.png' alt='' width='540' height='400' /><div class='input'>
+<span class='no'>rate1998</span> <span class='kw'>&lt;-</span> <span class='fu'>subset</span>(<span class='no'>Birth</span>, <span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"1998"</span>, <span class='kw'>select</span> <span class='kw'>=</span> <span class='no'>rate</span>, <span class='kw'>drop</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: drop ignored</span></div><div class='input'><span class='fu'>stem</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>rate1998</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; <span class='error'>Error in stem(x = rate1998, scale = 2): 'x' must be numeric</span></div><div class='input'><span class='fu'>hist</span>(<span class='no'>rate1998</span>, <span class='kw'>breaks</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>10.9</span>, <span class='fl'>21.9</span>, <span class='fl'>1.0</span>), <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"1998 Birth Rate"</span>,
+     <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Figure 1.14 in BSDA"</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"pink"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in hist.default(rate1998, breaks = seq(10.9, 21.9, 1), xlab = "1998 Birth Rate",     main = "Figure 1.14 in BSDA", col = "pink"): 'x' must be numeric</span></div><div class='input'><span class='fu'>hist</span>(<span class='no'>rate1998</span>, <span class='kw'>breaks</span> <span class='kw'>=</span> <span class='fu'>seq</span>(<span class='fl'>10.9</span>, <span class='fl'>21.9</span>, <span class='fl'>1.0</span>), <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"1998 Birth Rate"</span>,
+     <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Figure 1.16 in BSDA"</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"pink"</span>, <span class='kw'>freq</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; <span class='error'>Error in hist.default(rate1998, breaks = seq(10.9, 21.9, 1), xlab = "1998 Birth Rate",     main = "Figure 1.16 in BSDA", col = "pink", freq = FALSE): 'x' must be numeric</span></div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>rate1998</span>), <span class='kw'>lwd</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><div class='output co'>#&gt; <span class='error'>Error in density.default(rate1998): argument 'x' must be numeric</span></div><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

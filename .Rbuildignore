@@ -5,3 +5,5 @@ README.html
 ^\.travis\.yml$
 ^data-raw$
 ^docs$
+_pkgdown.yml
+^_pkgdown\.yml$

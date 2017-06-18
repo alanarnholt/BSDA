@@ -5,7 +5,7 @@
 \alias{Abbey}
 \title{Daily price returns (in pence) of Abbey National shares between 7/31/91 and
 10/8/91}
-\format{A data frame with 50 observations on the following variable.
+\format{A data frame/tibble with 50 observations on the following variable.
 \describe{ 
 \item{price}{daily price returns (in pence) of Abbey National shares} 
 }}

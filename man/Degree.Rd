@@ -4,7 +4,7 @@
 \name{Degree}
 \alias{Degree}
 \title{Percent of bachelor's degrees awarded women in 1970 versus 1990}
-\format{A data frame with 1064 observations on the following two variables.
+\format{A data frame/tibble  with 1064 observations on the following two variables.
 \describe{ 
 \item{field}{a factor with levels \code{Health},
 \code{Education}, \code{Foreign Language}, \code{Psychology}, \code{Fine Arts},
@@ -20,10 +20,10 @@ Data for Exercise 2.75
 }
 \examples{
 
-str(Degree)
 T1 <- xtabs(~field + awarded, data = Degree)
 T1
 barplot(t(T1), beside = TRUE, col = c("red", "skyblue"), legend = colnames(T1))
+rm(T1)
 
 }
 \references{

@@ -5,7 +5,7 @@
 \alias{Challeng}
 \title{Temperatures and O-ring failures for the launches of the space shuttle
 Challenger}
-\format{A data frame with 25 observations on the following four variables.
+\format{A data frame/tibble  with 25 observations on the following four variables.
 \describe{ 
 \item{flight}{a character variable indicating the flight}
 \item{date}{date of the flight} 
@@ -25,7 +25,6 @@ Data for Examples 1.11, 1.12, 1.13, 2.11 and 5.1
 }
 \examples{
 
-str(Challeng) 
 stem(Challeng$temp)
 summary(Challeng$temp)
 IQR(Challeng$temp)

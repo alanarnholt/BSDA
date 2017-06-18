@@ -4,7 +4,7 @@
 \name{Dogs}
 \alias{Dogs}
 \title{Rankings of the favorite breeds of dogs}
-\format{A data frame with 20 observations on the following three variables.
+\format{A data frame/tibble  with 20 observations on the following three variables.
 \describe{ 
 \item{breed}{a factor with levels \code{Beagle},
 \code{Boxer}, \code{Chihuahua}, \code{Chow}, \code{Dachshund}, 
@@ -24,7 +24,6 @@ Data for Exercise 2.88
 }
 \examples{
 
-str(Dogs)
 cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
 cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
 \dontrun{

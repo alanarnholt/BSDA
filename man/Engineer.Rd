@@ -4,7 +4,7 @@
 \name{Engineer}
 \alias{Engineer}
 \title{Salaries after 10 years for graduates of three different universities}
-\format{A data frame with 51 observations on the following two variables.
+\format{A data frame/tibble  with 51 observations on the following two variables.
 \describe{ 
 \item{salary}{salary (in $1000) 10 years after graduation} 
 \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -17,7 +17,6 @@ Data for Example 10.7
 }
 \examples{
 
-str(Engineer)
 boxplot(salary ~ university, data = Engineer)
 kruskal.test(salary ~ university, data = Engineer)
 anova(lm(salary ~ university, data = Engineer))

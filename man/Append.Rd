@@ -4,7 +4,7 @@
 \name{Append}
 \alias{Append}
 \title{Median costs of an appendectomy at 20 hospitals in North Carolina}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble  with 20 observations on the following variable.
 \describe{ 
 \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 }}

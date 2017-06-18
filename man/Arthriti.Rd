@@ -4,7 +4,7 @@
 \name{Arthriti}
 \alias{Arthriti}
 \title{Time of relief for three treatments of arthritis}
-\format{A data frame with 51 observations on the following two variables.
+\format{A data frame/tibble  with 51 observations on the following two variables.
 \describe{ 
 \item{time}{time (measured in days) until an arthritis sufferer experienced relief} 
 \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 

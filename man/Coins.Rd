@@ -4,7 +4,7 @@
 \name{Coins}
 \alias{Coins}
 \title{Yearly returns on 12 investments}
-\format{A data frame with 12 observations on the following variable.
+\format{A data frame/tibble  with 12 observations on the following variable.
 \describe{ 
 \item{return}{yearly returns on each of 12 possible investments} 
 }}
@@ -16,7 +16,6 @@ Data for Exercise 5.68
 }
 \examples{
 
-str(Coins)
 qqnorm(Coins$return)
 qqline(Coins$return)
 

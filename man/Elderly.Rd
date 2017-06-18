@@ -4,7 +4,7 @@
 \name{Elderly}
 \alias{Elderly}
 \title{Percent of the population over the age of 65}
-\format{A data frame with 51 observations on the following three variables.
+\format{A data frame/tibble  with 51 observations on the following three variables.
 \describe{ 
 \item{state}{a factor with levels \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -30,7 +30,6 @@ Data for Exercise 1.92 and 2.61
 }
 \examples{
 
-str(Elderly)
 with(data = Elderly, 
 stripchart(x = list(percent1998, percent1985), method = "stack", pch = 19,
            col = c("red","blue"), group.names = c("1998", "1985"))

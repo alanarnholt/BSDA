@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Governor. BSDA</title>
+<title>Annual salaries for state governors in 1994 — Governor • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,22 +21,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,6 +58,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,26 +73,25 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Annual salaries for state governors in 1994</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Annual salaries for state governors in 1994</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 5.112</p>
     
 
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 50 observations on the following 3 variables.
-<dl class='dl-horizontal'>
-<dt>State</dt><dd>a factor with levels <code>Alabama</code>
+    <p>A data frame with 50 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>State</dt><dd><p>a factor with levels <code>Alabama</code>
 <code>Alaska</code> <code>Arizona</code> <code>Arkansas</code> <code>California</code>
 <code>Colorado</code> <code>Connecticut</code> <code>Delaware</code> <code>Florida</code>
 <code>Georgia</code> <code>Hawaii</code> <code>Idaho</code> <code>Illinois</code> <code>Indiana</code>
@@ -101,41 +103,53 @@
 <code>Oklahoma</code> <code>Oregon</code> <code>Pennsylvania</code> <code>Rhode Island</code>
 <code>South Carolina</code> <code>South Dakota</code> <code>Tennessee</code> <code>Texas</code>
 <code>Utah</code> <code>Vermont</code> <code>Virginia</code> <code>Washington</code> <code>West
-Virginia</code> <code>Wisconsin</code> <code>Wyoming</code></dd> 
-<dt>X1994salary</dt><dd>a numeric vector</dd> 
-<dt>X1999salary</dt><dd>a numeric vector</dd> 
-</dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
+Virginia</code> <code>Wisconsin</code> <code>Wyoming</code></p></dd> 
+<dt>X1994salary</dt><dd><p>a numeric vector</p></dd> 
+<dt>X1999salary</dt><dd><p>a numeric vector</p></dd> 
+</dl>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Governor</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	50 obs. of  3 variables:
-#&gt;  $ State      : Factor w/ 50 levels &quot;Alabama&quot;,&quot;Alaska&quot;,..: 1 2 3 4 5 6 7 8 9 10 ...
+<span class='fu'>str</span>(<span class='no'>Governor</span>)</div><div class='output co'>#&gt; 'data.frame':	50 obs. of  3 variables:
+#&gt;  $ State      : Factor w/ 50 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
 #&gt;  $ X1994salary: int  81151 81648 75000 60000 120000 70000 78000 95000 101764 91092 ...
-#&gt;  $ X1999salary: int  94655 81648 95000 60000 165000 90000 78000 107000 117240 115939 ...
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Governor</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>X1999salary</span>)</div><div class='output co'>#&gt; [1] &quot;X1999salary&quot;
-#&gt; </div><img src='Governor-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt;     Size (n)      Missing      Minimum       1st Qu         Mean       Median 
+#&gt;  $ X1999salary: int  94655 81648 95000 60000 165000 90000 78000 107000 117240 115939 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Governor</span>)
+<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>X1999salary</span>)</div><div class='output co'>#&gt; [1] "X1999salary"</div><img src='Governor-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt;     Size (n)      Missing      Minimum       1st Qu         Mean       Median 
 #&gt; 5.000000e+01 0.000000e+00 6.000000e+04 8.804400e+04 1.018051e+05 9.500000e+04 
 #&gt;       TrMean       3rd Qu         Max.       Stdev.         Var.      SE Mean 
 #&gt; 1.004620e+05 1.158070e+05 1.790000e+05 2.270517e+04 5.155249e+08 3.210997e+03 
 #&gt;       I.Q.R.        Range     Kurtosis     Skewness     SW p-val 
-#&gt; 2.776300e+04 1.190000e+05 1.780000e+00 1.054000e+00 4.000000e-03 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Governor</span>)</div></pre>
+#&gt; 2.776300e+04 1.190000e+05 1.780000e+00 1.054000e+00 4.000000e-03 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Governor</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

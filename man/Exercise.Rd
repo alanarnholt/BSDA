@@ -13,7 +13,6 @@ Data for Exercise 1.44
 }
 \examples{
 
-str(Exercise)
 attach(Exercise)
 stem(loss)
 detach(Exercise)

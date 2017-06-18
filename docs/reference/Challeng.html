@@ -6,14 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Challeng. BSDA</title>
+<title>Temperatures and O-ring failures for the launches of the space shuttle
+Challenger — Challeng • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,22 +22,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,6 +59,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,95 +74,94 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Temperatures and O-ring failures for the launches of the space shuttle
-</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Temperatures and O-ring failures for the launches of the space shuttle
+Challenger</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Examples 1.11, 1.12, 1.13, 2.11 and 5.1</p>
     
 
-    <pre><span class='no'>Challeng</span></pre>
+    <pre class="usage"><span class='no'>Challeng</span></pre>
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 25 observations on the following four variables.
-<dl class='dl-horizontal'>
-<dt>flight</dt><dd>a character variable indicating the flight</dd>
-<dt>date</dt><dd>date of the flight</dd> 
-<dt>temp</dt><dd>temperature (in fahrenheit)</dd>
-<dt>failures</dt><dd>number of failures</dd> 
-</dl></p>
-    </div>
+    <p>A data frame/tibble  with 25 observations on the following four variables.</p><dl class='dl-horizontal'>
+<dt>flight</dt><dd><p>a character variable indicating the flight</p></dd>
+<dt>date</dt><dd><p>date of the flight</p></dd> 
+<dt>temp</dt><dd><p>temperature (in fahrenheit)</p></dd>
+<dt>failures</dt><dd><p>number of failures</p></dd> 
+</dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <div class="Source">
-      <h2>Source</h2>
-
-      <p>Dalal, S. R., Fowlkes, E. B., Hoadley, B. 1989. &#8220;Risk Analysis of the Space Shuttle: Pre-Challenger 
+    <p>Dalal, S. R., Fowlkes, E. B., Hoadley, B. 1989. &#8220;Risk Analysis of the Space Shuttle: Pre-Challenger 
 Prediction of Failure.&#8221; 
 <em>Journal of the American Statistical Association</em>, 84, No. 408, 945-957.</p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Challeng</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	25 obs. of  4 variables:
-#&gt;  $ flight  : chr  &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; ...
-#&gt;  $ date    : Date, format: &quot;1981-04-12&quot; &quot;1981-11-12&quot; ...
-#&gt;  $ temp    : num  66 70 69 80 68 67 72 73 70 57 ...
-#&gt;  $ failures: num  0 1 0 NA 0 0 0 0 0 1 ...
-#&gt; </div><div class='input'><span class='fu'>stem</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the right of the |
 #&gt; 
 #&gt;   2 | 1
 #&gt;   4 | 378
 #&gt;   6 | 3677789000023556689
 #&gt;   8 | 01
-#&gt; 
 #&gt; </div><div class='input'><span class='fu'>summary</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-#&gt;   31.00   67.00   70.00   68.44   75.00   81.00 
-#&gt; </div><div class='input'><span class='fu'>IQR</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)</div><div class='output co'>#&gt; [1] 8
-#&gt; </div><div class='input'><span class='fu'>quantile</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)</div><div class='output co'>#&gt;   0%  25%  50%  75% 100% 
-#&gt;   31   67   70   75   81 
-#&gt; </div><div class='input'><span class='fu'>fivenum</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)</div><div class='output co'>#&gt; [1] 31 67 70 75 81
-#&gt; </div><div class='input'><span class='fu'>stem</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='output co'>#&gt; 
+#&gt;   31.00   67.00   70.00   68.44   75.00   81.00 </div><div class='input'><span class='fu'>IQR</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)</div><div class='output co'>#&gt; [1] 8</div><div class='input'><span class='fu'>quantile</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)</div><div class='output co'>#&gt;   0%  25%  50%  75% 100% 
+#&gt;   31   67   70   75   81 </div><div class='input'><span class='fu'>fivenum</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)</div><div class='output co'>#&gt; [1] 31 67 70 75 81</div><div class='input'><span class='fu'>stem</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the right of the |
 #&gt; 
 #&gt;   5 | 378
 #&gt;   6 | 3677789
 #&gt;   7 | 000023556689
 #&gt;   8 | 01
-#&gt; 
 #&gt; </div><div class='input'><span class='fu'>summary</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-#&gt;   53.00   67.00   70.00   70.00   75.25   81.00 
-#&gt; </div><div class='input'><span class='fu'>IQR</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='output co'>#&gt; [1] 8.25
-#&gt; </div><div class='input'><span class='fu'>quantile</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='output co'>#&gt;    0%   25%   50%   75%  100% 
-#&gt; 53.00 67.00 70.00 75.25 81.00 
-#&gt; </div><div class='input'><span class='fu'>fivenum</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='output co'>#&gt; [1] 53.0 67.0 70.0 75.5 81.0
-#&gt; </div><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>2</span>))
+#&gt;   53.00   67.00   70.00   70.00   75.25   81.00 </div><div class='input'><span class='fu'>IQR</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='output co'>#&gt; [1] 8.25</div><div class='input'><span class='fu'>quantile</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='output co'>#&gt;    0%   25%   50%   75%  100% 
+#&gt; 53.00 67.00 70.00 75.25 81.00 </div><div class='input'><span class='fu'>fivenum</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='output co'>#&gt; [1] 53.0 67.0 70.0 75.5 81.0</div><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>2</span>))
 <span class='fu'>qqnorm</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)
 <span class='fu'>qqline</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)
-<span class='fu'>qqnorm</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='input'><span class='fu'>qqline</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><img src='Challeng-25.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>1</span>))</div></pre>
+<span class='fu'>qqnorm</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><div class='input'><span class='fu'>qqline</span>(<span class='fu'>sort</span>(<span class='no'>Challeng</span>$<span class='no'>temp</span>)[-<span class='fl'>1</span>])</div><img src='Challeng-23.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>1</span>))</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

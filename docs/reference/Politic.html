@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Politic. BSDA</title>
+<title>Political party and gender in a voting district — Politic • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,22 +21,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,6 +58,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,63 +73,73 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Political party and gender in a voting district</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Political party and gender in a voting district</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Example 8.3</p>
     
 
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 250 observations on the following 2 variables.
-<dl class='dl-horizontal'>
-<dt>Party</dt><dd>a numeric vector</dd> 
-<dt>Gender</dt><dd>a numeric vector</dd> 
-</dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
+    <p>A data frame with 250 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>Party</dt><dd><p>a numeric vector</p></dd> 
+<dt>Gender</dt><dd><p>a numeric vector</p></dd> 
+</dl>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Politic</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	250 obs. of  2 variables:
+<span class='fu'>str</span>(<span class='no'>Politic</span>)</div><div class='output co'>#&gt; 'data.frame':	250 obs. of  2 variables:
 #&gt;  $ Party : int  2 1 2 2 2 1 2 2 2 2 ...
-#&gt;  $ Gender: int  2 2 2 1 2 1 1 2 2 1 ...
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Politic</span>)
+#&gt;  $ Gender: int  2 2 2 1 2 1 1 2 2 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Politic</span>)
 <span class='fu'>table</span>(<span class='no'>Party</span>,<span class='no'>Gender</span>)</div><div class='output co'>#&gt;      Gender
 #&gt; Party  1  2
 #&gt;     1 49 55
 #&gt;     2 64 73
-#&gt;     3  6  3
-#&gt; </div><div class='input'><span class='fu'>chisq.test</span>(<span class='fu'>table</span>(<span class='no'>Party</span>,<span class='no'>Gender</span>))</div><div class='output'><strong class='text-warning'>Warning message:
-Chi-squared approximation may be incorrect</strong></div><div class='output co'>#&gt; 
-#&gt; 	Pearson&#39;s Chi-squared test
+#&gt;     3  6  3</div><div class='input'><span class='fu'>chisq.test</span>(<span class='fu'>table</span>(<span class='no'>Party</span>,<span class='no'>Gender</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: Chi-squared approximation may be incorrect</span></div><div class='output co'>#&gt; 
+#&gt; 	Pearson's Chi-squared test
 #&gt; 
 #&gt; data:  table(Party, Gender)
 #&gt; X-squared = 1.3645, df = 2, p-value = 0.5055
-#&gt; 
 #&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Politic</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

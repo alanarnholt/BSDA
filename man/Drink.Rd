@@ -4,7 +4,7 @@
 \name{Drink}
 \alias{Drink}
 \title{Opinion on referendum by view on moral issue of selling alcoholic beverages}
-\format{A data frame with 472 observations on two variables.
+\format{A data frame/tibble  with 472 observations on two variables.
 \describe{ 
 \item{drinking}{a factor with levels \code{ok},
 \code{tolerated}, and \code{immoral}} 
@@ -18,10 +18,10 @@ Data for Exercise 8.53
 }
 \examples{
 
-str(Drink)
 T1 <- xtabs(~drinking + referendum, data = Drink)
 T1
 chisq.test(T1)
+rm(T1)
 
 }
 \references{

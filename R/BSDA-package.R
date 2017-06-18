@@ -16,7 +16,7 @@ NULL
 #' 
 #' @name Abbey
 #' @docType data
-#' @format A data frame with 50 observations on the following variable.
+#' @format A data frame/tibble with 50 observations on the following variable.
 #' \describe{ 
 #' \item{price}{daily price returns (in pence) of Abbey National shares} 
 #' }
@@ -135,7 +135,7 @@ NULL
 #' 
 #' @name Abortion
 #' @docType data
-#' @format A data frame with 51 observations on the following 10 variables.
+#' @format A data frame/tibble with 51 observations on the following 10 variables.
 #' \describe{ 
 #' \item{state}{a character variable with values \code{alabama}
 #' \code{alaska} \code{arizona} \code{arkansas} \code{california}
@@ -209,7 +209,7 @@ NULL
 #' 
 #' @name Achieve
 #' @docType data
-#' @format A data frame with 25 observations on the following two variables.
+#' @format A data frame/tibble with 25 observations on the following two variables.
 #' \describe{ 
 #' \item{score}{mathematics achiement score} 
 #' \item{gender}{a factor with 2 levels \code{boys} and \code{girls}} 
@@ -235,7 +235,7 @@ NULL
 #' 
 #' @name Adsales
 #' @docType data
-#' @format A data frame with six observations on the following three variables.
+#' @format A data frame/tibble with six observations on the following three variables.
 #' \describe{ 
 #' \item{month}{a character vector listing month}
 #' \item{ads}{a numeric vector containing number of ads} 
@@ -265,7 +265,7 @@ NULL
 #' 
 #' @name Aggress
 #' @docType data
-#' @format A data frame with 28 observations on the following variable.
+#' @format A data frame/tibble with 28 observations on the following variable.
 #' \describe{ 
 #' \item{aggres}{measure of aggresive tendency} 
 #' }
@@ -274,7 +274,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Aggress)
 #' with(data = Aggress,
 #'      EDA(aggres))
 #' # OR
@@ -294,7 +293,7 @@ NULL
 #' 
 #' @name Aid
 #' @docType data
-#' @format A data frame with 51 observations on the following two variables.
+#' @format A data frame/tibble with 51 observations on the following two variables.
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
@@ -316,7 +315,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Aid)
 #' hist(Aid$payment, xlab = "payment", main = "Your Title Here", 
 #' col = "lightblue")
 #' boxplot(Aid$payment)
@@ -336,7 +334,7 @@ NULL
 #' 
 #' @name Aids
 #' @docType data
-#' @format A data frame with 295 observations on the following three variables.
+#' @format A data frame/tibble with 295 observations on the following three variables.
 #' \describe{ 
 #' \item{duration}{time (in months) from HIV infection to the clinical manifestation of full-blown AIDS} 
 #' \item{age}{age (in years) of patient} 
@@ -347,7 +345,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Aids)
 #' with(data = Aids,
 #' EDA(duration)
 #' )
@@ -371,7 +368,7 @@ NULL
 #' 
 #' @name Airdisasters
 #' @docType data
-#' @format A data frame with 141 observations on the following seven variables.
+#' @format A data frame /tibble with 141 observations on the following seven variables.
 #' \describe{ 
 #' \item{year}{a numeric vector indicating the year of an aircraft accident} 
 #' \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
@@ -403,7 +400,7 @@ NULL
 #' 
 #' @name Airline
 #' @docType data
-#' @format A data frame with 11 observations on the following three variables.
+#' @format A data frame/tibble with 11 observations on the following three variables.
 #' \describe{ 
 #' \item{airline}{a charater variable with values \code{Alaska}
 #' \code{Amer West} \code{American} \code{Continental} \code{Delta}
@@ -436,7 +433,7 @@ NULL
 #' 
 #' @name Alcohol
 #' @docType data
-#' @format A data frame with 14 observations on the following variable.
+#' @format A data frame/tibble with 14 observations on the following variable.
 #' \describe{ 
 #' \item{age}{age when individual started drinking} 
 #' }
@@ -459,7 +456,7 @@ NULL
 #' 
 #' @name Allergy
 #' @docType data
-#' @format A data frame with 406 observations on two variables.
+#' @format A data frame/tibble with 406 observations on two variables.
 #' \describe{ 
 #' \item{event}{a factor with levels \code{insomnia},
 #' \code{headache}, and \code{drowsiness}} 
@@ -488,7 +485,7 @@ NULL
 #' 
 #' @name Anesthet
 #' @docType data
-#' @format A data frame with 10 observations on the following variable.
+#' @format A  with 10 observations on the following variable.
 #' \describe{ 
 #' \item{recover}{recovery time (in hours)} 
 #' }
@@ -516,7 +513,7 @@ NULL
 #' 
 #' @name Anxiety
 #' @docType data
-#' @format A data frame with 20 observations on the following two variables.
+#' @format A data frame/tibble  with 20 observations on the following two variables.
 #' \describe{ 
 #' \item{anxiety}{anxiety score before a major math test} 
 #' \item{math}{math test score} 
@@ -548,7 +545,7 @@ NULL
 #' 
 #' @name Apolipop
 #' @docType data
-#' @format A data frame with 15 observations on the following two variables.
+#' @format A data frame/tibble  with 15 observations on the following two variables.
 #' \describe{ 
 #' \item{coffee}{number of cups of coffee per day} 
 #' \item{apolipB}{level of apoliprotein B} 
@@ -578,7 +575,7 @@ NULL
 #' 
 #' @name Append
 #' @docType data
-#' @format A data frame with 20 observations on the following variable.
+#' @format A data frame/tibble  with 20 observations on the following variable.
 #' \describe{ 
 #' \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 #' }
@@ -605,7 +602,7 @@ NULL
 #' 
 #' @name Appendec
 #' @docType data
-#' @format A data frame with 59 observations on the following two variables.
+#' @format A data frame/tibble  with 59 observations on the following two variables.
 #' \describe{ 
 #' \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
 #' \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
@@ -615,11 +612,8 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Appendec)
-#' Appendec$regionc <- ifelse(Appendec$region == 1, "rural", 
-#'                     ifelse(Appendec$region == 2, "regional", "metropolitan"))
-#' boxplot(cost ~ regionc, data = Appendec, col = c("red", "blue", "cyan"))
-#' anova(lm(cost ~ as.factor(regionc), data = Appendec))
+#' boxplot(cost ~ region, data = Appendec, col = c("red", "blue", "cyan"))
+#' anova(lm(cost ~ region, data = Appendec))
 #' 
 "Appendec"
 
@@ -632,7 +626,7 @@ NULL
 #' 
 #' @name Aptitude
 #' @docType data
-#' @format A data frame with 8 observations on the following two variables.
+#' @format A data frame/tibble  with 8 observations on the following two variables.
 #' \describe{ 
 #' \item{aptitude}{aptitude test scores}
 #' \item{product}{productivity scores} 
@@ -663,7 +657,7 @@ NULL
 #' 
 #' @name Archaeo
 #' @docType data
-#' @format A data frame with 60 observations on the following two variables.
+#' @format A data frame/tibble  with 60 observations on the following two variables.
 #' \describe{ 
 #' \item{age}{number of years before 1983 - the year the data were obtained}
 #' \item{phase}{Ceramic Phase numbers} 
@@ -690,7 +684,7 @@ NULL
 #' 
 #' @name Arthriti
 #' @docType data
-#' @format A data frame with 51 observations on the following two variables.
+#' @format A data frame/tibble  with 51 observations on the following two variables.
 #' \describe{ 
 #' \item{time}{time (measured in days) until an arthritis sufferer experienced relief} 
 #' \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -716,7 +710,7 @@ NULL
 #' 
 #' @name Artifici
 #' @docType data
-#' @format A data frame with 15 observations on the following variable.
+#' @format A data frame/tibble  with 15 observations on the following variable.
 #' \describe{ 
 #' \item{duration}{duration (in hours) for transplant} 
 #' }
@@ -744,7 +738,7 @@ NULL
 #' 
 #' @name Asprin
 #' @docType data
-#' @format A data frame with 15 observations on two variables.
+#' @format A data frame/tibble  with 15 observations on two variables.
 #' \describe{ 
 #' \item{time}{time (in seconds) for aspirin to dissolve} 
 #' \item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
@@ -770,7 +764,7 @@ NULL
 #' 
 #' @name Asthmati
 #' @docType data
-#' @format A data frame with nine observations on the following three variables.
+#' @format A data frame/tibble  with nine observations on the following three variables.
 #' \describe{
 #' \item{drug}{asthmatic relief index for patients given a drug} 
 #' \item{placebo}{asthmatic relief index for patients given a placebo} 
@@ -802,7 +796,7 @@ NULL
 #' 
 #' @name Attorney
 #' @docType data
-#' @format A data frame with 88 observations on the following three variables.
+#' @format A data frame/tibble  with 88 observations on the following three variables.
 #' \describe{ 
 #' \item{staff}{U.S. attorneys' office staff per 1 million population} 
 #' \item{convict}{U.S. attorneys' office convictions per 1 million population} 
@@ -857,7 +851,7 @@ NULL
 #' 
 #' @name Autogear
 #' @docType data
-#' @format A data frame with 20 observations on the following 2 variables.
+#' @format A data frame/tibble  with 20 observations on the following 2 variables.
 #' \describe{ 
 #' \item{defectives}{number of defective gears in the production of 100 gears per day} 
 #' \item{manufacturer}{a factor with levels \code{A} and \code{B}} 
@@ -884,7 +878,7 @@ NULL
 #' 
 #' @name Backtoback
 #' @docType data
-#' @format A data frame with 24 observations on the following two variables.
+#' @format A data frame/tibble  with 24 observations on the following two variables.
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' \item{group}{a numeric vector} 
@@ -910,7 +904,7 @@ NULL
 #' 
 #' @name Bbsalaries
 #' @docType data
-#' @format A data frame with 142 observations on two variables.
+#' @format A data frame/tibble  with 142 observations on two variables.
 #' \describe{ 
 #' \item{salary}{1999 salary for baseball player} 
 #' \item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
@@ -937,7 +931,7 @@ NULL
 #' 
 #' @name Bigten
 #' @docType data
-#' @format A data frame with 44 observations on the following four variables.
+#' @format A data frame/tibble  with 44 observations on the following four variables.
 #' \describe{ 
 #' \item{school}{a factor with levels \code{Illinois}
 #' \code{Indiana} \code{Iowa} \code{Michigan} \code{Michigan State}
@@ -971,7 +965,7 @@ NULL
 #' 
 #' @name Biology
 #' @docType data
-#' @format A data frame with 30 observations on the following variable.
+#' @format A data frame/tibble  with 30 observations on the following variable.
 #' \describe{ 
 #' \item{score}{test scores on the first test in a beginning biology class} 
 #' }
@@ -997,7 +991,7 @@ NULL
 #' 
 #' @name Birth
 #' @docType data
-#' @format A data frame with 51 observations on the following three variables.
+#' @format A data frame/tibble  with 51 observations on the following three variables.
 #' \describe{ 
 #' \item{state}{a character with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
@@ -1041,7 +1035,7 @@ NULL
 #' 
 #' @name Blackedu
 #' @docType data
-#' @format A data frame with 3800 observations on two variables.
+#' @format A data frame/tibble  with 3800 observations on two variables.
 #' \describe{
 #' \item{gender}{a factor with levels \code{Female} and \code{Male}}
 #' \item{education}{a factor with levels \code{High school dropout},
@@ -1070,7 +1064,7 @@ NULL
 #' 
 #' @name Blood
 #' @docType data
-#' @format A data frame with 15 observations on the following two variables.
+#' @format A data frame/tibble  with 15 observations on the following two variables.
 #' \describe{ 
 #' \item{machine}{blood pressure recorded from an automated blood pressure machine} 
 #' \item{expert}{blood pressure recorded by an expert using an at-home device} 
@@ -1100,7 +1094,7 @@ NULL
 #' 
 #' @name Board
 #' @docType data
-#' @format A data frame with 7 observations on the following three variables.
+#' @format A data frame/tibble  with 7 observations on the following three variables.
 #' \describe{ 
 #' \item{salary}{1999 salary (in $1000) for board directors} 
 #' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -1126,7 +1120,7 @@ NULL
 #' 
 #' @name Bones
 #' @docType data
-#' @format A data frame with 70 observations on two variables.
+#' @format A data frame/tibble  with 70 observations on two variables.
 #' \describe{ 
 #' \item{density}{bone density measurements}
 #' \item{group}{a factor with levels \code{active} and \code{nonactive}} 
@@ -1154,7 +1148,7 @@ NULL
 #' 
 #' @name Books
 #' @docType data
-#' @format A data frame with 17 observations on the following two variables.
+#' @format A data frame/tibble  with 17 observations on the following two variables.
 #' \describe{ 
 #' \item{book}{number of books read} 
 #' \item{spelling}{spelling score} 
@@ -1182,7 +1176,7 @@ NULL
 #' 
 #' @name Bookstor
 #' @docType data
-#' @format A data frame with 72 observations on 2 variables.
+#' @format A data frame/tibble  with 72 observations on 2 variables.
 #' \describe{ 
 #' \item{dollars}{money obtained for selling textbooks} 
 #' \item{store}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -1209,7 +1203,7 @@ NULL
 #' 
 #' @name Brain
 #' @docType data
-#' @format A data frame with 28 observations on the following three variables.
+#' @format A data frame/tibble  with 28 observations on the following three variables.
 #' \describe{ 
 #' \item{species}{a factor with levels \code{African
 #' elephant}, \code{Asian Elephant}, \code{Brachiosaurus}, \code{Cat},
@@ -1266,7 +1260,7 @@ NULL
 #' 
 #' @name Bumpers
 #' @docType data
-#' @format A data frame with 23 observations on the following two variables.
+#' @format A data frame/tibble  with 23 observations on the following two variables.
 #' \describe{ 
 #' \item{car}{a factor with levels \code{Buick Century},
 #' \code{Buick Skylark}, \code{Chevrolet Cavalier}, \code{Chevrolet Corsica},
@@ -1301,7 +1295,7 @@ NULL
 #' 
 #' @name Bus
 #' @docType data
-#' @format A data frame with 29363 observations on two variables.
+#' @format A data frame/tibble  with 29363 observations on two variables.
 #' \describe{ 
 #' \item{attendance}{a factor with levels \code{absent} and
 #' \code{present}} 
@@ -1329,7 +1323,7 @@ NULL
 #' 
 #' @name Bypass
 #' @docType data
-#' @format A data frame with 17 observations on the following two variables.
+#' @format A data frame/tibble  with 17 observations on the following two variables.
 #' \describe{ 
 #' \item{hospital}{a factor with levels \code{Carolinas Med
 #' Ct}, \code{Duke Med Ct}, \code{Durham Regional}, \code{Forsyth Memorial},
@@ -1363,7 +1357,7 @@ NULL
 #' 
 #' @name Cabinets
 #' @docType data
-#' @format A data frame with 20 observations on the following three variables.
+#' @format A data frame/tibble  with 20 observations on the following three variables.
 #' \describe{ 
 #' \item{home}{a numeric vector} 
 #' \item{supplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
@@ -1399,7 +1393,7 @@ NULL
 #' 
 #' @name Cancer
 #' @docType data
-#' @format A data frame with 64 observations on two variables.
+#' @format A data frame/tibble  with 64 observations on two variables.
 #' \describe{ 
 #' \item{survival}{survival time (in days) of terminal patients 
 #' treated with vitamin C}
@@ -1418,7 +1412,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Cancer)
 #' boxplot(survival ~ type, Cancer)
 #' stomach <- Cancer$survival[Cancer$type == "stomach"]
 #' bronchus <- Cancer$survival[Cancer$type == "bronchus"]
@@ -1441,7 +1434,7 @@ NULL
 #' 
 #' @name Carbon
 #' @docType data
-#' @format A data frame with 24 observations on two variables.
+#' @format A data frame/tibble  with 24 observations on two variables.
 #' \describe{ 
 #' \item{CO}{carbon monoxide measured (in parts per million)} 
 #' \item{site}{a factor with levels \code{SiteA}, \code{SiteB}, and \code{SiteC}} 
@@ -1451,7 +1444,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Carbon)
 #' boxplot(CO ~ site, data = Carbon)
 #' kruskal.test(CO ~ site, data = Carbon)
 #' 
@@ -1468,7 +1460,7 @@ NULL
 #' 
 #' @name Cat
 #' @docType data
-#' @format A data frame with 17 observations on the following variable.
+#' @format A data frame/tibble  with 17 observations on the following variable.
 #' \describe{ 
 #' \item{score}{reading score on the California Achievement Test} 
 #' }
@@ -1477,7 +1469,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Cat)
 #' stem(Cat$score)
 #' fivenum(Cat$score)
 #' boxplot(Cat$score, main = "Problem 1.116", col = "green")
@@ -1496,7 +1487,7 @@ NULL
 #' 
 #' @name Censored
 #' @docType data
-#' @format A data frame with 121 observations on the following 3 variables.
+#' @format A data frame/tibble  with 121 observations on the following 3 variables.
 #' \describe{ 
 #' \item{survival}{survival time (in days) of patients with small cell lung cancer} 
 #' \item{treatment}{a factor with levels \code{armA} and \code{armB} indicating the 
@@ -1512,7 +1503,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Censored)
 #' boxplot(survival ~ treatment, data = Censored)
 #' wilcox.test(survival ~ treatment, data = Censored, alternative = "greater")
 #' 
@@ -1530,7 +1520,7 @@ NULL
 #' 
 #' @name Challeng
 #' @docType data
-#' @format A data frame with 25 observations on the following four variables.
+#' @format A data frame/tibble  with 25 observations on the following four variables.
 #' \describe{ 
 #' \item{flight}{a character variable indicating the flight}
 #' \item{date}{date of the flight} 
@@ -1547,7 +1537,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Challeng) 
 #' stem(Challeng$temp)
 #' summary(Challeng$temp)
 #' IQR(Challeng$temp)
@@ -1578,7 +1567,7 @@ NULL
 #' 
 #' @name Chemist
 #' @docType data
-#' @format A data frame with 50 observations on the following variable.
+#' @format A data frame/tibble  with 50 observations on the following variable.
 #' \describe{ 
 #' \item{salary}{starting salary (in dollars) for chemistry major} 
 #' }
@@ -1587,7 +1576,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Chemist)
 #' EDA(Chemist$salary)
 #' 
 "Chemist"
@@ -1604,7 +1592,7 @@ NULL
 #' 
 #' @name Chesapea
 #' @docType data
-#' @format A data frame with 16 observations on the following variable.
+#' @format A data frame/tibble  with 16 observations on the following variable.
 #' \describe{ 
 #' \item{salinity}{surface salinity measurements (in parts per 1000) for station 11, 
 #' offshore from Annanapolis, Maryland, on July 3-4, 1927.} 
@@ -1618,7 +1606,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Chesapea)
 #' qqnorm(Chesapea$salinity)
 #' qqline(Chesapea$salinity)
 #' shapiro.test(Chesapea$salinity)
@@ -1637,7 +1624,7 @@ NULL
 #' 
 #' @name Chevy
 #' @docType data
-#' @format A data frame with 67 observations on two variables.
+#' @format A data frame/tibble  with 67 observations on two variables.
 #' \describe{ 
 #' \item{year}{a factor with levels \code{1988-90} and
 #' \code{1991-93}} 
@@ -1649,10 +1636,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Chevy)
 #' T1 <- xtabs(~year + frequency, data = Chevy)
 #' T1
 #' chisq.test(T1)
+#' rm(T1)
 #' 
 "Chevy"
 
@@ -1667,7 +1654,7 @@ NULL
 #' 
 #' @name Chicken
 #' @docType data
-#' @format A data frame with 13 observations on the following three variables.
+#' @format A data frame/tibble  with 13 observations on the following three variables.
 #' \describe{ 
 #' \item{gain}{weight gain over a specified period} 
 #' \item{feed}{a factor with levels \code{ration1}, \code{ration2}, 
@@ -1678,7 +1665,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Chicken)
 #' boxplot(gain ~ feed, col = c("red","blue","green"), data = Chicken)
 #' anova(lm(gain ~ feed, data = Chicken))
 #' 
@@ -1696,7 +1682,7 @@ NULL
 #' 
 #' @name Chipavg
 #' @docType data
-#' @format A data frame with 30 observations on the following three variables.
+#' @format A data frame/tibble  with 30 observations on the following three variables.
 #' \describe{ 
 #' \item{wafer1}{thickness of the oxide layer for \code{wafer1}} 
 #' \item{wafer2}{thickness of the oxide layer for \code{wafer2}}
@@ -1713,7 +1699,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Chipavg)
 #' EDA(Chipavg$thickness)
 #' t.test(Chipavg$thickness, mu = 1000)
 #' boxplot(Chipavg$wafer1, Chipavg$wafer2, name = c("Wafer 1", "Wafer 2"))
@@ -1735,7 +1720,7 @@ NULL
 #' 
 #' @name Chips
 #' @docType data
-#' @format A data frame with 30 observations on the following eight variables.
+#' @format A data frame/tibble  with 30 observations on the following eight variables.
 #' \describe{ 
 #' \item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
 #' \item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
@@ -1756,7 +1741,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Chips)
 #' with(data = Chips, 
 #' boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, wafer22, wafer23, wafer24)
 #' )
@@ -1774,7 +1758,7 @@ NULL
 #' 
 #' @name Cigarett
 #' @docType data
-#' @format A data frame with 16 observations on the following two variables.
+#' @format A data frame/tibble  with 16 observations on the following two variables.
 #' \describe{ 
 #' \item{cigarettes}{mothers' estimated average number of cigarettes smoked per day} 
 #' \item{weight}{children's birth weights (in pounds)} 
@@ -1784,13 +1768,13 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Cigarett)
 #' plot(weight ~ cigarettes, data = Cigarett)
 #' model <- lm(weight ~ cigarettes, data = Cigarett)
 #' abline(model)
 #' with(data = Cigarett,
 #' cor(weight, cigarettes)
 #' )
+#' rm(model)
 #' 
 "Cigarett"
 
@@ -1805,7 +1789,7 @@ NULL
 #' 
 #' @name Cigar
 #' @docType data
-#' @format A data frame with 100 observations on the following two variables.
+#' @format A data frame/tibble  with 100 observations on the following two variables.
 #' \describe{ 
 #' \item{tar}{amount of tar (measured in milligrams)}
 #' \item{brand}{a factor indicating cigarette brand with levels \code{brandA}, \code{brandB},
@@ -1816,7 +1800,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Cigar)
 #' boxplot(tar ~ brand, data = Cigar)
 #' anova(lm(tar ~ brand, data = Cigar))
 #' 
@@ -1833,7 +1816,7 @@ NULL
 #' 
 #' @name Citrus
 #' @docType data
-#' @format A data frame with nine observations on the following two variables.
+#' @format A data frame/tibble  with nine observations on the following two variables.
 #' \describe{ 
 #' \item{age}{age of children} 
 #' \item{percent}{percent peak bone density} 
@@ -1843,7 +1826,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Citrus)
 #' model <- lm(percent ~ age, data = Citrus)
 #' summary(model)
 #' anova(model)
@@ -1862,7 +1844,7 @@ NULL
 #' 
 #' @name Clean
 #' @docType data
-#' @format A data frame with 45 observations on the following two variables.
+#' @format A data frame/tibble  with 45 observations on the following two variables.
 #' \describe{ 
 #' \item{clean}{residual contaminants} 
 #' \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -1872,7 +1854,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Clean)
 #' boxplot(clean ~ agent, col = c("red", "blue", "green"), data = Clean)
 #' anova(lm(clean ~ agent, data = Clean))
 #' 
@@ -1889,7 +1870,7 @@ NULL
 #' 
 #' @name Coaxial
 #' @docType data
-#' @format A data frame with 45 observations on the following two variables.
+#' @format A data frame/tibble  with 45 observations on the following two variables.
 #' \describe{ 
 #' \item{signal}{signal loss per 1000 feet} 
 #' \item{cable}{factor with three levels of coaxial cable \code{typeA}, 
@@ -1900,7 +1881,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Coaxial)
 #' boxplot(signal ~ cable, data = Coaxial, col = c("red", "green", "yellow"))
 #' kruskal.test(signal ~ cable, data = Coaxial)
 #' 
@@ -1917,25 +1897,23 @@ NULL
 #' 
 #' @name Coffee
 #' @docType data
-#' @format A data frame with 9 observations on the following two variables.
+#' @format A data frame/tibble  with 9 observations on the following three variables.
 #' \describe{ 
 #' \item{without}{workers' productivity scores without a coffee break} 
-#' \item{with}{workers' productivity scores with a coffee break} 
+#' \item{with}{workers' productivity scores with a coffee break}
+#' \item{differences}{\code{with} minus \code{without}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Coffee)
-#' differences <- Coffee$with - Coffee$without
-#' qqnorm(differences)
-#' qqline(differences)
-#' shapiro.test(differences)
+#' qqnorm(Coffee$differences)
+#' qqline(Coffee$differences)
+#' shapiro.test(Coffee$differences)
 #' t.test(Coffee$with, Coffee$without, paired = TRUE, alternative = "greater")
 #' wilcox.test(Coffee$with, Coffee$without, paired = TRUE, 
-#'             alterantive = "greater")
-#' rm(differences)
+#' alterantive = "greater")
 #' 
 "Coffee"
 
@@ -1950,7 +1928,7 @@ NULL
 #' 
 #' @name Coins
 #' @docType data
-#' @format A data frame with 12 observations on the following variable.
+#' @format A data frame/tibble  with 12 observations on the following variable.
 #' \describe{ 
 #' \item{return}{yearly returns on each of 12 possible investments} 
 #' }
@@ -1959,7 +1937,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Coins)
 #' qqnorm(Coins$return)
 #' qqline(Coins$return)
 #' 
@@ -1976,7 +1953,7 @@ NULL
 #' 
 #' @name Commute
 #' @docType data
-#' @format A data frame with 39 observations on the following three variables.
+#' @format A data frame/tibble  with 39 observations on the following three variables.
 #' \describe{ 
 #' \item{city}{a factor with levels \code{Atlanta},
 #' \code{Baltimore}, \code{Boston}, \code{Buffalo}, \code{Charlotte},
@@ -1989,26 +1966,24 @@ NULL
 #' \code{Sacramento}, \code{Salt Lake City}, \code{San Antonio}, \code{San Diego},
 #' \code{San Francisco}, \code{Seattle}, \code{St. Louis}, \code{Tampa}, and
 #' \code{Washington}}
-#' \item{year1980}{urban commute times for the year 1980}
-#' \item{year1990}{urban commute times for the year 1990}
+#' \item{year}{year}
+#' \item{time}{commute times}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' commute <- stack(Commute)
-#' str(commute)
-#' stripplot(ind ~ values, data = commute, jitter = TRUE)
-#' dotplot(ind ~ values, data = commute)
-#' bwplot(ind ~ values, data = commute)
-#' stripchart(values ~ ind, data = commute, method = "stack", pch = 1, cex = 2, 
-#'           col = c("red", "blue"), group.names = c("1980", "1990"), main = "",
-#'           xlab = "minutes")
-#' title(main = "Commute Time")
-#' boxplot(values ~ ind, data = commute, names=c("1980", "1990"), 
-#'        horizontal = TRUE, las = 1)
-#' rm(commute)
+#' stripplot(year ~ time, data = Commute, jitter = TRUE) 
+#' dotplot(year ~ time, data = Commute)
+#' bwplot(year ~ time, data = Commute)
+#' stripchart(time ~ year, data = Commute, method = "stack", pch = 1, 
+#'            cex = 2, col = c("red", "blue"), 
+#'            group.names = c("1980", "1990"), 
+#'            main = "", xlab = "minutes")
+#' title(main = "Commute Time") 
+#' boxplot(time ~ year, data = Commute, names=c("1980", "1990"),
+#'         horizontal = TRUE, las = 1)
 #' 
 #' 
 "Commute"
@@ -2024,7 +1999,7 @@ NULL
 #' 
 #' @name Concept
 #' @docType data
-#' @format A data frame with 28 observations on the following variable.
+#' @format A data frame/tibble  with 28 observations on the following variable.
 #' \describe{ 
 #' \item{self}{Tennessee self concept scores} 
 #' }
@@ -2033,7 +2008,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Concept)
 #' summary(Concept$self)
 #' sd(Concept$self)
 #' diff(range(Concept$self))
@@ -2056,7 +2030,7 @@ NULL
 #' 
 #' @name Concrete
 #' @docType data
-#' @format A data frame with 20 observations on the following 2twovariables.
+#' @format A data frame/tibble  with 20 observations on the following 2twovariables.
 #' \describe{ 
 #' \item{strength}{comprehensive strength (in pounds per square inch)} 
 #' \item{method}{factor with levels \code{new} and \code{old} indicating the 
@@ -2067,7 +2041,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Concrete)
 #' wilcox.test(strength ~ method, data = Concrete, alternative = "greater")
 #' 
 "Concrete"
@@ -2084,25 +2057,22 @@ NULL
 #' 
 #' @name Corn
 #' @docType data
-#' @format A data frame with 12 observations on the following three variables.
+#' @format A data frame/tibble  with 12 observations on the following three variables.
 #' \describe{ 
-#' \item{plot}{number of plot} 
 #' \item{new}{corn yield with new meathod} 
-#' \item{standard}{corn yield with standard method} 
+#' \item{standard}{corn yield with standard method}
+#' \item{differences}{\code{new} minus \code{standard}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Corn)
-#' differ <- Corn$new - Corn$standard
-#' boxplot(differ)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
+#' boxplot(Corn$differences)
+#' qqnorm(Corn$differences)
+#' qqline(Corn$differences)
+#' shapiro.test(Corn$differences)
 #' t.test(Corn$new, Corn$standard, paired = TRUE, alternative = "greater")
-#' rm(differ)
 #' 
 "Corn"
 
@@ -2117,20 +2087,20 @@ NULL
 #' 
 #' @name Correlat
 #' @docType data
-#' @format A data frame with 13 observations on the following two variables.
+#' @format A data frame/tibble  with 13 observations on the following two variables.
 #' \describe{ 
-#' \item{X}{a numeric vector} 
-#' \item{Y}{a numeric vector} 
+#' \item{x}{a numeric vector} 
+#' \item{y}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Correlat)
-#' plot(Y ~ X, data = Correlat)
-#' model <- lm(Y ~ X, data = Correlat)
+#' plot(y ~ x, data = Correlat)
+#' model <- lm(y ~ x, data = Correlat)
 #' abline(model)
+#' rm(model)
 #' 
 "Correlat"
 
@@ -2145,7 +2115,7 @@ NULL
 #' 
 #' @name Counsel
 #' @docType data
-#' @format A data frame with 18 observations on the following variable.
+#' @format A data frame/tibble  with 18 observations on the following variable.
 #' \describe{ 
 #' \item{score}{standardized psychology scores after a counseling process} 
 #' }
@@ -2154,7 +2124,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Counsel)
 #' EDA(Counsel$score)
 #' t.test(Counsel$score, mu = 70)
 #' 
@@ -2171,7 +2140,7 @@ NULL
 #' 
 #' @name Cpi
 #' @docType data
-#' @format A data frame with 20 observations on the following two variables.
+#' @format A data frame/tibble  with 20 observations on the following two variables.
 #' \describe{ 
 #' \item{year}{year} 
 #' \item{cpi}{consumer price index} 
@@ -2181,7 +2150,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Cpi)
 #' plot(cpi ~ year, data = Cpi, type = "l", lty = 2, lwd = 2, col = "red")   
 #' barplot(Cpi$cpi, col = "pink", las = 2, main = "Problem 1.34")   
 #' 
@@ -2198,7 +2166,7 @@ NULL
 #' 
 #' @name Crime
 #' @docType data
-#' @format A data frame with 102 observations on the following three variables.
+#' @format A data frame/tibble  with 102 observations on the following three variables.
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama},
 #' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -2221,7 +2189,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Crime)
 #' boxplot(rate ~ year, data = Crime)
 #' 
 "Crime"
@@ -2237,7 +2204,7 @@ NULL
 #' 
 #' @name Darwin
 #' @docType data
-#' @format A data frame with 15 observations on the following three variables.
+#' @format A data frame/tibble  with 15 observations on the following three variables.
 #' \describe{ 
 #' \item{pot}{number of pot} 
 #' \item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
@@ -2248,7 +2215,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Darwin)
 #' differ <- Darwin$cross - Darwin$self
 #' qqnorm(differ)
 #' qqline(differ)
@@ -2270,7 +2236,7 @@ NULL
 #' 
 #' @name Dealers
 #' @docType data
-#' @format A data frame with 122 observations on the following two variables.
+#' @format A data frame/tibble  with 122 observations on the following two variables.
 #' \describe{ 
 #' \item{type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
 #' \code{Ford}, \code{Dodge}, and \code{Saturn}} 
@@ -2281,7 +2247,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Dealers)
 #' xtabs(~type + service, data = Dealers)
 #' T1 <- xtabs(~type + service, data = Dealers)
 #' T1
@@ -2289,6 +2254,7 @@ NULL
 #' pt <- prop.table(T1, margin = 1)
 #' pt
 #' barplot(t(pt),  col = c("red", "skyblue"), legend = colnames(T1))
+#' rm(T1, pt)
 #' 
 "Dealers"
 
@@ -2303,7 +2269,7 @@ NULL
 #' 
 #' @name Defectiv
 #' @docType data
-#' @format A data frame with 20 observations on one variable.
+#' @format A data frame/tibble  with 20 observations on one variable.
 #' \describe{ 
 #' \item{number}{number of defective items produced by the employees in a small business firm} 
 #' }
@@ -2312,11 +2278,11 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Defectiv)
 #' T1 <- xtabs(~ number, data = Defectiv)
 #' T1
 #' barplot(T1, col = "pink", ylab = "Frequency",
 #' xlab = "Defective Items Produced by Employees", main = "Problem 1.27")
+#' rm(T1)
 #' 
 "Defectiv"
 
@@ -2327,7 +2293,7 @@ NULL
 #' 
 #' @name Degree
 #' @docType data
-#' @format A data frame with 1064 observations on the following two variables.
+#' @format A data frame/tibble  with 1064 observations on the following two variables.
 #' \describe{ 
 #' \item{field}{a factor with levels \code{Health},
 #' \code{Education}, \code{Foreign Language}, \code{Psychology}, \code{Fine Arts},
@@ -2340,10 +2306,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Degree)
 #' T1 <- xtabs(~field + awarded, data = Degree)
 #' T1
 #' barplot(t(T1), beside = TRUE, col = c("red", "skyblue"), legend = colnames(T1))
+#' rm(T1)
 #' 
 "Degree"
 
@@ -2358,7 +2324,7 @@ NULL
 #' 
 #' @name Delay
 #' @docType data
-#' @format A data frame with 80 observations on the following two variables.
+#' @format A data frame/tibble  with 80 observations on the following two variables.
 #' \describe{ 
 #' \item{delay}{the delay time (in minutes) for 80 randomly selected flights}
 #' \item{carrier}{a factor with levels \code{A}, \code{B}, \code{C}, and \code{D}} 
@@ -2368,7 +2334,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Delay)
 #' boxplot(delay ~ carrier, data = Delay)
 #' kruskal.test(delay ~carrier, data = Delay)
 #' 
@@ -2385,7 +2350,7 @@ NULL
 #' 
 #' @name Depend
 #' @docType data
-#' @format A data frame with 50 observations on one variable.
+#' @format A data frame/tibble  with 50 observations on one variable.
 #' \describe{ 
 #' \item{number}{number of dependent children in a family} 
 #' }
@@ -2394,11 +2359,11 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Depend)
 #' T1 <- xtabs(~ number, data = Depend)
 #' T1
 #' barplot(T1, col = "lightblue", main = "Problem 1.26",
 #' xlab = "Number of Dependent Children", ylab = "Frequency")
+#' rm(T1)
 #' 
 "Depend"
 
@@ -2413,7 +2378,7 @@ NULL
 #' 
 #' @name Detroit
 #' @docType data
-#' @format A data frame with 40 observations on the following variable.
+#' @format A data frame/tibble  with 40 observations on the following variable.
 #' \describe{ 
 #' \item{educ}{the educational level (in years) of a sample of 40 auto workers in a plant in Detroit} 
 #' }
@@ -2422,7 +2387,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Detroit)
 #' EDA(Detroit$educ)
 #' 
 "Detroit"
@@ -2439,7 +2403,7 @@ NULL
 #' 
 #' @name Develop
 #' @docType data
-#' @format A data frame with 5656 observations on the following two variables.
+#' @format A data frame/tibble  with 5656 observations on the following two variables.
 #' \describe{ 
 #' \item{race}{a factor with levels \code{African American}, \code{American Indian},
 #' \code{Asian}, \code{Latino}, and \code{White}} 
@@ -2450,10 +2414,11 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Develop)
 #' T1 <- xtabs(~race + college, data = Develop)
 #' T1
 #' chisq.test(T1)
+#' rm(T1)
+#' 
 "Develop"
 
 
@@ -2468,7 +2433,7 @@ NULL
 #' 
 #' @name Devmath
 #' @docType data
-#' @format A data frame with 40 observations on the following variable.
+#' @format A data frame/tibble  with 40 observations on the following variable.
 #' \describe{ 
 #' \item{score}{first exam score} 
 #' }
@@ -2477,7 +2442,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Devmath)
 #' EDA(Devmath$score)
 #' t.test(Devmath$score, mu = 80, alternative = "less")
 #' 
@@ -2494,17 +2458,16 @@ NULL
 #' 
 #' @name Dice
 #' @docType data
-#' @format A data frame with 11 observations on the following two variables.
+#' @format A data frame/tibble  with 11 observations on the following two variables.
 #' \describe{ 
 #' \item{x}{possible outcomes for the sum of two dice} 
-#' \item{Px}{probability for outcome \code{x}} 
+#' \item{px}{probability for outcome \code{x}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Dice)
 #' roll1 <- sample(1:6, 20000, replace = TRUE)
 #' roll2 <- sample(1:6, 20000, replace = TRUE)
 #' outcome <- roll1 + roll2
@@ -2512,6 +2475,8 @@ NULL
 #' remove(roll1, roll2, outcome)
 #' T1
 #' round(t(Dice), 5)
+#' rm(roll1, roll2, T1)
+#' 
 "Dice"
 
 
@@ -2525,7 +2490,7 @@ NULL
 #' 
 #' @name Diesel
 #' @docType data
-#' @format A data frame with 650 observations on the following three variables.
+#' @format A data frame/tibble  with 650 observations on the following three variables.
 #' \describe{ 
 #' \item{date}{date when price was recorded}
 #' \item{pricepergallon}{price per gallon (in dollars)}
@@ -2538,7 +2503,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Diesel)
 #' par(las = 2)
 #' boxplot(pricepergallon ~ location, data = Diesel)
 #' boxplot(pricepergallon ~ location, 
@@ -2568,7 +2532,7 @@ NULL
 #' 
 #' @name Diplomat
 #' @docType data
-#' @format A data frame with 10 observations on the following three variables.
+#' @format A data frame/tibble  with 10 observations on the following three variables.
 #' \describe{ 
 #' \item{country}{a factor with levels \code{Brazil}
 #' \code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
@@ -2581,7 +2545,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Diplomat)
 #' par(las = 2, mfrow = c(2, 2))
 #' stripchart(number ~ country, data = Diplomat, pch = 19, 
 #'            col= "red", vertical = TRUE)
@@ -2615,7 +2578,7 @@ NULL
 #' 
 #' @name Disposal
 #' @docType data
-#' @format A data frame with 29 observations on the following variable.
+#' @format A data frame/tibble  with 29 observations on the following variable.
 #' \describe{ 
 #' \item{pounds}{pounds of toxic waste per $1000 of shipments of its products} 
 #' }
@@ -2624,7 +2587,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Disposal)
 #' stem(Disposal$pounds)
 #' fivenum(Disposal$pounds)
 #' EDA(Disposal$pounds)
@@ -2642,7 +2604,7 @@ NULL
 #' 
 #' @name Dogs
 #' @docType data
-#' @format A data frame with 20 observations on the following three variables.
+#' @format A data frame/tibble  with 20 observations on the following three variables.
 #' \describe{ 
 #' \item{breed}{a factor with levels \code{Beagle},
 #' \code{Boxer}, \code{Chihuahua}, \code{Chow}, \code{Dachshund}, 
@@ -2659,7 +2621,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Dogs)
 #' cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
 #' cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
 #' \dontrun{
@@ -2681,7 +2642,7 @@ NULL
 #' 
 #' @name Domestic
 #' @docType data
-#' @format A data frame with 5 observations on the following two variables.
+#' @format A data frame/tibble  with 5 observations on the following two variables.
 #' \describe{ 
 #' \item{age}{a factor with levels \code{12-19}, \code{20-24},
 #' \code{25-34}, \code{35-49}, and \code{50-64}} 
@@ -2692,7 +2653,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Domestic)
 #' barplot(Domestic$rate, names.arg = Domestic$age)
 #' \dontrun{
 #' ggplot2::ggplot(data = Domestic, aes(x = age, y = rate)) + 
@@ -2714,7 +2674,7 @@ NULL
 #' 
 #' @name Dopamine
 #' @docType data
-#' @format A data frame with 25 observations on the following two variables.
+#' @format A data frame/tibble  with 25 observations on the following two variables.
 #' \describe{ 
 #' \item{dbh}{dopamine b-hydroxylase activity (units are nmol/(ml)(h)/(mg) of protein)} 
 #' \item{group}{a factor with levels \code{nonpsychotic} and \code{psychotic}} 
@@ -2724,7 +2684,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Dopamine)
 #' boxplot(dbh ~ group, data = Dopamine)
 #' t.test(dbh ~ group, data = Dopamine, var.equal = TRUE)
 #' 
@@ -2741,7 +2700,7 @@ NULL
 #' 
 #' @name Dowjones
 #' @docType data
-#' @format A data frame with 105 observations on the following 3 variables.
+#' @format A data frame/tibble  with 105 observations on the following 3 variables.
 #' \describe{ 
 #' \item{year}{date} 
 #' \item{close}{Dow Jones closing price} 
@@ -2752,7 +2711,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Dowjones)
 #' plot(close ~ year, data = Dowjones, type = "l", main = "Exercise 1.35")
 #' \dontrun{
 #' ggplot2::ggplot(data = Dowjones, aes(x = year, y = close)) +
@@ -2771,7 +2729,7 @@ NULL
 #' 
 #' @name Drink
 #' @docType data
-#' @format A data frame with 472 observations on two variables.
+#' @format A data frame/tibble  with 472 observations on two variables.
 #' \describe{ 
 #' \item{drinking}{a factor with levels \code{ok},
 #' \code{tolerated}, and \code{immoral}} 
@@ -2782,10 +2740,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Drink)
 #' T1 <- xtabs(~drinking + referendum, data = Drink)
 #' T1
 #' chisq.test(T1)
+#' rm(T1)
 #' 
 "Drink"
 
@@ -2801,7 +2759,7 @@ NULL
 #' 
 #' @name Drug
 #' @docType data
-#' @format A data frame with 28 observations on the following two variables.
+#' @format A data frame/tibble  with 28 observations on the following two variables.
 #' \describe{ 
 #' \item{trials}{number of trials to master a task} 
 #' \item{group}{a factor with levels \code{control} and \code{experimental}} 
@@ -2811,7 +2769,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Drug)
 #' boxplot(trials ~ group, data = Drug)
 #' wilcox.test(trials ~ group, data = Drug)
 #' t.test(rank(trials) ~ group, data = Drug, var.equal = TRUE)
@@ -2829,7 +2786,7 @@ NULL
 #' 
 #' @name Dyslexia
 #' @docType data
-#' @format A data frame with 8 observations on the following seven variables.
+#' @format A data frame/tibble  with 8 observations on the following seven variables.
 #' \describe{ 
 #' \item{words}{number of words read per minute} 
 #' \item{age}{age of participant} 
@@ -2845,9 +2802,8 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Dyslexia)
 #' plot(height ~ weight, data = Dyslexia)
-#' plot(words ~ handed, data = Dyslexia)
+#' plot(words ~ factor(handed), data = Dyslexia)
 #' 
 "Dyslexia"
 
@@ -2862,7 +2818,7 @@ NULL
 #' 
 #' @name Earthqk
 #' @docType data
-#' @format A data frame with 100 observations on the following two variables.
+#' @format A data frame/tibble  with 100 observations on the following two variables.
 #' \describe{ 
 #' \item{year}{year seimic activity recorded} 
 #' \item{severity}{annual incidence of sever earthquakes} 
@@ -2872,7 +2828,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Earthqk)
 #' EDA(Earthqk$severity)
 #' t.test(Earthqk$severity, mu = 100, alternative = "greater")
 #' 
@@ -2890,7 +2845,7 @@ NULL
 #' 
 #' @name Educat
 #' @docType data
-#' @format A data frame with 51 observations on the following three variables.
+#' @format A data frame/tibble  with 51 observations on the following three variables.
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama},
 #' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -2913,7 +2868,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Educat)
 #' plot(crime ~ nodegree, data = Educat, 
 #'      xlab = "Percent of population without high school degree",
 #'      ylab = "Violent Crime Rate per 100,000")
@@ -2931,7 +2885,7 @@ NULL
 #' 
 #' @name Eggs
 #' @docType data
-#' @format A data frame with 12 observations on the following two variables.
+#' @format A data frame/tibble  with 12 observations on the following two variables.
 #' \describe{ 
 #' \item{feed}{amount of feed supplement} 
 #' \item{eggs}{number of eggs per day for 100 chickens} 
@@ -2941,7 +2895,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Eggs)
 #' plot(eggs ~ feed, data = Eggs)
 #' model <- lm(eggs ~ feed, data = Eggs)
 #' abline(model)
@@ -2961,7 +2914,7 @@ NULL
 #' 
 #' @name Elderly
 #' @docType data
-#' @format A data frame with 51 observations on the following three variables.
+#' @format A data frame/tibble  with 51 observations on the following three variables.
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama},
 #' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -2984,7 +2937,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Elderly)
 #' with(data = Elderly, 
 #' stripchart(x = list(percent1998, percent1985), method = "stack", pch = 19,
 #'            col = c("red","blue"), group.names = c("1998", "1985"))
@@ -3007,7 +2959,7 @@ NULL
 #' 
 #' @name Energy
 #' @docType data
-#' @format A data frame with 12 observations on the following two variables.
+#' @format A data frame/tibble  with 12 observations on the following two variables.
 #' \describe{ 
 #' \item{size}{size of home (in square feet)} 
 #' \item{kilowatt}{killowatt-hours per month} 
@@ -3017,7 +2969,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Energy)
 #' plot(kilowatt ~ size, data = Energy)
 #' with(data = Energy, cor(size, kilowatt))
 #' model <- lm(kilowatt ~ size, data = Energy)
@@ -3033,7 +2984,7 @@ NULL
 #' 
 #' @name Engineer
 #' @docType data
-#' @format A data frame with 51 observations on the following two variables.
+#' @format A data frame/tibble  with 51 observations on the following two variables.
 #' \describe{ 
 #' \item{salary}{salary (in $1000) 10 years after graduation} 
 #' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -3043,7 +2994,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Engineer)
 #' boxplot(salary ~ university, data = Engineer)
 #' kruskal.test(salary ~ university, data = Engineer)
 #' anova(lm(salary ~ university, data = Engineer))
@@ -3062,7 +3012,7 @@ NULL
 #' 
 #' @name Entrance
 #' @docType data
-#' @format A data frame with 24 observations on the following variable.
+#' @format A data frame/tibble  with 24 observations on the following variable.
 #' \describe{ 
 #' \item{score}{college entrance exam score} 
 #' }
@@ -3071,7 +3021,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Entrance)
 #' stem(Entrance$score)
 #' stem(Entrance$score, scale = 2)
 #' 
@@ -3113,7 +3062,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Epaminicompact)
 #' attach(Epaminicompact)
 #' summary(cty)
 #' detach(Epaminicompact)
@@ -3160,7 +3108,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Epatwoseater)
 #' attach(Epatwoseater)
 #' boxplot(cty)
 #' detach(Epatwoseater)
@@ -3187,7 +3134,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Executiv)
 #' attach(Executiv)
 #' EDA(Age)
 #' detach(Executiv)
@@ -3214,7 +3160,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Exercise)
 #' attach(Exercise)
 #' stem(loss)
 #' detach(Exercise)

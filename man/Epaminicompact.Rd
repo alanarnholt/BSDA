@@ -29,7 +29,6 @@ Data for Exercise 1.65
 }
 \examples{
 
-str(Epaminicompact)
 attach(Epaminicompact)
 summary(cty)
 detach(Epaminicompact)

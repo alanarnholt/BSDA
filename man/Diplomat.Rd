@@ -4,7 +4,7 @@
 \name{Diplomat}
 \alias{Diplomat}
 \title{Parking tickets issued to diplomats}
-\format{A data frame with 10 observations on the following three variables.
+\format{A data frame/tibble  with 10 observations on the following three variables.
 \describe{ 
 \item{country}{a factor with levels \code{Brazil}
 \code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
@@ -20,7 +20,6 @@ Data for Exercises 1.14 and 1.37
 }
 \examples{
 
-str(Diplomat)
 par(las = 2, mfrow = c(2, 2))
 stripchart(number ~ country, data = Diplomat, pch = 19, 
            col= "red", vertical = TRUE)

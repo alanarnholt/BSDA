@@ -4,7 +4,7 @@
 \name{Crime}
 \alias{Crime}
 \title{Violent crime rates for the states in 1983 and 1993}
-\format{A data frame with 102 observations on the following three variables.
+\format{A data frame/tibble  with 102 observations on the following three variables.
 \describe{ 
 \item{state}{a factor with levels \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -30,7 +30,6 @@ Data for Exercises 1.90, 2.32, 3.64, and 5.113
 }
 \examples{
 
-str(Crime)
 boxplot(rate ~ year, data = Crime)
 
 }

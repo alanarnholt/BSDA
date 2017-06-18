@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tensile. BSDA</title>
+<title>Tensile strength of plastic bags from two production runs — Tensile • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,22 +21,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,6 +58,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,50 +73,45 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Tensile strength of plastic bags from two production runs</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Tensile strength of plastic bags from two production runs</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Example 7.11</p>
     
 
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 72 observations on the following 4 variables.
-<dl class='dl-horizontal'>
-<dt>Run.1</dt><dd>a numeric vector</dd> 
-<dt>Run.2</dt><dd>a numeric vector</dd> 
-<dt>Tensile</dt><dd>a numeric vector</dd>
-<dt>Run</dt><dd>a numeric vector</dd> 
-</dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
+    <p>A data frame with 72 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>Run.1</dt><dd><p>a numeric vector</p></dd> 
+<dt>Run.2</dt><dd><p>a numeric vector</p></dd> 
+<dt>Tensile</dt><dd><p>a numeric vector</p></dd>
+<dt>Run</dt><dd><p>a numeric vector</p></dd> 
+</dl>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Tensile</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	72 obs. of  4 variables:
+<span class='fu'>str</span>(<span class='no'>Tensile</span>)</div><div class='output co'>#&gt; 'data.frame':	72 obs. of  4 variables:
 #&gt;  $ Run.1  : num  98.4 109.6 110.1 107.6 74.6 ...
 #&gt;  $ Run.2  : num  168 115 124 94 128 ...
 #&gt;  $ Tensile: num  98.4 109.6 110.1 107.6 74.6 ...
-#&gt;  $ Run    : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Tensile</span>)</div><div class='output'><strong class='text-info'>The following object is masked from package:BSDA:
-
-    Tensile
-</strong></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Run.1</span>,<span class='no'>Run.2</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Run 1"</span>,<span class='st'>"Run 2"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"red"</span>,<span class='st'>"Blue"</span>))</div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Tensile</span>~<span class='no'>Run</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Run 1"</span>,<span class='st'>"Run 2"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"red"</span>,<span class='st'>"Blue"</span>))</div><img src='Tensile-7.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>t.test</span>(<span class='no'>Tensile</span>~<span class='no'>Run</span>)</div><div class='output co'>#&gt; 
+#&gt;  $ Run    : int  1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Tensile</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    Tensile</span></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Run.1</span>,<span class='no'>Run.2</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Run 1"</span>,<span class='st'>"Run 2"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"red"</span>,<span class='st'>"Blue"</span>))</div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Tensile</span>~<span class='no'>Run</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Run 1"</span>,<span class='st'>"Run 2"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"red"</span>,<span class='st'>"Blue"</span>))</div><img src='Tensile-7.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>t.test</span>(<span class='no'>Tensile</span>~<span class='no'>Run</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
 #&gt; data:  Tensile by Run
@@ -124,7 +122,6 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean in group 1 mean in group 2 
 #&gt;        102.3346        118.1868 
-#&gt; 
 #&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Run.1</span>,<span class='no'>Run.2</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
@@ -136,15 +133,31 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of x mean of y 
 #&gt;  102.3346  118.1868 
-#&gt; 
 #&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Tensile</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

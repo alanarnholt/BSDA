@@ -4,7 +4,7 @@
 \name{Aggress}
 \alias{Aggress}
 \title{Agressive tendency scores for a group of teenage members of a street gang}
-\format{A data frame with 28 observations on the following variable.
+\format{A data frame/tibble with 28 observations on the following variable.
 \describe{ 
 \item{aggres}{measure of aggresive tendency} 
 }}
@@ -16,7 +16,6 @@ Data used in Exercises 1.66 and 1.81
 }
 \examples{
 
-str(Aggress)
 with(data = Aggress,
      EDA(aggres))
 # OR

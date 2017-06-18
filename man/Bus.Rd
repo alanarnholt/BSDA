@@ -4,7 +4,7 @@
 \name{Bus}
 \alias{Bus}
 \title{Attendance of bus drivers versus attendance}
-\format{A data frame with 29363 observations on two variables.
+\format{A data frame/tibble  with 29363 observations on two variables.
 \describe{ 
 \item{attendance}{a factor with levels \code{absent} and
 \code{present}} 

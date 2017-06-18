@@ -5,7 +5,7 @@
 \alias{Dealers}
 \title{Automobile dealers classified according to type dealership and service
 rendered to customers}
-\format{A data frame with 122 observations on the following two variables.
+\format{A data frame/tibble  with 122 observations on the following two variables.
 \describe{ 
 \item{type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
 \code{Ford}, \code{Dodge}, and \code{Saturn}} 
@@ -19,7 +19,6 @@ Data for Example 2.22
 }
 \examples{
 
-str(Dealers)
 xtabs(~type + service, data = Dealers)
 T1 <- xtabs(~type + service, data = Dealers)
 T1
@@ -27,6 +26,7 @@ addmargins(T1)
 pt <- prop.table(T1, margin = 1)
 pt
 barplot(t(pt),  col = c("red", "skyblue"), legend = colnames(T1))
+rm(T1, pt)
 
 }
 \references{

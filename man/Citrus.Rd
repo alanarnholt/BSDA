@@ -4,7 +4,7 @@
 \name{Citrus}
 \alias{Citrus}
 \title{Percent of peak bone density of different aged children}
-\format{A data frame with nine observations on the following two variables.
+\format{A data frame/tibble  with nine observations on the following two variables.
 \describe{ 
 \item{age}{age of children} 
 \item{percent}{percent peak bone density} 
@@ -17,7 +17,6 @@ Data for Exercise 9.7
 }
 \examples{
 
-str(Citrus)
 model <- lm(percent ~ age, data = Citrus)
 summary(model)
 anova(model)

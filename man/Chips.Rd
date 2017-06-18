@@ -5,7 +5,7 @@
 \alias{Chips}
 \title{Four measurements on a first wafer and four measurements on a second wafer
 selected from 30 lots}
-\format{A data frame with 30 observations on the following eight variables.
+\format{A data frame/tibble  with 30 observations on the following eight variables.
 \describe{ 
 \item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
 \item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
@@ -29,7 +29,6 @@ Data for Exercise 10.9
 }
 \examples{
 
-str(Chips)
 with(data = Chips, 
 boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, wafer22, wafer23, wafer24)
 )

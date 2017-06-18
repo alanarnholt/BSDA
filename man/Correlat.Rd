@@ -4,10 +4,10 @@
 \name{Correlat}
 \alias{Correlat}
 \title{Exercise to illustrate correlation}
-\format{A data frame with 13 observations on the following two variables.
+\format{A data frame/tibble  with 13 observations on the following two variables.
 \describe{ 
-\item{X}{a numeric vector} 
-\item{Y}{a numeric vector} 
+\item{x}{a numeric vector} 
+\item{y}{a numeric vector} 
 }}
 \usage{
 Correlat
@@ -17,10 +17,10 @@ Data for Exercise 2.23
 }
 \examples{
 
-str(Correlat)
-plot(Y ~ X, data = Correlat)
-model <- lm(Y ~ X, data = Correlat)
+plot(y ~ x, data = Correlat)
+model <- lm(y ~ x, data = Correlat)
 abline(model)
+rm(model)
 
 }
 \references{

@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Short. BSDA</title>
+<title>James Short's measurements of the parallax of the sun — Short • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,22 +21,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,6 +58,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,48 +73,45 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>James Short&#39;s measurements of the parallax of the sun</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>James Short's measurements of the parallax of the sun</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 6.65</p>
     
 
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 158 observations on the following 10 variables.
-<dl class='dl-horizontal'>
-<dt>Sample.1</dt><dd>a numeric vector</dd>
-<dt>Sample.2</dt><dd>a numeric vector</dd> 
-<dt>Sample.3</dt><dd>a numeric vector</dd> 
-<dt>Sample.4</dt><dd>a numeric vector</dd> 
-<dt>Sample.5</dt><dd>a numeric vector</dd> 
-<dt>Sample.6</dt><dd>a numeric vector</dd>
-<dt>Sample.7</dt><dd>a numeric vector</dd> 
-<dt>Sample.8</dt><dd>a numeric vector</dd> 
-<dt>Parallax</dt><dd>a numeric vector</dd> 
-<dt>Sample</dt><dd>a numeric vector</dd> 
-</dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
+    <p>A data frame with 158 observations on the following 10 variables.</p><dl class='dl-horizontal'>
+<dt>Sample.1</dt><dd><p>a numeric vector</p></dd>
+<dt>Sample.2</dt><dd><p>a numeric vector</p></dd> 
+<dt>Sample.3</dt><dd><p>a numeric vector</p></dd> 
+<dt>Sample.4</dt><dd><p>a numeric vector</p></dd> 
+<dt>Sample.5</dt><dd><p>a numeric vector</p></dd> 
+<dt>Sample.6</dt><dd><p>a numeric vector</p></dd>
+<dt>Sample.7</dt><dd><p>a numeric vector</p></dd> 
+<dt>Sample.8</dt><dd><p>a numeric vector</p></dd> 
+<dt>Parallax</dt><dd><p>a numeric vector</p></dd> 
+<dt>Sample</dt><dd><p>a numeric vector</p></dd> 
+</dl>
     
-    <h2 id="examples">Examples</h2>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Short</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	158 obs. of  10 variables:
+<span class='fu'>str</span>(<span class='no'>Short</span>)</div><div class='output co'>#&gt; 'data.frame':	158 obs. of  10 variables:
 #&gt;  $ Sample.1: num  8.5 8.5 7.33 8.64 9.27 9.06 9.25 9.09 8.5 8.06 ...
 #&gt;  $ Sample.2: num  8.65 8.35 8.71 8.31 8.36 8.58 7.8 7.71 8.3 9.71 ...
 #&gt;  $ Sample.3: num  8.5 8.8 8.4 8.82 9.02 ...
@@ -121,16 +121,13 @@ Duxbury</p>
 #&gt;  $ Sample.7: num  8.54 8.56 8.54 8.74 8.91 8.4 8.4 8.57 8.69 8.55 ...
 #&gt;  $ Sample.8: num  8.54 8.58 8.54 8.94 9.24 8.3 8.33 8.59 8.81 8.56 ...
 #&gt;  $ Parallax: num  8.5 8.5 7.33 8.64 9.27 9.06 9.25 9.09 8.5 8.06 ...
-#&gt;  $ Sample  : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Short</span>)
-<span class='fu'>hist</span>(<span class='no'>Parallax</span>)</div><img src='Short-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Parallax</span>)</div><div class='output co'>#&gt; [1] &quot;Parallax&quot;
-#&gt; </div><img src='Short-7.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+#&gt;  $ Sample  : int  1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Short</span>)
+<span class='fu'>hist</span>(<span class='no'>Parallax</span>)</div><img src='Short-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Parallax</span>)</div><div class='output co'>#&gt; [1] "Parallax"</div><img src='Short-7.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;  158.000    0.000    5.760    8.338    8.610    8.550    8.594    8.803 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;   10.800    0.674    0.455    0.054    0.465    5.040    2.763    0.323 
 #&gt; SW p-val 
-#&gt;    0.000 
-#&gt; </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>Parallax</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>8.798</span>)</div><div class='output co'>#&gt; 
+#&gt;    0.000 </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>Parallax</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>8.798</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
 #&gt; data:  Parallax
@@ -141,12 +138,10 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; median of x 
 #&gt;        8.55 
-#&gt; 
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
 #&gt; Lower Achieved CI     0.9331    8.5   8.58
 #&gt; Interpolated CI       0.9500    8.5   8.58
-#&gt; Upper Achieved CI     0.9536    8.5   8.58
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Parallax</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>8.798</span>)</div><div class='output co'>#&gt; 
+#&gt; Upper Achieved CI     0.9536    8.5   8.58</div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Parallax</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>8.798</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
 #&gt; data:  Parallax
@@ -157,15 +152,31 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt;  8.609557 
-#&gt; 
 #&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Short</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

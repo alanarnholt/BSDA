@@ -4,7 +4,7 @@
 \name{Darwin}
 \alias{Darwin}
 \title{Charles Darwin's study of cross-fertilized and self-fertilized plants}
-\format{A data frame with 15 observations on the following three variables.
+\format{A data frame/tibble  with 15 observations on the following three variables.
 \describe{ 
 \item{pot}{number of pot} 
 \item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
@@ -18,7 +18,6 @@ Data for Exercise 7.62
 }
 \examples{
 
-str(Darwin)
 differ <- Darwin$cross - Darwin$self
 qqnorm(differ)
 qqline(differ)

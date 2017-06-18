@@ -4,7 +4,7 @@
 \name{Bumpers}
 \alias{Bumpers}
 \title{Repair costs of vehicles crashed into a barrier at 5 miles per hour}
-\format{A data frame with 23 observations on the following two variables.
+\format{A data frame/tibble  with 23 observations on the following two variables.
 \describe{ 
 \item{car}{a factor with levels \code{Buick Century},
 \code{Buick Skylark}, \code{Chevrolet Cavalier}, \code{Chevrolet Corsica},

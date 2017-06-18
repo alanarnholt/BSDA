@@ -4,7 +4,7 @@
 \name{Earthqk}
 \alias{Earthqk}
 \title{One hundred year record of worldwide seismic activity(1770-1869)}
-\format{A data frame with 100 observations on the following two variables.
+\format{A data frame/tibble  with 100 observations on the following two variables.
 \describe{ 
 \item{year}{year seimic activity recorded} 
 \item{severity}{annual incidence of sever earthquakes} 
@@ -17,7 +17,6 @@ Data for Exercise 6.97
 }
 \examples{
 
-str(Earthqk)
 EDA(Earthqk$severity)
 t.test(Earthqk$severity, mu = 100, alternative = "greater")
 

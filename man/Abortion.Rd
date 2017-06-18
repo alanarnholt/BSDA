@@ -4,7 +4,7 @@
 \name{Abortion}
 \alias{Abortion}
 \title{Abortion rate by region of country}
-\format{A data frame with 51 observations on the following 10 variables.
+\format{A data frame/tibble with 51 observations on the following 10 variables.
 \describe{ 
 \item{state}{a character variable with values \code{alabama}
 \code{alaska} \code{arizona} \code{arkansas} \code{california}

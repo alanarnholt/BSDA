@@ -4,7 +4,7 @@
 \name{Clean}
 \alias{Clean}
 \title{Residual contaminant following the use of three different cleansing agents}
-\format{A data frame with 45 observations on the following two variables.
+\format{A data frame/tibble  with 45 observations on the following two variables.
 \describe{ 
 \item{clean}{residual contaminants} 
 \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -17,7 +17,6 @@ Data for Exercise 10.16
 }
 \examples{
 
-str(Clean)
 boxplot(clean ~ agent, col = c("red", "blue", "green"), data = Clean)
 anova(lm(clean ~ agent, data = Clean))
 

@@ -4,10 +4,11 @@
 \name{Coffee}
 \alias{Coffee}
 \title{Productivity of workers with and without a coffee break}
-\format{A data frame with 9 observations on the following two variables.
+\format{A data frame/tibble  with 9 observations on the following three variables.
 \describe{ 
 \item{without}{workers' productivity scores without a coffee break} 
-\item{with}{workers' productivity scores with a coffee break} 
+\item{with}{workers' productivity scores with a coffee break}
+\item{differences}{\code{with} minus \code{without}} 
 }}
 \usage{
 Coffee
@@ -17,15 +18,12 @@ Data for Exercise 7.55
 }
 \examples{
 
-str(Coffee)
-differences <- Coffee$with - Coffee$without
-qqnorm(differences)
-qqline(differences)
-shapiro.test(differences)
+qqnorm(Coffee$differences)
+qqline(Coffee$differences)
+shapiro.test(Coffee$differences)
 t.test(Coffee$with, Coffee$without, paired = TRUE, alternative = "greater")
 wilcox.test(Coffee$with, Coffee$without, paired = TRUE, 
-            alterantive = "greater")
-rm(differences)
+alterantive = "greater")
 
 }
 \references{

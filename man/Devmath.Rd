@@ -5,7 +5,7 @@
 \alias{Devmath}
 \title{Test scores for students who failed developmental mathematics in the fall
 semester 1995}
-\format{A data frame with 40 observations on the following variable.
+\format{A data frame/tibble  with 40 observations on the following variable.
 \describe{ 
 \item{score}{first exam score} 
 }}
@@ -17,7 +17,6 @@ Data for Exercise 6.47
 }
 \examples{
 
-str(Devmath)
 EDA(Devmath$score)
 t.test(Devmath$score, mu = 80, alternative = "less")
 

@@ -33,7 +33,6 @@ Data for Exercise 5.8
 }
 \examples{
 
-str(Epatwoseater)
 attach(Epatwoseater)
 boxplot(cty)
 detach(Epatwoseater)

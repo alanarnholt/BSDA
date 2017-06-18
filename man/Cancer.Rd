@@ -4,7 +4,7 @@
 \name{Cancer}
 \alias{Cancer}
 \title{Survival times of terminal cancer patients treated with vitamin C}
-\format{A data frame with 64 observations on two variables.
+\format{A data frame/tibble  with 64 observations on two variables.
 \describe{ 
 \item{survival}{survival time (in days) of terminal patients 
 treated with vitamin C}
@@ -25,7 +25,6 @@ Data for Exercises 6.55 and 6.64
 }
 \examples{
 
-str(Cancer)
 boxplot(survival ~ type, Cancer)
 stomach <- Cancer$survival[Cancer$type == "stomach"]
 bronchus <- Cancer$survival[Cancer$type == "bronchus"]

@@ -4,7 +4,7 @@
 \name{Aid}
 \alias{Aid}
 \title{Monthly payments per person for families in the AFDC federal program}
-\format{A data frame with 51 observations on the following two variables.
+\format{A data frame/tibble with 51 observations on the following two variables.
 \describe{ 
 \item{state}{a factor with levels \code{Alabama}
 \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
@@ -29,7 +29,6 @@ Data used in Exercises 1.91 and 3.68
 }
 \examples{
 
-str(Aid)
 hist(Aid$payment, xlab = "payment", main = "Your Title Here", 
 col = "lightblue")
 boxplot(Aid$payment)

@@ -6,14 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Parented. BSDA</title>
+<title>Education backgrounds of parents of entering freshmen at a state university — Parented • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -22,22 +21,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -56,6 +58,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,50 +73,45 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Education backgrounds of parents of entering freshmen at a state university</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Education backgrounds of parents of entering freshmen at a state university</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
     <p>Data for Exercise 1.32</p>
     
 
         
-    <div class="Format">
-      <h2>Format</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-      <p>A data frame with 6 observations on the following 3 variables.
-<dl class='dl-horizontal'>
-<dt>Educat</dt><dd>a factor with levels <code>4yr college
+    <p>A data frame with 6 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>Educat</dt><dd><p>a factor with levels <code>4yr college
 degree</code> <code>Doctoral degree</code> <code>Grad degree</code> <code>H.S grad or less</code>
-<code>Some college</code> <code>Some grad school</code></dd> 
-<dt>Mother</dt><dd>a numeric vector</dd> 
-<dt>Father</dt><dd>a numeric vector</dd> 
-</dl></p>
-    </div>
-
-    <div class="References">
-      <h2>References</h2>
-
-      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
-    </div>
+<code>Some college</code> <code>Some grad school</code></p></dd> 
+<dt>Mother</dt><dd><p>a numeric vector</p></dd> 
+<dt>Father</dt><dd><p>a numeric vector</p></dd> 
+</dl>
     
-    <h2 id="examples">Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Parented</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	6 obs. of  3 variables:
-#&gt;  $ Educat: Factor w/ 6 levels &quot;4yr college degree&quot;,..: 4 5 1 6 3 2
-#&gt;  $ Mother: num  0.23 0.33 0.25 0.05 0.13 0.01
-#&gt;  $ Father: num  0.2 0.25 0.28 0.04 0.17 0.06
-#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Parented</span>)</div><div class='output'><strong class='text-info'>The following object is masked from package:BSDA:
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    Educat
-</strong></div><div class='input'><span class='no'>MAT</span> <span class='kw'>&lt;-</span> <span class='fu'>cbind</span>(<span class='no'>Mother</span>, <span class='no'>Father</span>)
+    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+Duxbury</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='fu'>str</span>(<span class='no'>Parented</span>)</div><div class='output co'>#&gt; 'data.frame':	6 obs. of  3 variables:
+#&gt;  $ Educat: Factor w/ 6 levels "4yr college degree",..: 4 5 1 6 3 2
+#&gt;  $ Mother: num  0.23 0.33 0.25 0.05 0.13 0.01
+#&gt;  $ Father: num  0.2 0.25 0.28 0.04 0.17 0.06</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Parented</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    Educat</span></div><div class='input'><span class='no'>MAT</span> <span class='kw'>&lt;-</span> <span class='fu'>cbind</span>(<span class='no'>Mother</span>, <span class='no'>Father</span>)
 <span class='fu'>row.names</span>(<span class='no'>MAT</span>) <span class='kw'>&lt;-</span> <span class='no'>Educat</span>
 <span class='no'>MAT</span></div><div class='output co'>#&gt;                    Mother Father
 #&gt; H.S grad or less     0.23   0.20
@@ -121,16 +119,32 @@ Duxbury</p>
 #&gt; 4yr college degree   0.25   0.28
 #&gt; Some grad school     0.05   0.04
 #&gt; Grad degree          0.13   0.17
-#&gt; Doctoral degree      0.01   0.06
-#&gt; </div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>MAT</span>),<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>))</div><img src='Parented-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Parented</span>)
+#&gt; Doctoral degree      0.01   0.06</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>MAT</span>),<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>))</div><img src='Parented-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Parented</span>)
 <span class='fu'>remove</span>(<span class='no'>MAT</span>)</div></pre>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#format">Format</a></li>
+
+      <li><a href="#references">References</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
   </div>
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Alan Arnholt.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

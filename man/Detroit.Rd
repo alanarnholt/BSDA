@@ -4,7 +4,7 @@
 \name{Detroit}
 \alias{Detroit}
 \title{Educational levels of a sample of 40 auto workers in Detroit}
-\format{A data frame with 40 observations on the following variable.
+\format{A data frame/tibble  with 40 observations on the following variable.
 \describe{ 
 \item{educ}{the educational level (in years) of a sample of 40 auto workers in a plant in Detroit} 
 }}
@@ -16,7 +16,6 @@ Data for Exercise 5.21
 }
 \examples{
 
-str(Detroit)
 EDA(Detroit$educ)
 
 }

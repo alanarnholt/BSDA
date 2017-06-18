@@ -13,7 +13,6 @@ Data for Exercise 1.104
 }
 \examples{
 
-str(Executiv)
 attach(Executiv)
 EDA(Age)
 detach(Executiv)
