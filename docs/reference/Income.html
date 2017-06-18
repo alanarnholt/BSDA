@@ -6,13 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Percent change in personal income from 1st to 2nd quarter in 2000 — Income • BSDA</title>
+<title>Income. BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -21,7 +22,6 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,9 +34,10 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -55,7 +56,6 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,24 +70,24 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
-    <h1>Percent change in personal income from 1st to 2nd quarter in 2000</h1>
-    </div>
+      <div class="page-header">
+  <h1>Percent change in personal income from 1st to 2nd quarter in 2000</h1>
+</div>
 
+<div class="row">
+  <div class="col-md-9">
     
     <p>Data for Exercise 1.33</p>
     
 
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <div class="Format">
+      <h2>Format</h2>
 
-    <p>A data frame with 51 observations on the following 6 variables.
+      <p>A data frame with 51 observations on the following 6 variables.
 <dl class='dl-horizontal'>
 <dt>State</dt><dd>a factor with levels <code>Alabama</code>
 <code>Alaska</code> <code>Arizona</code> <code>Arkansas</code> <code>California</code>
@@ -108,14 +108,16 @@ Dakota</code> <code>Ohio</code> <code>Oklahoma</code> <code>Oregon</code> <code>
 <dt>freq</dt><dd>a numeric vector</dd>
 <dt>percent</dt><dd>a numeric vector</dd> 
 </dl></p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    </div>
 
-    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+    <div class="References">
+      <h2>References</h2>
+
+      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
 Duxbury</p>
+    </div>
     
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Income</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	51 obs. of  6 variables:
 #&gt;  $ State  : Factor w/ 51 levels &quot;Alabama&quot;,&quot;Alaska&quot;,..: 1 2 3 4 5 6 7 8 9 10 ...
@@ -123,38 +125,24 @@ Duxbury</p>
 #&gt;  $ C3     : int  4 4 2 3 3 5 1 5 1 5 ...
 #&gt;  $ Class  : int  1 2 3 4 5 NA NA NA NA NA ...
 #&gt;  $ freq   : int  2 5 13 22 9 NA NA NA NA NA ...
-#&gt;  $ percent: num  3.92 9.8 25.49 43.14 17.65 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Income</span>)
+#&gt;  $ percent: num  3.92 9.8 25.49 43.14 17.65 ...
+#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Income</span>)
 <span class='no'>CATS</span> <span class='kw'>&lt;-</span><span class='fu'>factor</span>(<span class='fu'>cut</span>(<span class='no'>income</span>,<span class='kw'>breaks</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>0.5</span>,<span class='fl'>1.0</span>,<span class='fl'>1.5</span>,<span class='fl'>2</span>,<span class='fu'>max</span>(<span class='no'>income</span>)) ))
 <span class='fu'>table</span>(<span class='no'>CATS</span>)</div><div class='output co'>#&gt; CATS
 #&gt; (0.5,1] (1,1.5] (1.5,2] (2,2.5] 
-#&gt;       5      13      22       9 </div><div class='input'><span class='fu'>table</span>(<span class='no'>CATS</span>)/<span class='fu'>length</span>(<span class='no'>income</span>)</div><div class='output co'>#&gt; CATS
+#&gt;       5      13      22       9 
+#&gt; </div><div class='input'><span class='fu'>table</span>(<span class='no'>CATS</span>)/<span class='fu'>length</span>(<span class='no'>income</span>)</div><div class='output co'>#&gt; CATS
 #&gt;    (0.5,1]    (1,1.5]    (1.5,2]    (2,2.5] 
-#&gt; 0.09803922 0.25490196 0.43137255 0.17647059 </div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>table</span>(<span class='no'>CATS</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"lightblue"</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Problem 1.33"</span>)</div><img src='Income-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Income</span>)
+#&gt; 0.09803922 0.25490196 0.43137255 0.17647059 
+#&gt; </div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>table</span>(<span class='no'>CATS</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"lightblue"</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Problem 1.33"</span>)</div><img src='Income-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Income</span>)
 <span class='fu'>remove</span>(<span class='no'>CATS</span>)</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3">
   </div>
 </div>
 
       <footer>
-      <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
-</div>
-
-<div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
-</div>
-
+      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
       </footer>
    </div>
 

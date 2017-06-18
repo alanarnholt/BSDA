@@ -6,13 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Z-test — z.test • BSDA</title>
+<title>z.test. BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -21,7 +22,6 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,9 +34,10 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -55,7 +56,6 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,16 +70,15 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
-    <h1>Z-test</h1>
-    </div>
+      <div class="page-header">
+  <h1>Z-test</h1>
+</div>
 
+<div class="row">
+  <div class="col-md-9">
     
     <p>This function is based on the standard normal distribution and creates
 confidence intervals and tests hypotheses for both one and two sample
@@ -89,7 +88,7 @@ problems.</p>
     <pre><span class='fu'>z.test</span>(<span class='no'>x</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"two.sided"</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>sigma.x</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>sigma.y</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.95</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2>Arguments</h2>
     <dl class="dl-horizontal">
       <dt>x</dt>
       <dd>numeric vector; <code>NA</code>s and <code>Inf</code>s are allowed but will be
@@ -120,44 +119,53 @@ deviation for <code>y</code></dd>
 restricted to lie between zero and one</dd>
     </dl>
     
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <div class="Value">
+      <h2>Value</h2>
 
-    <p>A list of class <code>htest</code>, containing the following components:</p>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+      <p>A list of class <code>htest</code>, containing the following components:</p>
+    </div>
 
-    <p>If <code>y</code> is <code>NULL</code>, a one-sample z-test is carried out with
+    <div class="Details">
+      <h2>Details</h2>
+
+      <p>If <code>y</code> is <code>NULL</code>, a one-sample z-test is carried out with
 <code>x</code>.  If y is not <code>NULL</code>, a standard two-sample z-test is
 performed.</p>
-    
-    <h2 class="hasAnchor" id="null-hypothesis"><a class="anchor" href="#null-hypothesis"></a>Null Hypothesis</h2>
+    </div>
 
-    <p>For the one-sample z-test, the null hypothesis is
+    <div class="Null Hypothesis">
+      <h2>Null Hypothesis</h2>
+
+      <p>For the one-sample z-test, the null hypothesis is
 that the mean of the population from which <code>x</code> is drawn is <code>mu</code>.
 For the standard two-sample z-tests, the null hypothesis is that the
 population mean for <code>x</code> less that for <code>y</code> is <code>mu</code>.</p>
-    <p>The alternative hypothesis in each case indicates the direction of
+      <p>The alternative hypothesis in each case indicates the direction of
 divergence of the population mean for <code>x</code> (or difference of means for
 <code>x</code> and <code>y</code>) from <code>mu</code> (i.e., <code>&quot;greater&quot;</code>,
 <code>&quot;less&quot;</code>, <code>&quot;two.sided&quot;</code>).</p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    </div>
 
-    <p>Kitchens, L.J. (2003). <em>Basic Statistics and Data
+    <div class="References">
+      <h2>References</h2>
+
+      <p>Kitchens, L.J. (2003). <em>Basic Statistics and Data
 Analysis</em>. Duxbury.</p>
-    <p>Hogg, R. V. and Craig, A. T. (1970). <em>Introduction to Mathematical
+      <p>Hogg, R. V. and Craig, A. T. (1970). <em>Introduction to Mathematical
 Statistics, 3rd ed</em>. Toronto, Canada: Macmillan.</p>
-    <p>Mood, A. M., Graybill, F. A. and Boes, D. C. (1974). <em>Introduction to
+      <p>Mood, A. M., Graybill, F. A. and Boes, D. C. (1974). <em>Introduction to
 the Theory of Statistics, 3rd ed</em>. New York: McGraw-Hill.</p>
-    <p>Snedecor, G. W. and Cochran, W. G. (1980). <em>Statistical Methods, 7th
+      <p>Snedecor, G. W. and Cochran, W. G. (1980). <em>Statistical Methods, 7th
 ed</em>. Ames, Iowa: Iowa State University Press.</p>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    </div>
 
-    <p><code><a href='zsum.test.html'>zsum.test</a></code>, <code><a href='tsum.test.html'>tsum.test</a></code></p>
-    
+    <div class="See also">
+      <h2>See also</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+      <p><code><a href='zsum.test.html'>zsum.test</a></code>, <code><a href='tsum.test.html'>tsum.test</a></code></p>
+    </div>
+    
+    <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'>rnorm</span>(<span class='fl'>12</span>)
 <span class='fu'>z.test</span>(<span class='no'>x</span>,<span class='kw'>sigma.x</span><span class='kw'>=</span><span class='fl'>1</span>)</div><div class='output co'>#&gt; 
@@ -171,6 +179,7 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt; 0.1872376 
+#&gt; 
 #&gt; </div><div class='input'>        <span class='co'># Two-sided one-sample z-test where the assumed value for</span>
         <span class='co'># sigma.x is one. The null hypothesis is that the population</span>
         <span class='co'># mean for 'x' is zero. The alternative hypothesis states</span>
@@ -190,6 +199,7 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 #&gt; sample estimates:
 #&gt; mean of x mean of y 
 #&gt;  7.018182  5.262500 
+#&gt; 
 #&gt; </div><div class='input'>        <span class='co'># Two-sided standard two-sample z-test where both sigma.x</span>
         <span class='co'># and sigma.y are both assumed to equal 0.5. The null hypothesis</span>
         <span class='co'># is that the population mean for 'x' less that for 'y' is 2.</span>
@@ -207,6 +217,7 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 #&gt; sample estimates:
 #&gt; mean of x mean of y 
 #&gt;  7.018182  5.262500 
+#&gt; 
 #&gt; </div><div class='input'>        <span class='co'># Two-sided standard two-sample z-test where both sigma.x and</span>
         <span class='co'># sigma.y are both assumed to equal 0.5. The null hypothesis</span>
         <span class='co'># is that the population mean for 'x' less that for 'y' is zero.</span>
@@ -215,24 +226,7 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
         <span class='co'># be computed.</span>
 <span class='fu'>rm</span>(<span class='no'>x</span>, <span class='no'>y</span>)</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#null-hypothesis">Null Hypothesis</a></li>
-
-      <li><a href="#references">References</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3">
     <h2>Author</h2>
     
 Alan T. Arnholt
@@ -241,14 +235,7 @@ Alan T. Arnholt
 </div>
 
       <footer>
-      <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
-</div>
-
-<div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
-</div>
-
+      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
       </footer>
    </div>
 

@@ -6,13 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>One hundred year record of worldwide seismic activity(1770-1869) — Earthqk • BSDA</title>
+<title>Earthqk. BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -21,7 +22,6 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,9 +34,10 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -55,7 +56,6 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,46 +70,51 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
-    <h1>One hundred year record of worldwide seismic activity(1770-1869)</h1>
-    </div>
+      <div class="page-header">
+  <h1>One hundred year record of worldwide seismic activity(1770-1869)</h1>
+</div>
 
+<div class="row">
+  <div class="col-md-9">
     
     <p>Data for Exercise 6.97</p>
     
 
     <pre><span class='no'>Earthqk</span></pre>
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <div class="Format">
+      <h2>Format</h2>
 
-    <p>A data frame with 100 observations on the following two variables.
+      <p>A data frame with 100 observations on the following two variables.
 <dl class='dl-horizontal'>
 <dt>year</dt><dd>year seimic activity recorded</dd> 
 <dt>severity</dt><dd>annual incidence of sever earthquakes</dd> 
 </dl></p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    </div>
 
-    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+    <div class="References">
+      <h2>References</h2>
+
+      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
 Duxbury</p>
+    </div>
     
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Earthqk</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	100 obs. of  2 variables:
 #&gt;  $ year    : int  1770 1771 1772 1773 1774 1775 1776 1777 1778 1779 ...
-#&gt;  $ severity: int  66 62 66 197 63 0 121 0 113 27 ...</div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Earthqk</span>$<span class='no'>severity</span>)</div><div class='output co'>#&gt; [1] &quot;Earthqk$severity&quot;</div><img src='Earthqk-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+#&gt;  $ severity: int  66 62 66 197 63 0 121 0 113 27 ...
+#&gt; </div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Earthqk</span>$<span class='no'>severity</span>)</div><div class='output co'>#&gt; [1] &quot;Earthqk$severity&quot;
+#&gt; </div><img src='Earthqk-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;  100.000    0.000    0.000   69.250   97.970   94.000   96.700  122.000 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;  216.000   44.704 1998.413    4.470   52.750  216.000    0.067    0.431 
 #&gt; SW p-val 
-#&gt;    0.082 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Earthqk</span>$<span class='no'>severity</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
+#&gt;    0.082 
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Earthqk</span>$<span class='no'>severity</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
 #&gt; data:  Earthqk$severity
@@ -120,32 +125,16 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt;     97.97 
+#&gt; 
 #&gt; </div><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3">
   </div>
 </div>
 
       <footer>
-      <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
-</div>
-
-<div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
-</div>
-
+      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
       </footer>
    </div>
 

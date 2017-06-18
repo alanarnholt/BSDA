@@ -6,13 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Weather casualties in 1994 — Weather94 • BSDA</title>
+<title>Weather94. BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -21,7 +22,6 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,9 +34,10 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -55,7 +56,6 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,24 +70,24 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
-    <h1>Weather casualties in 1994</h1>
-    </div>
+      <div class="page-header">
+  <h1>Weather casualties in 1994</h1>
+</div>
 
+<div class="row">
+  <div class="col-md-9">
     
     <p>Data for Exercise 1.30</p>
     
 
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <div class="Format">
+      <h2>Format</h2>
 
-    <p>A data frame with 11 observations on the following 2 variables.
+      <p>A data frame with 11 observations on the following 2 variables.
 <dl class='dl-horizontal'>
 <dt>Weather.Type</dt><dd>a factor with levels <code>Extreme
 Temp</code> <code>Flash flood</code> <code>Fog</code> <code>High wind</code> <code>Hurricane</code>
@@ -95,45 +95,31 @@ Temp</code> <code>Flash flood</code> <code>Fog</code> <code>High wind</code> <co
 <code>Tornado</code> <code>Winter weather</code></dd> 
 <dt>Number</dt><dd>a numeric vector</dd> 
 </dl></p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    </div>
 
-    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+    <div class="References">
+      <h2>References</h2>
+
+      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
 Duxbury</p>
+    </div>
     
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>str</span>(<span class='no'>Weather94</span>)</div><div class='output co'>#&gt; &#39;data.frame&#39;:	11 obs. of  2 variables:
 #&gt;  $ Weather.Type: Factor w/ 11 levels &quot;Extreme Temp&quot;,..: 2 8 6 10 5 1 11 9 4 3 ...
-#&gt;  $ Number      : int  59 32 69 69 9 81 31 17 12 3 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Weather94</span>)
+#&gt;  $ Number      : int  59 32 69 69 9 81 31 17 12 3 ...
+#&gt; </div><div class='input'><span class='fu'>attach</span>(<span class='no'>Weather94</span>)
 <span class='fu'>names</span>(<span class='no'>Number</span>) <span class='kw'>&lt;-</span> <span class='no'>Weather.Type</span>
 <span class='fu'>barplot</span>(<span class='no'>Number</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"lightblue"</span>,<span class='kw'>las</span><span class='kw'>=</span><span class='fl'>2</span>,<span class='kw'>cex.names</span><span class='kw'>=</span><span class='fl'>.65</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Problem 1.30"</span>)</div><img src='Weather94-4.png' alt='' width='540' height='400' /><div class='input'><span class='co'># las=2 places bar names vertically</span>
 <span class='fu'>detach</span>(<span class='no'>Weather94</span>)</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3">
   </div>
 </div>
 
       <footer>
-      <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
-</div>
-
-<div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
-</div>
-
+      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
       </footer>
    </div>
 

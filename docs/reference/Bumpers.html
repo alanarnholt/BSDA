@@ -6,13 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Repair costs of vehicles crashed into a barrier at 5 miles per hour — Bumpers • BSDA</title>
+<title>Bumpers. BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -21,7 +22,6 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 <!-- mathjax -->
@@ -34,9 +34,10 @@
   </head>
 
   <body>
-    <div class="container template-reference-topic">
+    <div class="container">
       <header>
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -55,7 +56,6 @@
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://alanarnholt.github.io/">Alan T. Arnholt</a>
@@ -70,25 +70,25 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header">
-    <h1>Repair costs of vehicles crashed into a barrier at 5 miles per hour</h1>
-    </div>
+      <div class="page-header">
+  <h1>Repair costs of vehicles crashed into a barrier at 5 miles per hour</h1>
+</div>
 
+<div class="row">
+  <div class="col-md-9">
     
     <p>Data for Exercise 1.73</p>
     
 
     <pre><span class='no'>Bumpers</span></pre>
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <div class="Format">
+      <h2>Format</h2>
 
-    <p>A data frame with 23 observations on the following two variables.
+      <p>A data frame with 23 observations on the following two variables.
 <dl class='dl-horizontal'>
 <dt>car</dt><dd>a factor with levels <code>Buick Century</code>,
 <code>Buick Skylark</code>, <code>Chevrolet Cavalier</code>, <code>Chevrolet Corsica</code>,
@@ -100,47 +100,34 @@ Taurus</code>, <code>Ford Tempo</code>, <code>Honda Accord</code>, <code>Hyundai
 <code>Saturn SL2</code>, <code>Subaru Legacy</code>, and <code>Toyota Camry</code></dd>
 <dt>repair</dt><dd>total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour</dd> 
 </dl></p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    </div>
 
-    <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
+    <div class="References">
+      <h2>References</h2>
+
+      <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
 Duxbury</p>
+    </div>
     
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <h2 id="examples">Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Bumpers</span>$<span class='no'>repair</span>)</div><div class='output co'>#&gt; [1] &quot;Bumpers$repair&quot;</div><img src='Bumpers-3.png' alt='' width='540' height='400' /><div class='output co'>#&gt;   Size (n)    Missing    Minimum     1st Qu       Mean     Median     TrMean 
+<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Bumpers</span>$<span class='no'>repair</span>)</div><div class='output co'>#&gt; [1] &quot;Bumpers$repair&quot;
+#&gt; </div><img src='Bumpers-3.png' alt='' width='540' height='400' /><div class='output co'>#&gt;   Size (n)    Missing    Minimum     1st Qu       Mean     Median     TrMean 
 #&gt;     23.000      0.000    618.000   1456.000   2122.478   2129.000   2138.143 
 #&gt;     3rd Qu       Max.     Stdev.       Var.    SE Mean     I.Q.R.      Range 
 #&gt;   3002.000   3298.000    798.457 637534.170    166.490   1546.000   2680.000 
 #&gt;   Kurtosis   Skewness   SW p-val 
-#&gt;     -1.140     -0.080      0.287 </div><div class='input'><span class='fu'>stripchart</span>(<span class='no'>Bumpers</span>$<span class='no'>repair</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"stack"</span>, <span class='kw'>pch</span> <span class='kw'>=</span> <span class='fl'>19</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"blue"</span>)</div><img src='Bumpers-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>library</span>(<span class='no'>lattice</span>)
+#&gt;     -1.140     -0.080      0.287 
+#&gt; </div><div class='input'><span class='fu'>stripchart</span>(<span class='no'>Bumpers</span>$<span class='no'>repair</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"stack"</span>, <span class='kw'>pch</span> <span class='kw'>=</span> <span class='fl'>19</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"blue"</span>)</div><img src='Bumpers-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>library</span>(<span class='no'>lattice</span>)
 <span class='fu'>dotplot</span>(<span class='no'>car</span> ~ <span class='no'>repair</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Bumpers</span>)</div><img src='Bumpers-8.png' alt='' width='540' height='400' /><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3">
   </div>
 </div>
 
       <footer>
-      <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
-</div>
-
-<div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
-</div>
-
+      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
       </footer>
    </div>
 
