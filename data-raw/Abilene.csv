@@ -1,1 +1,9 @@
-crimetype,year,numberMurder,1992,4Forcible rape,1992,89Robbery,1992,136Aggravated assault,1992,630Burglary,1992,1439Larceny theft,1992,2946Vehicle theft,1992,166Arson,1992,30Murder,1999,12Forcible rape,1999,36Robbery,1999,123Aggravated assault,1999,324Burglary,1999,1023Larceny theft,1999,3207Vehicle theft,1999,255Arson,1999,17
+Crime,1992,92percent,1999,99percent
+Murder,4,0.073529413,12,0.240144086
+Forcible rape,89,1.636029407,36,0.720432259
+Robbery,136,2.500000037,123,2.461476886
+Aggravated assault,630,11.58088222,324,6.483890334
+Burglary,1439,26.45220459,1023,20.47228337
+Larceny theft,2946,54.15441394,3207,64.1785071
+Vehicle theft,166,3.051470593,255,5.103061837
+Arson,30,0.551470602,17,0.340204122
