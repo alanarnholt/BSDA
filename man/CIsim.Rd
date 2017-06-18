@@ -76,4 +76,3 @@ CIsim(100, 50, .5, type="Pi", conf.level=.90)
 Alan T. Arnholt
 }
 \keyword{distribution}
-

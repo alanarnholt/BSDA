@@ -2,8 +2,8 @@
 % Please edit documentation in R/BSDA-package.R
 \docType{package}
 \name{BSDA-package}
-\alias{BSDA}
 \alias{BSDA-package}
+\alias{BSDA}
 \title{Basic Statistics and Data Analysis}
 \description{
 Data and functions for the book \emph{Basic Statistics and Data Analysis}
@@ -14,14 +14,13 @@ Data and functions for the book \emph{Basic Statistics and Data Analysis}
 BSDA provides data and functions for the book \emph{Basic Statistics and
 Data Analysis}
 }
+\references{
+Kitchens, L. J (2003) \emph{Basic Statistics and Data Analysis}.
+Brooks/Cole.
+}
 \author{
 Alan T. Arnholt
 
 Maintainer: <arnholtat@appstate.edu>
 }
-\references{
-Kitchens, L. J (2003) \emph{Basic Statistics and Data Analysis}.
-Brooks/Cole.
-}
 \keyword{package}
-

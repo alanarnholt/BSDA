@@ -70,6 +70,7 @@ the median for the differences of the populations from which \code{x} and
 direction of divergence of the population median for \code{x} from \code{md}
 (i.e., \code{"greater"}, \code{"less"}, \code{"two.sided"}.)
 }
+
 \examples{
 
 x <- c(7.8, 6.6, 6.5, 7.4, 7.3, 7., 6.4, 7.1, 6.7, 7.6, 6.8)
@@ -90,9 +91,6 @@ SIGN.test(reaction, md=15, alternative="less")
         # median will be computed.
 
 }
-\author{
-Alan T. Arnholt
-}
 \references{
 Gibbons, J.D. and Chakraborti, S. (1992). \emph{Nonparametric
 Statistical Inference}. Marcel Dekker Inc., New York.
@@ -109,5 +107,7 @@ Ranks}. Holden and Day, San Francisco.
 \code{\link{z.test}}, \code{\link{zsum.test}},
 \code{\link{tsum.test}}
 }
+\author{
+Alan T. Arnholt
+}
 \keyword{htest}
-

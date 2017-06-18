@@ -6,7 +6,7 @@
 \title{Abortion rate by region of country}
 \format{A data frame with 51 observations on the following 10 variables.
 \describe{ 
-\item{state}{a factor with levels \code{alabama}
+\item{state}{a character variable with values \code{alabama}
 \code{alaska} \code{arizona} \code{arkansas} \code{california}
 \code{colorado} \code{connecticut} \code{delaware} \code{dist of columbia}
 \code{florida} \code{georgia} \code{hawaii} \code{idaho} \code{illinois}
@@ -19,7 +19,7 @@
 island} \code{south carolina} \code{south dakota} \code{tennessee}
 \code{texas} \code{utah} \code{vermont} \code{virginia} \code{washington}
 \code{west virginia} \code{wisconsin} \code{wyoming}}
-\item{region}{a factor with levels \code{midwest} \code{northeast}
+\item{region}{a character variable with values \code{midwest} \code{northeast}
 \code{south} \code{west}} 
 \item{regcode}{a numeric vector}
 \item{rate1988}{a numeric vector} 
@@ -48,4 +48,3 @@ Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
 \keyword{datasets}
-

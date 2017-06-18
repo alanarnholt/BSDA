@@ -77,6 +77,7 @@ divergence of the population mean for \code{x} (or difference of means for
 \code{x} and \code{y}) from \code{mu} (i.e., \code{"greater"},
 \code{"less"}, \code{"two.sided"}).
 }
+
 \examples{
 
 x <- rnorm(12)
@@ -106,9 +107,6 @@ z.test(x, sigma.x=0.5, y, sigma.y=0.5, conf.level=0.90)
 rm(x, y)
 
 }
-\author{
-Alan T. Arnholt
-}
 \references{
 Kitchens, L.J. (2003). \emph{Basic Statistics and Data
 Analysis}. Duxbury.
@@ -125,5 +123,7 @@ ed}. Ames, Iowa: Iowa State University Press.
 \seealso{
 \code{\link{zsum.test}}, \code{\link{tsum.test}}
 }
+\author{
+Alan T. Arnholt
+}
 \keyword{htest}
-

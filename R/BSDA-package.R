@@ -39,10 +39,10 @@ NULL
 #' 
 #' @name Abc
 #' @docType data
-#' @format A data frame with 51 observations on two variables.
+#' @format A data frame/tibble with 54 observations on two variables.
 #' \describe{ 
 #' \item{response}{a numeric vector}
-#' \item{group}{a factor with levels \code{A}, \code{B}, and \code{C}}
+#' \item{group}{a character vector \code{A}, \code{B}, and \code{C}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -65,9 +65,9 @@ NULL
 #' 
 #' @name Abilene
 #' @docType data
-#' @format A data frame with 16 observations on three variables.
+#' @format A data frame/tibble with 16 observations on three variables.
 #' \describe{ 
-#' \item{crimetype}{a factor with levels \code{Aggravated
+#' \item{crimetype}{a character variable with values \code{Aggravated
 #' assault}, \code{Arson}, \code{Burglary}, \code{Forcible rape}, \code{Larceny
 #' theft}, \code{Murder}, \code{Robbery}, and \code{Vehicle theft}.}
 #' \item{year}{a factor with levels \code{1992} and \code{1999}} 
@@ -108,7 +108,7 @@ NULL
 #' 
 #' @name Ability
 #' @docType data
-#' @format A data frame with 400 observations on two variables.
+#' @format A data frame/tibble with 400 observations on two variables.
 #' \describe{ 
 #' \item{gender}{a factor with levels \code{girls} and \code{boys}} 
 #' \item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
@@ -137,7 +137,7 @@ NULL
 #' @docType data
 #' @format A data frame with 51 observations on the following 10 variables.
 #' \describe{ 
-#' \item{state}{a factor with levels \code{alabama}
+#' \item{state}{a character variable with values \code{alabama}
 #' \code{alaska} \code{arizona} \code{arkansas} \code{california}
 #' \code{colorado} \code{connecticut} \code{delaware} \code{dist of columbia}
 #' \code{florida} \code{georgia} \code{hawaii} \code{idaho} \code{illinois}
@@ -150,7 +150,7 @@ NULL
 #' island} \code{south carolina} \code{south dakota} \code{tennessee}
 #' \code{texas} \code{utah} \code{vermont} \code{virginia} \code{washington}
 #' \code{west virginia} \code{wisconsin} \code{wyoming}}
-#' \item{region}{a factor with levels \code{midwest} \code{northeast}
+#' \item{region}{a character variable with values \code{midwest} \code{northeast}
 #' \code{south} \code{west}} 
 #' \item{regcode}{a numeric vector}
 #' \item{rate1988}{a numeric vector} 
@@ -182,7 +182,7 @@ NULL
 #' 
 #' @name Absent
 #' @docType data
-#' @format A data frame with 20 observations on one variable.
+#' @format A data frame/tibble with 20 observations on one variable.
 #' \describe{ 
 #' \item{days}{a numeric vector} 
 #' }

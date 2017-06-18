@@ -30,4 +30,3 @@ Combinations(5,2)
 \code{\link{SRS}}
 }
 \keyword{distribution}
-

@@ -52,4 +52,3 @@ nsize(b=.15, sigma=.31, conf.level=.90, type="mu")
 Alan T. Arnholt
 }
 \keyword{univar}
-

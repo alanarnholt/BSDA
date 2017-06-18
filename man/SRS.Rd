@@ -26,11 +26,10 @@ SRS(c(5,8,3),2)
     # simple random samples of size 2 from the population of 5,8, and 3.
 
 }
-\author{
-Alan T. Arnholt
-}
 \seealso{
 \code{\link{Combinations}}
 }
+\author{
+Alan T. Arnholt
+}
 \keyword{distribution}
-

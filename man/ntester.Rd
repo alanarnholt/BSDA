@@ -32,12 +32,11 @@ ntester(rexp(50,1))
     # standard normal data of size 50.
 
 }
-\author{
-Alan T. Arnholt
-}
 \references{
 Shapiro, S.S. and Wilk, M.B. (1965). An analysis of variance
 test for normality (complete samples). Biometrika \bold{52} : 591-611.
 }
+\author{
+Alan T. Arnholt
+}
 \keyword{distribution}
-

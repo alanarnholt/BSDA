@@ -27,6 +27,7 @@ Abilene <- read_csv("ABILENE.csv")
 Abilene <- Abilene %>%
   gather(`1992`, `1999`, key = "year", value = "number") %>%
   select(crimetype = Crime, year, number)
+Abilene$year <- factor(Abilene$year)
 devtools::use_data(Abilene, overwrite = TRUE)
 # Examples
 par(mfrow = c(2, 1))

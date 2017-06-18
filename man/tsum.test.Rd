@@ -98,6 +98,7 @@ divergence of the population mean for \code{x} (or difference of means for
 \code{x} and \code{y}) from \code{mu} (i.e., \code{"greater"},
 \code{"less"}, or \code{"two.sided"}).
 }
+
 \examples{
 
 tsum.test(mean.x=5.6, s.x=2.1, n.x=16, mu=4.9, alternative="greater")
@@ -138,9 +139,6 @@ t.test(x, y, conf.level=0.90)
 
 
 }
-\author{
-Alan T. Arnholt
-}
 \references{
 Kitchens, L.J. (2003). \emph{Basic Statistics and Data
 Analysis}. Duxbury.
@@ -157,5 +155,7 @@ ed}. Ames, Iowa: Iowa State University Press.
 \seealso{
 \code{\link{z.test}}, \code{\link{zsum.test}}
 }
+\author{
+Alan T. Arnholt
+}
 \keyword{htest}
-

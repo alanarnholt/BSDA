@@ -30,4 +30,3 @@ normarea(70, 130, 100, 15)
 Alan T. Arnholt
 }
 \keyword{distribution}
-

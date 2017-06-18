@@ -42,4 +42,3 @@ EDA(rnorm(100))
 Alan T. Arnholt
 }
 \keyword{univar}
-

@@ -4,7 +4,7 @@
 \name{Ability}
 \alias{Ability}
 \title{Perceived math ability for 13-year olds by gender}
-\format{A data frame with 400 observations on two variables.
+\format{A data frame/tibble with 400 observations on two variables.
 \describe{ 
 \item{gender}{a factor with levels \code{girls} and \code{boys}} 
 \item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
@@ -27,4 +27,3 @@ Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
 \keyword{datasets}
-

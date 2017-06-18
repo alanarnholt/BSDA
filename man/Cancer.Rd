@@ -41,4 +41,3 @@ Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 Duxbury
 }
 \keyword{datasets}
-
