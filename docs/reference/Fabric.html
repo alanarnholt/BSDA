@@ -109,10 +109,9 @@ Duxbury</p>
 <span class='fu'>str</span>(<span class='no'>Fabric</span>)</div><div class='output co'>#&gt; 'data.frame':	10 obs. of  3 variables:
 #&gt;  $ Type   : int  1 2 3 4 5 6 7 8 9 10
 #&gt;  $ With   : int  12 3 12 16 4 24 11 17 19 8
-#&gt;  $ Without: int  8 4 15 14 6 21 10 15 22 7</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Fabric</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='input'><span class='no'>DIF</span> <span class='kw'>&lt;-</span> <span class='no'>With</span> - <span class='no'>Without</span>
-<span class='fu'>qqnorm</span>(<span class='no'>DIF</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>DIF</span>)</div><img src='Fabric-7.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; 
+#&gt;  $ Without: int  8 4 15 14 6 21 10 15 22 7</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Fabric</span>)
+<span class='no'>DIF</span> <span class='kw'>&lt;-</span> <span class='no'>With</span> - <span class='no'>Without</span>
+<span class='fu'>qqnorm</span>(<span class='no'>DIF</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>DIF</span>)</div><img src='Fabric-5.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Shapiro-Wilk normality test
 #&gt; 
 #&gt; data:  DIF
