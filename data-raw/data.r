@@ -159,11 +159,11 @@ Airdisasters <- read_csv("AIRDISASTERS.csv")
 Airdisasters <- Airdisasters %>%
   select(year, deaths)
 Airdisasters$decade <- ifelse(Airdisasters$year >=1930 & Airdisasters$year < 1940,   "30s", 
-                              ifelse(Airdisasters$year >=1940 & Airdisasters$year < 1950,   "40s", 
-                                     ifelse(Airdisasters$year >=1940 & Airdisasters$year < 1950,   "50s", 
-                                            ifelse(Airdisasters$year >=1950 & Airdisasters$year < 1960,   "60s", 
-                                                   ifelse(Airdisasters$year >=1960 & Airdisasters$year < 1970,   "70s", 
-                                                          ifelse(Airdisasters$year >=1970 & Airdisasters$year < 1980,   "80s", "90s"))))))
+                       ifelse(Airdisasters$year >=1940 & Airdisasters$year < 1950,   "40s", 
+                       ifelse(Airdisasters$year >=1950 & Airdisasters$year < 1960,   "50s", 
+                       ifelse(Airdisasters$year >=1960 & Airdisasters$year < 1970,   "60s", 
+                       ifelse(Airdisasters$year >=1970 & Airdisasters$year < 1980,   "70s", 
+                       ifelse(Airdisasters$year >=1980 & Airdisasters$year < 1990,   "80s", "90s"))))))
 devtools::use_data(Airdisasters, overwrite = TRUE)
 # Examples
 par(las = 1)
@@ -1249,3 +1249,24 @@ ggplot2::ggplot(data = Family, aes(x = number, y = cost)) +
   geom_smooth(method = "lm") + 
   theme_bw()
 ## End not run
+####################################
+# Create Ferraro1
+mat <- matrix(data = c(245, 140, 115, 205, 160, 135), nrow = 2, byrow = TRUE)
+dimnames(mat) <- list(gender = c("Men", "Women"), 
+                      candidate = c("Reagan/Bush", "Mondale/Ferraro", "Undecided"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Ferraro1 <- vcdExtra::expand.dft(matDF)
+rm(mat, matT, matDF)
+Ferraro1$gender <- factor(Ferraro1$gender, 
+                          levels = c("Men", "Women"))
+Ferraro1$candidate <- factor(Ferraro1$candidate, 
+                             levels = c("Reagan/Bush", "Mondale/Ferraro", "Undecided"))
+Ferraro1 <- as_tibble(Ferraro1)
+devtools::use_data(Ferraro1, overwrite = TRUE)
+Ferraro1
+# Examples
+T1 <- xtabs(~gender + candidate, data = Ferraro1)
+T1
+chisq.test(T1)  
+rm(T1)
