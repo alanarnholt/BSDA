@@ -4,13 +4,13 @@
 \name{Epaminicompact}
 \alias{Epaminicompact}
 \title{Fuel efficiency ratings for compact vehicles in 2001}
-\format{A data frame with 22 observations on the following 10 variables.
+\format{A data frame/tibble with 22 observations on the following 10 variables.
 \describe{ 
-\item{Class}{a factor with levels \code{MINICOMPACT CARS}} 
-\item{Manufacturer}{a factor with levels \code{AUDI}
+\item{class}{a character variable with values \code{MINICOMPACT CARS}} 
+\item{manufacturer}{a character variable with values \code{AUDI}
 \code{BMW} \code{JAGUAR} \code{MERCEDES-BENZ} \code{MITSUBISHI}
 \code{PORSCHE}} 
-\item{carline.name}{a factor with levels \code{325CI
+\item{carline}{a character variable with values \code{325CI
 CONVERTIBLE} \code{330CI CONVERTIBLE} \code{911 CARRERA 2/4} \code{911
 TURBO} \code{CLK320 (CABRIOLET)} \code{CLK430 (CABRIOLET)} \code{ECLIPSE
 SPYDER} \code{JAGUAR XK8 CONVERTIBLE} \code{JAGUAR XKR CONVERTIBLE} \code{M3
@@ -24,14 +24,16 @@ CONVERTIBLE} \code{TT COUPE} \code{TT COUPE QUATTRO}}
 \item{hwy}{a numeric vector} 
 \item{cmb}{a numeric vector} 
 }}
+\usage{
+Epaminicompact
+}
 \description{
 Data for Exercise 1.65
 }
 \examples{
 
-attach(Epaminicompact)
-summary(cty)
-detach(Epaminicompact)
+summary(Epaminicompact$cty)
+plot(hwy ~ cty, data = Epaminicompact)
 
 }
 \references{

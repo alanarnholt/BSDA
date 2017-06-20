@@ -6,16 +6,18 @@
 \title{Ages of 25 executives}
 \format{A data frame with 25 observations on the following variable.
 \describe{ 
-\item{Age}{a numeric vector} 
+\item{age}{a numeric vector} 
 }}
+\usage{
+Executiv
+}
 \description{
 Data for Exercise 1.104
 }
 \examples{
 
-attach(Executiv)
-EDA(Age)
-detach(Executiv)
+hist(Executiv$age, xlab = "Age of banking executives", 
+breaks = 5, main = "", col = "gray")
 
 }
 \references{

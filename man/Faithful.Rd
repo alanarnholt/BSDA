@@ -6,21 +6,28 @@
 \title{Waiting times between successive eruptions of the Old Faithful geyser}
 \format{A data frame with 299 observations on the following 2 variables.
 \describe{ 
-\item{Time}{a numeric vector} 
-\item{Eruption}{a numeric vector} 
+\item{time}{a numeric vector} 
+\item{eruption}{a factor with levels \code{1} and \code{2}} 
 }}
+\usage{
+Faithful
+}
 \description{
 Data for Exercise 5.12 and 5.111
 }
 \examples{
 
-str(Faithful)
-attach(Faithful)
-hist(Time,prob=TRUE,xlab="Waiting time between eruptions",col="tomato")
-lines(density(Time),col="red",lwd=3)
-t.test(Time)$conf
-detach(Faithful)
+t.test(time ~ eruption, data = Faithful)
+hist(Faithful$time, xlab = "wait time", main = "", freq = FALSE)
+lines(density(Faithful$time))
 
+\dontrun{
+ggplot2::ggplot(data = Faithful, aes(x = time, y = ..density..)) + 
+geom_histogram(binwidth = 5, fill = "pink", col = "black") + 
+geom_density() + 
+theme_bw() + 
+labs(x = "wait time")
+}
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

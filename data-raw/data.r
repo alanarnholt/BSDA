@@ -1170,3 +1170,82 @@ devtools::use_data(Entrance, overwrite = TRUE)
 stem(Entrance$score)
 stem(Entrance$score, scale = 2)
 ##################################################################
+### More 6/20/17
+#################################
+Epaminicompact <- read_csv("Epaminicompact.csv")
+Epaminicompact <- Epaminicompact %>%
+  rename(class = Class, manufacturer = Manufacturer, carline = `carline name`)
+devtools::use_data(Epaminicompact, overwrite = TRUE)
+# Examples
+summary(Epaminicompact$cty)
+plot(hwy ~ cty, data = Epaminicompact)
+#################################
+Epatwoseater <- read_csv("Epatwoseater.csv")
+Epatwoseater <- Epatwoseater %>%
+  rename(class = Class, manufacturer = Manufacturer, carline = `carline name`)
+devtools::use_data(Epatwoseater, overwrite = TRUE)
+# Examples
+summary(Epatwoseater$cty)
+plot(hwy ~ cty, data = Epatwoseater)
+boxplot(cty ~ drv, data = Epatwoseater)
+#################################
+Executiv <- read_csv("Executiv.csv")
+Executiv <- Executiv %>%
+  rename(age = Age)
+devtools::use_data(Executiv, overwrite = TRUE)
+# Examples
+hist(Executiv$age, xlab = "Age of banking executives", 
+     breaks = 5, main = "", col = "gray")
+#################################
+Exercise <- read_csv("Exercise.csv")
+devtools::use_data(Exercise, overwrite = TRUE)
+# Examples
+stem(Exercise$loss)
+#################################
+Fabric <- read_csv("Fabric.csv")
+Fabric <- Fabric %>%
+  gather(With, Without, key = softner, value = softness) %>%
+  rename(garment = Type)
+Fabric$softner <- tolower(Fabric$softner)
+devtools::use_data(Fabric, overwrite = TRUE)
+# Examples
+wilcox.test(softness ~ softner, data = Fabric, 
+            paired = TRUE, alternative = "greater")
+## Not run
+T7 <- tidyr::spread(Fabric, softner, softness) %>%
+  mutate(di = with - without, adi = abs(di), rk = rank(adi), srk = sign(di)*rk)
+T7
+t.test(T7$srk, alternative = "greater")
+##
+#################################
+Faithful <- read_csv("Faithful.csv")
+Faithful <- Faithful %>%
+  rename(time = Time, eruption = Eruption)
+Faithful$eruption <- factor(Faithful$eruption)
+devtools::use_data(Faithful, overwrite = TRUE)
+# Examples
+t.test(time ~ eruption, data = Faithful)
+hist(Faithful$time, xlab = "wait time", main = "", freq = FALSE)
+lines(density(Faithful$time))
+## Not run
+ggplot2::ggplot(data = Faithful, aes(x = time, y = ..density..)) + 
+  geom_histogram(binwidth = 5, fill = "pink", col = "black") + 
+  geom_density() + 
+  theme_bw() +
+  labs(x = "wait time")
+##
+#################################
+Family <- read_csv("Family.csv")
+Family <- Family %>%
+  rename(number = Number, cost = Cost)
+devtools::use_data(Family, overwrite = TRUE)
+# Examples
+plot(cost ~ number, data = Family)
+abline(lm(cost ~ number, data = Family))
+cor(Family$cost, Family$number)
+## Not run
+ggplot2::ggplot(data = Family, aes(x = number, y = cost)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") + 
+  theme_bw()
+## End not run

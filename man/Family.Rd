@@ -6,20 +6,27 @@
 \title{Size of family versus cost per person per week for groceries}
 \format{A data frame with 20 observations on the following 2 variables.
 \describe{ 
-\item{Number}{a numeric vector} 
-\item{Cost}{a numeric vector} 
+\item{number}{a numeric vector} 
+\item{cost}{a numeric vector} 
 }}
+\usage{
+Family
+}
 \description{
 Data for Exercise 2.89
 }
 \examples{
 
-str(Family)
-attach(Family)
-plot(Number,Cost)
-cor(Number,Cost)
-lm(Cost~Number)
-detach(Family)
+plot(cost ~ number, data = Family)
+abline(lm(cost ~ number, data = Family))
+cor(Family$cost, Family$number)
+
+\dontrun{
+ggplot2::ggplot(data = Family, aes(x = number, y = cost)) + 
+   geom_point() + 
+   geom_smooth(method = "lm") + 
+   theme_bw()
+}
 
 }
 \references{

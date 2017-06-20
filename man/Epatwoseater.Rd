@@ -4,15 +4,15 @@
 \name{Epatwoseater}
 \alias{Epatwoseater}
 \title{Fuel efficiency ratings for two-seater vehicles in 2001}
-\format{A data frame with 36 observations on the following 10 variables.
+\format{A data frame/tibble with 36 observations on the following 10 variables.
 \describe{ 
-\item{Class}{a factor with levels \code{TWO SEATERS}}
-\item{Manufacturer}{a factor with levels \code{ACURA} \code{AUDI}
+\item{class}{a character variable with values \code{TWO SEATERS}}
+\item{manufacturer}{a character variable with values \code{ACURA} \code{AUDI}
 \code{BMW} \code{CHEVROLET} \code{DODGE} \code{FERRARI} \code{HONDA}
 \code{LAMBORGHINI} \code{MAZDA} \code{MERCEDES-BENZ} \code{PLYMOUTH}
 \code{PORSCHE} \code{TOYOTA}} 
-\item{carline.name}{a factor with
-levels \code{BOXSTER} \code{BOXSTER S} \code{CORVETTE} \code{DB132/144
+\item{carline}{a character variable with values
+\code{BOXSTER} \code{BOXSTER S} \code{CORVETTE} \code{DB132/144
 DIABLO} \code{FERRARI 360 MODENA/SPIDER} \code{FERRARI 550
 MARANELLO/BARCHETTA} \code{INSIGHT} \code{MR2} \code{MX-5 MIATA} \code{NSX}
 \code{PROWLER} \code{S2000} \code{SL500} \code{SL600} \code{SLK230
@@ -28,14 +28,17 @@ ROADSTER} \code{Z8}}
 \item{hwy}{a numeric vector} 
 \item{cmb}{a numeric vector} 
  }}
+\usage{
+Epatwoseater
+}
 \description{
 Data for Exercise 5.8
 }
 \examples{
 
-attach(Epatwoseater)
-boxplot(cty)
-detach(Epatwoseater)
+summary(Epatwoseater$cty)
+plot(hwy ~ cty, data = Epatwoseater)
+boxplot(cty ~ drv, data = Epatwoseater)
 
 }
 \references{

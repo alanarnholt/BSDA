@@ -5,27 +5,30 @@
 \alias{Fabric}
 \title{Measures of softness of 10 different clothing garments washed with and
 without a softener}
-\format{A data frame with 10 observations on the following 3 variables.
+\format{A data frame/tibble with 20 observations on the following 3 variables.
 \describe{ 
-\item{Type}{a numeric vector} 
-\item{With}{a numeric vector} 
-\item{Without}{a numeric vector} 
+\item{garment}{a numeric vector} 
+\item{softner}{a character variable with values \code{with} and \code{without}} 
+\item{softness}{a numeric vector} 
 }}
+\usage{
+Fabric
+}
 \description{
 Data for Exercise 7.21
 }
 \examples{
 
-str(Fabric)
-attach(Fabric)
-DIF <- With - Without
-qqnorm(DIF)
-qqline(DIF)
-shapiro.test(DIF)
-wilcox.test(With,Without,paired=TRUE,alternative="greater")
-detach(Fabric)
-remove(DIF)
+wilcox.test(softness ~ softner, data = Fabric, 
+            paired = TRUE, alternative = "greater")
 
+\dontrun{
+T7 <- tidyr::spread(Fabric, softner, softness) \%>\% 
+mutate(di = with - without, adi = abs(di), rk = rank(adi), 
+       srk = sign(di)*rk)
+T7
+t.test(T7$srk, alternative = "greater")
+}
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

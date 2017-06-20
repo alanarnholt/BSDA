@@ -3038,13 +3038,13 @@ NULL
 #' 
 #' @name Epaminicompact
 #' @docType data
-#' @format A data frame with 22 observations on the following 10 variables.
+#' @format A data frame/tibble with 22 observations on the following 10 variables.
 #' \describe{ 
-#' \item{Class}{a factor with levels \code{MINICOMPACT CARS}} 
-#' \item{Manufacturer}{a factor with levels \code{AUDI}
+#' \item{class}{a character variable with values \code{MINICOMPACT CARS}} 
+#' \item{manufacturer}{a character variable with values \code{AUDI}
 #' \code{BMW} \code{JAGUAR} \code{MERCEDES-BENZ} \code{MITSUBISHI}
 #' \code{PORSCHE}} 
-#' \item{carline.name}{a factor with levels \code{325CI
+#' \item{carline}{a character variable with values \code{325CI
 #' CONVERTIBLE} \code{330CI CONVERTIBLE} \code{911 CARRERA 2/4} \code{911
 #' TURBO} \code{CLK320 (CABRIOLET)} \code{CLK430 (CABRIOLET)} \code{ECLIPSE
 #' SPYDER} \code{JAGUAR XK8 CONVERTIBLE} \code{JAGUAR XKR CONVERTIBLE} \code{M3
@@ -3063,11 +3063,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Epaminicompact)
-#' summary(cty)
-#' detach(Epaminicompact)
+#' summary(Epaminicompact$cty)
+#' plot(hwy ~ cty, data = Epaminicompact)
 #' 
-NULL
+"Epaminicompact"
 
 
 
@@ -3080,15 +3079,15 @@ NULL
 #' 
 #' @name Epatwoseater
 #' @docType data
-#' @format A data frame with 36 observations on the following 10 variables.
+#' @format A data frame/tibble with 36 observations on the following 10 variables.
 #' \describe{ 
-#' \item{Class}{a factor with levels \code{TWO SEATERS}}
-#' \item{Manufacturer}{a factor with levels \code{ACURA} \code{AUDI}
+#' \item{class}{a character variable with values \code{TWO SEATERS}}
+#' \item{manufacturer}{a character variable with values \code{ACURA} \code{AUDI}
 #' \code{BMW} \code{CHEVROLET} \code{DODGE} \code{FERRARI} \code{HONDA}
 #' \code{LAMBORGHINI} \code{MAZDA} \code{MERCEDES-BENZ} \code{PLYMOUTH}
 #' \code{PORSCHE} \code{TOYOTA}} 
-#' \item{carline.name}{a factor with
-#' levels \code{BOXSTER} \code{BOXSTER S} \code{CORVETTE} \code{DB132/144
+#' \item{carline}{a character variable with values
+#' \code{BOXSTER} \code{BOXSTER S} \code{CORVETTE} \code{DB132/144
 #' DIABLO} \code{FERRARI 360 MODENA/SPIDER} \code{FERRARI 550
 #' MARANELLO/BARCHETTA} \code{INSIGHT} \code{MR2} \code{MX-5 MIATA} \code{NSX}
 #' \code{PROWLER} \code{S2000} \code{SL500} \code{SL600} \code{SLK230
@@ -3109,11 +3108,11 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Epatwoseater)
-#' boxplot(cty)
-#' detach(Epatwoseater)
+#' summary(Epatwoseater$cty)
+#' plot(hwy ~ cty, data = Epatwoseater)
+#' boxplot(cty ~ drv, data = Epatwoseater)
 #' 
-NULL
+"Epatwoseater"
 
 
 
@@ -3128,18 +3127,17 @@ NULL
 #' @docType data
 #' @format A data frame with 25 observations on the following variable.
 #' \describe{ 
-#' \item{Age}{a numeric vector} 
+#' \item{age}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Executiv)
-#' EDA(Age)
-#' detach(Executiv)
+#' hist(Executiv$age, xlab = "Age of banking executives", 
+#' breaks = 5, main = "", col = "gray")
 #' 
-NULL
+"Executiv"
 
 
 
@@ -3161,11 +3159,9 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' attach(Exercise)
-#' stem(loss)
-#' detach(Exercise)
+#' stem(Exercise$loss)
 #' 
-NULL
+"Exercise"
 
 
 
@@ -3179,29 +3175,28 @@ NULL
 #' 
 #' @name Fabric
 #' @docType data
-#' @format A data frame with 10 observations on the following 3 variables.
+#' @format A data frame/tibble with 20 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Type}{a numeric vector} 
-#' \item{With}{a numeric vector} 
-#' \item{Without}{a numeric vector} 
+#' \item{garment}{a numeric vector} 
+#' \item{softner}{a character variable with values \code{with} and \code{without}} 
+#' \item{softness}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Fabric)
-#' attach(Fabric)
-#' DIF <- With - Without
-#' qqnorm(DIF)
-#' qqline(DIF)
-#' shapiro.test(DIF)
-#' wilcox.test(With,Without,paired=TRUE,alternative="greater")
-#' detach(Fabric)
-#' remove(DIF)
+#' wilcox.test(softness ~ softner, data = Fabric, 
+#'             paired = TRUE, alternative = "greater")
 #' 
-NULL
-
+#' \dontrun{
+#' T7 <- tidyr::spread(Fabric, softner, softness) %>% 
+#' mutate(di = with - without, adi = abs(di), rk = rank(adi), 
+#'        srk = sign(di)*rk)
+#' T7
+#' t.test(T7$srk, alternative = "greater")
+#' }
+"Fabric"
 
 
 
@@ -3215,22 +3210,26 @@ NULL
 #' @docType data
 #' @format A data frame with 299 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Time}{a numeric vector} 
-#' \item{Eruption}{a numeric vector} 
+#' \item{time}{a numeric vector} 
+#' \item{eruption}{a factor with levels \code{1} and \code{2}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Faithful)
-#' attach(Faithful)
-#' hist(Time,prob=TRUE,xlab="Waiting time between eruptions",col="tomato")
-#' lines(density(Time),col="red",lwd=3)
-#' t.test(Time)$conf
-#' detach(Faithful)
+#' t.test(time ~ eruption, data = Faithful)
+#' hist(Faithful$time, xlab = "wait time", main = "", freq = FALSE)
+#' lines(density(Faithful$time))
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Faithful, aes(x = time, y = ..density..)) + 
+#' geom_histogram(binwidth = 5, fill = "pink", col = "black") + 
+#' geom_density() + 
+#' theme_bw() + 
+#' labs(x = "wait time")
+#' }
+"Faithful"
 
 
 
@@ -3245,22 +3244,26 @@ NULL
 #' @docType data
 #' @format A data frame with 20 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Number}{a numeric vector} 
-#' \item{Cost}{a numeric vector} 
+#' \item{number}{a numeric vector} 
+#' \item{cost}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Family)
-#' attach(Family)
-#' plot(Number,Cost)
-#' cor(Number,Cost)
-#' lm(Cost~Number)
-#' detach(Family)
+#' plot(cost ~ number, data = Family)
+#' abline(lm(cost ~ number, data = Family))
+#' cor(Family$cost, Family$number)
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Family, aes(x = number, y = cost)) + 
+#'    geom_point() + 
+#'    geom_smooth(method = "lm") + 
+#'    theme_bw()
+#' }
+#' 
+"Family"
 
 
 
