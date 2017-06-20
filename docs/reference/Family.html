@@ -87,12 +87,13 @@
     <p>Data for Exercise 2.89</p>
     
 
+    <pre class="usage"><span class='no'>Family</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>A data frame with 20 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>Number</dt><dd><p>a numeric vector</p></dd> 
-<dt>Cost</dt><dd><p>a numeric vector</p></dd> 
+<dt>number</dt><dd><p>a numeric vector</p></dd> 
+<dt>cost</dt><dd><p>a numeric vector</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -103,17 +104,13 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Family</span>)</div><div class='output co'>#&gt; 'data.frame':	20 obs. of  2 variables:
-#&gt;  $ Number: int  2 2 1 3 4 3 2 4 1 3 ...
-#&gt;  $ Cost  : int  78 85 88 76 72 74 79 69 79 75 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Family</span>)
-<span class='fu'>plot</span>(<span class='no'>Number</span>,<span class='no'>Cost</span>)</div><img src='Family-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>cor</span>(<span class='no'>Number</span>,<span class='no'>Cost</span>)</div><div class='output co'>#&gt; [1] -0.8680791</div><div class='input'><span class='fu'>lm</span>(<span class='no'>Cost</span>~<span class='no'>Number</span>)</div><div class='output co'>#&gt; 
-#&gt; Call:
-#&gt; lm(formula = Cost ~ Number)
-#&gt; 
-#&gt; Coefficients:
-#&gt; (Intercept)       Number  
-#&gt;      88.644       -4.089  
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Family</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>cost</span> ~ <span class='no'>number</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Family</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='fu'>lm</span>(<span class='no'>cost</span> ~ <span class='no'>number</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Family</span>))</div><img src='Family-3.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>cor</span>(<span class='no'>Family</span>$<span class='no'>cost</span>, <span class='no'>Family</span>$<span class='no'>number</span>)</div><div class='output co'>#&gt; [1] -0.8680791</div><div class='input'>
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Family</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>number</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>cost</span>)) +
+     <span class='fu'>geom_point</span>() +
+     <span class='fu'>geom_smooth</span>(<span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"lm"</span>) +
+     <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

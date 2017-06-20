@@ -87,12 +87,13 @@
     <p>Data for Exercise 5.12 and 5.111</p>
     
 
+    <pre class="usage"><span class='no'>Faithful</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>A data frame with 299 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>Time</dt><dd><p>a numeric vector</p></dd> 
-<dt>Eruption</dt><dd><p>a numeric vector</p></dd> 
+<dt>time</dt><dd><p>a numeric vector</p></dd> 
+<dt>eruption</dt><dd><p>a factor with levels <code>1</code> and <code>2</code></p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -103,12 +104,25 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Faithful</span>)</div><div class='output co'>#&gt; 'data.frame':	299 obs. of  2 variables:
-#&gt;  $ Time    : int  80 65 91 89 54 51 52 86 79 87 ...
-#&gt;  $ Eruption: int  2 1 2 2 1 1 1 2 2 2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Faithful</span>)
-<span class='fu'>hist</span>(<span class='no'>Time</span>,<span class='kw'>prob</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Waiting time between eruptions"</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"tomato"</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>Time</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>,<span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>3</span>)</div><img src='Faithful-5.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>t.test</span>(<span class='no'>Time</span>)$<span class='no'>conf</span></div><div class='output co'>#&gt; [1] 70.73353 73.89524
-#&gt; attr(,"conf.level")
-#&gt; [1] 0.95</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Faithful</span>)</div></pre>
+<span class='fu'>t.test</span>(<span class='no'>time</span> ~ <span class='no'>eruption</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Faithful</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Welch Two Sample t-test
+#&gt; 
+#&gt; data:  time by eruption
+#&gt; t = -25.56, df = 208.34, p-value &lt; 2.2e-16
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -25.91029 -22.19957
+#&gt; sample estimates:
+#&gt; mean in group 1 mean in group 2 
+#&gt;        57.10909        81.16402 
+#&gt; </div><div class='input'><span class='fu'>hist</span>(<span class='no'>Faithful</span>$<span class='no'>time</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"wait time"</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>freq</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>Faithful</span>$<span class='no'>time</span>))</div><img src='Faithful-5.png' alt='' width='540' height='400' /><div class='input'>
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Faithful</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>time</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>..density..</span>)) +
+  <span class='fu'>geom_histogram</span>(<span class='kw'>binwidth</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"pink"</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"black"</span>) +
+  <span class='fu'>geom_density</span>() +
+  <span class='fu'>theme_bw</span>() +
+  <span class='fu'>labs</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>"wait time"</span>)
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

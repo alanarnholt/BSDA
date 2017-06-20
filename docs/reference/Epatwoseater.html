@@ -87,17 +87,18 @@
     <p>Data for Exercise 5.8</p>
     
 
+    <pre class="usage"><span class='no'>Epatwoseater</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 36 observations on the following 10 variables.</p><dl class='dl-horizontal'>
-<dt>Class</dt><dd><p>a factor with levels <code>TWO SEATERS</code></p></dd>
-<dt>Manufacturer</dt><dd><p>a factor with levels <code>ACURA</code> <code>AUDI</code>
+    <p>A data frame/tibble with 36 observations on the following 10 variables.</p><dl class='dl-horizontal'>
+<dt>class</dt><dd><p>a character variable with values <code>TWO SEATERS</code></p></dd>
+<dt>manufacturer</dt><dd><p>a character variable with values <code>ACURA</code> <code>AUDI</code>
 <code>BMW</code> <code>CHEVROLET</code> <code>DODGE</code> <code>FERRARI</code> <code>HONDA</code>
 <code>LAMBORGHINI</code> <code>MAZDA</code> <code>MERCEDES-BENZ</code> <code>PLYMOUTH</code>
 <code>PORSCHE</code> <code>TOYOTA</code></p></dd> 
-<dt>carline.name</dt><dd><p>a factor with
-levels <code>BOXSTER</code> <code>BOXSTER S</code> <code>CORVETTE</code> <code>DB132/144
+<dt>carline</dt><dd><p>a character variable with values
+<code>BOXSTER</code> <code>BOXSTER S</code> <code>CORVETTE</code> <code>DB132/144
 DIABLO</code> <code>FERRARI 360 MODENA/SPIDER</code> <code>FERRARI 550
 MARANELLO/BARCHETTA</code> <code>INSIGHT</code> <code>MR2</code> <code>MX-5 MIATA</code> <code>NSX</code>
 <code>PROWLER</code> <code>S2000</code> <code>SL500</code> <code>SL600</code> <code>SLK230
@@ -122,8 +123,9 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>attach</span>(<span class='no'>Epatwoseater</span>)
-<span class='fu'>boxplot</span>(<span class='no'>cty</span>)</div><img src='Epatwoseater-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Epatwoseater</span>)</div></pre>
+<span class='fu'>summary</span>(<span class='no'>Epatwoseater</span>$<span class='no'>cty</span>)</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#&gt;    8.00   16.75   19.00   18.86   21.00   61.00 </div><div class='input'><span class='fu'>plot</span>(<span class='no'>hwy</span> ~ <span class='no'>cty</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Epatwoseater</span>)</div><img src='Epatwoseater-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>boxplot</span>(<span class='no'>cty</span> ~ <span class='no'>drv</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Epatwoseater</span>)</div><img src='Epatwoseater-6.png' alt='' width='540' height='400' /><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -87,11 +87,12 @@
     <p>Data for Exercise 1.104</p>
     
 
+    <pre class="usage"><span class='no'>Executiv</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>A data frame with 25 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>Age</dt><dd><p>a numeric vector</p></dd> 
+<dt>age</dt><dd><p>a numeric vector</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,13 +103,9 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>attach</span>(<span class='no'>Executiv</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Age</span>)</div><div class='output co'>#&gt; [1] "Age"</div><img src='Executiv-3.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   25.000    0.000   26.000   42.000   49.520   50.000   49.913   59.500 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   64.000   11.173  124.843    2.235   17.500   38.000   -0.900   -0.451 
-#&gt; SW p-val 
-#&gt;    0.164 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Executiv</span>)</div></pre>
+<span class='fu'>hist</span>(<span class='no'>Executiv</span>$<span class='no'>age</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"Age of banking executives"</span>,
+<span class='kw'>breaks</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"gray"</span>)</div><img src='Executiv-2.png' alt='' width='540' height='400' /><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
