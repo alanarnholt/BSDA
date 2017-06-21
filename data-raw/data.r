@@ -1467,3 +1467,28 @@ dplyr::filter(Gallup, demographics == "Gender: Male" | demographics == "Gender: 
   theme_bw() + 
   labs(y = "Fraction")
 ##
+#######################################################
+Gasoline <- read_csv("Gasoline.csv")
+Gasoline
+devtools::use_data(Gasoline, overwrite = TRUE)
+# Examples
+stem(Gasoline$price)
+######################################################
+German <- read_csv("German.csv")
+German <- German %>%
+  mutate(student = row.names(German)) %>%
+  select(-differ, -sgnrnks) %>%
+  gather(Before, After, key = "when", value = "errors")
+German
+devtools::use_data(German, overwrite = TRUE)
+## Examples
+t.test(errors ~ when, data = German, paired = TRUE)
+wilcox.test(errors ~ when, data = German)
+## Not run
+T8 <- tidyr::spread(German, when, errors) %>%
+  mutate(di = After - Before, adi = abs(di), rk = rank(adi), srk = sign(di)*rk)
+T8
+qqnorm(T8$di)
+qqline(T8$di)
+t.test(T8$srk)
+##

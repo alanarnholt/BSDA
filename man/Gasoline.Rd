@@ -4,19 +4,26 @@
 \name{Gasoline}
 \alias{Gasoline}
 \title{Price of regular unleaded gasoline obtained from 25 service stations}
-\format{A data frame with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on the following variable.
 \describe{ 
-\item{price}{a numeric vector} 
+\item{price}{price for one gallon of gasoline} 
 }}
+\usage{
+Gasoline
+}
 \description{
 Data for Exercise 1.45
 }
 \examples{
 
-str(Gasoline)
-attach(Gasoline)
-stem(price)
-detach(Gasoline)
+stem(Gasoline$price)
+
+\dontrun{
+ggplot2::ggplot(data = Gasoline, aes(x = factor(1), y = price)) + 
+    geom_violin() + 
+    geom_jitter() + 
+    theme_bw()
+}
 
 }
 \references{

@@ -3732,21 +3732,25 @@ NULL
 #' 
 #' @name Gasoline
 #' @docType data
-#' @format A data frame with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on the following variable.
 #' \describe{ 
-#' \item{price}{a numeric vector} 
+#' \item{price}{price for one gallon of gasoline} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Gasoline)
-#' attach(Gasoline)
-#' stem(price)
-#' detach(Gasoline)
+#' stem(Gasoline$price)
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Gasoline, aes(x = factor(1), y = price)) + 
+#'     geom_violin() + 
+#'     geom_jitter() + 
+#'     theme_bw()
+#' }
+#' 
+"Gasoline"
 
 
 
@@ -3760,27 +3764,31 @@ NULL
 #' 
 #' @name German
 #' @docType data
-#' @format A data frame with 10 observations on the following 4 variables.
+#' @format A data frame/tibble with 10 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Before}{a numeric vector} 
-#' \item{After}{a numeric vector} 
-#' \item{differ}{a numeric vector}
-#' \item{sgnrnks}{a numeric vector} 
+#' \item{student}{a character variable indicating student number} 
+#' \item{when}{a character variable with either code\{Before} or \code{After} 
+#' to indicate when the student received experimental instruction in German
+#' \item{errors}{A vector containing the number of errors}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(German)
-#' attach(German)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' wilcox.test(Before,After,paired=TRUE)
-#' detach(German)
+#' t.test(errors ~ when, data = German, paired = TRUE)
+#' wilcox.test(errors ~ when, data = German)
 #' 
-NULL
+#' \dontrun{
+#' T8 <- tidyr::spread(German, when, errors) %>%
+#' mutate(di = After - Before, adi = abs(di), rk = rank(adi), srk = sign(di)*rk)
+#' T8
+#' qqnorm(T8$di)
+#' qqline(T8$di)
+#' t.test(T8$srk)
+#' }
+#' 
+"German"
 
 
 
