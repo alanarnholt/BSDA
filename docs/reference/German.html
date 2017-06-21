@@ -89,14 +89,15 @@ experimental course in German</h1>
     <p>Data for Exercise 7.60</p>
     
 
+    <pre class="usage"><span class='no'>German</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 10 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>Before</dt><dd><p>a numeric vector</p></dd> 
-<dt>After</dt><dd><p>a numeric vector</p></dd> 
-<dt>differ</dt><dd><p>a numeric vector</p></dd>
-<dt>sgnrnks</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 10 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>student</dt><dd><p>a character variable indicating student number</p></dd> 
+<dt>when</dt><dd><p>a character variable with either code{Before</p></dd> or After 
+to indicate when the student received experimental instruction in German
+<dt>errors</dt><dd><p>A vector containing the number of errors</p></dd>
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -107,23 +108,32 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>German</span>)</div><div class='output co'>#&gt; 'data.frame':	10 obs. of  4 variables:
-#&gt;  $ Before : int  10 6 8 7 7 12 4 0 7 10
-#&gt;  $ After  : int  6 4 5 3 6 8 0 1 8 5
-#&gt;  $ differ : int  4 2 3 4 1 4 4 -1 -1 5
-#&gt;  $ sgnrnks: num  7.5 4 5 7.5 2 7.5 7.5 -2 -2 10</div><div class='input'><span class='fu'>attach</span>(<span class='no'>German</span>)
-<span class='fu'>qqnorm</span>(<span class='no'>differ</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>differ</span>)</div><img src='German-5.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Shapiro-Wilk normality test
+<span class='fu'>t.test</span>(<span class='no'>errors</span> ~ <span class='no'>when</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>German</span>, <span class='kw'>paired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Paired t-test
 #&gt; 
-#&gt; data:  differ
-#&gt; W = 0.85154, p-value = 0.06059
-#&gt; </div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>Before</span>,<span class='no'>After</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
-#&gt; 	Wilcoxon signed rank test with continuity correction
+#&gt; data:  errors by when
+#&gt; t = -3.638, df = 9, p-value = 0.005417
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -4.0545188 -0.9454812
+#&gt; sample estimates:
+#&gt; mean of the differences 
+#&gt;                    -2.5 
+#&gt; </div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>errors</span> ~ <span class='no'>when</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>German</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
+#&gt; 	Wilcoxon rank sum test with continuity correction
 #&gt; 
-#&gt; data:  Before and After
-#&gt; V = 51, p-value = 0.01798
+#&gt; data:  errors by when
+#&gt; W = 26, p-value = 0.0739
 #&gt; alternative hypothesis: true location shift is not equal to 0
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>German</span>)</div></pre>
+#&gt; </div><div class='input'>
+<span class='fu'>not_run</span>({
+  <span class='no'>T8</span> <span class='kw'>&lt;-</span> <span class='kw'>tidyr</span><span class='kw'>::</span><span class='fu'>spread</span>(<span class='no'>German</span>, <span class='no'>when</span>, <span class='no'>errors</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>mutate</span>(<span class='kw'>di</span> <span class='kw'>=</span> <span class='no'>After</span> - <span class='no'>Before</span>, <span class='kw'>adi</span> <span class='kw'>=</span> <span class='fu'>abs</span>(<span class='no'>di</span>), <span class='kw'>rk</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>adi</span>), <span class='kw'>srk</span> <span class='kw'>=</span> <span class='fu'>sign</span>(<span class='no'>di</span>)*<span class='no'>rk</span>)
+  <span class='no'>T8</span>
+  <span class='fu'>qqnorm</span>(<span class='no'>T8</span>$<span class='no'>di</span>)
+  <span class='fu'>qqline</span>(<span class='no'>T8</span>$<span class='no'>di</span>)
+  <span class='fu'>t.test</span>(<span class='no'>T8</span>$<span class='no'>srk</span>)
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

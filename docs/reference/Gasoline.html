@@ -87,11 +87,12 @@
     <p>Data for Exercise 1.45</p>
     
 
+    <pre class="usage"><span class='no'>Gasoline</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 25 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>price</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 25 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>price</dt><dd><p>price for one gallon of gasoline</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,16 +103,20 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Gasoline</span>)</div><div class='output co'>#&gt; 'data.frame':	25 obs. of  1 variable:
-#&gt;  $ price: num  1.46 1.52 1.5 1.52 1.48 1.6 1.5 1.49 1.48 1.5 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Gasoline</span>)
-<span class='fu'>stem</span>(<span class='no'>price</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Gasoline</span>$<span class='no'>price</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the left of the |
 #&gt; 
 #&gt;   14 | 688899999
 #&gt;   15 | 000000011222
 #&gt;   15 | 9
 #&gt;   16 | 001
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Gasoline</span>)</div></pre>
+#&gt; </div><div class='input'>
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Gasoline</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'>factor</span>(<span class='fl'>1</span>), <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>price</span>)) +
+      <span class='fu'>geom_violin</span>() +
+      <span class='fu'>geom_jitter</span>() +
+      <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
