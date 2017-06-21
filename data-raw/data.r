@@ -1419,3 +1419,51 @@ T1 <- xtabs(~region + cost, data = Funeral)
 T1
 chisq.test(T1)  
 rm(T1)
+####################################
+Galaxie <- read_csv("Galaxie.csv")
+devtools::use_data(Galaxie, overwrite = TRUE)
+## Examples
+EDA(Galaxie$velocity)
+#####################################
+## Creating Gallup
+mat <- matrix(data = c(43, 52, 5, 42, 53, 5, 44, 51, 5, 
+                       30, 67, 3, 45, 50, 5, 58, 33, 9, 
+                       27, 67, 6, 26, 70, 4, 45, 52, 3, 
+                       54, 39, 7, 49, 47, 4, 39, 55, 6), 
+              nrow = 12, byrow = TRUE)
+dimnames(mat) <- list(demographics = c("National","Gender: Male","Gender: Female",
+                                       "Education: College","Education: High School",
+                                       "Education: Grade School",
+                                       "Age: 18-24", "Age: 25-29", "Age: 30-49", 
+                                       "Age: 50-older", "Religion: Protestant",
+                                       "Religion: Catholic"), 
+                      opinion = c("Criminal", "Not Criminal", "No Opinion"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Gallup <- vcdExtra::expand.dft(matDF)
+rm(mat, matT, matDF)
+Gallup$demographics <- factor(Gallup$demographics, 
+                              levels = c("National","Gender: Male","Gender: Female",
+                                         "Education: College","Education: High School",
+                                         "Education: Grade School",
+                                         "Age: 18-24", "Age: 25-29", "Age: 30-49", 
+                                         "Age: 50-older", "Religion: Protestant",
+                                         "Religion: Catholic"))
+Gallup$opinion <- factor(Gallup$opinion, 
+                         levels = c("Criminal", "Not Criminal", "No Opinion"))
+Gallup <- as_tibble(Gallup)
+Gallup
+devtools::use_data(Gallup, overwrite = TRUE)
+## Examples
+T1 <- xtabs(~demographics + opinion, data = Gallup)
+T1
+t(T1[c(2, 3), ])
+barplot(t(T1[c(2, 3), ]))
+barplot(t(T1[c(2, 3), ]), beside = TRUE)
+# not run
+dplyr::filter(Gallup, demographics == "Gender: Male" | demographics == "Gender: Female") %>%
+  ggplot2::ggplot(aes(x = demographics, fill = opinion)) + 
+  geom_bar() + 
+  theme_bw() + 
+  labs(y = "Fraction")
+##

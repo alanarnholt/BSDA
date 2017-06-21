@@ -5,47 +5,35 @@
 \alias{Gallup}
 \title{Results of a Gallup poll on possession of marijuana as a criminal offense
 conducted in 1980}
-\format{A data frame with 4 observations on the following 16 variables.
+\format{A data frame/tibble with 1,200 observations on the following 2 variables.
 \describe{ 
-\item{Gender}{a factor with levels \code{} \code{Female}
-\code{Male}} 
-\item{Crime1}{a numeric vector}
-\item{No.Crime1}{a numeric vector} 
-\item{No.Opinion1}{a numeric vector} 
-\item{Education}{a factor with levels \code{}
-\code{College} \code{Grade School} \code{High School}}
-\item{Crime2}{a numeric vector} 
-\item{No.Crime2}{a numeric vector} 
-\item{No.Opinion2}{a numeric vector} 
-\item{Age}{a factor with levels \code{18-24} \code{25-29} \code{30-49} \code{50-older}}
-\item{Crime3}{a numeric vector} 
-\item{No.Crime3}{a numeric vector} 
-\item{No.Opinion3}{a numeric vector}
-\item{Religion}{a factor with levels \code{} \code{Catholic}
-\code{Protestant}} 
-\item{Crime4}{a numeric vector}
-\item{No.Crime4}{a numeric vector} 
-\item{No.Opinion4}{a numeric vector} 
+\item{demographics}{a factor with levels \code{National}, \code{Gender: Male}
+\code{Gender: Female}, \code{Education: College}, \code{Eduction: High School},
+\code{Education: Grade School}, \code{Age: 18-24}, \code{Age: 25-29}, \code{Age: 30-49},
+\code{Age: 50-older}, \code{Religion: Protestant}, and \code{Religion: Catholic}} 
+\item{opinion}{a factor with levels \code{Criminal}, \code{Not Criminal}, and \code{No Opinion}}
 }}
+\usage{
+Gallup
+}
 \description{
 Data for Exercise 2.76
 }
 \examples{
 
-INFO <- c(43,52,5,42,53,5,44,51,5,30,67,3,45,50,5,58,33,9,27,67,6,26,70,4,45,
-52,3,54,39,7,49,47,4,39,55,6)
-INFOmat <- matrix(INFO,nrow=12,byrow=TRUE)
-INFOmat
-rownames(INFOmat) <- c("National","Gender: Male","Gender: Female",
-"Education: College","Education: High School","Education: Grade School",
-"Age: 18-24", "Age: 25-29", "Age: 30-49", "Age: 50-older", "Religion: Protestant", 
-"Religion: Catholic")
-colnames(INFOmat) <- c("Criminal", "Not.Criminal", "No.Opinion")
-INFOmat
-barplot(t(INFOmat[2:3,]),beside=TRUE,legend=TRUE,names=c("Male","Female"),
-ylab="Percent of Population Opining")
-barplot((INFOmat[2:3,]),beside=TRUE,legend=TRUE,ylab="Percent of Population Opining" )
-remove(INFO,INFOmat)
+T1 <- xtabs(~demographics + opinion, data = Gallup)
+T1
+t(T1[c(2, 3), ])
+barplot(t(T1[c(2, 3), ]))
+barplot(t(T1[c(2, 3), ]), beside = TRUE)
+
+\dontrun{
+dplyr::filter(Gallup, demographics == "Gender: Male" | demographics == "Gender: Female") \%>\%
+ggplot2::ggplot(aes(x = demographics, fill = opinion)) + 
+geom_bar() + 
+theme_bw() + 
+labs(y = "Fraction")
+}
 
 }
 \references{

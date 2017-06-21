@@ -4,19 +4,19 @@
 \name{Galaxie}
 \alias{Galaxie}
 \title{Velocities of 82 galaxies in the Corona Borealis region}
-\format{A data frame with 82 observations on the following variable.
+\format{A data frame/tibble with 82 observations on the following variable.
 \describe{ 
-\item{velocity}{a numeric vector} 
+\item{velocity}{velocity measured in kilometers per second} 
 }}
+\usage{
+Galaxie
+}
 \description{
 Data for Example 5.2
 }
 \examples{
 
-str(Galaxie)
-attach(Galaxie)
-EDA(velocity)
-detach(Galaxie)
+EDA(Galaxie$velocity)
 
 }
 \references{
