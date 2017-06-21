@@ -4,7 +4,7 @@
 \name{Family}
 \alias{Family}
 \title{Size of family versus cost per person per week for groceries}
-\format{A data frame with 20 observations on the following 2 variables.
+\format{A data frame/tibble with 20 observations on the following 2 variables.
 \describe{ 
 \item{number}{a numeric vector} 
 \item{cost}{a numeric vector} 

@@ -1270,3 +1270,24 @@ T1 <- xtabs(~gender + candidate, data = Ferraro1)
 T1
 chisq.test(T1)  
 rm(T1)
+####################################
+## Create Ferraro2
+mat <- matrix(data = c(245, 155, 100, 185, 235, 80), nrow = 2, byrow = TRUE)
+dimnames(mat) <- list(gender = c("Men", "Women"), 
+                      candidate = c("Bush", "Ferraro", "Undecided"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Ferraro2 <- vcdExtra::expand.dft(matDF)
+rm(mat, matT, matDF)
+Ferraro2$gender <- factor(Ferraro2$gender, 
+                          levels = c("Men", "Women"))
+Ferraro2$candidate <- factor(Ferraro2$candidate, 
+                             levels = c("Bush", "Ferraro", "Undecided"))
+Ferraro2 <- as_tibble(Ferraro2)
+devtools::use_data(Ferraro2, overwrite = TRUE)
+Ferraro2
+# Examples
+T1 <- xtabs(~gender + candidate, data = Ferraro2)
+T1
+chisq.test(T1)  
+rm(T1)

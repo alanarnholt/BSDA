@@ -3125,7 +3125,7 @@ NULL
 #' 
 #' @name Executiv
 #' @docType data
-#' @format A data frame with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on the following variable.
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
@@ -3150,7 +3150,7 @@ NULL
 #' 
 #' @name Exercise
 #' @docType data
-#' @format A data frame with 30 observations on the following variable.
+#' @format A data frame/tibble with 30 observations on the following variable.
 #' \describe{ 
 #' \item{loss}{a numeric vector} 
 #' }
@@ -3208,7 +3208,7 @@ NULL
 #' 
 #' @name Faithful
 #' @docType data
-#' @format A data frame with 299 observations on the following 2 variables.
+#' @format A data frame/tibble with 299 observations on the following 2 variables.
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' \item{eruption}{a factor with levels \code{1} and \code{2}} 
@@ -3242,7 +3242,7 @@ NULL
 #' 
 #' @name Family
 #' @docType data
-#' @format A data frame with 20 observations on the following 2 variables.
+#' @format A data frame/tibble with 20 observations on the following 2 variables.
 #' \describe{ 
 #' \item{number}{a numeric vector} 
 #' \item{cost}{a numeric vector} 
@@ -3305,26 +3305,24 @@ NULL
 #' 
 #' @name Ferraro2
 #' @docType data
-#' @format A data frame with 2 observations on the following 4 variables.
+#' @format A data frame/tibble with 1000 observations on the following 2 variables.
 #' \describe{ 
 #' \item{gender}{a factor with levels \code{Men}
 #' \code{Women}} 
-#' \item{Bush}{a numeric vector} 
-#' \item{Ferraro}{a numeric vector} 
-#' \item{undecide}{a numeric vector} 
+#' \item{candidate}{a character vector of 1984 president and vice-president candidates} 
 #' }
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Ferraro2)
-#' attach(Ferraro2)
-#' Ferraro2
-#' chisq.test(Ferraro2[,2:4])
-#' detach(Ferraro2)
+#' T1 <- xtabs(~gender + candidate, data = Ferraro2)
+#' T1
+#' chisq.test(T1)  
+#' rm(T1)
 #' 
-NULL
+"Ferraro2"
 
 
 
