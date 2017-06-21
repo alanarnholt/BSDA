@@ -87,11 +87,12 @@
     <p>Data for Exercise 6.53</p>
     
 
+    <pre class="usage"><span class='no'>Freshman</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>A data frame with 30 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>age</dt><dd><p>a numeric vector</p></dd> 
+<dt>age</dt><dd><p>a numeric vector of ages</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,12 +103,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Freshman</span>)</div><div class='output co'>#&gt; 'data.frame':	30 obs. of  1 variable:
-#&gt;  $ age: int  19 18 19 22 18 21 20 19 19 28 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Freshman</span>)
-<span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>age</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>19</span>)</div><div class='output co'>#&gt; 
+<span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>Freshman</span>$<span class='no'>age</span>, <span class='kw'>md</span> <span class='kw'>=</span> <span class='fl'>19</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  age
+#&gt; data:  Freshman$age
 #&gt; s = 13, p-value = 0.09625
 #&gt; alternative hypothesis: true median is not equal to 19
 #&gt; 95 percent confidence interval:
@@ -118,7 +117,8 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
 #&gt; Lower Achieved CI     0.9013     19     20
 #&gt; Interpolated CI       0.9500     19     20
-#&gt; Upper Achieved CI     0.9572     19     20</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Freshman</span>)</div></pre>
+#&gt; Upper Achieved CI     0.9572     19     20</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

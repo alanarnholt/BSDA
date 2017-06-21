@@ -107,10 +107,12 @@ Duxbury</p>
 <span class='fu'>str</span>(<span class='no'>Gym</span>)</div><div class='output co'>#&gt; 'data.frame':	8 obs. of  3 variables:
 #&gt;  $ age   : int  2 3 4 4 5 6 7 7
 #&gt;  $ number: int  5 5 6 3 10 9 11 13
-#&gt;  $ x.    : int  2 4 6 8 10 NA NA NA</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Gym</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison:</span>
+#&gt;  $ x.    : int  2 4 6 8 10 NA NA NA</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Gym</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 5):</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    number</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 7):</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    number</span></div><div class='input'><span class='fu'>plot</span>(<span class='no'>age</span>,<span class='no'>number</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>number</span>~<span class='no'>age</span>)
-<span class='fu'>abline</span>(<span class='no'>model</span>)</div><img src='Gym-7.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>cor</span>(<span class='no'>age</span>,<span class='no'>number</span>)</div><div class='output co'>#&gt; [1] 0.8589023</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Gym</span>)</div></pre>
+<span class='fu'>abline</span>(<span class='no'>model</span>)</div><img src='Gym-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>cor</span>(<span class='no'>age</span>,<span class='no'>number</span>)</div><div class='output co'>#&gt; [1] 0.8589023</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Gym</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

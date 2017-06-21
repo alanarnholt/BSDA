@@ -87,11 +87,12 @@
     <p>Data for Statistical Insight Chapter 2</p>
     
 
+    <pre class="usage"><span class='no'>Florida2000</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 67 observations on the following 12 variables.</p><dl class='dl-horizontal'>
-<dt>County</dt><dd><p>a factor with levels <code>ALACHUA</code>
+    <p>A data frame/tibble with 67 observations on the following 12 variables.</p><dl class='dl-horizontal'>
+<dt>county</dt><dd><p>a character variable with values <code>ALACHUA</code>
 <code>BAKER</code> <code>BAY</code> <code>BRADFORD</code> <code>BREVARD</code> <code>BROWARD</code>
 <code>CALHOUN</code> <code>CHARLOTTE</code> <code>CITRUS</code> <code>CLAY</code> <code>COLLIER</code>
 <code>COLUMBIA</code> <code>DADE</code> <code>DE SOTO</code> <code>DIXIE</code> <code>DUVAL</code>
@@ -106,17 +107,17 @@
 <code>PUTNAM</code> <code>SANTA ROSA</code> <code>SARASOTA</code> <code>SEMINOLE</code> <code>ST.
 JOHNS</code> <code>ST. LUCIE</code> <code>SUMTER</code> <code>SUWANNEE</code> <code>TAYLOR</code>
 <code>UNION</code> <code>VOLUSIA</code> <code>WAKULLA</code> <code>WALTON</code> <code>WASHINGTON</code></p></dd>
-<dt>GORE</dt><dd><p>a numeric vector</p></dd> 
-<dt>BUSH</dt><dd><p>a numeric vector</p></dd>
-<dt>BUCHANAN</dt><dd><p>a numeric vector</p></dd> 
-<dt>NADER</dt><dd><p>a numeric vector</p></dd> 
-<dt>BROWNE</dt><dd><p>a numeric vector</p></dd> 
-<dt>HAGELIN</dt><dd><p>a numeric vector</p></dd> 
-<dt>HARRIS</dt><dd><p>a numeric vector</p></dd>
-<dt>MCREYNOLDS</dt><dd><p>a numeric vector</p></dd> 
-<dt>MOOREHEAD</dt><dd><p>a numeric vector</p></dd> 
-<dt>PHILLIPS</dt><dd><p>a numeric vector</p></dd>
-<dt>Total</dt><dd><p>a numeric vector</p></dd> 
+<dt>gore</dt><dd><p>a numeric vector</p></dd> 
+<dt>bush</dt><dd><p>a numeric vector</p></dd>
+<dt>buchanan</dt><dd><p>a numeric vector</p></dd> 
+<dt>nader</dt><dd><p>a numeric vector</p></dd> 
+<dt>browne</dt><dd><p>a numeric vector</p></dd> 
+<dt>hagelin</dt><dd><p>a numeric vector</p></dd> 
+<dt>harris</dt><dd><p>a numeric vector</p></dd>
+<dt>mcreynolds</dt><dd><p>a numeric vector</p></dd> 
+<dt>moorehead</dt><dd><p>a numeric vector</p></dd> 
+<dt>phillips</dt><dd><p>a numeric vector</p></dd>
+<dt>total</dt><dd><p>a numeric vector</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -127,21 +128,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Florida2000</span>)</div><div class='output co'>#&gt; 'data.frame':	67 obs. of  12 variables:
-#&gt;  $ County    : Factor w/ 67 levels "ALACHUA","BAKER",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ GORE      : int  47300 2392 18850 3072 97318 386518 2155 29641 25501 14630 ...
-#&gt;  $ BUSH      : int  34062 5610 38637 5413 115185 177279 2873 35419 29744 41745 ...
-#&gt;  $ BUCHANAN  : int  262 73 248 65 570 789 90 182 270 186 ...
-#&gt;  $ NADER     : int  3215 53 828 84 4470 7099 39 1461 1378 562 ...
-#&gt;  $ BROWNE    : int  658 17 171 28 643 1212 10 127 194 204 ...
-#&gt;  $ HAGELIN   : int  42 3 18 2 39 128 1 15 16 14 ...
-#&gt;  $ HARRIS    : int  4 0 5 0 11 49 0 6 5 1 ...
-#&gt;  $ MCREYNOLDS: int  658 0 3 0 11 35 1 3 0 3 ...
-#&gt;  $ MOOREHEAD : int  21 3 37 3 76 123 3 12 28 9 ...
-#&gt;  $ PHILLIPS  : int  20 3 18 2 72 74 2 19 18 6 ...
-#&gt;  $ Total     : int  86242 8154 58815 8669 218395 573306 5174 66885 57154 57360 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Florida2000</span>)
-<span class='fu'>plot</span>(<span class='no'>Total</span>,<span class='no'>BUCHANAN</span>,<span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Total votes cast (in thousands)"</span>,
-<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Votes for Buchanan"</span>)</div><img src='Florida2000-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Florida2000</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>buchanan</span> ~ <span class='no'>total</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Florida2000</span>,
+<span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"Total votes cast (in thousands)"</span>,
+<span class='kw'>ylab</span> <span class='kw'>=</span> <span class='st'>"Votes for Buchanan"</span>)</div><img src='Florida2000-2.png' alt='' width='540' height='400' /><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

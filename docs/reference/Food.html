@@ -87,11 +87,12 @@
     <p>Data for Exercise 5.106</p>
     
 
+    <pre class="usage"><span class='no'>Food</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 40 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>food</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 40 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>expenditure</dt><dd><p>a numeric vector recording annual food expenditure (in dollars) in the state of Ohio.</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,14 +103,13 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Food</span>)</div><div class='output co'>#&gt; 'data.frame':	40 obs. of  1 variable:
-#&gt;  $ food: int  2845 3170 2352 4978 3820 2475 3160 5780 2175 2648 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Food</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>food</span>)</div><div class='output co'>#&gt; [1] "food"</div><img src='Food-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt;    Size (n)     Missing     Minimum      1st Qu        Mean      Median 
+<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Food</span>$<span class='no'>expenditure</span>)</div><div class='output co'>#&gt; [1] "Food$expenditure"</div><img src='Food-3.png' alt='' width='540' height='400' /><div class='output co'>#&gt;    Size (n)     Missing     Minimum      1st Qu        Mean      Median 
 #&gt;      40.000       0.000    1180.000    2648.000    3609.600    3165.000 
 #&gt;      TrMean      3rd Qu        Max.      Stdev.        Var.     SE Mean 
 #&gt;    3486.139    4180.000    8147.000    1509.300 2277985.836     238.641 
 #&gt;      I.Q.R.       Range    Kurtosis    Skewness    SW p-val 
-#&gt;    1532.000    6967.000       1.331       1.300       0.000 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Food</span>)</div></pre>
+#&gt;    1532.000    6967.000       1.331       1.300       0.000 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

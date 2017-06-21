@@ -87,15 +87,13 @@
     <p>Data for Exercises 5.83, 5.119, and 7.29</p>
     
 
+    <pre class="usage"><span class='no'>Fish</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 767 observations on the following 5 variables.</p><dl class='dl-horizontal'>
-<dt>length</dt><dd><p>a numeric vector</p></dd> 
-<dt>smalmesh</dt><dd><p>a numeric vector</p></dd> 
-<dt>largmesh</dt><dd><p>a numeric vector</p></dd>
-<dt>smallmesh</dt><dd><p>a numeric vector</p></dd> 
-<dt>largemesh</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 1534 observations on two variables.</p><dl class='dl-horizontal'>
+<dt>codend</dt><dd><p>a character variable with values <code>smallmesh</code> and <code>largemesh</code></p></dd> 
+<dt>length</dt><dd><p>length of the fish measured in centimeters</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -106,16 +104,11 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Fish</span>)</div><div class='output co'>#&gt; 'data.frame':	767 obs. of  5 variables:
-#&gt;  $ length   : int  24 25 26 27 28 29 30 31 32 33 ...
-#&gt;  $ smalmesh : int  1 1 3 14 30 49 60 50 70 108 ...
-#&gt;  $ largmesh : int  0 0 0 1 5 19 29 51 71 120 ...
-#&gt;  $ smallmesh: int  24 25 26 26 26 27 27 27 27 27 ...
-#&gt;  $ largemesh: int  27 28 28 28 28 28 29 29 29 29 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Fish</span>)
-<span class='fu'>median</span>(<span class='no'>smallmesh</span>,<span class='kw'>na.rm</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] 33</div><div class='input'><span class='fu'>median</span>(<span class='no'>largemesh</span>)</div><div class='output co'>#&gt; [1] 34</div><div class='input'><span class='fu'>IQR</span>(<span class='no'>smallmesh</span>,<span class='kw'>na.rm</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] 4</div><div class='input'><span class='fu'>IQR</span>(<span class='no'>largemesh</span>)</div><div class='output co'>#&gt; [1] 3</div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>smallmesh</span>,<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.99</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>tapply</span>(<span class='no'>Fish</span>$<span class='no'>length</span>, <span class='no'>Fish</span>$<span class='no'>codend</span>, <span class='no'>median</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; largemesh smallmesh 
+#&gt;        34        33 </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>Fish</span>$<span class='no'>length</span>[<span class='no'>Fish</span>$<span class='no'>codend</span> <span class='kw'>==</span> <span class='st'>"smallmesh"</span>], <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.99</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  smallmesh
+#&gt; data:  Fish$length[Fish$codend == "smallmesh"]
 #&gt; s = 739, p-value &lt; 2.2e-16
 #&gt; alternative hypothesis: true median is not equal to 0
 #&gt; 99 percent confidence interval:
@@ -126,32 +119,10 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
 #&gt; Lower Achieved CI     0.9877     33     34
 #&gt; Interpolated CI       0.9900     33     34
-#&gt; Upper Achieved CI     0.9900     33     34</div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>largemesh</span>,<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.99</span>)</div><div class='output co'>#&gt; 
-#&gt; 	One-sample Sign-Test
-#&gt; 
-#&gt; data:  largemesh
-#&gt; s = 767, p-value &lt; 2.2e-16
-#&gt; alternative hypothesis: true median is not equal to 0
-#&gt; 99 percent confidence interval:
-#&gt;  34 35
-#&gt; sample estimates:
-#&gt; median of x 
-#&gt;          34 
-#&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
-#&gt; Lower Achieved CI     0.9886     34     35
-#&gt; Interpolated CI       0.9900     34     35
-#&gt; Upper Achieved CI     0.9907     34     35</div><div class='input'><span class='fu'>t.test</span>(<span class='no'>smallmesh</span>,<span class='no'>largemesh</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Welch Two Sample t-test
-#&gt; 
-#&gt; data:  smallmesh and largemesh
-#&gt; t = -7.0137, df = 1485.2, p-value = 3.514e-12
-#&gt; alternative hypothesis: true difference in means is not equal to 0
-#&gt; 95 percent confidence interval:
-#&gt;  -1.5251693 -0.8585092
-#&gt; sample estimates:
-#&gt; mean of x mean of y 
-#&gt;  33.42355  34.61538 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Fish</span>)</div></pre>
+#&gt; Upper Achieved CI     0.9900     33     34</div><div class='input'><span class='fu'>not_run</span>({
+  <span class='kw'>dplyr</span><span class='kw'>::</span><span class='fu'>group_by</span>(<span class='no'>Fish</span>, <span class='no'>codend</span>) <span class='kw'>%&gt;%</span>
+      <span class='fu'>summarize</span>(<span class='kw'>MEDIAN</span> <span class='kw'>=</span> <span class='fu'>median</span>(<span class='no'>length</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

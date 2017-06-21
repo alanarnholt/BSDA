@@ -87,10 +87,11 @@
     <p>Data for Exercise 5.11</p>
     
 
+    <pre class="usage"><span class='no'>Firstchi</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 87 observations on the following variable.</p><dl class='dl-horizontal'>
+    <p>A data frame/tibble with 87 observations on the following variable.</p><dl class='dl-horizontal'>
 <dt>age</dt><dd><p>a numeric vector</p></dd> 
 </dl>
     
@@ -102,14 +103,13 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Firstchi</span>)</div><div class='output co'>#&gt; 'data.frame':	87 obs. of  1 variable:
-#&gt;  $ age: int  30 18 35 22 23 22 36 24 23 28 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Firstchi</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>age</span>)</div><div class='output co'>#&gt; [1] "age"</div><img src='Firstchi-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Firstchi</span>$<span class='no'>age</span>)</div><div class='output co'>#&gt; [1] "Firstchi$age"</div><img src='Firstchi-3.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   87.000    0.000   14.000   20.000   23.977   23.000   23.658   26.000 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;   42.000    6.254   39.116    0.670    6.000   28.000    0.364    0.957 
 #&gt; SW p-val 
-#&gt;    0.000 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Firstchi</span>)</div></pre>
+#&gt;    0.000 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

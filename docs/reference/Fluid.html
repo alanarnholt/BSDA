@@ -89,20 +89,13 @@ stress</h1>
     <p>Data for Exercise 5.76</p>
     
 
+    <pre class="usage"><span class='no'>Fluid</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 76 observations on the following 10 variables.</p><dl class='dl-horizontal'>
-<dt>X26kV</dt><dd><p>a numeric vector</p></dd> 
-<dt>X28kV</dt><dd><p>a numeric vector</p></dd> 
-<dt>X30kV</dt><dd><p>a numeric vector</p></dd>
-<dt>X32kV</dt><dd><p>a numeric vector</p></dd> 
-<dt>X34kV</dt><dd><p>a numeric vector</p></dd> 
-<dt>X36kV</dt><dd><p>a numeric vector</p></dd> 
-<dt>X38kV</dt><dd><p>a numeric vector</p></dd> 
-<dt>response</dt><dd><p>a numeric vector</p></dd>
-<dt>group</dt><dd><p>a numeric vector</p></dd> 
-<dt>ln.resp.</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 76 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>kilovolts</dt><dd><p>a character variable showing kilowats</p></dd> 
+<dt>time</dt><dd><p>breakdown time (in minutes)</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -113,28 +106,62 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Fluid</span>)</div><div class='output co'>#&gt; 'data.frame':	76 obs. of  10 variables:
-#&gt;  $ X26kV   : num  5.79 1579.52 2323.7 NA NA ...
-#&gt;  $ X28kV   : num  68.8 108.3 110.6 426.1 1067.6 ...
-#&gt;  $ X30kV   : num  7.74 17.05 20.46 21.02 22.66 ...
-#&gt;  $ X32kV   : num  0.27 0.4 0.69 0.79 2.75 ...
-#&gt;  $ X34kV   : num  0.19 0.78 0.96 1.31 2.78 3.16 4.15 4.67 4.85 6.5 ...
-#&gt;  $ X36kV   : num  0.35 0.59 0.96 0.99 1.69 1.97 2.07 2.59 2.71 2.9 ...
-#&gt;  $ X38kV   : num  0.09 0.39 0.47 0.73 0.74 1.13 1.4 2.38 NA NA ...
-#&gt;  $ response: num  5.79 1579.52 2323.7 68.85 108.29 ...
-#&gt;  $ group   : int  1 1 1 2 2 2 2 2 3 3 ...
-#&gt;  $ ln.resp.: num  1.76 7.36 7.75 4.23 4.68 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Fluid</span>)
-<span class='fu'>stem</span>(<span class='no'>X34kV</span>)</div><div class='output co'>#&gt; 
+<span class='no'>DF1</span> <span class='kw'>&lt;-</span> <span class='no'>Fluid</span>[<span class='no'>Fluid</span>$<span class='no'>kilovolts</span> <span class='kw'>==</span> <span class='st'>"34kV"</span>, ]
+<span class='no'>DF1</span></div><div class='output co'>#&gt; # A tibble: 19 x 2
+#&gt;    kilovolts  time
+#&gt;        &lt;chr&gt; &lt;dbl&gt;
+#&gt;  1      34kV  0.19
+#&gt;  2      34kV  0.78
+#&gt;  3      34kV  0.96
+#&gt;  4      34kV  1.31
+#&gt;  5      34kV  2.78
+#&gt;  6      34kV  3.16
+#&gt;  7      34kV  4.15
+#&gt;  8      34kV  4.67
+#&gt;  9      34kV  4.85
+#&gt; 10      34kV  6.50
+#&gt; 11      34kV  7.35
+#&gt; 12      34kV  8.01
+#&gt; 13      34kV  8.27
+#&gt; 14      34kV 12.06
+#&gt; 15      34kV 31.75
+#&gt; 16      34kV 32.52
+#&gt; 17      34kV 33.91
+#&gt; 18      34kV 36.71
+#&gt; 19      34kV 72.89</div><div class='input'><span class='co'># OR</span>
+<span class='no'>DF2</span> <span class='kw'>&lt;-</span> <span class='fu'>subset</span>(<span class='no'>Fluid</span>, <span class='kw'>subset</span> <span class='kw'>=</span> <span class='no'>kilovolts</span> <span class='kw'>==</span> <span class='st'>"34kV"</span>)
+<span class='no'>DF2</span></div><div class='output co'>#&gt; # A tibble: 19 x 2
+#&gt;    kilovolts  time
+#&gt;        &lt;chr&gt; &lt;dbl&gt;
+#&gt;  1      34kV  0.19
+#&gt;  2      34kV  0.78
+#&gt;  3      34kV  0.96
+#&gt;  4      34kV  1.31
+#&gt;  5      34kV  2.78
+#&gt;  6      34kV  3.16
+#&gt;  7      34kV  4.15
+#&gt;  8      34kV  4.67
+#&gt;  9      34kV  4.85
+#&gt; 10      34kV  6.50
+#&gt; 11      34kV  7.35
+#&gt; 12      34kV  8.01
+#&gt; 13      34kV  8.27
+#&gt; 14      34kV 12.06
+#&gt; 15      34kV 31.75
+#&gt; 16      34kV 32.52
+#&gt; 17      34kV 33.91
+#&gt; 18      34kV 36.71
+#&gt; 19      34kV 72.89</div><div class='input'><span class='fu'>stem</span>(<span class='no'>DF2</span>$<span class='no'>time</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the right of the |
 #&gt; 
 #&gt;   0 | 01113345577882
 #&gt;   2 | 2347
 #&gt;   4 | 
 #&gt;   6 | 3
-#&gt; </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>X34kV</span>)</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>DF2</span>$<span class='no'>time</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  X34kV
+#&gt; data:  DF2$time
 #&gt; s = 19, p-value = 3.815e-06
 #&gt; alternative hypothesis: true median is not equal to 0
 #&gt; 95 percent confidence interval:
@@ -145,7 +172,10 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt  U.E.pt
 #&gt; Lower Achieved CI     0.9364 3.1600 12.0600
 #&gt; Interpolated CI       0.9500 3.0438 18.0828
-#&gt; Upper Achieved CI     0.9808 2.7800 31.7500</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Fluid</span>)</div></pre>
+#&gt; Upper Achieved CI     0.9808 2.7800 31.7500</div><div class='input'><span class='fu'>not_run</span>({
+  <span class='no'>DF3</span> <span class='kw'>&lt;-</span> <span class='kw'>dplyr</span><span class='kw'>::</span><span class='fu'>filter</span>(<span class='no'>Fluid</span>, <span class='no'>kilovolts</span> <span class='kw'>==</span> <span class='st'>"34kV"</span>)
+  <span class='no'>DF3</span>
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

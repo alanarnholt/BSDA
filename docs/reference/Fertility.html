@@ -87,11 +87,12 @@
     <p>Data for Exercise 1.125</p>
     
 
+    <pre class="usage"><span class='no'>Fertility</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 51 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>State</dt><dd><p>a factor with levels <code>Alabama</code>
+    <p>A data frame/tibble with 51 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>state</dt><dd><p>a character variable with values <code>Alabama</code>
 <code>Alaska</code> <code>Arizona</code> <code>Arkansas</code> <code>California</code>
 <code>Colorado</code> <code>Connecticut</code> <code>Delaware</code> <code>District of
 Colunbia</code> <code>Florida</code> <code>Georgia</code> <code>Hawaii</code> <code>Idaho</code>
@@ -115,11 +116,7 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Fertility</span>)</div><div class='output co'>#&gt; 'data.frame':	51 obs. of  2 variables:
-#&gt;  $ State: Factor w/ 51 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ rate : num  1.9 2.3 2.1 2 1.9 1.8 1.5 1.8 1.5 1.7 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Fertility</span>)
-<span class='fu'>library</span>(<span class='no'>lattice</span>)
-<span class='fu'>dotplot</span>(<span class='no'>State</span>~<span class='no'>rate</span>)</div><img src='Fertility-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>stem</span>(<span class='no'>rate</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Fertility</span>$<span class='no'>rate</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the left of the |
 #&gt; 
 #&gt;   14 | 0000
@@ -132,12 +129,13 @@ Duxbury</p>
 #&gt;   28 | 
 #&gt;   30 | 
 #&gt;   32 | 0
-#&gt; </div><div class='input'><span class='fu'>fivenum</span>(<span class='no'>rate</span>)</div><div class='output co'>#&gt; [1] 1.50 1.70 1.90 2.05 3.20</div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>rate</span>)</div><div class='output co'>#&gt; [1] "rate"</div><img src='Fertility-11.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+#&gt; </div><div class='input'><span class='fu'>fivenum</span>(<span class='no'>Fertility</span>$<span class='no'>rate</span>)</div><div class='output co'>#&gt; [1] 1.50 1.70 1.90 2.05 3.20</div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Fertility</span>$<span class='no'>rate</span>)</div><div class='output co'>#&gt; [1] "Fertility$rate"</div><img src='Fertility-7.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   51.000    0.000    1.500    1.700    1.906    1.900    1.883    2.100 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;    3.200    0.307    0.094    0.043    0.400    1.700    4.240    1.562 
 #&gt; SW p-val 
-#&gt;    0.000 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Fertility</span>)</div></pre>
+#&gt;    0.000 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
