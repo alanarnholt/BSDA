@@ -4,19 +4,19 @@
 \name{Food}
 \alias{Food}
 \title{Annual food expenditures for 40 single households in Ohio}
-\format{A data frame with 40 observations on the following variable.
+\format{A data frame/tibble with 40 observations on the following variable.
 \describe{ 
-\item{food}{a numeric vector} 
+\item{expenditure}{a numeric vector recording annual food expenditure (in dollars) in the state of Ohio.} 
 }}
+\usage{
+Food
+}
 \description{
 Data for Exercise 5.106
 }
 \examples{
 
-str(Food)
-attach(Food)
-EDA(food)
-detach(Food)
+EDA(Food$expenditure)
 
 }
 \references{

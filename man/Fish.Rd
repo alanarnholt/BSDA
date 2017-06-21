@@ -4,29 +4,25 @@
 \name{Fish}
 \alias{Fish}
 \title{Length and number of fish caught with small and large mesh codend}
-\format{A data frame with 767 observations on the following 5 variables.
+\format{A data frame/tibble with 1534 observations on two variables.
 \describe{ 
-\item{length}{a numeric vector} 
-\item{smalmesh}{a numeric vector} 
-\item{largmesh}{a numeric vector}
-\item{smallmesh}{a numeric vector} 
-\item{largemesh}{a numeric vector} 
+\item{codend}{a character variable with values \code{smallmesh} and \code{largemesh} } 
+\item{length}{length of the fish measured in centimeters} 
 }}
+\usage{
+Fish
+}
 \description{
 Data for Exercises 5.83, 5.119, and 7.29
 }
 \examples{
 
-str(Fish)
-attach(Fish)
-median(smallmesh,na.rm=TRUE)
-median(largemesh)
-IQR(smallmesh,na.rm=TRUE)
-IQR(largemesh)
-SIGN.test(smallmesh,conf.level=.99)
-SIGN.test(largemesh,conf.level=.99)
-t.test(smallmesh,largemesh)
-detach(Fish)
+tapply(Fish$length, Fish$codend, median, na.rm = TRUE)
+SIGN.test(Fish$length[Fish$codend == "smallmesh"], conf.level = 0.99)
+\dontrun{
+dplyr::group_by(Fish, codend) \%>\%
+    summarize(MEDIAN = median(length, na.rm = TRUE))
+}
 
 }
 \references{

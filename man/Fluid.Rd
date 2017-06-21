@@ -5,29 +5,30 @@
 \alias{Fluid}
 \title{Breakdown times of an insulating fluid under various levels of voltage
 stress}
-\format{A data frame with 76 observations on the following 10 variables.
+\format{A data frame/tibble with 76 observations on the following 2 variables.
 \describe{ 
-\item{X26kV}{a numeric vector} 
-\item{X28kV}{a numeric vector} 
-\item{X30kV}{a numeric vector}
-\item{X32kV}{a numeric vector} 
-\item{X34kV}{a numeric vector} 
-\item{X36kV}{a numeric vector} 
-\item{X38kV}{a numeric vector} 
-\item{response}{a numeric vector}
-\item{group}{a numeric vector} 
-\item{ln.resp.}{a numeric vector} 
+\item{kilovolts}{a character variable showing kilowats} 
+\item{time}{breakdown time (in minutes)} 
 }}
+\usage{
+Fluid
+}
 \description{
 Data for Exercise 5.76
 }
 \examples{
 
-str(Fluid)
-attach(Fluid)
-stem(X34kV)
-SIGN.test(X34kV)
-detach(Fluid)
+DF1 <- Fluid[Fluid$kilovolts == "34kV", ]
+DF1
+# OR
+DF2 <- subset(Fluid, subset = kilovolts == "34kV")
+DF2
+stem(DF2$time)
+SIGN.test(DF2$time)
+\dontrun{
+DF3 <- dplyr::filter(Fluid, kilovolts == "34kV") 
+DF3
+}
 
 }
 \references{

@@ -4,24 +4,29 @@
 \name{Fitness}
 \alias{Fitness}
 \title{Number of sit-ups before and after a physical fitness course}
-\format{A data frame with 9 observations on the following 2 variables.
+\format{A data frame/tibble with 18 observations on the following 3 variables.
 \describe{ 
-\item{Before}{a numeric vector} 
-\item{After}{a numeric vector} 
+\item{subject}{a character variable indicating subject number}
+\item{test}{a character variable with values \code{After} and \code{Before}} 
+\item{number}{a numeric vector recording the number of sit-ups performed in one minute} 
 }}
+\usage{
+Fitness
+}
 \description{
 Data for Exercise 7.71
 }
 \examples{
 
-str(Fitness)
-attach(Fitness)
-DIF <- After - Before
-qqnorm(DIF)
-qqline(DIF)
-shapiro.test(DIF)
-t.test(After,Before,paired=TRUE,alternative="greater")
-detach(Fitness)
+t.test(number ~ test, data = Fitness, alternative = "greater", paired = TRUE)
+\dontrun{
+Wide <- tidyr::spread(Fitness, test, number) \%>\%
+mutate(diff = After - Before)
+Wide
+qqnorm(Wide$diff)
+qqline(Wide$diff)
+t.test(Wide$diff, alternative = "greater")
+}
 
 }
 \references{

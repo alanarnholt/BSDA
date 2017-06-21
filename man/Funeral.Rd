@@ -4,24 +4,25 @@
 \name{Funeral}
 \alias{Funeral}
 \title{Cost of funeral by region of country}
-\format{A data frame with 4 observations on the following 4 variables.
+\format{A data frame with 400 observations on the following 2 variables.
 \describe{ 
-\item{Region}{a factor with levels \code{Central}
+\item{region}{a factor with levels \code{Central}
 \code{East} \code{South} \code{West}} 
-\item{Less}{a numeric vector}
-\item{Average}{a numeric vector} 
-\item{More}{a numeric vector} 
+\item{cost}{a factor with levels \code{less than expected}, \code{about what expected}, 
+and \code{more than expected}}
 }}
+\usage{
+Funeral
+}
 \description{
 Data for Exercise 8.54
 }
 \examples{
 
-str(Funeral)
-attach(Funeral)
-Funeral
-chisq.test(Funeral[,2:4])
-detach(Funeral)
+T1 <- xtabs(~region + cost, data = Funeral)
+T1
+chisq.test(T1)  
+rm(T1)
 
 }
 \references{

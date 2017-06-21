@@ -1291,3 +1291,131 @@ T1 <- xtabs(~gender + candidate, data = Ferraro2)
 T1
 chisq.test(T1)  
 rm(T1)
+################################
+# Fertility
+Fertility <- read_csv("Fertility.csv")
+Fertility <- Fertility %>%
+  rename(state= State)
+devtools::use_data(Fertility, overwrite = TRUE)
+# Examples
+stem(Fertility$rate)
+fivenum(Fertility$rate)
+EDA(Fertility$rate)
+################################
+Firstchi <- read_csv("Firstchi.csv")
+devtools::use_data(Firstchi, overwrite = TRUE)
+# Examples
+EDA(Firstchi$age)
+################################
+Fish <- read_csv("Fish.csv")
+Fish <- Fish %>%
+  select(smallmesh, largemesh) %>%
+  gather(smallmesh, largemesh, key = "codend", value = "length")
+devtools::use_data(Fish, overwrite = TRUE)
+## Examples
+tapply(Fish$length, Fish$codend, median, na.rm = TRUE)
+SIGN.test(Fish$length[Fish$codend == "smallmesh"], conf.level = 0.99)
+# NOt run
+dplyr::group_by(Fish, codend) %>%
+  summarize(MEDIAN = median(length, na.rm = TRUE))
+################################
+Fitness <- read_csv("Fitness.csv")
+Fitness <- Fitness %>%
+  mutate(subject = row.names(Fitness)) %>%
+  gather(`Before`, `After`, key = "test", value = "number")
+devtools::use_data(Fitness, overwrite = TRUE)
+## Examples
+t.test(number ~ test, data = Fitness, alternative = "greater", paired = TRUE)
+# Not run
+Wide <- tidyr::spread(Fitness, test, number) %>%
+  mutate(diff = After - Before)
+Wide
+qqnorm(Wide$diff)
+qqline(Wide$diff)
+t.test(Wide$diff, alternative = "greater")
+############################
+Florida2000 <- read_csv("Florida2000.csv")
+names(Florida2000) <- tolower(names(Florida2000))
+Florida2000
+devtools::use_data(Florida2000, overwrite = TRUE)
+## Examples
+plot(buchanan ~ total, data = Florida2000, 
+     xlab = "Total votes cast (in thousands)", 
+     ylab = "Votes for Buchanan")
+##########################
+Fluid <- read_csv("Fluid.csv")
+Fluid <- Fluid %>%
+  select(-response, -group, -`ln(resp)`) %>%
+  gather(`26kV`, `28kV`, `30kV`, `32kV`, `34kV`, `36kV`, `38kV`, key = "kilovolts", value = "time")
+Fluid <- na.omit(Fluid)
+Fluid
+devtools::use_data(Fluid, overwrite = TRUE)
+## Examples
+DF1 <- Fluid[Fluid$kilovolts == "34kV", ]
+DF1
+# Or
+DF2 <- subset(Fluid, subset = kilovolts == "34kV")
+DF2
+stem(DF2$time)
+SIGN.test(DF2$time)
+# Not run
+DF3 <- dplyr::filter(Fluid, kilovolts == "34kV")
+DF3
+#
+###########################
+Food <- read_csv("Food.csv")
+Food <- Food %>%
+  rename(expenditure = food)
+Food
+devtools::use_data(Food, overwrite = TRUE)
+# Examples
+EDA(Food$expenditure)
+###########################
+Framingh <- read_csv("Framingh.csv")
+Framingh
+devtools::use_data(Framingh, overwrite = TRUE)
+# Examples
+stem(Framingh$cholest)
+boxplot(Framingh$cholest, horizontal = TRUE)
+hist(Framingh$cholest, freq = FALSE)
+lines(density(Framingh$cholest))
+mean(Framingh$cholest > 200 & Framingh$cholest < 240)
+
+# Not run
+ggplot2::ggplot(data = Framingh, aes(x = factor(1), y = cholest)) + 
+  geom_boxplot() +                 # boxplot
+  labs(x = "") +                   # no x label  
+  theme_bw() +                     # black and white theme  
+  geom_jitter(width = 0.2) +       # jitter points
+  coord_flip()                     # Create horizontal plot
+ggplot2::ggplot(data = Framingh, aes(x = cholest, y = ..density..)) +
+  geom_histogram(fill = "pink", binwidth = 15, color = "black") + 
+  geom_density() + 
+  theme_bw()
+#
+###########################
+Freshman <- read_csv("Freshman.csv")
+devtools::use_data(Freshman, overwrite = TRUE)
+## Examples
+BSDA::SIGN.test(Freshman$age, md = 19)
+################################
+## Create Funeral
+mat <- matrix(data = c(15, 60, 25, 20, 38, 42, 34, 44, 22, 12, 40, 48), nrow = 4, byrow = TRUE)
+dimnames(mat) <- list(region = c("West", "Central", "South", "East"), 
+                      cost = c("less than expected", "about what expected", "more than expected"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Funeral <- vcdExtra::expand.dft(matDF)
+rm(mat, matT, matDF)
+Funeral2$region <- factor(Funeral$region, 
+                          levels = c("West", "Central", "South", "East"))
+Funeral$cost <- factor(Funeral$cost, 
+                       levels = c("less than expected", "about what expected", "more than expected"))
+Funeral <- as_tibble(Funeral)
+Funeral
+devtools::use_data(Funeral, overwrite = TRUE)
+# Examples
+T1 <- xtabs(~region + cost, data = Funeral)
+T1
+chisq.test(T1)  
+rm(T1)

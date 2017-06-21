@@ -3335,9 +3335,9 @@ NULL
 #' 
 #' @name Fertility
 #' @docType data
-#' @format A data frame with 51 observations on the following 2 variables.
+#' @format A data frame/tibble with 51 observations on the following 2 variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
+#' \item{state}{a character variable with values \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 #' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
 #' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
@@ -3357,16 +3357,11 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Fertility)
-#' attach(Fertility)
-#' library(lattice)
-#' dotplot(State~rate)
-#' stem(rate)
-#' fivenum(rate)
-#' EDA(rate)
-#' detach(Fertility)
+#' stem(Fertility$rate)
+#' fivenum(Fertility$rate)
+#' EDA(Fertility$rate)
 #' 
-NULL
+"Fertility"
 
 
 
@@ -3379,7 +3374,7 @@ NULL
 #' 
 #' @name Firstchi
 #' @docType data
-#' @format A data frame with 87 observations on the following variable.
+#' @format A data frame/tibble with 87 observations on the following variable.
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
@@ -3388,12 +3383,9 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Firstchi)
-#' attach(Firstchi)
-#' EDA(age)
-#' detach(Firstchi)
+#' EDA(Firstchi$age)
 #' 
-NULL
+"Firstchi"
 
 
 
@@ -3406,31 +3398,24 @@ NULL
 #' 
 #' @name Fish
 #' @docType data
-#' @format A data frame with 767 observations on the following 5 variables.
+#' @format A data frame/tibble with 1534 observations on two variables.
 #' \describe{ 
-#' \item{length}{a numeric vector} 
-#' \item{smalmesh}{a numeric vector} 
-#' \item{largmesh}{a numeric vector}
-#' \item{smallmesh}{a numeric vector} 
-#' \item{largemesh}{a numeric vector} 
+#' \item{codend}{a character variable with values \code{smallmesh} and \code{largemesh} } 
+#' \item{length}{length of the fish measured in centimeters} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Fish)
-#' attach(Fish)
-#' median(smallmesh,na.rm=TRUE)
-#' median(largemesh)
-#' IQR(smallmesh,na.rm=TRUE)
-#' IQR(largemesh)
-#' SIGN.test(smallmesh,conf.level=.99)
-#' SIGN.test(largemesh,conf.level=.99)
-#' t.test(smallmesh,largemesh)
-#' detach(Fish)
+#' tapply(Fish$length, Fish$codend, median, na.rm = TRUE)
+#' SIGN.test(Fish$length[Fish$codend == "smallmesh"], conf.level = 0.99)
+#' \dontrun{
+#' dplyr::group_by(Fish, codend) %>%
+#'     summarize(MEDIAN = median(length, na.rm = TRUE))
+#' }
 #' 
-NULL
+"Fish"
 
 
 
@@ -3443,26 +3428,28 @@ NULL
 #' 
 #' @name Fitness
 #' @docType data
-#' @format A data frame with 9 observations on the following 2 variables.
+#' @format A data frame/tibble with 18 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Before}{a numeric vector} 
-#' \item{After}{a numeric vector} 
+#' \item{subject}{a character variable indicating subject number}
+#' \item{test}{a character variable with values \code{After} and \code{Before}} 
+#' \item{number}{a numeric vector recording the number of sit-ups performed in one minute} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Fitness)
-#' attach(Fitness)
-#' DIF <- After - Before
-#' qqnorm(DIF)
-#' qqline(DIF)
-#' shapiro.test(DIF)
-#' t.test(After,Before,paired=TRUE,alternative="greater")
-#' detach(Fitness)
+#' t.test(number ~ test, data = Fitness, alternative = "greater", paired = TRUE)
+#' \dontrun{
+#' Wide <- tidyr::spread(Fitness, test, number) %>%
+#' mutate(diff = After - Before)
+#' Wide
+#' qqnorm(Wide$diff)
+#' qqline(Wide$diff)
+#' t.test(Wide$diff, alternative = "greater")
+#' }
 #' 
-NULL
+"Fitness"
 
 
 
@@ -3475,9 +3462,9 @@ NULL
 #' 
 #' @name Florida2000
 #' @docType data
-#' @format A data frame with 67 observations on the following 12 variables.
+#' @format A data frame/tibble with 67 observations on the following 12 variables.
 #' \describe{ 
-#' \item{County}{a factor with levels \code{ALACHUA}
+#' \item{county}{a character variable with values \code{ALACHUA}
 #' \code{BAKER} \code{BAY} \code{BRADFORD} \code{BREVARD} \code{BROWARD}
 #' \code{CALHOUN} \code{CHARLOTTE} \code{CITRUS} \code{CLAY} \code{COLLIER}
 #' \code{COLUMBIA} \code{DADE} \code{DE SOTO} \code{DIXIE} \code{DUVAL}
@@ -3492,30 +3479,28 @@ NULL
 #' \code{PUTNAM} \code{SANTA ROSA} \code{SARASOTA} \code{SEMINOLE} \code{ST.
 #' JOHNS} \code{ST. LUCIE} \code{SUMTER} \code{SUWANNEE} \code{TAYLOR}
 #' \code{UNION} \code{VOLUSIA} \code{WAKULLA} \code{WALTON} \code{WASHINGTON}}
-#' \item{GORE}{a numeric vector} 
-#' \item{BUSH}{a numeric vector}
-#' \item{BUCHANAN}{a numeric vector} 
-#' \item{NADER}{a numeric vector} 
-#' \item{BROWNE}{a numeric vector} 
-#' \item{HAGELIN}{a numeric vector} 
-#' \item{HARRIS}{a numeric vector}
-#' \item{MCREYNOLDS}{a numeric vector} 
-#' \item{MOOREHEAD}{a numeric vector} 
-#' \item{PHILLIPS}{a numeric vector}
-#' \item{Total}{a numeric vector} 
+#' \item{gore}{a numeric vector} 
+#' \item{bush}{a numeric vector}
+#' \item{buchanan}{a numeric vector} 
+#' \item{nader}{a numeric vector} 
+#' \item{browne}{a numeric vector} 
+#' \item{hagelin}{a numeric vector} 
+#' \item{harris}{a numeric vector}
+#' \item{mcreynolds}{a numeric vector} 
+#' \item{moorehead}{a numeric vector} 
+#' \item{phillips}{a numeric vector}
+#' \item{total}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Florida2000)
-#' attach(Florida2000)
-#' plot(Total,BUCHANAN,xlab="Total votes cast (in thousands)",
-#' ylab="Votes for Buchanan")
-#' detach(Florida2000)
+#' plot(buchanan ~ total, data = Florida2000, 
+#' xlab = "Total votes cast (in thousands)", 
+#' ylab = "Votes for Buchanan")
 #' 
-NULL
+"Florida2000"
 
 
 
@@ -3529,31 +3514,30 @@ NULL
 #' 
 #' @name Fluid
 #' @docType data
-#' @format A data frame with 76 observations on the following 10 variables.
+#' @format A data frame/tibble with 76 observations on the following 2 variables.
 #' \describe{ 
-#' \item{X26kV}{a numeric vector} 
-#' \item{X28kV}{a numeric vector} 
-#' \item{X30kV}{a numeric vector}
-#' \item{X32kV}{a numeric vector} 
-#' \item{X34kV}{a numeric vector} 
-#' \item{X36kV}{a numeric vector} 
-#' \item{X38kV}{a numeric vector} 
-#' \item{response}{a numeric vector}
-#' \item{group}{a numeric vector} 
-#' \item{ln.resp.}{a numeric vector} 
+#' \item{kilovolts}{a character variable showing kilowats} 
+#' \item{time}{breakdown time (in minutes)} 
 #' }
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Fluid)
-#' attach(Fluid)
-#' stem(X34kV)
-#' SIGN.test(X34kV)
-#' detach(Fluid)
+#' DF1 <- Fluid[Fluid$kilovolts == "34kV", ]
+#' DF1
+#' # OR
+#' DF2 <- subset(Fluid, subset = kilovolts == "34kV")
+#' DF2
+#' stem(DF2$time)
+#' SIGN.test(DF2$time)
+#' \dontrun{
+#' DF3 <- dplyr::filter(Fluid, kilovolts == "34kV") 
+#' DF3
+#' }
 #' 
-NULL
+"Fluid"
 
 
 
@@ -3566,21 +3550,18 @@ NULL
 #' 
 #' @name Food
 #' @docType data
-#' @format A data frame with 40 observations on the following variable.
+#' @format A data frame/tibble with 40 observations on the following variable.
 #' \describe{ 
-#' \item{food}{a numeric vector} 
+#' \item{expenditure}{a numeric vector recording annual food expenditure (in dollars) in the state of Ohio.} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Food)
-#' attach(Food)
-#' EDA(food)
-#' detach(Food)
+#' EDA(Food$expenditure)
 #' 
-NULL
+"Food"
 
 
 
@@ -3593,27 +3574,35 @@ NULL
 #' 
 #' @name Framingh
 #' @docType data
-#' @format A data frame with 62 observations on the following variable.
+#' @format A data frame/tibble with 62 observations on the following variable.
 #' \describe{ 
-#' \item{cholest}{a numeric vector} 
+#' \item{cholest}{a numeric vector with cholesterol values} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Framingh)
-#' attach(Framingh)
-#' stem(cholest)
-#' hist(cholest,prob=TRUE,ylim=c(0,.012))
-#' lines(density(cholest))
-#' boxplot(cholest,col="brown")
-#' sum(cholest>200&cholest<240)/length(cholest)
-#' detach(Framingh)
+#' stem(Framingh$cholest)
+#' boxplot(Framingh$cholest, horizontal = TRUE)
+#' hist(Framingh$cholest, freq = FALSE)
+#' lines(density(Framingh$cholest))
+#' mean(Framingh$cholest > 200 & Framingh$cholest < 240)
 #' 
-NULL
-
-
+#' \dontrun{
+#' ggplot2::ggplot(data = Framingh, aes(x = factor(1), y = cholest)) + 
+#' geom_boxplot() +                 # boxplot
+#' labs(x = "") +                   # no x label  
+#' theme_bw() +                     # black and white theme  
+#' geom_jitter(width = 0.2) +       # jitter points
+#' coord_flip()                     # Create horizontal plot
+#' ggplot2::ggplot(data = Framingh, aes(x = cholest, y = ..density..)) +
+#' geom_histogram(fill = "pink", binwidth = 15, color = "black") + 
+#' geom_density() + 
+#' theme_bw()
+#' }
+#' 
+"Framingh"
 
 
 
@@ -3626,19 +3615,16 @@ NULL
 #' @docType data
 #' @format A data frame with 30 observations on the following variable.
 #' \describe{ 
-#' \item{age}{a numeric vector} 
+#' \item{age}{a numeric vector of ages} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Freshman)
-#' attach(Freshman)
-#' SIGN.test(age,md=19)
-#' detach(Freshman)
+#' SIGN.test(Freshman$age, md = 19)
 #' 
-NULL
+"Freshman"
 
 
 
@@ -3651,26 +3637,24 @@ NULL
 #' 
 #' @name Funeral
 #' @docType data
-#' @format A data frame with 4 observations on the following 4 variables.
+#' @format A data frame with 400 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Region}{a factor with levels \code{Central}
+#' \item{region}{a factor with levels \code{Central}
 #' \code{East} \code{South} \code{West}} 
-#' \item{Less}{a numeric vector}
-#' \item{Average}{a numeric vector} 
-#' \item{More}{a numeric vector} 
+#' \item{cost}{a factor with levels \code{less than expected}, \code{about what expected}, 
+#' and \code{more than expected}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Funeral)
-#' attach(Funeral)
-#' Funeral
-#' chisq.test(Funeral[,2:4])
-#' detach(Funeral)
+#' T1 <- xtabs(~region + cost, data = Funeral)
+#' T1
+#' chisq.test(T1)  
+#' rm(T1)
 #' 
-NULL
+"Funeral"
 
 
 

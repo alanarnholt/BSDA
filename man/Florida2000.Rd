@@ -4,9 +4,9 @@
 \name{Florida2000}
 \alias{Florida2000}
 \title{Florida voter results in the 2000 presidential election}
-\format{A data frame with 67 observations on the following 12 variables.
+\format{A data frame/tibble with 67 observations on the following 12 variables.
 \describe{ 
-\item{County}{a factor with levels \code{ALACHUA}
+\item{county}{a character variable with values \code{ALACHUA}
 \code{BAKER} \code{BAY} \code{BRADFORD} \code{BREVARD} \code{BROWARD}
 \code{CALHOUN} \code{CHARLOTTE} \code{CITRUS} \code{CLAY} \code{COLLIER}
 \code{COLUMBIA} \code{DADE} \code{DE SOTO} \code{DIXIE} \code{DUVAL}
@@ -21,28 +21,29 @@
 \code{PUTNAM} \code{SANTA ROSA} \code{SARASOTA} \code{SEMINOLE} \code{ST.
 JOHNS} \code{ST. LUCIE} \code{SUMTER} \code{SUWANNEE} \code{TAYLOR}
 \code{UNION} \code{VOLUSIA} \code{WAKULLA} \code{WALTON} \code{WASHINGTON}}
-\item{GORE}{a numeric vector} 
-\item{BUSH}{a numeric vector}
-\item{BUCHANAN}{a numeric vector} 
-\item{NADER}{a numeric vector} 
-\item{BROWNE}{a numeric vector} 
-\item{HAGELIN}{a numeric vector} 
-\item{HARRIS}{a numeric vector}
-\item{MCREYNOLDS}{a numeric vector} 
-\item{MOOREHEAD}{a numeric vector} 
-\item{PHILLIPS}{a numeric vector}
-\item{Total}{a numeric vector} 
+\item{gore}{a numeric vector} 
+\item{bush}{a numeric vector}
+\item{buchanan}{a numeric vector} 
+\item{nader}{a numeric vector} 
+\item{browne}{a numeric vector} 
+\item{hagelin}{a numeric vector} 
+\item{harris}{a numeric vector}
+\item{mcreynolds}{a numeric vector} 
+\item{moorehead}{a numeric vector} 
+\item{phillips}{a numeric vector}
+\item{total}{a numeric vector} 
 }}
+\usage{
+Florida2000
+}
 \description{
 Data for Statistical Insight Chapter 2
 }
 \examples{
 
-str(Florida2000)
-attach(Florida2000)
-plot(Total,BUCHANAN,xlab="Total votes cast (in thousands)",
-ylab="Votes for Buchanan")
-detach(Florida2000)
+plot(buchanan ~ total, data = Florida2000, 
+xlab = "Total votes cast (in thousands)", 
+ylab = "Votes for Buchanan")
 
 }
 \references{

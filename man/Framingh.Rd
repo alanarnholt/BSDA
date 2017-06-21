@@ -4,23 +4,36 @@
 \name{Framingh}
 \alias{Framingh}
 \title{Cholesterol values of 62 subjects in the Framingham Heart Study}
-\format{A data frame with 62 observations on the following variable.
+\format{A data frame/tibble with 62 observations on the following variable.
 \describe{ 
-\item{cholest}{a numeric vector} 
+\item{cholest}{a numeric vector with cholesterol values} 
 }}
+\usage{
+Framingh
+}
 \description{
 Data for Exercises 1.55, 1.75, 3.69, and 5.60
 }
 \examples{
 
-str(Framingh)
-attach(Framingh)
-stem(cholest)
-hist(cholest,prob=TRUE,ylim=c(0,.012))
-lines(density(cholest))
-boxplot(cholest,col="brown")
-sum(cholest>200&cholest<240)/length(cholest)
-detach(Framingh)
+stem(Framingh$cholest)
+boxplot(Framingh$cholest, horizontal = TRUE)
+hist(Framingh$cholest, freq = FALSE)
+lines(density(Framingh$cholest))
+mean(Framingh$cholest > 200 & Framingh$cholest < 240)
+
+\dontrun{
+ggplot2::ggplot(data = Framingh, aes(x = factor(1), y = cholest)) + 
+geom_boxplot() +                 # boxplot
+labs(x = "") +                   # no x label  
+theme_bw() +                     # black and white theme  
+geom_jitter(width = 0.2) +       # jitter points
+coord_flip()                     # Create horizontal plot
+ggplot2::ggplot(data = Framingh, aes(x = cholest, y = ..density..)) +
+geom_histogram(fill = "pink", binwidth = 15, color = "black") + 
+geom_density() + 
+theme_bw()
+}
 
 }
 \references{

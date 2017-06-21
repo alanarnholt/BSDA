@@ -4,19 +4,19 @@
 \name{Firstchi}
 \alias{Firstchi}
 \title{Ages of women at the birth of their first child}
-\format{A data frame with 87 observations on the following variable.
+\format{A data frame/tibble with 87 observations on the following variable.
 \describe{ 
 \item{age}{a numeric vector} 
 }}
+\usage{
+Firstchi
+}
 \description{
 Data for Exercise 5.11
 }
 \examples{
 
-str(Firstchi)
-attach(Firstchi)
-EDA(age)
-detach(Firstchi)
+EDA(Firstchi$age)
 
 }
 \references{

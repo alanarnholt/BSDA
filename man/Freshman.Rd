@@ -6,17 +6,17 @@
 \title{Ages of a random sample of 30 college freshmen}
 \format{A data frame with 30 observations on the following variable.
 \describe{ 
-\item{age}{a numeric vector} 
+\item{age}{a numeric vector of ages} 
 }}
+\usage{
+Freshman
+}
 \description{
 Data for Exercise 6.53
 }
 \examples{
 
-str(Freshman)
-attach(Freshman)
-SIGN.test(age,md=19)
-detach(Freshman)
+SIGN.test(Freshman$age, md = 19)
 
 }
 \references{
