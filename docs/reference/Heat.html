@@ -89,16 +89,16 @@ households</h1>
     <p>Data for Exercise 1.29</p>
     
 
+    <pre class="usage"><span class='no'>Heat</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 6 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>Fuel</dt><dd><p>a factor with levels <code>Electricity</code>
-<code>Fuel Oil</code> <code>LP bottled gas</code> <code>Other</code> <code>Utility gas</code>
-<code>Wood</code></p></dd> 
-<dt>Reserv</dt><dd><p>a numeric vector</p></dd> 
-<dt>All.US</dt><dd><p>a numeric vector</p></dd> 
-<dt>Not.Rese</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 301 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>fuel</dt><dd><p>a factor with levels <code>Utility gas</code>,
+<code>LP bottled gas</code>, <code>Electricity</code>, <code>Fuel oil</code>, <code>Wood</code>, and
+<code>Other</code></p></dd> 
+<dt>location</dt><dd><p>a factor with levels <code>American Indians on reservation</code> <code>All U.S. households</code>,
+ and <code>American Indians not on reservations</code></p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -109,21 +109,30 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Heat</span>)</div><div class='output co'>#&gt; 'data.frame':	6 obs. of  4 variables:
-#&gt;  $ Fuel    : Factor w/ 6 levels "Electricity",..: 5 3 1 2 6 4
-#&gt;  $ Reserv  : int  16 22 19 6 34 4
-#&gt;  $ All.US  : int  48 9 25 9 8 1
-#&gt;  $ Not.Rese: int  51 6 26 12 4 1</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Heat</span>)
-<span class='no'>MAT</span> <span class='kw'>&lt;-</span> <span class='fu'>cbind</span>(<span class='no'>Reserv</span>, <span class='no'>All.US</span>, <span class='no'>Not.Rese</span>)
-<span class='fu'>row.names</span>(<span class='no'>MAT</span>) <span class='kw'>&lt;-</span> <span class='fu'>c</span>(<span class='st'>"Utility Gas"</span>,<span class='st'>"LP bottled Gas"</span>,<span class='st'>"Electricity"</span>,
-<span class='st'>"Fuel Oil"</span>,<span class='st'>"Wood"</span>,<span class='st'>"Other Fuel"</span>)
-<span class='no'>MAT</span></div><div class='output co'>#&gt;                Reserv All.US Not.Rese
-#&gt; Utility Gas        16     48       51
-#&gt; LP bottled Gas     22      9        6
-#&gt; Electricity        19     25       26
-#&gt; Fuel Oil            6      9       12
-#&gt; Wood               34      8        4
-#&gt; Other Fuel          4      1        1</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>MAT</span>),<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Heating of American Indian Homes"</span>)</div><img src='Heat-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>sum</span>(<span class='no'>Reserv</span>)</div><div class='output co'>#&gt; [1] 101</div><div class='input'><span class='fu'>sum</span>(<span class='no'>All.US</span>)</div><div class='output co'>#&gt; [1] 100</div><div class='input'><span class='fu'>sum</span>(<span class='no'>Not.Rese</span>)</div><div class='output co'>#&gt; [1] 100</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Heat</span>)</div></pre>
+<span class='no'>T1</span> <span class='kw'>&lt;-</span> <span class='fu'>xtabs</span>(~ <span class='no'>fuel</span> + <span class='no'>location</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Heat</span>)
+<span class='no'>T1</span></div><div class='output co'>#&gt;                 location
+#&gt; fuel             American Indians on reservation All U.S. households
+#&gt;   Utility gas                                 16                  48
+#&gt;   LP bottled gas                              22                   9
+#&gt;   Electricity                                 19                  25
+#&gt;   Fuel oil                                     6                   9
+#&gt;   Wood                                        34                   8
+#&gt;   Other                                        4                   1
+#&gt;                 location
+#&gt; fuel             American Indians not on reservations
+#&gt;   Utility gas                                      51
+#&gt;   LP bottled gas                                    6
+#&gt;   Electricity                                      26
+#&gt;   Fuel oil                                         12
+#&gt;   Wood                                              4
+#&gt;   Other                                             1</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><img src='Heat-4.png' alt='' width='540' height='400' /><div class='input'>
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Heat</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>fuel</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>location</span>)) +
+     <span class='fu'>geom_bar</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
+     <span class='fu'>labs</span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>"percent"</span>) +
+     <span class='fu'>theme_bw</span>() +
+     <span class='fu'>theme</span>(<span class='kw'>axis.text.x</span> <span class='kw'>=</span> <span class='fu'>element_text</span>(<span class='kw'>angle</span> <span class='kw'>=</span> <span class='fl'>30</span>, <span class='kw'>hjust</span> <span class='kw'>=</span> <span class='fl'>1</span>))
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
