@@ -4,26 +4,26 @@
 \name{Graduate}
 \alias{Graduate}
 \title{Graduation rates for student athletes in the Southeastern Conf.}
-\format{A data frame with 12 observations on the following 3 variables.
+\format{A data frame/tibble with 12 observations on the following 3 variables.
 \describe{ 
-\item{School}{a factor with levels \code{Alabama}
+\item{school}{a character variable with values \code{Alabama}
 \code{Arkansas} \code{Auburn} \code{Florida} \code{Georgia} \code{Kentucky}
 \code{Louisiana St} \code{Mississippi} \code{Mississippi St} \code{South
 Carolina} \code{Tennessee} \code{Vanderbilt}} 
-\item{Code}{a factor with levels \code{Al} \code{Ar} \code{Au} \code{Fl} \code{Ge} \code{Ke}
+\item{code}{a character variable with values \code{Al} \code{Ar} \code{Au} \code{Fl} \code{Ge} \code{Ke}
 \code{LSt} \code{Mi} \code{MSt} \code{SC} \code{Te} \code{Va}}
-\item{Percent}{a numeric vector} 
+\item{percent}{a numeric vector} 
 }}
+\usage{
+Graduate
+}
 \description{
 Data for Exercise 1.118
 }
 \examples{
 
-str(Graduate)
-attach(Graduate)
-names(Percent) <- School
-barplot(Percent,las=2,cex.names=.65,col="tomato")
-detach(Graduate)
+barplot(Graduate$percent, names.arg = Graduate$school, 
+        las = 2, cex.names = 0.7, col = "tomato")
 
 }
 \references{

@@ -4,26 +4,32 @@
 \name{Habits}
 \alias{Habits}
 \title{Study habits of students in two matched school districts}
-\format{A data frame with 11 observations on the following 4 variables.
+\format{A data frame/tibble with 11 observations on the following 4 variables.
 \describe{ 
 \item{A}{a numeric vector} 
 \item{B}{a numeric vector} 
-\item{differ}{a numeric vector} 
-\item{signrks}{a numeric vector} 
+\item{differ}{\code{B} minus \code{A}} 
+\item{signrks}{the signed-ranked-differences} 
 }}
+\usage{
+Habits
+}
 \description{
 Data for Exercise 7.57
 }
 \examples{
 
-str(Habits)
-attach(Habits)
-qqnorm(differ)
-qqline(differ)
-shapiro.test(differ)
-t.test(B,A,paired=TRUE,alternative="less")
-wilcox.test(B,A,paired=TRUE,alternative="less")
-detach(Habits)
+shapiro.test(Habits$differ)
+qqnorm(Habits$differ)
+qqline(Habits$differ)
+wilcox.test(Habits$B, Habits$A, paired = TRUE, alternative = "less")
+t.test(Habits$signrks, alternative = "less")
+
+\dontrun{
+ggplot2::ggplot(data = Habits, aes(x = differ)) + 
+    geom_dotplot(fill = "blue") + 
+    theme_bw()
+}
 
 }
 \references{

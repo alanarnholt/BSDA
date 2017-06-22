@@ -5,31 +5,23 @@
 \alias{Hardwood}
 \title{Tensile strength of Kraft paper for different percentages of hardwood in the
 batches of pulp}
-\format{A data frame with 19 observations on the following variable.
+\format{A data frame/tibble with 19 observations on 2 variables.
 \describe{ 
-\item{tensile.hardwood}{a factor with levels
-\code{1.110000000e+001 1.500000000e+000} \code{2.000000000e+001
-2.000000000e+000} \code{2.190000000e+001 1.500000000e+001}
-\code{2.400000000e+001 3.000000000e+000} \code{2.610000000e+001
-4.000000000e+000} \code{2.780000000e+001 1.400000000e+001}
-\code{3.000000000e+001 4.500000000e+000} \code{3.380000000e+001
-5.000000000e+000} \code{3.400000000e+001 5.500000000e+000}
-\code{3.810000000e+001 6.000000000e+000} \code{3.990000000e+001
-6.500000000e+000} \code{4.200000000e+001 7.000000000e+000}
-\code{4.280000000e+001 1.300000000e+001} \code{4.610000000e+001
-8.000000000e+000} \code{4.800000000e+001 1.200000000e+001}
-\code{5.200000000e+001 1.000000000e+001} \code{5.250000000e+001
-1.100000000e+001} \code{5.310000000e+001 9.000000000e+000}
-\code{6.300000000e+000 1.000000000e+000}} 
+\item{tensile}{tensile strength of kraft paper (in pounds per square inch)}
+\item{hardwood}{percent of hardwood in the batch of pulp that was used to produce the paper} 
 }}
+\usage{
+Hardwood
+}
 \description{
-Data for Exercise 9.33
+Data for Example 2.18 and Exercise 9.34
 }
 \examples{
 
-str(Hardwood)
-attach(Hardwood)
-
+plot(tensile ~ hardwood, data = Hardwood)
+model <- lm(tensile ~ hardwood, data = Hardwood)
+abline(model)
+plot(model, which = 1)
 
 
 }

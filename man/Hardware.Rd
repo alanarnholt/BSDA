@@ -8,12 +8,15 @@
 \describe{ 
 \item{receipt}{a numeric vector} 
 }}
+\usage{
+Hardware
+}
 \description{
-Data for Example 2.18
+Data for ???
 }
 \examples{
 
-data(Hardware)
+stem(Hardware$receipt)
 
 }
 \references{

@@ -4,7 +4,7 @@
 \name{Gpa}
 \alias{Gpa}
 \title{High school GPA versus college GPA}
-\format{A data frame with 10 observations on the following 2 variables.
+\format{A data frame/tibble with 10 observations on the following 2 variables.
 \describe{ 
 \item{hsgpa}{high school gpa} 
 \item{collgpa}{college gpa} 

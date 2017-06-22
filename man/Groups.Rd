@@ -4,25 +4,22 @@
 \name{Groups}
 \alias{Groups}
 \title{An illustration of analysis of variance}
-\format{A data frame with 26 observations on the following 3 variables.
+\format{A data frame/tibble with 78 observations on the following 2 variables.
 \describe{ 
-\item{GroupA}{a numeric vector} 
-\item{GroupB}{a numeric vector} 
-\item{GroupC}{a numeric vector} 
+\item{group}{a factor with levels \code{A}, \code{B}, and \code{C}} 
+\item{response}{a numeric vector} 
 }}
+\usage{
+Groups
+}
 \description{
 Data for Exercise 10.4
 }
 \examples{
 
-str(Groups)
-attach(Groups)
-STACKED <-stack(Groups)
-STACKED[1:5,]
-boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-anova(lm(values~ind,data=STACKED))
-remove(STACKED)
-detach(Groups)
+boxplot(response ~ group, data = Groups, col = c("red", "blue", "green"))
+anova(lm(response ~ group, data = Groups))
+
 
 }
 \references{

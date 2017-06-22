@@ -5,20 +5,20 @@
 \alias{Greenriv}
 \title{Varve thickness from a sequence through an Eocene lake deposit in the Rocky
 Mountains}
-\format{A data frame with 37 observations on the following variable.
+\format{A data frame/tibble with 37 observations on the following variable.
 \describe{ 
-\item{thick}{a numeric vector} 
+\item{thick}{varve thickness in millimeters} 
 }}
+\usage{
+Greenriv
+}
 \description{
 Data for Exercise 6.57
 }
 \examples{
 
-str(Greenriv)
-attach(Greenriv)
-EDA(thick)
-SIGN.test(thick,md=7.3,alternative="greater")
-detach(Greenriv)
+stem(Greenriv$thick)
+SIGN.test(Greenriv$thick, md = 7.3, alternative = "greater")
 
 }
 \references{

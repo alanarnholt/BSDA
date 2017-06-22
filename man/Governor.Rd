@@ -4,7 +4,7 @@
 \name{Governor}
 \alias{Governor}
 \title{Annual salaries for state governors in 1994 and 1999}
-\format{A data frame with 50 observations on the following 3 variables.
+\format{A data frame/tibble with 50 observations on the following 3 variables.
 \describe{ 
 \item{state}{a character variable with values \code{Alabama}
 \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}

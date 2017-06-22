@@ -3832,7 +3832,7 @@ NULL
 #' 
 #' @name Governor
 #' @docType data
-#' @format A data frame with 50 observations on the following 3 variables.
+#' @format A data frame/tibble with 50 observations on the following 3 variables.
 #' \describe{ 
 #' \item{state}{a character variable with values \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
@@ -3877,7 +3877,7 @@ NULL
 #' 
 #' @name Gpa
 #' @docType data
-#' @format A data frame with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with 10 observations on the following 2 variables.
 #' \describe{ 
 #' \item{hsgpa}{high school gpa} 
 #' \item{collgpa}{college gpa} 
@@ -3925,12 +3925,16 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Grades)
-#' attach(Grades)
-#' EDA(grades)
-#' detach(Grades)
+#' hist(Grades$grades, main = "", xlab = "Test grades", right = FALSE)
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Grades, aes(x = grades, y = ..density..)) + 
+#'     geom_histogram(fill = "pink", binwidth = 5, color = "black") + 
+#'     geom_density(lwd = 2, color = "red") + 
+#'     theme_bw() 
+#' }
+#' 
+"Grades"
 
 
 
@@ -3943,28 +3947,25 @@ NULL
 #' 
 #' @name Graduate
 #' @docType data
-#' @format A data frame with 12 observations on the following 3 variables.
+#' @format A data frame/tibble with 12 observations on the following 3 variables.
 #' \describe{ 
-#' \item{School}{a factor with levels \code{Alabama}
+#' \item{school}{a character variable with values \code{Alabama}
 #' \code{Arkansas} \code{Auburn} \code{Florida} \code{Georgia} \code{Kentucky}
 #' \code{Louisiana St} \code{Mississippi} \code{Mississippi St} \code{South
 #' Carolina} \code{Tennessee} \code{Vanderbilt}} 
-#' \item{Code}{a factor with levels \code{Al} \code{Ar} \code{Au} \code{Fl} \code{Ge} \code{Ke}
+#' \item{code}{a character variable with values \code{Al} \code{Ar} \code{Au} \code{Fl} \code{Ge} \code{Ke}
 #' \code{LSt} \code{Mi} \code{MSt} \code{SC} \code{Te} \code{Va}}
-#' \item{Percent}{a numeric vector} 
+#' \item{percent}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Graduate)
-#' attach(Graduate)
-#' names(Percent) <- School
-#' barplot(Percent,las=2,cex.names=.65,col="tomato")
-#' detach(Graduate)
+#' barplot(Graduate$percent, names.arg = Graduate$school, 
+#'         las = 2, cex.names = 0.7, col = "tomato")
 #' 
-NULL
+"Graduate"
 
 
 
@@ -3978,22 +3979,19 @@ NULL
 #' 
 #' @name Greenriv
 #' @docType data
-#' @format A data frame with 37 observations on the following variable.
+#' @format A data frame/tibble with 37 observations on the following variable.
 #' \describe{ 
-#' \item{thick}{a numeric vector} 
+#' \item{thick}{varve thickness in millimeters} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Greenriv)
-#' attach(Greenriv)
-#' EDA(thick)
-#' SIGN.test(thick,md=7.3,alternative="greater")
-#' detach(Greenriv)
+#' stem(Greenriv$thick)
+#' SIGN.test(Greenriv$thick, md = 7.3, alternative = "greater")
 #' 
-NULL
+"Greenriv"
 
 
 
@@ -4007,23 +4005,19 @@ NULL
 #' 
 #' @name Grnriv2
 #' @docType data
-#' @format A data frame with 101 observations on the following variable.
+#' @format A data frame/tibble with 101 observations on the following variable.
 #' \describe{ 
-#' \item{thick}{a numeric vector} 
+#' \item{thick}{varve thickness in millimeters} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Grnriv2)
-#' attach(Grnriv2)
-#' EDA(thick)
-#' t.test(thick,mu=8,alternative="less")
-#' SIGN.test(thick,md=8,alternative="less")
-#' detach(Grnriv2)
+#' stem(Grnriv2$thick)
+#' t.test(Grnriv2$thick, mu = 8, alternative = "less")
 #' 
-NULL
+"Grnriv2"
 
 
 
@@ -4036,27 +4030,21 @@ NULL
 #' 
 #' @name Groupabc
 #' @docType data
-#' @format A data frame with 15 observations on the following 3 variables.
+#' @format A data frame/tibble with 45 observations on the following 2 variables.
 #' \describe{ 
-#' \item{GroupA}{a numeric vector} 
-#' \item{GroupB}{a numeric vector} 
-#' \item{GroupC}{a numeric vector} 
+#' \item{group}{a factor with levels \code{A}, \code{B}, and \code{C}} 
+#' \item{response}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Groupabc)
-#' attach(Groupabc)
-#' STACKED <-stack(Groupabc)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Groupabc)
+#' boxplot(response ~ group, data = Groupabc, 
+#'         col = c("red", "blue", "green"))
+#'         anova(lm(response ~ group, data = Groupabc))
 #' 
-NULL
+"Groupabc"
 
 
 
@@ -4069,27 +4057,22 @@ NULL
 #' 
 #' @name Groups
 #' @docType data
-#' @format A data frame with 26 observations on the following 3 variables.
+#' @format A data frame/tibble with 78 observations on the following 2 variables.
 #' \describe{ 
-#' \item{GroupA}{a numeric vector} 
-#' \item{GroupB}{a numeric vector} 
-#' \item{GroupC}{a numeric vector} 
+#' \item{group}{a factor with levels \code{A}, \code{B}, and \code{C}} 
+#' \item{response}{a numeric vector} 
 #' }
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Groups)
-#' attach(Groups)
-#' STACKED <-stack(Groups)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Groups)
+#' boxplot(response ~ group, data = Groups, col = c("red", "blue", "green"))
+#' anova(lm(response ~ group, data = Groups))
 #' 
-NULL
+#' 
+"Groups"
 
 
 
@@ -4097,31 +4080,27 @@ NULL
 
 #' Children's age versus number of completed gymnastic activities
 #' 
-#' Data for Exercises 2.21, 9.14, and 9.32
+#' Data for Exercises 2.21 and 9.14
 #' 
 #' 
 #' @name Gym
 #' @docType data
-#' @format A data frame with 8 observations on the following 3 variables.
+#' @format A data frame/tibble with 8 observations on the following 3 variables.
 #' \describe{
 #' \item{age}{a numeric vector} 
 #' \item{number}{a numeric vector} 
-#' \item{x.}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Gym)
-#' attach(Gym)
-#' plot(age,number)
-#' model <- lm(number~age)
+#' plot(number ~ age, data = Gym)
+#' model <- lm(number ~ age, data = Gym)
 #' abline(model)
-#' cor(age,number)
-#' detach(Gym)
+#' summary(model)
 #' 
-NULL
+"Gym"
 
 
 
@@ -4134,28 +4113,31 @@ NULL
 #' 
 #' @name Habits
 #' @docType data
-#' @format A data frame with 11 observations on the following 4 variables.
+#' @format A data frame/tibble with 11 observations on the following 4 variables.
 #' \describe{ 
 #' \item{A}{a numeric vector} 
 #' \item{B}{a numeric vector} 
-#' \item{differ}{a numeric vector} 
-#' \item{signrks}{a numeric vector} 
+#' \item{differ}{\code{B} minus \code{A}} 
+#' \item{signrks}{the signed-ranked-differences} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Habits)
-#' attach(Habits)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' t.test(B,A,paired=TRUE,alternative="less")
-#' wilcox.test(B,A,paired=TRUE,alternative="less")
-#' detach(Habits)
+#' shapiro.test(Habits$differ)
+#' qqnorm(Habits$differ)
+#' qqline(Habits$differ)
+#' wilcox.test(Habits$B, Habits$A, paired = TRUE, alternative = "less")
+#' t.test(Habits$signrks, alternative = "less")
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Habits, aes(x = differ)) + 
+#'     geom_dotplot(fill = "blue") + 
+#'     theme_bw()
+#' }
+#' 
+"Habits"
 
 
 
@@ -4166,26 +4148,22 @@ NULL
 #' Data for Example 6.9
 #' 
 #' 
-#' @name Haptologo
+#' @name Haptoglo
 #' @docType data
-#' @format A data frame with 8 observations on the following variable.
+#' @format A data frame/tibble with 8 observations on the following variable.
 #' \describe{ 
-#' \item{concent}{a numeric vector} 
+#' \item{concent}{haptoglobin concentration (in grams per liter)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Haptologo)
-#' attach(Haptologo)
-#' qqnorm(concent,col="blue")
-#' qqline(concent,col="red")
-#' shapiro.test(concent)
-#' t.test(concent,mu=2,alternative="less")
-#' detach(Haptologo)
+#' shapiro.test(Haptoglo$concent)
+#' t.test(Haptoglo$concent, mu = 2, alternative = "less")
 #' 
-NULL
+#' 
+"Haptoglo"
 
 
 
@@ -4193,7 +4171,7 @@ NULL
 
 #' Daily receipts for a small hardware store for 31 working days
 #' 
-#' Data for Example 2.18
+#' Data for ???
 #' 
 #' 
 #' @name Hardware
@@ -4207,9 +4185,9 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Hardware)
+#' stem(Hardware$receipt)
 #' 
-NULL
+"Hardware"
 
 
 
@@ -4218,39 +4196,28 @@ NULL
 #' Tensile strength of Kraft paper for different percentages of hardwood in the
 #' batches of pulp
 #' 
-#' Data for Exercise 9.33
+#' Data for Example 2.18 and Exercise 9.34 
 #' 
 #' 
 #' @name Hardwood
 #' @docType data
-#' @format A data frame with 19 observations on the following variable.
+#' @format A data frame/tibble with 19 observations on 2 variables.
 #' \describe{ 
-#' \item{tensile.hardwood}{a factor with levels
-#' \code{1.110000000e+001 1.500000000e+000} \code{2.000000000e+001
-#' 2.000000000e+000} \code{2.190000000e+001 1.500000000e+001}
-#' \code{2.400000000e+001 3.000000000e+000} \code{2.610000000e+001
-#' 4.000000000e+000} \code{2.780000000e+001 1.400000000e+001}
-#' \code{3.000000000e+001 4.500000000e+000} \code{3.380000000e+001
-#' 5.000000000e+000} \code{3.400000000e+001 5.500000000e+000}
-#' \code{3.810000000e+001 6.000000000e+000} \code{3.990000000e+001
-#' 6.500000000e+000} \code{4.200000000e+001 7.000000000e+000}
-#' \code{4.280000000e+001 1.300000000e+001} \code{4.610000000e+001
-#' 8.000000000e+000} \code{4.800000000e+001 1.200000000e+001}
-#' \code{5.200000000e+001 1.000000000e+001} \code{5.250000000e+001
-#' 1.100000000e+001} \code{5.310000000e+001 9.000000000e+000}
-#' \code{6.300000000e+000 1.000000000e+000}} 
+#' \item{tensile}{tensile strength of kraft paper (in pounds per square inch)}
+#' \item{hardwood}{percent of hardwood in the batch of pulp that was used to produce the paper} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Hardwood)
-#' attach(Hardwood)
+#' plot(tensile ~ hardwood, data = Hardwood)
+#' model <- lm(tensile ~ hardwood, data = Hardwood)
+#' abline(model)
+#' plot(model, which = 1)
 #' 
 #' 
-#' 
-NULL
+"Hardwood"
 
 
 

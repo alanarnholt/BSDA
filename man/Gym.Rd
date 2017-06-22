@@ -4,24 +4,23 @@
 \name{Gym}
 \alias{Gym}
 \title{Children's age versus number of completed gymnastic activities}
-\format{A data frame with 8 observations on the following 3 variables.
+\format{A data frame/tibble with 8 observations on the following 3 variables.
 \describe{
 \item{age}{a numeric vector} 
 \item{number}{a numeric vector} 
-\item{x.}{a numeric vector} 
 }}
+\usage{
+Gym
+}
 \description{
-Data for Exercises 2.21, 9.14, and 9.32
+Data for Exercises 2.21 and 9.14
 }
 \examples{
 
-str(Gym)
-attach(Gym)
-plot(age,number)
-model <- lm(number~age)
+plot(number ~ age, data = Gym)
+model <- lm(number ~ age, data = Gym)
 abline(model)
-cor(age,number)
-detach(Gym)
+summary(model)
 
 }
 \references{

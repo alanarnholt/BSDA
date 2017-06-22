@@ -1549,3 +1549,109 @@ ggplot2::ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) +
 # Wide <- Gpa %>%
 #   tidyr::spread(school, gpa)
 # Wide
+######################################################
+Grades <- read_csv("Grades.csv")
+devtools::use_data(Grades, overwrite = TRUE)
+## Examples
+hist(Grades$grades, main = "", xlab = "Test grades", right = FALSE)
+## Not run
+ggplot2::ggplot(data = Grades, aes(x = grades, y = ..density..)) + 
+  geom_histogram(fill = "pink", binwidth = 5, color = "black") +
+  geom_density(lwd = 2, color = "red") +
+  theme_bw() 
+##  
+######################################################
+Graduate <- read_csv("Graduate.csv")
+Graduate <- Graduate %>%
+  rename(school = School, code = Code, percent = Percent)
+Graduate
+devtools::use_data(Graduate, overwrite = TRUE)
+## Examples
+barplot(Graduate$percent, names.arg = Graduate$school, 
+        las = 2, cex.names = 0.7, col = "tomato")
+######################################################
+Greenriv <- read_csv("Greenriv.csv")
+Greenriv
+devtools::use_data(Greenriv, overwrite = TRUE)
+## Examples
+stem(Greenriv$thick)
+SIGN.test(Greenriv$thick, md = 7.3, alternative = "greater")
+######################################################
+Grnriv2 <- read_csv("Grnriv2.csv")
+Grnriv2
+devtools::use_data(Grnriv2, overwrite = TRUE)
+## Examples
+stem(Grnriv2$thick)
+t.test(Grnriv2$thick, mu = 8, alternative = "less")
+######################################################
+Groupabc <- read_csv("Groupabc.csv")
+Groupabc <- Groupabc %>%
+  gather(`GroupA`, `GroupB`, `GroupC`, key = "group", value = "response")
+Groupabc$group <- factor(str_replace(Groupabc$group, pattern = "Group", replace = ""))
+Groupabc
+devtools::use_data(Groupabc, overwrite = TRUE)
+## Examples
+boxplot(response ~ group, data = Groupabc, 
+        col = c("red", "blue", "green"))
+anova(lm(response ~ group, data = Groupabc))
+######################################################
+Groups <- read_csv("Groups.csv")
+Groups <- Groups %>%
+  gather(`GroupA`, `GroupB`, `GroupC`, key = "group", value = "response")
+Groups$group <- factor(str_replace(Groups$group, pattern = "Group", replace = ""))
+Groups
+devtools::use_data(Groups, overwrite = TRUE)
+## Examples
+boxplot(response ~ group, data = Groups, 
+        col = c("red", "blue", "green"))
+anova(lm(response ~ group, data = Groups))
+##
+######################################################
+Gym <- read_csv("Gym.csv")
+Gym <- Gym %>%
+  select(age, number)
+Gym
+devtools::use_data(Gym, overwrite = TRUE)
+## Examples
+plot(number ~ age, data = Gym)
+model <- lm(number ~ age, data = Gym)
+abline(model)
+summary(model)
+######################################################
+Habits <- read_csv("Habits.csv")
+Habits
+devtools::use_data(Habits, overwrite = TRUE)
+## Examples
+shapiro.test(Habits$differ)
+qqnorm(Habits$differ)
+qqline(Habits$differ)
+wilcox.test(Habits$B, Habits$A, paired = TRUE, alternative = "less")
+t.test(Habits$signrks, alternative = "less")
+## Not run
+ggplot2::ggplot(data = Habits, aes(x = differ)) + 
+  geom_dotplot(fill = "blue") + theme_bw()
+##
+######################################################
+Haptoglo <- read_csv("Haptoglo.csv")
+Haptoglo
+devtools::use_data(Haptoglo, overwrite = TRUE)
+## Example
+shapiro.test(Haptoglo$concent)
+t.test(Haptoglo$concent, mu = 2, alternative = "less")
+##
+######################################################
+Hardware <- read_csv("Hardware.csv")
+Hardware
+devtools::use_data(Hardware, overwrite = TRUE)
+## Examples
+stem(Hardare$receipt)
+######################################################
+Hardwood <- read_csv("Hardwood.csv")
+Hardwood
+devtools::use_data(Hardwood, overwrite = TRUE)
+## Example
+plot(tensile ~ hardwood, data = Hardwood)
+model <- lm(tensile ~ hardwood, data = Hardwood)
+abline(model)
+plot(model, which = 1)
+

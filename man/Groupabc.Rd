@@ -4,25 +4,22 @@
 \name{Groupabc}
 \alias{Groupabc}
 \title{Group data to illustrate analysis of variance}
-\format{A data frame with 15 observations on the following 3 variables.
+\format{A data frame/tibble with 45 observations on the following 2 variables.
 \describe{ 
-\item{GroupA}{a numeric vector} 
-\item{GroupB}{a numeric vector} 
-\item{GroupC}{a numeric vector} 
+\item{group}{a factor with levels \code{A}, \code{B}, and \code{C}} 
+\item{response}{a numeric vector} 
 }}
+\usage{
+Groupabc
+}
 \description{
 Data for Exercise 10.42
 }
 \examples{
 
-str(Groupabc)
-attach(Groupabc)
-STACKED <-stack(Groupabc)
-STACKED[1:5,]
-boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-anova(lm(values~ind,data=STACKED))
-remove(STACKED)
-detach(Groupabc)
+boxplot(response ~ group, data = Groupabc, 
+        col = c("red", "blue", "green"))
+        anova(lm(response ~ group, data = Groupabc))
 
 }
 \references{
