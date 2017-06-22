@@ -86,27 +86,16 @@ batches of pulp</h1>
     </div>
 
     
-    <p>Data for Exercise 9.33</p>
+    <p>Data for Example 2.18 and Exercise 9.34</p>
     
 
+    <pre class="usage"><span class='no'>Hardwood</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 19 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>tensile.hardwood</dt><dd><p>a factor with levels
-<code>1.110000000e+001 1.500000000e+000</code> <code>2.000000000e+001
-2.000000000e+000</code> <code>2.190000000e+001 1.500000000e+001</code>
-<code>2.400000000e+001 3.000000000e+000</code> <code>2.610000000e+001
-4.000000000e+000</code> <code>2.780000000e+001 1.400000000e+001</code>
-<code>3.000000000e+001 4.500000000e+000</code> <code>3.380000000e+001
-5.000000000e+000</code> <code>3.400000000e+001 5.500000000e+000</code>
-<code>3.810000000e+001 6.000000000e+000</code> <code>3.990000000e+001
-6.500000000e+000</code> <code>4.200000000e+001 7.000000000e+000</code>
-<code>4.280000000e+001 1.300000000e+001</code> <code>4.610000000e+001
-8.000000000e+000</code> <code>4.800000000e+001 1.200000000e+001</code>
-<code>5.200000000e+001 1.000000000e+001</code> <code>5.250000000e+001
-1.100000000e+001</code> <code>5.310000000e+001 9.000000000e+000</code>
-<code>6.300000000e+000 1.000000000e+000</code></p></dd> 
+    <p>A data frame/tibble with 19 observations on 2 variables.</p><dl class='dl-horizontal'>
+<dt>tensile</dt><dd><p>tensile strength of kraft paper (in pounds per square inch)</p></dd>
+<dt>hardwood</dt><dd><p>percent of hardwood in the batch of pulp that was used to produce the paper</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -117,19 +106,8 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Hardwood</span>)</div><div class='output co'>#&gt; 'data.frame':	19 obs. of  1 variable:
-#&gt;  $ tensile.hardwood: Factor w/ 19 levels "1.110000000e+001\t1.500000000e+000",..: 19 1 2 4 5 7 8 9 10 11 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Hardwood</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Hardwood (pos = 5):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    tensile.hardwood</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Hardwood (pos = 7):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    tensile.hardwood</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Hardwood (pos = 9):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    tensile.hardwood</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Hardwood (pos = 12):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    tensile.hardwood</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Hardwood (pos = 14):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    tensile.hardwood</span></div><div class='input'>
-
+<span class='fu'>plot</span>(<span class='no'>tensile</span> ~ <span class='no'>hardwood</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Hardwood</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>tensile</span> ~ <span class='no'>hardwood</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Hardwood</span>)
+<span class='fu'>abline</span>(<span class='no'>model</span>)</div><img src='Hardwood-3.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>plot</span>(<span class='no'>model</span>, <span class='kw'>which</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><img src='Hardwood-5.png' alt='' width='540' height='400' /><div class='input'>
 
 </div></pre>
   </div>

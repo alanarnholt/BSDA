@@ -87,6 +87,7 @@
     <p>Data for Exercise 1.120</p>
     
 
+    <pre class="usage"><span class='no'>Grades</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
@@ -102,14 +103,13 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Grades</span>)</div><div class='output co'>#&gt; 'data.frame':	29 obs. of  1 variable:
-#&gt;  $ grades: int  76 73 81 65 83 90 77 60 67 76 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Grades</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>grades</span>)</div><div class='output co'>#&gt; [1] "grades"</div><img src='Grades-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   29.000    0.000   57.000   67.500   75.207   76.000   75.148   82.000 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   95.000    9.901   98.027    1.839   14.500   38.000   -0.766    0.034 
-#&gt; SW p-val 
-#&gt;    0.946 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Grades</span>)</div></pre>
+<span class='fu'>hist</span>(<span class='no'>Grades</span>$<span class='no'>grades</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"Test grades"</span>, <span class='kw'>right</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><img src='Grades-2.png' alt='' width='540' height='400' /><div class='input'>
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Grades</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>grades</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>..density..</span>)) +
+      <span class='fu'>geom_histogram</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"pink"</span>, <span class='kw'>binwidth</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>) +
+      <span class='fu'>geom_density</span>(<span class='kw'>lwd</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"red"</span>) +
+      <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

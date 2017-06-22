@@ -87,17 +87,18 @@
     <p>Data for Exercise 1.118</p>
     
 
+    <pre class="usage"><span class='no'>Graduate</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 12 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>School</dt><dd><p>a factor with levels <code>Alabama</code>
+    <p>A data frame/tibble with 12 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>school</dt><dd><p>a character variable with values <code>Alabama</code>
 <code>Arkansas</code> <code>Auburn</code> <code>Florida</code> <code>Georgia</code> <code>Kentucky</code>
 <code>Louisiana St</code> <code>Mississippi</code> <code>Mississippi St</code> <code>South
 Carolina</code> <code>Tennessee</code> <code>Vanderbilt</code></p></dd> 
-<dt>Code</dt><dd><p>a factor with levels <code>Al</code> <code>Ar</code> <code>Au</code> <code>Fl</code> <code>Ge</code> <code>Ke</code>
+<dt>code</dt><dd><p>a character variable with values <code>Al</code> <code>Ar</code> <code>Au</code> <code>Fl</code> <code>Ge</code> <code>Ke</code>
 <code>LSt</code> <code>Mi</code> <code>MSt</code> <code>SC</code> <code>Te</code> <code>Va</code></p></dd>
-<dt>Percent</dt><dd><p>a numeric vector</p></dd> 
+<dt>percent</dt><dd><p>a numeric vector</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -108,12 +109,9 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Graduate</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  3 variables:
-#&gt;  $ School : Factor w/ 12 levels "Alabama","Arkansas",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ Code   : Factor w/ 12 levels "Al","Ar","Au",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ Percent: int  35 42 51 44 42 53 30 46 53 54 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Graduate</span>)
-<span class='fu'>names</span>(<span class='no'>Percent</span>) <span class='kw'>&lt;-</span> <span class='no'>School</span>
-<span class='fu'>barplot</span>(<span class='no'>Percent</span>,<span class='kw'>las</span><span class='kw'>=</span><span class='fl'>2</span>,<span class='kw'>cex.names</span><span class='kw'>=</span><span class='fl'>.65</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"tomato"</span>)</div><img src='Graduate-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Graduate</span>)</div></pre>
+<span class='fu'>barplot</span>(<span class='no'>Graduate</span>$<span class='no'>percent</span>, <span class='kw'>names.arg</span> <span class='kw'>=</span> <span class='no'>Graduate</span>$<span class='no'>school</span>,
+        <span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>cex.names</span> <span class='kw'>=</span> <span class='fl'>0.7</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"tomato"</span>)</div><img src='Graduate-2.png' alt='' width='540' height='400' /><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

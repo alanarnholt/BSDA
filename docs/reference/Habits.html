@@ -87,14 +87,15 @@
     <p>Data for Exercise 7.57</p>
     
 
+    <pre class="usage"><span class='no'>Habits</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 11 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame/tibble with 11 observations on the following 4 variables.</p><dl class='dl-horizontal'>
 <dt>A</dt><dd><p>a numeric vector</p></dd> 
 <dt>B</dt><dd><p>a numeric vector</p></dd> 
-<dt>differ</dt><dd><p>a numeric vector</p></dd> 
-<dt>signrks</dt><dd><p>a numeric vector</p></dd> 
+<dt>differ</dt><dd><p><code>B</code> minus <code>A</code></p></dd> 
+<dt>signrks</dt><dd><p>the signed-ranked-differences</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -105,34 +106,34 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Habits</span>)</div><div class='output co'>#&gt; 'data.frame':	11 obs. of  4 variables:
-#&gt;  $ A      : int  105 109 115 112 124 107 121 112 104 101 ...
-#&gt;  $ B      : int  115 103 110 125 99 121 119 106 100 97 ...
-#&gt;  $ differ : int  10 -6 -5 13 -25 14 -2 -6 -4 -4 ...
-#&gt;  $ signrks: num  8 -5.5 -4 9 -11 10 -1 -5.5 -2.5 -2.5 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Habits</span>)
-<span class='fu'>qqnorm</span>(<span class='no'>differ</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>differ</span>)</div><img src='Habits-5.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>shapiro.test</span>(<span class='no'>Habits</span>$<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Shapiro-Wilk normality test
 #&gt; 
-#&gt; data:  differ
+#&gt; data:  Habits$differ
 #&gt; W = 0.89091, p-value = 0.1428
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>B</span>,<span class='no'>A</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Paired t-test
-#&gt; 
-#&gt; data:  B and A
-#&gt; t = -0.64681, df = 10, p-value = 0.2662
-#&gt; alternative hypothesis: true difference in means is less than 0
-#&gt; 95 percent confidence interval:
-#&gt;      -Inf 3.931985
-#&gt; sample estimates:
-#&gt; mean of the differences 
-#&gt;               -2.181818 
-#&gt; </div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>B</span>,<span class='no'>A</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'>qqnorm</span>(<span class='no'>Habits</span>$<span class='no'>differ</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>Habits</span>$<span class='no'>differ</span>)</div><img src='Habits-5.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>Habits</span>$<span class='no'>B</span>, <span class='no'>Habits</span>$<span class='no'>A</span>, <span class='kw'>paired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"less"</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
 #&gt; 	Wilcoxon signed rank test with continuity correction
 #&gt; 
-#&gt; data:  B and A
+#&gt; data:  Habits$B and Habits$A
 #&gt; V = 27, p-value = 0.3122
 #&gt; alternative hypothesis: true location shift is less than 0
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Habits</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Habits</span>$<span class='no'>signrks</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
+#&gt; 	One Sample t-test
+#&gt; 
+#&gt; data:  Habits$signrks
+#&gt; t = -0.51587, df = 10, p-value = 0.3086
+#&gt; alternative hypothesis: true mean is less than 0
+#&gt; 95 percent confidence interval:
+#&gt;      -Inf 2.741879
+#&gt; sample estimates:
+#&gt; mean of x 
+#&gt; -1.090909 
+#&gt; </div><div class='input'>
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Habits</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>differ</span>)) +
+      <span class='fu'>geom_dotplot</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"blue"</span>) +
+      <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

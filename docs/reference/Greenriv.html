@@ -89,11 +89,12 @@ Mountains</h1>
     <p>Data for Exercise 6.57</p>
     
 
+    <pre class="usage"><span class='no'>Greenriv</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 37 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>thick</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 37 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>thick</dt><dd><p>varve thickness in millimeters</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -104,17 +105,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Greenriv</span>)</div><div class='output co'>#&gt; 'data.frame':	37 obs. of  1 variable:
-#&gt;  $ thick: num  10.8 11.7 11 9.9 9.8 9.9 10 10 10.2 10.8 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Greenriv</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>thick</span>)</div><div class='output co'>#&gt; [1] "thick"</div><img src='Greenriv-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   37.000    0.000    8.900    9.850   11.073   10.700   11.006   12.150 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   15.600    1.813    3.286    0.298    2.300    6.700   -0.195    0.905 
-#&gt; SW p-val 
-#&gt;    0.003 </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>thick</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>7.3</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Greenriv</span>$<span class='no'>thick</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is at the |
+#&gt; 
+#&gt;    8 | 9
+#&gt;    9 | 0012244899
+#&gt;   10 | 00123367888
+#&gt;   11 | 00137
+#&gt;   12 | 036
+#&gt;   13 | 045
+#&gt;   14 | 26
+#&gt;   15 | 06
+#&gt; </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>Greenriv</span>$<span class='no'>thick</span>, <span class='kw'>md</span> <span class='kw'>=</span> <span class='fl'>7.3</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  thick
+#&gt; data:  Greenriv$thick
 #&gt; s = 37, p-value = 7.276e-12
 #&gt; alternative hypothesis: true median is greater than 7.3
 #&gt; 95 percent confidence interval:
@@ -125,7 +130,8 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level  L.E.pt U.E.pt
 #&gt; Lower Achieved CI     0.9061 10.2000    Inf
 #&gt; Interpolated CI       0.9500 10.1013    Inf
-#&gt; Upper Achieved CI     0.9506 10.1000    Inf</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Greenriv</span>)</div></pre>
+#&gt; Upper Achieved CI     0.9506 10.1000    Inf</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

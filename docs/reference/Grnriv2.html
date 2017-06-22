@@ -89,11 +89,12 @@ major lake in the Rocky Mountains</h1>
     <p>Data for Exercises 6.45 and 6.98</p>
     
 
+    <pre class="usage"><span class='no'>Grnriv2</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 101 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>thick</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 101 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>thick</dt><dd><p>varve thickness in millimeters</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -104,17 +105,26 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Grnriv2</span>)</div><div class='output co'>#&gt; 'data.frame':	101 obs. of  1 variable:
-#&gt;  $ thick: num  6 7.2 7.1 7.1 7.2 7.4 8 8.6 10 11.4 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Grnriv2</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>thick</span>)</div><div class='output co'>#&gt; [1] "thick"</div><img src='Grnriv2-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;  101.000    0.000    2.800    6.350    7.831    7.300    7.766    9.100 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   14.000    2.587    6.695    0.257    2.750   11.200   -0.144    0.489 
-#&gt; SW p-val 
-#&gt;    0.001 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>thick</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>8</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Grnriv2</span>$<span class='no'>thick</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is at the |
+#&gt; 
+#&gt;    2 | 8
+#&gt;    3 | 04678
+#&gt;    4 | 01225568
+#&gt;    5 | 67789
+#&gt;    6 | 0001334577888
+#&gt;    7 | 000011111122222223333455678889
+#&gt;    8 | 011112344667
+#&gt;    9 | 00235678
+#&gt;   10 | 028
+#&gt;   11 | 0014
+#&gt;   12 | 0013489
+#&gt;   13 | 2267
+#&gt;   14 | 0
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Grnriv2</span>$<span class='no'>thick</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='fl'>8</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
-#&gt; data:  thick
+#&gt; data:  Grnriv2$thick
 #&gt; t = -0.65761, df = 100, p-value = 0.2561
 #&gt; alternative hypothesis: true mean is less than 8
 #&gt; 95 percent confidence interval:
@@ -122,21 +132,8 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt;  7.830693 
-#&gt; </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>thick</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>8</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
-#&gt; 	One-sample Sign-Test
-#&gt; 
-#&gt; data:  thick
-#&gt; s = 38, p-value = 0.01049
-#&gt; alternative hypothesis: true median is less than 8
-#&gt; 95 percent confidence interval:
-#&gt;  -Inf  7.8
-#&gt; sample estimates:
-#&gt; median of x 
-#&gt;         7.3 
-#&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
-#&gt; Lower Achieved CI     0.9445   -Inf    7.8
-#&gt; Interpolated CI       0.9500   -Inf    7.8
-#&gt; Upper Achieved CI     0.9636   -Inf    7.8</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Grnriv2</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
