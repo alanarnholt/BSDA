@@ -3801,28 +3801,31 @@ NULL
 #' 
 #' @name Golf
 #' @docType data
-#' @format A data frame with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on the following variable.
 #' \describe{ 
-#' \item{yards}{a numeric vector} 
+#' \item{yards}{distance a golf ball is driven in yards} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Golf)
-#' attach(Golf)
-#' stem(yards)
-#' EDA(yards)
-#' detach(Golf)
+#' stem(Golf$yards)
+#' qqnorm(Golf$yards)
+#' qqline(Golf$yards)
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Golf, aes(sample = yards)) + 
+#' geom_qq() + 
+#' theme_bw()
+#' }
+#' 
+"Golf"
 
 
 
 
-
-#' Annual salaries for state governors in 1994
+#' Annual salaries for state governors in 1994 and 1999
 #' 
 #' Data for Exercise 5.112
 #' 
@@ -3831,7 +3834,7 @@ NULL
 #' @docType data
 #' @format A data frame with 50 observations on the following 3 variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
+#' \item{state}{a character variable with values \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 #' \code{Colorado} \code{Connecticut} \code{Delaware} \code{Florida}
 #' \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
@@ -3844,20 +3847,24 @@ NULL
 #' \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
 #' \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
 #' Virginia} \code{Wisconsin} \code{Wyoming}} 
-#' \item{X1994salary}{a numeric vector} 
-#' \item{X1999salary}{a numeric vector} 
+#' \item{year}{a factor indicating year} 
+#' \item{salary}{a numeric vector with the governor's salary in dollars} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Governor)
-#' attach(Governor)
-#' EDA(X1999salary)
-#' detach(Governor)
+#' boxplot(salary ~ year, data = Governor)
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Governor, aes(x = salary)) + 
+#' geom_density(fill = "pink") + 
+#' facet_grid(year ~ .) + 
+#' theme_bw()
+#' }
+#' 
+"Governor"
 
 
 
@@ -3872,28 +3879,31 @@ NULL
 #' @docType data
 #' @format A data frame with 10 observations on the following 2 variables.
 #' \describe{ 
-#' \item{HSGPA}{a numeric vector} 
-#' \item{CollGPA}{a numeric vector} 
+#' \item{hsgpa}{high school gpa} 
+#' \item{collgpa}{college gpa} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Gpa)
-#' attach(Gpa)
-#' plot(HSGPA,CollGPA)
-#' model <- lm(CollGPA~HSGPA)
-#' abline(model)
-#' model
-#' r <- resid(model)
-#' yhat <- fitted(model)
-#' Table2.1 <- cbind(HSGPA,CollGPA,yhat,r)
-#' Table2.1
-#' remove(r,yhat,model,Table2.1)
-#' detach(Gpa)
+#' plot(collgpa ~ hsgpa, data = Gpa)
+#' mod <- lm(collgpa ~ hsgpa, data = Gpa)
+#' abline(mod)               # add line
+#' yhat <- predict(mod)      # fitted values
+#' e <- resid(mod)           # residuals
+#' cbind(Gpa, yhat, e)       # Table 2.1
+#' cor(Gpa$hsgpa, Gpa$collgpa)
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
+#' geom_point() + 
+#' geom_smooth(method = "lm") + 
+#' theme_bw()
+#' }
+#' 
+#' 
+"Gpa"
 
 
 

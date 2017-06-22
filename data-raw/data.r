@@ -1492,3 +1492,60 @@ qqnorm(T8$di)
 qqline(T8$di)
 t.test(T8$srk)
 ##
+######################################################
+Golf <- read_csv("Golf.csv")
+Golf
+devtools::use_data(Golf, overwrite = TRUE)
+## Examples
+stem(Golf$yards)
+qqnorm(Golf$yards)
+qqline(Golf$yards)
+## Not run
+ggplot2::ggplot(data = Golf, aes(sample = yards)) +
+  geom_qq() + 
+  theme_bw()
+##
+#######################################################
+Governor <- read_csv("Governor.csv")
+Governor <- Governor %>%
+  gather(`1994salary`, `1999salary`, key = "year", value = "salary") %>%
+  rename(state = State)
+Governor$year <- str_replace(string = Governor$year, pattern= "salary", replacement = "")
+Governor$year <- factor(Governor$year)
+Governor
+devtools::use_data(Governor, overwrite = TRUE)
+## Examples
+boxplot(salary ~ year, data = Governor)
+## Not run
+ggplot2::ggplot(data = Governor, aes(x = salary)) + 
+  geom_density(fill = "pink") + 
+  facet_grid(year ~ .) + 
+  theme_bw()
+##
+#######################################################
+Gpa <- read_csv("Gpa.csv")
+Gpa <- Gpa %>%
+  rename(hsgpa = HSGPA, collgpa = CollGPA)
+Gpa
+devtools::use_data(Gpa, overwrite = TRUE)
+## Examples
+plot(collgpa ~ hsgpa, data = Gpa)
+mod <- lm(collgpa ~ hsgpa, data = Gpa)
+abline(mod)               # add line
+yhat <- predict(mod)      # fitted values
+e <- resid(mod)           # residuals
+cbind(Gpa, yhat, e)       # Table 2.1
+cor(Gpa$hsgpa, Gpa$collgpa)
+## Not run
+ggplot2::ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") + 
+  theme_bw()
+##
+# Gpa <- Gpa %>%
+#   mutate(student = row.names(Gpa)) %>%
+#   gather(`HSGPA`, `CollGPA`, key = "school", value = "gpa")
+# Gpa
+# Wide <- Gpa %>%
+#   tidyr::spread(school, gpa)
+# Wide

@@ -6,26 +6,32 @@
 \title{High school GPA versus college GPA}
 \format{A data frame with 10 observations on the following 2 variables.
 \describe{ 
-\item{HSGPA}{a numeric vector} 
-\item{CollGPA}{a numeric vector} 
+\item{hsgpa}{high school gpa} 
+\item{collgpa}{college gpa} 
 }}
+\usage{
+Gpa
+}
 \description{
 Data for Exercise 2.13
 }
 \examples{
 
-str(Gpa)
-attach(Gpa)
-plot(HSGPA,CollGPA)
-model <- lm(CollGPA~HSGPA)
-abline(model)
-model
-r <- resid(model)
-yhat <- fitted(model)
-Table2.1 <- cbind(HSGPA,CollGPA,yhat,r)
-Table2.1
-remove(r,yhat,model,Table2.1)
-detach(Gpa)
+plot(collgpa ~ hsgpa, data = Gpa)
+mod <- lm(collgpa ~ hsgpa, data = Gpa)
+abline(mod)               # add line
+yhat <- predict(mod)      # fitted values
+e <- resid(mod)           # residuals
+cbind(Gpa, yhat, e)       # Table 2.1
+cor(Gpa$hsgpa, Gpa$collgpa)
+
+\dontrun{
+ggplot2::ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
+geom_point() + 
+geom_smooth(method = "lm") + 
+theme_bw()
+}
+
 
 }
 \references{

@@ -3,10 +3,10 @@
 \docType{data}
 \name{Governor}
 \alias{Governor}
-\title{Annual salaries for state governors in 1994}
+\title{Annual salaries for state governors in 1994 and 1999}
 \format{A data frame with 50 observations on the following 3 variables.
 \describe{ 
-\item{State}{a factor with levels \code{Alabama}
+\item{state}{a character variable with values \code{Alabama}
 \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 \code{Colorado} \code{Connecticut} \code{Delaware} \code{Florida}
 \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
@@ -19,18 +19,25 @@
 \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
 \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
 Virginia} \code{Wisconsin} \code{Wyoming}} 
-\item{X1994salary}{a numeric vector} 
-\item{X1999salary}{a numeric vector} 
+\item{year}{a factor indicating year} 
+\item{salary}{a numeric vector with the governor's salary in dollars} 
 }}
+\usage{
+Governor
+}
 \description{
 Data for Exercise 5.112
 }
 \examples{
 
-str(Governor)
-attach(Governor)
-EDA(X1999salary)
-detach(Governor)
+boxplot(salary ~ year, data = Governor)
+
+\dontrun{
+ggplot2::ggplot(data = Governor, aes(x = salary)) + 
+geom_density(fill = "pink") + 
+facet_grid(year ~ .) + 
+theme_bw()
+}
 
 }
 \references{

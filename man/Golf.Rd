@@ -4,20 +4,27 @@
 \name{Golf}
 \alias{Golf}
 \title{Distances a golf ball can be driven by 20 professional golfers}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{yards}{a numeric vector} 
+\item{yards}{distance a golf ball is driven in yards} 
 }}
+\usage{
+Golf
+}
 \description{
 Data for Exercise 5.24
 }
 \examples{
 
-str(Golf)
-attach(Golf)
-stem(yards)
-EDA(yards)
-detach(Golf)
+stem(Golf$yards)
+qqnorm(Golf$yards)
+qqline(Golf$yards)
+
+\dontrun{
+ggplot2::ggplot(data = Golf, aes(sample = yards)) + 
+geom_qq() + 
+theme_bw()
+}
 
 }
 \references{
