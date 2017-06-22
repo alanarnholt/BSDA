@@ -4219,6 +4219,40 @@ NULL
 #' 
 "Hardwood"
 
+#' Primary heating sources of homes on indian reservations versus all
+#' households
+#' 
+#' Data for Exercise 1.29
+#' 
+#' 
+#' @name Heat
+#' @docType data
+#' @format A data frame/tibble with 301 observations on the following 2 variables.
+#' \describe{ 
+#' \item{fuel}{a factor with levels \code{Utility gas},
+#' \code{LP bottled gas}, \code{Electricity}, \code{Fuel oil}, \code{Wood}, and
+#' \code{Other}} 
+#' \item{location}{a factor with levels \code{American Indians on reservation} \code{All U.S. households},
+#'  and \code{American Indians not on reservations}} 
+#' }
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' Duxbury
+#' @keywords datasets
+#' @examples
+#' 
+#' T1 <- xtabs(~ fuel + location, data = Heat)
+#' T1
+#' barplot(t(T1), beside = TRUE, legend = TRUE)
+#' 
+#' \dontrun{
+#' ggplot2::ggplot(data = Heat, aes(x = fuel, fill = location)) + 
+#'    geom_bar(position = "dodge") + 
+#'    labs(y = "percent") + 
+#'    theme_bw() + 
+#'    theme(axis.text.x = element_text(angle = 30, hjust = 1)) 
+#' }
+#' 
+"Heat"
 
 
 
@@ -4251,47 +4285,6 @@ NULL
 #' detach(Heating)
 #' 
 NULL
-
-
-
-
-
-#' Primary heating sources of homes on indian reservations versus all
-#' households
-#' 
-#' Data for Exercise 1.29
-#' 
-#' 
-#' @name Heat
-#' @docType data
-#' @format A data frame with 6 observations on the following 4 variables.
-#' \describe{ 
-#' \item{Fuel}{a factor with levels \code{Electricity}
-#' \code{Fuel Oil} \code{LP bottled gas} \code{Other} \code{Utility gas}
-#' \code{Wood}} 
-#' \item{Reserv}{a numeric vector} 
-#' \item{All.US}{a numeric vector} 
-#' \item{Not.Rese}{a numeric vector} 
-#' }
-#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
-#' @keywords datasets
-#' @examples
-#' 
-#' str(Heat)
-#' attach(Heat)
-#' MAT <- cbind(Reserv, All.US, Not.Rese) 
-#' row.names(MAT) <- c("Utility Gas","LP bottled Gas","Electricity",
-#' "Fuel Oil","Wood","Other Fuel")
-#' MAT
-#' barplot(t(MAT),beside=TRUE,legend=TRUE,main="Heating of American Indian Homes")
-#' sum(Reserv)
-#' sum(All.US)
-#' sum(Not.Rese)
-#' detach(Heat)
-#' 
-NULL
-
 
 
 

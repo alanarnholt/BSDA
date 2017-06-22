@@ -1654,4 +1654,32 @@ plot(tensile ~ hardwood, data = Hardwood)
 model <- lm(tensile ~ hardwood, data = Hardwood)
 abline(model)
 plot(model, which = 1)
+####################################################
+## Creating Heat
+mat <- matrix(data = c(16, 48, 51, 22, 9, 6, 19, 25, 26,
+                       6, 9, 12, 34, 8, 4, 4, 1, 1), byrow = TRUE, 
+              nrow = 6)
+dimnames(mat) <- list(fuel = c("Utility gas", "LP bottled gas", "Electricity", "Fuel oil", "Wood", "Other"), 
+                      location = c("American Indians on reservation", "All U.S. households", "American Indians not on reservations")
+)
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Heat <- vcdExtra::expand.dft(matDF)
+rm(mat, matT, matDF)
+Heat$fuel <- factor(Heat$fuel, levels =  c("Utility gas", "LP bottled gas", "Electricity", "Fuel oil", "Wood", "Other"))
+Heat$location <- factor(Heat$location, levels = c("American Indians on reservation", "All U.S. households", "American Indians not on reservations"))
+Heat <- as_tibble(Heat)
+Heat
+devtools::use_data(Heat, overwrite = TRUE)
+## Examples
 
+T1 <- xtabs(~ fuel + location, data = Heat)
+T1
+barplot(t(T1), beside = TRUE, legend = TRUE)
+## Not run
+ggplot2::ggplot(data = Heat, aes(x = fuel, fill = location)) + 
+  geom_bar(position = "dodge") + 
+  labs(y = "percent") + 
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1)) 
+##
