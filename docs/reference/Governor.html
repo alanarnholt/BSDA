@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Annual salaries for state governors in 1994 — Governor • BSDA</title>
+<title>Annual salaries for state governors in 1994 and 1999 — Governor • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -80,18 +80,19 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Annual salaries for state governors in 1994</h1>
+    <h1>Annual salaries for state governors in 1994 and 1999</h1>
     </div>
 
     
     <p>Data for Exercise 5.112</p>
     
 
+    <pre class="usage"><span class='no'>Governor</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>A data frame with 50 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>State</dt><dd><p>a factor with levels <code>Alabama</code>
+<dt>state</dt><dd><p>a character variable with values <code>Alabama</code>
 <code>Alaska</code> <code>Arizona</code> <code>Arkansas</code> <code>California</code>
 <code>Colorado</code> <code>Connecticut</code> <code>Delaware</code> <code>Florida</code>
 <code>Georgia</code> <code>Hawaii</code> <code>Idaho</code> <code>Illinois</code> <code>Indiana</code>
@@ -104,8 +105,8 @@
 <code>South Carolina</code> <code>South Dakota</code> <code>Tennessee</code> <code>Texas</code>
 <code>Utah</code> <code>Vermont</code> <code>Virginia</code> <code>Washington</code> <code>West
 Virginia</code> <code>Wisconsin</code> <code>Wyoming</code></p></dd> 
-<dt>X1994salary</dt><dd><p>a numeric vector</p></dd> 
-<dt>X1999salary</dt><dd><p>a numeric vector</p></dd> 
+<dt>year</dt><dd><p>a factor indicating year</p></dd> 
+<dt>salary</dt><dd><p>a numeric vector with the governor's salary in dollars</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -116,16 +117,13 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Governor</span>)</div><div class='output co'>#&gt; 'data.frame':	50 obs. of  3 variables:
-#&gt;  $ State      : Factor w/ 50 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ X1994salary: int  81151 81648 75000 60000 120000 70000 78000 95000 101764 91092 ...
-#&gt;  $ X1999salary: int  94655 81648 95000 60000 165000 90000 78000 107000 117240 115939 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Governor</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>X1999salary</span>)</div><div class='output co'>#&gt; [1] "X1999salary"</div><img src='Governor-5.png' alt='' width='540' height='400' /><div class='output co'>#&gt;     Size (n)      Missing      Minimum       1st Qu         Mean       Median 
-#&gt; 5.000000e+01 0.000000e+00 6.000000e+04 8.804400e+04 1.018051e+05 9.500000e+04 
-#&gt;       TrMean       3rd Qu         Max.       Stdev.         Var.      SE Mean 
-#&gt; 1.004620e+05 1.158070e+05 1.790000e+05 2.270517e+04 5.155249e+08 3.210997e+03 
-#&gt;       I.Q.R.        Range     Kurtosis     Skewness     SW p-val 
-#&gt; 2.776300e+04 1.190000e+05 1.780000e+00 1.054000e+00 4.000000e-03 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Governor</span>)</div></pre>
+<span class='fu'>boxplot</span>(<span class='no'>salary</span> ~ <span class='no'>year</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Governor</span>)</div><img src='Governor-2.png' alt='' width='540' height='400' /><div class='input'>
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Governor</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>salary</span>)) +
+  <span class='fu'>geom_density</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"pink"</span>) +
+  <span class='fu'>facet_grid</span>(<span class='no'>year</span> ~ <span class='no'>.</span>) +
+  <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
