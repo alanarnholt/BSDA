@@ -4,25 +4,22 @@
 \name{Heating}
 \alias{Heating}
 \title{Fuel efficiency ratings for three types of oil heaters}
-\format{A data frame with 30 observations on the following 6 variables.
+\format{A data frame/tibble with 90 observations on the following 2 variables.
 \describe{ 
-\item{TypeA}{a numeric vector} 
-\item{TypeB}{a numeric vector} 
-\item{TypeC}{a numeric vector}
-\item{Rating}{a numeric vector} 
-\item{Type}{a numeric vector} 
-\item{Ranks}{a numeric vector} 
+\item{type}{a factor with levels \code{A}, \code{B}, and \code{C} denoting the type of oil heater} 
+\item{efficiency}{heater efficiency rating} 
 }}
+\usage{
+Heating
+}
 \description{
 Data for Exercise 10.32
 }
 \examples{
 
-str(Heating)
-attach(Heating)
-boxplot(Rating~Type)
-kruskal.test(Rating~as.factor(Type))
-detach(Heating)
+boxplot(efficiency ~ type, data = Heating, 
+        col = c("red", "blue", "green"))
+kruskal.test(efficiency ~ type, data = Heating)
 
 }
 \references{

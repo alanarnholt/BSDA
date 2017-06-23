@@ -4264,27 +4264,22 @@ NULL
 #' 
 #' @name Heating
 #' @docType data
-#' @format A data frame with 30 observations on the following 6 variables.
+#' @format A data frame/tibble with 90 observations on the following 2 variables.
 #' \describe{ 
-#' \item{TypeA}{a numeric vector} 
-#' \item{TypeB}{a numeric vector} 
-#' \item{TypeC}{a numeric vector}
-#' \item{Rating}{a numeric vector} 
-#' \item{Type}{a numeric vector} 
-#' \item{Ranks}{a numeric vector} 
+#' \item{type}{a factor with levels \code{A}, \code{B}, and \code{C} denoting the type of oil heater} 
+#' \item{efficiency}{heater efficiency rating} 
 #' }
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Heating)
-#' attach(Heating)
-#' boxplot(Rating~Type)
-#' kruskal.test(Rating~as.factor(Type))
-#' detach(Heating)
+#' boxplot(efficiency ~ type, data = Heating, 
+#'         col = c("red", "blue", "green"))
+#' kruskal.test(efficiency ~ type, data = Heating)
 #' 
-NULL
+"Heating"
 
 
 
@@ -4296,29 +4291,28 @@ NULL
 #' 
 #' @name Hodgkin
 #' @docType data
-#' @format A data frame with 4 observations on the following 4 variables.
+#' @format A data frame/tibble with 538 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Histological}{a factor with levels \code{LD}
-#' \code{LP} \code{MC} \code{NS}} 
-#' \item{Positive}{a numeric vector}
-#' \item{Partial}{a numeric vector} 
-#' \item{None}{a numeric vector} 
+#' \item{type}{a factor with levels \code{LD},
+#' \code{LP}, \code{MC}, and \code{NS}} 
+#' \item{response}{a factor with levels \code{Positive}, \code{Partial}. and \code{None}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Hodgkin)
-#' attach(Hodgkin)
-#' HOD <- as.matrix(Hodgkin[,2:4])
-#' rownames(HOD) <- Histological
-#' HOD
-#' barplot(t(HOD),legend=TRUE,beside=TRUE)
-#' detach(Hodgkin)
-#' remove(HOD)
+#' T1 <- xtabs(~type + response, data = Hodgkin)
+#' T1
+#' barplot(t(T1), legend = TRUE, beside = TRUE)
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Hodgkin, aes(x = type, fill = response)) + 
+#'     geom_bar(position = "dodge") + 
+#'     theme_bw()
+#' }
+#' 
+"Hodgkin"
 
 
 

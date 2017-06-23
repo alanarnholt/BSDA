@@ -4,27 +4,29 @@
 \name{Hodgkin}
 \alias{Hodgkin}
 \title{Results of treatments for Hodgkin's disease}
-\format{A data frame with 4 observations on the following 4 variables.
+\format{A data frame/tibble with 538 observations on the following 2 variables.
 \describe{ 
-\item{Histological}{a factor with levels \code{LD}
-\code{LP} \code{MC} \code{NS}} 
-\item{Positive}{a numeric vector}
-\item{Partial}{a numeric vector} 
-\item{None}{a numeric vector} 
+\item{type}{a factor with levels \code{LD},
+\code{LP}, \code{MC}, and \code{NS}} 
+\item{response}{a factor with levels \code{Positive}, \code{Partial}. and \code{None}}
 }}
+\usage{
+Hodgkin
+}
 \description{
 Data for Exercise 2.77
 }
 \examples{
 
-str(Hodgkin)
-attach(Hodgkin)
-HOD <- as.matrix(Hodgkin[,2:4])
-rownames(HOD) <- Histological
-HOD
-barplot(t(HOD),legend=TRUE,beside=TRUE)
-detach(Hodgkin)
-remove(HOD)
+T1 <- xtabs(~type + response, data = Hodgkin)
+T1
+barplot(t(T1), legend = TRUE, beside = TRUE)
+
+\dontrun{
+ggplot2::ggplot(data = Hodgkin, aes(x = type, fill = response)) + 
+    geom_bar(position = "dodge") + 
+    theme_bw()
+}
 
 }
 \references{

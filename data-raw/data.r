@@ -1683,3 +1683,43 @@ ggplot2::ggplot(data = Heat, aes(x = fuel, fill = location)) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 30, hjust = 1)) 
 ##
+######################################################
+## 
+Heating <- read_csv("Heating.csv")
+Heating <- Heating %>%
+  select(TypeA, TypeB, TypeC) %>%
+  gather(`TypeA`, `TypeB`, `TypeC`, key = "type", value = "efficiency")
+Heating$type <- factor(str_replace(Heating$type, "Type", ""))
+Heating
+devtools::use_data(Heating, overwrite = TRUE)
+## Examples
+boxplot(efficiency ~ type, data = Heating, col = c("red", "blue", "green"))
+kruskal.test(efficiency ~ type, data = Heating)
+##
+#######################################################
+## Creating Hodgkin
+mat <- matrix(data = c(74, 18, 12, 
+                       68, 16, 12, 
+                       154, 54, 58, 
+                       18, 10, 44), nrow = 4, byrow = TRUE)
+dimnames(mat) <- list(type = c("LP", "NS", "MC", "LD"), 
+                      response = c("Positive", "Partial", "None"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Hodgkin <- vcdExtra::expand.dft(matDF)
+rm(mat, matT, matDF)
+Hodgkin$type <- factor(Hodgkin$type, 
+                       levels = c("LP", "NS", "MC", "LD"))
+Hodgkin$response <- factor(v, levels = c("Positive", "Partial", "None"))
+Hodgkin <- as_tibble(Hodgkin)
+Hodgkin
+devtools::use_data(Hodgkin, overwrite = TRUE)
+## Examples
+T1 <- xtabs(~type + response, data = Hodgkin)
+T1
+barplot(t(T1), legend = TRUE, beside = TRUE)
+## nor run
+ggplot2::ggplot(data = Hodgkin, aes(x = type, fill = response)) + 
+  geom_bar(position = "dodge") + 
+  theme_bw()
+##
