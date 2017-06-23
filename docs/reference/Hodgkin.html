@@ -87,15 +87,14 @@
     <p>Data for Exercise 2.77</p>
     
 
+    <pre class="usage"><span class='no'>Hodgkin</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 4 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>Histological</dt><dd><p>a factor with levels <code>LD</code>
-<code>LP</code> <code>MC</code> <code>NS</code></p></dd> 
-<dt>Positive</dt><dd><p>a numeric vector</p></dd>
-<dt>Partial</dt><dd><p>a numeric vector</p></dd> 
-<dt>None</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 538 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>type</dt><dd><p>a factor with levels <code>LD</code>,
+<code>LP</code>, <code>MC</code>, and <code>NS</code></p></dd> 
+<dt>response</dt><dd><p>a factor with levels <code>Positive</code>, <code>Partial</code>. and <code>None</code></p></dd>
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -106,19 +105,18 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Hodgkin</span>)</div><div class='output co'>#&gt; 'data.frame':	4 obs. of  4 variables:
-#&gt;  $ Histological: Factor w/ 4 levels "LD","LP","MC",..: 2 4 3 1
-#&gt;  $ Positive    : int  74 68 154 18
-#&gt;  $ Partial     : int  18 16 54 10
-#&gt;  $ None        : int  12 12 58 44</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Hodgkin</span>)
-<span class='no'>HOD</span> <span class='kw'>&lt;-</span> <span class='fu'>as.matrix</span>(<span class='no'>Hodgkin</span>[,<span class='fl'>2</span>:<span class='fl'>4</span>])
-<span class='fu'>rownames</span>(<span class='no'>HOD</span>) <span class='kw'>&lt;-</span> <span class='no'>Histological</span>
-<span class='no'>HOD</span></div><div class='output co'>#&gt;    Positive Partial None
-#&gt; LP       74      18   12
-#&gt; NS       68      16   12
-#&gt; MC      154      54   58
-#&gt; LD       18      10   44</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>HOD</span>),<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><img src='Hodgkin-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Hodgkin</span>)
-<span class='fu'>remove</span>(<span class='no'>HOD</span>)</div></pre>
+<span class='no'>T1</span> <span class='kw'>&lt;-</span> <span class='fu'>xtabs</span>(~<span class='no'>type</span> + <span class='no'>response</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Hodgkin</span>)
+<span class='no'>T1</span></div><div class='output co'>#&gt;     response
+#&gt; type None Partial Positive
+#&gt;   LP   12      18       74
+#&gt;   NS   12      16       68
+#&gt;   MC   58      54      154
+#&gt;   LD   44      10       18</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><img src='Hodgkin-4.png' alt='' width='540' height='400' /><div class='input'>
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Hodgkin</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>type</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>response</span>)) +
+      <span class='fu'>geom_bar</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
+      <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

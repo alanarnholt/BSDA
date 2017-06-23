@@ -87,16 +87,13 @@
     <p>Data for Exercise 10.32</p>
     
 
+    <pre class="usage"><span class='no'>Heating</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 30 observations on the following 6 variables.</p><dl class='dl-horizontal'>
-<dt>TypeA</dt><dd><p>a numeric vector</p></dd> 
-<dt>TypeB</dt><dd><p>a numeric vector</p></dd> 
-<dt>TypeC</dt><dd><p>a numeric vector</p></dd>
-<dt>Rating</dt><dd><p>a numeric vector</p></dd> 
-<dt>Type</dt><dd><p>a numeric vector</p></dd> 
-<dt>Ranks</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 90 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>type</dt><dd><p>a factor with levels <code>A</code>, <code>B</code>, and <code>C</code> denoting the type of oil heater</p></dd> 
+<dt>efficiency</dt><dd><p>heater efficiency rating</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -107,32 +104,14 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Heating</span>)</div><div class='output co'>#&gt; 'data.frame':	30 obs. of  6 variables:
-#&gt;  $ TypeA : int  75 71 74 86 77 84 76 75 57 96 ...
-#&gt;  $ TypeB : int  73 83 70 66 54 71 74 76 92 75 ...
-#&gt;  $ TypeC : int  60 63 74 56 61 73 71 62 91 64 ...
-#&gt;  $ Rating: int  75 71 74 86 77 84 76 75 57 96 ...
-#&gt;  $ Type  : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ Ranks : num  20 12 17 27 24 26 22.5 20 3 30 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Heating</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 4):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 5):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 7):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 9):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 11):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 14):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 16):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Rating</span>~<span class='no'>Type</span>)</div><img src='Heating-12.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>Rating</span>~<span class='fu'>as.factor</span>(<span class='no'>Type</span>))</div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>efficiency</span> ~ <span class='no'>type</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Heating</span>,
+        <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>, <span class='st'>"green"</span>))</div><img src='Heating-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>efficiency</span> ~ <span class='no'>type</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Heating</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Kruskal-Wallis rank sum test
 #&gt; 
-#&gt; data:  Rating by as.factor(Type)
+#&gt; data:  efficiency by type
 #&gt; Kruskal-Wallis chi-squared = 6.264, df = 2, p-value = 0.04363
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Heating</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
