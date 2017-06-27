@@ -87,13 +87,13 @@
     <p>Data for Exercise 7.41</p>
     
 
+    <pre class="usage"><span class='no'>Independent</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 46 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame/tibble with 46 observations on the following 2 variables.</p><dl class='dl-horizontal'>
 <dt>score</dt><dd><p>a numeric vector</p></dd> 
-<dt>group</dt><dd><p>a numeric vector</p></dd> 
-<dt>ranks</dt><dd><p>a numeric vector</p></dd> 
+<dt>group</dt><dd><p>a factor with levels <code>A</code> and <code>B</code></p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -104,17 +104,14 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Independent</span>)</div><div class='output co'>#&gt; 'data.frame':	46 obs. of  3 variables:
-#&gt;  $ score: int  67 72 82 83 86 87 90 91 92 92 ...
-#&gt;  $ group: int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ ranks: num  2 5 9 10 13.5 16 21.5 23.5 25.5 25.5 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Independent</span>)
-<span class='fu'>boxplot</span>(<span class='no'>score</span>~<span class='no'>group</span>)</div><img src='Independent-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>score</span>~<span class='no'>group</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
+<span class='fu'>qqnorm</span>(<span class='no'>Independent</span>$<span class='no'>score</span>[<span class='no'>Independent</span>$<span class='no'>group</span><span class='kw'>==</span><span class='st'>"A"</span>])</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>Independent</span>$<span class='no'>score</span>[<span class='no'>Independent</span>$<span class='no'>group</span><span class='kw'>==</span><span class='st'>"A"</span>])</div><img src='Independent-3.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>qqnorm</span>(<span class='no'>Independent</span>$<span class='no'>score</span>[<span class='no'>Independent</span>$<span class='no'>group</span><span class='kw'>==</span><span class='st'>"B"</span>])</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>Independent</span>$<span class='no'>score</span>[<span class='no'>Independent</span>$<span class='no'>group</span><span class='kw'>==</span><span class='st'>"B"</span>])</div><img src='Independent-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>boxplot</span>(<span class='no'>score</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Independent</span>)</div><img src='Independent-8.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>score</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Independent</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
 #&gt; 	Wilcoxon rank sum test with continuity correction
 #&gt; 
 #&gt; data:  score by group
 #&gt; W = 349.5, p-value = 0.06321
 #&gt; alternative hypothesis: true location shift is not equal to 0
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Independent</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

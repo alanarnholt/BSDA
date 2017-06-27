@@ -89,16 +89,13 @@ areas</h1>
     <p>Data for Example 10.6</p>
     
 
+    <pre class="usage"><span class='no'>Hostile</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 45 observations on the following 6 variables.</p><dl class='dl-horizontal'>
-<dt>Rural</dt><dd><p>a numeric vector</p></dd> 
-<dt>Suburban</dt><dd><p>a numeric vector</p></dd> 
-<dt>Urban</dt><dd><p>a numeric vector</p></dd> 
-<dt>HLT</dt><dd><p>a numeric vector</p></dd> 
-<dt>Type</dt><dd><p>a numeric vector</p></dd> 
-<dt>Ranks</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 135 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>location</dt><dd><p>a factor with the location of the high school student (<code>Rural</code>, <code>Suburban</code>, or <code>Urban</code>)</p></dd> 
+<dt>hostility</dt><dd><p>the score from the Hostility Level Test</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -109,36 +106,14 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Hostile</span>)</div><div class='output co'>#&gt; 'data.frame':	45 obs. of  6 variables:
-#&gt;  $ Rural   : int  16 21 33 51 53 63 64 64 66 67 ...
-#&gt;  $ Suburban: int  22 37 52 63 65 67 70 72 73 74 ...
-#&gt;  $ Urban   : int  33 53 54 72 74 76 80 82 83 83 ...
-#&gt;  $ HLT     : int  16 21 33 51 53 63 64 64 66 67 ...
-#&gt;  $ Type    : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ Ranks   : num  1 2 4.5 7 9.5 12.5 14.5 14.5 17 18.5 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Hostile</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Rural</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 4):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 5):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 6):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 8):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 10):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 12):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 15):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 17):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>HLT</span>~<span class='no'>Type</span>)</div><img src='Hostile-14.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>HLT</span>~<span class='fu'>as.factor</span>(<span class='no'>Type</span>))</div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>hostility</span> ~ <span class='no'>location</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Hostile</span>,
+        <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>, <span class='st'>"green"</span>))</div><img src='Hostile-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>hostility</span> ~ <span class='no'>location</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Hostile</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Kruskal-Wallis rank sum test
 #&gt; 
-#&gt; data:  HLT by as.factor(Type)
+#&gt; data:  hostility by location
 #&gt; Kruskal-Wallis chi-squared = 11.607, df = 2, p-value = 0.003018
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Hostile</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

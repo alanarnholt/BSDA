@@ -89,16 +89,17 @@ American indians living on reservations</h1>
     <p>Data for Exercise 2.95</p>
     
 
+    <pre class="usage"><span class='no'>Indian</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 10 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>Reserv</dt><dd><p>a factor with levels <code>Blackfeet</code>
-<code>Fort Apache</code> <code>Gila River</code> <code>Hopi</code> <code>Navajo</code> <code>Papago</code>
-<code>Pine Ridge</code> <code>Rosebud</code> <code>San Carlos</code> <code>Zuni Pueblo</code></p></dd>
-<dt>highsch</dt><dd><p>a numeric vector</p></dd> 
-<dt>income</dt><dd><p>a numeric vector</p></dd> 
-<dt>poverty</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 10 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>reservation</dt><dd><p>a character variable with values <code>Blackfeet</code>,
+<code>Fort Apache</code>, <code>Gila River</code>, <code>Hopi</code>, <code>Navajo</code>, <code>Papago</code>,
+<code>Pine Ridge</code>, <code>Rosebud</code>, <code>San Carlos</code>, and <code>Zuni Pueblo</code></p></dd>
+<dt>percent high school</dt><dd><p>percent who have graduated from high school</p></dd> 
+<dt>per capita income</dt><dd><p>per capita income</p></dd> 
+<dt>poverty rate</dt><dd><p>percent poverty</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -109,18 +110,11 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Indian</span>)</div><div class='output co'>#&gt; 'data.frame':	10 obs. of  4 variables:
-#&gt;  $ Reserv : Factor w/ 10 levels "Blackfeet","Fort Apache",..: 1 4 8 10 7 9 2 6 5 3
-#&gt;  $ highsch: num  66.3 62.6 59.3 55.4 55.2 49.4 48.3 47.3 41.1 37.3
-#&gt;  $ income : int  4718 4566 3739 3904 3115 3173 3805 3113 3735 3176
-#&gt;  $ poverty: num  50.1 49.4 60.4 52.5 66.6 62.5 52.7 65.7 57.8 64.4</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Indian</span>)
-<span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>,<span class='fl'>2</span>))
-<span class='fu'>plot</span>(<span class='no'>highsch</span>,<span class='no'>income</span>,<span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Percent High School Graduates"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Per capita income"</span>)
-<span class='fu'>plot</span>(<span class='no'>highsch</span>,<span class='no'>poverty</span>,<span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Percent High School Graduates"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Poverty rate"</span>)</div><img src='Indian-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>,<span class='fl'>1</span>))
-<span class='fu'>cor</span>(<span class='fu'>cbind</span>(<span class='no'>highsch</span>,<span class='no'>income</span>,<span class='no'>poverty</span>))</div><div class='output co'>#&gt;            highsch     income    poverty
-#&gt; highsch  1.0000000  0.6964546 -0.5418413
-#&gt; income   0.6964546  1.0000000 -0.9284242
-#&gt; poverty -0.5418413 -0.9284242  1.0000000</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Indian</span>)</div></pre>
+<span class='fu'>par</span>(<span class='kw'>mfrow</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>2</span>))
+<span class='fu'>plot</span>(<span class='no'>`per capita income`</span> ~ <span class='no'>`percent high school`</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indian</span>,
+  <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"Percent high school graudates"</span>, <span class='kw'>ylab</span> <span class='kw'>=</span> <span class='st'>"Per capita income"</span>)
+<span class='fu'>plot</span>(<span class='no'>`poverty rate`</span> ~ <span class='no'>`percent high school`</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indian</span>,
+  <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"Percent high school graudates"</span>, <span class='kw'>ylab</span> <span class='kw'>=</span> <span class='st'>"Percent poverty"</span>)</div><img src='Indian-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>1</span>))</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
