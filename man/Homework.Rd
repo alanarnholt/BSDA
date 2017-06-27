@@ -5,21 +5,23 @@
 \alias{Homework}
 \title{Number of hours per week spent on homework for private and public high
 school students}
-\format{A data frame with 15 observations on the following 2 variables.
+\format{A data frame with 30 observations on the following 2 variables.
 \describe{ 
-\item{Private}{a numeric vector} 
-\item{Public}{a numeric vector} 
+\item{school}{type of school either \code{private} or \code{public}} 
+\item{time}{number of hours per week spent on homework} 
 }}
+\usage{
+Homework
+}
 \description{
 Data for Exercise 7.78
 }
 \examples{
 
-str(Homework)
-attach(Homework)
-boxplot(Private,Public)
-t.test(Private,Public,conf.level=.98)
-detach(Homework)
+boxplot(time ~ school, data = Homework, 
+        ylab = "Hours per week spent on homework")
+#
+t.test(time ~ school, data = Homework)
 
 }
 \references{

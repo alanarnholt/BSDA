@@ -4,9 +4,9 @@
 \name{Housing}
 \alias{Housing}
 \title{Median home prices for 1984 and 1993 in 37 markets across the U.S.}
-\format{A data frame with 37 observations on the following 3 variables.
+\format{A data frame/tibble with 74 observations on the following 3 variables.
 \describe{ 
-\item{City}{a factor with levels \code{Albany}
+\item{city}{a character variable with values \code{Albany}
 \code{Anaheim} \code{Atlanta} \code{Baltimore} \code{Birmingham}
 \code{Boston} \code{Chicago} \code{Cincinnati} \code{Cleveland}
 \code{Columbus} \code{Dallas} \code{Denver} \code{Detroit} \code{Ft
@@ -16,42 +16,25 @@ Angeles} \code{Louisville} \code{Memphis} \code{Miami} \code{Milwaukee}
 \code{Philadelphia} \code{Providence} \code{Rochester} \code{Salt Lake City}
 \code{San Antonio} \code{San Diego} \code{San Francisco} \code{San Jose}
 \code{St Louis} \code{Tampa} \code{Washington}} 
-\item{X1984}{a numeric vector} 
-\item{X1993}{a numeric vector} 
+\item{year}{a factor with levels \code{1984} and \code{1993}} 
+\item{price}{median house price} 
 }}
+\usage{
+Housing
+}
 \description{
 Data for Exercise 5.82
 }
 \examples{
 
-str(Housing)
-attach(Housing)
-stem(X1993)
-stem(X1984)
-par(mfrow=c(2,2))
-stripchart(x=list(X1984,X1993),method="stack",pch=1,cex=1.2,
-col=c("orange","pink"),group.names=c("1984","1993"))
-title(main="Problem 5.82 \\n We have not talked about this kind of graph before...")
-hist(X1993,breaks="Scott",col="pink")
-hist(X1984,breaks="Scott",col="orange")
-plot(density(X1993),col="red",xlab="",ylab="",main="",ylim=c(0,.00003))
-lines(density(X1984),col="orange")
-par(mfrow=c(1,1))
-boxplot(X1993,X1984,col=c("pink","orange"),names=c("1993","1984"),main="Problem 5.82")
-SIGN.test(X1984,conf.level=.98)
-SIGN.test(X1993,conf.level=.98)
-# 98\% CI -> 63591.1 79622.56 and 85591.69 109915.4
-# Placing on a common number line...
-my.axis <- function(side, at, labels,...)
-{for(i in seq(along=at)) axis(side=side, at=at[i], labels=labels[i],...) }
-
-plot(1,type="n",xlim=c(63000,110000),ylim=c(0,1),
-xlab="Median House Price",ylab="",yaxt="n",main="")
-title(main="98 Percent Confidence Intervals")
-my.axis(2,at=c(.25,.75),labels=c("1984","1993"), cex.axis=1.2 ,las=2)
-lines( c(63591.1, 79622.56),c(.25,.25),col="orange",lwd=24)
-lines( c(85591.69, 109915.4),c(.75,.75),col="pink",lwd=24)
-detach(Housing)
+stripchart(price ~ year, data = Housing, method = "stack", 
+           pch = 1, col = c("red", "blue"))
+\dontrun{
+ggplot2::ggplot(data = Housing, aes(x = price, fill = year)) + 
+              geom_dotplot() + 
+              facet_grid(year ~ .) + 
+              theme_bw()
+}               
 
 }
 \references{

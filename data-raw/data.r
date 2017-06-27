@@ -1723,3 +1723,90 @@ ggplot2::ggplot(data = Hodgkin, aes(x = type, fill = response)) +
   geom_bar(position = "dodge") + 
   theme_bw()
 ##
+#####################################################
+Homes <- read_csv("Homes.csv")
+Homes <- Homes %>%
+  select(city = City, `1994`, region = Region, `2000`) %>%
+  gather(`1994`, `2000`, key = "year", value = "price")
+Homes$year <- factor(Homes$year)
+Homes
+devtools::use_data(Homes, overwrite = TRUE)
+# Examples Chap 5 Stat insight
+tapply(Homes$price, Homes$year, mean)
+tapply(Homes$price, Homes$region, mean)
+##
+p2000 <- subset(Homes, year == "2000")
+p1994 <- subset(Homes, year == "1994")
+## Not run
+ggplot2::ggplot(data = Homes, aes(x = region, y = price)) + 
+  geom_boxplot() +
+  theme_bw() + 
+  facet_grid(year ~ .)
+##
+##############################################################
+Homework <- read_csv("Homework.csv")
+Homework <- Homework %>%
+  rename(private = Private, public = Public) %>%
+  gather(`private`, `public`, key = "school", value = "time")
+Homework
+devtools::use_data(Homework, overwrite = TRUE)
+## Examples
+boxplot(time ~ school, data = Homework, 
+        ylab = "Hours per week spent on homework")
+t.test(time ~ school, data = Homework)
+##
+##############################################################
+Honda <- read_csv("Honda.csv")
+Honda
+devtools::use_data(Honda, overwrite = TRUE)
+## Examples
+t.test(Honda$mileage, mu = 40, alternative = "less")
+##############################################################
+Hostile <- read_csv("Hostile.csv")
+Hostile <- Hostile %>%
+  select(Rural, Suburban, Urban) %>%
+  gather(`Rural`, `Suburban`, `Urban`, key = "location", value = "hostility")
+Hostile$location <- factor(Hostile$location)
+Hostile
+devtools::use_data(Hostile, overwrite = TRUE)
+## Examples
+boxplot(hostility ~ location, data = Hostile, 
+        col = c("red", "blue", "green"))
+kruskal.test(hostility ~ location, data = Hostile)
+##############################################################
+Housing <- read_csv("Housing.csv")
+Housing <- Housing %>%
+  rename(city = City) %>%
+  gather(`1984`, `1993`, key = "year", value = "price")
+Housing$year <- factor(Housing$year)
+Housing
+devtools::use_data(Housing, overwrite = TRUE)
+## Examples
+stripchart(price ~ year, data = Housing, method = "stack", 
+           pch = 1, col = c("red", "blue"))
+## Not run
+ggplot2::ggplot(data = Housing, aes(x = price, fill = year)) + 
+  geom_dotplot() + 
+  facet_grid(year ~ .) + 
+  theme_bw()
+##
+##############################################################
+Hurrican <- read_csv("Hurrican.csv")
+Hurrican <- Hurrican %>%
+  rename(elnino = ElNino) %>%
+  select(-code)
+Hurrican$elnino <- factor(Hurrican$elnino)
+Hurrican
+devtools::use_data(Hurrican, overwrite = TRUE)
+## Examples
+T1 <- xtabs(~hurrican, data = Hurrican)
+T1
+barplot(T1, col = "blue", main = "Problem 1.38",
+        xlab = "Number of hurricanes", 
+        ylab = "Number of seasons")
+boxplot(storms ~ elnino, data = Hurrican, 
+        col = c("blue", "yellow", "red"))
+anova(lm(storms ~ elnino, data = Hurrican))
+rm(T1)
+
+

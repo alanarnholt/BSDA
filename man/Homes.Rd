@@ -4,46 +4,53 @@
 \name{Homes}
 \alias{Homes}
 \title{Median prices of single-family homes in 65 metropolitan statistical areas}
-\format{A data frame with 65 observations on the following 5 variables.
+\format{A data frame/tibble with 65 observations on the following 4 variables.
 \describe{ 
-\item{City}{a factor with levels \code{Akron OH}
-\code{Albuquerque NM} \code{Anaheim CA} \code{Atlanta GA} \code{Baltimore
-MD} \code{Baton Rouge LA} \code{Birmingham AL} \code{Boston MA}
-\code{Bradenton FL} \code{Buffalo, NY} \code{Charleston, SC} \code{Chicago,
-IL} \code{Cincinnati, OH} \code{Cleveland, OH} \code{Columbia, SC}
-\code{Columbus, OH} \code{Corpus Christi, TX} \code{Dallas, TX}
-\code{Daytona Beach, FL} \code{Denver, CO} \code{Des Moines, IA}
-\code{Detroit, MI} \code{El Paso, TX} \code{Grand Rapids, MI}
-\code{Hartford, CT} \code{Honolulu, HI} \code{Houston, TX}
-\code{Indianapolis, IN} \code{Jacksonville, FL} \code{Kansas City, MO}
-\code{Knoxville, TN} \code{Las Vegas, NV} \code{Los Angeles, CA}
-\code{Louisville, KY} \code{Madison, WI} \code{Memphis, TN} \code{Miami, FL}
-\code{Milwaukee, WI} \code{Minneapolis, MN} \code{Mobile, AL}
-\code{Nashville, TN} \code{New Haven, CT} \code{New Orleans, LA} \code{New
-York, NY} \code{Oklahoma City, OK} \code{Omaha, NE} \code{Orlando, FL}
-\code{Philadelphia, PA} \code{Phoenix, AZ} \code{Pittsburgh, PA}
-\code{Portland, OR} \code{Providence, RI} \code{Sacramento, CA} \code{Salt
-Lake City, Ut} \code{San Antonio, TX} \code{San Diego, CA} \code{San
-Francisco, CA} \code{Seattle, WA} \code{Spokane, WA} \code{St Louis, MO}
-\code{Syracuse,NY} \code{Tampa, FL} \code{Toledo, OH} \code{Tulsa, OK}
-\code{Washington, DC}} 
-\item{X1994}{a numeric vector}
-\item{Region}{a factor with levels \code{Midwest} \code{Northeast}
-\code{South} \code{West}} 
-\item{X2000}{a numeric vector}
-\item{difference}{a numeric vector} 
+\item{city}{a character variable with values \code{Akron OH},
+\code{Albuquerque NM}, \code{Anaheim CA}, \code{Atlanta GA}, \code{Baltimore
+MD}, \code{Baton Rouge LA}, \code{Birmingham AL}, \code{Boston MA},
+\code{Bradenton FL}, \code{Buffalo NY}, \code{Charleston SC}, \code{Chicago
+IL}, \code{Cincinnati OH}, \code{Cleveland OH}, \code{Columbia SC},
+\code{Columbus OH}, \code{Corpus Christi TX}, \code{Dallas TX},
+\code{Daytona Beach FL}, \code{Denver CO}, \code{Des Moines IA},
+\code{Detroit MI}, \code{El Paso TX}, \code{Grand Rapids MI},
+\code{Hartford CT}, \code{Honolulu HI}, \code{Houston TX},
+\code{Indianapolis IN}, \code{Jacksonville FL}, \code{Kansas City MO},
+\code{Knoxville TN}, \code{Las Vegas NV}, \code{Los Angeles CA},
+\code{Louisville KY}, \code{Madison WI}, \code{Memphis TN}, \code{Miami FL},
+\code{Milwaukee WI}, \code{Minneapolis MN}, \code{Mobile AL},
+\code{Nashville TN}, \code{New Haven CT}, \code{New Orleans LA}, \code{New
+York NY}, \code{Oklahoma City OK}, \code{Omaha NE}, \code{Orlando FL},
+\code{Philadelphia PA}, \code{Phoenix AZ}, \code{Pittsburgh PA},
+\code{Portland OR}, \code{Providence RI}, \code{Sacramento CA}, \code{Salt
+Lake City UT}, \code{San Antonio TX}, \code{San Diego CA}, \code{San
+Francisco CA}, \code{Seattle WA}, \code{Spokane WA}, \code{St Louis MO},
+\code{Syracuse NY}, \code{Tampa FL}, \code{Toledo OH}, \code{Tulsa OK}, and
+\code{Washington DC}} 
+\item{region}{a character variable with values \code{Midwest}, \code{Northeast},
+\code{South}, and \code{West}} 
+\item{year}{a factor with levels \code{1994} and \code{2000}}
+\item{price}{median house price in dollars} 
 }}
+\usage{
+Homes
+}
 \description{
 Data for Statistical Insight Chapter 5
 }
 \examples{
 
-str(Homes)
-attach(Homes)
-EDA(X2000)
-boxplot(X1994,X2000,names=c("1994","2000"),col=c("red","blue"),ylab="Cost")
-boxplot(X2000~Region)
-detach(Homes)
+tapply(Homes$price, Homes$year, mean)
+tapply(Homes$price, Homes$region, mean)
+p2000 <- subset(Homes, year == "2000")
+p1994 <- subset(Homes, year == "1994")
+\dontrun{
+ggplot2::ggplot(data = Homes, aes(x = region, y = price)) + 
+   geom_boxplot() + 
+   theme_bw() + 
+   facet_grid(year ~ .)
+}
+
 
 }
 \references{

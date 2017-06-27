@@ -4314,10 +4314,6 @@ NULL
 #' 
 "Hodgkin"
 
-
-
-
-
 #' Median prices of single-family homes in 65 metropolitan statistical areas
 #' 
 #' Data for Statistical Insight Chapter 5
@@ -4325,48 +4321,52 @@ NULL
 #' 
 #' @name Homes
 #' @docType data
-#' @format A data frame with 65 observations on the following 5 variables.
+#' @format A data frame/tibble with 65 observations on the following 4 variables.
 #' \describe{ 
-#' \item{City}{a factor with levels \code{Akron OH}
-#' \code{Albuquerque NM} \code{Anaheim CA} \code{Atlanta GA} \code{Baltimore
-#' MD} \code{Baton Rouge LA} \code{Birmingham AL} \code{Boston MA}
-#' \code{Bradenton FL} \code{Buffalo, NY} \code{Charleston, SC} \code{Chicago,
-#' IL} \code{Cincinnati, OH} \code{Cleveland, OH} \code{Columbia, SC}
-#' \code{Columbus, OH} \code{Corpus Christi, TX} \code{Dallas, TX}
-#' \code{Daytona Beach, FL} \code{Denver, CO} \code{Des Moines, IA}
-#' \code{Detroit, MI} \code{El Paso, TX} \code{Grand Rapids, MI}
-#' \code{Hartford, CT} \code{Honolulu, HI} \code{Houston, TX}
-#' \code{Indianapolis, IN} \code{Jacksonville, FL} \code{Kansas City, MO}
-#' \code{Knoxville, TN} \code{Las Vegas, NV} \code{Los Angeles, CA}
-#' \code{Louisville, KY} \code{Madison, WI} \code{Memphis, TN} \code{Miami, FL}
-#' \code{Milwaukee, WI} \code{Minneapolis, MN} \code{Mobile, AL}
-#' \code{Nashville, TN} \code{New Haven, CT} \code{New Orleans, LA} \code{New
-#' York, NY} \code{Oklahoma City, OK} \code{Omaha, NE} \code{Orlando, FL}
-#' \code{Philadelphia, PA} \code{Phoenix, AZ} \code{Pittsburgh, PA}
-#' \code{Portland, OR} \code{Providence, RI} \code{Sacramento, CA} \code{Salt
-#' Lake City, Ut} \code{San Antonio, TX} \code{San Diego, CA} \code{San
-#' Francisco, CA} \code{Seattle, WA} \code{Spokane, WA} \code{St Louis, MO}
-#' \code{Syracuse,NY} \code{Tampa, FL} \code{Toledo, OH} \code{Tulsa, OK}
-#' \code{Washington, DC}} 
-#' \item{X1994}{a numeric vector}
-#' \item{Region}{a factor with levels \code{Midwest} \code{Northeast}
-#' \code{South} \code{West}} 
-#' \item{X2000}{a numeric vector}
-#' \item{difference}{a numeric vector} 
+#' \item{city}{a character variable with values \code{Akron OH},
+#' \code{Albuquerque NM}, \code{Anaheim CA}, \code{Atlanta GA}, \code{Baltimore
+#' MD}, \code{Baton Rouge LA}, \code{Birmingham AL}, \code{Boston MA},
+#' \code{Bradenton FL}, \code{Buffalo NY}, \code{Charleston SC}, \code{Chicago
+#' IL}, \code{Cincinnati OH}, \code{Cleveland OH}, \code{Columbia SC},
+#' \code{Columbus OH}, \code{Corpus Christi TX}, \code{Dallas TX},
+#' \code{Daytona Beach FL}, \code{Denver CO}, \code{Des Moines IA},
+#' \code{Detroit MI}, \code{El Paso TX}, \code{Grand Rapids MI},
+#' \code{Hartford CT}, \code{Honolulu HI}, \code{Houston TX},
+#' \code{Indianapolis IN}, \code{Jacksonville FL}, \code{Kansas City MO},
+#' \code{Knoxville TN}, \code{Las Vegas NV}, \code{Los Angeles CA},
+#' \code{Louisville KY}, \code{Madison WI}, \code{Memphis TN}, \code{Miami FL},
+#' \code{Milwaukee WI}, \code{Minneapolis MN}, \code{Mobile AL},
+#' \code{Nashville TN}, \code{New Haven CT}, \code{New Orleans LA}, \code{New
+#' York NY}, \code{Oklahoma City OK}, \code{Omaha NE}, \code{Orlando FL},
+#' \code{Philadelphia PA}, \code{Phoenix AZ}, \code{Pittsburgh PA},
+#' \code{Portland OR}, \code{Providence RI}, \code{Sacramento CA}, \code{Salt
+#' Lake City UT}, \code{San Antonio TX}, \code{San Diego CA}, \code{San
+#' Francisco CA}, \code{Seattle WA}, \code{Spokane WA}, \code{St Louis MO},
+#' \code{Syracuse NY}, \code{Tampa FL}, \code{Toledo OH}, \code{Tulsa OK}, and
+#' \code{Washington DC}} 
+#' \item{region}{a character variable with values \code{Midwest}, \code{Northeast},
+#' \code{South}, and \code{West}} 
+#' \item{year}{a factor with levels \code{1994} and \code{2000}}
+#' \item{price}{median house price in dollars} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Homes)
-#' attach(Homes)
-#' EDA(X2000)
-#' boxplot(X1994,X2000,names=c("1994","2000"),col=c("red","blue"),ylab="Cost")
-#' boxplot(X2000~Region)
-#' detach(Homes)
+#' tapply(Homes$price, Homes$year, mean)
+#' tapply(Homes$price, Homes$region, mean)
+#' p2000 <- subset(Homes, year == "2000")
+#' p1994 <- subset(Homes, year == "1994")
+#' \dontrun{
+#' ggplot2::ggplot(data = Homes, aes(x = region, y = price)) + 
+#'    geom_boxplot() + 
+#'    theme_bw() + 
+#'    facet_grid(year ~ .)
+#' }
 #' 
-NULL
+#' 
+"Homes"
 
 
 
@@ -4380,23 +4380,22 @@ NULL
 #' 
 #' @name Homework
 #' @docType data
-#' @format A data frame with 15 observations on the following 2 variables.
+#' @format A data frame with 30 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Private}{a numeric vector} 
-#' \item{Public}{a numeric vector} 
+#' \item{school}{type of school either \code{private} or \code{public}} 
+#' \item{time}{number of hours per week spent on homework} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Homework)
-#' attach(Homework)
-#' boxplot(Private,Public)
-#' t.test(Private,Public,conf.level=.98)
-#' detach(Homework)
+#' boxplot(time ~ school, data = Homework, 
+#'         ylab = "Hours per week spent on homework")
+#' #
+#' t.test(time ~ school, data = Homework)
 #' 
-NULL
+"Homework"
 
 
 
@@ -4409,21 +4408,19 @@ NULL
 #' 
 #' @name Honda
 #' @docType data
-#' @format A data frame with 35 observations on the following variable.
+#' @format A data frame/tibble with 35 observations on the following variable.
 #' \describe{ 
-#' \item{mileage}{a numeric vector} 
+#' \item{mileage}{miles per gallon for a Honda Civic} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
+#' 
 #' @examples
 #' 
-#' str(Honda)
-#' attach(Honda)
-#' t.test(mileage,mu=40,alternative="less")
-#' detach(Honda)
+#' t.test(Honda$mileage, mu = 40, alternative = "less")
 #' 
-NULL
+"Honda"
 
 
 
@@ -4437,27 +4434,21 @@ NULL
 #' 
 #' @name Hostile
 #' @docType data
-#' @format A data frame with 45 observations on the following 6 variables.
+#' @format A data frame/tibble with 135 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Rural}{a numeric vector} 
-#' \item{Suburban}{a numeric vector} 
-#' \item{Urban}{a numeric vector} 
-#' \item{HLT}{a numeric vector} 
-#' \item{Type}{a numeric vector} 
-#' \item{Ranks}{a numeric vector} 
+#' \item{location}{a factor with the location of the high school student (\code{Rural}, \code{Suburban}, or \code{Urban})} 
+#' \item{hostility}{the score from the Hostility Level Test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Hostile)
-#' attach(Hostile)
-#' boxplot(HLT~Type)
-#' kruskal.test(HLT~as.factor(Type))
-#' detach(Hostile)
+#' boxplot(hostility ~ location, data = Hostile, 
+#'         col = c("red", "blue", "green"))
+#' kruskal.test(hostility ~ location, data = Hostile)
 #' 
-NULL
+"Hostile"
 
 
 
@@ -4470,9 +4461,9 @@ NULL
 #' 
 #' @name Housing
 #' @docType data
-#' @format A data frame with 37 observations on the following 3 variables.
+#' @format A data frame/tibble with 74 observations on the following 3 variables.
 #' \describe{ 
-#' \item{City}{a factor with levels \code{Albany}
+#' \item{city}{a character variable with values \code{Albany}
 #' \code{Anaheim} \code{Atlanta} \code{Baltimore} \code{Birmingham}
 #' \code{Boston} \code{Chicago} \code{Cincinnati} \code{Cleveland}
 #' \code{Columbus} \code{Dallas} \code{Denver} \code{Detroit} \code{Ft
@@ -4482,44 +4473,24 @@ NULL
 #' \code{Philadelphia} \code{Providence} \code{Rochester} \code{Salt Lake City}
 #' \code{San Antonio} \code{San Diego} \code{San Francisco} \code{San Jose}
 #' \code{St Louis} \code{Tampa} \code{Washington}} 
-#' \item{X1984}{a numeric vector} 
-#' \item{X1993}{a numeric vector} 
+#' \item{year}{a factor with levels \code{1984} and \code{1993}} 
+#' \item{price}{median house price} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Housing)
-#' attach(Housing)
-#' stem(X1993)
-#' stem(X1984)
-#' par(mfrow=c(2,2))
-#' stripchart(x=list(X1984,X1993),method="stack",pch=1,cex=1.2,
-#' col=c("orange","pink"),group.names=c("1984","1993"))
-#' title(main="Problem 5.82 \n We have not talked about this kind of graph before...")
-#' hist(X1993,breaks="Scott",col="pink")
-#' hist(X1984,breaks="Scott",col="orange")
-#' plot(density(X1993),col="red",xlab="",ylab="",main="",ylim=c(0,.00003))
-#' lines(density(X1984),col="orange")
-#' par(mfrow=c(1,1))
-#' boxplot(X1993,X1984,col=c("pink","orange"),names=c("1993","1984"),main="Problem 5.82")
-#' SIGN.test(X1984,conf.level=.98)
-#' SIGN.test(X1993,conf.level=.98)
-#' # 98% CI -> 63591.1 79622.56 and 85591.69 109915.4
-#' # Placing on a common number line...
-#' my.axis <- function(side, at, labels,...)
-#' {for(i in seq(along=at)) axis(side=side, at=at[i], labels=labels[i],...) }
+#' stripchart(price ~ year, data = Housing, method = "stack", 
+#'            pch = 1, col = c("red", "blue"))
+#' \dontrun{
+#' ggplot2::ggplot(data = Housing, aes(x = price, fill = year)) + 
+#'               geom_dotplot() + 
+#'               facet_grid(year ~ .) + 
+#'               theme_bw()
+#' }               
 #' 
-#' plot(1,type="n",xlim=c(63000,110000),ylim=c(0,1),
-#' xlab="Median House Price",ylab="",yaxt="n",main="")
-#' title(main="98 Percent Confidence Intervals")
-#' my.axis(2,at=c(.25,.75),labels=c("1984","1993"), cex.axis=1.2 ,las=2)
-#' lines( c(63591.1, 79622.56),c(.25,.25),col="orange",lwd=24)
-#' lines( c(85591.69, 109915.4),c(.75,.75),col="pink",lwd=24)
-#' detach(Housing)
-#' 
-NULL
+"Housing"
 
 
 
@@ -4532,29 +4503,30 @@ NULL
 #' 
 #' @name Hurrican
 #' @docType data
-#' @format A data frame with 46 observations on the following 5 variables.
+#' @format A data frame/tibble with 46 observations on the following 4 variables.
 #' \describe{ 
-#' \item{year}{a numeric vector} 
-#' \item{storms}{a numeric vector} 
-#' \item{hurrican}{a numeric vector}
-#' \item{ElNino}{a factor with levels \code{cold} \code{neutral}
+#' \item{year}{a numeric vector indicating year} 
+#' \item{storms}{a numeric vector recording number of storms} 
+#' \item{hurrican}{a numeric vector recording number of hurricanes}
+#' \item{elnino}{a factor with levels \code{cold}, \code{neutral}, and
 #' \code{warm}} 
-#' \item{code}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Hurrican)
-#' attach(Hurrican)    
-#' barplot(table(hurrican),col="blue",main="Problem 1.38",
-#' xlab="Number of Hurricanes",ylab="Number of Seasons")
-#' boxplot(storms~ElNino)
-#' anova(lm(storms~ElNino))
-#' detach(Hurrican)
+#' T1 <- xtabs(~hurrican, data = Hurrican)
+#' T1
+#' barplot(T1, col = "blue", main = "Problem 1.38",
+#'      xlab = "Number of hurricanes", 
+#'      ylab = "Number of seasons")
+#' boxplot(storms ~ elnino, data = Hurrican, 
+#'      col = c("blue", "yellow", "red"))
+#'      anova(lm(storms ~ elnino, data = Hurrican))
+#' rm(T1)
 #' 
-NULL
+"Hurrican"
 
 
 

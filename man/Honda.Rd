@@ -4,19 +4,19 @@
 \name{Honda}
 \alias{Honda}
 \title{Miles per gallon for a Honda Civic on 35 different occasions}
-\format{A data frame with 35 observations on the following variable.
+\format{A data frame/tibble with 35 observations on the following variable.
 \describe{ 
-\item{mileage}{a numeric vector} 
+\item{mileage}{miles per gallon for a Honda Civic} 
 }}
+\usage{
+Honda
+}
 \description{
 Data for Statistical Insight Chapter 6
 }
 \examples{
 
-str(Honda)
-attach(Honda)
-t.test(mileage,mu=40,alternative="less")
-detach(Honda)
+t.test(Honda$mileage, mu = 40, alternative = "less")
 
 }
 \references{

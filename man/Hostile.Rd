@@ -5,25 +5,22 @@
 \alias{Hostile}
 \title{Hostility levels of high school students from rural, suburban, and urban
 areas}
-\format{A data frame with 45 observations on the following 6 variables.
+\format{A data frame/tibble with 135 observations on the following 2 variables.
 \describe{ 
-\item{Rural}{a numeric vector} 
-\item{Suburban}{a numeric vector} 
-\item{Urban}{a numeric vector} 
-\item{HLT}{a numeric vector} 
-\item{Type}{a numeric vector} 
-\item{Ranks}{a numeric vector} 
+\item{location}{a factor with the location of the high school student (\code{Rural}, \code{Suburban}, or \code{Urban})} 
+\item{hostility}{the score from the Hostility Level Test} 
 }}
+\usage{
+Hostile
+}
 \description{
 Data for Example 10.6
 }
 \examples{
 
-str(Hostile)
-attach(Hostile)
-boxplot(HLT~Type)
-kruskal.test(HLT~as.factor(Type))
-detach(Hostile)
+boxplot(hostility ~ location, data = Hostile, 
+        col = c("red", "blue", "green"))
+kruskal.test(hostility ~ location, data = Hostile)
 
 }
 \references{

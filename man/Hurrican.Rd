@@ -4,27 +4,31 @@
 \name{Hurrican}
 \alias{Hurrican}
 \title{Number of storms, hurricanes and El Nino effects from 1950 through 1995}
-\format{A data frame with 46 observations on the following 5 variables.
+\format{A data frame/tibble with 46 observations on the following 4 variables.
 \describe{ 
-\item{year}{a numeric vector} 
-\item{storms}{a numeric vector} 
-\item{hurrican}{a numeric vector}
-\item{ElNino}{a factor with levels \code{cold} \code{neutral}
+\item{year}{a numeric vector indicating year} 
+\item{storms}{a numeric vector recording number of storms} 
+\item{hurrican}{a numeric vector recording number of hurricanes}
+\item{elnino}{a factor with levels \code{cold}, \code{neutral}, and
 \code{warm}} 
-\item{code}{a numeric vector} 
 }}
+\usage{
+Hurrican
+}
 \description{
 Data for Exercises 1.38, 10.19, and Example 1.6
 }
 \examples{
 
-str(Hurrican)
-attach(Hurrican)    
-barplot(table(hurrican),col="blue",main="Problem 1.38",
-xlab="Number of Hurricanes",ylab="Number of Seasons")
-boxplot(storms~ElNino)
-anova(lm(storms~ElNino))
-detach(Hurrican)
+T1 <- xtabs(~hurrican, data = Hurrican)
+T1
+barplot(T1, col = "blue", main = "Problem 1.38",
+     xlab = "Number of hurricanes", 
+     ylab = "Number of seasons")
+boxplot(storms ~ elnino, data = Hurrican, 
+     col = c("blue", "yellow", "red"))
+     anova(lm(storms ~ elnino, data = Hurrican))
+rm(T1)
 
 }
 \references{
