@@ -4,21 +4,20 @@
 \name{Indiapol}
 \alias{Indiapol}
 \title{Average miles per hour for the winners of the Indianapolis 500 race}
-\format{A data frame with 39 observations on the following 3 variables.
+\format{A data frame/tibble with 39 observations on the following 2 variables.
 \describe{ 
-\item{year}{a numeric vector} 
-\item{speed}{a numeric vector} 
-\item{yr.1960}{a numeric vector} 
+\item{year}{the year of the race} 
+\item{speed}{the winners average speed} 
 }}
+\usage{
+Indiapol
+}
 \description{
 Data for Exercise 1.128
 }
 \examples{
 
-str(Indiapol)
-attach(Indiapol)
-plot(year,speed,type="l")
-detach(Indiapol)
+plot(speed ~ year, data = Indiapol, type = "b")
 
 }
 \references{
