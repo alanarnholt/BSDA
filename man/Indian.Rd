@@ -5,28 +5,29 @@
 \alias{Indian}
 \title{Educational attainment versus per capita income and poverty rate for
 American indians living on reservations}
-\format{A data frame with 10 observations on the following 4 variables.
+\format{A data frame/tibble with 10 observations on the following 4 variables.
 \describe{ 
-\item{Reserv}{a factor with levels \code{Blackfeet}
-\code{Fort Apache} \code{Gila River} \code{Hopi} \code{Navajo} \code{Papago}
-\code{Pine Ridge} \code{Rosebud} \code{San Carlos} \code{Zuni Pueblo}}
-\item{highsch}{a numeric vector} 
-\item{income}{a numeric vector} 
-\item{poverty}{a numeric vector} 
+\item{reservation}{a character variable with values \code{Blackfeet},
+\code{Fort Apache}, \code{Gila River}, \code{Hopi}, \code{Navajo}, \code{Papago},
+\code{Pine Ridge}, \code{Rosebud}, \code{San Carlos}, and \code{Zuni Pueblo}}
+\item{percent high school}{percent who have graduated from high school} 
+\item{per capita income}{per capita income} 
+\item{poverty rate}{percent poverty} 
 }}
+\usage{
+Indian
+}
 \description{
 Data for Exercise 2.95
 }
 \examples{
 
-str(Indian)
-attach(Indian)
-par(mfrow=c(1,2))
-plot(highsch,income,xlab="Percent High School Graduates", ylab="Per capita income")
-plot(highsch,poverty,xlab="Percent High School Graduates", ylab="Poverty rate")
-par(mfrow=c(1,1))
-cor(cbind(highsch,income,poverty))
-detach(Indian)
+par(mfrow = c(1, 2))
+plot(`per capita income` ~ `percent high school`, data = Indian, 
+  xlab = "Percent high school graudates", ylab = "Per capita income")
+plot(`poverty rate` ~ `percent high school`, data = Indian, 
+  xlab = "Percent high school graudates", ylab = "Percent poverty")
+  par(mfrow = c(1, 1))
 
 }
 \references{

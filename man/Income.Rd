@@ -4,40 +4,43 @@
 \name{Income}
 \alias{Income}
 \title{Percent change in personal income from 1st to 2nd quarter in 2000}
-\format{A data frame with 51 observations on the following 6 variables.
+\format{A data frame/tibble with 51 observations on the following 2 variables.
 \describe{ 
-\item{State}{a factor with levels \code{Alabama}
-\code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-\code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
-Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
-\code{Illinois} \code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky}
-\code{Louisiana} \code{Maine} \code{Maryland} \code{Massachusetts}
-\code{Michigan} \code{Minnesota} \code{Mississippi} \code{Missour}
-\code{Montana} \code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New
-Jersey} \code{New Mexico} \code{New York} \code{North Carolina} \code{North
-Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
-\code{Rhode Island} \code{South Carolina} \code{South Dakota}
-\code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
-\code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-\item{income}{a numeric vector} 
-\item{C3}{a numeric vector}
-\item{Class}{a numeric vector} 
-\item{freq}{a numeric vector}
-\item{percent}{a numeric vector} 
+\item{state}{a character variable with values \code{Alabama},
+\code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+\code{Colorado}, \code{Connecticut}, \code{Delaware}, \code{District of
+Colunbia}, \code{Florida}, \code{Georgia}, \code{Hawaii}, \code{Idaho},
+\code{Illinois}, \code{Indiana}, \code{Iowa}, \code{Kansas}, \code{Kentucky},
+\code{Louisiana}, \code{Maine}, \code{Maryland}, \code{Massachusetts},
+\code{Michigan}, \code{Minnesota}, \code{Mississippi}, \code{Missour},
+\code{Montana}, \code{Nebraska}, \code{Nevada}, \code{New Hampshire}, \code{New
+Jersey}, \code{New Mexico}, \code{New York}, \code{North Carolina}, \code{North
+Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
+\code{Rhode Island}, \code{South Carolina}, \code{South Dakota},
+\code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia},
+\code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
+\item{percent_change}{percent change in income from first quarter to the second quarter of 2000} 
 }}
+\usage{
+Income
+}
 \description{
 Data for Exercise 1.33
 }
 \examples{
 
-str(Income)
-attach(Income)
-CATS <-factor(cut(income,breaks=c(0.5,1.0,1.5,2,max(income)) ))    
-table(CATS)
-table(CATS)/length(income)
-barplot(table(CATS),col="lightblue",main="Problem 1.33")
-detach(Income)
-remove(CATS)      
+Income$class <- cut(Income$percent_change, 
+                    breaks = c(-Inf, 0.5, 1.0, 1.5, 2.0, Inf))
+T1 <- xtabs(~class, data = Income)
+T1
+barplot(T1, col = "pink")   
+\dontrun{
+DF <- as.data.frame(T1)
+DF
+ggplot2::ggplot(data = DF,  aes(x = class, y = Freq)) + 
+   geom_bar(stat = "identity", fill = "purple") + 
+   theme_bw()
+}  
 
 }
 \references{

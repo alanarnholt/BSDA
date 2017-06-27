@@ -4,22 +4,25 @@
 \name{Independent}
 \alias{Independent}
 \title{Illustrates a comparison problem for long-tailed distributions}
-\format{A data frame with 46 observations on the following 3 variables.
+\format{A data frame/tibble with 46 observations on the following 2 variables.
 \describe{ 
 \item{score}{a numeric vector} 
-\item{group}{a numeric vector} 
-\item{ranks}{a numeric vector} 
+\item{group}{a factor with levels \code{A} and \code{B}} 
 }}
+\usage{
+Independent
+}
 \description{
 Data for Exercise 7.41
 }
 \examples{
 
-str(Independent)
-attach(Independent)
-boxplot(score~group)
-wilcox.test(score~group)
-detach(Independent)
+qqnorm(Independent$score[Independent$group=="A"])
+qqline(Independent$score[Independent$group=="A"])
+qqnorm(Independent$score[Independent$group=="B"])
+qqline(Independent$score[Independent$group=="B"])
+boxplot(score ~ group, data = Independent)
+wilcox.test(score ~ group, data = Independent)
 
 }
 \references{

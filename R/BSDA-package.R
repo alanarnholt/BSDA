@@ -4542,24 +4542,19 @@ NULL
 #' @docType data
 #' @format A data frame with 12 observations on the following 3 variables.
 #' \describe{
-#'  \item{Month}{a factor with levels \code{Apr} \code{Aug}
-#' \code{Dec} \code{Feb} \code{Jan} \code{Jul} \code{Jun} \code{Mar} \code{May}
-#' \code{Nov} \code{Oct} \code{Sep}} 
-#' \item{Newfound}{a numeric vector}
-#' \item{GrandBk}{a numeric vector} 
+#'  \item{month}{a character variable with abbreviated months of the year} 
+#' \item{Newfoundland}{number of icebergs sighted south of Newfoundland}
+#' \item{Grand Banks}{number of icebergs sighted south of Grand Banks} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Iceberg)
-#' attach(Iceberg)
-#' plot(GrandBk,Newfound)
-#' abline(lm(Newfound~GrandBk))
-#' detach(Iceberg)
+#' plot(Newfoundland ~ `Grand Banks`, data = Iceberg)
+#' abline(lm(Newfoundland ~ `Grand Banks`, data = Iceberg))
 #' 
-NULL
+"Iceberg"
 
 
 
@@ -4572,42 +4567,42 @@ NULL
 #' 
 #' @name Income
 #' @docType data
-#' @format A data frame with 51 observations on the following 6 variables.
+#' @format A data frame/tibble with 51 observations on the following 2 variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
-#' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
-#' \code{Illinois} \code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky}
-#' \code{Louisiana} \code{Maine} \code{Maryland} \code{Massachusetts}
-#' \code{Michigan} \code{Minnesota} \code{Mississippi} \code{Missour}
-#' \code{Montana} \code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New
-#' Jersey} \code{New Mexico} \code{New York} \code{North Carolina} \code{North
-#' Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
-#' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
-#' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
-#' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-#' \item{income}{a numeric vector} 
-#' \item{C3}{a numeric vector}
-#' \item{Class}{a numeric vector} 
-#' \item{freq}{a numeric vector}
-#' \item{percent}{a numeric vector} 
+#' \item{state}{a character variable with values \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{Delaware}, \code{District of
+#' Colunbia}, \code{Florida}, \code{Georgia}, \code{Hawaii}, \code{Idaho},
+#' \code{Illinois}, \code{Indiana}, \code{Iowa}, \code{Kansas}, \code{Kentucky},
+#' \code{Louisiana}, \code{Maine}, \code{Maryland}, \code{Massachusetts},
+#' \code{Michigan}, \code{Minnesota}, \code{Mississippi}, \code{Missour},
+#' \code{Montana}, \code{Nebraska}, \code{Nevada}, \code{New Hampshire}, \code{New
+#' Jersey}, \code{New Mexico}, \code{New York}, \code{North Carolina}, \code{North
+#' Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
+#' \code{Rhode Island}, \code{South Carolina}, \code{South Dakota},
+#' \code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia},
+#' \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
+#' \item{percent_change}{percent change in income from first quarter to the second quarter of 2000} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Income)
-#' attach(Income)
-#' CATS <-factor(cut(income,breaks=c(0.5,1.0,1.5,2,max(income)) ))    
-#' table(CATS)
-#' table(CATS)/length(income)
-#' barplot(table(CATS),col="lightblue",main="Problem 1.33")
-#' detach(Income)
-#' remove(CATS)      
+#' Income$class <- cut(Income$percent_change, 
+#'                     breaks = c(-Inf, 0.5, 1.0, 1.5, 2.0, Inf))
+#' T1 <- xtabs(~class, data = Income)
+#' T1
+#' barplot(T1, col = "pink")   
+#' \dontrun{
+#' DF <- as.data.frame(T1)
+#' DF
+#' ggplot2::ggplot(data = DF,  aes(x = class, y = Freq)) + 
+#'    geom_bar(stat = "identity", fill = "purple") + 
+#'    theme_bw()
+#' }  
 #' 
-NULL
+"Income"
 
 
 
@@ -4620,24 +4615,24 @@ NULL
 #' 
 #' @name Independent
 #' @docType data
-#' @format A data frame with 46 observations on the following 3 variables.
+#' @format A data frame/tibble with 46 observations on the following 2 variables.
 #' \describe{ 
 #' \item{score}{a numeric vector} 
-#' \item{group}{a numeric vector} 
-#' \item{ranks}{a numeric vector} 
+#' \item{group}{a factor with levels \code{A} and \code{B}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Independent)
-#' attach(Independent)
-#' boxplot(score~group)
-#' wilcox.test(score~group)
-#' detach(Independent)
+#' qqnorm(Independent$score[Independent$group=="A"])
+#' qqline(Independent$score[Independent$group=="A"])
+#' qqnorm(Independent$score[Independent$group=="B"])
+#' qqline(Independent$score[Independent$group=="B"])
+#' boxplot(score ~ group, data = Independent)
+#' wilcox.test(score ~ group, data = Independent)
 #' 
-NULL
+"Independent"
 
 
 
@@ -4651,30 +4646,28 @@ NULL
 #' 
 #' @name Indian
 #' @docType data
-#' @format A data frame with 10 observations on the following 4 variables.
+#' @format A data frame/tibble with 10 observations on the following 4 variables.
 #' \describe{ 
-#' \item{Reserv}{a factor with levels \code{Blackfeet}
-#' \code{Fort Apache} \code{Gila River} \code{Hopi} \code{Navajo} \code{Papago}
-#' \code{Pine Ridge} \code{Rosebud} \code{San Carlos} \code{Zuni Pueblo}}
-#' \item{highsch}{a numeric vector} 
-#' \item{income}{a numeric vector} 
-#' \item{poverty}{a numeric vector} 
+#' \item{reservation}{a character variable with values \code{Blackfeet},
+#' \code{Fort Apache}, \code{Gila River}, \code{Hopi}, \code{Navajo}, \code{Papago},
+#' \code{Pine Ridge}, \code{Rosebud}, \code{San Carlos}, and \code{Zuni Pueblo}}
+#' \item{percent high school}{percent who have graduated from high school} 
+#' \item{per capita income}{per capita income} 
+#' \item{poverty rate}{percent poverty} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Indian)
-#' attach(Indian)
-#' par(mfrow=c(1,2))
-#' plot(highsch,income,xlab="Percent High School Graduates", ylab="Per capita income")
-#' plot(highsch,poverty,xlab="Percent High School Graduates", ylab="Poverty rate")
-#' par(mfrow=c(1,1))
-#' cor(cbind(highsch,income,poverty))
-#' detach(Indian)
+#' par(mfrow = c(1, 2))
+#' plot(`per capita income` ~ `percent high school`, data = Indian, 
+#'   xlab = "Percent high school graudates", ylab = "Per capita income")
+#' plot(`poverty rate` ~ `percent high school`, data = Indian, 
+#'   xlab = "Percent high school graudates", ylab = "Percent poverty")
+#' par(mfrow = c(1, 1))
 #' 
-NULL
+"Indian"
 
 
 
@@ -4687,23 +4680,19 @@ NULL
 #' 
 #' @name Indiapol
 #' @docType data
-#' @format A data frame with 39 observations on the following 3 variables.
+#' @format A data frame/tibble with 39 observations on the following 2 variables.
 #' \describe{ 
-#' \item{year}{a numeric vector} 
-#' \item{speed}{a numeric vector} 
-#' \item{yr.1960}{a numeric vector} 
+#' \item{year}{the year of the race} 
+#' \item{speed}{the winners average speed} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Indiapol)
-#' attach(Indiapol)
-#' plot(year,speed,type="l")
-#' detach(Indiapol)
+#' plot(speed ~ year, data = Indiapol, type = "b")
 #' 
-NULL
+"Indiapol"
 
 
 

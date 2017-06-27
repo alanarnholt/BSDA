@@ -1808,5 +1808,68 @@ boxplot(storms ~ elnino, data = Hurrican,
         col = c("blue", "yellow", "red"))
 anova(lm(storms ~ elnino, data = Hurrican))
 rm(T1)
-
-
+##############################################################
+Iceberg <- read_csv("Iceberg.csv")
+Iceberg <- Iceberg %>%
+  rename(month = Month, Newfoundland = Newfound, `Grand Banks` = GrandBk)
+Iceberg
+devtools::use_data(Iceberg, overwrite = TRUE)
+## Examples
+plot(Newfoundland ~ `Grand Banks`, data = Iceberg)
+abline(lm(Newfoundland ~ `Grand Banks`, data = Iceberg))
+##
+##############################################################
+Income <- read_csv("Income.csv")
+Income <- Income %>%
+  select(state = State, percent_change = income)
+Income
+devtools::use_data(Income, overwrite = TRUE)
+## Examples
+Income$class <- cut(Income$percent_change, breaks = c(-Inf, 0.5, 1.0, 1.5, 2.0, Inf))
+T1 <- xtabs(~class, data = Income)
+T1
+barplot(T1, col = "pink")
+## Not run
+DF <- as.data.frame(T1)
+DF
+ggplot2::ggplot(data = DF,  aes(x = class, y = Freq)) + 
+  geom_bar(stat = "identity", fill = "purple") + 
+  theme_bw()
+##
+##############################################################
+Independent <- read_csv("Independent.csv")
+Independent <- Independent %>%
+  select(score, group)
+Independent$group <- factor(Independent$group, labels = c("A", "B"))
+Independent
+devtools::use_data(Independent, overwrite = TRUE)
+## Examples
+qqnorm(Independent$score[Independent$group=="A"])
+qqline(Independent$score[Independent$group=="A"])
+qqnorm(Independent$score[Independent$group=="B"])
+qqline(Independent$score[Independent$group=="B"])
+boxplot(score ~ group, data = Independent)
+wilcox.test(score ~ group, data = Independent)
+##
+##############################################################
+Indian <- read_csv("Indian.csv")
+Indian <- Indian %>%
+  rename(reservation = Reserv, `percent high school` = highsch, `per capita income` = income, `poverty rate` = poverty)
+Indian
+devtools::use_data(Indian, overwrite = TRUE)
+## Examples
+par(mfrow = c(1, 2))
+plot(`per capita income` ~ `percent high school`, data = Indian, 
+     xlab = "Percent high school graudates", ylab = "Per capita income")
+plot(`poverty rate` ~ `percent high school`, data = Indian,
+     xlab = "Percent high school graudates", ylab = "Percent poverty")
+par(mfrow = c(1, 1))
+##
+##############################################################
+Indiapol <- read_csv("Indiapol.csv")
+Indiapol <- Indiapol %>%
+  select(year, speed)
+Indiapol
+devtools::use_data(Indiapol, overwrite = TRUE)
+## Examples
+plot(speed ~ year, data = Indiapol, type = "b")

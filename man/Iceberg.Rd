@@ -7,22 +7,20 @@
 Grand Banks in 1920}
 \format{A data frame with 12 observations on the following 3 variables.
 \describe{
- \item{Month}{a factor with levels \code{Apr} \code{Aug}
-\code{Dec} \code{Feb} \code{Jan} \code{Jul} \code{Jun} \code{Mar} \code{May}
-\code{Nov} \code{Oct} \code{Sep}} 
-\item{Newfound}{a numeric vector}
-\item{GrandBk}{a numeric vector} 
+ \item{month}{a character variable with abbreviated months of the year} 
+\item{Newfoundland}{number of icebergs sighted south of Newfoundland}
+\item{Grand Banks}{number of icebergs sighted south of Grand Banks} 
 }}
+\usage{
+Iceberg
+}
 \description{
 Data for Exercise 2.46 and 2.60
 }
 \examples{
 
-str(Iceberg)
-attach(Iceberg)
-plot(GrandBk,Newfound)
-abline(lm(Newfound~GrandBk))
-detach(Iceberg)
+plot(Newfoundland ~ `Grand Banks`, data = Iceberg)
+abline(lm(Newfoundland ~ `Grand Banks`, data = Iceberg))
 
 }
 \references{
