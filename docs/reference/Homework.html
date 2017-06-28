@@ -89,12 +89,13 @@ school students</h1>
     <p>Data for Exercise 7.78</p>
     
 
+    <pre class="usage"><span class='no'>Homework</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 15 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>Private</dt><dd><p>a numeric vector</p></dd> 
-<dt>Public</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame with 30 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>school</dt><dd><p>type of school either <code>private</code> or <code>public</code></p></dd> 
+<dt>time</dt><dd><p>number of hours per week spent on homework</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -105,21 +106,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Homework</span>)</div><div class='output co'>#&gt; 'data.frame':	15 obs. of  2 variables:
-#&gt;  $ Private: num  21.3 16.8 8.5 12.6 15.8 19.3 18.5 24.6 18.3 12.9 ...
-#&gt;  $ Public : num  15.3 17.4 12.3 10.7 16.4 11.3 17.6 13.9 20.2 16.8 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Homework</span>)
-<span class='fu'>boxplot</span>(<span class='no'>Private</span>,<span class='no'>Public</span>)</div><img src='Homework-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>t.test</span>(<span class='no'>Private</span>,<span class='no'>Public</span>,<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.98</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>time</span> ~ <span class='no'>school</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Homework</span>,
+        <span class='kw'>ylab</span> <span class='kw'>=</span> <span class='st'>"Hours per week spent on homework"</span>)</div><img src='Homework-2.png' alt='' width='540' height='400' /><div class='input'><span class='co'>#</span>
+<span class='fu'>t.test</span>(<span class='no'>time</span> ~ <span class='no'>school</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Homework</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
-#&gt; data:  Private and Public
+#&gt; data:  time by school
 #&gt; t = 1.7134, df = 27.727, p-value = 0.09779
 #&gt; alternative hypothesis: true difference in means is not equal to 0
-#&gt; 98 percent confidence interval:
-#&gt;  -1.201748  6.655081
+#&gt; 95 percent confidence interval:
+#&gt;  -0.5345122  5.9878455
 #&gt; sample estimates:
-#&gt; mean of x mean of y 
-#&gt;  17.63333  14.90667 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Homework</span>)</div></pre>
+#&gt; mean in group private  mean in group public 
+#&gt;              17.63333              14.90667 
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

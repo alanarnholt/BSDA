@@ -89,15 +89,14 @@ Grand Banks in 1920</h1>
     <p>Data for Exercise 2.46 and 2.60</p>
     
 
+    <pre class="usage"><span class='no'>Iceberg</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>A data frame with 12 observations on the following 3 variables.</p><dl class='dl-horizontal'>
- <dt>Month</dt><dd><p>a factor with levels <code>Apr</code> <code>Aug</code>
-<code>Dec</code> <code>Feb</code> <code>Jan</code> <code>Jul</code> <code>Jun</code> <code>Mar</code> <code>May</code>
-<code>Nov</code> <code>Oct</code> <code>Sep</code></p></dd> 
-<dt>Newfound</dt><dd><p>a numeric vector</p></dd>
-<dt>GrandBk</dt><dd><p>a numeric vector</p></dd> 
+ <dt>month</dt><dd><p>a character variable with abbreviated months of the year</p></dd> 
+<dt>Newfoundland</dt><dd><p>number of icebergs sighted south of Newfoundland</p></dd>
+<dt>Grand Banks</dt><dd><p>number of icebergs sighted south of Grand Banks</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -108,11 +107,8 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Iceberg</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  3 variables:
-#&gt;  $ Month   : Factor w/ 12 levels "Apr","Aug","Dec",..: 5 4 8 1 9 7 6 2 12 11 ...
-#&gt;  $ Newfound: int  3 10 36 83 130 68 25 13 9 4 ...
-#&gt;  $ GrandBk : int  0 1 4 9 18 13 3 2 1 0 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Iceberg</span>)
-<span class='fu'>plot</span>(<span class='no'>GrandBk</span>,<span class='no'>Newfound</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='fu'>lm</span>(<span class='no'>Newfound</span>~<span class='no'>GrandBk</span>))</div><img src='Iceberg-5.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Iceberg</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>Newfoundland</span> ~ <span class='no'>`Grand Banks`</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Iceberg</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='fu'>lm</span>(<span class='no'>Newfoundland</span> ~ <span class='no'>`Grand Banks`</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Iceberg</span>))</div><img src='Iceberg-3.png' alt='' width='540' height='400' /><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

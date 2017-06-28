@@ -87,36 +87,36 @@
     <p>Data for Statistical Insight Chapter 5</p>
     
 
+    <pre class="usage"><span class='no'>Homes</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 65 observations on the following 5 variables.</p><dl class='dl-horizontal'>
-<dt>City</dt><dd><p>a factor with levels <code>Akron OH</code>
-<code>Albuquerque NM</code> <code>Anaheim CA</code> <code>Atlanta GA</code> <code>Baltimore
-MD</code> <code>Baton Rouge LA</code> <code>Birmingham AL</code> <code>Boston MA</code>
-<code>Bradenton FL</code> <code>Buffalo, NY</code> <code>Charleston, SC</code> <code>Chicago,
-IL</code> <code>Cincinnati, OH</code> <code>Cleveland, OH</code> <code>Columbia, SC</code>
-<code>Columbus, OH</code> <code>Corpus Christi, TX</code> <code>Dallas, TX</code>
-<code>Daytona Beach, FL</code> <code>Denver, CO</code> <code>Des Moines, IA</code>
-<code>Detroit, MI</code> <code>El Paso, TX</code> <code>Grand Rapids, MI</code>
-<code>Hartford, CT</code> <code>Honolulu, HI</code> <code>Houston, TX</code>
-<code>Indianapolis, IN</code> <code>Jacksonville, FL</code> <code>Kansas City, MO</code>
-<code>Knoxville, TN</code> <code>Las Vegas, NV</code> <code>Los Angeles, CA</code>
-<code>Louisville, KY</code> <code>Madison, WI</code> <code>Memphis, TN</code> <code>Miami, FL</code>
-<code>Milwaukee, WI</code> <code>Minneapolis, MN</code> <code>Mobile, AL</code>
-<code>Nashville, TN</code> <code>New Haven, CT</code> <code>New Orleans, LA</code> <code>New
-York, NY</code> <code>Oklahoma City, OK</code> <code>Omaha, NE</code> <code>Orlando, FL</code>
-<code>Philadelphia, PA</code> <code>Phoenix, AZ</code> <code>Pittsburgh, PA</code>
-<code>Portland, OR</code> <code>Providence, RI</code> <code>Sacramento, CA</code> <code>Salt
-Lake City, Ut</code> <code>San Antonio, TX</code> <code>San Diego, CA</code> <code>San
-Francisco, CA</code> <code>Seattle, WA</code> <code>Spokane, WA</code> <code>St Louis, MO</code>
-<code>Syracuse,NY</code> <code>Tampa, FL</code> <code>Toledo, OH</code> <code>Tulsa, OK</code>
-<code>Washington, DC</code></p></dd> 
-<dt>X1994</dt><dd><p>a numeric vector</p></dd>
-<dt>Region</dt><dd><p>a factor with levels <code>Midwest</code> <code>Northeast</code>
-<code>South</code> <code>West</code></p></dd> 
-<dt>X2000</dt><dd><p>a numeric vector</p></dd>
-<dt>difference</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 65 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>city</dt><dd><p>a character variable with values <code>Akron OH</code>,
+<code>Albuquerque NM</code>, <code>Anaheim CA</code>, <code>Atlanta GA</code>, <code>Baltimore
+MD</code>, <code>Baton Rouge LA</code>, <code>Birmingham AL</code>, <code>Boston MA</code>,
+<code>Bradenton FL</code>, <code>Buffalo NY</code>, <code>Charleston SC</code>, <code>Chicago
+IL</code>, <code>Cincinnati OH</code>, <code>Cleveland OH</code>, <code>Columbia SC</code>,
+<code>Columbus OH</code>, <code>Corpus Christi TX</code>, <code>Dallas TX</code>,
+<code>Daytona Beach FL</code>, <code>Denver CO</code>, <code>Des Moines IA</code>,
+<code>Detroit MI</code>, <code>El Paso TX</code>, <code>Grand Rapids MI</code>,
+<code>Hartford CT</code>, <code>Honolulu HI</code>, <code>Houston TX</code>,
+<code>Indianapolis IN</code>, <code>Jacksonville FL</code>, <code>Kansas City MO</code>,
+<code>Knoxville TN</code>, <code>Las Vegas NV</code>, <code>Los Angeles CA</code>,
+<code>Louisville KY</code>, <code>Madison WI</code>, <code>Memphis TN</code>, <code>Miami FL</code>,
+<code>Milwaukee WI</code>, <code>Minneapolis MN</code>, <code>Mobile AL</code>,
+<code>Nashville TN</code>, <code>New Haven CT</code>, <code>New Orleans LA</code>, <code>New
+York NY</code>, <code>Oklahoma City OK</code>, <code>Omaha NE</code>, <code>Orlando FL</code>,
+<code>Philadelphia PA</code>, <code>Phoenix AZ</code>, <code>Pittsburgh PA</code>,
+<code>Portland OR</code>, <code>Providence RI</code>, <code>Sacramento CA</code>, <code>Salt
+Lake City UT</code>, <code>San Antonio TX</code>, <code>San Diego CA</code>, <code>San
+Francisco CA</code>, <code>Seattle WA</code>, <code>Spokane WA</code>, <code>St Louis MO</code>,
+<code>Syracuse NY</code>, <code>Tampa FL</code>, <code>Toledo OH</code>, <code>Tulsa OK</code>, and
+<code>Washington DC</code></p></dd> 
+<dt>region</dt><dd><p>a character variable with values <code>Midwest</code>, <code>Northeast</code>,
+<code>South</code>, and <code>West</code></p></dd> 
+<dt>year</dt><dd><p>a factor with levels <code>1994</code> and <code>2000</code></p></dd>
+<dt>price</dt><dd><p>median house price in dollars</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -127,19 +127,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Homes</span>)</div><div class='output co'>#&gt; 'data.frame':	65 obs. of  5 variables:
-#&gt;  $ City      : Factor w/ 65 levels "Akron OH","Albuquerque NM",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ X1994     : int  81600 103100 209500 93200 115700 78400 99500 170600 86400 82400 ...
-#&gt;  $ Region    : Factor w/ 4 levels "Midwest","Northeast",..: 1 4 4 3 2 3 3 2 3 2 ...
-#&gt;  $ X2000     : int  100900 128000 300800 125400 145200 106400 122200 255000 114300 78800 ...
-#&gt;  $ difference: int  19300 24900 91300 32200 29500 28000 22700 84400 27900 -3600 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Homes</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Region</span></div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>X2000</span>)</div><div class='output co'>#&gt; [1] "X2000"</div><img src='Homes-7.png' alt='' width='540' height='400' /><div class='output co'>#&gt;     Size (n)      Missing      Minimum       1st Qu         Mean       Median 
-#&gt; 6.500000e+01 0.000000e+00 7.450000e+04 1.041000e+05 1.364938e+05 1.194000e+05 
-#&gt;       TrMean       3rd Qu         Max.       Stdev.         Var.      SE Mean 
-#&gt; 1.293593e+05 1.414500e+05 4.186000e+05 6.012338e+04 3.614821e+09 7.457388e+03 
-#&gt;       I.Q.R.        Range     Kurtosis     Skewness     SW p-val 
-#&gt; 3.735000e+04 3.441000e+05 6.680000e+00 2.361000e+00 0.000000e+00 </div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>X1994</span>,<span class='no'>X2000</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"1994"</span>,<span class='st'>"2000"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"red"</span>,<span class='st'>"blue"</span>),<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Cost"</span>)</div><img src='Homes-10.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>boxplot</span>(<span class='no'>X2000</span>~<span class='no'>Region</span>)</div><img src='Homes-12.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Homes</span>)</div></pre>
+<span class='fu'>tapply</span>(<span class='no'>Homes</span>$<span class='no'>price</span>, <span class='no'>Homes</span>$<span class='no'>year</span>, <span class='no'>mean</span>)</div><div class='output co'>#&gt;     1994     2000 
+#&gt; 107158.5 136493.8 </div><div class='input'><span class='fu'>tapply</span>(<span class='no'>Homes</span>$<span class='no'>price</span>, <span class='no'>Homes</span>$<span class='no'>region</span>, <span class='no'>mean</span>)</div><div class='output co'>#&gt;   Midwest Northeast     South      West 
+#&gt; 106402.94 133309.09  93769.57 177625.00 </div><div class='input'><span class='no'>p2000</span> <span class='kw'>&lt;-</span> <span class='fu'>subset</span>(<span class='no'>Homes</span>, <span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"2000"</span>)
+<span class='no'>p1994</span> <span class='kw'>&lt;-</span> <span class='fu'>subset</span>(<span class='no'>Homes</span>, <span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"1994"</span>)
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Homes</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>region</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>price</span>)) +
+     <span class='fu'>geom_boxplot</span>() +
+     <span class='fu'>theme_bw</span>() +
+     <span class='fu'>facet_grid</span>(<span class='no'>year</span> ~ <span class='no'>.</span>)
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -87,11 +87,12 @@
     <p>Data for Exercise 5.82</p>
     
 
+    <pre class="usage"><span class='no'>Housing</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 37 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>City</dt><dd><p>a factor with levels <code>Albany</code>
+    <p>A data frame/tibble with 74 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>city</dt><dd><p>a character variable with values <code>Albany</code>
 <code>Anaheim</code> <code>Atlanta</code> <code>Baltimore</code> <code>Birmingham</code>
 <code>Boston</code> <code>Chicago</code> <code>Cincinnati</code> <code>Cleveland</code>
 <code>Columbus</code> <code>Dallas</code> <code>Denver</code> <code>Detroit</code> <code>Ft
@@ -101,8 +102,8 @@ Angeles</code> <code>Louisville</code> <code>Memphis</code> <code>Miami</code> <
 <code>Philadelphia</code> <code>Providence</code> <code>Rochester</code> <code>Salt Lake City</code>
 <code>San Antonio</code> <code>San Diego</code> <code>San Francisco</code> <code>San Jose</code>
 <code>St Louis</code> <code>Tampa</code> <code>Washington</code></p></dd> 
-<dt>X1984</dt><dd><p>a numeric vector</p></dd> 
-<dt>X1993</dt><dd><p>a numeric vector</p></dd> 
+<dt>year</dt><dd><p>a factor with levels <code>1984</code> and <code>1993</code></p></dd> 
+<dt>price</dt><dd><p>median house price</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -113,80 +114,13 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Housing</span>)</div><div class='output co'>#&gt; 'data.frame':	37 obs. of  3 variables:
-#&gt;  $ City : Factor w/ 37 levels "Albany","Anaheim",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ X1984: int  52400 134900 64600 65200 66600 102000 77500 59600 65600 60400 ...
-#&gt;  $ X1993: int  109900 222200 94000 113200 89000 165200 131300 85600 89200 89300 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Housing</span>)
-<span class='fu'>stem</span>(<span class='no'>X1993</span>)</div><div class='output co'>#&gt; 
-#&gt;   The decimal point is 4 digit(s) to the right of the |
-#&gt; 
-#&gt;    6 | 1003899
-#&gt;    8 | 1344679990246688
-#&gt;   10 | 09033
-#&gt;   12 | 1
-#&gt;   14 | 4
-#&gt;   16 | 586
-#&gt;   18 | 
-#&gt;   20 | 0
-#&gt;   22 | 2
-#&gt;   24 | 9
-#&gt;   26 | 
-#&gt;   28 | 7
-#&gt; </div><div class='input'><span class='fu'>stem</span>(<span class='no'>X1984</span>)</div><div class='output co'>#&gt; 
-#&gt;   The decimal point is 4 digit(s) to the right of the |
-#&gt; 
-#&gt;    4 | 8
-#&gt;    5 | 0248
-#&gt;    6 | 000112444555678
-#&gt;    7 | 02568
-#&gt;    8 | 0345
-#&gt;    9 | 3
-#&gt;   10 | 237
-#&gt;   11 | 5
-#&gt;   12 | 2
-#&gt;   13 | 35
-#&gt; </div><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>2</span>,<span class='fl'>2</span>))
-<span class='fu'>stripchart</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='no'>X1984</span>,<span class='no'>X1993</span>),<span class='kw'>method</span><span class='kw'>=</span><span class='st'>"stack"</span>,<span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>1</span>,<span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1.2</span>,
-<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"orange"</span>,<span class='st'>"pink"</span>),<span class='kw'>group.names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"1984"</span>,<span class='st'>"1993"</span>))
-<span class='fu'>title</span>(<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Problem 5.82 \n We have not talked about this kind of graph before..."</span>)
-<span class='fu'>hist</span>(<span class='no'>X1993</span>,<span class='kw'>breaks</span><span class='kw'>=</span><span class='st'>"Scott"</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"pink"</span>)
-<span class='fu'>hist</span>(<span class='no'>X1984</span>,<span class='kw'>breaks</span><span class='kw'>=</span><span class='st'>"Scott"</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"orange"</span>)
-<span class='fu'>plot</span>(<span class='fu'>density</span>(<span class='no'>X1993</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>,<span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>""</span>,<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>""</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>""</span>,<span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>0</span>,<span class='fl'>.00003</span>))</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>X1984</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"orange"</span>)</div><img src='Housing-9.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>,<span class='fl'>1</span>))
-<span class='fu'>boxplot</span>(<span class='no'>X1993</span>,<span class='no'>X1984</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"pink"</span>,<span class='st'>"orange"</span>),<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"1993"</span>,<span class='st'>"1984"</span>),<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Problem 5.82"</span>)</div><img src='Housing-11.png' alt='' width='540' height='400' /><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>X1984</span>,<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.98</span>)</div><div class='output co'>#&gt; 
-#&gt; 	One-sample Sign-Test
-#&gt; 
-#&gt; data:  X1984
-#&gt; s = 37, p-value = 1.455e-11
-#&gt; alternative hypothesis: true median is not equal to 0
-#&gt; 98 percent confidence interval:
-#&gt;  63591.10 79622.56
-#&gt; sample estimates:
-#&gt; median of x 
-#&gt;       66600 
-#&gt; </div><div class='output co'>#&gt;                   Conf.Level  L.E.pt   U.E.pt
-#&gt; Lower Achieved CI     0.9799 63600.0 79600.00
-#&gt; Interpolated CI       0.9800 63591.1 79622.56
-#&gt; Upper Achieved CI     0.9924 62100.0 83400.00</div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>X1993</span>,<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.98</span>)</div><div class='output co'>#&gt; 
-#&gt; 	One-sample Sign-Test
-#&gt; 
-#&gt; data:  X1993
-#&gt; s = 37, p-value = 1.455e-11
-#&gt; alternative hypothesis: true median is not equal to 0
-#&gt; 98 percent confidence interval:
-#&gt;   85591.69 109915.43
-#&gt; sample estimates:
-#&gt; median of x 
-#&gt;       94000 
-#&gt; </div><div class='output co'>#&gt;                   Conf.Level   L.E.pt   U.E.pt
-#&gt; Lower Achieved CI     0.9799 85600.00 109900.0
-#&gt; Interpolated CI       0.9800 85591.69 109915.4
-#&gt; Upper Achieved CI     0.9924 84200.00 112500.0</div><div class='input'><span class='co'># 98% CI -&gt; 63591.1 79622.56 and 85591.69 109915.4</span>
-<span class='co'># Placing on a common number line...</span>
-<span class='no'>my.axis</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>side</span>, <span class='no'>at</span>, <span class='no'>labels</span>,<span class='no'>...</span>)
-{<span class='kw'>for</span>(<span class='no'>i</span> <span class='kw'>in</span> <span class='fu'>seq</span>(<span class='kw'>along</span><span class='kw'>=</span><span class='no'>at</span>)) <span class='fu'>axis</span>(<span class='kw'>side</span><span class='kw'>=</span><span class='no'>side</span>, <span class='kw'>at</span><span class='kw'>=</span><span class='no'>at</span>[<span class='no'>i</span>], <span class='kw'>labels</span><span class='kw'>=</span><span class='no'>labels</span>[<span class='no'>i</span>],<span class='no'>...</span>) }
-
-<span class='fu'>plot</span>(<span class='fl'>1</span>,<span class='kw'>type</span><span class='kw'>=</span><span class='st'>"n"</span>,<span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>63000</span>,<span class='fl'>110000</span>),<span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>0</span>,<span class='fl'>1</span>),
-<span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Median House Price"</span>,<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>""</span>,<span class='kw'>yaxt</span><span class='kw'>=</span><span class='st'>"n"</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>""</span>)</div><div class='input'><span class='fu'>title</span>(<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"98 Percent Confidence Intervals"</span>)</div><div class='input'><span class='fu'>my.axis</span>(<span class='fl'>2</span>,<span class='kw'>at</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>.25</span>,<span class='fl'>.75</span>),<span class='kw'>labels</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"1984"</span>,<span class='st'>"1993"</span>), <span class='kw'>cex.axis</span><span class='kw'>=</span><span class='fl'>1.2</span> ,<span class='kw'>las</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='input'><span class='fu'>lines</span>( <span class='fu'>c</span>(<span class='fl'>63591.1</span>, <span class='fl'>79622.56</span>),<span class='fu'>c</span>(<span class='fl'>.25</span>,<span class='fl'>.25</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"orange"</span>,<span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>24</span>)</div><div class='input'><span class='fu'>lines</span>( <span class='fu'>c</span>(<span class='fl'>85591.69</span>, <span class='fl'>109915.4</span>),<span class='fu'>c</span>(<span class='fl'>.75</span>,<span class='fl'>.75</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"pink"</span>,<span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>24</span>)</div><img src='Housing-23.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>detach</span>(<span class='no'>Housing</span>)</div></pre>
+<span class='fu'>stripchart</span>(<span class='no'>price</span> ~ <span class='no'>year</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Housing</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"stack"</span>,
+           <span class='kw'>pch</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>))</div><img src='Housing-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Housing</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>price</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>year</span>)) +
+                <span class='fu'>geom_dotplot</span>() +
+                <span class='fu'>facet_grid</span>(<span class='no'>year</span> ~ <span class='no'>.</span>) +
+                <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
