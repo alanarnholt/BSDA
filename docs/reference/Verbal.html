@@ -111,7 +111,9 @@ Duxbury</p>
 #&gt;  $ number: int  12 15 3 7 10 5 22 9 13 7 ...
 #&gt;  $ verbal: int  77 85 48 59 75 41 94 72 80 70 ...
 #&gt;  $ SRES1 : num  0.474 0.606 -0.771 -0.485 0.909 ...
-#&gt;  $ FITS1 : num  73.9 81.1 52.5 62 69.2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Verbal</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison:</span>
+#&gt;  $ FITS1 : num  73.9 81.1 52.5 62 69.2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Verbal</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 3):</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    number</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 5):</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    number</span></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>verbal</span>~<span class='no'>number</span>)
 <span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
