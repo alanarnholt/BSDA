@@ -4706,35 +4706,38 @@ NULL
 #' 
 #' @name Indy500
 #' @docType data
-#' @format A data frame with 33 observations on the following 4 variables.
+#' @format A data frame/tibble with 33 observations on the following 4 variables.
 #' \describe{ 
-#' \item{driver}{a factor with levels \code{andretti}
-#' \code{bachelart} \code{boesel} \code{brayton} \code{c.guerrero}
-#' \code{cheever} \code{fabi} \code{fernandez} \code{ferran} \code{fittipaldi}
-#' \code{fox} \code{goodyear} \code{gordon} \code{gugelmin} \code{herta}
-#' \code{james} \code{johansson} \code{jones} \code{lazier} \code{luyendyk}
-#' \code{matsuda} \code{matsushita} \code{pruett} \code{r.guerrero}
-#' \code{rahal} \code{ribeiro} \code{salazar} \code{sharp} \code{sullivan}
-#' \code{tracy} \code{vasser} \code{villeneuve} \code{zampedri}}
-#' \item{qualif}{a numeric vector} 
-#' \item{starts}{a numeric vector} 
-#' \item{group}{a numeric vector} 
+#' \item{driver}{a character variable with values \code{andretti},
+#' \code{bachelart}, \code{boesel}, \code{brayton}, \code{c.guerrero},
+#' \code{cheever}, \code{fabi}, \code{fernandez}, \code{ferran}, \code{fittipaldi},
+#' \code{fox}, \code{goodyear}, \code{gordon}, \code{gugelmin}, \code{herta},
+#' \code{james}, \code{johansson}, \code{jones}, \code{lazier}, \code{luyendyk},
+#' \code{matsuda}, \code{matsushita}, \code{pruett}, \code{r.guerrero},
+#' \code{rahal}, \code{ribeiro}, \code{salazar}, \code{sharp}, \code{sullivan},
+#' \code{tracy}, \code{vasser}, \code{villeneuve}, and \code{zampedri}}
+#' \item{qualif}{qualifying speed (mph)} 
+#' \item{starts}{number of Indianapolis 500 starts} 
+#' \item{group}{a numeric vector where 1 indicates the driver has 4 or fewer 
+#' Indianapolis 500 starts and a 2 for drivers with 5 or more Indianapolis 500 starts} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Indy500)
-#' attach(Indy500)
-#' stripchart(qualif~group, method="stack",pch=19,col=c("red","blue"))
-#' boxplot(qualif~group)
-#' t.test(qualif~group)
-#' detach(Indy500)
+#' stripchart(qualif ~ group, data = Indy500, method = "stack",
+#'            pch = 19, col = c("red", "blue"))
+#' boxplot(qualif ~ group, data = Indy500)
+#' t.test(qualif ~ group, data = Indy500)
+#' \dontrun{
+#' ggplot2::ggplot(data = Indy500, aes(sample = qualif)) + 
+#'           geom_qq() + 
+#'           facet_grid(group ~ .) + 
+#'           theme_bw()
+#' }
 #' 
-NULL
-
-
+"Indy500"
 
 
 
@@ -4745,26 +4748,22 @@ NULL
 #' 
 #' @name Inflatio
 #' @docType data
-#' @format A data frame with 24 observations on the following 5 variables.
+#' @format A data frame/tibble with 24 observations on the following 4 variables.
 #' \describe{
-#' \item{year}{a numeric vector} 
-#' \item{pay}{a numeric vector} 
-#' \item{increase}{a numeric vector}
-#' \item{inflation}{a numeric vector} 
-#' \item{C6.T}{a factor with levels \code{alow} \code{bmiddle} \code{high}} 
+#' \item{year}{a numeric vector of years} 
+#' \item{pay}{average hourly wage for salaried employees} 
+#' \item{increase}{percent increase in hourly wage over previous year}
+#' \item{inflation}{percent inflation rate} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Inflatio)
-#' attach(Inflatio)
-#' plot(inflation,increase)
-#' cor(inflation,increase,use="complete.obs")
-#' detach(Inflatio)
+#' plot(increase ~ inflation, data = Inflatio)
+#' cor(Inflatio$increase, Inflatio$inflation, use = "complete.obs")
 #' 
-NULL
+"Inflatio"
 
 
 
@@ -4777,22 +4776,22 @@ NULL
 #' 
 #' @name Inletoil
 #' @docType data
-#' @format A data frame with 12 observations on the following variable.
+#' @format A data frame/tibble with 12 observations on the following variable.
 #' \describe{ 
-#' \item{temp}{a numeric vector} 
+#' \item{temp}{inlet oil temperature (Fahrenheit)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Inletoil)
-#' attach(Inletoil)
-#' t.test(temp)$conf
-#' t.test(temp,mu=98,alternative="less")
-#' detach(Inletoil)
+#' hist(Inletoil$temp, breaks = 3)
+#' qqnorm(Inletoil$temp)
+#' qqline(Inletoil$temp)
+#' t.test(Inletoil$temp)
+#' t.test(Inletoil$temp, mu = 98, alternative = "less")
 #' 
-NULL
+"Inletoil"
 
 
 
@@ -4805,27 +4804,23 @@ NULL
 #' 
 #' @name Inmate
 #' @docType data
-#' @format A data frame with 3 observations on the following 5 variables.
+#' @format A data frame/tibble with 28,037 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Race}{a factor with levels \code{black}
-#' \code{hispanic} \code{white}} 
-#' \item{heroin}{a numeric vector}
-#' \item{crack}{a numeric vector} 
-#' \item{cocaine}{a numeric vector} 
-#' \item{marijuan}{a numeric vector} 
+#' \item{race}{a factor with levels \code{white},
+#' \code{black}, and \code{hispanic}} 
+#' \item{drug}{a factor with levels \code{heroin}, \code{crack}, \code{cocaine}, and \code{marijuana}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Inmate)
-#' attach(Inmate)
-#' Inmate
-#' chisq.test(Inmate[,2:5])
-#' detach(Inmate)
+#' T1 <- xtabs(~race + drug, data = Inmate)
+#' T1
+#' chisq.test(T1)
+#' rm(T1)
 #' 
-NULL
+"Inmate"
 
 
 
@@ -4838,28 +4833,31 @@ NULL
 #' 
 #' @name Inspect
 #' @docType data
-#' @format A data frame with 6 observations on the following 4 variables.
+#' @format A data frame with 174 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Type}{a factor with levels \code{auto inspection}
-#' \code{auto repair} \code{car care center} \code{gas station} \code{new car
-#' dealer} \code{tire store}} 
-#' \item{less70}{a numeric vector}
-#' \item{X70.85}{a numeric vector} 
-#' \item{great85}{a numeric vector} 
+#' \item{station}{a factor with levels \code{auto inspection},
+#' \code{auto repair}, \code{car care center}, \code{gas station}, \code{new car
+#' dealer}, and \code{tire store}} 
+#' \item{passed}{a factor with levels \code{less than 70%}, \code{between 705 and 84%}, and \code{more than 85%}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Inspect)
-#' attach(Inspect)
-#' Inspect
-#' chisq.test(Inspect[,2:4])
-#' detach(Inspect)
+#' T1 <- xtabs(~ station + passed, data = Inspect)
+#' T1
+#' barplot(T1, beside = TRUE, legend = TRUE)
+#' chisq.test(T1)
+#' rm(T1)
 #' 
-NULL
-
+#' \dontrun{
+#' ggplot2::ggplot(data = Inspect, aes(x = passed, fill = station)) + 
+#'            geom_bar(position = "dodge") + 
+#'            theme_bw()
+#' }
+#' 
+"Inspect"
 
 
 

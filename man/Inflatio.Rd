@@ -4,24 +4,23 @@
 \name{Inflatio}
 \alias{Inflatio}
 \title{Private pay increase of salaried employees versus inflation rate}
-\format{A data frame with 24 observations on the following 5 variables.
+\format{A data frame/tibble with 24 observations on the following 4 variables.
 \describe{
-\item{year}{a numeric vector} 
-\item{pay}{a numeric vector} 
-\item{increase}{a numeric vector}
-\item{inflation}{a numeric vector} 
-\item{C6.T}{a factor with levels \code{alow} \code{bmiddle} \code{high}} 
+\item{year}{a numeric vector of years} 
+\item{pay}{average hourly wage for salaried employees} 
+\item{increase}{percent increase in hourly wage over previous year}
+\item{inflation}{percent inflation rate} 
 }}
+\usage{
+Inflatio
+}
 \description{
 Data for Exercises 2.12 and 2.29
 }
 \examples{
 
-str(Inflatio)
-attach(Inflatio)
-plot(inflation,increase)
-cor(inflation,increase,use="complete.obs")
-detach(Inflatio)
+plot(increase ~ inflation, data = Inflatio)
+cor(Inflatio$increase, Inflatio$inflation, use = "complete.obs")
 
 }
 \references{

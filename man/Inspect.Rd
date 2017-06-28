@@ -4,25 +4,26 @@
 \name{Inspect}
 \alias{Inspect}
 \title{Percent of vehicles passing inspection by type inspection station}
-\format{A data frame with 6 observations on the following 4 variables.
-\describe{ 
-\item{Type}{a factor with levels \code{auto inspection}
-\code{auto repair} \code{car care center} \code{gas station} \code{new car
-dealer} \code{tire store}} 
-\item{less70}{a numeric vector}
-\item{X70.85}{a numeric vector} 
-\item{great85}{a numeric vector} 
-}}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 174 rows and 2 columns.}
+\usage{
+Inspect
+}
 \description{
 Data for Exercise 5.89
 }
 \examples{
 
-str(Inspect)
-attach(Inspect)
-Inspect
-chisq.test(Inspect[,2:4])
-detach(Inspect)
+T1 <- xtabs(~ station + passed, data = Inspect)
+T1
+barplot(T1, beside = TRUE, legend = TRUE)
+chisq.test(T1)
+rm(T1)
+
+\dontrun{
+ggplot2::ggplot(data = Inspect, aes(x = passed, fill = station)) + 
+           geom_bar(position = "dodge") + 
+           theme_bw()
+}
 
 }
 \references{

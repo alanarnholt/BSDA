@@ -4,20 +4,23 @@
 \name{Inletoil}
 \alias{Inletoil}
 \title{Inlet oil temperature through a valve}
-\format{A data frame with 12 observations on the following variable.
+\format{A data frame/tibble with 12 observations on the following variable.
 \describe{ 
-\item{temp}{a numeric vector} 
+\item{temp}{inlet oil temperature (Fahrenheit)} 
 }}
+\usage{
+Inletoil
+}
 \description{
 Data for Exercises 5.91 and 6.48
 }
 \examples{
 
-str(Inletoil)
-attach(Inletoil)
-t.test(temp)$conf
-t.test(temp,mu=98,alternative="less")
-detach(Inletoil)
+hist(Inletoil$temp, breaks = 3)
+qqnorm(Inletoil$temp)
+qqline(Inletoil$temp)
+t.test(Inletoil$temp)
+t.test(Inletoil$temp, mu = 98, alternative = "less")
 
 }
 \references{

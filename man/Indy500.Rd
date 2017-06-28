@@ -5,31 +5,39 @@
 \alias{Indy500}
 \title{Qualifying miles per hour and number of previous starts for drivers in 79th
 Indianapolis 500 race}
-\format{A data frame with 33 observations on the following 4 variables.
+\format{A data frame/tibble with 33 observations on the following 4 variables.
 \describe{ 
-\item{driver}{a factor with levels \code{andretti}
-\code{bachelart} \code{boesel} \code{brayton} \code{c.guerrero}
-\code{cheever} \code{fabi} \code{fernandez} \code{ferran} \code{fittipaldi}
-\code{fox} \code{goodyear} \code{gordon} \code{gugelmin} \code{herta}
-\code{james} \code{johansson} \code{jones} \code{lazier} \code{luyendyk}
-\code{matsuda} \code{matsushita} \code{pruett} \code{r.guerrero}
-\code{rahal} \code{ribeiro} \code{salazar} \code{sharp} \code{sullivan}
-\code{tracy} \code{vasser} \code{villeneuve} \code{zampedri}}
-\item{qualif}{a numeric vector} 
-\item{starts}{a numeric vector} 
-\item{group}{a numeric vector} 
+\item{driver}{a character variable with values \code{andretti},
+\code{bachelart}, \code{boesel}, \code{brayton}, \code{c.guerrero},
+\code{cheever}, \code{fabi}, \code{fernandez}, \code{ferran}, \code{fittipaldi},
+\code{fox}, \code{goodyear}, \code{gordon}, \code{gugelmin}, \code{herta},
+\code{james}, \code{johansson}, \code{jones}, \code{lazier}, \code{luyendyk},
+\code{matsuda}, \code{matsushita}, \code{pruett}, \code{r.guerrero},
+\code{rahal}, \code{ribeiro}, \code{salazar}, \code{sharp}, \code{sullivan},
+\code{tracy}, \code{vasser}, \code{villeneuve}, and \code{zampedri}}
+\item{qualif}{qualifying speed (mph)} 
+\item{starts}{number of Indianapolis 500 starts} 
+\item{group}{a numeric vector where 1 indicates the driver has 4 or fewer 
+Indianapolis 500 starts and a 2 for drivers with 5 or more Indianapolis 500 starts} 
 }}
+\usage{
+Indy500
+}
 \description{
 Data for Exercises 7.11 and 7.36
 }
 \examples{
 
-str(Indy500)
-attach(Indy500)
-stripchart(qualif~group, method="stack",pch=19,col=c("red","blue"))
-boxplot(qualif~group)
-t.test(qualif~group)
-detach(Indy500)
+stripchart(qualif ~ group, data = Indy500, method = "stack",
+           pch = 19, col = c("red", "blue"))
+boxplot(qualif ~ group, data = Indy500)
+t.test(qualif ~ group, data = Indy500)
+\dontrun{
+ggplot2::ggplot(data = Indy500, aes(sample = qualif)) + 
+          geom_qq() + 
+          facet_grid(group ~ .) + 
+          theme_bw()
+}
 
 }
 \references{

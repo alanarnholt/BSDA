@@ -4,25 +4,24 @@
 \name{Inmate}
 \alias{Inmate}
 \title{Type of drug offense by race}
-\format{A data frame with 3 observations on the following 5 variables.
+\format{A data frame/tibble with 28,037 observations on the following 2 variables.
 \describe{ 
-\item{Race}{a factor with levels \code{black}
-\code{hispanic} \code{white}} 
-\item{heroin}{a numeric vector}
-\item{crack}{a numeric vector} 
-\item{cocaine}{a numeric vector} 
-\item{marijuan}{a numeric vector} 
+\item{race}{a factor with levels \code{white},
+\code{black}, and \code{hispanic}} 
+\item{drug}{a factor with levels \code{heroin}, \code{crack}, \code{cocaine}, and \code{marijuana}}
 }}
+\usage{
+Inmate
+}
 \description{
 Data for Statistical Insight Chapter 8
 }
 \examples{
 
-str(Inmate)
-attach(Inmate)
-Inmate
-chisq.test(Inmate[,2:5])
-detach(Inmate)
+T1 <- xtabs(~race + drug, data = Inmate)
+T1
+chisq.test(T1)
+rm(T1)
 
 }
 \references{

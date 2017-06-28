@@ -1873,3 +1873,103 @@ Indiapol
 devtools::use_data(Indiapol, overwrite = TRUE)
 ## Examples
 plot(speed ~ year, data = Indiapol, type = "b")
+##############################################################
+Indy500 <- read_csv("Indy500.csv")
+Indy500
+devtools::use_data(Indy500, overwrite = TRUE)
+## Examples Ex 7.16 7.36
+stripchart(qualif ~ group, data = Indy500, method = "stack",
+           pch = 19, col = c("red", "blue"))
+boxplot(qualif ~ group, data = Indy500)
+t.test(qualif ~ group, data = Indy500)
+## Not run
+ggplot2::ggplot(data = Indy500, aes(sample = qualif)) + 
+  geom_qq() + 
+  facet_grid(group ~ .) + 
+  theme_bw()
+##
+##############################################################
+##############################################################
+Inflatio <- read_csv("Inflatio.csv")
+Inflatio <- Inflatio %>%
+  select(year, pay, increase, inflation)
+Inflatio
+devtools::use_data(Inflatio, overwrite = TRUE)
+## Examples Ex 7.16 7.36
+## Examples
+plot(increase ~ inflation, data = Inflatio)
+cor(Inflatio$increase, Inflatio$inflation, use = "complete.obs")
+
+##
+##############################################################
+Inletoil <- read_csv("Inletoil.csv")
+Inletoil
+devtools::use_data(Inletoil, overwrite = TRUE)
+## Examples
+hist(Inletoil$temp, breaks = 3)
+qqnorm(Inletoil$temp)
+qqline(Inletoil$temp)
+t.test(Inletoil$temp)
+t.test(Inletoil$temp, mu = 98, alternative = "less")
+##
+##############################################################
+## Creating Inmate
+mat <- matrix(data = c(407, 106, 4525, 2825,
+                       1156, 2513, 4439, 442,
+                       1314, 348, 7297, 2675), 
+              byrow = TRUE, nrow = 3)
+dimnames(mat) <- list(race = c("white", "black", "hispanic"), 
+                      drug = c("heroin", "crack", "cocaine", "marijuana"))
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Inmate <- vcdExtra::expand.dft(matDF)
+rm(mat, matT, matDF)
+Inmate$race <- factor(Inmate$race, 
+                      levels = c("white", "black", "hispanic"))
+Inmate$drug <- factor(Inmate$drug, levels = c("heroin", "crack", "cocaine", "marijuana"))
+Inmate <- as_tibble(Inmate)
+Inmate
+devtools::use_data(Inmate, overwrite = TRUE)
+## Examples 
+T1 <- xtabs(~race + drug, data = Inmate)
+T1
+chisq.test(T1)
+rm(T1)
+##
+####################################################
+## Inspect <- read_csv("Inspect.csv")
+## Inspect
+##
+## Create Inspect
+mat <- matrix(data = c(1, 8, 4, 
+                       16, 13, 7, 
+                       16, 11, 6, 
+                       19, 21, 6, 
+                       4, 4, 4, 
+                       1, 5, 28), byrow = TRUE, nrow = 6)
+dimnames(mat) <- list(station = c("auto inspection", "auto repair", "tire store", "gas station", 
+                                  "car care center", "new car dealer"), 
+                      passed = c("less than 70%", "between 70% and 84%", "more than 85%"))
+mat
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Inspect <- vcdExtra::expand.dft(matDF)
+rm(mat, matT, matDF)
+Inspect$station <- factor(Inspect$station, 
+                          levels = c("auto inspection", "auto repair", "tire store", "gas station", 
+                                     "car care center", "new car dealer"))
+Inspect$passed <- factor(Inspect$passed, levels = c("less than 70%", "between 70% and 84%", "more than 85%"))
+Inspect <- as_tibble(Inspect)
+Inspect
+devtools::use_data(Inspect, overwrite = TRUE)
+## Examples
+T1 <- xtabs(~ station + passed, data = Inspect)
+T1
+barplot(T1, beside = TRUE, legend = TRUE)
+chisq.test(T1)
+rm(T1)
+## Not run
+ggplot2::ggplot(data = Inspect, aes(x = passed, fill = station)) + 
+  geom_bar(position = "dodge") + 
+  theme_bw()
+##
