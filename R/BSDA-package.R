@@ -4833,12 +4833,12 @@ NULL
 #' 
 #' @name Inspect
 #' @docType data
-#' @format A data frame with 174 observations on the following 2 variables.
+#' @format A data frame/tibble with 174 observations on the following 2 variables.
 #' \describe{ 
 #' \item{station}{a factor with levels \code{auto inspection},
 #' \code{auto repair}, \code{car care center}, \code{gas station}, \code{new car
 #' dealer}, and \code{tire store}} 
-#' \item{passed}{a factor with levels \code{less than 70%}, \code{between 705 and 84%}, and \code{more than 85%}}
+#' \item{passed}{a factor with levels \code{less than 70\%}, \code{between 70\% and 84\%}, and \code{more than 85\%}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
