@@ -89,21 +89,23 @@ Indianapolis 500 race</h1>
     <p>Data for Exercises 7.11 and 7.36</p>
     
 
+    <pre class="usage"><span class='no'>Indy500</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 33 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>driver</dt><dd><p>a factor with levels <code>andretti</code>
-<code>bachelart</code> <code>boesel</code> <code>brayton</code> <code>c.guerrero</code>
-<code>cheever</code> <code>fabi</code> <code>fernandez</code> <code>ferran</code> <code>fittipaldi</code>
-<code>fox</code> <code>goodyear</code> <code>gordon</code> <code>gugelmin</code> <code>herta</code>
-<code>james</code> <code>johansson</code> <code>jones</code> <code>lazier</code> <code>luyendyk</code>
-<code>matsuda</code> <code>matsushita</code> <code>pruett</code> <code>r.guerrero</code>
-<code>rahal</code> <code>ribeiro</code> <code>salazar</code> <code>sharp</code> <code>sullivan</code>
-<code>tracy</code> <code>vasser</code> <code>villeneuve</code> <code>zampedri</code></p></dd>
-<dt>qualif</dt><dd><p>a numeric vector</p></dd> 
-<dt>starts</dt><dd><p>a numeric vector</p></dd> 
-<dt>group</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 33 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>driver</dt><dd><p>a character variable with values <code>andretti</code>,
+<code>bachelart</code>, <code>boesel</code>, <code>brayton</code>, <code>c.guerrero</code>,
+<code>cheever</code>, <code>fabi</code>, <code>fernandez</code>, <code>ferran</code>, <code>fittipaldi</code>,
+<code>fox</code>, <code>goodyear</code>, <code>gordon</code>, <code>gugelmin</code>, <code>herta</code>,
+<code>james</code>, <code>johansson</code>, <code>jones</code>, <code>lazier</code>, <code>luyendyk</code>,
+<code>matsuda</code>, <code>matsushita</code>, <code>pruett</code>, <code>r.guerrero</code>,
+<code>rahal</code>, <code>ribeiro</code>, <code>salazar</code>, <code>sharp</code>, <code>sullivan</code>,
+<code>tracy</code>, <code>vasser</code>, <code>villeneuve</code>, and <code>zampedri</code></p></dd>
+<dt>qualif</dt><dd><p>qualifying speed (mph)</p></dd> 
+<dt>starts</dt><dd><p>number of Indianapolis 500 starts</p></dd> 
+<dt>group</dt><dd><p>a numeric vector where 1 indicates the driver has 4 or fewer 
+Indianapolis 500 starts and a 2 for drivers with 5 or more Indianapolis 500 starts</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -114,12 +116,8 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Indy500</span>)</div><div class='output co'>#&gt; 'data.frame':	33 obs. of  4 variables:
-#&gt;  $ driver: Factor w/ 33 levels "andretti","bachelart",..: 4 20 12 1 32 14 13 23 31 22 ...
-#&gt;  $ qualif: num  232 231 231 229 228 ...
-#&gt;  $ starts: int  13 10 5 10 1 1 2 3 3 3 ...
-#&gt;  $ group : int  2 2 2 2 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Indy500</span>)
-<span class='fu'>stripchart</span>(<span class='no'>qualif</span>~<span class='no'>group</span>, <span class='kw'>method</span><span class='kw'>=</span><span class='st'>"stack"</span>,<span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"red"</span>,<span class='st'>"blue"</span>))</div><img src='Indy500-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>boxplot</span>(<span class='no'>qualif</span>~<span class='no'>group</span>)</div><img src='Indy500-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>t.test</span>(<span class='no'>qualif</span>~<span class='no'>group</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stripchart</span>(<span class='no'>qualif</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"stack"</span>,
+           <span class='kw'>pch</span> <span class='kw'>=</span> <span class='fl'>19</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>))</div><img src='Indy500-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>boxplot</span>(<span class='no'>qualif</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>)</div><img src='Indy500-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>t.test</span>(<span class='no'>qualif</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
 #&gt; data:  qualif by group
@@ -130,7 +128,12 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean in group 1 mean in group 2 
 #&gt;        226.4538        227.8644 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Indy500</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>, <span class='fu'>aes</span>(<span class='kw'>sample</span> <span class='kw'>=</span> <span class='no'>qualif</span>)) +
+            <span class='fu'>geom_qq</span>() +
+            <span class='fu'>facet_grid</span>(<span class='no'>group</span> ~ <span class='no'>.</span>) +
+            <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

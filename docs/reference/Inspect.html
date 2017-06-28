@@ -87,17 +87,11 @@
     <p>Data for Exercise 5.89</p>
     
 
+    <pre class="usage"><span class='no'>Inspect</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 6 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>Type</dt><dd><p>a factor with levels <code>auto inspection</code>
-<code>auto repair</code> <code>car care center</code> <code>gas station</code> <code>new car
-dealer</code> <code>tire store</code></p></dd> 
-<dt>less70</dt><dd><p>a numeric vector</p></dd>
-<dt>X70.85</dt><dd><p>a numeric vector</p></dd> 
-<dt>great85</dt><dd><p>a numeric vector</p></dd> 
-</dl>
+    <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 174 rows and 2 columns.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -107,38 +101,26 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Inspect</span>)</div><div class='output co'>#&gt; 'data.frame':	6 obs. of  4 variables:
-#&gt;  $ Type   : Factor w/ 6 levels "auto inspection",..: 1 2 6 4 3 5
-#&gt;  $ less70 : int  1 16 16 19 4 1
-#&gt;  $ X70.85 : int  8 13 11 21 4 5
-#&gt;  $ great85: int  4 7 6 6 4 28</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Inspect</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 4):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 5):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 6):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 8):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 10):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 12):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 15):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 17):</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Type</span></div><div class='input'><span class='no'>Inspect</span></div><div class='output co'>#&gt;              Type less70 X70.85 great85
-#&gt; 1 auto inspection      1      8       4
-#&gt; 2     auto repair     16     13       7
-#&gt; 3      tire store     16     11       6
-#&gt; 4     gas station     19     21       6
-#&gt; 5 car care center      4      4       4
-#&gt; 6  new car dealer      1      5      28</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>Inspect</span>[,<span class='fl'>2</span>:<span class='fl'>4</span>])</div><div class='output co'>#&gt; <span class='warning'>Warning: Chi-squared approximation may be incorrect</span></div><div class='output co'>#&gt; 
+<span class='no'>T1</span> <span class='kw'>&lt;-</span> <span class='fu'>xtabs</span>(~ <span class='no'>station</span> + <span class='no'>passed</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Inspect</span>)
+<span class='no'>T1</span></div><div class='output co'>#&gt;                  passed
+#&gt; station           less than 70% between 70% and 84% more than 85%
+#&gt;   auto inspection             1                   8             4
+#&gt;   auto repair                16                  13             7
+#&gt;   tire store                 16                  11             6
+#&gt;   gas station                19                  21             6
+#&gt;   car care center             4                   4             4
+#&gt;   new car dealer              1                   5            28</div><div class='input'><span class='fu'>barplot</span>(<span class='no'>T1</span>, <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><img src='Inspect-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>T1</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Chi-squared approximation may be incorrect</span></div><div class='output co'>#&gt; 
 #&gt; 	Pearson's Chi-squared test
 #&gt; 
-#&gt; data:  Inspect[, 2:4]
+#&gt; data:  T1
 #&gt; X-squared = 61.027, df = 10, p-value = 2.316e-09
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Inspect</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>rm</span>(<span class='no'>T1</span>)
+
+<span class='fu'>not_run</span>({
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Inspect</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>passed</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>station</span>)) +
+             <span class='fu'>geom_bar</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
+             <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -87,15 +87,15 @@
     <p>Data for Exercises 2.12 and 2.29</p>
     
 
+    <pre class="usage"><span class='no'>Inflatio</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 24 observations on the following 5 variables.</p><dl class='dl-horizontal'>
-<dt>year</dt><dd><p>a numeric vector</p></dd> 
-<dt>pay</dt><dd><p>a numeric vector</p></dd> 
-<dt>increase</dt><dd><p>a numeric vector</p></dd>
-<dt>inflation</dt><dd><p>a numeric vector</p></dd> 
-<dt>C6.T</dt><dd><p>a factor with levels <code>alow</code> <code>bmiddle</code> <code>high</code></p></dd> 
+    <p>A data frame/tibble with 24 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>year</dt><dd><p>a numeric vector of years</p></dd> 
+<dt>pay</dt><dd><p>average hourly wage for salaried employees</p></dd> 
+<dt>increase</dt><dd><p>percent increase in hourly wage over previous year</p></dd>
+<dt>inflation</dt><dd><p>percent inflation rate</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -106,13 +106,8 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Inflatio</span>)</div><div class='output co'>#&gt; 'data.frame':	24 obs. of  5 variables:
-#&gt;  $ year     : int  1975 1976 1977 1978 1979 1980 1981 1982 1983 1984 ...
-#&gt;  $ pay      : num  4.53 4.86 5.25 5.69 6.16 6.66 7.25 7.68 8.02 8.32 ...
-#&gt;  $ increase : num  NA 7.3 8 8.4 8.3 8.1 8.9 5.9 4.4 3.7 ...
-#&gt;  $ inflation: num  6.9 4.9 6.7 9 13.3 12.5 8.9 3.8 3.8 3.9 ...
-#&gt;  $ C6.T     : Factor w/ 3 levels "alow","bmiddle",..: 3 2 3 3 3 3 3 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Inflatio</span>)
-<span class='fu'>plot</span>(<span class='no'>inflation</span>,<span class='no'>increase</span>)</div><img src='Inflatio-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>cor</span>(<span class='no'>inflation</span>,<span class='no'>increase</span>,<span class='kw'>use</span><span class='kw'>=</span><span class='st'>"complete.obs"</span>)</div><div class='output co'>#&gt; [1] 0.8164214</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Inflatio</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>increase</span> ~ <span class='no'>inflation</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Inflatio</span>)</div><img src='Inflatio-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>cor</span>(<span class='no'>Inflatio</span>$<span class='no'>increase</span>, <span class='no'>Inflatio</span>$<span class='no'>inflation</span>, <span class='kw'>use</span> <span class='kw'>=</span> <span class='st'>"complete.obs"</span>)</div><div class='output co'>#&gt; [1] 0.8164214</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
