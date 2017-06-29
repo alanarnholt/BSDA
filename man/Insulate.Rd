@@ -4,20 +4,30 @@
 \name{Insulate}
 \alias{Insulate}
 \title{Heat loss through a new insulating medium}
-\format{A data frame with 10 observations on the following 2 variables.
+\format{A data frame/tibble with 10 observations on the following 2 variables.
 \describe{ 
-\item{temp}{a numeric vector} 
-\item{loss}{a numeric vector} 
+\item{temp}{outside temperature (in degrees centigrade)} 
+\item{loss}{heat loss (in BTUs)} 
 }}
+\usage{
+Insulate
+}
 \description{
 Data for Exercise 9.50
 }
 \examples{
 
-str(Insulate)
-attach(Insulate)
-summary(lm(loss~temp))
-detach(Insulate)
+plot(loss ~ temp, data = Insulate)
+model <- lm(loss ~ temp, data = Insulate)
+abline(model, col = "blue") 
+summary(model)
+
+\dontrun{
+ggplot2::ggplot(data = Insulate, aes(x = temp, y = loss)) + 
+           geom_point() + 
+           geom_smooth(method = "lm", se = FALSE) + 
+           theme_bw()
+}
 
 }
 \references{

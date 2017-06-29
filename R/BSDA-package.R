@@ -4869,22 +4869,29 @@ NULL
 #' 
 #' @name Insulate
 #' @docType data
-#' @format A data frame with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with 10 observations on the following 2 variables.
 #' \describe{ 
-#' \item{temp}{a numeric vector} 
-#' \item{loss}{a numeric vector} 
+#' \item{temp}{outside temperature (in degrees centigrade)} 
+#' \item{loss}{heat loss (in BTUs)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Insulate)
-#' attach(Insulate)
-#' summary(lm(loss~temp))
-#' detach(Insulate)
+#' plot(loss ~ temp, data = Insulate)
+#' model <- lm(loss ~ temp, data = Insulate)
+#' abline(model, col = "blue") 
+#' summary(model)
 #' 
-NULL
+#' \dontrun{
+#' ggplot2::ggplot(data = Insulate, aes(x = temp, y = loss)) + 
+#'            geom_point() + 
+#'            geom_smooth(method = "lm", se = FALSE) + 
+#'            theme_bw()
+#' }
+#' 
+"Insulate"
 
 
 
@@ -4897,26 +4904,22 @@ NULL
 #' 
 #' @name Iqgpa
 #' @docType data
-#' @format A data frame with 12 observations on the following 2 variables.
+#' @format A data frame/tibble with 12 observations on the following 2 variables.
 #' \describe{ 
-#' \item{IQ}{a numeric vector} 
-#' \item{GPA}{a numeric vector} 
+#' \item{iq}{IQ scores} 
+#' \item{gpa}{Grade point average} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Iqgpa)
-#' attach(Iqgpa)
-#' plot(IQ,GPA)
-#' model <- lm(GPA~IQ)
-#' abline(model)
+#' plot(gpa ~ iq, data = Iqgpa, col = "blue", pch = 19)
+#' model <- lm(gpa ~ iq, data = Iqgpa)
 #' summary(model)
-#' detach(Iqgpa)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Iqgpa"
 
 
 
@@ -4929,35 +4932,30 @@ NULL
 #' 
 #' @name Irises
 #' @docType data
-#' @format A data frame with 150 observations on the following 14 variables.
+#' @format A data frame/tibble with 150 observations on the following 5 variables.
 #' \describe{ 
-#' \item{sepalL1}{a numeric vector} 
-#' \item{sepalW1}{a numeric vector} 
-#' \item{petalL1}{a numeric vector}
-#' \item{petalW1}{a numeric vector} 
-#' \item{sepalL2}{a numeric vector} 
-#' \item{sepalW2}{a numeric vector} 
-#' \item{petalL2}{a numeric vector} 
-#' \item{peatalW2}{a numeric vector}
-#' \item{sepalL3}{a numeric vector} 
-#' \item{sepalW3}{a numeric vector} 
-#' \item{petalL3}{a numeric vector} 
-#' \item{petalW3}{a numeric vector} 
-#' \item{sepalL}{a numeric vector}
-#' \item{sample}{a numeric vector} 
+#' \item{sepal_length}{sepal length (in cm)} 
+#' \item{sepal_width}{sepal width (in cm)} 
+#' \item{petal_length}{petal length (in cm)}
+#' \item{petal_width}{petal width (in cm)} 
+#' \item{species}{a factor with levels \code{setosa}, \code{versicolor}, and \code{virginica}} 
 #' }
+#' @source Fisher, R. A. (1936) The use of multiple measurements in taxonomic problems. 
+#' \emph{Annals of Eugenics}, \strong{7}, Part II, 179–188.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Irises)
-#' attach(Irises)
-#' EDA(sepalL1)
-#' t.test(sepalL1,conf.level=.99)$conf
-#' detach(Irises)
+#' tapply(Irises$sepal_length, Irises$species, mean)
+#' t.test(Irises$sepal_length[Irises$species == "setosa"], conf.level = 0.99)
+#' hist(Irises$sepal_length[Irises$species == "setosa"], 
+#'      main = "Sepal length for\n Iris Setosa",
+#'      xlab = "Length (in cm)")
+#' boxplot(sepal_length ~ species, data = Irises)
 #' 
-NULL
+"Irises"
 
 
 

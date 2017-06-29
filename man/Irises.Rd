@@ -4,33 +4,32 @@
 \name{Irises}
 \alias{Irises}
 \title{R.A. Fishers famous data on sepal length of a species of Iris Setosa}
-\format{A data frame with 150 observations on the following 14 variables.
+\format{A data frame/tibble with 150 observations on the following 5 variables.
 \describe{ 
-\item{sepalL1}{a numeric vector} 
-\item{sepalW1}{a numeric vector} 
-\item{petalL1}{a numeric vector}
-\item{petalW1}{a numeric vector} 
-\item{sepalL2}{a numeric vector} 
-\item{sepalW2}{a numeric vector} 
-\item{petalL2}{a numeric vector} 
-\item{peatalW2}{a numeric vector}
-\item{sepalL3}{a numeric vector} 
-\item{sepalW3}{a numeric vector} 
-\item{petalL3}{a numeric vector} 
-\item{petalW3}{a numeric vector} 
-\item{sepalL}{a numeric vector}
-\item{sample}{a numeric vector} 
+\item{sepal_length}{sepal length (in cm)} 
+\item{sepal_width}{sepal width (in cm)} 
+\item{petal_length}{petal length (in cm)}
+\item{petal_width}{petal width (in cm)} 
+\item{species}{a factor with levels \code{setosa}, \code{versicolor}, and \code{virginica}} 
 }}
+\source{
+Fisher, R. A. (1936) The use of multiple measurements in taxonomic problems. 
+\emph{Annals of Eugenics}, \strong{7}, Part II, 179–188.
+}
+\usage{
+Irises
+}
 \description{
 Data for Exercises 1.15 and 5.19
 }
 \examples{
 
-str(Irises)
-attach(Irises)
-EDA(sepalL1)
-t.test(sepalL1,conf.level=.99)$conf
-detach(Irises)
+tapply(Irises$sepal_length, Irises$species, mean)
+t.test(Irises$sepal_length[Irises$species == "setosa"], conf.level = 0.99)
+hist(Irises$sepal_length[Irises$species == "setosa"], 
+     main = "Sepal length for\\n Iris Setosa",
+     xlab = "Length (in cm)")
+boxplot(sepal_length ~ species, data = Irises)
 
 }
 \references{

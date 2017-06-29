@@ -4,24 +4,23 @@
 \name{Iqgpa}
 \alias{Iqgpa}
 \title{GPA versus IQ for 12 individuals}
-\format{A data frame with 12 observations on the following 2 variables.
+\format{A data frame/tibble with 12 observations on the following 2 variables.
 \describe{ 
-\item{IQ}{a numeric vector} 
-\item{GPA}{a numeric vector} 
+\item{iq}{IQ scores} 
+\item{gpa}{Grade point average} 
 }}
+\usage{
+Iqgpa
+}
 \description{
 Data for Exercises 9.51 and 9.52
 }
 \examples{
 
-str(Iqgpa)
-attach(Iqgpa)
-plot(IQ,GPA)
-model <- lm(GPA~IQ)
-abline(model)
+plot(gpa ~ iq, data = Iqgpa, col = "blue", pch = 19)
+model <- lm(gpa ~ iq, data = Iqgpa)
 summary(model)
-detach(Iqgpa)
-remove(model)
+rm(model)
 
 }
 \references{

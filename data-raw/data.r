@@ -1973,3 +1973,49 @@ ggplot2::ggplot(data = Inspect, aes(x = passed, fill = station)) +
   geom_bar(position = "dodge") + 
   theme_bw()
 ##
+####################################################
+Insulate <- read_csv("Insulate.csv")
+Insulate
+devtools::use_data(Insulate, overwrite = TRUE)
+# Examples Ex 9.50
+plot(loss ~ temp, data = Insulate)
+model <- lm(loss ~ temp, data = Insulate)
+abline(model, col = "blue")
+summary(model)
+## Not run
+ggplot2::ggplot(data = Insulate, aes(x = temp, y = loss)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  theme_bw()
+##
+#
+####################################################
+Iqgpa <- read_csv("Iqgpa.csv")
+Iqgpa <- Iqgpa %>%
+  select(iq = IQ, gpa = GPA)
+Iqgpa
+devtools::use_data(Iqgpa, overwrite = TRUE)
+## Examples
+plot(gpa ~ iq, data = Iqgpa, col = "blue", pch = 19)
+model <- lm(gpa ~ iq, data = Iqgpa)
+summary(model)
+rm(model)
+##
+##
+####################################################
+# Irises <- read_csv("Irises.csv")
+Irises <- iris
+Irises <- Irises %>%
+  rename(sepal_length = Sepal.Length, sepal_width = Sepal.Width, 
+         petal_length = Petal.Length, petal_width = Petal.Width,
+         species = Species)
+Irises <- as_tibble(Irises)
+Irises
+devtools::use_data(Irises, overwrite = TRUE)
+## Examples
+tapply(Irises$sepal_length, Irises$species, mean)
+t.test(Irises$sepal_length[Irises$species == "setosa"], conf.level = 0.99)
+hist(Irises$sepal_length[Irises$species == "setosa"], 
+     main = "Sepal length for\n Iris Setosa",
+     xlab = "Length (in cm)")
+boxplot(sepal_length ~ species, data = Irises)
