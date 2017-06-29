@@ -4925,7 +4925,7 @@ NULL
 
 
 
-#' R.A. Fishers famous data on sepal length of a species of Iris Setosa
+#' R.A. Fishers famous data on Irises
 #' 
 #' Data for Exercises 1.15 and 5.19
 #' 

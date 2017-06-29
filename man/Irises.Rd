@@ -3,7 +3,7 @@
 \docType{data}
 \name{Irises}
 \alias{Irises}
-\title{R.A. Fishers famous data on sepal length of a species of Iris Setosa}
+\title{R.A. Fishers famous data on Irises}
 \format{A data frame/tibble with 150 observations on the following 5 variables.
 \describe{ 
 \item{sepal_length}{sepal length (in cm)} 
