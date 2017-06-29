@@ -4927,7 +4927,7 @@ NULL
 
 #' R.A. Fishers famous data on Irises
 #' 
-#' Data for Exercises 1.15 and 5.19
+#' Data for Examples 1.15 and 5.19
 #' 
 #' 
 #' @name Irises
@@ -4941,7 +4941,7 @@ NULL
 #' \item{species}{a factor with levels \code{setosa}, \code{versicolor}, and \code{virginica}} 
 #' }
 #' @source Fisher, R. A. (1936) The use of multiple measurements in taxonomic problems. 
-#' \emph{Annals of Eugenics}, \strong{7}, Part II, 179–188.
+#' \emph{Annals of Eugenics}, \strong{7}, Part II, 179-188.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury

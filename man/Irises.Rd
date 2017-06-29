@@ -14,13 +14,13 @@
 }}
 \source{
 Fisher, R. A. (1936) The use of multiple measurements in taxonomic problems. 
-\emph{Annals of Eugenics}, \strong{7}, Part II, 179–188.
+\emph{Annals of Eugenics}, \strong{7}, Part II, 179-188.
 }
 \usage{
 Irises
 }
 \description{
-Data for Exercises 1.15 and 5.19
+Data for Examples 1.15 and 5.19
 }
 \examples{
 
