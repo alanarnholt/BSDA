@@ -9,6 +9,10 @@
 \describe{ 
 \item{price}{daily price returns (in pence) of Abbey National shares} 
 }}
+\source{
+Buckle, D. (1995), Bayesian Inference for Stable Distributions, 
+\emph{Journal of the American Statistical Association}, 90, 605-613.
+}
 \usage{
 Abbey
 }
@@ -20,6 +24,7 @@ Data used in problem 6.39
 qqnorm(Abbey$price)
 qqline(Abbey$price)
 t.test(Abbey$price, mu = 300)
+hist(Abbey$price)
 
 }
 \references{

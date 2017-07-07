@@ -20,6 +20,10 @@ NULL
 #' \describe{ 
 #' \item{price}{daily price returns (in pence) of Abbey National shares} 
 #' }
+#' 
+#' @source Buckle, D. (1995), Bayesian Inference for Stable Distributions, 
+#' \emph{Journal of the American Statistical Association}, 90, 605-613.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -28,6 +32,7 @@ NULL
 #' qqnorm(Abbey$price)
 #' qqline(Abbey$price)
 #' t.test(Abbey$price, mu = 300)
+#' hist(Abbey$price)
 #' 
 "Abbey"
 
@@ -10418,6 +10423,8 @@ NULL
 #' \item{SSN}{a numeric vector} 
 #' \item{year}{a numeric vector} 
 #' }
+#' 
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
