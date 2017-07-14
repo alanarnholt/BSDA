@@ -11,6 +11,10 @@ transfusion}
 \item{age}{age (in years) of patient} 
 \item{group}{a numeric vector}
 }}
+\source{
+Kalbsleich, J. and Lawless, J., (1989), An analysis of the data on transfusion
+related AIDS, \emph{Journal of the American Statistical Association, 84}, 360-372
+}
 \description{
 Data used in Exercise 6.60
 }

@@ -9,6 +9,10 @@
 \item{time}{a numeric vector} 
 \item{eruption}{a factor with levels \code{1} and \code{2}} 
 }}
+\source{
+A. Azzalini and A. Bowman, "A Look at Some Data on the Old Faithful Geyser,"
+\emph{Journal of the Royal Statistical Society}, Series C, \emph{39} (1990), 357-366.
+}
 \usage{
 Faithful
 }

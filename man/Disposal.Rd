@@ -8,6 +8,10 @@
 \describe{ 
 \item{pounds}{pounds of toxic waste per $1000 of shipments of its products} 
 }}
+\source{
+Bureau of the Census, \emph{Reducing Toxins}, Statistical Brief SB/95-3,
+February 1995.
+}
 \usage{
 Disposal
 }

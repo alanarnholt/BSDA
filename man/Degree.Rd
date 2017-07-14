@@ -12,6 +12,9 @@
 \code{Engineering}, and \code{All Fields}} 
 \item{awarded}{a factor with levels \code{1970} and \code{1990}} 
 }}
+\source{
+U.S. Department of Health and Human Services, National Center for Education Statistics
+}
 \usage{
 Degree
 }

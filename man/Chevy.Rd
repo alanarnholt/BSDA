@@ -11,6 +11,9 @@
 \item{frequency}{a factor with levels \code{much better than average}, \code{above average},
 \code{average}, \code{below average}, and \code{much worse than average}} 
 }}
+\source{
+Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995
+}
 \usage{
 Chevy
 }

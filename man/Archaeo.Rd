@@ -9,6 +9,9 @@
 \item{age}{number of years before 1983 - the year the data were obtained}
 \item{phase}{Ceramic Phase numbers} 
 }}
+\source{
+Cunliffe, B. (1984) and Naylor and Smith (1988)
+}
 \usage{
 Archaeo
 }

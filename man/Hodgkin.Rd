@@ -10,6 +10,10 @@
 \code{LP}, \code{MC}, and \code{NS}} 
 \item{response}{a factor with levels \code{Positive}, \code{Partial}. and \code{None}}
 }}
+\source{
+I. Dunsmore, F. Daly, \emph{Statistical Methods, Unit 9, Categorical Data}, 
+Milton Keynes, The Open University, 18
+}
 \usage{
 Hodgkin
 }

@@ -32,6 +32,9 @@ Francisco CA}, \code{Seattle WA}, \code{Spokane WA}, \code{St Louis MO},
 \item{year}{a factor with levels \code{1994} and \code{2000}}
 \item{price}{median house price in dollars} 
 }}
+\source{
+National Association of Realtors
+}
 \usage{
 Homes
 }

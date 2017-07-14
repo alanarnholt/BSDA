@@ -13,7 +13,7 @@
 Gpa
 }
 \description{
-Data for Exercise 2.13
+Data for Example 2.13
 }
 \examples{
 

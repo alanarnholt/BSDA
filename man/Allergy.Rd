@@ -11,6 +11,9 @@
 \item{medication}{a factor with levels \code{seldane-d},
 \code{pseudoephedrine}, and \code{placebo}}
  }}
+\source{
+Marion Merrel Dow, Inc. Kansas City, Mo. 64114
+}
 \usage{
 Allergy
 }

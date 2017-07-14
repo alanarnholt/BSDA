@@ -12,6 +12,9 @@
 \item{elnino}{a factor with levels \code{cold}, \code{neutral}, and
 \code{warm}} 
 }}
+\source{
+National Hurricane Center
+}
 \usage{
 Hurrican
 }

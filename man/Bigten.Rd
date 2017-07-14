@@ -14,6 +14,9 @@
 \item{year}{factor with two levels \code{1984-1985} and \code{1993-1994}}
 \item{status}{factor with two levels \code{athlete} and \code{student}}
 }}
+\source{
+NCAA Graduation Rates Report, 2000
+}
 \usage{
 Bigten
 }

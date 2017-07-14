@@ -8,11 +8,15 @@
 \describe{ 
 \item{cholest}{a numeric vector with cholesterol values} 
 }}
+\source{
+R. D'Agostino, et al., (1990) "A Suggestion for Using Powerful and Informative
+Tests for Normality," \emph{The American Statistician, 44} 316-321
+}
 \usage{
 Framingh
 }
 \description{
-Data for Exercises 1.55, 1.75, 3.69, and 5.60
+Data for Exercises 1.56, 1.75, 3.69, and 5.60
 }
 \examples{
 

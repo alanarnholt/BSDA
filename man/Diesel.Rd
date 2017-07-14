@@ -12,6 +12,10 @@
 \code{Coast}, \code{EastCoast}, \code{Gulf}, \code{LowerAtlantic}, \code{NatAvg},
 \code{NorthEast}, \code{Rocky}, and \code{WesternMountain}}
 }}
+\source{
+Energy Information Administration, National Enerfy Information Center:
+1000 Independence Ave., SW, Washington, D.C., 20585
+}
 \usage{
 Diesel
 }

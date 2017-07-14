@@ -11,6 +11,9 @@
 \item{increase}{percent increase in hourly wage over previous year}
 \item{inflation}{percent inflation rate} 
 }}
+\source{
+Bureau of Labor Statistics
+}
 \usage{
 Inflatio
 }

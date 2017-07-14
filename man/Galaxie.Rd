@@ -8,6 +8,11 @@
 \describe{ 
 \item{velocity}{velocity measured in kilometers per second} 
 }}
+\source{
+K. Roeder, "Density Estimation with Confidence Sets Explained by Superclusters
+and Voids in the Galaxies," \emph{Journal of the American Statistical Association}, 85
+(1990), 617-624
+}
 \usage{
 Galaxie
 }

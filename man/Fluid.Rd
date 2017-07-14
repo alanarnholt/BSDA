@@ -10,6 +10,9 @@ stress}
 \item{kilovolts}{a character variable showing kilowats} 
 \item{time}{breakdown time (in minutes)} 
 }}
+\source{
+E. Soofi, N. Ebrahimi, and M. Habibullah, 1995
+}
 \usage{
 Fluid
 }

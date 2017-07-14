@@ -14,7 +14,7 @@ control and an experimental group}
 Drug
 }
 \description{
-Data for Exercise 7.15
+Data for Example 7.15
 }
 \examples{
 

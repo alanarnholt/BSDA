@@ -21,6 +21,9 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 \item{rate}{a numeric vector}
 }}
+\source{
+Population Reference Bureau.
+}
 \usage{
 Fertility
 }

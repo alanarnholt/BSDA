@@ -22,6 +22,9 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 \item{percent1985}{percent of the population over the age of 65 in 1985} 
 \item{percent1998}{percent of the population over the age of 65 in 1998} 
 }}
+\source{
+U.S. Census Bureau Internet site, February 2000
+}
 \usage{
 Elderly
 }

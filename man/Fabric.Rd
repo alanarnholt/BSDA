@@ -15,7 +15,7 @@ without a softener}
 Fabric
 }
 \description{
-Data for Exercise 7.21
+Data for Example 7.21
 }
 \examples{
 

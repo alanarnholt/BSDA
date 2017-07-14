@@ -22,6 +22,10 @@ Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 \item{year}{a factor with levels \code{1983} and \code{1993}} 
 \item{rate}{crime rate per 100,000 inhabitants} 
 }}
+\source{
+U.S. Department of Justice, Bureau of Justice Statistics, \emph{Sourcebook of
+Criminal Justice Statistics}, 1993
+}
 \usage{
 Crime
 }

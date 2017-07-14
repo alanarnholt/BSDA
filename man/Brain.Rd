@@ -16,6 +16,10 @@ elephant}, \code{Asian Elephant}, \code{Brachiosaurus}, \code{Cat},
 \item{bodyweight}{body weight (in kg)} 
 \item{brainweight}{brain weight (in g)} 
 }}
+\source{
+P. Rousseeuw and A. Leroy, \emph{Robust Regression and Outlier Detection} 
+(New York: Wiley, 1987)
+}
 \usage{
 Brain
 }
