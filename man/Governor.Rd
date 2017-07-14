@@ -22,6 +22,9 @@ Virginia} \code{Wisconsin} \code{Wyoming}}
 \item{year}{a factor indicating year} 
 \item{salary}{a numeric vector with the governor's salary in dollars} 
 }}
+\source{
+\emph{The 2000 World Almanac and Book of Facts}
+}
 \usage{
 Governor
 }

@@ -21,6 +21,9 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 \item{payment}{average monthly payment per person in a family} 
 }}
+\source{
+US Department of Health and Human Services, 1993
+}
 \usage{
 Aid
 }

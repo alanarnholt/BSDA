@@ -10,6 +10,9 @@
 \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
 \item{decade}{a character vector indicating the decade of an aircraft accident} 
 }}
+\source{
+2000 \emph{World Almanac and Book of Facts}
+}
 \usage{
 Airdisasters
 }

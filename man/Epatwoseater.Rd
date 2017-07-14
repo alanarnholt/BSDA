@@ -27,7 +27,9 @@ ROADSTER} \code{Z8}}
 \item{cty}{a numeric vector} 
 \item{hwy}{a numeric vector} 
 \item{cmb}{a numeric vector} 
- }}
+ }
+ 
+ @source Environmental Protection Agency}
 \usage{
 Epatwoseater
 }

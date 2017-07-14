@@ -11,11 +11,14 @@
 dealer}, and \code{tire store}} 
 \item{passed}{a factor with levels \code{less than 70\%}, \code{between 70\% and 84\%}, and \code{more than 85\%}}
 }}
+\source{
+\emph{The Charlotte Observer}, December 13, 1992
+}
 \usage{
 Inspect
 }
 \description{
-Data for Exercise 5.89
+Data for Exercise 8.59
 }
 \examples{
 

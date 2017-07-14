@@ -9,6 +9,9 @@ major lake in the Rocky Mountains}
 \describe{ 
 \item{thick}{varve thickness in millimeters} 
 }}
+\source{
+J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd Ed., Jon Wiley and Sons, New York.
+}
 \usage{
 Grnriv2
 }

@@ -8,8 +8,12 @@ hospitals}
 \format{A data frame/tibble  with 59 observations on the following two variables.
 \describe{ 
 \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
-\item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
+\item{region}{a vector classifying each hospital as rural, regional, or metropolitan} 
 }}
+\source{
+\emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals}
+(August 1994), North Carolina Medical Database Commission, Department of Insurance
+}
 \usage{
 Appendec
 }

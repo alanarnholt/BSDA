@@ -13,6 +13,10 @@ households}
 \item{location}{a factor with levels \code{American Indians on reservation} \code{All U.S. households},
  and \code{American Indians not on reservations}} 
 }}
+\source{
+Bureau of the Census, \emph{Housing of the American Indians on Reservations},
+Statistical Brief 95-11, April 1995
+}
 \usage{
 Heat
 }

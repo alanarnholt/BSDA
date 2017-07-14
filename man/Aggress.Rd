@@ -6,7 +6,7 @@
 \title{Agressive tendency scores for a group of teenage members of a street gang}
 \format{A data frame/tibble with 28 observations on the following variable.
 \describe{ 
-\item{aggres}{measure of aggresive tendency} 
+\item{aggres}{measure of aggresive tendency, ranging from 10-50} 
 }}
 \usage{
 Aggress

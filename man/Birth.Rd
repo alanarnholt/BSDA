@@ -22,11 +22,15 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \item{rate}{live birth rates per 1000 population} 
 \item{year}{a factor with levels \code{1990} and \code{1998}} 
 }}
+\source{
+\emph{National Vital Statistics Report, 48}, March 28, 2000, National
+Center for Health Statistics
+}
 \usage{
 Birth
 }
 \description{
-Data for Exercise 1.10
+Data for Example 1.10
 }
 \examples{
 

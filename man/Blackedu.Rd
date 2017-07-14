@@ -11,6 +11,9 @@
 \code{High school graudate}, \code{Some college}, \code{Bachelor}'\code{s degree}, and
 \code{Graduate degree}} 
 }}
+\source{
+Bureau of Census data
+}
 \usage{
 Blackedu
 }

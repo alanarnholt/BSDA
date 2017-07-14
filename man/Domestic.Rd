@@ -10,6 +10,9 @@
 \code{25-34}, \code{35-49}, and \code{50-64}} 
 \item{rate}{rate of domestic violence per 1000 women} 
 }}
+\source{
+U.S. Department of Justice.
+}
 \usage{
 Domestic
 }

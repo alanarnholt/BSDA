@@ -78,6 +78,10 @@ NULL
 #' \item{year}{a factor with levels \code{1992} and \code{1999}} 
 #' \item{number}{number of reported crimes} 
 #' }
+#' 
+#' @source \emph{Uniform Crime Reports}, US Dept. of Justice.
+#' 
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -272,7 +276,7 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 28 observations on the following variable.
 #' \describe{ 
-#' \item{aggres}{measure of aggresive tendency} 
+#' \item{aggres}{measure of aggresive tendency, ranging from 10-50} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -315,6 +319,9 @@ NULL
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 #' \item{payment}{average monthly payment per person in a family} 
 #' }
+#' 
+#' @source US Department of Health and Human Services, 1993
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -345,6 +352,10 @@ NULL
 #' \item{age}{age (in years) of patient} 
 #' \item{group}{a numeric vector}
 #' }
+#' 
+#' @source Kalbsleich, J. and Lawless, J., (1989), An analysis of the data on transfusion
+#' related AIDS, \emph{Journal of the American Statistical Association, 84}, 360-372
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -379,6 +390,9 @@ NULL
 #' \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
 #' \item{decade}{a character vector indicating the decade of an aircraft accident} 
 #' }
+#' 
+#' @source 2000 \emph{World Almanac and Book of Facts}
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -400,7 +414,7 @@ NULL
 
 #' Percentage of on-time arrivals and number of complaints for 11 airlines
 #' 
-#' Data for Exercise 2.9
+#' Data for Example 2.9
 #' 
 #' 
 #' @name Airline
@@ -412,8 +426,11 @@ NULL
 #' \code{Northwest} \code{Pan Am} \code{Southwest} \code{TWA} \code{United}
 #' \code{USAir}} 
 #' \item{ontime}{a numeric vector}
-#' \item{complaints}{a numeric vector} 
+#' \item{complaints}{complaints per 1000 passengers} 
 #' }
+#' 
+#' @source Transportation Department
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -468,6 +485,9 @@ NULL
 #' \item{medication}{a factor with levels \code{seldane-d},
 #' \code{pseudoephedrine}, and \code{placebo}}
 #'  }
+#'  
+#' @source Marion Merrel Dow, Inc. Kansas City, Mo. 64114
+#'  
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -584,6 +604,9 @@ NULL
 #' \describe{ 
 #' \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 #' }
+#' 
+#' @source North Carolina Medical Database Commission, August 1994
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -610,8 +633,12 @@ NULL
 #' @format A data frame/tibble  with 59 observations on the following two variables.
 #' \describe{ 
 #' \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
-#' \item{region}{a numeric vector classifying each hospital (1 = rural), (2 = regional), (3 = metropolitan)} 
+#' \item{region}{a vector classifying each hospital as rural, regional, or metropolitan} 
 #' }
+#' 
+#' @source \emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals}
+#' (August 1994), North Carolina Medical Database Commission, Department of Insurance
+#'    
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -667,6 +694,9 @@ NULL
 #' \item{age}{number of years before 1983 - the year the data were obtained}
 #' \item{phase}{Ceramic Phase numbers} 
 #' }
+#' 
+#' @source Cunliffe, B. (1984) and Naylor and Smith (1988)
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -946,6 +976,9 @@ NULL
 #' \item{year}{factor with two levels \code{1984-1985} and \code{1993-1994}}
 #' \item{status}{factor with two levels \code{athlete} and \code{student}}
 #' }
+#' 
+#' @source NCAA Graduation Rates Report, 2000
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -991,7 +1024,7 @@ NULL
 
 #' Live birth rates in 1990 and 1998 for all states
 #' 
-#' Data for Exercise 1.10
+#' Data for Example 1.10
 #' 
 #' 
 #' @name Birth
@@ -1014,6 +1047,10 @@ NULL
 #' \item{rate}{live birth rates per 1000 population} 
 #' \item{year}{a factor with levels \code{1990} and \code{1998}} 
 #' }
+#' 
+#' @source \emph{National Vital Statistics Report, 48}, March 28, 2000, National
+#' Center for Health Statistics
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -1048,6 +1085,9 @@ NULL
 #' \code{High school graudate}, \code{Some college}, \code{Bachelor}'\code{s degree}, and
 #' \code{Graduate degree}} 
 #' }
+#' 
+#' @source Bureau of Census data
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -1221,6 +1261,10 @@ NULL
 #' \item{bodyweight}{body weight (in kg)} 
 #' \item{brainweight}{brain weight (in g)} 
 #' }
+#' 
+#' @source P. Rousseeuw and A. Leroy, \emph{Robust Regression and Outlier Detection} 
+#' (New York: Wiley, 1987)
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -1278,6 +1322,9 @@ NULL
 #' \code{Saturn SL2}, \code{Subaru Legacy}, and \code{Toyota Camry}}
 #' \item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
 #' }
+#' 
+#' @source Insurance Institute of Highway Safety
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -1340,6 +1387,10 @@ NULL
 #' County}}
 #' \item{charge}{median charge for coronary bypass} 
 #' }
+#' 
+#' @source \emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals}
+#' (August 1994), North Carolina Medical Database Commission, Department of Insurance
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -1637,6 +1688,9 @@ NULL
 #' \item{frequency}{a factor with levels \code{much better than average}, \code{above average},
 #' \code{average}, \code{below average}, and \code{much worse than average}} 
 #' }
+#' 
+#' @source Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -1975,6 +2029,9 @@ NULL
 #' \item{year}{year}
 #' \item{time}{commute times}
 #' }
+#' 
+#' @source Federal Highway Administration.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2000,7 +2057,7 @@ NULL
 
 #' Tennessee self concept scale scores for a group of teenage boys
 #' 
-#' Data for Exercise 16.8 and 1.82
+#' Data for Exercise 1.68 and 1.82
 #' 
 #' 
 #' @name Concept
@@ -2031,12 +2088,12 @@ NULL
 
 #' Compressive strength of concrete blocks made by two different methods
 #' 
-#' Data for Exercise 7.17
+#' Data for Example 7.17
 #' 
 #' 
 #' @name Concrete
 #' @docType data
-#' @format A data frame/tibble  with 20 observations on the following 2twovariables.
+#' @format A data frame/tibble  with 20 observations on the following 2 variables.
 #' \describe{ 
 #' \item{strength}{comprehensive strength (in pounds per square inch)} 
 #' \item{method}{factor with levels \code{new} and \code{old} indicating the 
@@ -2151,6 +2208,9 @@ NULL
 #' \item{year}{year} 
 #' \item{cpi}{consumer price index} 
 #' }
+#' 
+#' @source Bureau of Labor Statistics
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2190,6 +2250,10 @@ NULL
 #' \item{year}{a factor with levels \code{1983} and \code{1993}} 
 #' \item{rate}{crime rate per 100,000 inhabitants} 
 #' }
+#' 
+#' @source U.S. Department of Justice, Bureau of Justice Statistics, \emph{Sourcebook of
+#' Criminal Justice Statistics}, 1993
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2216,6 +2280,10 @@ NULL
 #' \item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
 #' \item{self}{height of plant (in inches) after a fixed period of time when self-fertilized}
 #' }
+#' 
+#' @source Darwin, C. (1876) \emph{The Effect of Cross- and Self-Fertilization in the 
+#' Vegetable Kingdom}, 2nd edition, London.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2307,6 +2375,9 @@ NULL
 #' \code{Engineering}, and \code{All Fields}} 
 #' \item{awarded}{a factor with levels \code{1970} and \code{1990}} 
 #' }
+#' 
+#' @source U.S. Department of Health and Human Services, National Center for Education Statistics
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2335,6 +2406,7 @@ NULL
 #' \item{delay}{the delay time (in minutes) for 80 randomly selected flights}
 #' \item{carrier}{a factor with levels \code{A}, \code{B}, \code{C}, and \code{D}} 
 #' }
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2415,6 +2487,9 @@ NULL
 #' \code{Asian}, \code{Latino}, and \code{White}} 
 #' \item{college}{a factor with levels \code{Two-year} and \code{Four-year}}
 #' }
+#' 
+#' @source \emph{Research in Development Education} (1994), V. 11, 2.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2443,6 +2518,9 @@ NULL
 #' \describe{ 
 #' \item{score}{first exam score} 
 #' }
+#' 
+#' @source Data provided by Dr. Anita Kitchens
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2504,6 +2582,10 @@ NULL
 #' \code{Coast}, \code{EastCoast}, \code{Gulf}, \code{LowerAtlantic}, \code{NatAvg},
 #' \code{NorthEast}, \code{Rocky}, and \code{WesternMountain}}
 #' }
+#' 
+#' @source Energy Information Administration, National Enerfy Information Center:
+#' 1000 Independence Ave., SW, Washington, D.C., 20585
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2546,6 +2628,9 @@ NULL
 #' \item{number}{total number of tickets} 
 #' \item{rate}{number of tickets per vehicle per month} 
 #' }
+#' 
+#' @source \emph{Time}, November 8, 1993. Figures are from January to June 1993
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2588,6 +2673,10 @@ NULL
 #' \describe{ 
 #' \item{pounds}{pounds of toxic waste per $1000 of shipments of its products} 
 #' }
+#' 
+#' @source Bureau of the Census, \emph{Reducing Toxins}, Statistical Brief SB/95-3,
+#' February 1995.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2622,6 +2711,9 @@ NULL
 #' \item{year}{a factor with levels \code{1992}, \code{1993}, \code{1997}, 
 #' and \code{1998}} 
 #' }
+#' 
+#' @source \emph{The World Almanac and Book of Facts}, 2000
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2654,6 +2746,9 @@ NULL
 #' \code{25-34}, \code{35-49}, and \code{50-64}} 
 #' \item{rate}{rate of domestic violence per 1000 women} 
 #' }
+#' 
+#' @source U.S. Department of Justice.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2685,6 +2780,10 @@ NULL
 #' \item{dbh}{dopamine b-hydroxylase activity (units are nmol/(ml)(h)/(mg) of protein)} 
 #' \item{group}{a factor with levels \code{nonpsychotic} and \code{psychotic}} 
 #' }
+#' 
+#' @source D.E. Sternberg, D.P. Van Kammen, and W.E. Bunney, "Schizophrenia: Dopamine
+#' b-Hydroxylase Activity and Treatment Respsonse," \emph{Science, 216} (1982), 1423 - 1425
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2760,7 +2859,7 @@ NULL
 #' Number of trials to master a task for a group of 28 subjects assigned to a
 #' control and an experimental group
 #' 
-#' Data for Exercise 7.15
+#' Data for Example 7.15
 #' 
 #' 
 #' @name Drug
@@ -2829,6 +2928,10 @@ NULL
 #' \item{year}{year seimic activity recorded} 
 #' \item{severity}{annual incidence of sever earthquakes} 
 #' }
+#' 
+#' @source Quenoille, M.H. (1952), \emph{Associated Measurements}, Butterworth, London.
+#' p 279.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -2938,6 +3041,9 @@ NULL
 #' \item{percent1985}{percent of the population over the age of 65 in 1985} 
 #' \item{percent1998}{percent of the population over the age of 65 in 1998} 
 #' }
+#' 
+#' @source U.S. Census Bureau Internet site, February 2000
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3063,6 +3169,9 @@ NULL
 #' \item{hwy}{a numeric vector} 
 #' \item{cmb}{a numeric vector} 
 #' }
+#' 
+#' @source EPA data
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3108,6 +3217,9 @@ NULL
 #' \item{hwy}{a numeric vector} 
 #' \item{cmb}{a numeric vector} 
 #'  }
+#'  
+#'  @source Environmental Protection Agency
+#'  
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3175,7 +3287,7 @@ NULL
 #' Measures of softness of 10 different clothing garments washed with and
 #' without a softener
 #' 
-#' Data for Exercise 7.21
+#' Data for Example 7.21
 #' 
 #' 
 #' @name Fabric
@@ -3218,6 +3330,10 @@ NULL
 #' \item{time}{a numeric vector} 
 #' \item{eruption}{a factor with levels \code{1} and \code{2}} 
 #' }
+#' 
+#' @source A. Azzalini and A. Bowman, "A Look at Some Data on the Old Faithful Geyser,"
+#' \emph{Journal of the Royal Statistical Society}, Series C, \emph{39} (1990), 357-366.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3357,6 +3473,9 @@ NULL
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
 #' \item{rate}{a numeric vector}
 #' }
+#' 
+#' @source Population Reference Bureau.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3408,6 +3527,10 @@ NULL
 #' \item{codend}{a character variable with values \code{smallmesh} and \code{largemesh} } 
 #' \item{length}{length of the fish measured in centimeters} 
 #' }
+#' 
+#' @source R. Millar, "Estimating the Size - Selectivity of Fishing Gear by Conditioning
+#' on the Total Catch," \emph{Journal of the American Statistical Associtaion, 87} (1992), 962 - 968
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3525,6 +3648,8 @@ NULL
 #' \item{time}{breakdown time (in minutes)} 
 #' }
 #' 
+#' @source E. Soofi, N. Ebrahimi, and M. Habibullah, 1995
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3559,6 +3684,9 @@ NULL
 #' \describe{ 
 #' \item{expenditure}{a numeric vector recording annual food expenditure (in dollars) in the state of Ohio.} 
 #' }
+#' 
+#' @source Bureau of Labor Statistics
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3574,7 +3702,7 @@ NULL
 
 #' Cholesterol values of 62 subjects in the Framingham Heart Study
 #' 
-#' Data for Exercises 1.55, 1.75, 3.69, and 5.60
+#' Data for Exercises 1.56, 1.75, 3.69, and 5.60
 #' 
 #' 
 #' @name Framingh
@@ -3583,6 +3711,10 @@ NULL
 #' \describe{ 
 #' \item{cholest}{a numeric vector with cholesterol values} 
 #' }
+#' 
+#' @source R. D'Agostino, et al., (1990) "A Suggestion for Using Powerful and Informative
+#' Tests for Normality," \emph{The American Statistician, 44} 316-321
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3676,6 +3808,11 @@ NULL
 #' \describe{ 
 #' \item{velocity}{velocity measured in kilometers per second} 
 #' }
+#' 
+#' @source K. Roeder, "Density Estimation with Confidence Sets Explained by Superclusters
+#' and Voids in the Galaxies," \emph{Journal of the American Statistical Association}, 85
+#' (1990), 617-624
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3705,6 +3842,10 @@ NULL
 #' \code{Age: 50-older}, \code{Religion: Protestant}, and \code{Religion: Catholic}} 
 #' \item{opinion}{a factor with levels \code{Criminal}, \code{Not Criminal}, and \code{No Opinion}}
 #' }
+#' 
+#' @source George H. Gallup \emph{The Gallup Opinion Index Report No. 179} (Princeton, NJ:
+#' The Gallup Poll, July 1980), p. 15
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3855,6 +3996,9 @@ NULL
 #' \item{year}{a factor indicating year} 
 #' \item{salary}{a numeric vector with the governor's salary in dollars} 
 #' }
+#' 
+#' @source \emph{The 2000 World Almanac and Book of Facts}
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -3877,7 +4021,7 @@ NULL
 
 #' High school GPA versus college GPA
 #' 
-#' Data for Exercise 2.13
+#' Data for Example 2.13
 #' 
 #' 
 #' @name Gpa
@@ -4014,6 +4158,9 @@ NULL
 #' \describe{ 
 #' \item{thick}{varve thickness in millimeters} 
 #' }
+#' 
+#' @source J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd Ed., Jon Wiley and Sons, New York.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4185,6 +4332,10 @@ NULL
 #' \describe{ 
 #' \item{receipt}{a numeric vector} 
 #' }
+#' 
+#' @source J.C. Miller and J.N. Miller, (1988), \emph{Statistics for Analytical Chemistry}, 2nd Ed. 
+#' (New York: Halsted Press)
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4211,6 +4362,10 @@ NULL
 #' \item{tensile}{tensile strength of kraft paper (in pounds per square inch)}
 #' \item{hardwood}{percent of hardwood in the batch of pulp that was used to produce the paper} 
 #' }
+#' 
+#' @source G. Joglekar, et al., "Lack-of-Fit Testing When Replicates Are Not Available,"
+#' \emph{The American Statistician}, 43(3), (1989), 135-143
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4240,6 +4395,10 @@ NULL
 #' \item{location}{a factor with levels \code{American Indians on reservation} \code{All U.S. households},
 #'  and \code{American Indians not on reservations}} 
 #' }
+#' 
+#' @source Bureau of the Census, \emph{Housing of the American Indians on Reservations},
+#' Statistical Brief 95-11, April 1995
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4302,6 +4461,10 @@ NULL
 #' \code{LP}, \code{MC}, and \code{NS}} 
 #' \item{response}{a factor with levels \code{Positive}, \code{Partial}. and \code{None}}
 #' }
+#' 
+#' @source I. Dunsmore, F. Daly, \emph{Statistical Methods, Unit 9, Categorical Data}, 
+#' Milton Keynes, The Open University, 18
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4354,6 +4517,9 @@ NULL
 #' \item{year}{a factor with levels \code{1994} and \code{2000}}
 #' \item{price}{median house price in dollars} 
 #' }
+#' 
+#' @source National Association of Realtors
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4481,6 +4647,9 @@ NULL
 #' \item{year}{a factor with levels \code{1984} and \code{1993}} 
 #' \item{price}{median house price} 
 #' }
+#' 
+#' @source National Association of Realtors
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4516,6 +4685,9 @@ NULL
 #' \item{elnino}{a factor with levels \code{cold}, \code{neutral}, and
 #' \code{warm}} 
 #' }
+#' 
+#' @source National Hurricane Center
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4551,6 +4723,10 @@ NULL
 #' \item{Newfoundland}{number of icebergs sighted south of Newfoundland}
 #' \item{Grand Banks}{number of icebergs sighted south of Grand Banks} 
 #' }
+#' 
+#' @source N. Shaw, \emph{Manual of Meteorology}, Vol. 2 (London: Cambridge University Press 1942),
+#' 7; and F. Mosteller and J. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison - Wesley, 1977)
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4589,6 +4765,9 @@ NULL
 #' \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 #' \item{percent_change}{percent change in income from first quarter to the second quarter of 2000} 
 #' }
+#' 
+#' @source US Department of Commerce
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4690,6 +4869,9 @@ NULL
 #' \item{year}{the year of the race} 
 #' \item{speed}{the winners average speed} 
 #' }
+#' 
+#' @source The World Almanac and Book of Facts, 2000, p. 1004
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4760,6 +4942,9 @@ NULL
 #' \item{increase}{percent increase in hourly wage over previous year}
 #' \item{inflation}{percent inflation rate} 
 #' }
+#' 
+#' @source Bureau of Labor Statistics
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4815,6 +5000,10 @@ NULL
 #' \code{black}, and \code{hispanic}} 
 #' \item{drug}{a factor with levels \code{heroin}, \code{crack}, \code{cocaine}, and \code{marijuana}}
 #' }
+#' 
+#' @source C. Wolf Harlow (1994), \emph{Comparing Federal and State Prison Inmates},
+#' NCJ-145864, U.S. Department of Justice, Bureau of Justice Statistics
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
@@ -4833,7 +5022,7 @@ NULL
 
 #' Percent of vehicles passing inspection by type inspection station
 #' 
-#' Data for Exercise 5.89
+#' Data for Exercise 8.59
 #' 
 #' 
 #' @name Inspect
@@ -4845,6 +5034,9 @@ NULL
 #' dealer}, and \code{tire store}} 
 #' \item{passed}{a factor with levels \code{less than 70\%}, \code{between 70\% and 84\%}, and \code{more than 85\%}}
 #' }
+#' 
+#' @source \emph{The Charlotte Observer}, December 13, 1992
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets

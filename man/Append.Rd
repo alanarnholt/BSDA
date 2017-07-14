@@ -8,6 +8,9 @@
 \describe{ 
 \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 }}
+\source{
+North Carolina Medical Database Commission, August 1994
+}
 \usage{
 Append
 }

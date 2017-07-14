@@ -21,6 +21,9 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 \item{percent_change}{percent change in income from first quarter to the second quarter of 2000} 
 }}
+\source{
+US Department of Commerce
+}
 \usage{
 Income
 }

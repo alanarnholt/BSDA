@@ -9,6 +9,9 @@ semester 1995}
 \describe{ 
 \item{score}{first exam score} 
 }}
+\source{
+Data provided by Dr. Anita Kitchens
+}
 \usage{
 Devmath
 }

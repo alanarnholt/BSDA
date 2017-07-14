@@ -12,6 +12,9 @@
 \item{number}{total number of tickets} 
 \item{rate}{number of tickets per vehicle per month} 
 }}
+\source{
+\emph{Time}, November 8, 1993. Figures are from January to June 1993
+}
 \usage{
 Diplomat
 }

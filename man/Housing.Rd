@@ -19,6 +19,9 @@ Angeles} \code{Louisville} \code{Memphis} \code{Miami} \code{Milwaukee}
 \item{year}{a factor with levels \code{1984} and \code{1993}} 
 \item{price}{median house price} 
 }}
+\source{
+National Association of Realtors
+}
 \usage{
 Housing
 }

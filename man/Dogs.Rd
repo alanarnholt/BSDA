@@ -16,6 +16,9 @@
 \item{year}{a factor with levels \code{1992}, \code{1993}, \code{1997}, 
 and \code{1998}} 
 }}
+\source{
+\emph{The World Almanac and Book of Facts}, 2000
+}
 \usage{
 Dogs
 }

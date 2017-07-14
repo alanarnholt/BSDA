@@ -11,13 +11,16 @@
 \code{Northwest} \code{Pan Am} \code{Southwest} \code{TWA} \code{United}
 \code{USAir}} 
 \item{ontime}{a numeric vector}
-\item{complaints}{a numeric vector} 
+\item{complaints}{complaints per 1000 passengers} 
 }}
+\source{
+Transportation Department
+}
 \usage{
 Airline
 }
 \description{
-Data for Exercise 2.9
+Data for Example 2.9
 }
 \examples{
 

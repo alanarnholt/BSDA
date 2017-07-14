@@ -8,6 +8,10 @@
 \describe{ 
 \item{receipt}{a numeric vector} 
 }}
+\source{
+J.C. Miller and J.N. Miller, (1988), \emph{Statistics for Analytical Chemistry}, 2nd Ed. 
+(New York: Halsted Press)
+}
 \usage{
 Hardware
 }

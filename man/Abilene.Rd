@@ -12,6 +12,9 @@ theft}, \code{Murder}, \code{Robbery}, and \code{Vehicle theft}.}
 \item{year}{a factor with levels \code{1992} and \code{1999}} 
 \item{number}{number of reported crimes} 
 }}
+\source{
+\emph{Uniform Crime Reports}, US Dept. of Justice.
+}
 \usage{
 Abilene
 }

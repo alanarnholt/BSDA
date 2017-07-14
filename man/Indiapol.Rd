@@ -9,6 +9,9 @@
 \item{year}{the year of the race} 
 \item{speed}{the winners average speed} 
 }}
+\source{
+The World Almanac and Book of Facts, 2000, p. 1004
+}
 \usage{
 Indiapol
 }

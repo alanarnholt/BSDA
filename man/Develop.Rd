@@ -11,6 +11,9 @@
 \code{Asian}, \code{Latino}, and \code{White}} 
 \item{college}{a factor with levels \code{Two-year} and \code{Four-year}}
 }}
+\source{
+\emph{Research in Development Education} (1994), V. 11, 2.
+}
 \usage{
 Develop
 }

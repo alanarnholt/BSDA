@@ -15,6 +15,10 @@ Baptist}, \code{New Hanover Regional}, \code{Pitt Co. Memorial},
 County}}
 \item{charge}{median charge for coronary bypass} 
 }}
+\source{
+\emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals}
+(August 1994), North Carolina Medical Database Commission, Department of Insurance
+}
 \usage{
 Bypass
 }

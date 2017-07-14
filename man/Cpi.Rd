@@ -9,6 +9,9 @@
 \item{year}{year} 
 \item{cpi}{consumer price index} 
 }}
+\source{
+Bureau of Labor Statistics
+}
 \usage{
 Cpi
 }

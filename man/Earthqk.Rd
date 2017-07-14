@@ -9,6 +9,10 @@
 \item{year}{year seimic activity recorded} 
 \item{severity}{annual incidence of sever earthquakes} 
 }}
+\source{
+Quenoille, M.H. (1952), \emph{Associated Measurements}, Butterworth, London.
+p 279.
+}
 \usage{
 Earthqk
 }

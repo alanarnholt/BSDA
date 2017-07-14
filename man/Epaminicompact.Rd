@@ -24,6 +24,9 @@ CONVERTIBLE} \code{TT COUPE} \code{TT COUPE QUATTRO}}
 \item{hwy}{a numeric vector} 
 \item{cmb}{a numeric vector} 
 }}
+\source{
+EPA data
+}
 \usage{
 Epaminicompact
 }

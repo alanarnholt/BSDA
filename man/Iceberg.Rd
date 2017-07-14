@@ -11,6 +11,10 @@ Grand Banks in 1920}
 \item{Newfoundland}{number of icebergs sighted south of Newfoundland}
 \item{Grand Banks}{number of icebergs sighted south of Grand Banks} 
 }}
+\source{
+N. Shaw, \emph{Manual of Meteorology}, Vol. 2 (London: Cambridge University Press 1942),
+7; and F. Mosteller and J. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison - Wesley, 1977)
+}
 \usage{
 Iceberg
 }

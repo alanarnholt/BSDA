@@ -12,7 +12,7 @@
 Concept
 }
 \description{
-Data for Exercise 16.8 and 1.82
+Data for Exercise 1.68 and 1.82
 }
 \examples{
 

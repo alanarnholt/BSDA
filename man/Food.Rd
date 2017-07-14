@@ -8,6 +8,9 @@
 \describe{ 
 \item{expenditure}{a numeric vector recording annual food expenditure (in dollars) in the state of Ohio.} 
 }}
+\source{
+Bureau of Labor Statistics
+}
 \usage{
 Food
 }

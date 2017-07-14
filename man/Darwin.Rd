@@ -10,6 +10,10 @@
 \item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
 \item{self}{height of plant (in inches) after a fixed period of time when self-fertilized}
 }}
+\source{
+Darwin, C. (1876) \emph{The Effect of Cross- and Self-Fertilization in the 
+Vegetable Kingdom}, 2nd edition, London.
+}
 \usage{
 Darwin
 }

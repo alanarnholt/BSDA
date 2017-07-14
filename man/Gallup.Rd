@@ -13,6 +13,10 @@ conducted in 1980}
 \code{Age: 50-older}, \code{Religion: Protestant}, and \code{Religion: Catholic}} 
 \item{opinion}{a factor with levels \code{Criminal}, \code{Not Criminal}, and \code{No Opinion}}
 }}
+\source{
+George H. Gallup \emph{The Gallup Opinion Index Report No. 179} (Princeton, NJ:
+The Gallup Poll, July 1980), p. 15
+}
 \usage{
 Gallup
 }
