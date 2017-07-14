@@ -3528,8 +3528,8 @@ NULL
 #' \item{length}{length of the fish measured in centimeters} 
 #' }
 #' 
-#' @source R. Millar, "Estimating the Size - Selectivity of Fishing Gear by Conditioning
-#' on the Total Catch," \emph{Journal of the American Statistical Associtaion, 87} (1992), 962 - 968
+#' @source R. Millar, \dQuote{Estimating the Size - Selectivity of Fishing Gear by Conditioning
+#' on the Total Catch,} \emph{Journal of the American Statistical Association, 87} (1992), 962 - 968
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury

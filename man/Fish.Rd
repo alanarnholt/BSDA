@@ -10,8 +10,8 @@
 \item{length}{length of the fish measured in centimeters} 
 }}
 \source{
-R. Millar, "Estimating the Size - Selectivity of Fishing Gear by Conditioning
-on the Total Catch," \emph{Journal of the American Statistical Associtaion, 87} (1992), 962 - 968
+R. Millar, \dQuote{Estimating the Size - Selectivity of Fishing Gear by Conditioning
+on the Total Catch,} \emph{Journal of the American Statistical Association, 87} (1992), 962 - 968
 }
 \usage{
 Fish
