@@ -3,7 +3,7 @@
 \docType{data}
 \name{Bus}
 \alias{Bus}
-\title{Attendance of bus drivers versus attendance}
+\title{Attendance of bus drivers versus shift}
 \format{A data frame/tibble  with 29363 observations on two variables.
 \describe{ 
 \item{attendance}{a factor with levels \code{absent} and

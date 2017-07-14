@@ -1341,7 +1341,7 @@ NULL
 
 
 
-#' Attendance of bus drivers versus attendance
+#' Attendance of bus drivers versus shift
 #' 
 #' Data for Exercise 8.25
 #' 
