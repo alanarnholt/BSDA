@@ -106,7 +106,7 @@ Duxbury</p>
 <span class='fu'>str</span>(<span class='no'>Nervous</span>)</div><div class='output co'>#&gt; 'data.frame':	25 obs. of  2 variables:
 #&gt;  $ react: int  3 5 4 6 4 5 7 3 4 5 ...
 #&gt;  $ drug : int  1 1 1 1 1 2 2 2 2 2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Nervous</span>)
-<span class='fu'>boxplot</span>(<span class='no'>react</span>~<span class='no'>drug</span>)</div><div class='img'><img src='Nervous-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>react</span>~<span class='fu'>as.factor</span>(<span class='no'>drug</span>)))</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='fu'>boxplot</span>(<span class='no'>react</span>~<span class='no'>drug</span>)</div><div class='img'><img src='Nervous-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>react</span>~<span class='fu'>as.factor</span>(<span class='no'>drug</span>)))</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: react
 #&gt;                 Df Sum Sq Mean Sq F value    Pr(&gt;F)    

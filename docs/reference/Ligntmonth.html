@@ -87,11 +87,12 @@
     <p>Data for Exercise 2.6</p>
     
 
+    <pre class="usage"><span class='no'>Ligntmonth</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 12 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>Month</dt><dd><p>a factor with levels <code>1/01/2000</code>
+    <p>A data frame/tibble with 12 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>month</dt><dd><p>a factor with levels <code>1/01/2000</code>
 <code>10/01/2000</code> <code>11/01/2000</code> <code>12/01/2000</code> <code>2/01/2000</code>
 <code>3/01/2000</code> <code>4/01/2000</code> <code>5/01/2000</code> <code>6/01/2000</code>
 <code>7/01/2000</code> <code>8/01/2000</code> <code>9/01/2000</code></p></dd> 
@@ -99,6 +100,11 @@
 <dt>injuries</dt><dd><p>a numeric vector</p></dd>
 <dt>damage</dt><dd><p>a numeric vector</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><em>Lighting Fatalities, Injuries and Damage Reports in the United States</em>,
+1959-1994, NOAA Technical Memorandum NWS SR-193, Dept. of Commerce.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -108,18 +114,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Ligntmonth</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  4 variables:
-#&gt;  $ Month   : Factor w/ 12 levels "1/01/2000","10/01/2000",..: 1 5 6 7 8 9 10 11 12 2 ...
-#&gt;  $ deaths  : int  5 6 40 97 347 690 934 687 281 51 ...
-#&gt;  $ injuries: int  28 29 158 288 910 1970 2960 2345 869 202 ...
-#&gt;  $ damage  : int  102 150 425 996 2169 3935 5155 4280 1755 514 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Ligntmonth</span>)
-<span class='fu'>plot</span>(<span class='no'>damage</span>,<span class='no'>deaths</span>)</div><div class='img'><img src='Ligntmonth-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Ligntmonth</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>deaths</span> ~ <span class='no'>damage</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Ligntmonth</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>=</span> <span class='fu'>lm</span>(<span class='no'>deaths</span> ~ <span class='no'>damage</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Ligntmonth</span>)
+<span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Ligntmonth-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

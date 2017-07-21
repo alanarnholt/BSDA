@@ -87,16 +87,20 @@
     <p>Data for Exercise 10.18</p>
     
 
+    <pre class="usage"><span class='no'>Laminect</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 46 observations on the following 5 variables.</p><dl class='dl-horizontal'>
- <dt>cost</dt><dd><p>a numeric vector</p></dd> 
- <dt>class</dt><dd><p>a numeric vector</p></dd> 
- <dt>Rural</dt><dd><p>a numeric vector</p></dd>
- <dt>Regional</dt><dd><p>a numeric vector</p></dd> 
- <dt>Metropol</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 46 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+ <dt>area</dt><dd><p>a character vector indicating the area of the hospital with <code>Rural</code>, <code>Regional</code>,
+ and <code>Metropol</code></p></dd> 
+ <dt>cost</dt><dd><p>a numeric vector indicating cost of a laminectomy</p></dd> 
  </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><em>Consumer's Guide to Hospitalization Charges in North Carolina Hospitals</em> (August 1994),
+North Carolina Medical Database Commission, Department of Insurance</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -106,25 +110,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Laminect</span>)</div><div class='output co'>#&gt; 'data.frame':	46 obs. of  5 variables:
-#&gt;  $ cost    : int  7455 5223 4142 6278 9158 5807 7733 5782 8892 4288 ...
-#&gt;  $ class   : int  2 1 2 2 2 3 2 1 1 2 ...
-#&gt;  $ Rural   : int  5223 5782 8892 7405 8460 4353 9296 5227 6535 10238 ...
-#&gt;  $ Regional: int  7455 4142 6278 9158 7733 4288 7054 8308 11391 3339 ...
-#&gt;  $ Metropol: int  5807 6943 4925 4556 2696 6177 5477 5656 5621 4324 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Laminect</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Rural</span></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>cost</span>~<span class='no'>class</span>)</div><div class='img'><img src='Laminect-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>cost</span>~<span class='fu'>as.factor</span>(<span class='no'>class</span>)))</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='fu'>boxplot</span>(<span class='no'>cost</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Laminect</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>topo.colors</span>(<span class='fl'>3</span>))</div><div class='img'><img src='Laminect-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>cost</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Laminect</span>))</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: cost
-#&gt;                  Df    Sum Sq Mean Sq F value Pr(&gt;F)
-#&gt; as.factor(class)  2  12838182 6419091  1.6658  0.201
-#&gt; Residuals        43 165698288 3853449               </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Laminect</span>)</div></pre>
+#&gt;           Df    Sum Sq Mean Sq F value Pr(&gt;F)
+#&gt; area       2  12838182 6419091  1.6658  0.201
+#&gt; Residuals 43 165698288 3853449               </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

@@ -87,11 +87,12 @@
     <p>Data for Example 6.12</p>
     
 
+    <pre class="usage"><span class='no'>Lethal</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 30 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>survival</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 30 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>survival</dt><dd><p>a numeric vector indicating time surivived after injection</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,12 +103,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Lethal</span>)</div><div class='output co'>#&gt; 'data.frame':	30 obs. of  1 variable:
-#&gt;  $ survival: int  32 37 44 41 65 27 35 29 54 42 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Lethal</span>)
-<span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>survival</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>45</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
+<span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/SIGN.test'>SIGN.test</a></span>(<span class='no'>Lethal</span>$<span class='no'>survival</span>, <span class='kw'>md</span> <span class='kw'>=</span> <span class='fl'>45</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  survival
+#&gt; data:  Lethal$survival
 #&gt; s = 8, p-value = 0.008062
 #&gt; alternative hypothesis: true median is less than 45
 #&gt; 95 percent confidence interval:
@@ -118,7 +117,9 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt  U.E.pt
 #&gt; Lower Achieved CI     0.8998   -Inf 41.0000
 #&gt; Interpolated CI       0.9500   -Inf 41.9876
-#&gt; Upper Achieved CI     0.9506   -Inf 42.0000</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Lethal</span>)</div></pre>
+#&gt; Upper Achieved CI     0.9506   -Inf 42.0000</div><div class='input'>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

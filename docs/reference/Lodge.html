@@ -87,16 +87,14 @@
     <p>Data for Exercise 10.33</p>
     
 
+    <pre class="usage"><span class='no'>Lodge</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 45 observations on the following 6 variables.</p><dl class='dl-horizontal'>
-<dt>SiteA</dt><dd><p>a numeric vector</p></dd> 
-<dt>SiteB</dt><dd><p>a numeric vector</p></dd> 
-<dt>SiteC</dt><dd><p>a numeric vector</p></dd>
-<dt>Traffic</dt><dd><p>a numeric vector</p></dd> 
-<dt>Site</dt><dd><p>a numeric vector</p></dd> 
-<dt>Ranks</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 45 observations on the following 6 variables.</p><dl class='dl-horizontal'>
+<dt>traffic</dt><dd><p>a numeric vector indicating the amount of vehicles that passed a site in 1 hour</p></dd> 
+<dt>site</dt><dd><p>a numeric vector with values <code>1</code>, <code>2</code>, and <code>3</code></p></dd> 
+<dt>ranks</dt><dd><p>ranks for variable <code>traffic</code></p></dd>
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -107,21 +105,15 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Lodge</span>)</div><div class='output co'>#&gt; 'data.frame':	45 obs. of  6 variables:
-#&gt;  $ SiteA  : int  162 154 174 148 150 148 185 157 164 172 ...
-#&gt;  $ SiteB  : int  165 193 178 184 157 165 204 195 183 189 ...
-#&gt;  $ SiteC  : int  165 160 155 168 140 151 163 175 182 150 ...
-#&gt;  $ Traffic: int  162 154 174 148 150 148 185 157 164 172 ...
-#&gt;  $ Site   : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ Ranks  : num  17 8 27 3.5 5.5 3.5 37.5 10.5 19.5 25 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Lodge</span>)
-<span class='fu'>boxplot</span>(<span class='no'>Traffic</span>~<span class='no'>Site</span>)</div><div class='img'><img src='Lodge-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>Traffic</span>~<span class='fu'>as.factor</span>(<span class='no'>Site</span>)))</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='fu'>boxplot</span>(<span class='no'>traffic</span> ~ <span class='no'>site</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Lodge</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>cm.colors</span>(<span class='fl'>3</span>))</div><div class='img'><img src='Lodge-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>traffic</span> ~ <span class='fu'>factor</span>(<span class='no'>site</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Lodge</span>))</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
-#&gt; Response: Traffic
-#&gt;                 Df Sum Sq Mean Sq F value    Pr(&gt;F)    
-#&gt; as.factor(Site)  2 3951.6 1975.82  9.1838 0.0004913 ***
-#&gt; Residuals       42 9036.0  215.14                      
+#&gt; Response: traffic
+#&gt;              Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+#&gt; factor(site)  2 3951.6 1975.82  9.1838 0.0004913 ***
+#&gt; Residuals    42 9036.0  215.14                      
 #&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Lodge</span>)</div></pre>
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -89,13 +89,14 @@ those who did not</h1>
     <p>Data for Exercise 7.68</p>
     
 
+    <pre class="usage"><span class='no'>Kinder</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 8 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>Pair</dt><dd><p>a numeric vector</p></dd> 
-<dt>Kinder</dt><dd><p>a numeric vector</p></dd> 
-<dt>NoKinder</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 8 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>pair</dt><dd><p>a numeric indicator of pair</p></dd> 
+<dt>kinder</dt><dd><p>reading score of kids who went to kindergarten</p></dd> 
+<dt>nokinder</dt><dd><p>reading score of kids who did not go to kindergarten</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -106,30 +107,36 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Kinder</span>)</div><div class='output co'>#&gt; 'data.frame':	8 obs. of  3 variables:
-#&gt;  $ Pair    : int  1 2 3 4 5 6 7 8
-#&gt;  $ Kinder  : int  83 74 67 64 70 67 81 64
-#&gt;  $ NoKinder: int  78 74 63 66 68 63 77 65</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Kinder</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Kinder</span></div><div class='input'><span class='no'>DIF</span> <span class='kw'>&lt;-</span> <span class='no'>Kinder</span> - <span class='no'>NoKinder</span>
-<span class='fu'>qqnorm</span>(<span class='no'>DIF</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>DIF</span>)</div><div class='img'><img src='Kinder-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>Kinder</span>$<span class='no'>kinder</span>, <span class='no'>Kinder</span>$<span class='no'>nokinder</span>)</div><div class='img'><img src='Kinder-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>diff</span> <span class='kw'>&lt;-</span> <span class='no'>Kinder</span>$<span class='no'>kinder</span> - <span class='no'>Kinder</span>$<span class='no'>nokinder</span>
+<span class='fu'>qqnorm</span>(<span class='no'>diff</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>diff</span>)</div><div class='img'><img src='Kinder-3.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>diff</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Shapiro-Wilk normality test
 #&gt; 
-#&gt; data:  DIF
+#&gt; data:  diff
 #&gt; W = 0.87923, p-value = 0.1852
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Kinder</span>, <span class='no'>NoKinder</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Kinder</span>$<span class='no'>kinder</span>, <span class='no'>Kinder</span>$<span class='no'>nokinder</span>, <span class='kw'>paired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Paired t-test
 #&gt; 
-#&gt; data:  Kinder and NoKinder
-#&gt; t = 2.1166, df = 7, p-value = 0.03604
-#&gt; alternative hypothesis: true difference in means is greater than 0
+#&gt; data:  Kinder$kinder and Kinder$nokinder
+#&gt; t = 2.1166, df = 7, p-value = 0.07208
+#&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;  0.2097915       Inf
+#&gt;  -0.2343599  4.2343599
 #&gt; sample estimates:
 #&gt; mean of the differences 
 #&gt;                       2 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Kinder</span>)
-<span class='fu'>remove</span>(<span class='no'>DIF</span>)</div></pre>
+#&gt; </div><div class='input'><span class='co'># Or</span>
+<span class='fu'>t.test</span>(<span class='no'>diff</span>)</div><div class='output co'>#&gt; 
+#&gt; 	One Sample t-test
+#&gt; 
+#&gt; data:  diff
+#&gt; t = 2.1166, df = 7, p-value = 0.07208
+#&gt; alternative hypothesis: true mean is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -0.2343599  4.2343599
+#&gt; sample estimates:
+#&gt; mean of x 
+#&gt;         2 
+#&gt; </div><div class='input'><span class='fu'>rm</span>(<span class='no'>diff</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

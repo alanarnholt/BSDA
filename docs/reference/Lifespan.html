@@ -87,14 +87,13 @@
     <p>Data for Exercise 2.4, 2.37, and 2.49</p>
     
 
+    <pre class="usage"><span class='no'>Lifespan</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 6 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>heat</dt><dd><p>a numeric vector</p></dd> 
-<dt>life</dt><dd><p>a numeric vector</p></dd> 
-<dt>RESI1</dt><dd><p>a numeric vector</p></dd>
-<dt>FITS1</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 6 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>heat</dt><dd><p>temperature in degrees C</p></dd> 
+<dt>life</dt><dd><p>lifespan in hours</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -105,20 +104,8 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Lifespan</span>)</div><div class='output co'>#&gt; 'data.frame':	6 obs. of  4 variables:
-#&gt;  $ heat : int  50 100 150 200 250 300
-#&gt;  $ life : int  875 884 762 424 365 128
-#&gt;  $ RESI1: num  -100.1 69.7 108.6 -68.6 33.3 ...
-#&gt;  $ FITS1: num  975 814 653 493 332 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Lifespan</span>)
-<span class='fu'>plot</span>(<span class='no'>heat</span>,<span class='no'>life</span>)</div><div class='img'><img src='Lifespan-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>life</span>~<span class='no'>heat</span>)
-<span class='no'>model</span></div><div class='output co'>#&gt; 
-#&gt; Call:
-#&gt; lm(formula = life ~ heat)
-#&gt; 
-#&gt; Coefficients:
-#&gt; (Intercept)         heat  
-#&gt;    1136.000       -3.217  
-#&gt; </div><div class='input'><span class='fu'>resid</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt;          1          2          3          4          5          6 
+<span class='fu'>plot</span>(<span class='no'>life</span> ~ <span class='no'>heat</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Lifespan</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>life</span> ~ <span class='no'>heat</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Lifespan</span>)
+<span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Lifespan-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>resid</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt;          1          2          3          4          5          6 
 #&gt; -100.14286   69.71429  108.57143  -68.57143   33.28571  -42.85714 </div><div class='input'><span class='fu'>sum</span>((<span class='fu'>resid</span>(<span class='no'>model</span>))^<span class='fl'>2</span>)</div><div class='output co'>#&gt; [1] 34323.14</div><div class='input'><span class='fu'>anova</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: life
@@ -126,8 +113,7 @@ Duxbury</p>
 #&gt; heat       1 452813  452813  52.771 0.001907 **
 #&gt; Residuals  4  34323    8581                    
 #&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='co'># plot(model)  # Used for diagnostic purposes</span>
-<span class='fu'>detach</span>(<span class='no'>Lifespan</span>)</div></pre>
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

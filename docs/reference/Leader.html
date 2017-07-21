@@ -87,12 +87,13 @@
     <p>Data for Exercise 7.31</p>
     
 
+    <pre class="usage"><span class='no'>Leader</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 34 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>under35</dt><dd><p>a numeric vector</p></dd> 
-<dt>over35</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 34 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>age</dt><dd><p>a character vector indicating age with values <code>under35</code> and <code>over35</code></p></dd> 
+<dt>score</dt><dd><p>score on a leadership exam</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -103,21 +104,19 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Leader</span>)</div><div class='output co'>#&gt; 'data.frame':	34 obs. of  2 variables:
-#&gt;  $ under35: int  25 13 9 46 25 30 17 20 17 20 ...
-#&gt;  $ over35 : int  24 31 43 23 13 23 21 42 34 14 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Leader</span>)
-<span class='fu'>boxplot</span>(<span class='no'>under35</span>,<span class='no'>over35</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Under 35"</span>,<span class='st'>"Over 35"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"green"</span>,<span class='st'>"brown"</span>))</div><div class='img'><img src='Leader-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>under35</span>,<span class='no'>over35</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>score</span> ~ <span class='no'>age</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Leader</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"gray"</span>, <span class='st'>"green"</span>))</div><div class='img'><img src='Leader-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>score</span> ~ <span class='no'>age</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Leader</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
-#&gt; data:  under35 and over35
-#&gt; t = -1.1462, df = 60.522, p-value = 0.2562
+#&gt; data:  score by age
+#&gt; t = 1.1462, df = 60.522, p-value = 0.2562
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;  -9.505807  2.579337
+#&gt;  -2.579337  9.505807
 #&gt; sample estimates:
-#&gt; mean of x mean of y 
-#&gt;  24.12500  27.58824 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Leader</span>)</div></pre>
+#&gt;  mean in group over35 mean in group under35 
+#&gt;              27.58824              24.12500 
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -116,7 +116,7 @@ Duxbury</p>
 #&gt;   LP   12      18       74
 #&gt;   NS   12      16       68
 #&gt;   MC   58      54      154
-#&gt;   LD   44      10       18</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='Hodgkin-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+#&gt;   LD   44      10       18</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='Hodgkin-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
 </div><span class='co'># NOT RUN {</span>
 <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Hodgkin</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>type</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>response</span>)) +
     <span class='fu'>geom_bar</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
