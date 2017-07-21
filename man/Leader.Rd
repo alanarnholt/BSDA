@@ -4,21 +4,21 @@
 \name{Leader}
 \alias{Leader}
 \title{Leadership exam scores by age for employees on an industrial plant}
-\format{A data frame with 34 observations on the following 2 variables.
+\format{A data frame/tibble with 34 observations on the following 2 variables.
 \describe{ 
-\item{under35}{a numeric vector} 
-\item{over35}{a numeric vector} 
+\item{age}{a character vector indicating age with values \code{under35} and \code{over35}} 
+\item{score}{score on a leadership exam} 
 }}
+\usage{
+Leader
+}
 \description{
 Data for Exercise 7.31
 }
 \examples{
 
-str(Leader)
-attach(Leader)
-boxplot(under35,over35,names=c("Under 35","Over 35"),col=c("green","brown"))
-t.test(under35,over35)
-detach(Leader)
+boxplot(score ~ age, data = Leader, col = c("gray", "green"))
+t.test(score ~ age, data = Leader)
 
 }
 \references{

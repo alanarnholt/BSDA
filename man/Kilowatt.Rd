@@ -4,9 +4,9 @@
 \name{Kilowatt}
 \alias{Kilowatt}
 \title{Rates per kilowatt-hour for each of the 50 states and DC}
-\format{A data frame with 51 observations on the following 2 variables.
+\format{A data frame/tibble with 51 observations on the following 2 variables.
 \describe{ 
-\item{State}{a factor with levels \code{Alabama}
+\item{state}{a factor with levels \code{Alabama}
 \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
 Columbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
@@ -19,17 +19,17 @@ Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
 \code{Rhode Island} \code{South Carolina} \code{South Dakota}
 \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
 \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-\item{rate}{a numeric vector} 
+\item{rate}{a numeric vector indicating rates for kilowatt per hour} 
 }}
+\usage{
+Kilowatt
+}
 \description{
 Data for Example 5.9
 }
 \examples{
 
-str(Kilowatt)
-attach(Kilowatt)
-EDA(rate)
-detach(Kilowatt)
+BSDA::EDA(Kilowatt$rate)
 
 }
 \references{

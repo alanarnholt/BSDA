@@ -2044,10 +2044,11 @@ abline(model)
 summary(model)
 rm(model)
 ###########################
-Kidsmoke <- read_csv("Kidsmoke.csv")
+Kidsmoke <- read_csv("KIDSMOKE.csv")
 Kidsmoke$gender <- ifelse(Kidsmoke$gender == 0, "female", "male")
 Kidsmoke$smoke <- ifelse(Kidsmoke$smoke == 0, "no", "yes")
 Kidsmoke
+devtools::use_data(Kidsmoke, overwrite = TRUE)
 #Examples Ex 4.85
 T1 <- xtabs(~smoke + gender, data = Kidsmoke)
 T1
@@ -2055,17 +2056,19 @@ prop.table(T1)
 prop.table(T1, 1)
 prop.table(T1, 2)
 ###########################
-Kilowatt <- read_csv("Kilowatt.csv")
+Kilowatt <- read_csv("KILOWATT.csv")
 Kilowatt <- Kilowatt %>%
   rename(state = State)
 Kilowatt
+devtools::use_data(Kilowatt, overwrite = TRUE)
 #Examples Exp 5.9
 BSDA::EDA(Kilowatt$rate)
 ###########################
-Kinder <- read_csv("Kinder.csv")
+Kinder <- read_csv("KINDER.csv")
 Kinder <- Kinder %>%
   rename(pair = Pair, kinder = Kinder, nokinder = NoKinder)
 Kinder
+devtools::use_data(Kinder, overwrite = TRUE)
 #Examples Ex 7.68
 boxplot(Kinder$kinder, Kinder$nokinder)
 diff <- Kinder$kinder - Kinder$nokinder
@@ -2077,41 +2080,46 @@ t.test(Kinder$kinder, Kinder$nokinder, paired = TRUE)
 t.test(diff)
 rm(diff)
 ##########################
-Laminect <- read_csv("Laminect.csv")
+Laminect <- read_csv("LAMINECT.csv")
 Laminect <- Laminect %>%
   select(Rural, Regional, Metropol)%>%
   gather(Rural, Regional, Metropol, key = "area", value = "cost")
 Laminect
+devtools::use_data(Laminect, overwrite = TRUE)
 #Examples Ex 10.18
 boxplot(cost ~ area, data = Laminect, col = topo.colors(3))
 anova(lm(cost ~ area, data = Laminect))
 ##########################
-Lead <- read_csv("Lead.csv")
+Lead <- read_csv("LEAD.csv")
 Lead <- Lead %>%
   select(exposed, control) %>%
   gather(exposed, control, key = "group", value = "lead")
 Lead
+devtools::use_data(Lead, overwrite = TRUE)
 #Examples Exp 1.17 (micrograms/dl?)
 boxplot(lead ~ group, data = Lead)
 #########################
-Leader <- read_csv("Leader.csv")
+Leader <- read_csv("LEADER.csv")
 Leader <- Leader %>%
   gather(under35, over35, key = "age", value = "score")
 Leader <- na.omit(Leader)
 Leader
+devtools::use_data(Leader, overwrite = TRUE)
 #Examples Ex 7.31
 boxplot(score ~ age, data = Leader, col = c("gray", "green"))
 t.test(score ~ age, data = Leader)
 ########################
-Lethal <- read_csv("Lethal.csv")
+Lethal <- read_csv("LETHAL.csv")
 Lethal
+devtools::use_data(Lethal, overwrite = TRUE)
 #Examples Exp 6.12 (seconds)
 BSDA::SIGN.test(Lethal$survival, md = 45, alternative = "less")
 #######################
-Life <- read_csv("Life.csv")
+Life <- read_csv("LIFE.csv")
 Life <- Life %>%
   rename(men = Men, women = Women)
 Life
+devtools::use_data(Life, overwrite = TRUE)
 #Examples Ex 1.31
 plot(men ~ year, type = "l", ylim = c(min(men, women), max(men, women)), col = "blue",
      main = "Life Expectancy vs Year", ylab = "Age", xlab = "Year", data = Life)
@@ -2119,10 +2127,11 @@ lines(women ~ year, col = "red", data = Life)
 text(1955, 65, "Men", col = "blue")
 text(1955, 70, "Women", col = "red")
 #######################
-Lifespan <- read_csv("Lifespan.csv")
+Lifespan <- read_csv("LIFESPAN.csv")
 Lifespan <- Lifespan %>%
   select(heat, life)
 Lifespan
+devtools::use_data(Lifespan, overwrite = TRUE)
 #Examples Ex 2.4, 2.37, and 2.49 (heat = C, life = hours)
 plot(life ~ heat, data = Lifespan)
 model <- lm(life ~ heat, data = Lifespan)
@@ -2132,38 +2141,42 @@ sum((resid(model))^2)
 anova(model)
 rm(model)
 ######################
-Ligntmonth <- read_csv("Ligntmonth.csv")
+Ligntmonth <- read_csv("LIGNTMONTH.csv")
 Ligntmonth <- Ligntmonth %>%
   rename(month = Month)
 Ligntmonth$month <- as.Date(Ligntmonth$month, format = "%m/%d/%y")
 Ligntmonth
+devtools::use_data(Ligntmonth, overwrite = TRUE)
 #Examples Ex 2.6
 plot(deaths ~ damage, data = Ligntmonth)
 model = lm(deaths ~ damage, data = Ligntmonth)
 abline(model)
 rm(model)
 ######################
-Lodge <- read_csv("Lodge.csv")
+Lodge <- read_csv("LODGE.csv")
 Lodge <- Lodge %>%
   select(traffic = Traffic, site = Site, ranks = Ranks)
 Lodge
+devtools::use_data(Lodge, overwrite = TRUE)
 #Examples Ex 10.33
 boxplot(traffic ~ site, data = Lodge, col = cm.colors(3))
 anova(lm(traffic ~ factor(site), data = Lodge))
 ######################
-Longtail <- read_csv("Longtail.csv")
+Longtail <- read_csv("LONGTAIL.csv")
 Longtail <- Longtail %>%
   select(score, group = Group, ranks = Ranks)
 Longtail
+devtools::use_data(Longtail, overwrite = TRUE)
 #Examples Ex 10.45
 boxplot(score ~ group, data = Longtail, col = heat.colors(3))
 kruskal.test(score ~ factor(group), data = Longtail)
 anova(lm(score ~ factor(group), data = Longtail))
 ######################
-Lowabil <- read_csv("Lowabil.csv")
+Lowabil <- read_csv("LOWABIL.csv")
 Lowabil <- Lowabil %>%
   rename(pair = Pair, experiment = Experimt, control = Control)
 Lowabil
+devtools::use_data(Lowabil, overwrite = TRUE)
 #Examples Exp 7.18
 diff = Lowabil$experiment - Lowabil$control
 qqnorm(diff)

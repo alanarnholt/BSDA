@@ -4,26 +4,28 @@
 \name{Lowabil}
 \alias{Lowabil}
 \title{Reading skills of 24 matched low ability students}
-\format{A data frame with 12 observations on the following 3 variables.
+\format{A data frame/tibble with 12 observations on the following 3 variables.
 \describe{ 
-\item{Pair}{a numeric vector} 
-\item{Experimt}{a numeric vector} 
-\item{Control}{a numeric vector} 
+\item{pair}{a numeric indicator of pair} 
+\item{experiment}{score of the  child with the experimental method} 
+\item{control}{score of the child with the standard method} 
 }}
+\usage{
+Lowabil
+}
 \description{
 Data for Example 7.18
 }
 \examples{
 
-str(Lowabil)
-attach(Lowabil)
-DIF <- Experimt - Control
-qqnorm(DIF)
-qqline(DIF)
-shapiro.test(DIF)
-t.test(Experimt,Control,paired=TRUE)
-detach(Lowabil)
-remove(DIF)
+diff = Lowabil$experiment - Lowabil$control
+qqnorm(diff)
+qqline(diff)
+shapiro.test(diff)
+t.test(Lowabil$experiment, Lowabil$control, paired = TRUE)
+# OR
+t.test(diff)
+rm(diff)
 
 }
 \references{

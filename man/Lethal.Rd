@@ -4,19 +4,20 @@
 \name{Lethal}
 \alias{Lethal}
 \title{Survival time of mice injected with an experimental lethal drug}
-\format{A data frame with 30 observations on the following variable.
+\format{A data frame/tibble with 30 observations on the following variable.
 \describe{ 
-\item{survival}{a numeric vector} 
+\item{survival}{a numeric vector indicating time surivived after injection} 
 }}
+\usage{
+Lethal
+}
 \description{
 Data for Example 6.12
 }
 \examples{
 
-str(Lethal)
-attach(Lethal)
-SIGN.test(survival,md=45,alternative="less")
-detach(Lethal)
+BSDA::SIGN.test(Lethal$survival, md = 45, alternative = "less")
+
 
 }
 \references{
