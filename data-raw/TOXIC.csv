@@ -1,0 +1,52 @@
+state,region,sites,minority,percent
+alabama,south,12,10,26.8
+alaska,west,0,0,0
+arizona,west,8,8,28.8
+arkansas,south,5,4,17.7
+california,west,54,53,42.9
+colorado,west,9,5,19.8
+connecticut,northeast,6,4,16.4
+delaware,northeast,0,0,0
+dist of columbia,northeast,1,1,71.4
+florida,south,13,12,27.3
+georgia,south,16,13,29.8
+hawaii,west,1,1,68.4
+idaho,west,2,1,8.3
+illinois,midwest,30,14,25.7
+indiana,midwest,16,7,10.6
+iowa,midwest,1,0,4.3
+kansas,midwest,8,6,12
+kentucky,south,12,3,8.4
+louisiana,south,12,10,34.6
+maine,northeast,2,0,2.1
+maryland,south,3,2,31.1
+massachusetts,northeast,12,5,12.7
+michigan,midwest,23,12,18.1
+minnesota,midwest,5,0,6.7
+mississippi,south,4,3,37
+missouri,midwest,13,5,13.2
+montana,west,1,0,8.5
+nebraska,midwest,3,1,7.9
+nevada,west,4,2,21.9
+new hampshire,northeast,0,0,0
+new jersey,northeast,18,10,26.4
+new mexico,west,3,3,50.4
+new york,northeast,19,7,31
+north carolina,south,17,14,25.2
+north dakota,midwest,0,0,0
+ohio,midwest,43,15,13.2
+oklahoma,south,6,5,20
+oregon,west,8,1,9.8
+pennsylvania,northeast,19,2,12.4
+rhode island,northeast,2,1,2
+south carolina,south,16,13,31.5
+south dakota,midwest,0,0,0
+tennessee,south,19,12,17.5
+texas,south,28,24,39.4
+utah,west,4,0,9.3
+vermont,northeast,1,0,2
+virginia,south,10,7,24.3
+washington,west,19,11,13.9
+west virginia,south,2,0,4.2
+wisconsin,midwest,20,3,9.1
+wyoming,west,0,0,0

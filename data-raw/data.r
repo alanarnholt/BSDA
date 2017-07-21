@@ -2019,3 +2019,15 @@ hist(Irises$sepal_length[Irises$species == "setosa"],
      main = "Sepal length for\n Iris Setosa",
      xlab = "Length (in cm)")
 boxplot(sepal_length ~ species, data = Irises)
+####################################################
+Jdpower <- read_csv("Jdpower.csv")
+Jdpower <- Jdpower %>%
+  rename(car = Car)
+Jdpower
+devtools::use_data(Jdpower, overwrite = TRUE)
+#Examples Ex 2.14, 2.17, 2.31, 2.33, and 2.40
+model <- lm(`1995` ~ `1994`, data = Jdpower)
+summary(model)
+plot(`1995` ~ `1994`, data = Jdpower)
+abline(model, col = "red")
+rm(model)
