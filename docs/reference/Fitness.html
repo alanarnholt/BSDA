@@ -116,14 +116,15 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of the differences 
 #&gt;                       2 
-#&gt; </div><div class='input'><span class='fu'>not_run</span>({
-  <span class='no'>Wide</span> <span class='kw'>&lt;-</span> <span class='kw'>tidyr</span><span class='kw'>::</span><span class='fu'>spread</span>(<span class='no'>Fitness</span>, <span class='no'>test</span>, <span class='no'>number</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>mutate</span>(<span class='kw'>diff</span> <span class='kw'>=</span> <span class='no'>After</span> - <span class='no'>Before</span>)
-  <span class='no'>Wide</span>
-  <span class='fu'>qqnorm</span>(<span class='no'>Wide</span>$<span class='no'>diff</span>)
-  <span class='fu'>qqline</span>(<span class='no'>Wide</span>$<span class='no'>diff</span>)
-  <span class='fu'>t.test</span>(<span class='no'>Wide</span>$<span class='no'>diff</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"greater"</span>)
-})</div></pre>
+#&gt; </div><span class='co'># NOT RUN {</span>
+<span class='no'>Wide</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>tidyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/tidyr/topics/spread'>spread</a></span>(<span class='no'>Fitness</span>, <span class='no'>test</span>, <span class='no'>number</span>) <span class='kw'>%&gt;%</span>
+<span class='fu'>mutate</span>(<span class='kw'>diff</span> <span class='kw'>=</span> <span class='no'>After</span> - <span class='no'>Before</span>)
+<span class='no'>Wide</span>
+<span class='fu'>qqnorm</span>(<span class='no'>Wide</span>$<span class='no'>diff</span>)
+<span class='fu'>qqline</span>(<span class='no'>Wide</span>$<span class='no'>diff</span>)
+<span class='fu'>t.test</span>(<span class='no'>Wide</span>$<span class='no'>diff</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"greater"</span>)
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

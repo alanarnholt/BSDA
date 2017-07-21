@@ -106,7 +106,7 @@ Duxbury</p>
 <span class='fu'>str</span>(<span class='no'>Leader</span>)</div><div class='output co'>#&gt; 'data.frame':	34 obs. of  2 variables:
 #&gt;  $ under35: int  25 13 9 46 25 30 17 20 17 20 ...
 #&gt;  $ over35 : int  24 31 43 23 13 23 21 42 34 14 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Leader</span>)
-<span class='fu'>boxplot</span>(<span class='no'>under35</span>,<span class='no'>over35</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Under 35"</span>,<span class='st'>"Over 35"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"green"</span>,<span class='st'>"brown"</span>))</div><img src='Leader-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>t.test</span>(<span class='no'>under35</span>,<span class='no'>over35</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>under35</span>,<span class='no'>over35</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Under 35"</span>,<span class='st'>"Over 35"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"green"</span>,<span class='st'>"brown"</span>))</div><div class='img'><img src='Leader-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>under35</span>,<span class='no'>over35</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
 #&gt; data:  under35 and over35

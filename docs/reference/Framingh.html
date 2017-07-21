@@ -123,19 +123,20 @@ Duxbury</p>
 #&gt;   34 | 3
 #&gt;   36 | 
 #&gt;   38 | 3
-#&gt; </div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Framingh</span>$<span class='no'>cholest</span>, <span class='kw'>horizontal</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><img src='Framingh-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>hist</span>(<span class='no'>Framingh</span>$<span class='no'>cholest</span>, <span class='kw'>freq</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>Framingh</span>$<span class='no'>cholest</span>))</div><img src='Framingh-7.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>mean</span>(<span class='no'>Framingh</span>$<span class='no'>cholest</span> <span class='kw'>&gt;</span> <span class='fl'>200</span> <span class='kw'>&amp;</span> <span class='no'>Framingh</span>$<span class='no'>cholest</span> <span class='kw'>&lt;</span> <span class='fl'>240</span>)</div><div class='output co'>#&gt; [1] 0.4032258</div><div class='input'>
-<span class='fu'>not_run</span>({
-  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Framingh</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'>factor</span>(<span class='fl'>1</span>), <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>cholest</span>)) +
-  <span class='fu'>geom_boxplot</span>() +                 <span class='co'># boxplot</span>
-  <span class='fu'>labs</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>""</span>) +                   <span class='co'># no x label  </span>
-  <span class='fu'>theme_bw</span>() +                     <span class='co'># black and white theme  </span>
-  <span class='fu'>geom_jitter</span>(<span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>0.2</span>) +       <span class='co'># jitter points</span>
-  <span class='fu'>coord_flip</span>()                     <span class='co'># Create horizontal plot</span>
-  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Framingh</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>cholest</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>..density..</span>)) +
-  <span class='fu'>geom_histogram</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"pink"</span>, <span class='kw'>binwidth</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>) +
-  <span class='fu'>geom_density</span>() +
-  <span class='fu'>theme_bw</span>()
-})</div></pre>
+#&gt; </div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Framingh</span>$<span class='no'>cholest</span>, <span class='kw'>horizontal</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='Framingh-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>hist</span>(<span class='no'>Framingh</span>$<span class='no'>cholest</span>, <span class='kw'>freq</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>Framingh</span>$<span class='no'>cholest</span>))</div><div class='img'><img src='Framingh-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>mean</span>(<span class='no'>Framingh</span>$<span class='no'>cholest</span> <span class='kw'>&gt;</span> <span class='fl'>200</span> <span class='kw'>&amp;</span> <span class='no'>Framingh</span>$<span class='no'>cholest</span> <span class='kw'>&lt;</span> <span class='fl'>240</span>)</div><div class='output co'>#&gt; [1] 0.4032258</div><div class='input'>
+</div><span class='co'># NOT RUN {</span>
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Framingh</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'>factor</span>(<span class='fl'>1</span>), <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>cholest</span>)) +
+<span class='fu'>geom_boxplot</span>() +                 <span class='co'># boxplot</span>
+<span class='fu'>labs</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>""</span>) +                   <span class='co'># no x label  </span>
+<span class='fu'>theme_bw</span>() +                     <span class='co'># black and white theme  </span>
+<span class='fu'>geom_jitter</span>(<span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>0.2</span>) +       <span class='co'># jitter points</span>
+<span class='fu'>coord_flip</span>()                     <span class='co'># Create horizontal plot</span>
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Framingh</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>cholest</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>..density..</span>)) +
+<span class='fu'>geom_histogram</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"pink"</span>, <span class='kw'>binwidth</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>) +
+<span class='fu'>geom_density</span>() +
+<span class='fu'>theme_bw</span>()
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
