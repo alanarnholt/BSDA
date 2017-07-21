@@ -87,20 +87,25 @@
     <p>Data for Exercise 2.14, 2.17, 2.31, 2.33, and 2.40</p>
     
 
+    <pre class="usage"><span class='no'>Jdpower</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 29 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>Car</dt><dd><p>a factor with levels <code>Acura</code> <code>BMW</code>
+    <p>A data frame/tibble with 29 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>car</dt><dd><p>a factor with levels <code>Acura</code> <code>BMW</code>
 <code>Buick</code> <code>Cadillac</code> <code>Chevrolet</code> <code>Dodge</code> <code>Eagle</code>
 <code>Ford</code> <code>Geo</code> <code>Honda</code> <code>Hyundai</code> <code>Infiniti</code>
 <code>Jaguar</code> <code>Lexus</code> <code>Lincoln</code> <code>Mazda</code> <code>Mercedes-Benz</code>
 <code>Mercury</code> <code>Mitsubishi</code> <code>Nissan</code> <code>Oldsmobile</code>
 <code>Plymouth</code> <code>Pontiac</code> <code>Saab</code> <code>Saturn</code> <code>Subaru</code>
 <code>Toyota</code> <code>Volkswagen</code> <code>Volvo</code></p></dd> 
-<dt>X1994</dt><dd><p>a numeric vector</p></dd> 
-<dt>X1995</dt><dd><p>a numeric vector</p></dd> 
+<dt>1994</dt><dd><p>number of problems per 100 cars in 1994</p></dd> 
+<dt>1995</dt><dd><p>number of problems per 100 cars in 1995</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><em>USA Today</em>, May 25, 1995.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -110,25 +115,34 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Jdpower</span>)</div><div class='output co'>#&gt; 'data.frame':	29 obs. of  3 variables:
-#&gt;  $ Car  : Factor w/ 29 levels "Acura","BMW",..: 12 14 1 10 27 17 2 9 20 29 ...
-#&gt;  $ X1994: int  75 54 101 92 69 91 114 134 99 108 ...
-#&gt;  $ X1995: int  55 60 64 71 74 79 82 82 83 86 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Jdpower</span>)
-<span class='fu'>plot</span>(<span class='no'>X1994</span>,<span class='no'>X1995</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>X1995</span>~<span class='no'>X1994</span>)
-<span class='fu'>abline</span>(<span class='no'>model</span>)</div><img src='Jdpower-5.png' alt='' width='540' height='400' /><div class='input'><span class='no'>model</span></div><div class='output co'>#&gt; 
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>`1995`</span> ~ <span class='no'>`1994`</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Jdpower</span>)
+<span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = X1995 ~ X1994)
+#&gt; lm(formula = `1995` ~ `1994`, data = Jdpower)
+#&gt; 
+#&gt; Residuals:
+#&gt;     Min      1Q  Median      3Q     Max 
+#&gt; -42.142 -14.929  -0.855  17.178  37.022 
 #&gt; 
 #&gt; Coefficients:
-#&gt; (Intercept)        X1994  
-#&gt;      2.2241       0.9098  
-#&gt; </div><div class='input'><span class='fu'>cor</span>(<span class='no'>X1995</span>,<span class='no'>X1994</span>)</div><div class='output co'>#&gt; [1] 0.8220294</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Jdpower</span>)</div></pre>
+#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    
+#&gt; (Intercept)   2.2241    14.6449   0.152     0.88    
+#&gt; `1994`        0.9098     0.1213   7.501 4.55e-08 ***
+#&gt; ---
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#&gt; 
+#&gt; Residual standard error: 21.72 on 27 degrees of freedom
+#&gt; Multiple R-squared:  0.6757,	Adjusted R-squared:  0.6637 
+#&gt; F-statistic: 56.26 on 1 and 27 DF,  p-value: 4.546e-08
+#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='no'>`1995`</span> ~ <span class='no'>`1994`</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Jdpower</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='no'>model</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"red"</span>)</div><img src='Jdpower-5.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       
