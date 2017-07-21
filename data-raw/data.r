@@ -2038,7 +2038,7 @@ Jobsat <- Jobsat %>%
 Jobsat
 devtools::use_data(Jobsat, overwrite = TRUE)
 #Examples Ex 9.60 (Wilson Stress Profile for Teachers)
-plot(satisfac ~ wspt, data = Jobsat)
+plot(satisfaction ~ wspt, data = Jobsat)
 model <- lm(satisfaction ~ wspt, data = Jobsat)
 abline(model)
 summary(model)
