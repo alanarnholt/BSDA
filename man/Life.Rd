@@ -4,25 +4,28 @@
 \name{Life}
 \alias{Life}
 \title{Life expectancy of men and women in U.S.}
-\format{A data frame with 8 observations on the following 3 variables.
+\format{A data frame/tibble with 8 observations on the following 3 variables.
 \describe{ 
-\item{year}{a numeric vector} 
-\item{Men}{a numeric vector} 
-\item{Women}{a numeric vector} 
+\item{year}{a numeric vector indicating year} 
+\item{men}{life expectancy for men} 
+\item{women}{life expectancy for women} 
 }}
+\source{
+National Center for Health Statistics
+}
+\usage{
+Life
+}
 \description{
 Data for Exercise 1.31
 }
 \examples{
 
-str(Life)
-attach(Life)
-plot(year,Men,type="l",ylim=c(min(Men,Women),max(Men,Women)),col="blue",
-main="Life Expectancy versus Year",ylab="Age",xlab="Year")
-lines(year,Women,col="red")
-text(1955,65,"Men",col="blue")
-text(1955,70,"Women",col="red")
-detach(Life)
+plot(men ~ year, type = "l", ylim = c(min(men, women), max(men, women)), col = "blue",
+main = "Life Expectancy vs Year", ylab = "Age", xlab = "Year", data = Life)
+lines(women ~ year, col = "red", data = Life)
+text(1955, 65, "Men", col = "blue")
+text(1955, 70, "Women", col = "red")
 
 }
 \references{
