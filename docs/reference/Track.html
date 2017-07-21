@@ -120,43 +120,22 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Track</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	55 obs. of  8 variables:
-#&gt;  $ country : chr  "argentina" "australia" "austria" "belgium" ...
-#&gt;  $ 100m    : num  11.6 11.2 11.4 11.4 11.5 ...
-#&gt;  $ 200m    : num  22.9 22.4 23.1 23 23.1 ...
-#&gt;  $ 400m    : num  54.5 51.1 50.6 52 53.3 ...
-#&gt;  $ 800m    : num  2.15 1.98 1.99 2 2.16 2.1 2.18 2 2.05 2.08 ...
-#&gt;  $ 1500m   : num  4.43 4.13 4.22 4.14 4.58 4.49 4.45 4.06 4.23 4.33 ...
-#&gt;  $ 3000m   : num  9.79 9.08 9.34 8.88 9.81 9.77 9.51 9.81 9.37 9.31 ...
-#&gt;  $ marathon: num  179 152 159 158 170 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 8
-#&gt;   .. ..$ country : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
-#&gt;   .. ..$ 100m    : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ 200m    : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ 400m    : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ 800m    : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ 1500m   : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ 3000m   : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ marathon: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Track</span>)
-<span class='fu'>cor</span>(<span class='no'>Track</span>[,<span class='fl'>2</span>:<span class='fl'>8</span>])</div><div class='output co'>#&gt;               100m      200m      400m      800m     1500m     3000m  marathon
-#&gt; 100m     1.0000000 0.9527911 0.8346918 0.7276888 0.7283709 0.7138310 0.6863358
-#&gt; 200m     0.9527911 1.0000000 0.8569621 0.7240597 0.6983643 0.6844756 0.6855745
-#&gt; 400m     0.8346918 0.8569621 1.0000000 0.8984052 0.7878417 0.7525889 0.7054241
-#&gt; 800m     0.7276888 0.7240597 0.8984052 1.0000000 0.9016138 0.8511240 0.7792922
-#&gt; 1500m    0.7283709 0.6983643 0.7878417 0.9016138 1.0000000 0.9550566 0.8779334
-#&gt; 3000m    0.7138310 0.6844756 0.7525889 0.8511240 0.9550566 1.0000000 0.8858136
+<span class='fu'>str</span>(<span class='no'>Track</span>)</div><div class='output co'>#&gt; 'data.frame':	55 obs. of  8 variables:
+#&gt;  $ country : Factor w/ 55 levels "argentina","australia",..: 1 2 3 4 5 6 7 8 9 10 ...
+#&gt;  $ X100m   : num  11.6 11.2 11.4 11.4 11.5 ...
+#&gt;  $ X200m   : num  22.9 22.4 23.1 23 23.1 ...
+#&gt;  $ X400m   : num  54.5 51.1 50.6 52 53.3 ...
+#&gt;  $ X800m   : num  2.15 1.98 1.99 2 2.16 2.1 2.18 2 2.05 2.08 ...
+#&gt;  $ X1500m  : num  4.43 4.13 4.22 4.14 4.58 4.49 4.45 4.06 4.23 4.33 ...
+#&gt;  $ X3000m  : num  9.79 9.08 9.34 8.88 9.81 9.77 9.51 9.81 9.37 9.31 ...
+#&gt;  $ marathon: num  179 152 159 158 170 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Track</span>)
+<span class='fu'>cor</span>(<span class='no'>Track</span>[,<span class='fl'>2</span>:<span class='fl'>8</span>])</div><div class='output co'>#&gt;              X100m     X200m     X400m     X800m    X1500m    X3000m  marathon
+#&gt; X100m    1.0000000 0.9527911 0.8346918 0.7276888 0.7283709 0.7138310 0.6863358
+#&gt; X200m    0.9527911 1.0000000 0.8569621 0.7240597 0.6983643 0.6844756 0.6855745
+#&gt; X400m    0.8346918 0.8569621 1.0000000 0.8984052 0.7878417 0.7525889 0.7054241
+#&gt; X800m    0.7276888 0.7240597 0.8984052 1.0000000 0.9016138 0.8511240 0.7792922
+#&gt; X1500m   0.7283709 0.6983643 0.7878417 0.9016138 1.0000000 0.9550566 0.8779334
+#&gt; X3000m   0.7138310 0.6844756 0.7525889 0.8511240 0.9550566 1.0000000 0.8858136
 #&gt; marathon 0.6863358 0.6855745 0.7054241 0.7792922 0.8779334 0.8858136 1.0000000</div><div class='input'><span class='fu'>pairs</span>(<span class='no'>Track</span>[,<span class='fl'>2</span>:<span class='fl'>8</span>])</div><div class='img'><img src='Track-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Track</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -175,7 +154,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

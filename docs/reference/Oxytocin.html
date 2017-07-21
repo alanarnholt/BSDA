@@ -104,22 +104,28 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Oxytocin</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	11 obs. of  3 variables:
-#&gt;  $ subject: int  1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ before : int  95 173 94 97 81 100 97 104 72 101 ...
-#&gt;  $ after  : int  55 90 36 59 46 46 49 92 23 55 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 3
-#&gt;   .. ..$ Subject: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ Before : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ After  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Oxytocin</span>)
-<span class='no'>DIF</span> <span class='kw'>&lt;-</span> <span class='no'>Before</span> - <span class='no'>After</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'Before' not found</span></div><div class='input'><span class='fu'>qqnorm</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; <span class='error'>Error in qqnorm(DIF): object 'DIF' not found</span></div><div class='input'><span class='fu'>qqline</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; <span class='error'>Error in quantile(y, probs, names = FALSE, type = qtype, na.rm = TRUE): object 'DIF' not found</span></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; <span class='error'>Error in stopifnot(is.numeric(x)): object 'DIF' not found</span></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Before</span>,<span class='no'>After</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error in t.test(Before, After, paired = TRUE): object 'Before' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Oxytocin</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Oxytocin</span>)</div><div class='output co'>#&gt; 'data.frame':	11 obs. of  3 variables:
+#&gt;  $ Subject: int  1 2 3 4 5 6 7 8 9 10 ...
+#&gt;  $ Before : int  95 173 94 97 81 100 97 104 72 101 ...
+#&gt;  $ After  : int  55 90 36 59 46 46 49 92 23 55 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Oxytocin</span>)
+<span class='no'>DIF</span> <span class='kw'>&lt;-</span> <span class='no'>Before</span> - <span class='no'>After</span>
+<span class='fu'>qqnorm</span>(<span class='no'>DIF</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>DIF</span>)</div><div class='img'><img src='Oxytocin-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Shapiro-Wilk normality test
+#&gt; 
+#&gt; data:  DIF
+#&gt; W = 0.94464, p-value = 0.5765
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Before</span>,<span class='no'>After</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Paired t-test
+#&gt; 
+#&gt; data:  Before and After
+#&gt; t = 8.506, df = 10, p-value = 6.854e-06
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  33.34646 57.01717
+#&gt; sample estimates:
+#&gt; mean of the differences 
+#&gt;                45.18182 
+#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Oxytocin</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -137,7 +143,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

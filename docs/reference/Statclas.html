@@ -103,10 +103,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Statclas</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	72 obs. of  2 variables:
-#&gt;  $ class: chr  "9am" "9am" "9am" "9am" ...
-#&gt;  $ score: int  60 66 66 66 67 67 68 72 74 77 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Statclas</span>)
-<span class='fu'>t.test</span>(<span class='no'>X9am</span>,<span class='no'>X2pm</span>)</div><div class='output co'>#&gt; <span class='error'>Error in t.test(X9am, X2pm): object 'X9am' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Statclas</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Statclas</span>)</div><div class='output co'>#&gt; 'data.frame':	36 obs. of  2 variables:
+#&gt;  $ X9am: int  60 66 66 66 67 67 68 72 74 77 ...
+#&gt;  $ X2pm: int  60 71 74 76 76 76 76 76 79 79 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Statclas</span>)
+<span class='fu'>t.test</span>(<span class='no'>X9am</span>,<span class='no'>X2pm</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Welch Two Sample t-test
+#&gt; 
+#&gt; data:  X9am and X2pm
+#&gt; t = -0.73184, df = 64.571, p-value = 0.4669
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -5.593904  2.593904
+#&gt; sample estimates:
+#&gt; mean of x mean of y 
+#&gt;      81.0      82.5 
+#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Statclas</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -124,7 +135,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

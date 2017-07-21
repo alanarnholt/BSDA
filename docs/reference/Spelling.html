@@ -106,27 +106,27 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Spelling</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	9 obs. of  3 variables:
-#&gt;  $ before: int  90 72 80 57 64 70 98 76 59
-#&gt;  $ after : int  95 79 90 60 62 70 99 80 58
-#&gt;  $ differ: int  5 7 10 3 -2 0 1 4 -1
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 3
-#&gt;   .. ..$ Before: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ After : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ differ: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Spelling</span>)
+<span class='fu'>str</span>(<span class='no'>Spelling</span>)</div><div class='output co'>#&gt; 'data.frame':	9 obs. of  3 variables:
+#&gt;  $ Before: int  90 72 80 57 64 70 98 76 59
+#&gt;  $ After : int  95 79 90 60 62 70 99 80 58
+#&gt;  $ differ: int  5 7 10 3 -2 0 1 4 -1</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Spelling</span>)
 <span class='fu'>qqnorm</span>(<span class='no'>differ</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>differ</span>)</div><div class='img'><img src='Spelling-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Shapiro-Wilk normality test
 #&gt; 
 #&gt; data:  differ
 #&gt; W = 0.9642, p-value = 0.8411
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>After</span>,<span class='no'>Before</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"greater"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in t.test(After, Before, paired = TRUE, alternative = "greater"): object 'After' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Spelling</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>After</span>,<span class='no'>Before</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Paired t-test
+#&gt; 
+#&gt; data:  After and Before
+#&gt; t = 2.286, df = 8, p-value = 0.02579
+#&gt; alternative hypothesis: true difference in means is greater than 0
+#&gt; 95 percent confidence interval:
+#&gt;  0.5596507       Inf
+#&gt; sample estimates:
+#&gt; mean of the differences 
+#&gt;                       3 
+#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Spelling</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -144,7 +144,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

@@ -108,29 +108,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Ratings</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	250 obs. of  2 variables:
-#&gt;  $ rating: chr  "F" "F" "F" "F" ...
-#&gt;  $ gpa   : num  1.2 2.4 1.6 0.8 3.2 1.6 0.8 0.8 1.2 1.2 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 7
-#&gt;   .. ..$ F     : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ D     : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ C     : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ B     : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ A     : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ Rating: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
-#&gt;   .. ..$ GPA   : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Ratings</span>)
-<span class='fu'>boxplot</span>(<span class='no'>GPA</span>~<span class='no'>Rating</span>,<span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Teacher's Rating"</span>,<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"GPA"</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Example 2.6"</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"pink"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'GPA' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Ratings</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Ratings</span>)</div><div class='output co'>#&gt; 'data.frame':	250 obs. of  7 variables:
+#&gt;  $ F     : num  1.2 2.4 1.6 0.8 3.2 1.6 0.8 0.8 1.2 1.2 ...
+#&gt;  $ D     : num  0.8 3.2 2 1.6 2.8 2 0.8 1.6 3.6 1.6 ...
+#&gt;  $ C     : num  1.2 2.8 2.4 1.6 1.6 2.8 2.4 2 4 2 ...
+#&gt;  $ B     : num  3.2 2 2 2.8 3.2 2 3.6 2.4 2.4 2.8 ...
+#&gt;  $ A     : num  2.8 4 2.8 3.2 3.2 4 2 3.6 3.2 2 ...
+#&gt;  $ Rating: Factor w/ 5 levels "A","B","C","D",..: 5 5 5 5 5 5 5 5 5 5 ...
+#&gt;  $ GPA   : num  1.2 2.4 1.6 0.8 3.2 1.6 0.8 0.8 1.2 1.2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Ratings</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:base:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    F</span></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>GPA</span>~<span class='no'>Rating</span>,<span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Teacher's Rating"</span>,<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"GPA"</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Example 2.6"</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"pink"</span>)</div><div class='img'><img src='Ratings-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Ratings</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -148,7 +135,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

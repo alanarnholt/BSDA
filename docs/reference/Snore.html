@@ -106,11 +106,18 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Snore</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	2484 obs. of  3 variables:
-#&gt;  $ heartdisease: Factor w/ 2 levels "no","yes": 2 2 2 2 2 2 2 2 2 2 ...
-#&gt;  $ snore       : Factor w/ 4 levels "nonsnorer","occassional snorer",..: 1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ heart       : Factor w/ 2 levels "yes","no": 1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Snore</span>)
-<span class='fu'>chisq.test</span>(<span class='no'>Snore</span>[,<span class='fl'>2</span>:<span class='fl'>5</span>])</div><div class='output co'>#&gt; <span class='error'>Error: Column indexes must be at most 3 if positive, not 4, 5</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Snore</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Snore</span>)</div><div class='output co'>#&gt; 'data.frame':	2 obs. of  5 variables:
+#&gt;  $ heart   : Factor w/ 2 levels "no","yes": 2 1
+#&gt;  $ Non     : int  24 1355
+#&gt;  $ occasion: int  35 603
+#&gt;  $ nearly  : int  21 192
+#&gt;  $ every   : int  30 224</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Snore</span>)
+<span class='fu'>chisq.test</span>(<span class='no'>Snore</span>[,<span class='fl'>2</span>:<span class='fl'>5</span>])</div><div class='output co'>#&gt; 
+#&gt; 	Pearson's Chi-squared test
+#&gt; 
+#&gt; data:  Snore[, 2:5]
+#&gt; X-squared = 72.782, df = 3, p-value = 1.082e-15
+#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Snore</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -128,7 +135,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

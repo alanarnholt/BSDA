@@ -105,44 +105,32 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Magnesiu</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	20 obs. of  2 variables:
-#&gt;  $ distance : int  0 1820 2542 2889 3460 4586 6020 6841 7232 10903 ...
-#&gt;  $ magnesium: num  6.44 8.61 5.24 5.73 3.81 4.05 2.95 2.57 3.37 3.84 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 4
-#&gt;   .. ..$ distance: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ magnesiu: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ SRES1   : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ FITS1   : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Magnesiu</span>)
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>magnesiu</span>~<span class='no'>distance</span>)</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'magnesiu' not found</span></div><div class='input'><span class='fu'>plot</span>(<span class='no'>distance</span>,<span class='no'>magnesiu</span>)</div><div class='output co'>#&gt; <span class='error'>Error in xy.coords(x, y, xlabel, ylabel, log): object 'magnesiu' not found</span></div><div class='input'><span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; <span class='error'>Error in int_abline(a = a, b = b, h = h, v = v, untf = untf, ...): plot.new has not been called yet</span></div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>str</span>(<span class='no'>Magnesiu</span>)</div><div class='output co'>#&gt; 'data.frame':	20 obs. of  4 variables:
+#&gt;  $ distance: int  0 1820 2542 2889 3460 4586 6020 6841 7232 10903 ...
+#&gt;  $ magnesiu: num  6.44 8.61 5.24 5.73 3.81 4.05 2.95 2.57 3.37 3.84 ...
+#&gt;  $ SRES1   : num  0.618 2.965 0.1 0.613 -0.96 ...
+#&gt;  $ FITS1   : num  5.77 5.31 5.13 5.04 4.9 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Magnesiu</span>)
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>magnesiu</span>~<span class='no'>distance</span>)
+<span class='fu'>plot</span>(<span class='no'>distance</span>,<span class='no'>magnesiu</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Magnesiu-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = number ~ gallons, data = Wastewat)
+#&gt; lm(formula = magnesiu ~ distance)
 #&gt; 
 #&gt; Residuals:
 #&gt;     Min      1Q  Median      3Q     Max 
-#&gt; -28.881  -8.961  -0.300   3.176  59.151 
+#&gt; -1.5453 -0.7039  0.1234  0.6766  3.3006 
 #&gt; 
 #&gt; Coefficients:
-#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    
-#&gt; (Intercept)   3.5895     3.4834   1.030    0.309    
-#&gt; gallons       3.7905     0.7843   4.833 1.91e-05 ***
+#&gt;               Estimate Std. Error t value Pr(&gt;|t|)    
+#&gt; (Intercept)  5.768e+00  4.952e-01  11.647 8.15e-10 ***
+#&gt; distance    -2.518e-04  4.027e-05  -6.254 6.73e-06 ***
 #&gt; ---
 #&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #&gt; 
-#&gt; Residual standard error: 14.33 on 41 degrees of freedom
-#&gt;   (1 observation deleted due to missingness)
-#&gt; Multiple R-squared:  0.363,	Adjusted R-squared:  0.3474 
-#&gt; F-statistic: 23.36 on 1 and 41 DF,  p-value: 1.915e-05
+#&gt; Residual standard error: 1.195 on 18 degrees of freedom
+#&gt; Multiple R-squared:  0.6848,	Adjusted R-squared:  0.6673 
+#&gt; F-statistic: 39.11 on 1 and 18 DF,  p-value: 6.73e-06
 #&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Magnesiu</span>)
-<span class='fu'>remove</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: object 'model' not found</span></div><div class='input'>
-</div></pre>
+<span class='fu'>remove</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -160,7 +148,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

@@ -117,18 +117,9 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Statelaw</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	50 obs. of  2 variables:
-#&gt;  $ state: chr  "Alabama" "Alaska" "Arizona" "Arkansas" ...
-#&gt;  $ cost : int  5 4 8 3 59 4 9 3 11 8 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 2
-#&gt;   .. ..$ State: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
-#&gt;   .. ..$ cost : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Statelaw</span>)
+<span class='fu'>str</span>(<span class='no'>Statelaw</span>)</div><div class='output co'>#&gt; 'data.frame':	50 obs. of  2 variables:
+#&gt;  $ State: Factor w/ 50 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
+#&gt;  $ cost : int  5 4 8 3 59 4 9 3 11 8 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Statelaw</span>)
 <span class='fu'>summary</span>(<span class='no'>cost</span>)</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
 #&gt;   1.000   3.000   5.500   8.957  11.000  59.000       4 </div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>cost</span>)</div><div class='output co'>#&gt; [1] "cost"</div><div class='img'><img src='Statelaw-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   46.000    4.000    1.000    3.000    8.957    5.500    7.571   11.000 
@@ -167,7 +158,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

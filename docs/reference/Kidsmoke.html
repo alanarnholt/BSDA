@@ -103,30 +103,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Kidsmoke</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	1000 obs. of  2 variables:
-#&gt;  $ gender: chr  "female" "female" "female" "female" ...
-#&gt;  $ smoke : chr  "no" "no" "no" "no" ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 2
-#&gt;   .. ..$ gender: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ smoke : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Kidsmoke</span>)
-<span class='fu'>table</span>(<span class='no'>gender</span>,<span class='no'>smoke</span>)</div><div class='output co'>#&gt;         smoke
-#&gt; gender    no yes
-#&gt;   female 375 105
-#&gt;   male   418 102</div><div class='input'><span class='fu'>addmargins</span>(<span class='fu'>table</span>(<span class='no'>gender</span>,<span class='no'>smoke</span>))</div><div class='output co'>#&gt;         smoke
-#&gt; gender     no  yes  Sum
-#&gt;   female  375  105  480
-#&gt;   male    418  102  520
-#&gt;   Sum     793  207 1000</div><div class='input'><span class='fu'>addmargins</span>(<span class='fu'>table</span>(<span class='no'>gender</span>,<span class='no'>smoke</span>)/<span class='fl'>1000</span>)</div><div class='output co'>#&gt;         smoke
-#&gt; gender      no   yes   Sum
-#&gt;   female 0.375 0.105 0.480
-#&gt;   male   0.418 0.102 0.520
-#&gt;   Sum    0.793 0.207 1.000</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Kidsmoke</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Kidsmoke</span>)</div><div class='output co'>#&gt; 'data.frame':	1000 obs. of  2 variables:
+#&gt;  $ gender: int  0 0 0 0 1 1 1 0 1 1 ...
+#&gt;  $ smoke : int  0 0 0 0 1 0 0 0 0 0 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Kidsmoke</span>)
+<span class='fu'>table</span>(<span class='no'>gender</span>,<span class='no'>smoke</span>)</div><div class='output co'>#&gt;       smoke
+#&gt; gender   0   1
+#&gt;      0 375 105
+#&gt;      1 418 102</div><div class='input'><span class='fu'>addmargins</span>(<span class='fu'>table</span>(<span class='no'>gender</span>,<span class='no'>smoke</span>))</div><div class='output co'>#&gt;       smoke
+#&gt; gender    0    1  Sum
+#&gt;    0    375  105  480
+#&gt;    1    418  102  520
+#&gt;    Sum  793  207 1000</div><div class='input'><span class='fu'>addmargins</span>(<span class='fu'>table</span>(<span class='no'>gender</span>,<span class='no'>smoke</span>)/<span class='fl'>1000</span>)</div><div class='output co'>#&gt;       smoke
+#&gt; gender     0     1   Sum
+#&gt;    0   0.375 0.105 0.480
+#&gt;    1   0.418 0.102 0.520
+#&gt;    Sum 0.793 0.207 1.000</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Kidsmoke</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -144,7 +135,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

@@ -105,11 +105,25 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Rural</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	33 obs. of  3 variables:
+<span class='fu'>str</span>(<span class='no'>Rural</span>)</div><div class='output co'>#&gt; 'data.frame':	33 obs. of  4 variables:
+#&gt;  $ Rural: int  55 57 62 58 34 52 63 84 50 56 ...
+#&gt;  $ City : int  61 59 64 42 58 65 81 67 69 23 ...
 #&gt;  $ score: int  55 57 62 58 34 52 63 84 50 56 ...
-#&gt;  $ area : chr  "rural" "rural" "rural" "rural" ...
-#&gt;  $ r    : num  10.5 13 21 15 2 7 22.5 32 4 12 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Rural</span>)
-<span class='fu'>wilcox.test</span>(<span class='no'>score</span>~<span class='no'>code</span>)</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'code' not found</span></div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>Rural</span>,<span class='no'>City</span>)</div><div class='output co'>#&gt; <span class='error'>Error in wilcox.test.default(Rural, City): 'x' must be numeric</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Rural</span>)</div></pre>
+#&gt;  $ code : int  1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Rural</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    Rural</span></div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>score</span>~<span class='no'>code</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
+#&gt; 	Wilcoxon rank sum test with continuity correction
+#&gt; 
+#&gt; data:  score by code
+#&gt; W = 94, p-value = 0.1346
+#&gt; alternative hypothesis: true location shift is not equal to 0
+#&gt; </div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>Rural</span>,<span class='no'>City</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
+#&gt; 	Wilcoxon rank sum test with continuity correction
+#&gt; 
+#&gt; data:  Rural and City
+#&gt; W = 94, p-value = 0.1346
+#&gt; alternative hypothesis: true location shift is not equal to 0
+#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Rural</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -127,7 +141,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

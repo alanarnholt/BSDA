@@ -107,28 +107,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Nascar</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	36 obs. of  3 variables:
-#&gt;  $ time : int  25 22 18 30 24 15 29 23 10 20 ...
-#&gt;  $ team : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ ranks: num  14 7.5 4 22 10.5 2.5 20 9 1 5.5 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 6
-#&gt;   .. ..$ TeamA: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ TeamB: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ TeamC: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ Time : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ Team : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ Ranks: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Nascar</span>)
-<span class='fu'>boxplot</span>(<span class='no'>Time</span>~<span class='no'>Team</span>)</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'Time' not found</span></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>Time</span>~<span class='fu'>as.factor</span>(<span class='no'>Team</span>)))</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'Time' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Nascar</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Nascar</span>)</div><div class='output co'>#&gt; 'data.frame':	36 obs. of  6 variables:
+#&gt;  $ TeamA: int  25 22 18 30 24 15 29 23 10 20 ...
+#&gt;  $ TeamB: int  25 30 24 26 22 15 32 36 20 28 ...
+#&gt;  $ TeamC: int  30 35 32 26 37 43 36 40 35 25 ...
+#&gt;  $ Time : int  25 22 18 30 24 15 29 23 10 20 ...
+#&gt;  $ Team : int  1 1 1 1 1 1 1 1 1 1 ...
+#&gt;  $ Ranks: num  14 7.5 4 22 10.5 2.5 20 9 1 5.5 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Nascar</span>)
+<span class='fu'>boxplot</span>(<span class='no'>Time</span>~<span class='no'>Team</span>)</div><div class='img'><img src='Nascar-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>Time</span>~<span class='fu'>as.factor</span>(<span class='no'>Team</span>)))</div><div class='output co'>#&gt; Analysis of Variance Table
+#&gt; 
+#&gt; Response: Time
+#&gt;                 Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+#&gt; as.factor(Team)  2  873.5  436.75  10.826 0.0002426 ***
+#&gt; Residuals       33 1331.2   40.34                      
+#&gt; ---
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Nascar</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -146,7 +139,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

@@ -117,28 +117,26 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Superbowl</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	35 obs. of  5 variables:
-#&gt;  $ winning_team  : chr  "Green Bay Packers" "Green Bay Packers" "New York Jets" "Kansas City Chiefs" ...
-#&gt;  $ winner_score  : int  35 33 16 23 16 24 14 24 16 21 ...
-#&gt;  $ losing_team   : chr  "Kansas City Chiefs" "Oakland Raiders" "Baltimore Colts" "Minnesota Vikings" ...
-#&gt;  $ loser_score   : int  10 14 7 7 13 3 7 7 6 17 ...
-#&gt;  $ victory_margin: int  25 19 9 16 3 21 7 17 10 4 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 5
-#&gt;   .. ..$ Winning team: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
-#&gt;   .. ..$ winner score: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ Losing team : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
-#&gt;   .. ..$ loser score : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ margin      : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Superbowl</span>)
-<span class='fu'>stem</span>(<span class='no'>margin</span>)</div><div class='output co'>#&gt; <span class='error'>Error in stem(margin): 'x' must be numeric</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Superbowl</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Superbowl</span>)</div><div class='output co'>#&gt; 'data.frame':	35 obs. of  5 variables:
+#&gt;  $ Winning.team: Factor w/ 16 levels "Baltimore Colts",..: 6 6 11 7 1 4 9 9 13 13 ...
+#&gt;  $ winner.score: int  35 33 16 23 16 24 14 24 16 21 ...
+#&gt;  $ Losing.team : Factor w/ 19 levels "Atlanta Falcons",..: 8 14 2 11 5 10 19 11 11 5 ...
+#&gt;  $ loser.score : int  10 14 7 7 13 3 7 7 6 17 ...
+#&gt;  $ margin      : int  25 19 9 16 3 21 7 17 10 4 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Superbowl</span>)
+<span class='fu'>stem</span>(<span class='no'>margin</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 1 digit(s) to the right of the |
+#&gt; 
+#&gt;   0 | 13444
+#&gt;   0 | 57779
+#&gt;   1 | 000234
+#&gt;   1 | 567777899
+#&gt;   2 | 123
+#&gt;   2 | 579
+#&gt;   3 | 2
+#&gt;   3 | 56
+#&gt;   4 | 
+#&gt;   4 | 5
+#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Superbowl</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -156,7 +154,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

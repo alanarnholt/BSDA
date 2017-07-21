@@ -115,8 +115,8 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Wins</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	12 obs. of  9 variables:
-#&gt;  $ team   : chr  "Atlanta" "Chicago" "Cincinnati" "Houston" ...
+<span class='fu'>str</span>(<span class='no'>Wins</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  9 variables:
+#&gt;  $ team   : Factor w/ 12 levels "Atlanta","Chicago",..: 1 2 3 4 5 6 7 8 9 12 ...
 #&gt;  $ wins   : int  65 77 91 75 86 85 91 77 95 70 ...
 #&gt;  $ batavg : num  0.25 0.263 0.265 0.242 0.262 0.25 0.256 0.255 0.259 0.256 ...
 #&gt;  $ rbi    : int  636 649 644 536 669 607 734 619 693 554 ...
@@ -124,30 +124,7 @@ Duxbury</p>
 #&gt;  $ strkout: int  1010 869 913 997 952 1024 851 915 914 844 ...
 #&gt;  $ caught : int  55 50 66 83 65 99 33 35 52 74 ...
 #&gt;  $ errors : int  158 124 102 131 130 110 132 117 134 130 ...
-#&gt;  $ era    : num  4.58 4.34 3.39 3.61 3.72 3.37 3.43 4.07 3.4 3.87 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 9
-#&gt;   .. ..$ team   : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
-#&gt;   .. ..$ wins   : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ batavg : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ rbi    : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ stole  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ strkout: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ caught : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ errors : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ era    : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Wins</span>)
+#&gt;  $ era    : num  4.58 4.34 3.39 3.61 3.72 3.37 3.43 4.07 3.4 3.87 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Wins</span>)
 <span class='fu'>plot</span>(<span class='no'>era</span>,<span class='no'>wins</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>wins</span>~<span class='no'>era</span>)
 <span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Wins-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
@@ -186,7 +163,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

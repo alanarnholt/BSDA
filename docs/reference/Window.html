@@ -103,19 +103,25 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Window</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	9 obs. of  2 variables:
-#&gt;  $ window : int  1 2 3 4 5 6 7 8 9
-#&gt;  $ leakage: num  0.13 0.17 0.13 0.18 0.14 0.12 0.11 0.14 0.2
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 2
-#&gt;   .. ..$ Window : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ Leakage: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Window</span>)
-<span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>Leakage</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>.125</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"greater"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in sort(x): object 'Leakage' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Window</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Window</span>)</div><div class='output co'>#&gt; 'data.frame':	9 obs. of  2 variables:
+#&gt;  $ Window : int  1 2 3 4 5 6 7 8 9
+#&gt;  $ Leakage: num  0.13 0.17 0.13 0.18 0.14 0.12 0.11 0.14 0.2</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Window</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    Window</span></div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>Leakage</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>.125</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
+#&gt; 	One-sample Sign-Test
+#&gt; 
+#&gt; data:  Leakage
+#&gt; s = 7, p-value = 0.08984
+#&gt; alternative hypothesis: true median is greater than 0.125
+#&gt; 95 percent confidence interval:
+#&gt;  0.1243333       Inf
+#&gt; sample estimates:
+#&gt; median of x 
+#&gt;        0.14 
+#&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
+#&gt; Lower Achieved CI     0.9102 0.1300    Inf
+#&gt; Interpolated CI       0.9500 0.1243    Inf
+#&gt; Upper Achieved CI     0.9805 0.1200    Inf</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Window</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -133,7 +139,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

@@ -103,12 +103,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Leader</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	66 obs. of  2 variables:
-#&gt;  $ age  : chr  "under35" "under35" "under35" "under35" ...
-#&gt;  $ score: int  25 13 9 46 25 30 17 20 17 20 ...
-#&gt;  - attr(*, "na.action")=Class 'omit'  Named int [1:2] 33 34
-#&gt;   .. ..- attr(*, "names")= chr [1:2] "33" "34"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Leader</span>)
-<span class='fu'>boxplot</span>(<span class='no'>under35</span>,<span class='no'>over35</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Under 35"</span>,<span class='st'>"Over 35"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"green"</span>,<span class='st'>"brown"</span>))</div><div class='output co'>#&gt; <span class='error'>Error in boxplot(under35, over35, names = c("Under 35", "Over 35"), col = c("green",     "brown")): object 'under35' not found</span></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>under35</span>,<span class='no'>over35</span>)</div><div class='output co'>#&gt; <span class='error'>Error in t.test(under35, over35): object 'under35' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Leader</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Leader</span>)</div><div class='output co'>#&gt; 'data.frame':	34 obs. of  2 variables:
+#&gt;  $ under35: int  25 13 9 46 25 30 17 20 17 20 ...
+#&gt;  $ over35 : int  24 31 43 23 13 23 21 42 34 14 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Leader</span>)
+<span class='fu'>boxplot</span>(<span class='no'>under35</span>,<span class='no'>over35</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Under 35"</span>,<span class='st'>"Over 35"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"green"</span>,<span class='st'>"brown"</span>))</div><div class='img'><img src='Leader-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>under35</span>,<span class='no'>over35</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Welch Two Sample t-test
+#&gt; 
+#&gt; data:  under35 and over35
+#&gt; t = -1.1462, df = 60.522, p-value = 0.2562
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -9.505807  2.579337
+#&gt; sample estimates:
+#&gt; mean of x mean of y 
+#&gt;  24.12500  27.58824 
+#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Leader</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -126,7 +135,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

@@ -108,24 +108,11 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Ligntmonth</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	12 obs. of  4 variables:
-#&gt;  $ month   : Date, format: "2000-01-01" "2000-02-01" ...
+<span class='fu'>str</span>(<span class='no'>Ligntmonth</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  4 variables:
+#&gt;  $ Month   : Factor w/ 12 levels "1/01/2000","10/01/2000",..: 1 5 6 7 8 9 10 11 12 2 ...
 #&gt;  $ deaths  : int  5 6 40 97 347 690 934 687 281 51 ...
 #&gt;  $ injuries: int  28 29 158 288 910 1970 2960 2345 869 202 ...
-#&gt;  $ damage  : int  102 150 425 996 2169 3935 5155 4280 1755 514 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 4
-#&gt;   .. ..$ Month   : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
-#&gt;   .. ..$ deaths  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ injuries: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ damage  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Ligntmonth</span>)
+#&gt;  $ damage  : int  102 150 425 996 2169 3935 5155 4280 1755 514 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Ligntmonth</span>)
 <span class='fu'>plot</span>(<span class='no'>damage</span>,<span class='no'>deaths</span>)</div><div class='img'><img src='Ligntmonth-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Ligntmonth</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -144,7 +131,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

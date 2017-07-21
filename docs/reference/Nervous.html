@@ -103,18 +103,9 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Nervous</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	25 obs. of  2 variables:
+<span class='fu'>str</span>(<span class='no'>Nervous</span>)</div><div class='output co'>#&gt; 'data.frame':	25 obs. of  2 variables:
 #&gt;  $ react: int  3 5 4 6 4 5 7 3 4 5 ...
-#&gt;  $ drug : int  1 1 1 1 1 2 2 2 2 2 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 2
-#&gt;   .. ..$ react: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ drug : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Nervous</span>)
+#&gt;  $ drug : int  1 1 1 1 1 2 2 2 2 2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Nervous</span>)
 <span class='fu'>boxplot</span>(<span class='no'>react</span>~<span class='no'>drug</span>)</div><div class='img'><img src='Nervous-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>react</span>~<span class='fu'>as.factor</span>(<span class='no'>drug</span>)))</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: react
@@ -140,7 +131,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

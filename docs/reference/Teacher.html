@@ -117,12 +117,13 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Teacher</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	153 obs. of  3 variables:
-#&gt;  $ state : chr  "Alabama" "Alaska" "Arizona" "Arkansas" ...
-#&gt;  $ year  : chr  "1973-74" "1973-74" "1973-74" "1973-74" ...
-#&gt;  $ salary: int  9226 15667 10414 7820 13113 10131 11030 11304 NA 10018 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Teacher</span>)
+<span class='fu'>str</span>(<span class='no'>Teacher</span>)</div><div class='output co'>#&gt; 'data.frame':	51 obs. of  4 variables:
+#&gt;  $ State   : Factor w/ 51 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
+#&gt;  $ X1973.74: int  9226 15667 10414 7820 13113 10131 11030 11304 NA 10018 ...
+#&gt;  $ X1983.84: int  18000 36564 21605 16929 26403 22895 22624 20925 27659 19545 ...
+#&gt;  $ X1993.94: int  27000 44700 31200 26600 40200 33100 47000 34500 41300 31100 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Teacher</span>)
 <span class='fu'>boxplot</span>(<span class='no'>X1973.74</span>,<span class='no'>X1983.84</span>,<span class='no'>X1993.94</span>,
-<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"1973-1974"</span>,<span class='st'>"1983-1984"</span>,<span class='st'>"1993-1994"</span>),<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Average Salary"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in boxplot(X1973.74, X1983.84, X1993.94, names = c("1973-1974",     "1983-1984", "1993-1994"), ylab = "Average Salary"): object 'X1973.74' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Teacher</span>)</div></pre>
+<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"1973-1974"</span>,<span class='st'>"1983-1984"</span>,<span class='st'>"1993-1994"</span>),<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Average Salary"</span>)</div><div class='img'><img src='Teacher-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Teacher</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -140,7 +141,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

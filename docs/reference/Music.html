@@ -106,27 +106,27 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Music</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	12 obs. of  3 variables:
-#&gt;  $ method1: int  7 4 6 1 5 1 6 3 4 6 ...
-#&gt;  $ method2: int  2 4 3 2 3 4 2 4 4 3 ...
-#&gt;  $ differ : int  5 0 3 -1 2 -3 4 -1 0 3 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 3
-#&gt;   .. ..$ Method1: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ Method2: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ differ : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Music</span>)
+<span class='fu'>str</span>(<span class='no'>Music</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  3 variables:
+#&gt;  $ Method1: int  7 4 6 1 5 1 6 3 4 6 ...
+#&gt;  $ Method2: int  2 4 3 2 3 4 2 4 4 3 ...
+#&gt;  $ differ : int  5 0 3 -1 2 -3 4 -1 0 3 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Music</span>)
 <span class='fu'>qqnorm</span>(<span class='no'>differ</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>differ</span>)</div><div class='img'><img src='Music-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Shapiro-Wilk normality test
 #&gt; 
 #&gt; data:  differ
 #&gt; W = 0.96631, p-value = 0.8685
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Method1</span>,<span class='no'>Method2</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error in t.test(Method1, Method2, paired = TRUE): object 'Method1' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Music</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Method1</span>,<span class='no'>Method2</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Paired t-test
+#&gt; 
+#&gt; data:  Method1 and Method2
+#&gt; t = 1.5947, df = 11, p-value = 0.1391
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -0.411863  2.578530
+#&gt; sample estimates:
+#&gt; mean of the differences 
+#&gt;                1.083333 
+#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Music</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -144,7 +144,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

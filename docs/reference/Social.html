@@ -102,15 +102,8 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Social</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	25 obs. of  1 variable:
-#&gt;  $ income: int  25200 26500 26700 27900 28000 25500 22200 24700 27000 26500 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 1
-#&gt;   .. ..$ income: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Social</span>)
+<span class='fu'>str</span>(<span class='no'>Social</span>)</div><div class='output co'>#&gt; 'data.frame':	25 obs. of  1 variable:
+#&gt;  $ income: int  25200 26500 26700 27900 28000 25500 22200 24700 27000 26500 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Social</span>)
 <span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>income</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>27500</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
@@ -143,7 +136,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

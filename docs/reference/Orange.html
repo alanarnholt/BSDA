@@ -103,18 +103,9 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Orange</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	6 obs. of  2 variables:
+<span class='fu'>str</span>(<span class='no'>Orange</span>)</div><div class='output co'>#&gt; 'data.frame':	6 obs. of  2 variables:
 #&gt;  $ harvest: int  72 69 58 70 65 54
-#&gt;  $ price  : num  5.4 6.1 9.3 6.5 7.2 13.4
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 2
-#&gt;   .. ..$ harvest: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ price  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Orange</span>)
+#&gt;  $ price  : num  5.4 6.1 9.3 6.5 7.2 13.4</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Orange</span>)
 <span class='fu'>summary</span>(<span class='fu'>lm</span>(<span class='no'>price</span>~<span class='no'>harvest</span>))</div><div class='output co'>#&gt; 
 #&gt; Call:
 #&gt; lm(formula = price ~ harvest)
@@ -151,7 +142,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

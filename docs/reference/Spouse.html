@@ -105,23 +105,20 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Spouse</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	540 obs. of  2 variables:
-#&gt;  $ result: Factor w/ 4 levels "not prosecuted",..: 1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ spouse: Factor w/ 2 levels "husband","wife": 1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Spouse</span>)
-<span class='no'>Spouse</span></div><div class='output co'>#&gt; # A tibble: 540 x 2
-#&gt;            result  spouse
-#&gt;            &lt;fctr&gt;  &lt;fctr&gt;
-#&gt;  1 not prosecuted husband
-#&gt;  2 not prosecuted husband
-#&gt;  3 not prosecuted husband
-#&gt;  4 not prosecuted husband
-#&gt;  5 not prosecuted husband
-#&gt;  6 not prosecuted husband
-#&gt;  7 not prosecuted husband
-#&gt;  8 not prosecuted husband
-#&gt;  9 not prosecuted husband
-#&gt; 10 not prosecuted husband
-#&gt; # ... with 530 more rows</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>Spouse</span>[,<span class='fl'>2</span>:<span class='fl'>3</span>])</div><div class='output co'>#&gt; <span class='error'>Error: Column index must be at most 2 if positive, not 3</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Spouse</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Spouse</span>)</div><div class='output co'>#&gt; 'data.frame':	4 obs. of  3 variables:
+#&gt;  $ result : Factor w/ 4 levels "acquitted","convicted",..: 3 4 2 1
+#&gt;  $ husband: int  35 146 130 7
+#&gt;  $ wife   : int  35 87 69 31</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Spouse</span>)
+<span class='no'>Spouse</span></div><div class='output co'>#&gt;           result husband wife
+#&gt; 1 not prosecuted      35   35
+#&gt; 2 pleaded guilty     146   87
+#&gt; 3      convicted     130   69
+#&gt; 4      acquitted       7   31</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>Spouse</span>[,<span class='fl'>2</span>:<span class='fl'>3</span>])</div><div class='output co'>#&gt; 
+#&gt; 	Pearson's Chi-squared test
+#&gt; 
+#&gt; data:  Spouse[, 2:3]
+#&gt; X-squared = 32.765, df = 3, p-value = 3.61e-07
+#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Spouse</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -139,7 +136,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

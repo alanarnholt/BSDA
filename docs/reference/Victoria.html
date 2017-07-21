@@ -106,21 +106,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Victoria</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	20 obs. of  3 variables:
+<span class='fu'>str</span>(<span class='no'>Victoria</span>)</div><div class='output co'>#&gt; 'data.frame':	20 obs. of  3 variables:
 #&gt;  $ year   : int  1902 1903 1904 1905 1906 1907 1908 1909 1910 1911 ...
 #&gt;  $ level  : int  -10 13 18 15 29 21 10 8 1 -7 ...
-#&gt;  $ sunspot: int  5 24 42 63 54 62 49 44 19 6 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 3
-#&gt;   .. ..$ year   : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ level  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   .. ..$ sunspot: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Victoria</span>)
+#&gt;  $ sunspot: int  5 24 42 63 54 62 49 44 19 6 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Victoria</span>)
 <span class='fu'>plot</span>(<span class='no'>sunspot</span>,<span class='no'>level</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>level</span>~<span class='no'>sunspot</span>)
 <span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Victoria-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>cor</span>(<span class='no'>sunspot</span>,<span class='no'>level</span>)</div><div class='output co'>#&gt; [1] 0.8791223</div><div class='input'><span class='no'>model</span></div><div class='output co'>#&gt; 
 #&gt; Call:
@@ -147,7 +136,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

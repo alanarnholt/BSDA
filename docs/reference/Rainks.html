@@ -106,27 +106,12 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Rainks</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	35 obs. of  5 variables:
+<span class='fu'>str</span>(<span class='no'>Rainks</span>)</div><div class='output co'>#&gt; 'data.frame':	35 obs. of  5 variables:
 #&gt;  $ rain: num  2.97 1.88 2.19 1.68 2.4 3.4 2.05 2.11 2.66 1.49 ...
 #&gt;  $ x1  : num  1.85 1.72 1.94 0.78 2.51 3.55 2.08 1.4 2.36 2.25 ...
 #&gt;  $ x2  : num  2.36 1.93 3.35 1.23 2.04 4.46 1.67 1.83 1.88 2.34 ...
 #&gt;  $ x3  : num  2.17 1.25 2.3 0.97 3.19 3.82 1.94 1.94 2.78 1.82 ...
-#&gt;  $ x4  : num  2.77 1.5 2.64 1.66 2.17 4.06 2.22 2.55 3.18 2.12 ...
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 5
-#&gt;   .. ..$ rain: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ x1  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ x2  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ x3  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ x4  : list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Rainks</span>)
+#&gt;  $ x4  : num  2.77 1.5 2.64 1.66 2.17 4.06 2.22 2.55 3.18 2.12 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Rainks</span>)
 <span class='fu'>cor</span>(<span class='no'>Rainks</span>)</div><div class='output co'>#&gt;           rain        x1        x2        x3        x4
 #&gt; rain 1.0000000 0.7932854 0.8184772 0.7479617 0.8176309
 #&gt; x1   0.7932854 1.0000000 0.7686657 0.8826127 0.7199976
@@ -157,7 +142,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

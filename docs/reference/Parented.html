@@ -106,24 +106,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Parented</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	6 obs. of  3 variables:
-#&gt;  $ educat: chr  "H.S grad or less" "Some college" "4yr college degree" "Some grad school" ...
-#&gt;  $ mother: num  0.23 0.33 0.25 0.05 0.13 0.01
-#&gt;  $ father: num  0.2 0.25 0.28 0.04 0.17 0.06
-#&gt;  - attr(*, "spec")=List of 2
-#&gt;   ..$ cols   :List of 3
-#&gt;   .. ..$ Educat: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
-#&gt;   .. ..$ Mother: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   .. ..$ Father: list()
-#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
-#&gt;   ..$ default: list()
-#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
-#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Parented</span>)
-<span class='no'>MAT</span> <span class='kw'>&lt;-</span> <span class='fu'>cbind</span>(<span class='no'>Mother</span>, <span class='no'>Father</span>)</div><div class='output co'>#&gt; <span class='error'>Error in cbind(Mother, Father): object 'Mother' not found</span></div><div class='input'><span class='fu'>row.names</span>(<span class='no'>MAT</span>) <span class='kw'>&lt;-</span> <span class='no'>Educat</span></div><div class='output co'>#&gt; <span class='error'>Error in row.names(MAT) &lt;- Educat: object 'MAT' not found</span></div><div class='input'><span class='no'>MAT</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'MAT' not found</span></div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>MAT</span>),<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>))</div><div class='output co'>#&gt; <span class='error'>Error in t(MAT): object 'MAT' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Parented</span>)
-<span class='fu'>remove</span>(<span class='no'>MAT</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: object 'MAT' not found</span></div><div class='input'>
-</div></pre>
+<span class='fu'>str</span>(<span class='no'>Parented</span>)</div><div class='output co'>#&gt; 'data.frame':	6 obs. of  3 variables:
+#&gt;  $ Educat: Factor w/ 6 levels "4yr college degree",..: 4 5 1 6 3 2
+#&gt;  $ Mother: num  0.23 0.33 0.25 0.05 0.13 0.01
+#&gt;  $ Father: num  0.2 0.25 0.28 0.04 0.17 0.06</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Parented</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    Educat</span></div><div class='input'><span class='no'>MAT</span> <span class='kw'>&lt;-</span> <span class='fu'>cbind</span>(<span class='no'>Mother</span>, <span class='no'>Father</span>)
+<span class='fu'>row.names</span>(<span class='no'>MAT</span>) <span class='kw'>&lt;-</span> <span class='no'>Educat</span>
+<span class='no'>MAT</span></div><div class='output co'>#&gt;                    Mother Father
+#&gt; H.S grad or less     0.23   0.20
+#&gt; Some college         0.33   0.25
+#&gt; 4yr college degree   0.25   0.28
+#&gt; Some grad school     0.05   0.04
+#&gt; Grad degree          0.13   0.17
+#&gt; Doctoral degree      0.01   0.06</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>MAT</span>),<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>))</div><div class='img'><img src='Parented-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Parented</span>)
+<span class='fu'>remove</span>(<span class='no'>MAT</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -141,7 +138,7 @@ Duxbury</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt.</p>
+  <p>Developed by Alan Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">
