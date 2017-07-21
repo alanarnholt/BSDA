@@ -126,32 +126,64 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Yearsunspot</span>)</div><div class='output co'>#&gt; 'data.frame':	252 obs. of  24 variables:
-#&gt;  $ X1979: num  167 138 138 102 134 ...
-#&gt;  $ X1980: num  160 155 126 164 180 ...
-#&gt;  $ X1981: num  114 141 136 156 128 ...
-#&gt;  $ X1982: num  111.2 163.6 153.8 122 82.2 ...
-#&gt;  $ X1983: num  84.3 51 66.5 80.7 99.2 91.1 82.2 71.8 50.3 55.8 ...
-#&gt;  $ X1984: num  57 85.4 83.5 69.7 76.4 46.1 37.4 25.5 15.7 12 ...
-#&gt;  $ X1985: num  16.5 15.9 17.2 16.2 27.5 24.2 30.7 11.1 3.9 18.6 ...
-#&gt;  $ X1986: num  2.5 23.2 15.1 18.5 13.7 1.1 18.1 7.4 3.8 35.5 ...
-#&gt;  $ X1987: num  10.4 2.4 14.8 39.3 30.6 17.5 33 38.6 33.5 60.5 ...
-#&gt;  $ X1988: num  59 40 76.2 88 60.1 ...
-#&gt;  $ X1989: num  161 165 131 131 138 ...
-#&gt;  $ X1990: num  177 130 140 140 132 ...
-#&gt;  $ X1991: num  137 168 142 140 121 ...
-#&gt;  $ X1992: num  150 161.1 106.7 99.8 73.8 ...
-#&gt;  $ X1993: num  59.3 91 69.8 62.2 61.3 49.8 57.9 42.2 22.4 56.4 ...
-#&gt;  $ X1994: num  57.8 35.5 31.7 16.1 17.8 28 35.1 22.5 25.7 43.8 ...
-#&gt;  $ X1995: num  24.2 29.9 31.1 14 14.5 15.6 14.5 14.3 11.8 21.1 ...
-#&gt;  $ X1996: num  11.5 4.4 9.2 4.8 5.5 11.8 8.2 14.4 1.6 0.9 ...
-#&gt;  $ X1997: num  5.7 7.6 8.7 15.5 18.5 12.7 10.4 24.4 51.3 22.8 ...
-#&gt;  $ X1998: num  31.9 40.3 54.8 53.4 56.3 70.6 66.2 91.7 92.9 55.6 ...
-#&gt;  $ X1999: num  62 66.3 68.8 63.7 106.4 ...
-#&gt;  $ X2000: num  90.2 112.3 138.2 NA NA ...
-#&gt;  $ SSN  : num  167 138 138 102 134 ...
-#&gt;  $ year : int  79 79 79 79 79 79 79 79 79 79 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Yearsunspot</span>)
-<span class='fu'>boxplot</span>(<span class='no'>SSN</span>~<span class='no'>year</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Exercise 2.7"</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"lightblue"</span>)</div><div class='img'><img src='Yearsunspot-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Yearsunspot</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Yearsunspot</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	252 obs. of  2 variables:
+#&gt;  $ number: num  167 138 138 102 134 ...
+#&gt;  $ year  : Date, format: "1979-01-01" "1979-02-01" ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 24
+#&gt;   .. ..$ 1979: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1980: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1981: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1982: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1983: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1984: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1985: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1986: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1987: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1988: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1989: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1990: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1991: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1992: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1993: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1994: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1995: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1996: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1997: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1998: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1999: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 2000: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ SSN : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ year: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Yearsunspot</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 17):</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    number</span></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>SSN</span>~<span class='no'>year</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Exercise 2.7"</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"lightblue"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'SSN' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Yearsunspot</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

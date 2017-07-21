@@ -107,21 +107,28 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Lodge</span>)</div><div class='output co'>#&gt; 'data.frame':	45 obs. of  6 variables:
-#&gt;  $ SiteA  : int  162 154 174 148 150 148 185 157 164 172 ...
-#&gt;  $ SiteB  : int  165 193 178 184 157 165 204 195 183 189 ...
-#&gt;  $ SiteC  : int  165 160 155 168 140 151 163 175 182 150 ...
-#&gt;  $ Traffic: int  162 154 174 148 150 148 185 157 164 172 ...
-#&gt;  $ Site   : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ Ranks  : num  17 8 27 3.5 5.5 3.5 37.5 10.5 19.5 25 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Lodge</span>)
-<span class='fu'>boxplot</span>(<span class='no'>Traffic</span>~<span class='no'>Site</span>)</div><div class='img'><img src='Lodge-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>Traffic</span>~<span class='fu'>as.factor</span>(<span class='no'>Site</span>)))</div><div class='output co'>#&gt; Analysis of Variance Table
-#&gt; 
-#&gt; Response: Traffic
-#&gt;                 Df Sum Sq Mean Sq F value    Pr(&gt;F)    
-#&gt; as.factor(Site)  2 3951.6 1975.82  9.1838 0.0004913 ***
-#&gt; Residuals       42 9036.0  215.14                      
-#&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Lodge</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Lodge</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	45 obs. of  3 variables:
+#&gt;  $ traffic: int  162 154 174 148 150 148 185 157 164 172 ...
+#&gt;  $ site   : int  1 1 1 1 1 1 1 1 1 1 ...
+#&gt;  $ ranks  : num  17 8 27 3.5 5.5 3.5 37.5 10.5 19.5 25 ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 6
+#&gt;   .. ..$ SiteA  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ SiteB  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ SiteC  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ Traffic: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ Site   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ Ranks  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Lodge</span>)
+<span class='fu'>boxplot</span>(<span class='no'>Traffic</span>~<span class='no'>Site</span>)</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'Traffic' not found</span></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>Traffic</span>~<span class='fu'>as.factor</span>(<span class='no'>Site</span>)))</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'Traffic' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Lodge</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

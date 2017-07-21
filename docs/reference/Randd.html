@@ -106,12 +106,24 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Randd</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  5 variables:
+<span class='fu'>str</span>(<span class='no'>Randd</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	12 obs. of  2 variables:
 #&gt;  $ rd   : num  1.2 2.4 3.1 4 4.9 6.3 1.8 2.7 3.3 3.7 ...
 #&gt;  $ sales: int  55 48 32 21 10 41 43 44 21 32 ...
-#&gt;  $ SRES1: num  0.763 0.779 -0.152 -0.546 -0.975 ...
-#&gt;  $ FITS1: num  46.8 38.6 33.9 27.7 21.6 ...
-#&gt;  $ RESI1: num  8.17 9.35 -1.88 -6.74 -11.61 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Randd</span>)
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 5
+#&gt;   .. ..$ rd   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ sales: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ SRES1: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ FITS1: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ RESI1: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Randd</span>)
 <span class='fu'>plot</span>(<span class='no'>rd</span>,<span class='no'>sales</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>sales</span>~<span class='no'>rd</span>)
 <span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Randd-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:

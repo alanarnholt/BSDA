@@ -103,9 +103,18 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Viscosit</span>)</div><div class='output co'>#&gt; 'data.frame':	11 obs. of  2 variables:
+<span class='fu'>str</span>(<span class='no'>Viscosit</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	11 obs. of  2 variables:
 #&gt;  $ first : num  35.4 38.3 34 36.2 37.2 32.8 36 35.2 36 31.3 ...
-#&gt;  $ second: num  37 38.6 35.1 37.1 36.2 36.8 37.6 34.8 35.8 38.2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Viscosit</span>)
+#&gt;  $ second: num  37 38.6 35.1 37.1 36.2 36.8 37.6 34.8 35.8 38.2 ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 2
+#&gt;   .. ..$ first : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ second: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Viscosit</span>)
 <span class='fu'>t.test</span>(<span class='no'>first</span>,<span class='no'>second</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 

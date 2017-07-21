@@ -102,8 +102,15 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Puerto</span>)</div><div class='output co'>#&gt; 'data.frame':	50 obs. of  1 variable:
-#&gt;  $ income: int  150 280 175 190 305 380 290 300 170 315 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Puerto</span>)
+<span class='fu'>str</span>(<span class='no'>Puerto</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	50 obs. of  1 variable:
+#&gt;  $ income: int  150 280 175 190 305 380 290 300 170 315 ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 1
+#&gt;   .. ..$ income: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Puerto</span>)
 <span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>income</span>)</div><div class='output co'>#&gt; [1] "income"</div><div class='img'><img src='Puerto-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   50.000    0.000  150.000  223.750  277.500  272.500  274.239  335.000 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 

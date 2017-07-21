@@ -107,20 +107,23 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Seatbelt</span>)</div><div class='output co'>#&gt; 'data.frame':	2 obs. of  5 variables:
-#&gt;  $ seatbelt: Factor w/ 2 levels "no","yes": 2 1
-#&gt;  $ None    : int  12813 65963
-#&gt;  $ Minimal : int  647 4000
-#&gt;  $ Minor   : int  359 2642
-#&gt;  $ Major   : int  42 303</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Seatbelt</span>)
-<span class='no'>Seatbelt</span></div><div class='output co'>#&gt;   seatbelt  None Minimal Minor Major
-#&gt; 1      yes 12813     647   359    42
-#&gt; 2       no 65963    4000  2642   303</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>Seatbelt</span>[,<span class='fl'>2</span>:<span class='fl'>5</span>])</div><div class='output co'>#&gt; 
-#&gt; 	Pearson's Chi-squared test
-#&gt; 
-#&gt; data:  Seatbelt[, 2:5]
-#&gt; X-squared = 59.224, df = 3, p-value = 8.61e-13
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Seatbelt</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Seatbelt</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	86769 obs. of  2 variables:
+#&gt;  $ seatbelt: Factor w/ 2 levels "Yes","No": 1 1 1 1 1 1 1 1 1 1 ...
+#&gt;  $ injuries: Factor w/ 4 levels "None","Minimal",..: 1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Seatbelt</span>)
+<span class='no'>Seatbelt</span></div><div class='output co'>#&gt; # A tibble: 86,769 x 2
+#&gt;    seatbelt injuries
+#&gt;      &lt;fctr&gt;   &lt;fctr&gt;
+#&gt;  1      Yes     None
+#&gt;  2      Yes     None
+#&gt;  3      Yes     None
+#&gt;  4      Yes     None
+#&gt;  5      Yes     None
+#&gt;  6      Yes     None
+#&gt;  7      Yes     None
+#&gt;  8      Yes     None
+#&gt;  9      Yes     None
+#&gt; 10      Yes     None
+#&gt; # ... with 86,759 more rows</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>Seatbelt</span>[,<span class='fl'>2</span>:<span class='fl'>5</span>])</div><div class='output co'>#&gt; <span class='error'>Error: Column indexes must be at most 2 if positive, not 3, 4, 5</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Seatbelt</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

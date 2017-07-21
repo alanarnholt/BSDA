@@ -103,32 +103,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Remedial</span>)</div><div class='output co'>#&gt; 'data.frame':	42 obs. of  2 variables:
-#&gt;  $ female: int  28 21 4 20 16 19 39 22 5 18 ...
-#&gt;  $ male  : int  18 22 16 14 2 16 18 20 22 19 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Remedial</span>)
-<span class='fu'>boxplot</span>(<span class='no'>female</span>,<span class='no'>male</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>))</div><div class='img'><img src='Remedial-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>female</span>,<span class='no'>male</span>,<span class='kw'>conf.int</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact confidence intervals with ties</span></div><div class='output co'>#&gt; 
-#&gt; 	Wilcoxon rank sum test with continuity correction
-#&gt; 
-#&gt; data:  female and male
-#&gt; W = 855.5, p-value = 0.218
-#&gt; alternative hypothesis: true location shift is not equal to 0
-#&gt; 95 percent confidence interval:
-#&gt;  -0.9999613  3.0000179
-#&gt; sample estimates:
-#&gt; difference in location 
-#&gt;               1.000093 
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>female</span>,<span class='no'>male</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Welch Two Sample t-test
-#&gt; 
-#&gt; data:  female and male
-#&gt; t = 0.20997, df = 68.546, p-value = 0.8343
-#&gt; alternative hypothesis: true difference in means is not equal to 0
-#&gt; 95 percent confidence interval:
-#&gt;  -3.522407  4.350978
-#&gt; sample estimates:
-#&gt; mean of x mean of y 
-#&gt;  19.34286  18.92857 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Remedial</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Remedial</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	84 obs. of  2 variables:
+#&gt;  $ gender: chr  "female" "female" "female" "female" ...
+#&gt;  $ score : int  28 21 4 20 16 19 39 22 5 18 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Remedial</span>)
+<span class='fu'>boxplot</span>(<span class='no'>female</span>,<span class='no'>male</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>))</div><div class='output co'>#&gt; <span class='error'>Error in boxplot(female, male, col = c("blue", "red")): object 'female' not found</span></div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>female</span>,<span class='no'>male</span>,<span class='kw'>conf.int</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error in wilcox.test(female, male, conf.int = TRUE): object 'female' not found</span></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>female</span>,<span class='no'>male</span>)</div><div class='output co'>#&gt; <span class='error'>Error in t.test(female, male): object 'female' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Remedial</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

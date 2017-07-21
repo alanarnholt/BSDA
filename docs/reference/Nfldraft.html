@@ -133,8 +133,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Nfldraft</span>)</div><div class='output co'>#&gt; 'data.frame':	29 obs. of  1 variable:
-#&gt;  $ Rating.forty.weight: Factor w/ 29 levels "5.000000000e+000\t5.300000000e+000\t3.100000000e+002",..: 23 16 14 9 6 2 1 29 28 25 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Nfldraft</span>)
+<span class='fu'>str</span>(<span class='no'>Nfldraft</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	29 obs. of  3 variables:
+#&gt;  $ rating: num  6.5 6.1 6 5.7 5.5 5.2 5 7.6 7.2 7 ...
+#&gt;  $ forty : num  4.94 5.27 5.27 5.14 5.09 5.23 5.3 5.15 5.2 5.2 ...
+#&gt;  $ weight: int  285 285 285 277 280 274 310 303 315 325 ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 3
+#&gt;   .. ..$ Rating: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ forty : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ weight: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Nfldraft</span>)
 <span class='fu'>detach</span>(<span class='no'>Nfldraft</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

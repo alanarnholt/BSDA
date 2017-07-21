@@ -108,22 +108,23 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Vehicle</span>)</div><div class='output co'>#&gt; 'data.frame':	2 obs. of  6 variables:
-#&gt;  $ make: Factor w/ 2 levels "domestic","foreign": 2 1
-#&gt;  $ A   : int  11 30
-#&gt;  $ B   : int  0 9
-#&gt;  $ C   : int  10 38
-#&gt;  $ D   : int  4 7
-#&gt;  $ F   : int  12 30</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Vehicle</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:base:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    F</span></div><div class='input'><span class='no'>Vehicle</span></div><div class='output co'>#&gt;       make  A B  C D  F
-#&gt; 1  foreign 11 0 10 4 12
-#&gt; 2 domestic 30 9 38 7 30</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>Vehicle</span>[,<span class='fl'>2</span>:<span class='fl'>6</span>])</div><div class='output co'>#&gt; <span class='warning'>Warning: Chi-squared approximation may be incorrect</span></div><div class='output co'>#&gt; 
-#&gt; 	Pearson's Chi-squared test
-#&gt; 
-#&gt; data:  Vehicle[, 2:6]
-#&gt; X-squared = 4.6026, df = 4, p-value = 0.3306
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Vehicle</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Vehicle</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	151 obs. of  2 variables:
+#&gt;  $ make  : Factor w/ 2 levels "Foreign","Domestic": 1 1 1 1 1 1 1 1 1 1 ...
+#&gt;  $ rating: Factor w/ 5 levels "Much better than average",..: 1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Vehicle</span>)
+<span class='no'>Vehicle</span></div><div class='output co'>#&gt; # A tibble: 151 x 2
+#&gt;       make                   rating
+#&gt;     &lt;fctr&gt;                   &lt;fctr&gt;
+#&gt;  1 Foreign Much better than average
+#&gt;  2 Foreign Much better than average
+#&gt;  3 Foreign Much better than average
+#&gt;  4 Foreign Much better than average
+#&gt;  5 Foreign Much better than average
+#&gt;  6 Foreign Much better than average
+#&gt;  7 Foreign Much better than average
+#&gt;  8 Foreign Much better than average
+#&gt;  9 Foreign Much better than average
+#&gt; 10 Foreign Much better than average
+#&gt; # ... with 141 more rows</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>Vehicle</span>[,<span class='fl'>2</span>:<span class='fl'>6</span>])</div><div class='output co'>#&gt; <span class='error'>Error: Column indexes must be at most 2 if positive, not 3, 4, 5, 6</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Vehicle</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

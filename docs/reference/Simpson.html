@@ -118,29 +118,51 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Simpson</span>)</div><div class='output co'>#&gt; 'data.frame':	100 obs. of  15 variables:
-#&gt;  $ gpa     : num  2.78 2.8 2.39 2.71 2.46 2.64 2.74 2.29 3.1 1.95 ...
-#&gt;  $ spor    : int  3 3 2 3 2 3 3 2 3 1 ...
-#&gt;  $ gender  : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ gpamale : num  2.78 2.8 2.39 2.71 2.46 2.64 2.74 2.29 3.1 1.95 ...
-#&gt;  $ sptmale : int  3 3 2 3 2 3 3 2 3 1 ...
-#&gt;  $ gpafemal: num  2.08 2.56 2.37 2.46 3.12 2.3 2.47 3.05 2.5 2.63 ...
-#&gt;  $ sptfemal: int  1 2 2 2 3 2 2 3 2 2 ...
-#&gt;  $ bbgpa   : num  1.95 1.96 2 1.99 1.83 1.93 1.99 2.03 1.88 2.1 ...
-#&gt;  $ genderbb: int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ sogpa   : num  2.39 2.46 2.29 2.57 2.32 2.41 2.43 2.29 2.32 2.39 ...
-#&gt;  $ genderso: int  3 3 3 3 3 3 3 3 3 3 ...
-#&gt;  $ tkgpa   : num  2.78 2.8 2.71 2.64 2.74 3.1 2.77 2.75 3.02 2.86 ...
-#&gt;  $ gendertk: int  5 5 5 5 5 5 5 5 5 5 ...
-#&gt;  $ gradept : num  1.95 1.96 2 1.99 1.83 1.93 1.99 2.03 1.88 2.1 ...
-#&gt;  $ gender2 : int  1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Simpson</span>)
+<span class='fu'>str</span>(<span class='no'>Simpson</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	100 obs. of  3 variables:
+#&gt;  $ gpa   : num  2.78 2.8 2.39 2.71 2.46 2.64 2.74 2.29 3.1 1.95 ...
+#&gt;  $ sport : chr  "soccer" "soccer" "track" "soccer" ...
+#&gt;  $ gender: chr  "male" "male" "male" "male" ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 15
+#&gt;   .. ..$ gpa     : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ spor    : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ gender  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ gpamale : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ sptmale : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ gpafemal: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ sptfemal: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ bbgpa   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ genderbb: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ sogpa   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ genderso: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ tkgpa   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ gendertk: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ gradept : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ gender2 : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Simpson</span>)
 <span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>,<span class='fl'>2</span>))
 <span class='fu'>boxplot</span>(<span class='no'>gpa</span>~<span class='no'>gender</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"pink"</span>),<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Male"</span>,<span class='st'>"Female"</span>),
 <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"GPA versus Gender"</span>,<span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Gender"</span>,<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Grade Point Average"</span>)
 <span class='fu'>boxplot</span>(<span class='no'>gradept</span>~<span class='no'>gender2</span>,<span class='kw'>las</span><span class='kw'>=</span><span class='fl'>2</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"pink"</span>),
 <span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"M-BBALL"</span>,<span class='st'>"F-BBALL"</span>,<span class='st'>"M-SOCC"</span>,<span class='st'>"F-SOCC"</span>,<span class='st'>"M-TRAC"</span>,<span class='st'>"F-TRAC"</span>),
-<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Grade Point Average"</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"GPA vs Gender by Sports"</span>)</div><div class='img'><img src='Simpson-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>,<span class='fl'>1</span>))
-<span class='fu'>detach</span>(<span class='no'>Simpson</span>)</div></pre>
+<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Grade Point Average"</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"GPA vs Gender by Sports"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'gradept' not found</span></div><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>1</span>,<span class='fl'>1</span>))</div><div class='img'><img src='Simpson-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Simpson</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

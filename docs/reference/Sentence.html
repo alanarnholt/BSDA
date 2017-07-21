@@ -102,8 +102,15 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Sentence</span>)</div><div class='output co'>#&gt; 'data.frame':	41 obs. of  1 variable:
-#&gt;  $ months: int  117 188 172 145 173 159 123 136 115 190 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Sentence</span>)
+<span class='fu'>str</span>(<span class='no'>Sentence</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	41 obs. of  1 variable:
+#&gt;  $ months: int  117 188 172 145 173 159 123 136 115 190 ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 1
+#&gt;   .. ..$ months: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Sentence</span>)
 <span class='fu'>stem</span>(<span class='no'>months</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the right of the |
 #&gt; 

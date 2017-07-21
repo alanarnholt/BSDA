@@ -104,10 +104,19 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Stamp</span>)</div><div class='output co'>#&gt; 'data.frame':	485 obs. of  3 variables:
+<span class='fu'>str</span>(<span class='no'>Stamp</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	485 obs. of  1 variable:
 #&gt;  $ thickness: num  0.06 0.064 0.064 0.065 0.066 0.068 0.069 0.069 0.069 0.069 ...
-#&gt;  $ thick    : num  0.06 0.061 0.062 0.063 0.064 0.065 0.066 0.067 0.068 0.069 ...
-#&gt;  $ freq     : int  1 0 0 0 2 1 1 0 1 7 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Stamp</span>)
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 3
+#&gt;   .. ..$ thickness: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ thick    : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ freq     : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Stamp</span>)
 <span class='fu'>hist</span>(<span class='no'>thickness</span>,<span class='kw'>prob</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"lightblue"</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>thickness</span>),<span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"blue"</span>)</div><div class='img'><img src='Stamp-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>thickness</span>,<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.99</span>)$<span class='no'>conf</span></div><div class='output co'>#&gt; [1] 0.08426759 0.08778189
 #&gt; attr(,"conf.level")
 #&gt; [1] 0.99</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Stamp</span>)</div></pre>

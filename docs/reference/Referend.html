@@ -106,17 +106,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Referend</span>)</div><div class='output co'>#&gt; 'data.frame':	3 obs. of  4 variables:
-#&gt;  $ Response: Factor w/ 3 levels "A","B","C": 1 2 3
-#&gt;  $ For     : int  24 68 47
-#&gt;  $ Against : int  29 39 8
-#&gt;  $ undecide: int  7 12 3</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Referend</span>)
-<span class='fu'>chisq.test</span>(<span class='no'>Referend</span>[,<span class='fl'>2</span>:<span class='fl'>4</span>])</div><div class='output co'>#&gt; 
-#&gt; 	Pearson's Chi-squared test
-#&gt; 
-#&gt; data:  Referend[, 2:4]
-#&gt; X-squared = 21.074, df = 4, p-value = 0.0003062
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Referend</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Referend</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	237 obs. of  2 variables:
+#&gt;  $ choice  : Factor w/ 3 levels "A","B","C": 1 1 1 1 1 1 1 1 1 1 ...
+#&gt;  $ response: Factor w/ 3 levels "for","against",..: 1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Referend</span>)
+<span class='fu'>chisq.test</span>(<span class='no'>Referend</span>[,<span class='fl'>2</span>:<span class='fl'>4</span>])</div><div class='output co'>#&gt; <span class='error'>Error: Column indexes must be at most 2 if positive, not 3, 4</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Referend</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -103,21 +103,17 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Wool</span>)</div><div class='output co'>#&gt; 'data.frame':	10 obs. of  2 variables:
-#&gt;  $ Type.1: int  138 127 148 134 125 136 152 110 137 160
-#&gt;  $ Type.2: int  134 137 135 140 130 134 120 157 162 114</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Wool</span>)
-<span class='fu'>t.test</span>(<span class='no'>Type.1</span>,<span class='no'>Type.2</span>,<span class='kw'>var.equal</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Two Sample t-test
-#&gt; 
-#&gt; data:  Type.1 and Type.2
-#&gt; t = 0.061752, df = 18, p-value = 0.9514
-#&gt; alternative hypothesis: true difference in means is not equal to 0
-#&gt; 95 percent confidence interval:
-#&gt;  -13.20869  14.00869
-#&gt; sample estimates:
-#&gt; mean of x mean of y 
-#&gt;     136.7     136.3 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Wool</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Wool</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	20 obs. of  2 variables:
+#&gt;  $ type    : chr  "Type 1" "Type 1" "Type 1" "Type 1" ...
+#&gt;  $ strength: int  138 127 148 134 125 136 152 110 137 160 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Wool</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked _by_ .GlobalEnv:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 3):</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 5):</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    type</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 6):</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    type</span></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Type.1</span>,<span class='no'>Type.2</span>,<span class='kw'>var.equal</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error in t.test(Type.1, Type.2, var.equal = TRUE): object 'Type.1' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Wool</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

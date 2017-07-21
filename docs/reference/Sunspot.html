@@ -103,9 +103,18 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Sunspot</span>)</div><div class='output co'>#&gt; 'data.frame':	301 obs. of  2 variables:
+<span class='fu'>str</span>(<span class='no'>Sunspot</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	301 obs. of  2 variables:
 #&gt;  $ year    : int  1700 1701 1702 1703 1704 1705 1706 1707 1708 1709 ...
-#&gt;  $ sunspots: num  5 11 16 23 36 58 29 20 10 8 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Sunspot</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:datasets:</span>
+#&gt;  $ sunspots: num  5 11 16 23 36 58 29 20 10 8 ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 2
+#&gt;   .. ..$ year    : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ sunspots: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Sunspot</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:datasets:</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    sunspots</span></div><div class='input'><span class='fu'>plot</span>(<span class='no'>year</span>,<span class='no'>sunspots</span>,<span class='kw'>type</span><span class='kw'>=</span><span class='st'>"l"</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Yearly Sunspots"</span>)    <span class='co'># Using standard plot</span></div><div class='img'><img src='Sunspot-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>library</span>(<span class='no'>lattice</span>)
 <span class='fu'><a href='http://www.rdocumentation.org/packages/lattice/topics/xyplot'>xyplot</a></span>(<span class='no'>sunspots</span> ~ <span class='fl'>1700</span>:<span class='fl'>2000</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"l"</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Yearly Sunspots"</span>)</div><div class='img'><img src='Sunspot-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'><a href='http://www.rdocumentation.org/packages/lattice/topics/xyplot'>xyplot</a></span>(<span class='no'>sunspots</span> ~ <span class='fl'>1700</span>:<span class='fl'>2000</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"l"</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='st'>"xy"</span>,

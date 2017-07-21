@@ -104,10 +104,20 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Thermal</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  3 variables:
+<span class='fu'>str</span>(<span class='no'>Thermal</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	12 obs. of  2 variables:
 #&gt;  $ temp: int  -10 -10 -10 0 0 0 10 10 10 20 ...
 #&gt;  $ loss: int  58 62 54 39 41 36 22 26 20 10 ...
-#&gt;  $ x   : int  -10 0 10 20 30 40 NA NA NA NA ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Thermal</span>)
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 3
+#&gt;   .. ..$ temp: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ loss: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ x   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Thermal</span>)
 <span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>loss</span>~<span class='no'>temp</span>)
 <span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:

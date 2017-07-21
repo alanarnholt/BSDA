@@ -108,14 +108,28 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Windmill</span>)</div><div class='output co'>#&gt; 'data.frame':	25 obs. of  7 variables:
-#&gt;  $ velocity   : num  2.45 2.7 2.9 3.05 3.4 3.6 3.95 4.1 4.6 5 ...
-#&gt;  $ output     : num  0.123 0.5 0.653 0.558 1.057 ...
-#&gt;  $ SRES1      : num  -2.716 -1.271 -0.795 -1.378 0.471 ...
-#&gt;  $ FITS1      : num  0.722 0.782 0.83 0.866 0.951 ...
-#&gt;  $ X1.velocity: num  0.408 0.37 0.345 0.328 0.294 ...
-#&gt;  $ SRES2      : num  -0.313 1.052 0.75 -1.668 1.307 ...
-#&gt;  $ FITS2      : num  0.148 0.411 0.588 0.705 0.939 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Windmill</span>)
+<span class='fu'>str</span>(<span class='no'>Windmill</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	25 obs. of  2 variables:
+#&gt;  $ velocity: num  2.45 2.7 2.9 3.05 3.4 3.6 3.95 4.1 4.6 5 ...
+#&gt;  $ output  : num  0.123 0.5 0.653 0.558 1.057 ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 7
+#&gt;   .. ..$ velocity  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ output    : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ SRES1     : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ FITS1     : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ 1/velocity: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ SRES2     : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ FITS2     : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Windmill</span>)
 <span class='fu'>summary</span>(<span class='fu'>lm</span>(<span class='no'>output</span>~<span class='no'>velocity</span>))</div><div class='output co'>#&gt; 
 #&gt; Call:
 #&gt; lm(formula = output ~ velocity)

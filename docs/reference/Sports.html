@@ -105,11 +105,23 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Sports</span>)</div><div class='output co'>#&gt; 'data.frame':	2 obs. of  1 variable:
-#&gt;  $ gender.football.basketbl.baseball.tennis: Factor w/ 2 levels "female\t3.800000000e+001\t2.100000000e+001\t1.500000000e+001\t2.600000000e+001",..: 2 1</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Sports</span>)
-<span class='no'>Sports</span></div><div class='output co'>#&gt;                                         gender.football.basketbl.baseball.tennis
-#&gt; 1   male\t3.300000000e+001\t3.800000000e+001\t2.400000000e+001\t5.000000000e+000
-#&gt; 2 female\t3.800000000e+001\t2.100000000e+001\t1.500000000e+001\t2.600000000e+001</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Sports</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Sports</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	200 obs. of  2 variables:
+#&gt;  $ gender: Factor w/ 2 levels "male","female": 1 1 1 1 1 1 1 1 1 1 ...
+#&gt;  $ sport : Factor w/ 4 levels "football","basketball",..: 1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Sports</span>)
+<span class='no'>Sports</span></div><div class='output co'>#&gt; # A tibble: 200 x 2
+#&gt;    gender    sport
+#&gt;    &lt;fctr&gt;   &lt;fctr&gt;
+#&gt;  1   male football
+#&gt;  2   male football
+#&gt;  3   male football
+#&gt;  4   male football
+#&gt;  5   male football
+#&gt;  6   male football
+#&gt;  7   male football
+#&gt;  8   male football
+#&gt;  9   male football
+#&gt; 10   male football
+#&gt; # ... with 190 more rows</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Sports</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

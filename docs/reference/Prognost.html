@@ -104,25 +104,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Prognost</span>)</div><div class='output co'>#&gt; 'data.frame':	15 obs. of  1 variable:
-#&gt;  $ score: num  11.9 8.2 6.9 11.7 7.4 6.5 9.5 7.4 6.3 9.4 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Prognost</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>score</span>)</div><div class='output co'>#&gt; [1] "score"</div><div class='img'><img src='Prognost-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   15.000    0.000    4.900    6.800    8.000    7.400    8.000    9.400 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   11.900    1.947    3.790    0.503    2.600    7.000   -0.501    0.667 
-#&gt; SW p-val 
-#&gt;    0.169 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>score</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>9</span>)</div><div class='output co'>#&gt; 
-#&gt; 	One Sample t-test
-#&gt; 
-#&gt; data:  score
-#&gt; t = -1.9894, df = 14, p-value = 0.06656
-#&gt; alternative hypothesis: true mean is not equal to 9
-#&gt; 95 percent confidence interval:
-#&gt;  6.921902 9.078098
-#&gt; sample estimates:
-#&gt; mean of x 
-#&gt;         8 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Prognost</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Prognost</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	15 obs. of  1 variable:
+#&gt;  $ kprs_score: num  11.9 8.2 6.9 11.7 7.4 6.5 9.5 7.4 6.3 9.4 ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 1
+#&gt;   .. ..$ score: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Prognost</span>)
+<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>score</span>)</div><div class='output co'>#&gt; <span class='error'>Error in EDA(score): object 'score' not found</span></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>score</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>9</span>)</div><div class='output co'>#&gt; <span class='error'>Error in t.test(score, mu = 9): object 'score' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Prognost</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

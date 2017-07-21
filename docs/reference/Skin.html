@@ -103,9 +103,11 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Skin</span>)</div><div class='output co'>#&gt; 'data.frame':	11 obs. of  2 variables:
-#&gt;  $ close: int  37 19 57 93 16 22 20 18 63 29 ...
-#&gt;  $ poor : int  29 13 15 26 11 17 26 21 43 15 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Skin</span>)
+<span class='fu'>str</span>(<span class='no'>Skin</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	11 obs. of  4 variables:
+#&gt;  $ patient: int  1 2 3 4 5 6 7 8 9 10 ...
+#&gt;  $ close  : int  37 19 57 93 16 22 20 18 63 29 ...
+#&gt;  $ poor   : int  29 13 15 26 11 17 26 21 43 15 ...
+#&gt;  $ differ : int  8 6 42 67 5 5 -6 -3 20 14 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Skin</span>)
 <span class='no'>DIFF</span> <span class='kw'>&lt;-</span> <span class='no'>close</span>-<span class='no'>poor</span>
 <span class='fu'>stem</span>(<span class='no'>DIFF</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the right of the |

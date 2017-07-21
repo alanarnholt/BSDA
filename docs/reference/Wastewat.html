@@ -107,11 +107,22 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Wastewat</span>)</div><div class='output co'>#&gt; 'data.frame':	44 obs. of  4 variables:
+<span class='fu'>str</span>(<span class='no'>Wastewat</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	44 obs. of  2 variables:
 #&gt;  $ gallons: num  4.2 7.2 8.4 8 5.2 6 5 5.6 4 3.6 ...
 #&gt;  $ number : int  NA 2 12 35 23 29 24 8 6 20 ...
-#&gt;  $ ln.no. : num  NA 0.693 2.485 3.555 3.135 ...
-#&gt;  $ index  : int  1 2 3 4 5 6 7 8 9 10 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Wastewat</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison:</span>
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 4
+#&gt;   .. ..$ gallons: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ number : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ ln(no) : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ index  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Wastewat</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from Poison (pos = 17):</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    number</span></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>number</span>~<span class='no'>gallons</span>)
 <span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 

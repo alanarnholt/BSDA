@@ -106,12 +106,25 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Smokyph</span>)</div><div class='output co'>#&gt; 'data.frame':	75 obs. of  5 variables:
+<span class='fu'>str</span>(<span class='no'>Smokyph</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	75 obs. of  3 variables:
 #&gt;  $ waterph: num  7.91 7.14 6.81 6.97 7.21 6.94 6.59 6.94 6.94 8.43 ...
-#&gt;  $ code   : Factor w/ 2 levels "high","low": 2 2 2 2 2 2 2 2 2 2 ...
+#&gt;  $ code   : chr  "low" "low" "low" "low" ...
 #&gt;  $ elev   : num  0.244 0.375 0.567 0.512 0.408 0.512 0.506 0.488 0.488 0.232 ...
-#&gt;  $ SRES1  : num  1.127 -0.551 -0.939 -0.661 -0.294 ...
-#&gt;  $ FITS1  : num  7.47 7.36 7.18 7.23 7.33 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Smokyph</span>)
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 5
+#&gt;   .. ..$ waterph: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ code   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
+#&gt;   .. ..$ elev   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ SRES1  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ FITS1  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Smokyph</span>)
 <span class='fu'>t.test</span>(<span class='no'>waterph</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>7</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 

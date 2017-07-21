@@ -109,19 +109,12 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Saving</span>)</div><div class='output co'>#&gt; 'data.frame':	75 obs. of  6 variables:
-#&gt;  $ calif  : num  103 188 108 140 101 ...
-#&gt;  $ newyork: num  124 176 NA 169 111 ...
-#&gt;  $ texas  : num  34033 418 416 565 128 ...
-#&gt;  $ PAR    : num  103 188 108 140 101 ...
-#&gt;  $ state  : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ ranks  : int  3 36 7 24 2 4 NA NA 14 31 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Saving</span>)
-<span class='fu'>boxplot</span>(<span class='no'>PAR</span>~<span class='no'>state</span>)</div><div class='img'><img src='Saving-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>PAR</span>~<span class='fu'>as.factor</span>(<span class='no'>state</span>))</div><div class='output co'>#&gt; 
-#&gt; 	Kruskal-Wallis rank sum test
-#&gt; 
-#&gt; data:  PAR by as.factor(state)
-#&gt; Kruskal-Wallis chi-squared = 1.708, df = 2, p-value = 0.4257
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Saving</span>)</div></pre>
+<span class='fu'>str</span>(<span class='no'>Saving</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	65 obs. of  2 variables:
+#&gt;  $ par  : num  103 188 108 140 101 ...
+#&gt;  $ state: chr  "California" "California" "California" "California" ...
+#&gt;  - attr(*, "na.action")=Class 'omit'  Named int [1:10] 7 8 13 18 28 31 34 35 50 66
+#&gt;   .. ..- attr(*, "names")= chr [1:10] "7" "8" "13" "18" ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Saving</span>)
+<span class='fu'>boxplot</span>(<span class='no'>PAR</span>~<span class='no'>state</span>)</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'PAR' not found</span></div><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>PAR</span>~<span class='fu'>as.factor</span>(<span class='no'>state</span>))</div><div class='output co'>#&gt; <span class='error'>Error in eval(predvars, data, env): object 'PAR' not found</span></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Saving</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

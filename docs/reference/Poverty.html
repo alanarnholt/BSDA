@@ -112,35 +112,52 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Poverty</span>)</div><div class='output co'>#&gt; 'data.frame':	20 obs. of  6 variables:
-#&gt;  $ City   : Factor w/ 20 levels "Atlanta","Buffalo",..: 6 11 15 7 13 10 9 4 1 5 ...
-#&gt;  $ Poverty: num  46.6 46.4 46.3 44.6 44.1 43.8 43 43 42.9 40.9 ...
-#&gt;  $ Crime  : int  13 4 9 12 17 12 8 7 18 6 ...
-#&gt;  $ cindex : int  1172 100 504 187 654 211 120 425 713 205 ...
-#&gt;  $ popu   : int  1027974 122893 496938 140925 358648 139739 116646 505616 393929 182005 ...
-#&gt;  $ ratio  : num  114 81.4 101.4 132.7 182.4 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Poverty</span>)</div><div class='output co'>#&gt; <span class='message'>The following objects are masked from package:BSDA:</span>
+<span class='fu'>str</span>(<span class='no'>Poverty</span>)</div><div class='output co'>#&gt; Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	20 obs. of  4 variables:
+#&gt;  $ city      : chr  "Detroit" "Laredo" "New Orleans" "Flint, Mich" ...
+#&gt;  $ poverty   : num  46.6 46.4 46.3 44.6 44.1 43.8 43 43 42.9 40.9 ...
+#&gt;  $ crime     : int  13 4 9 12 17 12 8 7 18 6 ...
+#&gt;  $ population: int  1027974 122893 496938 140925 358648 139739 116646 505616 393929 182005 ...
+#&gt;  - attr(*, "spec")=List of 2
+#&gt;   ..$ cols   :List of 6
+#&gt;   .. ..$ City   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_character" "collector"
+#&gt;   .. ..$ Poverty: list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   .. ..$ Crime  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ cindex : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ popu   : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_integer" "collector"
+#&gt;   .. ..$ ratio  : list()
+#&gt;   .. .. ..- attr(*, "class")= chr  "collector_double" "collector"
+#&gt;   ..$ default: list()
+#&gt;   .. ..- attr(*, "class")= chr  "collector_guess" "collector"
+#&gt;   ..- attr(*, "class")= chr "col_spec"</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Poverty</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:tidyr:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    Crime, Poverty</span></div><div class='input'><span class='fu'>plot</span>(<span class='no'>Crime</span>,<span class='no'>Poverty</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>Poverty</span>~<span class='no'>Crime</span>)
-<span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Poverty-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
+#&gt; <span class='message'>    population</span></div><div class='input'><span class='fu'>plot</span>(<span class='no'>Crime</span>,<span class='no'>Poverty</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: NAs introduced by coercion</span></div><div class='output co'>#&gt; <span class='warning'>Warning: no non-missing arguments to min; returning Inf</span></div><div class='output co'>#&gt; <span class='warning'>Warning: no non-missing arguments to max; returning -Inf</span></div><div class='output co'>#&gt; <span class='error'>Error in plot.window(...): need finite 'xlim' values</span></div><div class='img'><img src='Poverty-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>Poverty</span>~<span class='no'>Crime</span>)</div><div class='output co'>#&gt; <span class='error'>Error in model.frame.default(formula = Poverty ~ Crime, drop.unused.levels = TRUE): invalid type (list) for variable 'Poverty'</span></div><div class='input'><span class='fu'>abline</span>(<span class='no'>model</span>)
+<span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = Poverty ~ Crime)
+#&gt; lm(formula = number ~ gallons, data = Wastewat)
 #&gt; 
 #&gt; Residuals:
 #&gt;     Min      1Q  Median      3Q     Max 
-#&gt; -4.9540 -3.1121 -0.5467  2.5390  6.5606 
+#&gt; -28.881  -8.961  -0.300   3.176  59.151 
 #&gt; 
 #&gt; Coefficients:
 #&gt;             Estimate Std. Error t value Pr(&gt;|t|)    
-#&gt; (Intercept)   39.116      1.858  21.052 3.97e-14 ***
-#&gt; Crime          0.181      0.171   1.058    0.304    
+#&gt; (Intercept)   3.5895     3.4834   1.030    0.309    
+#&gt; gallons       3.7905     0.7843   4.833 1.91e-05 ***
 #&gt; ---
 #&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #&gt; 
-#&gt; Residual standard error: 3.667 on 18 degrees of freedom
-#&gt; Multiple R-squared:  0.05857,	Adjusted R-squared:  0.006268 
-#&gt; F-statistic:  1.12 on 1 and 18 DF,  p-value: 0.3039
+#&gt; Residual standard error: 14.33 on 41 degrees of freedom
+#&gt;   (1 observation deleted due to missingness)
+#&gt; Multiple R-squared:  0.363,	Adjusted R-squared:  0.3474 
+#&gt; F-statistic: 23.36 on 1 and 41 DF,  p-value: 1.915e-05
 #&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Poverty</span>)
-<span class='fu'>remove</span>(<span class='no'>model</span>)</div></pre>
+<span class='fu'>remove</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: object 'model' not found</span></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
