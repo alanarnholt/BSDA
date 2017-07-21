@@ -4,31 +4,34 @@
 \name{Jdpower}
 \alias{Jdpower}
 \title{Number of problems reported per 100 cars in 1994 versus 1995s}
-\format{A data frame with 29 observations on the following 3 variables.
+\format{A data frame/tibble with 29 observations on the following 3 variables.
 \describe{ 
-\item{Car}{a factor with levels \code{Acura} \code{BMW}
+\item{car}{a factor with levels \code{Acura} \code{BMW}
 \code{Buick} \code{Cadillac} \code{Chevrolet} \code{Dodge} \code{Eagle}
 \code{Ford} \code{Geo} \code{Honda} \code{Hyundai} \code{Infiniti}
 \code{Jaguar} \code{Lexus} \code{Lincoln} \code{Mazda} \code{Mercedes-Benz}
 \code{Mercury} \code{Mitsubishi} \code{Nissan} \code{Oldsmobile}
 \code{Plymouth} \code{Pontiac} \code{Saab} \code{Saturn} \code{Subaru}
 \code{Toyota} \code{Volkswagen} \code{Volvo}} 
-\item{X1994}{a numeric vector} 
-\item{X1995}{a numeric vector} 
+\item{1994}{number of problems per 100 cars in 1994} 
+\item{1995}{number of problems per 100 cars in 1995} 
 }}
+\source{
+\emph{USA Today}, May 25, 1995.
+}
+\usage{
+Jdpower
+}
 \description{
 Data for Exercise 2.14, 2.17, 2.31, 2.33, and 2.40
 }
 \examples{
 
-str(Jdpower)
-attach(Jdpower)
-plot(X1994,X1995)
-model <- lm(X1995~X1994)
-abline(model)
-model
-cor(X1995,X1994)
-detach(Jdpower)
+model <- lm(`1995` ~ `1994`, data = Jdpower)
+summary(model)
+plot(`1995` ~ `1994`, data = Jdpower)
+abline(model, col = "red")
+rm(model)
 
 }
 \references{

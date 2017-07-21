@@ -4,24 +4,24 @@
 \name{Jobsat}
 \alias{Jobsat}
 \title{Job satisfaction and stress level for 9 school teachers}
-\format{A data frame with 9 observations on the following 2 variables.
+\format{A data frame/tibble with 9 observations on the following 2 variables.
 \describe{ 
-\item{WSPT}{a numeric vector} 
-\item{satisfac}{a numeric vector} 
+\item{wspt}{Wilson Stress Profile score for teachers} 
+\item{satisfaction}{job satisfaction score} 
 }}
+\usage{
+Jobsat
+}
 \description{
 Data for Exercise 9.60
 }
 \examples{
 
-str(Jobsat)
-attach(Jobsat)
-plot(WSPT,satisfac)
-model <- lm(satisfac~WSPT)
+plot(satisfaction ~ wspt, data = Jobsat)
+model <- lm(satisfaction ~ wspt, data = Jobsat)
 abline(model)
 summary(model)
-detach(Jobsat)
-remove(model)
+rm(model)
 
 }
 \references{

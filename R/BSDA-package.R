@@ -5174,8 +5174,8 @@ NULL
 #' \code{Mercury} \code{Mitsubishi} \code{Nissan} \code{Oldsmobile}
 #' \code{Plymouth} \code{Pontiac} \code{Saab} \code{Saturn} \code{Subaru}
 #' \code{Toyota} \code{Volkswagen} \code{Volvo}} 
-#' \item{`1994`}{number of problems per 100 cars in 1994} 
-#' \item{`1995`}{number of problems per 100 cars in 1995} 
+#' \item{1994}{number of problems per 100 cars in 1994} 
+#' \item{1995}{number of problems per 100 cars in 1995} 
 #' }
 #' 
 #' @source \emph{USA Today}, May 25, 1995.
@@ -5204,26 +5204,23 @@ NULL
 #' 
 #' @name Jobsat
 #' @docType data
-#' @format A data frame with 9 observations on the following 2 variables.
+#' @format A data frame/tibble with 9 observations on the following 2 variables.
 #' \describe{ 
-#' \item{WSPT}{a numeric vector} 
-#' \item{satisfac}{a numeric vector} 
+#' \item{wspt}{Wilson Stress Profile score for teachers} 
+#' \item{satisfaction}{job satisfaction score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Jobsat)
-#' attach(Jobsat)
-#' plot(WSPT,satisfac)
-#' model <- lm(satisfac~WSPT)
+#' plot(satisfaction ~ wspt, data = Jobsat)
+#' model <- lm(satisfaction ~ wspt, data = Jobsat)
 #' abline(model)
 #' summary(model)
-#' detach(Jobsat)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Jobsat"
 
 
 
