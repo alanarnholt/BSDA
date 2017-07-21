@@ -4,21 +4,24 @@
 \name{Lead}
 \alias{Lead}
 \title{Lead levels in children's blood whose parents worked in a battery factory}
-\format{A data frame with 33 observations on the following 3 variables.
+\format{A data frame/tibble with 33 observations on the following 3 variables.
 \describe{ 
-\item{Pair}{a numeric vector} 
-\item{exposed}{a numeric vector} 
-\item{control}{a numeric vector} 
+\item{group}{a character vector with values \code{exposed} and \code{control}} 
+\item{lead}{a numeric vector indicating the level of lead in children's blood in micrograms/dl} 
 }}
+\source{
+Morton, D. et al. (1982), "Lead Absorption in Children of Employees in a Lead-Related
+Industry," \emph{American Journal of Epidemiology, 155,} 549-555.
+}
+\usage{
+Lead
+}
 \description{
 Data for Example 1.17
 }
 \examples{
 
-str(Lead)
-attach(Lead)
-boxplot(exposed,control, names=c("Exposed","Control"),col=c("red","blue"))
-detach(Lead)
+boxplot(lead ~ group, data = Lead)
 
 }
 \references{

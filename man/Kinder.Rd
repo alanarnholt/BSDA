@@ -5,26 +5,29 @@
 \alias{Kinder}
 \title{Reading scores for first grade children who attended kindergarten versus
 those who did not}
-\format{A data frame with 8 observations on the following 3 variables.
+\format{A data frame/tibble with 8 observations on the following 3 variables.
 \describe{ 
-\item{Pair}{a numeric vector} 
-\item{Kinder}{a numeric vector} 
-\item{NoKinder}{a numeric vector} 
+\item{pair}{a numeric indicator of pair} 
+\item{kinder}{reading score of kids who went to kindergarten} 
+\item{nokinder}{reading score of kids who did not go to kindergarten} 
 }}
+\usage{
+Kinder
+}
 \description{
 Data for Exercise 7.68
 }
 \examples{
 
-str(Kinder)
-attach(Kinder)
-DIF <- Kinder - NoKinder
-qqnorm(DIF)
-qqline(DIF)
-shapiro.test(DIF)
-t.test(Kinder, NoKinder,paired=TRUE,alternative="greater")
-detach(Kinder)
-remove(DIF)
+boxplot(Kinder$kinder, Kinder$nokinder)
+diff <- Kinder$kinder - Kinder$nokinder
+qqnorm(diff)
+qqline(diff)
+shapiro.test(diff)
+t.test(Kinder$kinder, Kinder$nokinder, paired = TRUE)
+# Or
+t.test(diff)
+rm(diff)
 
 }
 \references{

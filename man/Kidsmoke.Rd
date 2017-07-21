@@ -4,22 +4,24 @@
 \name{Kidsmoke}
 \alias{Kidsmoke}
 \title{Smoking habits of boys and girls ages 12 to 18}
-\format{A data frame with 1000 observations on the following 2 variables.
+\format{A data frame/tibble with 1000 observations on the following 2 variables.
 \describe{ 
-\item{gender}{a numeric vector} 
-\item{smoke}{a numeric vector} 
+\item{gender}{character vector with values \code{female} and \code{male}} 
+\item{smoke}{a character vector with values \code{no} and \code{yes}} 
 }}
+\usage{
+Kidsmoke
+}
 \description{
 Data for Exercise 4.85
 }
 \examples{
 
-str(Kidsmoke)
-attach(Kidsmoke)
-table(gender,smoke)
-addmargins(table(gender,smoke))
-addmargins(table(gender,smoke)/1000)
-detach(Kidsmoke)
+T1 <- xtabs(~smoke + gender, data = Kidsmoke)
+T1
+prop.table(T1)
+prop.table(T1, 1)
+prop.table(T1, 2)
 
 }
 \references{

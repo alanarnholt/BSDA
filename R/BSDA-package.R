@@ -5233,24 +5233,23 @@ NULL
 #' 
 #' @name Kidsmoke
 #' @docType data
-#' @format A data frame with 1000 observations on the following 2 variables.
+#' @format A data frame/tibble with 1000 observations on the following 2 variables.
 #' \describe{ 
-#' \item{gender}{a numeric vector} 
-#' \item{smoke}{a numeric vector} 
+#' \item{gender}{character vector with values \code{female} and \code{male}} 
+#' \item{smoke}{a character vector with values \code{no} and \code{yes}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Kidsmoke)
-#' attach(Kidsmoke)
-#' table(gender,smoke)
-#' addmargins(table(gender,smoke))
-#' addmargins(table(gender,smoke)/1000)
-#' detach(Kidsmoke)
+#' T1 <- xtabs(~smoke + gender, data = Kidsmoke)
+#' T1
+#' prop.table(T1)
+#' prop.table(T1, 1)
+#' prop.table(T1, 2)
 #' 
-NULL
+"Kidsmoke"
 
 
 
@@ -5263,9 +5262,9 @@ NULL
 #' 
 #' @name Kilowatt
 #' @docType data
-#' @format A data frame with 51 observations on the following 2 variables.
+#' @format A data frame/tibble with 51 observations on the following 2 variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
+#' \item{state}{a factor with levels \code{Alabama}
 #' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
 #' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
 #' Columbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
@@ -5278,19 +5277,16 @@ NULL
 #' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
 #' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
 #' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-#' \item{rate}{a numeric vector} 
+#' \item{rate}{a numeric vector indicating rates for kilowatt per hour} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Kilowatt)
-#' attach(Kilowatt)
-#' EDA(rate)
-#' detach(Kilowatt)
+#' BSDA::EDA(Kilowatt$rate)
 #' 
-NULL
+"Kilowatt"
 
 
 
@@ -5304,28 +5300,28 @@ NULL
 #' 
 #' @name Kinder
 #' @docType data
-#' @format A data frame with 8 observations on the following 3 variables.
+#' @format A data frame/tibble with 8 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Pair}{a numeric vector} 
-#' \item{Kinder}{a numeric vector} 
-#' \item{NoKinder}{a numeric vector} 
+#' \item{pair}{a numeric indicator of pair} 
+#' \item{kinder}{reading score of kids who went to kindergarten} 
+#' \item{nokinder}{reading score of kids who did not go to kindergarten} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Kinder)
-#' attach(Kinder)
-#' DIF <- Kinder - NoKinder
-#' qqnorm(DIF)
-#' qqline(DIF)
-#' shapiro.test(DIF)
-#' t.test(Kinder, NoKinder,paired=TRUE,alternative="greater")
-#' detach(Kinder)
-#' remove(DIF)
+#' boxplot(Kinder$kinder, Kinder$nokinder)
+#' diff <- Kinder$kinder - Kinder$nokinder
+#' qqnorm(diff)
+#' qqline(diff)
+#' shapiro.test(diff)
+#' t.test(Kinder$kinder, Kinder$nokinder, paired = TRUE)
+#' # Or
+#' t.test(diff)
+#' rm(diff)
 #' 
-NULL
+"Kinder"
 
 
 
@@ -5338,28 +5334,51 @@ NULL
 #' 
 #' @name Laminect
 #' @docType data
-#' @format A data frame with 46 observations on the following 5 variables.
+#' @format A data frame/tibble with 46 observations on the following 5 variables.
 #' \describe{
-#'  \item{cost}{a numeric vector} 
-#'  \item{class}{a numeric vector} 
-#'  \item{Rural}{a numeric vector}
-#'  \item{Regional}{a numeric vector} 
-#'  \item{Metropol}{a numeric vector} 
+#'  \item{area}{a character vector indicating the area of the hospital with \code{Rural}, \code{Regional},
+#'  and \code{Metropol}} 
+#'  \item{cost}{a numeric vector indicating cost of a laminectomy} 
 #'  }
+#'  
+#'@source \emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals} (August 1994),
+#'North Carolina Medical Database Commission, Department of Insurance
+#'  
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Laminect)
-#' attach(Laminect)
-#' boxplot(cost~class)
-#' anova(lm(cost~as.factor(class)))
-#' detach(Laminect)
+#'boxplot(cost ~ area, data = Laminect, col = topo.colors(3))
+#'anova(lm(cost ~ area, data = Laminect))
 #' 
-NULL
+"Laminect"
 
 
+#' Lead levels in children's blood whose parents worked in a battery factory
+#' 
+#' Data for Example 1.17
+#' 
+#' 
+#' @name Lead
+#' @docType data
+#' @format A data frame/tibble with 33 observations on the following 3 variables.
+#' \describe{ 
+#' \item{group}{a character vector with values \code{exposed} and \code{control}} 
+#' \item{lead}{a numeric vector indicating the level of lead in children's blood in micrograms/dl} 
+#' }
+#' 
+#' @source Morton, D. et al. (1982), "Lead Absorption in Children of Employees in a Lead-Related
+#' Industry," \emph{American Journal of Epidemiology, 155,} 549-555. 
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' Duxbury
+#' @keywords datasets
+#' @examples
+#' 
+#' boxplot(lead ~ group, data = Lead)
+#' 
+"Lead"
 
 
 
@@ -5370,55 +5389,20 @@ NULL
 #' 
 #' @name Leader
 #' @docType data
-#' @format A data frame with 34 observations on the following 2 variables.
+#' @format A data frame/tibble with 34 observations on the following 2 variables.
 #' \describe{ 
-#' \item{under35}{a numeric vector} 
-#' \item{over35}{a numeric vector} 
+#' \item{age}{a character vector indicating age with values \code{under35} and \code{over35}} 
+#' \item{score}{score on a leadership exam} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Leader)
-#' attach(Leader)
-#' boxplot(under35,over35,names=c("Under 35","Over 35"),col=c("green","brown"))
-#' t.test(under35,over35)
-#' detach(Leader)
+#'boxplot(score ~ age, data = Leader, col = c("gray", "green"))
+#'t.test(score ~ age, data = Leader)
 #' 
-NULL
-
-
-
-
-
-#' Lead levels in children's blood whose parents worked in a battery factory
-#' 
-#' Data for Example 1.17
-#' 
-#' 
-#' @name Lead
-#' @docType data
-#' @format A data frame with 33 observations on the following 3 variables.
-#' \describe{ 
-#' \item{Pair}{a numeric vector} 
-#' \item{exposed}{a numeric vector} 
-#' \item{control}{a numeric vector} 
-#' }
-#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
-#' @keywords datasets
-#' @examples
-#' 
-#' str(Lead)
-#' attach(Lead)
-#' boxplot(exposed,control, names=c("Exposed","Control"),col=c("red","blue"))
-#' detach(Lead)
-#' 
-NULL
-
-
-
+"Leader"
 
 
 #' Survival time of mice injected with an experimental lethal drug
@@ -5428,21 +5412,19 @@ NULL
 #' 
 #' @name Lethal
 #' @docType data
-#' @format A data frame with 30 observations on the following variable.
+#' @format A data frame/tibble with 30 observations on the following variable.
 #' \describe{ 
-#' \item{survival}{a numeric vector} 
+#' \item{survival}{a numeric vector indicating time surivived after injection} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Lethal)
-#' attach(Lethal)
-#' SIGN.test(survival,md=45,alternative="less")
-#' detach(Lethal)
-#' 
-NULL
+#'BSDA::SIGN.test(Lethal$survival, md = 45, alternative = "less")
+#'
+#'
+"Lethal"
 
 
 
@@ -5455,27 +5437,27 @@ NULL
 #' 
 #' @name Life
 #' @docType data
-#' @format A data frame with 8 observations on the following 3 variables.
+#' @format A data frame/tibble with 8 observations on the following 3 variables.
 #' \describe{ 
-#' \item{year}{a numeric vector} 
-#' \item{Men}{a numeric vector} 
-#' \item{Women}{a numeric vector} 
+#' \item{year}{a numeric vector indicating year} 
+#' \item{men}{life expectancy for men} 
+#' \item{women}{life expectancy for women} 
 #' }
+#' 
+#' @source National Center for Health Statistics
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Life)
-#' attach(Life)
-#' plot(year,Men,type="l",ylim=c(min(Men,Women),max(Men,Women)),col="blue",
-#' main="Life Expectancy versus Year",ylab="Age",xlab="Year")
-#' lines(year,Women,col="red")
-#' text(1955,65,"Men",col="blue")
-#' text(1955,70,"Women",col="red")
-#' detach(Life)
+#'plot(men ~ year, type = "l", ylim = c(min(men, women), max(men, women)), col = "blue",
+#'main = "Life Expectancy vs Year", ylab = "Age", xlab = "Year", data = Life)
+#'lines(women ~ year, col = "red", data = Life)
+#'text(1955, 65, "Men", col = "blue")
+#'text(1955, 70, "Women", col = "red")
 #' 
-NULL
+"Life"
 
 
 
@@ -5488,30 +5470,25 @@ NULL
 #' 
 #' @name Lifespan
 #' @docType data
-#' @format A data frame with 6 observations on the following 4 variables.
+#' @format A data frame/tibble with 6 observations on the following 4 variables.
 #' \describe{ 
-#' \item{heat}{a numeric vector} 
-#' \item{life}{a numeric vector} 
-#' \item{RESI1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
+#' \item{heat}{temperature in degrees C} 
+#' \item{life}{lifespan in hours} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Lifespan)
-#' attach(Lifespan)
-#' plot(heat,life)
-#' model <- lm(life~heat)
-#' model
+#' plot(life ~ heat, data = Lifespan)
+#' model <- lm(life ~ heat, data = Lifespan)
+#' abline(model)
 #' resid(model)
 #' sum((resid(model))^2)
 #' anova(model)
-#' # plot(model)  # Used for diagnostic purposes
-#' detach(Lifespan)
+#' rm(model)
 #' 
-NULL
+"Lifespan"
 
 
 
@@ -5524,9 +5501,9 @@ NULL
 #' 
 #' @name Ligntmonth
 #' @docType data
-#' @format A data frame with 12 observations on the following 4 variables.
+#' @format A data frame/tibble with 12 observations on the following 4 variables.
 #' \describe{ 
-#' \item{Month}{a factor with levels \code{1/01/2000}
+#' \item{month}{a factor with levels \code{1/01/2000}
 #' \code{10/01/2000} \code{11/01/2000} \code{12/01/2000} \code{2/01/2000}
 #' \code{3/01/2000} \code{4/01/2000} \code{5/01/2000} \code{6/01/2000}
 #' \code{7/01/2000} \code{8/01/2000} \code{9/01/2000}} 
@@ -5534,17 +5511,21 @@ NULL
 #' \item{injuries}{a numeric vector}
 #' \item{damage}{a numeric vector} 
 #' }
+#' 
+#' @source \emph{Lighting Fatalities, Injuries and Damage Reports in the United States},
+#' 1959-1994, NOAA Technical Memorandum NWS SR-193, Dept. of Commerce.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Ligntmonth)
-#' attach(Ligntmonth)
-#' plot(damage,deaths)
-#' detach(Ligntmonth)
+#' plot(deaths ~ damage, data = Ligntmonth)
+#' model = lm(deaths ~ damage, data = Ligntmonth)
+#' abline(model)
+#' rm(model)
 #' 
-NULL
+"Ligntmonth"
 
 
 
@@ -5557,27 +5538,21 @@ NULL
 #' 
 #' @name Lodge
 #' @docType data
-#' @format A data frame with 45 observations on the following 6 variables.
+#' @format A data frame/tibble with 45 observations on the following 6 variables.
 #' \describe{ 
-#' \item{SiteA}{a numeric vector} 
-#' \item{SiteB}{a numeric vector} 
-#' \item{SiteC}{a numeric vector}
-#' \item{Traffic}{a numeric vector} 
-#' \item{Site}{a numeric vector} 
-#' \item{Ranks}{a numeric vector} 
+#' \item{traffic}{a numeric vector indicating the amount of vehicles that passed a site in 1 hour} 
+#' \item{site}{a numeric vector with values \code{1}, \code{2}, and \code{3}} 
+#' \item{ranks}{ranks for variable \code{traffic}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Lodge)
-#' attach(Lodge)
-#' boxplot(Traffic~Site)
-#' anova(lm(Traffic~as.factor(Site)))
-#' detach(Lodge)
+#' boxplot(traffic ~ site, data = Lodge, col = cm.colors(3))
+#' anova(lm(traffic ~ factor(site), data = Lodge))
 #' 
-NULL
+"Lodge"
 
 
 
@@ -5590,28 +5565,22 @@ NULL
 #' 
 #' @name Longtail
 #' @docType data
-#' @format A data frame with 60 observations on the following 6 variables.
+#' @format A data frame/tibble with 60 observations on the following 6 variables.
 #' \describe{ 
-#' \item{GroupA}{a numeric vector} 
-#' \item{GroupB}{a numeric vector} 
-#' \item{GroupC}{a numeric vector}
 #' \item{score}{a numeric vector} 
-#' \item{Group}{a numeric vector} 
-#' \item{Ranks}{a numeric vector} 
+#' \item{group}{a numeric vector with values \code{1}, \code{2}, and \code{3}} 
+#' \item{ranks}{ranks for variable \code{score}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Longtail)
-#' attach(Longtail)
-#' boxplot(score~Group)
-#' kruskal.test(score~as.factor(Group))
-#' anova(lm(score~as.factor(Group)))
-#' detach(Longtail)
+#' boxplot(score ~ group, data = Longtail, col = heat.colors(3))
+#' kruskal.test(score ~ factor(group), data = Longtail)
+#' anova(lm(score ~ factor(group), data = Longtail))
 #' 
-NULL
+"Longtail"
 
 
 
@@ -5624,28 +5593,27 @@ NULL
 #' 
 #' @name Lowabil
 #' @docType data
-#' @format A data frame with 12 observations on the following 3 variables.
+#' @format A data frame/tibble with 12 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Pair}{a numeric vector} 
-#' \item{Experimt}{a numeric vector} 
-#' \item{Control}{a numeric vector} 
+#' \item{pair}{a numeric indicator of pair} 
+#' \item{experiment}{score of the  child with the experimental method} 
+#' \item{control}{score of the child with the standard method} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Lowabil)
-#' attach(Lowabil)
-#' DIF <- Experimt - Control
-#' qqnorm(DIF)
-#' qqline(DIF)
-#' shapiro.test(DIF)
-#' t.test(Experimt,Control,paired=TRUE)
-#' detach(Lowabil)
-#' remove(DIF)
+#' diff = Lowabil$experiment - Lowabil$control
+#' qqnorm(diff)
+#' qqline(diff)
+#' shapiro.test(diff)
+#' t.test(Lowabil$experiment, Lowabil$control, paired = TRUE)
+#' # OR
+#' t.test(diff)
+#' rm(diff)
 #' 
-NULL
+"Lowabil"
 
 
 

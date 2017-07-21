@@ -4,25 +4,22 @@
 \name{Lodge}
 \alias{Lodge}
 \title{Measured traffic at three prospective locations for a motor lodge}
-\format{A data frame with 45 observations on the following 6 variables.
+\format{A data frame/tibble with 45 observations on the following 6 variables.
 \describe{ 
-\item{SiteA}{a numeric vector} 
-\item{SiteB}{a numeric vector} 
-\item{SiteC}{a numeric vector}
-\item{Traffic}{a numeric vector} 
-\item{Site}{a numeric vector} 
-\item{Ranks}{a numeric vector} 
+\item{traffic}{a numeric vector indicating the amount of vehicles that passed a site in 1 hour} 
+\item{site}{a numeric vector with values \code{1}, \code{2}, and \code{3}} 
+\item{ranks}{ranks for variable \code{traffic}}
 }}
+\usage{
+Lodge
+}
 \description{
 Data for Exercise 10.33
 }
 \examples{
 
-str(Lodge)
-attach(Lodge)
-boxplot(Traffic~Site)
-anova(lm(Traffic~as.factor(Site)))
-detach(Lodge)
+boxplot(traffic ~ site, data = Lodge, col = cm.colors(3))
+anova(lm(traffic ~ factor(site), data = Lodge))
 
 }
 \references{

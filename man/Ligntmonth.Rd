@@ -4,9 +4,9 @@
 \name{Ligntmonth}
 \alias{Ligntmonth}
 \title{Relationship between damage reports and deaths caused by lightning}
-\format{A data frame with 12 observations on the following 4 variables.
+\format{A data frame/tibble with 12 observations on the following 4 variables.
 \describe{ 
-\item{Month}{a factor with levels \code{1/01/2000}
+\item{month}{a factor with levels \code{1/01/2000}
 \code{10/01/2000} \code{11/01/2000} \code{12/01/2000} \code{2/01/2000}
 \code{3/01/2000} \code{4/01/2000} \code{5/01/2000} \code{6/01/2000}
 \code{7/01/2000} \code{8/01/2000} \code{9/01/2000}} 
@@ -14,15 +14,22 @@
 \item{injuries}{a numeric vector}
 \item{damage}{a numeric vector} 
 }}
+\source{
+\emph{Lighting Fatalities, Injuries and Damage Reports in the United States},
+1959-1994, NOAA Technical Memorandum NWS SR-193, Dept. of Commerce.
+}
+\usage{
+Ligntmonth
+}
 \description{
 Data for Exercise 2.6
 }
 \examples{
 
-str(Ligntmonth)
-attach(Ligntmonth)
-plot(damage,deaths)
-detach(Ligntmonth)
+plot(deaths ~ damage, data = Ligntmonth)
+model = lm(deaths ~ damage, data = Ligntmonth)
+abline(model)
+rm(model)
 
 }
 \references{
