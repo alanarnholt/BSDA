@@ -2187,10 +2187,11 @@ t.test(Lowabil$experiment, Lowabil$control, paired = TRUE)
 t.test(diff)
 rm(diff)
 ######################
-Magnesiu <- read_csv("Magnesiu.csv")
+Magnesiu <- read_csv("MAGNESIU.csv")
 Magnesiu <- Magnesiu %>%
   select(distance, magnesium = magnesiu)
 Magnesiu
+devtools::use_data(Magnesiu, overwrite = TRUE)
 #Examples Ex 9.9
 plot(magnesium ~ distance, data = Magnesiu)
 model = lm(magnesium ~ distance, data = Magnesiu)
@@ -2198,45 +2199,52 @@ abline(model)
 summary(model)
 rm(model)
 ######################
-Malpract <- read_csv("Malpract.csv")
+Malpract <- read_csv("MALPRACT.csv")
 Malpract
+devtools::use_data(Magnesiu, overwrite = TRUE)
 #Examples Ex 5.73 (in $1000)
 BSDA::SIGN.test(Malpract$award, conf.level = 0.90)
 ######################
-Manager <- read_csv("Manager.csv")
+Manager <- read_csv("MANAGER.csv")
 Manager
+devtools::use_data(Manager, overwrite = TRUE)
 #Examples Ex 5.81
 stem(Manager$salary)
 BSDA::SIGN.test(Manager$salary)
 ######################
-Marked <- read_csv("Marked.csv")
+Marked <- read_csv("MARKED.csv")
 Marked
+devtools::use_data(Marked, overwrite = TRUE)
 #Examples Ex 6.100
 BSDA::EDA(Marked$percent)
 BSDA::SIGN.test(Marked$percent, md = 60, alternative = "greater")
 t.test(Marked$percent, mu = 60, alternative = "greater")
 ######################
-Math <- read_csv("Math.csv")
-Math
+MATH <- read_csv("MATH.csv")
+Math <- MATH %>%
+  rename(score = math)
+devtools::use_data(Math, overwrite = TRUE)
 #Examples Ex 1.69
-stem(Math$math)
-hist(Math$math, main = "Math Scores", xlab = "score", freq = FALSE)
-lines(density(Math$math), col = "red")
-CharlieZ <- (62 - mean(Math$math))/sd(Math$math)
+stem(Math$score)
+hist(Math$score, main = "Math Scores", xlab = "score", freq = FALSE)
+lines(density(Math$score), col = "red")
+CharlieZ <- (62 - mean(Math$score))/sd(Math$score)
 CharlieZ
-scale(Math$math)[which(Math$math == 62)]
+scale(Math$score)[which(Math$score == 62)]
 ######################
-Mathcomp <- read_csv("Mathcomp.csv")
+Mathcomp <- read_csv("MATHCOMP.csv")
 Mathcomp
+devtools::use_data(Mathcomp, overwrite = TRUE)
 #Examples Ex 5.26
 stem(Mathcomp$score)
 BSDA::EDA(Mathcomp$score)
 ######################
-Mathpro <- read_csv("Mathpro.csv")
+Mathpro <- read_csv("MATHPRO.csv")
 Mathpro <- Mathpro %>%
   select(state, `Sat-M`, Profic, Group)%>%
   rename(`sat_math` = `Sat-M`, profic = Profic, group = Group)
 Mathpro
+devtools::use_data(Mathpro, overwrite = TRUE)
 #Examples Exp 9.1 and 9.6, Ex 9.24
 model <- lm(sat_math ~ profic, data = Mathpro)
 plot(sat_math ~ profic, data = Mathpro, ylab = "SAT", xlab = "proficiency")
@@ -2244,41 +2252,47 @@ abline(model)
 summary(model)
 rm(model)
 ######################
-Maze <- read_csv("Maze.csv")
+Maze <- read_csv("MAZE.csv")
 Maze <- Maze %>%
   select(score, condition)
 Maze
+devtools::use_data(Maze, overwrite = TRUE)
 #Examples Ex 10.13
 boxplot(score ~ condition, data = Maze, col = rainbow(4))
 anova(lm(score ~ condition, data = Maze))
 #####################
-Median <- read_csv("Median.csv")
+Median <- read_csv("MEDIAN.csv")
 Median <- Median %>%
   gather(Sample1, Sample2, Sample3, key = "sample", value = "value")
 Median
+devtools::use_data(Median, overwrite = TRUE)
 #Examples Ex 10.52
 boxplot(value ~ sample, data = Median, col = rainbow(3))
 anova(lm(value ~ sample, data = Median))
 kruskal.test(value ~ factor(sample), data = Median)
 #####################
-Mental <- read_csv("Mental.csv")
+Mental <- read_csv("MENTAL.csv")
 Mental
+devtools::use_data(Mental, overwrite = TRUE)
 #Examples Ex 6.52 (age = mental age)
 BSDA::SIGN.test(Mental$age, md = 100)
 #####################
-Mercury <- read_csv("Mercury.csv")
+Mercury <- read_csv("MERCURY.csv")
 Mercury
+devtools::use_data(Mercury, overwrite = TRUE)
 #Examples Exp 1.9 (mercury measured in parts per million)
 stem(Mercury$mercury)
 #####################
-Metrent <- read_csv("Metrent.csv")
+Metrent <- read_csv("METRENT.csv")
 Metrent
+devtools::use_data(Metrent, overwrite = TRUE)
 #Examples Ex 5.117 (monthly rent in dollars)
 boxplot(Metrent$rent)
 t.test(Metrent$rent, conf.level = 0.99)$conf
 #####################
-Miller <- read_csv("Miller.csv")
+Miller <- read_csv("MILLER.csv")
 Miller
+devtools::use_data(Miller, overwrite = TRUE)
 #Examples Ex 5.7 not Exp 5.7 (miller = Scores on Miller Personality Test)
 stem(Miller$miller)
 fivenum(Miller$miller)
@@ -2286,14 +2300,16 @@ boxplot(Miller$miller)
 qqnorm(Miller$miller,col = "blue")
 qqline(Miller$miller, col = "red")
 #####################
-Miller1 <- read_csv("Miller1.csv")
+Miller1 <- read_csv("MILLER1.csv")
 Miller1
+devtools::use_data(Miller, overwrite = TRUE)
 #Examples Ex 1.41 (miller = Scores on Miller Personality Test)
 stem(Miller1$miller)
 stem(Miller1$miller, scale = 2)
 #####################
-Moisture <- read_csv("Moisture.csv")
+Moisture <- read_csv("MOISTURE.csv")
 Moisture
+devtools::use_data(Moisture, overwrite = TRUE)
 #Examples Ex 9.32 not 9.37 (moisture is g of water per 100 g of dried sediment)
 plot(moisture ~ depth, data = Moisture)
 model <- lm(moisture ~ depth, data = Moisture)
@@ -2301,12 +2317,13 @@ abline(model)
 plot(resid(model) ~ depth, data = Moisture)
 rm(model)
 #####################
-Monoxide <- read_csv("Monoxide.csv")
+Monoxide <- read_csv("MONOXIDE.csv")
 Monoxide <- Monoxide %>%
   rename(manufacturer = manufac, competitor = compet) %>%
   gather(manufacturer, competitor, key = "company", value = "emission")
 Monoxide <- na.omit(Monoxide)
 Monoxide
+devtools::use_data(Monoxide, overwrite = TRUE)
 #Examples Ex 7.45
 boxplot(emission ~ company, data = Monoxide, col = topo.colors(2))
 t.test(emission ~ company, data = Monoxide)
@@ -2317,10 +2334,11 @@ ggplot2::ggplot(data = Monoxide, aes(x = company, y = emission)) +
   theme_bw()
 ##
 #####################
-Movie <- read_csv("Movie.csv")
+Movie <- read_csv("MOVIE.csv")
 Movie <- Movie %>%
   rename(before = Before, after = After)
 Movie
+devtools::use_data(Movie, overwrite = TRUE)
 #Examples Ex 7.53
 qqnorm(Movie$differ)
 qqline(Movie$differ)
@@ -2328,10 +2346,11 @@ shapiro.test(Movie$differ)
 t.test(Movie$after, Movie$before, paired = TRUE, conf.level = 0.99)
 wilcox.test(Movie$after, Movie$before, paired = TRUE)
 #####################
-Music <- read_csv("Music.csv")
+Music <- read_csv("MUSIC.csv")
 Music <- Music %>%
   rename(method1 = Method1, method2 = Method2)
 Music
+devtools::use_data(Music, overwrite = TRUE)
 #Examples Ex 7.59
 qqnorm(Music$differ)
 qqline(Music$differ)
@@ -2345,10 +2364,11 @@ ggplot2::ggplot(data = Music, aes(x = differ)) +
   theme_bw()
 ##
 #####################
-Name <- read_csv("Name.csv")
+Name <- read_csv("NAME.csv")
 Name <- Name %>%
   rename(brand = Brand)
 Name
+devtools::use_data(Name, overwrite = TRUE)
 #Examples Exp 2.8 and Ex 2.28 (value and revenue billions of dollars)
 plot(value ~ revenue, data = Name)
 model <- lm(value ~ revenue, data = Name)
@@ -2357,10 +2377,11 @@ cor(Name$value, Name$revenue)
 summary(model)
 rm(model)
 #####################
-Nascar <- read_csv("Nascar.csv")
+Nascar <- read_csv("NASCAR.csv")
 Nascar <- Nascar%>%
   select(time = Time, team = Team, ranks = Ranks)
 Nascar
+devtools::use_data(Nascar, overwrite = TRUE)
 #Examples Ex 10.53
 boxplot(time ~ team, data = Nascar)
 model <- lm(time ~ factor(team), data = Nascar)
@@ -2368,8 +2389,9 @@ summary(model)
 anova(model)
 rm(model)
 #####################
-Nervous <- read_csv("Nervous.csv")
+Nervous <- read_csv("NERVOUS.csv")
 Nervous
+devtools::use_data(Nervous, overwrite = TRUE)
 #Examples Exp 10.3
 boxplot(react ~ drug, data = Nervous, col = rainbow(4))
 model <- aov(react ~ factor(drug), data = Nervous)
@@ -2377,31 +2399,35 @@ summary(model)
 TukeyHSD(model)
 plot(TukeyHSD(model), las = 1)
 #####################
-Newsstand <- read_csv("Newsstand.csv")
+Newsstand <- read_csv("NEWSSTAND.csv")
 Newsstand
+devtools::use_data(Newsstand, overwrite = TRUE)
 #Examples Ex 1.43 (daily profit in dollars)
 stem(Newsstand$profit)
 stem(Newsstand$profit, scale = 3)
 #####################
-Nfldraf2 <- read_csv("Nfldraf2.csv")
+Nfldraf2 <- read_csv("NFLDRAF2.csv")
 Nfldraf2 <- Nfldraf2%>%
   rename(rating = Rating)
 Nfldraf2
+devtools::use_data(Nfldraf2, overwrite = TRUE)
 #Examples Ex 9.63 (forty = time in secondds for 40 yard dash)
 plot(rating ~ forty, data = Nfldraf2)
 summary(lm(rating ~ forty, data = Nfldraf2))
 #####################
-Nfldraft <- read_csv("Nfldraft.csv")
+Nfldraft <- read_csv("NFLDRAFT.csv")
 Nfldraft <- Nfldraft %>%
   rename(rating = Rating)
 Nfldraft
+devtools::use_data(Nfldraft, overwrite = TRUE)
 #Examples Ex 9.10 and 9.16
 plot(rating ~ forty, data = Nfldraft)
 cor(Nfldraft$rating, Nfldraft$forty)
 summary(lm(rating ~ forty, data = Nfldraft))
 #####################
-Nicotine <- read_csv("Nicotine.csv")
+Nicotine <- read_csv("NICOTINE.csv")
 Nicotine
+devtools::use_data(Nicotine, overwrite = TRUE)
 #Examples Ex 9.21 (nicotine in milligrams, sales in $100,000 dollars)
 model <- lm(sales ~ nicotine, data = Nicotine)
 plot(sales ~ nicotine, data = Nicotine)
@@ -2410,8 +2436,9 @@ summary(model)
 predict(model, newdata = data.frame(nicotine = 1), 
         interval = "confidence", level = 0.99)
 #####################
-Orange <- read_csv("Orange.csv")
+Orange <- read_csv("ORANGE.csv")
 Orange
+devtools::use_data(Orange, overwrite = TRUE)
 #Examples Ex 9.61 (harvest in millions of boxes - price is average price charged 
 # by California growers for for 75-pound box of navel oranges - values are for 6 consecutive years)
 plot(price ~ harvest, data = Orange)
@@ -2420,8 +2447,9 @@ abline(model)
 summary(model)
 rm(model)
 #####################
-Orioles <- read_csv("Orioles.csv")
+Orioles <- read_csv("ORIOLES.csv")
 Orioles
+devtools::use_data(Orioles, overwrite = TRUE)
 #Examples Exp 1.3
 stripchart(Orioles$`1999salary`, method = "stack", pch = 19)
 ## Not run
@@ -2435,9 +2463,9 @@ Oxytocin <- read_csv("Oxytocin.csv")
 Oxytocin <- Oxytocin %>%
   rename(subject = Subject, before = Before, after = After)
 Oxytocin
+devtools::use_data(Name, overwrite = TRUE)
 #Examples Ex 7.86 (mean arterial blood pressure of 11 subjects
 # before and after they received oxytocin.)
-
 diff = Oxytocin$after - Oxytocin$before
 qqnorm(diff)
 qqline(diff)
@@ -2445,47 +2473,104 @@ shapiro.test(diff)
 t.test(Oxytocin$after, Oxytocin$before, paired = TRUE)
 rm(diff)
 #####################
-Parented <- read_csv("Parented.csv")
-Parented <- Parented %>%
-  rename(educat = Educat, mother = Mother, father = Father)
-Parented
+# Parented <- read_csv("PARENTED.csv")
+# Parented <- Parented %>%
+#  rename(educat = Educat, mother = Mother, father = Father)
+# Parented
 #Examples Ex 1.32
-mat <- cbind(Parented$mother, Parented$father)
-row.names(mat) <- Parented$educat
-barplot(t(mat), beside = TRUE, legend = TRUE, col = c("blue", "red"))
-rm(mat)
+# mat <- cbind(Parented$mother, Parented$father)
+# row.names(mat) <- Parented$educat
+# barplot(t(mat), beside = TRUE, legend = TRUE, col = c("blue", "red"))
+# rm(mat)
+#### Create Parented
+## Create Inspect
+mat <- matrix(data = c(23, 20,
+                       33, 25,
+                       25, 28,
+                       5, 4,
+                       13, 17,
+                       1, 6), byrow = TRUE, nrow = 6)
+dimnames(mat) <- list(education = c("H.S grad or less", "Some college", "4yr college degree",
+                                    "Some grad school", "Grad degree", "Doctoral degree"), 
+                      parent = c("mother", "father"))
+mat
+matT <- as.table(mat)
+matDF <- as.data.frame(matT)
+Parented <- vcdExtra::expand.dft(matDF)
+rm(mat, matT, matDF)
+Parented$education <- factor(Parented$education, 
+                             levels = c("H.S grad or less", "Some college", "4yr college degree",
+                                        "Some grad school", "Grad degree", "Doctoral degree"))
+Parented$parent <- factor(Parented$parent, levels = c("mother", "father"))
+Parented <- as_tibble(Parented)
+Parented
+devtools::use_data(Parented, overwrite = TRUE)
+# Examples Ex 1.32, page 20
+# A data frame/tibble with 200 observations on the following two variables:
+# education = a factor with education level of parent
+# parent = a factor with levels of `mother` and `father`
+# Example
+T1 <- xtabs(~education + parent, data = Parented)
+T1
+barplot(t(T1), beside = TRUE, legend = TRUE, col = c("blue", "red"))
+rm(T1)
+## Not run
+ggplot2::ggplot(data = Parented, aes(x = education, fill = parent)) + 
+  geom_bar(position = "dodge") + 
+  theme_bw() +
+  theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) + 
+  scale_fill_manual(values = c("pink", "blue")) + 
+  labs(x = "", y = "") 
+##
 #####################
-Patrol <- read_csv("Patrol.csv")
+Patrol <- read_csv("PATROL.csv")
 Patrol <- Patrol %>%
   select(tickets, years, log_tickets = `ln(tickets)`)
 Patrol
-#Examples Exp 9.3 (tickets per week)
+devtools::use_data(Patrol, overwrite = TRUE)
+# Examples Exp 9.3 (tickets per week), page 470
+# tickets = number of tickets written per week
+# years = patrolperson's years of experience
+# log_tickets = natural log of \code{tickets}
 model <- lm(tickets ~ years, data = Patrol)
 summary(model)
 confint(model, level = 0.98)
 ####################
-Pearson <- read_csv("Pearson.csv")
+Pearson <- read_csv("PEARSON.csv")
+Pearson$family <- 1:11
+Pearson <- Pearson %>%
+  select(family, brother, sister)
 Pearson
-#Examples Ex 2.20 (inches)
+devtools::use_data(Pearson, overwrite = TRUE)
+#Examples Ex 2.20 (inches),
+# family = number indicating family of brother and sister pair
+# brother = height of brother (in inches)
+# sister = height of sister (in inches)
 plot(brother ~ sister, data = Pearson)
 cor(Pearson$brother, Pearson$sister)
 ####################
-Phone <- read_csv("Phone.csv")
+Phone <- read_csv("PHONE.csv")
 Phone
-#Examples Ex 6.95
+devtools::use_data(Phone, overwrite = TRUE)
+# Examples Ex 6.95, page 346
+# time = duration of long distance phone call (in minutes)
 qqnorm(Phone$time)
 qqline(Phone$time)
 shapiro.test(Phone$time)
 BSDA::SIGN.test(Phone$time, md = 5, alternative = "greater")
 ####################
-Poison <- read_csv("Poison.csv")
+Poison <- read_csv("POISON.csv")
 type <- c(rep("Drugs", 150857), rep("Cleaning Agent", 22347), 
           rep("Plants", 22326), rep("Cosmetics", 13192), 
           rep("Alcohol", 9201), rep("Insecticides", 8438))
 Poison <- data.frame(type)
 Poison <- as_tibble(Poison)
 Poison
-#Examples Ex 1.113
+devtools::use_data(Poison, overwrite = TRUE)
+# Examples Ex 1.113, page 67
+# A data frame/tibble of 226, 361 observations on one variable.
+# type = a factor with levels \code{Drugs}, \code{Cleaning Agent},
+# \code{Plants}, \code{Cosmetics}, \code{Alcohol}, \code{Insecticides}
 T1 <- xtabs(~type, data = Poison)
 T1
 par(mar = c(5.1 + 2, 4.1, 4.1, 2.1))
@@ -2496,69 +2581,99 @@ rm(T1)
 ggplot2::ggplot(data = Poison, aes(x = type, fill = type)) + 
   geom_bar() + 
   theme_bw() + 
+  theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) +
   guides(fill = FALSE)
 ##
 ####################
-Politic <- read_csv("Politic.csv")
+Politic <- read_csv("POLITIC.csv")
 Politic <- Politic %>%
   rename(party = Party, gender = Gender)
 Politic$party <- ifelse(Politic$party == 1, "democrat",
                         ifelse(Politic$party == 2, "republican", "other"))
 Politic$gender <- ifelse(Politic$gender == 1, "female", "male")
 Politic
-#Examples Exp 8.3
+devtools::use_data(Politic, overwrite = TRUE)
+#Examples Exp 8.3, page 433
+# A data frame/tibble with 250 observations on two variables
+# party = a factor with levels \code{republican}, \code{democrat}, and \code{other}
+# gender = a factor with levels \code{female} and \code{male}
 T1 <- xtabs(~party + gender, data = Politic)
 T1
 chisq.test(T1)
 rm(T1)
 ###################
-Pollutio <- read_csv("Pollutio.csv")
+Pollutio <- read_csv("POLLUTIO.csv")
 Pollutio
-#Examples Ex 5.59 (air pollution index for a major western city on 15 randomly selected summer days)
+devtools::use_data(Pollutio, overwrite = TRUE)
+#Examples Ex 5.59, page 270 (air pollution index for a major western city on 15 randomly selected summer days)
+# A data frame/tibble with 15 observations on one variable.
+# inde = air pollution index
 stem(Pollutio$inde)
 t.test(Pollutio$inde, conf.level = 0.98)$conf
 ##################
-Porosity <- read_csv("Porosity.csv")
+Porosity <- read_csv("POROSITY.csv")
 Porosity
-#Examples Ex 5.86 (percent)
+devtools::use_data(Porosity, overwrite = TRUE)
+#Examples Ex 5.86, page 288
+# A data frame/tibble with 20 observations on one variable
+# porosity = porosity measurement (percent)
 stem(Porosity$porosity)
 fivenum(Porosity$porosity)
 boxplot(Porosity$porosity)
 ##################
-## Alan stopped here 7/19 @ 9:09am
-
-Poverty <- read_csv("Poverty.csv")
+Poverty <- read_csv("POVERTY.csv")
 Poverty <- Poverty %>%
   rename(city = City, poverty = Poverty, crime = Crime)
 Poverty <- Poverty %>%
   select(city, poverty, crime, population = popu)
 Poverty
-#Examples Ex 9.11 and 9.17 (Crime rate per 1000, poverty = % in poverty)
+devtools::use_data(Poverty, overwrite = TRUE)
+# Examples Ex 9.11 and 9.17, page 468 (Crime rate per 1000, poverty = % in poverty)
+# A data frame/tibble with 20 observations on four variables
+# city = U.S. city
+# poverty = percent of children living in poverty
+# crime = crime rate (per 1000 people)
+# population = population of city
 plot(poverty ~ crime, data = Poverty)
 model <- lm(poverty ~ crime, data = Poverty)
 abline(model)
 summary(model)
 rm(model)
 ##################
-Precinct <- read_csv("Precinct.csv")
+Precinct <- read_csv("PRECINCT.csv")
 Precinct
-#Examples Ex 2.2 and 2.38 (robbery rate (robberies per 1000 people?), percent low income residents)
+devtools::use_data(Precinct, overwrite = TRUE)
+# Examples Ex 2.2 and 2.38, page 84 (robbery rate (robberies per 1000 people?), percent low income residents)
+# A data frame/tibble with eight observations on two variables
+# rate = robbery rate (per 1000 people)
+# income = percent with low income
 plot(rate ~ income, data = Precinct)
 model <- (lm(rate ~ income, data = Precinct))
 abline(model)
 rm(model)
 ##################
-Prejudic <- read_csv("Prejudic.csv")
+Prejudic <- read_csv("PREJUDIC.csv")
 Prejudic
-#Examples Exp 5.10 (not Ex 5.22)
+devtools::use_data(Prejudic, overwrite = TRUE)
+# Examples Exp 5.10 (not Ex 5.22), page 242
+# A data frame/tibble with 25 observations and one variable
+# prejud = racial prejudice score
+
 stem(Prejudic$prejud)
 BSDA::EDA(Prejudic$prejud)
 ##################
-Presiden <- read_csv("Presiden.csv")
+Presiden <- read_csv("PRESIDEN.csv")
 Presiden <- Presiden %>%
   rename(first_initial = firs, last_name = Presiden, birth_state = Birt, inaugural_age = Inaugage, death_age = Deathage)
 Presiden
-#Examples Ex 1.126
+devtools::use_data(Presiden, overwrite = TRUE)
+# Examples Ex 1.126, page 73
+# A data frame/tibble with 43 observations on five variables
+# first_initial = President's first initial
+# last_name = President's last name
+# birth_state = President's birth state
+# inaugural_age = President's age at inauguration
+# death_age = President's age at death
 pie(xtabs(~birth_state, data = Presiden))
 stem(Presiden$inaugural_age)
 stem(Presiden$death_age)
@@ -2570,22 +2685,29 @@ stripchart(x=list(Presiden$inaugural_age, Presiden$death_age),
 par(mar = c(5.1, 4.1, 4.1, 2.1))
 ##
 ##################
-Press <- read_csv("Press.csv")
+Press <- read_csv("PRESS.csv")
 Press <- Press %>%
   select(education_yrs = educat, confidence = confid)
 Press
-#Examples Ex 9.55 (educat)
+devtools::use_data(Press, overwrite = TRUE)
+#Examples Ex 9.55, page 508
+# A data frame/tibble with 20 observations on two variables
+# education_yrs = years of education
+# confidence = degree of confidence in the press (the higher the score, the more confidence)
 plot(confidence ~ education_yrs, data = Press)
 model <- lm(confidence ~ education_yrs, data = Press)
 abline(model, col = "purple")
 summary(model)
 rm(model)
 ##################
-Prognost <- read_csv("Prognost.csv")
+Prognost <- read_csv("PROGNOST.csv")
 Prognost <- Prognost %>%
   rename(kprs_score = score)
 Prognost
-#Examples Ex 6.61
+devtools::use_data(Prognost, overwrite = TRUE)
+# Examples Ex 6.61, page 339
+# A data frame/tibble with 15 observations on one variable
+# kprs_score = Kloper's Prognostic Rating Scale score
 BSDA::EDA(Prognost$kprs_score)
 t.test(Prognost$kprs_score, mu = 9)
 ##################
@@ -2594,7 +2716,11 @@ Program <- Program %>%
   rename(method1 = Method1, method2 = Method2, method3 = Method3, method4 = Method4)%>%
   gather(method1, method2, method3, method4, key = "method", value = "score")
 Program
-#Examples Ex 10.17
+# Examples Ex 10.17, page 539
+# A data frame/tiblle with 44 observations on two variables
+# method = a character variable with values \code{method1}, \code{method2},
+# \code{method3}, and \code{method4}
+# score = standardized test score
 boxplot(score ~ method, col = c("red", "blue", "green", "yellow"), data = Program)
 anova(lm(score ~ method, data = Program))
 TukeyHSD(aov(score ~ method, data = Program))
@@ -2602,11 +2728,15 @@ par(mar = c(5.1, 4.1 + 4, 4.1, 2.1))
 plot(TukeyHSD(aov(score ~ method, data = Program)), las = 1)
 par(mar = c(5.1, 4.1, 4.1, 2.1))
 ##################
-Psat <- read_csv("Psat.csv")
+Psat <- read_csv("PSAT.csv")
 Psat <- Psat %>%
   select(psat, sat)
 Psat
-#Examples Ex 2.50
+devtools::use_data(Psat, overwrite = TRUE)
+#Examples Ex 2.50, page 115
+# A data frame/tibble with seven observations on two variables
+# psat = PSAT score
+# sat = SAT score
 model <- lm(sat ~ psat, data = Psat)
 par(mfrow = c(1, 2))
 plot(Psat$psat, resid(model))
@@ -2614,52 +2744,78 @@ plot(model, which = 1)
 rm(model)
 par(mfrow = c(1, 1))
 ##################
-Psych <- read_csv("Psych.csv")
+Psych <- read_csv("PSYCH.csv")
 Psych
-#Examples Ex 1.42 (score = number of correct repsonses in a psychology experiment)
+devtools::use_data(Psych, overwrite = TRUE)
+# Examples Ex 1.42, page 29 
+# A data frame with 23 observations on one variable
+# score = number of correct repsonses in a psychology experiment
 stem(Psych$score)
 BSDA::EDA(Psych$score)
 ##################
-Puerto <- read_csv("puerto.csv")
+Puerto <- read_csv("PUERTO.csv")
 Puerto
-#Examples Ex 5.22 and 5.65 (income = weekly family income in dollars)
+devtools::use_data(Puerto, overwrite = TRUE)
+# Examples Ex 5.22 and 5.65, page 246
+# A data frame/tiblle with 50 observations on one variable
+# income = weekly family income (in dollars)
 stem(Puerto$income)
 boxplot(Puerto$income)
 t.test(Puerto$income,conf.level = .90)$conf
 ##################
-Quail <- read_csv("Quail.csv")
+Quail <- read_csv("QUAIL.csv")
 Quail <- Quail%>%
   rename(treatment = treatmen) %>%
   gather(placebo, treatment, key = "group", value = "level")
 Quail
-#Examples Ex 1.53, 1.77, 1.88, 5.66, and 7.50 (level = low-density lipoprotein (LDL) cholestrol level)
+devtools::use_data(Quail, overwrite = TRUE)
+# Examples Ex 1.53, 1.77, 1.88, 5.66, and 7.50, page 32 (level = low-density lipoprotein (LDL) cholestrol level)
+# A data frame/tibble with 40 observations on two variables
+# group = a character variable with values \code{placebo} and \code{treatment}
+# level = low-density lipoprotein (LDL) cholestrol level 
 boxplot(level ~ group, data = Quail, horizontal = TRUE, xlab = "LDL Level",
         col = c("yellow", "lightblue"))
 ##################
-Quality <- read_csv("Quality.csv")
+Quality <- read_csv("QUALITY.csv")
 Quality <- Quality %>%
   gather(Process1, Process2, key = "process", value = "score")
 Quality <- na.omit(Quality)
 Quality
-# Examples Ex 7.81 (score = results of a quality control test)
+devtools::use_data(Quality, overwrite = TRUE)
+# Examples Ex 7.81, page 416 (score = results of a quality control test)
+# A data frame/tibble with 15 observations on two variables
+# process = a character variable with values \code{Process1} and \code{Process2}
+# score = results of a quality control test
 boxplot(score ~ process, data = Quality)
 t.test(score ~ process, data = Quality)
 
 ##################
-Rainks <- read_csv("Rainks.csv")
+Rainks <- read_csv("RAINKS.csv")
 Rainks
-#Examples Ex 9.8 (page 465)
+devtools::use_data(Rainks, overwrite = TRUE)
+# Examples Ex 9.8 (page 465)
+# A data frame/tibble with 35 observations on five variables
+# rain = rainfall (in inches)
+# x1 = rainfall (in inches)
+# x2 = rainfall (in inches)
+# x3 = rainfall (in inches)
+# x4 = rainfall (in inches)
 cor(Rainks)
 model <- lm(rain ~ x2, data = Rainks)
 summary(model)
 ##################
-Randd <- read_csv("Randd.csv")
+Randd <- read_csv("RANDD.csv")
 Randd
 Randd <- Randd %>%
   select(rd, sales)
 Randd
-#Examples Exp 9.8 and Ex 9.37 (not 9.36) (all numbers in million dollars) 
+devtools::use_data(Randd, overwrite = TRUE)
+#Examples Exp 9.8, page 489 and Ex 9.37 (not 9.36) (all numbers in million dollars) 
 # (rd = research and development in millions of dollars, sales = sales in millions of dollars)
+# A data frame with 12 observations on two variables
+# rd = research and development expenditures (in million dollars)
+# sales = sales (in million dollars)
+
 plot(sales ~ rd, data = Randd)
 model <- lm(sales ~ rd, data = Randd)
 abline(model)
@@ -2667,13 +2823,16 @@ summary(model)
 plot(model, which = 1)
 rm(model)
 ##################
-Rat <- read_csv("Rat.csv")
+Rat <- read_csv("RAT.csv")
 Rat
 Rat <- Rat %>%
   rename(survival_time = `survival time`)
 Rat
-#Examples Ex 1.52, 1.76, 5.62, and 6.44 
-# (survival_time = survival time in weeks for rats exposed to a high level of radiation)
+devtools::use_data(Rat, overwrite = TRUE)
+# Examples Ex 1.52, 1.76, 5.62, and 6.44 
+# A data frame/tibble with 20 observations on one variable
+# survival_time = survival time in weeks for rats exposed to a high level of radiation 
+
 hist(Rat$survival_time)
 qqnorm(Rat$survival_time)
 qqline(Rat$survival_time)
@@ -2681,12 +2840,16 @@ summary(Rat$survival_time)
 t.test(Rat$survival_time)
 t.test(Rat$survival_time, mu = 100, alternative = "greater")
 ##################
-Ratings <- read_csv("Ratings.csv")
+Ratings <- read_csv("RATINGS.csv")
 Ratings <- Ratings %>%
   select(rating = Rating, gpa = GPA)
 Ratings
-#Examples Exp 2.6 (page 83) 
-# (gpa = students' grade point average, rating = instructor rating (A-F))
+devtools::use_data(Ratings, overwrite = TRUE)
+# Examples Exp 2.6 (page 83) 
+# A data frame with 250 observations on two variables
+# rating = character variable with students' ratings of instructor (A-F)
+# gpa = students' grade point average
+
 boxplot(gpa ~ rating, data = Ratings, xlab = "Student rating of instructor", 
         ylab = "Student GPA")
 ## Not run
@@ -2697,31 +2860,43 @@ ggplot2::ggplot(data = Ratings, aes(x = rating, y = gpa, fill = rating)) +
   labs(x = "Student rating of instructor", y = "Student GPA")
 ##
 ##################
-Reaction <- read_csv("Reaction.csv")
+Reaction <- read_csv("REACTION.csv")
 Reaction
-# Examples Example 6.11 not Exercise 
-# (page 330, time = threshold reaction time (in seconds) for persons
-# subjected to emotional stress)
+devtools::use_data(Reaction, overwrite = TRUE)
+# Examples Example 6.11 not Exercise, page 330 
+# A data frame/tibble with 12 observations on one variable
+# time = threshold reaction time (in seconds) for persons subjected to emotional stress
+
 stem(Reaction$time)
 BSDA::SIGN.test(Reaction$time, md = 15, alternative = "less")
 
 ##################
-Reading <- read_csv("Reading.csv")
+Reading <- read_csv("READING.csv")
 Reading <- Reading %>%
   rename(score = reading)
 Reading
-#Examples Ex 1.72 (but not Ex 2.10)
+devtools::use_data(Reading, overwrite = TRUE)
+# Examples Ex 1.72 (but not Ex 2.10)
+# A data frame with 30 observations on four variables
+# score = standardized reading test score
+# sorted = sorted values of \code{score}
+# trimmed = trimmed values of \code{sorted}
+# winsoriz = winsorized values of \code{score}
 # (score = standardized reading test score)
 hist(Reading$score, main = "Exercise 1.72", 
      col = "lightgreen", xlab = "Standardized reading score")
 summary(Reading$score)
 sd(Reading$score)
 ##################
-Readiq <- read_csv("Readiq.csv")
+Readiq <- read_csv("READIQ.csv")
 Readiq <- Readiq%>%
   rename(iq = IQ)
 Readiq
-#Examples Ex 2.53, page  ( reading = reading achievement score, iq = IQ score)
+devtools::use_data(Readiq, overwrite = TRUE)
+# Examples Ex 2.53, page 116
+# A data frame/tibble with 14 observations on two variables
+# reading = reading achievement score
+# iq = IQ score
 plot(reading ~ iq, data = Readiq)
 model <- lm(reading ~ iq, data = Readiq)
 abline(model)
@@ -2729,7 +2904,7 @@ predict(model, newdata = data.frame(iq = c(100, 120)))
 residuals(model)[c(6, 7)]
 rm(model)
 ##################
-# Referend <- read_csv("Referend.csv")
+# Referend <- read_csv("REFEREND.csv")
 # Create Referend
 mat <- matrix(data = c(24, 29, 7, 68, 39, 12, 47, 8, 3), byrow = TRUE, 
               nrow = 3)
@@ -2745,31 +2920,46 @@ Referend$response <- factor(Referend$response,
                             levels = c("for", "against", "undecided"))
 Referend <- as_tibble(Referend)
 Referend 
-#Examples Ex 8.20 page 436 (choice = response to question (A, B, or C), 
+devtools::use_data(Referend, overwrite = TRUE)
+# Examples Ex 8.20 page 436 (choice = response to question (A, B, or C), 
 # response = opinion on referendum (for, against, undecided) )
+
+# A data frame/tibble with 237 observations on two variables
+# choice = a factor with levels \code{A}, \code{B}, and \code{C}
+# response = a factor with levels \code{for}, \code{against}, and \code{undecided}
+
 T1 <- xtabs(~choice + response, data = Referend)
 T1
 chisq.test(T1)
 chisq.test(T1)$expected
 ##################
-Region <- read_csv("Region.csv")
+Region <- read_csv("REGION.csv")
 Region <- Region %>%
   select(pollution = Index, region = Region, ranks = Ranks)
 Region$region <- ifelse(Region$region == 1, "west",
                         ifelse(Region$region == 2, "central", "east"))
 Region
-#Examples Ex 10.26 
-# (pollution = pollution index for a county, region = region of a county (west, central, east))
+devtools::use_data(Region, overwrite = TRUE)
+# Examples Ex 10.26, page 547
+# A data frame/tibble with 48 observations on three variables
+# pollution = pollution index
+# region = region of a county (\code{west}, \code{central}, and \code{east})
+# ranks = ranked values of \code{pollution}
+
 boxplot(pollution ~ region, data = Region)
 anova(lm(pollution ~ region, data = Region))
 ##################
-Register <- read_csv("Register.csv")
+Register <- read_csv("REGISTER.csv")
 Register
 Register <- Register %>%
   select(age, cost)
 Register
-#Examples Ex 2.3, 2.39, and 2.54 
-# (cost = maintenance cost of cash register in dollars, age = age of cash register in years)
+devtools::use_data(Register, overwrite = TRUE)
+# Examples Ex 2.3, 2.39, and 2.54 
+# A data frame with nine observations on two variables
+# age = age of cash register (in years)
+# cost = maintenance cost of cash register (in dollars)
+
 plot(cost ~ age, data = Register)
 model <- lm(cost ~ age, data = Register)
 abline(model)
@@ -2777,16 +2967,22 @@ predict(model, newdata = data.frame(age = c(5, 10)))
 plot(model, which = 1)
 rm(model)
 ##################
-Rehab <- read_csv("Rehab.csv")
+Rehab <- read_csv("REHAB.csv")
 Rehab <- Rehab %>%
   select(psych1 = Psych1, psych2 = Psych2, differ)
 Rehab$inmate <- 1:20
 Rehab <- Rehab %>%
   select(inmate, psych1, psych2, differ)
 Rehab
-#Examples Ex 7.61 (inmate = inmate identification number, 
-# psch1 = rating from first psychiatrist on the inmates rehabilative potential, 
-# psych2 = rating from second psychiatrist on the inmates rehabilative potential)
+devtools::use_data(Rehab, overwrite = TRUE)
+# Examples Ex 7.61 
+
+# A data frame/tibble with 20 observations on four variables
+# inmate = inmate identification number
+# psch1 = rating from first psychiatrist on the inmates rehabilative potential 
+# psych2 = rating from second psychiatrist on the inmates rehabilative potential
+# differ = \code{psych1} - \code{psych2}
+
 boxplot(Rehab$differ)
 qqnorm(Rehab$differ)
 qqline(Rehab$differ)
@@ -2794,11 +2990,16 @@ t.test(Rehab$differ)
 # Or
 t.test(Rehab$psych1, Rehab$psych2, paired = TRUE)
 ##################
-Remedial <- read_csv("Remedial.csv")
+Remedial <- read_csv("REMEDIAL.csv")
 Remedial <- Remedial %>% 
   gather(female, male, key = "gender", value = "score")
 Remedial
-#Examples Ex 7.43, page 389, (score = math placement score, gender = female, male)
+devtools::use_data(Remedial, overwrite = TRUE)
+# Examples Ex 7.43, page 389, 
+# A data frame/tibble with 84 observations on two variables
+# gender = a character variable with values \code{female} and \code{male}
+# score = math placement score
+
 boxplot(score ~ gender, data = Remedial, 
         col = c("purple", "blue"))
 t.test(score ~ gender, data = Remedial, conf.level = 0.98)
@@ -2806,44 +3007,60 @@ t.test(score ~ gender, data = Remedial, conf.level = 0.98)$conf
 wilcox.test(score ~ gender, data = Remedial, 
             conf.int = TRUE, conf.level = 0.98)
 ##################
-Rentals <- read_csv("Rentals.csv")
+Rentals <- read_csv("RENTALS.csv")
 Rentals
-#Examples Ex 1.122, page 70 (rent = weekly apartment rental price (in dollars))
+devtools::use_data(Rentals, overwrite = TRUE)
+# Examples Ex 1.122, page 70 
+# A data frame/tibble with 45 observations on one variable
+# rent = weekly apartment rental price (in dollars)
+
 stem(Rentals$rent)
 sum(Rentals$rent < mean(Rentals$rent) - 3*sd(Rentals$rent) | 
       Rentals$rent > mean(Rentals$rent) + 3*sd(Rentals$rent))
 ##################
-Repair <- read_csv("Repair.csv")
+Repair <- read_csv("REPAIR.csv")
 Repair
-#Examples Ex 5.77 (time = time to repair a wrecked in car (in hours))
+devtools::use_data(Repair, overwrite = TRUE)
+# Examples Ex 5.77 
+# A data frame/tibble with 22 observations on one variable
+# time = time to repair a wrecked in car (in hours)
+#
 stem(Repair$time)
 BSDA::SIGN.test(Repair$time, conf.level = 0.98)
 ##################
-Retail<- read_csv("Retail.csv")
+Retail<- read_csv("RETAIL.csv")
 Retail
-# Examples Ex 9.59, page 509, (months = length of employment (in months), 
-# sales = employee gross sales (in dollars))
+devtools::use_data(Retail, overwrite = TRUE)
+# Examples Ex 9.59, page 509, 
+# A data frame/tibble with 10 observations on two variables
+# months = length of employment (in months)
+# sales = employee gross sales (in dollars)
+#
 plot(sales ~ months, data = Retail)
 model <- lm(sales ~ months, data = Retail)
 abline(model)
 summary(model)
 ##################
-Ronbrown1 <- read_csv("Ronbrown1.csv")
+Ronbrown1 <- read_csv("RONBROWN1.csv")
 Ronbrown1 <- Ronbrown1 %>%
   select(depth, temperature = downtemp1)
 Ronbrown1  
-#Examples Ex 2.9, Example 2.4 uses Ronbrown2
-# (depth = ocen depth (in meters),
-# temperature = ocean temperature (in centigrade))
+devtools::use_data(Ronbrown1, overwrite = TRUE)
+# Examples Ex 2.9, Example 2.4 uses Ronbrown2
+# A data frame/tibble with 75 observations on two variables
+# depth = ocen depth (in meters)
+# temperature = ocean temperature (in Celsius)
 plot(temperature ~ depth, data = Ronbrown1, ylab = "Temperature")
 ##################
-Ronbrown2 <- read_csv("Ronbrown2.csv")
+Ronbrown2 <- read_csv("RONBROWN2.csv")
 Ronbrown2 <- Ronbrown2 %>%
   select(depth, temperature = primarytemp, salinity = primarysalinity)
 Ronbrown2
-#Examples Exp 2.4 and Ex 2.56
-# (depth = ocen depth (in meters),
-# temperature = ocean temperature (in centigrade))
+devtools::use_data(Ronbrown2, overwrite = TRUE)
+# Examples Exp 2.4 and Ex 2.56
+# A data frame with 150 observations on three variables
+# depth = ocen depth (in meters)
+# temperature = ocean temperature (in Celcius)
 # salinity = ocean salinity level
 plot(salinity ~ depth, data = Ronbrown2)
 model <- lm(salinity ~ depth, data = Ronbrown2)
@@ -2851,14 +3068,16 @@ summary(model)
 plot(model, which = 1)
 rm(model)
 ##################
-Rural <- read_csv("Rural.csv")
+Rural <- read_csv("RURAL.csv")
 Rural <- Rural%>%
   select(score, area = code)
 Rural$area <- ifelse(Rural$area == 1, "rural", "city")
 Rural
-#Examples Exp 7.16, page 383
+devtools::use_data(Rural, overwrite = TRUE)
+# Examples Exp 7.16, page 383
+# A data frame/tibble with 33 observations on two variables
 # score = childs social adjustment score
-# area = character variable with values city and rural
+# area = character variable with values \code{city} and \code{rural}
 boxplot(score ~ area, data = Rural)
 wilcox.test(score ~ area, data = Rural)
 ## Not run
@@ -2866,16 +3085,20 @@ Rural <- dplyr::mutate(Rural, r = rank(score))
 Rural
 t.test(r ~ area, data = Rural)
 ##################
-Salary <- read_csv("Salary.csv")
+Salary <- read_csv("SALARY.csv")
 Salary
-#Examples Ex 3.66, page 182
+devtools::use_data(Salary, overwrite = TRUE)
+# Examples Ex 3.66, page 182
+# A data frame/tibble with 25 observations on one variable
 # salary = starting salary for Ph.D. psycholgists
 qqnorm(Salary$salary, pch = 19, col = "purple")
 qqline(Salary$salary, col = "blue")
 ##################
-Salinity <- read_csv("Salinity.csv")
+Salinity <- read_csv("SALINITY.csv")
 Salinity
+devtools::use_data(Salinity, overwrite = TRUE)
 # Examples Ex 5.27 and 5.64
+# A data frame with 48 observations on one variable
 # salinity = surface-water salinity value
 stem(Salinity$salinity)
 qqnorm(Salinity$salinity, pch = 19, col = "purple")
@@ -2883,7 +3106,7 @@ qqline(Salinity$salinity, col = "blue")
 t.test(Salinity$salinity, conf.level = 0.99)
 t.test(Salinity$salinity, conf.level = 0.99)$conf
 ##################
-Sat <- read_csv("Sat.csv") 
+Sat <- read_csv("SAT.csv") 
 Sat <- Sat %>%
   select(-code)
 Sat
@@ -2900,8 +3123,10 @@ Sat99
 Sat <- rbind(Sat94, Sat99)
 Sat$year <- factor(rep(c(1994, 1999), each = 51))
 Sat
+devtools::use_data(Sat, overwrite = TRUE)
 # Examples Stat Insight Ch 9, page 456
-# state = US state
+# A data frame/tibble with 102 observations on seven variables
+# state = U.S. state
 # verbal = verbal SAT score
 # math = math SAT score
 # total = combined verbal and math SAT score
@@ -2919,7 +3144,7 @@ abline(model, col = "blue")
 summary(model)
 rm(model)
 ##################
-Saving <- read_csv("Saving.csv")
+Saving <- read_csv("SAVING.csv")
 Saving <- Saving %>% 
   select(par = PAR, state, ranks)
 Saving$state <- ifelse(Saving$state == 1, "California",
@@ -2930,8 +3155,11 @@ Saving
 Saving <- Saving %>%
   select(par, state)
 Saving
-#Examples Ex 10.34 and 10.49, page 551,
-# par = problem-asset-ratio for Savings & Loans that wer listed as being financially troubled in 1992 
+devtools::use_data(Saving, overwrite = TRUE)
+# Examples Ex 10.34 and 10.49, page 551
+# A data frame/tibble with 65 observations on two variables
+# par = problem-asset-ratio for Savings & Loans that were listed as being financially troubled in 1992
+# state = U.S. state
 boxplot(par ~ state, data = Saving)
 boxplot(par ~ state, data = Saving, log = "y")
 model <- aov(par ~ state, data = Saving)
@@ -2939,13 +3167,14 @@ summary(model)
 plot(TukeyHSD(model))
 kruskal.test(par ~ factor(state), data = Saving)
 ##################
-##################
-Scales <- read_csv("Scales.csv")
+Scales <- read_csv("SCALES.csv")
 Scales <- Scales %>%
   rename(brand = Brand)
 Scales
-#Examples Ex 1.89, page 61
-# brand = variable indicating brand of bathroom scale (A, B, C, or D)
+devtools::use_data(Scales, overwrite = TRUE)
+# Examples Ex 1.89, page 61
+# A data frame/tibble with 20 observations on two variables
+# brand = variable indicating brand of bathroom scale (\code{A}, \code{B}, \code{C}, or \code{D})
 # reading = recorded value (in pounds) of a 100 pound weight
 boxplot(reading ~ brand, data = Scales, col = rainbow(4), 
         ylab = "Weight (lbs)")
@@ -2957,27 +3186,36 @@ ggplot2::ggplot(data = Scales, aes(x = brand, y = reading, fill = brand)) +
   theme(legend.position = "none") 
 ##
 ##################
-Schizop2 <- read_csv("Schizop2.csv")
+Schizop2 <- read_csv("SCHIZOP2.csv")
 Schizop2
-#Examples Ex 6.99, page 348
+devtools::use_data(Schziop2, overwrite = TRUE)
+# Examples Ex 6.99, page 348
 # Learning exhibited by patients with schizophrenia after they take a specified does of a tranquilizer.
+
+# A data frame/tibble with 17 observations on one variable
 # score = schizophrenics score on a second standardized exam
+
+
 hist(Schizop2$score, xlab = "score on standardized test after a tranquilizer", 
      main = "Exercise 6.99", breaks = 10, col = "orange")
 BSDA::EDA(Schizop2$score)
 BSDA::SIGN.test(Schizop2$score, md = 22, alternative = "greater")
 ##################
-Schizoph <- read_csv("Schizoph.csv")
+Schizoph <- read_csv("SCHIZOPH.csv")
 Schizoph
+devtools::use_data(Schizoph, overwrite = TRUE)
 #Examples Exp 6.10
+
 # Learning exhibited by patients with schizophrenia after they take a specified does of a tranquilizer.
+
+# A data frame with 13 observations on one variable
 # score = schizophrenics score on a standardized exam one hour after recieving a specified dose of a tranqilizer.
 hist(Schizoph$score, xlab = "score on standardized test", 
      main = "Example 6.10", breaks = 10, col = "orange")
 BSDA::EDA(Schizoph$score)
 t.test(Schizoph$score, mu = 20)
 ##################
-## Seatbelt <- read_csv("Seatbelt.csv")
+## Seatbelt <- read_csv("SEATBELT.csv")
 ## Create Seatbelt
 mat <- matrix(data = c(12813, 647, 359, 42, 65963, 4000, 2642, 303), byrow = TRUE,  nrow = 2)
 dimnames(mat) <- list(seatbelt = c("Yes", "No"), 
@@ -2992,10 +3230,13 @@ Seatbelt$injuries <- factor(Seatbelt$injuries,
                             levels = c("None", "Minimal", "Minor", "Major"))
 Seatbelt <- as_tibble(Seatbelt)
 Seatbelt
-#Examples Ex 8.24
+devtools::use_data(Seatbelt, overwrite = TRUE)
+# Examples Ex 8.24
 # Prior to enactment of seat belt legislation in Alberta, Canada, data
 # were collected on 86, 769 automobile accidents reports to determine the effectiveness
 # of seat belts in preventing injury.
+
+# A data frame/tibble with 86,759 observations on two variables
 # seatbelt = a factor with levels Yes or No indicating whether the driver was wearing a seatbelt
 # injuries = a factor with levels None, Minimal, Minor, or Major indicating the extent of the drivers injuries.
 #
@@ -3003,41 +3244,51 @@ T1 <- xtabs(~seatbelt + injuries, data = Seatbelt)
 T1
 chisq.test(T1)
 rm(T1)
-################## ATA stopped 6/30/17 @ 6:12 am here
 #########################################################
-Selfdefe <- read_csv("Selfdefe.csv")
+Selfdefe <- read_csv("SELFDEFE.csv")
 Selfdefe <- Selfdefe %>%
   rename(woman = Woman, before = Before, after = After)
 Selfdefe
+devtools::use_data(Selfdefe, overwrite = TRUE)
 #Examples Exp 7.19, page 397
 # A group of women in a large city were given instruction on self defense.  
 # Prior to the course, they were tested to determine their self-confidence.  
 # After the course they were given the same test.  A high score on the test
 # indicates a high degree of self-confidence.
+
+# A data frame with nine observations on three variables
 # woman = number identifying the woman
 # before = before the course self-confidence score
 # after = after the course self-confidence score
+
 Selfdefe$differ <- Selfdefe$after - Selfdefe$before
 Selfdefe
 t.test(Selfdefe$differ, alternative = "greater")
 t.test(Selfdefe$after, Selfdefe$before, 
        paired = TRUE, alternative = "greater")
 ##################
-Senior <- read_csv("Senior.csv")
+Senior <- read_csv("SENIOR.csv")
 Senior
+devtools::use_data(Senior, overwrite = TRUE)
 #Examples Ex 1.83 and 3.67, page 59
+
+# A data frame/tibble with 31 observations on one variable
+
 # Reaction times for senior citizens
 # Sent Larry email about units 7/20/16...as seconds does not make sense
+
 # reaction = reaction time for senior citizens applying for a driver's license renewal
 stem(Senior$reaction)
 fivenum(Senior$reaction)
 boxplot(Senior$reaction, main = "Problem 1.83, part d",
         horizontal = TRUE, col = "purple")
 #################
-Sentence <- read_csv("Sentence.csv")
+Sentence <- read_csv("SENTENCE.csv")
 Sentence
-#Examples Ex 1.123, page 71
-# months = sentence length in months for prisoners convicted of homocide
+devtools::use_data(Sentence, overwrite = TRUE)
+# Examples Ex 1.123, page 71
+# A data frame/tibble with 41 observations on one variable
+# months = sentence length (in months) for prisoners convicted of homocide
 stem(Sentence$months)
 ll <- mean(Sentence$months)-2*sd(Sentence$months)
 ul <- mean(Sentence$months)+2*sd(Sentence$months)
@@ -3045,12 +3296,15 @@ limits <- c(ll, ul)
 limits
 rm(ul, ll, limits)
 #################
-Shkdrug <- read_csv("Shkdrug.csv")
+Shkdrug <- read_csv("SHKDRUG.csv")
 Shkdrug <- Shkdrug %>%
   select(treatment = Treatment, response = Response)
 Shkdrug
+devtools::use_data(Shkdrug, overwrite = TRUE)
 # Examples Ex 10.11-12, page 532
 # Effect of drug and electroshock therapy on a subject's ability to solve simple tasks.
+
+# A data frame/tibble with 64 observations on two variables
 # treatment = type of treament Drug/NoS, Drug/Shk, NoDg/NoS, or NoDrug/S
 # response = number of tasks completed in a 10-minute period
 boxplot(response ~ treatment, data = Shkdrug)
@@ -3058,15 +3312,18 @@ model <- lm(response ~ treatment, data = Shkdrug)
 anova(model)
 rm(model)
 #################
-Shock <- read_csv("Shock.csv")
+Shock <- read_csv("SHOCK.csv")
 Shock <- Shock %>%
   gather(key = "group", value = "attempts")
 Shock
+devtools::use_data(Shock, overwrite = TRUE)
 #Examples Ex 10.50, page 561
 # Effect of shock treatment on the amount of time one takes to complete 
 # a difficult task.
-# group = grouping variable with values of Group1 (no shock), Group2 (medium shock), 
-# and Group3 (sever shock)
+
+# A data frame/tibble with 27 observations on two variables
+# group = grouping variable with values of \code{Group1} (no shock), \code{Group2} (medium shock), 
+# and \code{Group3} (severe shock)
 # attempts = number of attempts to complete a task
 boxplot(attempts ~ group, data = Shock)
 model <- lm(attempts ~ group, data = Shock)
@@ -3076,44 +3333,58 @@ rm(model)
 #################
 ## Alan stopped here for lunch 7/20/17 @ 12:08
 #################
-Shoplift <- read_csv("Shoplift.csv")
+Shoplift <- read_csv("SHOPLIFT.csv")
 Shoplift
-#Examples Ex 9.58, pg 509, (sales = sales in $1000, loss in $100) 
+devtools::use_data(Shoplift, overwrite = TRUE)
+# Examples Ex 9.58, pg 509, 
+# A data frame/tibble with eight observations on two variables
+# sales = sales (in 1000 dollars)
+# loss = loss (in 100 dollars) 
 plot(loss ~ sales, data = Shoplift)
 model <- lm(loss ~ sales, data = Shoplift)
 summary(model)
 rm(model)
 ################
-Short <- read_csv("Short.csv")
+Short <- read_csv("SHORT.csv")
 Short <- Short %>% 
-  select(sample = Sample, parallax = Parallax of the sun)
+  select(sample = Sample, parallax = Parallax)
 Short 
-#Examples Ex 6.65, pg 341 ( sample = sample number, parallax = )
+devtools::use_data(Short, overwrite = TRUE)
+# Examples Ex 6.65, pg 341 
+# A data frame/tibble with 158 observations on two variables
+# sample = sample number
+# parallax = parallax measurements (seconds of a degree)
 hist(Short$parallax, main = "Problem 6.65", 
      xlab = "", col = "orange")
 BSDA::SIGN.test(Short$parallax, md = 8.798)
 t.test(Short$parallax, mu = 8.798)
 ################
-Shuttle <- read_csv("Shuttle.csv")
+Shuttle <- read_csv("SHUTTLE.csv")
 Shuttle <- Shuttle %>%
   select(users = shuttle, autos)
 Shuttle
-#Examples Ex 9.20, pg 483 - (users = number of shuttle riders, 
-# autos = number of automobiles in the downtown area)
+devtools::use_data(Shuttle, overwrite = TRUE)
+# Examples Ex 9.20, pg 483 
+# A data frame/tibble with 15 observations on two variables
+# users = number of shuttle riders 
+# autos = number of automobiles in the downtown area
 plot(autos ~ users, data = Shuttle)
 model <- lm(autos ~ users, data = Shuttle)
 summary(model)
 rm(model)
 ################
-Simpson <- read_csv("Simpson.csv")
+Simpson <- read_csv("SIMPSON.csv")
 Simpson <- Simpson%>%
   select(gpa, sport = spor, gender)
 Simpson$sport <- ifelse(Simpson$sport == 1, "basketball",
                         ifelse(Simpson$sport == 2, "track", "soccer"))
 Simpson$gender <- ifelse(Simpson$gender == 1, "male", "female")          
 Simpson 
-#Examples Examples 1.18, page 56 - (gpa = grade point average,
-# sport = sport played (basketball, soccer, or track))
+devtools::use_data(Simpson, overwrite = TRUE)
+# Examples Examples 1.18, page 56 
+# A data frame/tibble with 100 observations on three variables
+# gpa = grade point average
+# sport = sport played (basketball, soccer, or track)
 # gender = athlete sex (male, female)
 boxplot(gpa ~ gender, data = Simpson)
 boxplot(gpa ~ sport, data = Simpson)
@@ -3124,11 +3395,12 @@ ggplot2::ggplot(data = Simpson, aes(x = gender, y = gpa,
   facet_grid(.~sport) + theme_bw()
 ##
 ################
-Situp <- read_csv("Situp.csv")
+Situp <- read_csv("SITUP.csv")
 Situp
+devtools::use_data(Situp, overwrite = TRUE)
 # Examples Ex 1.47, page 30
-# number = maximum number of situps completed in an 
-# exercise class after 1 month in the program.
+# A data frame/tibble with 20 observations on one variable 
+# number = maximum number of situps completed in an exercise class after 1 month in the program
 stem(Situp$number)
 hist(Situp$number, breaks = seq(0, 70, 10), right = FALSE)
 hist(Situp$number, breaks = seq(0, 70, 10), right = FALSE, 
@@ -3136,22 +3408,27 @@ hist(Situp$number, breaks = seq(0, 70, 10), right = FALSE,
      xlab = "Maximum number of situps")
 lines(density(Situp$number), col = "red")
 ################
-Skewed <- read_csv("Skewed.csv")
+Skewed <- read_csv("SKEWED.csv")
 Skewed
-#Examples Ex 7.65, page 412 (C1 is a random sample of size 16 from a population, 
-# C2 is random sample of size 14 from a population)
+devtools::use_data(Skewed, overwrite = TRUE)
+# Examples Ex 7.65, page 412 
+# A data frame with 21 observations on two variables
+# C1 = values from a sample of size 16 from a particular population
+# C2 = values from a sample of size 14 from a particular population
 boxplot(Skewed$C1, Skewed$C2, col = c("pink", "lightblue"))
 wilcox.test(Skewed$C1, Skewed$C2)
-################ ATA stopped here 4:25 pm 6/29/17
+
 ##################################################################
 ##################################################################
-Skin <- read_csv("Skin.csv")
+Skin <- read_csv("SKIN.csv")
 Skin$patient <- 1:11
 Skin <- Skin %>%
   select(patient, close, poor) %>%
   mutate(differ = close - poor)
 Skin
+devtools::use_data(Skin, overwrite = TRUE)
 # Examples Ex 5.20, page 244
+# A data frame/tibble with 11 observations on four variables
 # patient = patient identification number
 # close = graft survival time in days for a closely matched skin graft on the same burn patient
 # poor = graft survival time in days for a poorly matched skin graft on the same burn patient
@@ -3160,28 +3437,33 @@ stem(Skin$differ)
 boxplot(Skin$differ)
 summary(Skin$differ)
 #####################################################
-Slc <- read_csv("Slc.csv")
+Slc <- read_csv("SLC.csv")
 Slc <- Slc %>%
   rename(slc = SLC)
 Slc
+devtools::use_data(Slc, overwrite = TRUE)
 # Examples Ex 5.116, page 296
-# slc = Red blood cell sodium-lithium contertransport
+# A data frame/tibble with 190 observations on one variable
+# slc = Red blood cell sodium-lithium countertransport
 BSDA::EDA(Slc$slc)
 hist(Slc$slc, freq = FALSE, xlab = "sodium lithium countertransport",
      main = "", col = "lightblue")
 lines(density(Slc$slc), col = "purple")
 ################
-Smokyph <- read_csv("Smokyph.csv")
+Smokyph <- read_csv("SMOKYPH.csv")
 Smokyph <- Smokyph %>%
   select(waterph, code, elev)
 Smokyph
+devtools::use_data(Smokyph, overwrite = TRUE)
 # Examples Ex 6.40, 6.59, 7.10, 7.35, page 325
-# waterph = water sample pH level
-# code = charater variable with values low (elevation below 0.6 miles), and
-# high (elevation above 0.6 miles)
-# elev = elevation in miles
 
 ## code 0 = elevation below 0.6 miles, 1 = elevation above 0.6 miles
+
+# A data frame/tibble with 75 observations on three variables
+# waterph = water sample pH level
+# code = charater variable with values \code{low} (elevation below 0.6 miles), and \code{high} (elevation above 0.6 miles)
+# elev = elevation in miles
+
 summary(Smokyph$waterph)
 tapply(Smokyph$waterph, Smokyph$code, mean)
 stripchart(waterph ~ code, data = Smokyph, method = "stack",
@@ -3197,8 +3479,7 @@ ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) +
   guides(fill = FALSE)
 ##
 #########################################################
-########## ATA stopped here (Smokyph) @ 10:44 06/29/17
-## Snore <- read_csv("Snore.csv")
+## Snore <- read_csv("SNORE.csv")
 ## Create Snore
 mat <- matrix(data = c(24, 35, 21, 30, 1355, 603, 192, 224), byrow = TRUE, nrow = 2)
 dimnames(mat) <- list(heartdisease = c("yes", "no"), 
@@ -3212,46 +3493,56 @@ Snore$heart <- factor(Snore$heartdisease,
 Snore$snore <- factor(Snore$snore, 
                       levels = c("nonsnorer", "occassional snorer", "nearly every night", "snores every night"))
 Snore <- as_tibble(Snore)
-Snore #rename variables?
+Snore
+devtools::use_data(Snore, overwrite = TRUE)
 ## Examples Ex 8.21, page 437
-# snore = factor with levels nonsnorer, ocassional snorer, nearly every night, and snores every night.
-# heartdisease = factor indicating whether the indiviudal has heart disease (no or yes)
+
+# A data frame/tibble with 2,484 observations on two variables
+# snore = factor with levels \code{nonsnorer}, \code{ocassional snorer}, \code{nearly every night}, and \code{snores every night}
+# heartdisease = factor indicating whether the indiviudal has heart disease (\code{no} or \code{yes})
 T1 <- xtabs(~ heartdisease + snore, data = Snore)
 T1
 chisq.test(T1)
 rm(T1)
 ################
-Snow <- read_csv("Snow.csv")
+Snow <- read_csv("SNOW.csv")
 Snow <- Snow %>%
   select(concent, site)
 Snow$site <- ifelse(Snow$site == 1, "Antarctica", "Greenland")
 Snow
-#Examples Ex 7.87, page 417
+devtools::use_data(Snow, overwrite = TRUE)
+# Examples Ex 7.87, page 417
+# A data frame/tibble with 34 observations on two variables
 # conentration = concentration of microparticles from melted snow (in parts per billion)
-# site = location of snow sample (Antarctica or Greenland)
+# site = location of snow sample (\code{Antarctica} or \code{Greenland})
 boxplot(concent ~ site, data = Snow, col = c("lightblue", "lightgreen"))
 ################
-Soccer <- read_csv("Soccer.csv")
+Soccer <- read_csv("SOCCER.csv")
 Soccer
+devtools::use_data(Soccer, overwrite = TRUE)
 # Examples Ex 1.46, page 30
+# A data frame with 25 observations on one variable
 # weight = soccer players weight (in pounds)
 stem(Soccer$weight, scale = 2)
 hist(Soccer$weight, breaks = seq(110, 210, 10), col = "orange",
      main = "Problem 1.46 \n Weights of Soccer Players", 
      xlab = "weight (lbs)", right = FALSE)
 ################
-Social <- read_csv("Social.csv")
+Social <- read_csv("SOCIAL.csv")
 Social
+devtools::use_data(Social, overwrite = TRUE)
 # Examples Ex 6.63, page 340
-# income = annual income (in dollars) of North Carolina social 
-# workers with less than five years experience.
+# A data frame/tibble with 25 observations on one variable
+# income = annual income (in dollars) of North Carolina social workers with less than five years experience.
 BSDA::SIGN.test(Social$income, md = 27500, alternative = "less")
 ################
-Sophomor <- read_csv("Sophomor.csv")
+Sophomor <- read_csv("SOPHOMOR.csv")
 Sophomor <- Sophomor %>%
   rename(student = Student, gpa = GPA, sat = SAT, exam = Exam)
 Sophomor
+devtools::use_data(Sophomor, overwrite = TRUE)
 # Examples Ex 2.42, page 110
+# A data frame/tibble with 20 observations on four variables
 # student = student's identification number
 # gpa = student's grade point average
 # sat = student's SAT math score
@@ -3265,19 +3556,23 @@ ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) +
   geom_point()
 ##
 ################
-South <- read_csv("South.csv")
+South <- read_csv("SOUTH.csv")
 South
+devtools::use_data(South, overwrite = TRUE)
 # Examples Ex 1.84, page 59
+# A data frame/tibble with 31 observations on one variable
 # rate = murder rate per 100,000 people
 boxplot(South$rate, col = "gray", ylab = "Murder rate per 100,000 people")
 ################
-Speed <- read_csv("Speed.csv")
+Speed <- read_csv("SPEED.csv")
 Speed <- Speed %>%
   rename(before = Before, after = After) %>%
   mutate(signranks = sign(differ)*rank(abs(differ))) %>%
   select(before, after, differ, signranks)
 Speed
-#Examples Ex 7.58, page 404
+devtools::use_data(Speed, overwrite = TRUE)
+# Examples Ex 7.58, page 404
+# A data frame/tibble with 15 observations on four variables
 # before = reading comprehension score before taking a speed-reading course
 # after = reading comprehension score after taking a speed-reading course
 # differ = after - before (comprehension reading scores)
@@ -3286,21 +3581,26 @@ t.test(Speed$differ, alternative = "greater")
 t.test(Speed$signranks, alternative = "greater")
 wilcox.test(Speed$after, Speed$before, paired = TRUE, alternative = "greater")
 ################
-Spellers <- read_csv("Spellers.csv")
+Spellers <- read_csv("SPELLERS.csv")
 Spellers <- Spellers %>%
   select(Fourth, Colleague = Colleag) %>%
   gather(Fourth, Colleague, key = "teacher", value = "score")
 Spellers
+devtools::use_data(Spellers, overwrite = TRUE)
 # Examples Ex 7.82, page 416
-# teacher = character variable with values Fourth and Colleague
+# A data frame/tibble with 20 observations on two variables
+# teacher = character variable with values \code{Fourth} and \code{Colleague}
+# score = score on a standardized spelling test
 boxplot(score ~ teacher, data = Spellers)
 t.test(score ~ teacher, data = Spellers)
 ################
-Spelling <- read_csv("Spelling.csv")
+Spelling <- read_csv("SPELLING.csv")
 Spelling <- Spelling %>%
   rename(before = Before, after = After)
 Spelling
+devtools::use_data(Spelling, overwrite = TRUE)
 # Examples Ex 7.56, page 403
+# A data frame/tibble with nine observations on three variables.
 # before = spelling score before a 2-week course of instruction
 # after = spelling score after a 2-week course of instruction
 # differ = after - before (spelling score)
@@ -3310,7 +3610,7 @@ shapiro.test(Spelling$differ)
 t.test(Spelling$before, Spelling$after, paired = TRUE)
 t.test(Spelling$differ)
 ################
-## Sports <- read_csv("Sports.csv")
+## Sports <- read_csv("SPORTS.csv")
 ## Create Sports
 mat <- matrix(data = c(33, 38, 24, 5, 38, 21, 15, 26), byrow = TRUE, nrow = 2)
 dimnames(mat) <- list(gender = c("male", "female"), 
@@ -3325,15 +3625,17 @@ Sports$sport <- factor(Sports$sport,
                        levels = c("football", "basketball", "baseball", "tennis"))
 Sports <- as_tibble(Sports)
 Sports
-#Examples 8.32, page 444
-# gender = a factor with levels male and female
-# sport a factor with levels football, basketball, baseball, and tennis
+devtools::use_data(Sports, overwrite = TRUE)
+# Examples 8.32, page 444
+# A data frame/tibble with 200 observations on two variables
+# gender = a factor with levels \code{male} and \code{female}
+# sport a factor with levels \code{football}, \code{basketball}, \code{baseball}, and \code{tennis}
 T1 <- xtabs(~gender + sport, data = Sports)
 T1
 chisq.test(T1)
 rm(T1)
 ################
-## Spouse <- read_csv("Spouse.csv")
+## Spouse <- read_csv("SPOUSE.csv")
 ## Create Spouse
 mat <- matrix(data = c(35, 35, 146, 87, 130, 69, 7, 31), byrow = TRUE,  nrow = 4)
 dimnames(mat) <- list(result = c("not prosecuted", "pleaded guilty",
@@ -3350,24 +3652,30 @@ Spouse$spouse <- factor(Spouse$spouse,
                         levels = c("husband", "wife"))
 Spouse <- as_tibble(Spouse)
 Spouse
+devtools::use_data(Spouse, overwrite = TRUE)
 # Examples Ex 8.33, page 444
-# result = a factor with levels not prosecuted, pleaded guilty, convicted, and acquited.
-# spouse = a factor with levels husband and wife
+# A data frame/tibble with 540 observations on two variables
+# result = a factor with levels \code{not prosecuted}, \code{pleaded guilty}, \code{convicted}, and \code{acquited}
+# spouse = a factor with levels \code{husband} and \code{wife}
 T1 <- xtabs(~result + spouse, data = Spouse)
 T1
 chisq.test(T1)
 rm(T1)
 ###############
-Stable <- read_csv("Stable.csv")
+Stable <- read_csv("STABLE.csv")
 Stable
+devtools::use_data(Stable, overwrite = TRUE)
 # Examples Ex 6.93, page 345
+# A data frame/tibble with nine observations on one variable
 # time = time (in seconds) for horse to run 1 mile
 BSDA::SIGN.test(Stable$time, md = 98.5, alternative = "greater")
 ###############
-Stamp <- read_csv("Stamp.csv")
-Stamp <- Stamp%>%
+Stamp <- read_csv("STAMP.csv")
+Stamp <- Stamp %>%
   select(thickness)
 Stamp
+devtools::use_data(Stamp, overwrite = TRUE)
+# A data frame with 485 observations on one variable
 # thickness = stamp thickness (in mm)
 #Examples Stat Insight Ch 1 and Ex 5.110 (thickness in mm)
 hist(Stamp$thickness, freq = FALSE, col = "lightblue", 
@@ -3375,33 +3683,39 @@ hist(Stamp$thickness, freq = FALSE, col = "lightblue",
 lines(density(Stamp$thickness), col = "blue")
 t.test(Stamp$thickness, conf.level = 0.99)
 ###############
-Statclas <- read_csv("Statclas.csv")
+Statclas <- read_csv("STATCLAS.csv")
 Statclas <- Statclas%>%
   gather(`9am`, `2pm`, key = "class", value = "score")
 Statclas
+devtools::use_data(Statclas, overwrite = TRUE)
 # Examples Ex 7.30, page 372
+# A data frame/tibble with 72 observations on two variables
 # class = class meeting time (9am or 2pm)
 # score = grade for an introductory statistics class
 str(Statclas)
 boxplot(score ~ class, data = Statclas)
 t.test(score ~ class, data = Statclas)
 ###############
-Statelaw <- read_csv("Statelaw.csv")
+Statelaw <- read_csv("STATELAW.csv")
 Statelaw <- Statelaw %>%
   rename(state = State)
 Statelaw
-#Examples Ex 6.62, page 339
-# state = US state
+devtools::use_data(Statelaw, overwrite = TRUE)
+# Examples Ex 6.62, page 339
+# A data frame/tibble with 50 observations on two variables
+# state = U.S. state
 # cost = dollars spent per resident on law enforcement
 BSDA::EDA(Statelaw$cost)
 BSDA::SIGN.test(Statelaw$cost, md = 8, alternative = "less")
 ###############
-Statisti <- read_csv("Statisti.csv")
+Statisti <- read_csv("STATISTI.csv")
 Statisti <- Statisti%>%
   gather(Class1, Class2, key = "class", value = "score")
 Statisti
-#Examples Ex 1.70 and 1.87, page 47
-# class = character variable with values Class1 and Class2
+devtools::use_data(Statisti, overwrite = TRUE)
+# Examples Ex 1.70 and 1.87, page 47
+# A data frame with 62 observations on two variables.
+# class = character variable with values \code{Class1} and \code{Class2}
 # score = test score for an introductory statistics test
 boxplot(score ~ class, data = Statisti)
 tapply(Statisti$score, Statisti$class, summary, na.rm = TRUE)
@@ -3413,19 +3727,23 @@ dplyr::group_by(Statisti, class) %>%
             RS = IQR(score, na.rm = TRUE))
 ##
 ###############
-Step <- read_csv("Step.csv")
+Step <- read_csv("STEP.csv")
 Step
-# Examples Ex 6.79, page 344
+devtools::use_data(Step, overwrite = TRUE)
+# Examples Ex 6.79, page 344f
+# A data frame/tibble with 12 observations on one variable
 # score = State test of educational progress (STEP) science test score
 BSDA::EDA(Step$score)
 t.test(Step$score, mu = 80, alternative = "less")
 wilcox.test(Step$score, mu = 80, alternative = "less")
 ###############
-Stress <- read_csv("Stress.csv")
+Stress <- read_csv("STRESS.csv")
 Stress <- Stress %>%
   rename(prestress = Prestre, poststress = Poststre)
 Stress
+devtools::use_data(Stress, overwrite = TRUE)
 # Examples Exp 7.20, page 398
+# A data frame/tibble with 12 observations on two variables
 # prestress = short term memory score before being exposed to a stressful situation
 # poststress = short term memory score after being exposed to a stressful situation
 diff <- Stress$prestress - Stress$poststress
@@ -3435,25 +3753,26 @@ t.test(diff)
 t.test(Stress$prestress, Stress$poststress, paired = TRUE)
 ## Not run
 wilcox.test(Stress$prestress, Stress$poststress, paired = TRUE)
-## Stopped here 06/28/17 with examples @ 10:23am ATA
 ###############
-Study <- read_csv("Study.csv")
+Study <- read_csv("STUDY.csv")
 Study
-#Examples Ex 5.25, page 247
+devtools::use_data(Study, overwrite = TRUE)
+# Examples Ex 5.25, page 247
+# A data frame/tibble with 50 observations on one variable
 # hours = number of hours a week freshmen reported studying for their courses
 stem(Study$hours)
 hist(Study$hours)
 summary(Study$hours)
 ###############
 ###############
-## Alan stopped here 7/20/17 @ 9:49pm
-###############
-###############
-Submarin <- read_csv("Submarin.csv")
+Submarin <- read_csv("SUBMARIN.csv")
 Submarin <- Submarin %>%
   rename(month = Month)
 Submarin
-#Examples Ex 2.16 and 2.45, page 88
+devtools::use_data(Submarin, overwrite = TRUE)
+# Examples Ex 2.16 and 2.45, page 88
+# A data frame/tibble with 16 observations on three variables
+# month = month
 # reported = number of submarines reported sunk by U.S. Navy
 # actual = number of submarines actually sunk by U.S. Navy
 model <- lm(actual ~ reported, data = Submarin)
@@ -3462,17 +3781,21 @@ plot(actual ~ reported, data = Submarin)
 abline(model, col = "red")
 rm(model)
 ###############
-Subway <- read_csv("Subway.csv")
+Subway <- read_csv("SUBWAY.csv")
 Subway
-#Examples Ex 5.19, page 243
+devtools::use_data(Subway, overwrite = TRUE)
+# Examples Ex 5.19, page 243
+# A data frame/tibble with 30 observations on one variable
 # time = time (in minutes) it takes a subway to travel from the airport to downtown
 hist(Subway$time, main = "Exercise 5.19", 
      xlab = "Time (in minutes)", col = "purple")
 summary(Subway$time)
 ###############
-Sunspot <- read_csv("Sunspot.csv")
+Sunspot <- read_csv("SUNSPOT.csv")
 Sunspot
-#Examples Exp 1.7, page 15
+devtools::use_data(Sunspot, overwrite = TRUE)
+# Examples Exp 1.7, page 15
+# A data frame with 301 observations on two variables
 # year = year
 # sunspots = average number of sunspots for the year
 plot(sunspots ~ year, data = Sunspot, type = "l")
@@ -3486,14 +3809,16 @@ ggplot2::ggplot(data = Sunspot, aes(x = year, y = sunspots)) +
   theme_bw()
 ##
 ###############
-Superbowl <- read_csv("Superbowl.csv")
+Superbowl <- read_csv("SUPERBOWL.csv")
 Superbowl
 Superbowl <- Superbowl %>%
   rename(winning_team = `Winning team`, winner_score = `winner score`, 
          losing_team = `Losing team`, loser_score = `loser score`, 
          victory_margin = margin)
 Superbowl
-#Examples Ex 1.54, page 32
+devtools::use_data(Superbowl, overwrite = TRUE)
+# Examples Ex 1.54, page 32
+# A data frame/tibble with 35 observations on five variables
 # winning_team = name of Suberbowl winning team
 # winning_score = winning score for the Superbowl
 # losing_team = name of Suberbowl losing team
@@ -3501,7 +3826,7 @@ Superbowl
 # victory_margin = winner_score - loser_score
 stem(Superbowl$victory_margin)
 ###############
-Supercar <- read_csv("Supercar.csv")
+Supercar <- read_csv("SUPERCAR.csv")
 Supercar <- Supercar %>%
   select(speed, car)
 Supercar$car <- ifelse(Supercar$car == 1,   "Acura", 
@@ -3509,15 +3834,17 @@ Supercar$car <- ifelse(Supercar$car == 1,   "Acura",
                               ifelse(Supercar$car == 3,   "Lotus", 
                                      ifelse(Supercar$car == 4,   "Porsche", "Viper"))))
 Supercar
-#Examples Stat Insight Ch 10, page 512
-# speed = top speed of car without redlining
-# car = nmae of sports car
+devtools::use_data(Supercar, overwrite = TRUE)
+# Examples Stat Insight Ch 10, page 512
+# A data frame/tibble with 30 observations on two variables
+# speed = top speed (in miles per hour) of car without redlining
+# car = name of sports car
 boxplot(speed ~ car, data = Supercar, col = rainbow(6),
         ylab = "Speed (mph)")
 summary(aov(speed ~ car, data = Supercar))
 anova(lm(speed ~ car, data = Supercar))
 ###############
-Tablrock <- read_csv("Tablrock.csv")
+Tablrock <- read_csv("TABLROCK.csv")
 Tablrock <- Tablrock %>%
   rename(ozone = `3`)
 Tablrock
@@ -3526,7 +3853,9 @@ dia <- rep(seq(as.Date("1992/09/01"), by = "day", length = 30), each = 24)
 dia <- dia[-720]
 Tablrock$day <- dia
 Tablrock
-#Examples Ex 5.63, page 272
+devtools::use_data(Tablrock, overwrite = TRUE)
+# Examples Ex 5.63, page 272
+# A data frame/tibble with 719 observations on ??? variables
 # day = date
 # hour = time of day
 # ozone = ozone concentration
@@ -3551,12 +3880,14 @@ ggplot2::ggplot(data = Tablrock, aes(x = as.factor(day), y = ozone)) +
   theme_bw()
 ##
 ###############
-Teacher <- read_csv("Teacher.csv")
+Teacher <- read_csv("TEACHER.csv")
 Teacher <- Teacher %>%
   rename(state = State) %>%
   gather(`1973-74`,`1983-84`,`1993-94`, key = "year", value = "salary")
 Teacher
+devtools::use_data(Teacher, overwrite = TRUE)
 # Examples Ex 5.114, page 294
+# A data frame/tibble with 153 observations on three variables
 # state = U.S. state
 # year = academic year
 # salary = avaerage salary (in dollars)
@@ -3578,9 +3909,11 @@ ggplot2::ggplot(data = Teacher, aes(x = salary)) +
   theme_bw()
 ##
 ###############
-Tenness <- read_csv("Tenness.csv")
+Tenness <- read_csv("TENNESS.csv")
 Tenness
-#Examples Ex 6.56, page 336
+devtools::use_data(Tenness, overwrite = TRUE)
+# Examples Ex 6.56, page 336
+# A data frame/tibble with 20 observations on one variable
 # score = Tennessee Self-Concept Scale score
 hist(Tenness$score, freq= FALSE, main = "", col = "green",
      xlab = "Tennessee Self-Concept Scale score")
@@ -3592,52 +3925,65 @@ ggplot2::ggplot(data = Tenness, aes(x = score, y = ..density..)) +
   theme_bw()
 ##
 ###############
-Tensile <- read_csv("Tensile.csv")
+Tensile <- read_csv("TENSILE.csv")
 Tensile <- Tensile %>%
   select(tensile = Tensile, run = Run)
 Tensile$run <- factor(Tensile$run)
 Tensile
-#Examples Exp 7.11, page 368
+devtools::use_data(Tensile, overwrite = TRUE)
+# Examples Exp 7.11, page 368
+# A data frame/tibble with 72 observations on two variables
 # tensile = plastic bag tensile strength (pounds per square inch?)
 # run = factor with run number (1 or 2)
 boxplot(tensile ~ run, data = Tensile, 
         col = c("purple", "cyan"))
 t.test(tensile ~ run, data = Tensile)
 ###############
-Test1 <- read_csv("Test1.csv")
+Test1 <- read_csv("TEST1.csv")
 Test1 <- Test1 %>%
   rename(score = test1)
 Test1
-#Examples Ex 5.80, page 281
+devtools::use_data(Test1, overwrite = TRUE)
+# Examples Ex 5.80, page 281
+# A data frame/tibble with 25 observations on one variable
 # score = score on first statistics exam
 stem(Test1$score)
 boxplot(Test1$score)
-################  Stopped here 06/27/17 @ 12:02
-Thermal <- read_csv("Thermal.csv")
+################
+Thermal <- read_csv("THERMAL.csv")
 Thermal <- Thermal %>%
   select(temp, loss)
 Thermal
-#Examples Exp 9.5page 473 (temp = degrees Celcius) (heat loss (BTUs))
+devtools::use_data(Thermal, overwrite = TRUE)
+# Examples Exp 9.5page 473 
+# A data frame/tibble with 12 observations on two variables
+# temp = temperature (degrees Celcius) 
+# loss = heat loss (BTUs)
 model <- lm(loss ~ temp, data = Thermal)
 summary(model)
 plot(loss ~ temp, data = Thermal)
 abline(model)
 rm(model)
 #################
-Tiaa <- read_csv("Tiaa.csv")
+Tiaa <- read_csv("TIAA.csv")
 Tiaa$date <- as.Date(Tiaa$date, format = "%m/%d/%y")
 Tiaa
+devtools::use_data(Tiaa, overwrite = TRUE)
 #Examples (find in book)
 #################
-Ticket <- read_csv("Ticket.csv")
+Ticket <- read_csv("TICKET.csv")
 Ticket
-#Examples Ex 5.18, page 243
+devtools::use_data(Ticket, overwrite = TRUE)
+# Examples Ex 5.18, page 243
+# A data frame with 20 observations on one variable.
 # time = time (in seconds) to check out a reservation
 BSDA::EDA(Ticket$time)
 #################
-Toaster <- read_csv("Toaster.csv")
+Toaster <- read_csv("TOASTER.csv")
 Toaster
-#Examples Ex 9.36 not 9.35 as in app and help file, apge 501
+devtools::use_data(Toaster, overwrite = TRUE)
+# Examples Ex 9.36 not 9.35 as in app and help file, page 501
+# A data frame/tibble with 17 observations on three variables
 # toaster = name of toaster
 # score = Consumer Reports score
 # cost = price of toaster (in dollars)
@@ -3649,6 +3995,7 @@ summary(model)$r.squared
 plot(model, which = 1)
 ################# ----
 # Create Tonsils 
+# Tonsils <- read_csv(TONSILS.csv)
 mat <- matrix(data = c(19, 497, 29, 560, 24, 269), nrow = 3, byrow = TRUE)
 mat
 dimnames(mat) <- list(size = c("Normal", "Large", "Very Large"), 
@@ -3664,9 +4011,11 @@ Tonsils$status <- factor(Tonsils$status,
                          levels = c("Carrier", "Non-carrier"))
 Tonsils <- as_tibble(Tonsils)
 Tonsils
+devtools::use_data(Tonsils, overwrite = TRUE)
 # Examples #Ex 2.78, page 127
-# size = a factor with levels Normal, Large, and Very Large
-# status = a factor with levels Carrier and Non-carrier
+# A data frame/tibble with 1,398 observations on two variables
+# size = a factor with levels \code{Normal}, \code{Large}, and \code{Very Large}
+# status = a factor with levels \code{Carrier} and \code{Non-carrier}
 ##
 T1 <- xtabs(~size + status, data = Tonsils)
 T1
@@ -3680,11 +4029,13 @@ ggplot2::ggplot(data = NDF, aes(x = size, y = n, fill = status)) +
   scale_fill_manual(values = c("red", "green")) + 
   theme_bw()
 #################
-Tort <- read_csv("Tort.csv")
+Tort <- read_csv("TORT.csv")
 Tort <- Tort %>%
   rename(population = populat)
 Tort
+devtools::use_data(Tort, overwrite = TRUE)
 # Examples Ex 5.13, page 235
+# A data frame with 45 observations on five variables
 # county = U.S. county
 # months = average number of months to process a tort
 # population = population of the county
@@ -3692,15 +4043,17 @@ Tort
 # rate = rate per 10,000 residents
 BSDA::EDA(Tort$months)
 #################
-Toxic <- read_csv("Toxic.csv")
+Toxic <- read_csv("TOXIC.csv")
 Toxic
+devtools::use_data(Toxic, overwrite = TRUE)
 # Examples Ex 1.55, 5.108, 5.109, 8.58, 10.35
-# page 33, 454, 
+# page 33, 454, ---- this problem is not clear----ask Larry
+
+# A data frame with 51 observations on five variables
 # state = U.S. state
 # region = U.S. region
 # sites = number of commercial hazardous waste sites
-# minority = ???percent of minorities living in communities with commercial
-# hazardous waste sites (?)
+# minority = percent of minorities living in communities with commercial hazardous waste sites (?)
 # percent = ???
 
 hist(Toxic$sites)
@@ -3711,9 +4064,11 @@ boxplot(sites ~ region, data = Toxic)
 tapply(Toxic$sites, Toxic$region, median)
 kruskal.test(sites ~ factor(region), data = Toxic)
 #################
-Track <- read_csv("Track.csv")
+Track <- read_csv("TRACK.csv")
 Track
-#Examples Ex 2.97, 5.15, 9.62
+devtools::use_data(Track, overwrite = TRUE)
+# Examples Ex 2.97, 5.15, 9.62
+# A data frame with 55 observations on eight variables
 # country = athletes country
 # `100m` = time in seconds for 100 m
 # `200m` = time in seconds for 200 m
@@ -3728,22 +4083,26 @@ plot(`400m` ~ `100m`, data = Track)
 plot(`400m` ~ `200m`, data = Track)
 cor(Track[, 2:8])
 #################
-Track15 <- read_csv("Track15.csv")
+Track15 <- read_csv("TRACK15.csv")
 Track15 <- Track15 %>%
   rename(year = Year, time = `1500m`)
 Track15
-#Examples Ex 1.36, page 21
+devtools::use_data(Track15, overwrite = TRUE)
+# Examples Ex 1.36, page 21
+# A data frame/tibble with 26 observations on two variables
 # year = Olympic year
 # time = Olympic winning time (in seconds) for the 1500-meter run
 plot(time~ year, data = Track15, type = "b", pch = 19,
      ylab = "1500m time in seconds", col = "green")
 #################
-Treatments <- read_csv("Treatments.csv")
+Treatments <- read_csv("TREATMENTS.csv")
 Treatments <- Treatments%>%
   select(score = Treatmnt, group = Group)
 Treatments$group <- factor(Treatments$group)
 Treatments
-#Examples Ex 10.44, page 556
+devtools::use_data(Treatments, overwrite = TRUE)
+# Examples Ex 10.44, page 556
+# A data frame/tibble with 24 observations on two variables
 # score = score from an experiment
 # group = factor with levels 1, 2, and 3
 boxplot(score ~ group, data = Treatments)
@@ -3751,40 +4110,48 @@ summary(aov(score ~ group, data = Treatments))
 summary(lm(score ~ group, data = Treatments))
 anova(lm(score ~ group, data = Treatments))
 ##################
-Trees <- read_csv("Trees.csv")
+Trees <- read_csv("TREES.csv")
 Trees
-#Examples Ex 1.50,
+devtools::use_data(Trees, overwrite = TRUE)
+# Examples Ex 1.50
+# A data frame/tibble with 20 observations on one variable
 # number = number of trees in a grid
 stem(Trees$number)
 hist(Trees$number, main = "Exercise 1.50", xlab = "number",
      col = "brown")
 ##################
-Trucks <- read_csv("Trucks.csv")
+Trucks <- read_csv("TRUCKS.csv")
 Trucks <- Trucks %>%
   select(mpg = `gas mileage`, truck)
 Trucks
-#Examples Table 10.2, page 514
+devtools::use_data(Trucks, overwrite = TRUE)
+# Examples Table 10.2, page 514
+# A data frame/tibble with 15 observations on two variables
 # mpg = miles per gallon
 # truck = character variable with values chevy, dodge, and ford
 boxplot(mpg ~ truck, data = Trucks, horizontal = TRUE, las = 1)
 summary(aov(mpg ~ truck, data = Trucks))
 ##################
-Tv <- read_csv("Tv.csv")
+Tv <- read_csv("TV.csv")
 Tv <- Tv %>%
   rename(state = State)
 Tv
+devtools::use_data(Tv, overwrite = TRUE)
 # Examples 2.1 and 2.7, page 78
+# A data frame/tibble with 53 observations on three variables
 # state = U.S. state
 # percent = percent of students who watch more than six hours of TV a day
 # test = state average on national math test
 plot(test ~ percent, data = Tv, col = "blue")
 cor(Tv$test, Tv$percent)
 ###################
-Twin <- read_csv("Twin.csv")
+Twin <- read_csv("TWIN.csv")
 Twin <- Twin %>%
   rename(twinA = TwinA, twinB = TwinB)
 Twin
+devtools::use_data(Twin, overwrite = TRUE)
 # Examples 7.54, page 402
+# A data frame/tibble with nine observations on three variables
 # twinA = score on intelligence test without drug
 # twinB = score on intelligence test after taking drug
 # differ = twinA - twinB
@@ -3793,17 +4160,19 @@ qqline(Twin$differ)
 shapiro.test(Twin$differ)
 t.test(Twin$twinA, Twin$twinB, paired = TRUE)
 ###################
-Undergrad <- read_csv("Undergrad.csv") 
+Undergrad <- read_csv("UNDERGRAD.csv") 
 Undergrad <- Undergrad %>%
   select(gender = Gender, major = Major, class = Class, gpa = GPA, sat = SAT, drops = Drops)
 Undergrad
+devtools::use_data(Undergrad, overwrite = TRUE)
 # Examples Ex 1.15, pgs 3, and 10
-# gender = character variable with values Female and Male
+# A data frame with 100 observations on six variables
+# gender = character variable with values \code{Female} and \code{Male}
 # major = college major
 # class = college year group classification
 # gpa = grade point average
 # sat = Scholastic Assessment Test score
-# drops = numberof courses dropped
+# drops = number of courses dropped
 stripchart(gpa ~ class, data = Undergrad, method = "stack", col = c("blue","red","green","lightblue"),
            pch = 19, main = "GPA versus Class")
 stripchart(gpa ~ gender, data = Undergrad, method = "stack", col = c("red", "blue"), pch = 19,
@@ -3819,20 +4188,24 @@ ggplot2::ggplot(data = Undergrad, aes(x = sat, y = drops, fill = factor(drops)))
   guides(fill = FALSE)
 ##
 ###################
-Vacation <- read_csv("Vacation.csv")
+Vacation <- read_csv("VACATION.csv")
 Vacation
+devtools::use_data(Vacation, overwrite = TRUE)
 # Examples Ex 6.46 and not Ex 6.98, page 327
+# A data frame/tibble with 35 observations on one variable
 # number = number of days of paid holidays and vacation leave taken
 boxplot(Vacation$number)
 hist(Vacation$number, main = "Exercise 6.46", col = "blue",
      xlab = "number of days of paid holidays and vacation leave taken")
 t.test(Vacation$number, mu = 24)
 ###################
-Vaccine <- read_csv("Vaccine.csv")
+Vaccine <- read_csv("VACCINE.csv")
 Vaccine <- Vaccine %>%
   rename(state = "State")
 Vaccine
+devtools::use_data(Vaccine, overwrite = TRUE)
 # Examples # Ex 1.111, page 66
+# A data frame/tibble with 11 observations on two variables
 # state = U.S. state
 # number = number of reported serious reactions per million doses of a vaccine
 stem(Vaccine$number, scale = 2) 
@@ -3842,6 +4215,7 @@ iqr <- IQR(Vaccine$number)
 iqr
 ###################
 # Create Vehicle
+# Vehicle <- read_csv(VEHICLE.csv)
 mat <- matrix(data = c(11, 0, 10, 4, 12, 30, 9, 38, 7, 30), nrow = 2, byrow = TRUE)
 mat
 dimnames(mat) <- list(make = c("Foreign", "Domestic"), 
@@ -3857,29 +4231,34 @@ Vehicle$rating <- factor(Vehicle$rating,
                          levels =  c("Much better than average", "Above average", "Average", "Below average", "Much worse than average"))
 Vehicle <- as_tibble(Vehicle)
 Vehicle
+devtools::use_data(Vehicle, overwrite = TRUE)
 # Examples Ex 8.34, page 445 df 151 * 2
-# make = factor with levels Foreign and Domestic
-# rating = factor with levels Much better than average, Above average, Average, 
-# Below average, and Much worse than average
+# A data frame/tibble with 151 observations on two variables
+# make = factor with levels \code{Foreign} and \code{Domestic}
+# rating = factor with levels \code{Much better than average}, \code{Above average}, \code{Average}, \code{Below average}, and \code{Much worse than average}
 T1 <- xtabs(~make + rating, data = Vehicle)
 T1
 chisq.test(T1)
 ###################
-Verbal <- read_csv("Verbal.csv")
+Verbal <- read_csv("VERBAL.csv")
 Verbal <- Verbal %>%
   select(number, verbal)
 Verbal
+devtools::use_data(Verbal, overwrite = TRUE)
 # Examples Ex 9.30, page 495
+# A data frame with 15 observations on two variables
 # number = number of library books checked out
 # verbal = verbal test score
 plot(verbal ~ number, data = Verbal)
 abline(lm(verbal ~ number, data = Verbal))
 summary(lm(verbal ~ number, data = Verbal))
 #################
-Victoria <- read_csv("Victoria.csv")
+Victoria <- read_csv("VICTORIA.csv")
 # Victoria$year <- seq(as.Date("1902/01/01"), by = "year", length = 20)
 Victoria
+devtools::use_data(Victoria, overwrite = TRUE)
 # Examples Ex 2.98, page 134
+# A data frame/tibble with 20 observations on three variables
 # year = year
 # level = mean annual level of Lake Victoria Nyanza
 # sunspot = number of sunspots
@@ -3889,35 +4268,43 @@ model <- lm(level ~ sunspot, data = Victoria)
 summary(model)
 rm(model)
 #################
-Viscosit <- read_csv("Viscosit.csv")
+Viscosit <- read_csv("VISCOSIT.csv")
 Viscosit
+devtools::use_data(Viscosit, overwrite = TRUE)
 # Examples Ex 7.44, page 389
+# A data frame/tibble with 11 observations on two variables
 # first = viscosity measurement for a certain substance on day one
 # second = viscosity measurement for a certain substance on day two
 boxplot(Viscosit$first, Viscosit$second)
 t.test(Viscosit$first, Viscosit$second, var.equal = TRUE)
 #################
-Visual <- read_csv("Visual.csv")
+Visual <- read_csv("VISUAL.csv")
 Visual
+devtools::use_data(Visual, overwrite = TRUE)
 # Examples Ex 5.6
+# A data frame with 18 observations on one variable
 # visual = visual acuity measurement (units?)
 stem(Visual$visual)
 boxplot(Visual$visual, col = "purple")
 #################
-Vocab <- read_csv("Vocab.csv")
+Vocab <- read_csv("VOCAB.csv")
 Vocab <- Vocab %>%
   select(first = First, second = Second)
 Vocab
-#Examples Ex 7.80, page 416
+devtools::use_data(Vocab, overwrite = TRUE)
+# Examples Ex 7.80, page 416
+# A data frame/tibble with 14 observations on two variables
 # first = reading test score before formal vocabulary training
 # second = reading test score after formal vocabulary training
 t.test(Vocab$first, Vocab$second, paired = TRUE)
 #################
-Wastewat <- read_csv("Wastewat.csv")
+Wastewat <- read_csv("WASTEWAT.csv")
 Wastewat <- Wastewat %>%
   select(gallons, number)
 Wastewat
+devtools::use_data(Wastewat, overwrite = TRUE)
 # Examples Ex 9.18, page 480
+# A data frame/tibble with 44 observations on two variables
 # gallons = injected water (in million gallons)
 # number = number of earthqueakes detected in Denver
 plot(number ~ gallons, data = Wastewat)
@@ -3926,7 +4313,7 @@ summary(model)
 anova(model)
 plot(model, which = 2)
 #################
-#Weather94 <- read_csv("Weather94.csv")
+#Weather94 <- read_csv("WEATHER94.csv")
 type <- c(rep("Flash Flood", 59), rep("River Flood", 32), 
           rep("Lightning", 69), rep("Tornado", 69), 
           rep("Hurricane", 9), rep("Extreme Temp", 81), 
@@ -3935,7 +4322,9 @@ type <- c(rep("Flash Flood", 59), rep("River Flood", 32),
 Weather94 <- data.frame(type)
 Weather94 <- as_tibble(Weather94)
 Weather94
-#Examples Ex 1.30, page 19
+devtools::use_data(Weather94, overwrite = TRUE)
+# Examples Ex 1.30, page 19
+# A data frame/tibble with 388 observations on one variable
 # type = factor with levels Extreme Temp, Flash Flood, Fog, HIgh Wind, Hurricane, 
 # Lighting, Other, River Flood, Thunderstorm, Tornado, and Winter Weather.
 
@@ -3954,9 +4343,11 @@ ggplot2::ggplot(data =T2, aes(x = reorder(type, Freq), y = Freq)) +
   labs(x = "", y = "count")
 ##
 #################
-Wheat <- read_csv("Wheat.csv")
+Wheat <- read_csv("WHEAT.csv")
 Wheat
-#Examples Ex 2.11, page 87
+devtools::use_data(Wheat, overwrite = TRUE)
+# Examples Ex 2.11, page 87
+# A data frame/tibble with 19 observations on three variables
 # year = year
 # earnings =  national weekly earnings (in dollars) for production workers
 # price = price for a bushel of wheat (in dollars)
@@ -3965,25 +4356,43 @@ plot(earnings ~ year, data = Wheat)
 plot(price ~ year, data = Wheat)
 par(mfrow = c(1, 1))
 #################
-Windmill <- read_csv("Windmill.csv")
+Windmill <- read_csv("WINDMILL.csv")
 Windmill <- Windmill %>%
   select(velocity, output)
 Windmill
+devtools::use_data(Windmill, overwrite = TRUE)
 # Examples Ex 9.35 not 9.34, page 499
-# velocity = 
+# A data frame/tibble with 25 observations on two variables
+# velocity = wind velocity (miles per hour)
+# output = power generated (DC volts)
 summary(lm(output ~ velocity, data = Windmill))
 anova(lm(output ~ velocity, data = Windmill))
 #########
-Window <- read_csv("Window.csv")
+Window <- read_csv("WINDOW.csv")
 Window <- Window %>%
   select(window = Window, leakage = Leakage)
 Window
-#Examples Ex 6.54
+devtools::use_data(Window, overwrite = TRUE)
+# Examples Ex 6.54
+# A data frame/tibble with nine observations on two variables.
+# window = window number
+# leakage = percent leakage from a 50 mph wind
 BSDA::SIGN.test(Window$leakage, md = 0.125, alternative = "greater")
 #########
-Wins <- read_csv("Wins.csv")
+Wins <- read_csv("WINS.csv")
 Wins
-#Examples Ex 9.23
+devtools::use_data(Wins, overwrite = TRUE)
+# Examples Ex 9.23
+# A data frame/tibble with 12 observations on nine variables
+# team =  name of team
+# wins = number of wins
+# batavg = batting average
+# rbi = runs batted in
+# stole = bases stole
+# strkout = 
+# caught = 
+# errors = number of errors
+# era = earned run average
 plot(wins ~ era, data = Wins)
 ## Not run
 ggplot2::ggplot(data = Wins, aes(x = era, y = wins)) + 
@@ -3992,21 +4401,29 @@ ggplot2::ggplot(data = Wins, aes(x = era, y = wins)) +
   theme_bw()
 ##
 #########
-Wool <- read_csv("Wool.csv")
+Wool <- read_csv("WOOL.csv")
 Wool <- Wool %>%
   gather(`Type 1`, `Type 2`, key = "type", value = "strength")
 Wool
-#Examples Ex 7.42
+devtools::use_data(Wool, overwrite = TRUE)
+# Examples Ex 7.42
+# A data frame/tibble with 20 observations on two variables
+# type = type of wool (\code{Type I}, \code{Type 2})
+# strength = strength of wool
 boxplot(strength ~ type, data = Wool, col = c("blue", "purple"))
 t.test(strength ~ type, data = Wool, var.equal = TRUE)
 ########
-Yearsunspot <- read_csv("Yearsunspot.csv")
+Yearsunspot <- read_csv("YEARSUNSPOT.csv")
 YEARS <- seq(as.Date("1979/01/01"), by = "month", length = 252)
 Yearsunspot <- Yearsunspot %>%
   select(SSN, year) %>%
   rename(number = SSN)
 Yearsunspot$year <- YEARS
 Yearsunspot
-#Examples Ex 2.7
+devtools::use_data(Yearsunspot, overwrite = TRUE)
+# Examples Ex 2.7
+# A data frame/tibble with 252 observations on two variables
+# number = average number of sunspots
+# year = date
 plot(number ~ year, data = Yearsunspot)
 ########

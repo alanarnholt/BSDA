@@ -5,23 +5,23 @@
 \alias{Miller}
 \title{Miller personality test scores for a group of college students applying for
 graduate school}
-\format{A data frame with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on the following variable.
 \describe{ 
-\item{miller}{a numeric vector} 
+\item{miller}{scores on the Miller Personality test} 
 }}
+\usage{
+Miller
+}
 \description{
 Data for Example 5.7
 }
 \examples{
 
-str(Miller)
-attach(Miller)
-stem(miller)
-fivenum(miller)
-boxplot(miller)
-qqnorm(miller,col="blue")
-qqline(miller,col="red")
-detach(Miller)
+stem(Miller$miller)
+fivenum(Miller$miller)
+boxplot(Miller$miller)
+qqnorm(Miller$miller,col = "blue")
+qqline(Miller$miller, col = "red")
 
 }
 \references{

@@ -4,20 +4,20 @@
 \name{Manager}
 \alias{Manager}
 \title{Advertised salaries offered general managers of major corporations in 1995}
-\format{A data frame with 26 observations on the following variable.
+\format{A data frame/tibble with 26 observations on the following variable.
 \describe{ 
-\item{salary}{a numeric vector} 
+\item{salary}{random sample of advertised salaries of top executives} 
 }}
+\usage{
+Manager
+}
 \description{
 Data for Exercise 5.81
 }
 \examples{
 
-str(Manager)
-attach(Manager)
-stem(salary)
-SIGN.test(salary)
-detach(Manager)
+stem(Manager$salary)
+BSDA::SIGN.test(Manager$salary)
 
 }
 \references{

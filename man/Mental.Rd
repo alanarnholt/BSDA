@@ -4,19 +4,19 @@
 \name{Mental}
 \alias{Mental}
 \title{Median mental ages of 16 girls}
-\format{A data frame with 16 observations on the following variable.
+\format{A data frame/tibble with 16 observations on the following variable.
 \describe{ 
-\item{age}{a numeric vector} 
+\item{age}{mental age of 16 girls} 
 }}
+\usage{
+Mental
+}
 \description{
 Data for Exercise 6.52
 }
 \examples{
 
-str(Mental)
-attach(Mental)
-SIGN.test(age,md=100)
-detach(Mental)
+BSDA::SIGN.test(Mental$age, md = 100)
 
 }
 \references{

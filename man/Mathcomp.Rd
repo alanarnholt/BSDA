@@ -5,20 +5,20 @@
 \alias{Mathcomp}
 \title{Standardized math competency for a group of entering freshmen at a small
 community college}
-\format{A data frame with 31 observations on the following variable.
+\format{A data frame/tibble with 31 observations on the following variable.
 \describe{ 
-\item{score}{a numeric vector} 
+\item{score}{scores of 31 entering freshmen at a community college on a national standardized test} 
 }}
+\usage{
+Mathcomp
+}
 \description{
 Data for Exercise 5.26
 }
 \examples{
 
-str(Mathcomp)
-attach(Mathcomp)
-stem(score)
-EDA(score)
-detach(Mathcomp)
+stem(Mathcomp$score)
+BSDA::EDA(Mathcomp$score)
 
 }
 \references{

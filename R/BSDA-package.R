@@ -5626,28 +5626,27 @@ NULL
 #' 
 #' @name Magnesiu
 #' @docType data
-#' @format A data frame with 20 observations on the following 4 variables.
+#' @format A data frame/tibble with 20 observations on the following 4 variables.
 #' \describe{ 
-#' \item{distance}{a numeric vector}
-#' \item{magnesiu}{a numeric vector} 
-#' \item{SRES1}{a numeric vector} 
-#' \item{FITS1}{a numeric vector} 
+#' \item{distance}{distance between samples}
+#' \item{magnesium}{concentration of magnesium} 
 #' }
+#' 
+#' @source Davis, J. (1986), \emph{Statistics and Data Analysis in Geology}, 2d. Ed.,
+#' John Wiley and Sons, New York, p. 146
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Magnesiu)
-#' attach(Magnesiu)
-#' model <- lm(magnesiu~distance)
-#' plot(distance,magnesiu)
+#' plot(magnesium ~ distance, data = Magnesiu)
+#' model = lm(magnesium ~ distance, data = Magnesiu)
 #' abline(model)
 #' summary(model)
-#' detach(Magnesiu)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Magnesiu"
 
 
 
@@ -5660,21 +5659,18 @@ NULL
 #' 
 #' @name Malpract
 #' @docType data
-#' @format A data frame with 17 observations on the following variable.
+#' @format A data frame/tibble with 17 observations on the following variable.
 #' \describe{ 
-#' \item{award}{a numeric vector} 
+#' \item{award}{malpractice reward in $1000} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Malpract)
-#' attach(Malpract)
-#' SIGN.test(award,conf.level=.90)
-#' detach(Malpract)
+#' BSDA::SIGN.test(Malpract$award, conf.level = 0.90)
 #' 
-NULL
+"Malpract"
 
 
 
@@ -5687,22 +5683,19 @@ NULL
 #' 
 #' @name Manager
 #' @docType data
-#' @format A data frame with 26 observations on the following variable.
+#' @format A data frame/tibble with 26 observations on the following variable.
 #' \describe{ 
-#' \item{salary}{a numeric vector} 
+#' \item{salary}{random sample of advertised salaries of top executives} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Manager)
-#' attach(Manager)
-#' stem(salary)
-#' SIGN.test(salary)
-#' detach(Manager)
+#' stem(Manager$salary)
+#' BSDA::SIGN.test(Manager$salary)
 #' 
-NULL
+"Manager"
 
 
 
@@ -5715,23 +5708,57 @@ NULL
 #' 
 #' @name Marked
 #' @docType data
-#' @format A data frame with 65 observations on the following variable.
+#' @format A data frame/tibble with 65 observations on the following variable.
 #' \describe{ 
-#' \item{percent}{a numeric vector}
+#' \item{percent}{percentage of marked cars in 65 Florida police departments}
+#' }
+#' 
+#' @source \emph{Law Enforcement Management and Administrative Statistics, 1993}, Bureau of 
+#' Justice Statistics, NCJ-148825, September 1995, p. 147-148
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' Duxbury
+#' @keywords datasets
+#' @examples
+#' 
+#' BSDA::EDA(Marked$percent)
+#' BSDA::SIGN.test(Marked$percent, md = 60, alternative = "greater")
+#' t.test(Marked$percent, mu = 60, alternative = "greater")
+#' 
+"Marked"
+
+
+
+
+
+
+#' Standardized math test scores for 30 students
+#' 
+#' Data for Exercise 1.69
+#' 
+#' 
+#' @name Math
+#' @docType data
+#' @format A data frame/tibble with 30 observations on the following variable.
+#' \describe{ 
+#' \item{score}{scores on a standardized test for 30 tenth graders} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Marked)
-#' attach(Marked)
-#' EDA(percent)
-#' t.test(percent,mu=60,alternative="greater")
-#' SIGN.test(percent,md=60,alternative="greater")
-#' detach(Marked)
+#' stem(Math$score)
+#' hist(Math$score, main = "Math Scores", xlab = "score", freq = FALSE)
+#' lines(density(Math$score), col = "red")
+#' CharlieZ <- (62 - mean(Math$score))/sd(Math$score)
+#' CharlieZ
+#' scale(Math$score)[which(Math$score == 62)]
 #' 
-NULL
+"Math"
+
+
+
 
 
 
@@ -5745,22 +5772,19 @@ NULL
 #' 
 #' @name Mathcomp
 #' @docType data
-#' @format A data frame with 31 observations on the following variable.
+#' @format A data frame/tibble with 31 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{scores of 31 entering freshmen at a community college on a national standardized test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Mathcomp)
-#' attach(Mathcomp)
-#' stem(score)
-#' EDA(score)
-#' detach(Mathcomp)
+#' stem(Mathcomp$score)
+#' BSDA::EDA(Mathcomp$score)
 #' 
-NULL
+"Mathcomp"
 
 
 
@@ -5773,82 +5797,32 @@ NULL
 #' 
 #' @name Mathpro
 #' @docType data
-#' @format A data frame with 51 observations on the following 10 variables.
+#' @format A data frame/tibble with 51 observations on the following 10 variables.
 #' \describe{ 
-#' \item{state1}{a factor with levels \code{} \code{Conn}
+#' \item{state}{a factor with levels \code{} \code{Conn}
 #' \code{D.C.} \code{Del} \code{Ga} \code{Hawaii} \code{Ind} \code{Maine}
 #' \code{Mass} \code{Md} \code{N.C.} \code{N.H.} \code{N.J.} \code{N.Y.}
 #' \code{Ore} \code{Pa} \code{R.I.} \code{S.C.} \code{Va} \code{Vt}}
-#' \item{Sat.M1}{a numeric vector} 
-#' \item{Profic1}{a numeric vector} 
-#' \item{state2}{a factor with levels \code{} \code{Ala}
-#' \code{Alaska} \code{Ariz} \code{Ark} \code{Calif} \code{Colo} \code{Fla}
-#' \code{Idaho} \code{Ill} \code{Iowa} \code{Kan} \code{Ky} \code{La}
-#' \code{Mich} \code{Minn} \code{Miss} \code{Mo} \code{Mont} \code{N.D.}
-#' \code{N.M.} \code{Neb} \code{Nev} \code{Ohio} \code{Okla} \code{S.D.}
-#' \code{Tenn} \code{Texas} \code{Utah} \code{W.V.} \code{Wash} \code{Wis}
-#' \code{Wyo}} 
-#' \item{Sat.M2}{a numeric vector} 
-#' \item{Profic2}{a numeric vector} 
-#' \item{state}{a factor with levels \code{Ala}
-#' \code{Alaska} \code{Ariz} \code{Ark} \code{Calif} \code{Colo} \code{Conn}
-#' \code{D.C.} \code{Del} \code{Fla} \code{Ga} \code{Hawaii} \code{Idaho}
-#' \code{Ill} \code{Ind} \code{Iowa} \code{Kan} \code{Ky} \code{La}
-#' \code{Maine} \code{Mass} \code{Md} \code{Mich} \code{Minn} \code{Miss}
-#' \code{Mo} \code{Mont} \code{N.C.} \code{N.D.} \code{N.H.} \code{N.J.}
-#' \code{N.M.} \code{N.Y.} \code{Neb} \code{Nev} \code{Ohio} \code{Okla}
-#' \code{Ore} \code{Pa} \code{R.I.} \code{S.C.} \code{S.D.} \code{Tenn}
-#' \code{Texas} \code{Utah} \code{Va} \code{Vt} \code{W.V.} \code{Wash}
-#' \code{Wis} \code{Wyo}} 
-#' \item{Sat.M}{a numeric vector}
-#' \item{Profic}{a numeric vector} 
-#' \item{Group}{a numeric vector} 
+#' \item{sat_math}{SAT math scores for high school seniors} 
+#' \item{profic}{math proficiency scores for eigth graders} 
+#' \item{group}{a numeric vector} 
 #' }
+#' 
+#' @source National Assessment of Educational Progress and The College Board
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Mathpro)
-#' attach(Mathpro)
-#' model <- lm(Sat.M1~Profic1)
-#' plot(Profic1,Sat.M1)
+#' model <- lm(sat_math ~ profic, data = Mathpro)
+#' plot(sat_math ~ profic, data = Mathpro, ylab = "SAT", xlab = "proficiency")
 #' abline(model)
-#' model
-#' detach(Mathpro)
-#' remove(model)
+#' summary(model)
+#' rm(model)
 #' 
-NULL
+"Mathpro"
 
-
-
-
-
-#' Standardized math test scores for 30 students
-#' 
-#' Data for Exercise 1.69
-#' 
-#' 
-#' @name MATH
-#' @docType data
-#' @format A data frame with 30 observations on the following variable.
-#' \describe{ 
-#' \item{math}{a numeric vector} 
-#' }
-#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
-#' @keywords datasets
-#' @examples
-#' 
-#' str(MATH)
-#' attach(MATH)
-#' hist(math,col="pink")
-#' CharlieZ <- (62-mean(math))/sd(math)
-#' CharlieZ
-#' detach(MATH)
-#' remove(CharlieZ)
-#' 
-NULL
 
 
 
@@ -5861,13 +5835,9 @@ NULL
 #' 
 #' @name Maze
 #' @docType data
-#' @format A data frame with 32 observations on the following 6 variables.
+#' @format A data frame/tibble with 32 observations on the following 6 variables.
 #' \describe{ 
-#' \item{CondA}{a numeric vector} 
-#' \item{CondB}{a numeric vector} 
-#' \item{CondC}{a numeric vector}
-#' \item{CondD}{a numeric vector} 
-#' \item{score}{a numeric vector} 
+#' \item{score}{error scores for animals running through a maze under different conditions} 
 #' \item{condition}{a factor with levels \code{CondA}
 #' \code{CondB} \code{CondC} \code{CondD}} 
 #' }
@@ -5876,13 +5846,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Maze)
-#' attach(Maze)
-#' boxplot(score~condition)
-#' anova(lm(score~condition))
-#' detach(Maze)
+#' boxplot(score ~ condition, data = Maze, col = rainbow(4))
+#' anova(lm(score ~ condition, data = Maze))
 #' 
-NULL
+"Maze"
 
 
 
@@ -5895,28 +5862,21 @@ NULL
 #' 
 #' @name Median
 #' @docType data
-#' @format A data frame with 15 observations on the following 3 variables.
+#' @format A data frame/tibble with 15 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Sample1}{a numeric vector} 
-#' \item{Sample2}{a numeric vector} 
-#' \item{Sample3}{a numeric vector} 
+#' \item{sample}{a vector with values \code{Sample1}, \code{Sample 2}, and \code{Sample 3}} 
+#' \item{value}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Median)
-#' attach(Median)
-#' STACKED <-stack(Median)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' kruskal.test(values~ind,data=STACKED)
-#' remove(STACKED)
-#' detach(Median)
+#' boxplot(value ~ sample, data = Median, col = rainbow(3))
+#' anova(lm(value ~ sample, data = Median))
+#' kruskal.test(value ~ factor(sample), data = Median)
 #' 
-NULL
+"Median"
 
 
 
@@ -5929,21 +5889,18 @@ NULL
 #' 
 #' @name Mental
 #' @docType data
-#' @format A data frame with 16 observations on the following variable.
+#' @format A data frame/tibble with 16 observations on the following variable.
 #' \describe{ 
-#' \item{age}{a numeric vector} 
+#' \item{age}{mental age of 16 girls} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Mental)
-#' attach(Mental)
-#' SIGN.test(age,md=100)
-#' detach(Mental)
+#' BSDA::SIGN.test(Mental$age, md = 100)
 #' 
-NULL
+"Mental"
 
 
 
@@ -5956,21 +5913,18 @@ NULL
 #' 
 #' @name Mercury
 #' @docType data
-#' @format A data frame with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on the following variable.
 #' \describe{ 
-#' \item{mercury}{a numeric vector} 
+#' \item{mercury}{a numeric vector measuring mercury in parts per million} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Mercury)
-#' attach(Mercury)
-#' stem(mercury)
-#' detach(Mercury)
+#' stem(Mercury$mercury)
 #' 
-NULL
+"Mercury"
 
 
 
@@ -5983,51 +5937,23 @@ NULL
 #' 
 #' @name Metrent
 #' @docType data
-#' @format A data frame with 46 observations on the following variable.
+#' @format A data frame/tibble with 46 observations on the following variable.
 #' \describe{ 
-#' \item{rent}{a numeric vector} 
+#' \item{rent}{monthly rent in dollars} 
 #' }
+#' 
+#' @source U.S. Bureau of the Census, \emph{Housing in the Metropolitan Areas, Statistical Brief} SB/94/19,
+#' September 1994
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Metrent)
-#' attach(Metrent)
-#' EDA(rent)
-#' t.test(rent,conf.level=.99)$conf
-#' detach(Metrent)
+#' boxplot(Metrent$rent)
+#' t.test(Metrent$rent, conf.level = 0.99)$conf
 #' 
-NULL
-
-
-
-
-
-#' Twenty scores on the Miller personality test
-#' 
-#' Data for Exercise 1.41
-#' 
-#' 
-#' @name Miller1
-#' @docType data
-#' @format A data frame with 20 observations on the following variable.
-#' \describe{ 
-#' \item{miller}{a numeric vector} 
-#' }
-#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
-#' @keywords datasets
-#' @examples
-#' 
-#' str(Miller1)
-#' attach(Miller1)
-#' stem(miller)
-#' stem(miller,scale=2)
-#' detach(Miller1)
-#' 
-NULL
-
+"Metrent"
 
 
 
@@ -6040,25 +5966,47 @@ NULL
 #' 
 #' @name Miller
 #' @docType data
-#' @format A data frame with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on the following variable.
 #' \describe{ 
-#' \item{miller}{a numeric vector} 
+#' \item{miller}{scores on the Miller Personality test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Miller)
-#' attach(Miller)
-#' stem(miller)
-#' fivenum(miller)
-#' boxplot(miller)
-#' qqnorm(miller,col="blue")
-#' qqline(miller,col="red")
-#' detach(Miller)
+#' stem(Miller$miller)
+#' fivenum(Miller$miller)
+#' boxplot(Miller$miller)
+#' qqnorm(Miller$miller,col = "blue")
+#' qqline(Miller$miller, col = "red")
 #' 
-NULL
+"Miller"
+
+
+
+
+
+#' Twenty scores on the Miller personality test
+#' 
+#' Data for Exercise 1.41
+#' 
+#' 
+#' @name Miller1
+#' @docType data
+#' @format A data frame/tibble with 20 observations on the following variable.
+#' \describe{ 
+#' \item{miller}{scores on the Miller personality test} 
+#' }
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' Duxbury
+#' @keywords datasets
+#' @examples
+#' 
+#' stem(Miller1$miller)
+#' stem(Miller1$miller, scale = 2)
+#' 
+"Miller1"
 
 
 
@@ -6072,26 +6020,29 @@ NULL
 #' 
 #' @name Moisture
 #' @docType data
-#' @format A data frame with 16 observations on the following 4 variables.
+#' @format A data frame/tibble with 16 observations on the following 4 variables.
 #' \describe{ 
 #' \item{depth}{a numeric vector} 
-#' \item{moisture}{a numeric vector} 
+#' \item{moisture}{g of water per 100 g of dried sediment} 
 #' \item{lnmoist}{a numeric vector}
 #' \item{depthsq}{a numeric vector} 
 #' }
+#' 
+#' @source Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2d. ed.,
+#' John Wiley and Sons, New York, pp. 177, 185
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Moisture)
-#' attach(Moisture)
-#' model <- lm(moisture~depth)
-#' plot(depth,resid(model))
-#' detach(Moisture)
-#' remove(model)
+#' plot(moisture ~ depth, data = Moisture)
+#' model <- lm(moisture ~ depth, data = Moisture)
+#' abline(model)
+#' plot(resid(model) ~ depth, data = Moisture)
+#' rm(model)
 #' 
-NULL
+"Moisture"
 
 
 
@@ -6104,23 +6055,26 @@ NULL
 #' 
 #' @name Monoxide
 #' @docType data
-#' @format A data frame with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with 10 observations on the following 2 variables.
 #' \describe{ 
-#' \item{manufac}{a numeric vector} 
-#' \item{compet}{a numeric vector} 
+#' \item{company}{a vector with values \code{manufacturer} and \code{competitor}} 
+#' \item{emission}{carbon monoxide emitted} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Monoxide)
-#' attach(Monoxide)
-#' t.test(manufac,compet)
-#' wilcox.test(manufac,compet)
-#' detach(Monoxide)
+#' boxplot(emission ~ company, data = Monoxide, col = topo.colors(2))
+#' t.test(emission ~ company, data = Monoxide)
+#' wilcox.test(emission ~ company, data = Monoxide)
+#' \dontrun{
+#' ggplot2::ggplot(data = Monoxide, aes(x = company, y = emission)) + 
+#'   geom_boxplot() + 
+#'     theme_bw()
+#' }
 #' 
-NULL
+"Monoxide"
 
 
 
@@ -6133,10 +6087,10 @@ NULL
 #' 
 #' @name Movie
 #' @docType data
-#' @format A data frame with 12 observations on the following 3 variables.
+#' @format A data frame/tibble with 12 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Before}{a numeric vector} 
-#' \item{After}{a numeric vector} 
+#' \item{before}{moral aptitude before viewing the movie} 
+#' \item{after}{moral aptitude after viewing the movie} 
 #' \item{differ}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -6144,16 +6098,13 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Movie)
-#' attach(Movie)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' t.test(After,Before,paired=TRUE,conf.level=.99)
-#' wilcox.test(After,Before,paired=TRUE)
-#' detach(Movie)
+#' qqnorm(Movie$differ)
+#' qqline(Movie$differ)
+#' shapiro.test(Movie$differ)
+#' t.test(Movie$after, Movie$before, paired = TRUE, conf.level = 0.99)
+#' wilcox.test(Movie$after, Movie$before, paired = TRUE)
 #' 
-NULL
+"Movie"
 
 
 
@@ -6167,10 +6118,10 @@ NULL
 #' 
 #' @name Music
 #' @docType data
-#' @format A data frame with 12 observations on the following 3 variables.
+#' @format A data frame/tibble with 12 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Method1}{a numeric vector} 
-#' \item{Method2}{a numeric vector} 
+#' \item{method1}{a numeric vector measuring the improvement scores on a music recognition test} 
+#' \item{method2}{a numeric vector measuring the improvement scores on a music recognition test} 
 #' \item{differ}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -6178,15 +6129,19 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Music)
-#' attach(Music)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' t.test(Method1,Method2,paired=TRUE)
-#' detach(Music)
+#' qqnorm(Music$differ)
+#' qqline(Music$differ)
+#' shapiro.test(Music$differ)
+#' t.test(Music$method1, Music$method2, paired = TRUE)
+#' # Or
+#' t.test(Music$differ)
+#' \dontrun{
+#' ggplot2::ggplot(data = Music, aes(x = differ)) + 
+#' geom_dotplot() + 
+#' theme_bw()
+#' }
 #' 
-NULL
+"Music"
 
 
 
@@ -6199,9 +6154,9 @@ NULL
 #' 
 #' @name Name
 #' @docType data
-#' @format A data frame with 42 observations on the following 3 variables.
+#' @format A data frame/tibble with 42 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Brand}{a factor with levels \code{Band-Aid}
+#' \item{brand}{a factor with levels \code{Band-Aid}
 #' \code{Barbie} \code{Birds Eye} \code{Budweiser} \code{Camel} \code{Campbell}
 #' \code{Carlsberg} \code{Coca-Cola} \code{Colgate} \code{Del Monte}
 #' \code{Fisher-Price} \code{Gordon's} \code{Green Giant} \code{Guinness}
@@ -6212,25 +6167,25 @@ NULL
 #' \code{Pampers} \code{Pepsi-Cola} \code{Planters} \code{Quaker} \code{Sara
 #' Lee} \code{Schweppes} \code{Smirnoff} \code{Tampax} \code{Winston}
 #' \code{Wrigley's}}
-#' \item{value}{a numeric vector}
-#' \item{revenue}{a numeric vector} 
+#' \item{value}{value in billions of dollars}
+#' \item{revenue}{revenue in billions of dollars} 
 #' }
+#' 
+#' @source Financial World
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Name)
-#' attach(Name)
-#' plot(revenue,value)
-#' model <- lm(value~revenue)
+#' plot(value ~ revenue, data = Name)
+#' model <- lm(value ~ revenue, data = Name)
 #' abline(model)
-#' cor(value,revenue)
+#' cor(Name$value, Name$revenue)
 #' summary(model)
-#' detach(Name)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Name"
 
 
 
@@ -6238,12 +6193,12 @@ NULL
 
 #' Efficiency of pit crews for three major NASCAR teams
 #' 
-#' Data for Example 10.53
+#' Data for Exercise 10.53
 #' 
 #' 
 #' @name Nascar
 #' @docType data
-#' @format A data frame with 36 observations on the following 6 variables.
+#' @format A data frame/tibble with 36 observations on the following 6 variables.
 #' \describe{ 
 #' \item{TeamA}{a numeric vector} 
 #' \item{TeamB}{a numeric vector} 

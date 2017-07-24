@@ -4,20 +4,24 @@
 \name{Metrent}
 \alias{Metrent}
 \title{Monthly rental costs in metro areas with 1 million or more persons}
-\format{A data frame with 46 observations on the following variable.
+\format{A data frame/tibble with 46 observations on the following variable.
 \describe{ 
-\item{rent}{a numeric vector} 
+\item{rent}{monthly rent in dollars} 
 }}
+\source{
+U.S. Bureau of the Census, \emph{Housing in the Metropolitan Areas, Statistical Brief} SB/94/19,
+September 1994
+}
+\usage{
+Metrent
+}
 \description{
 Data for Exercise 5.117
 }
 \examples{
 
-str(Metrent)
-attach(Metrent)
-EDA(rent)
-t.test(rent,conf.level=.99)$conf
-detach(Metrent)
+boxplot(Metrent$rent)
+t.test(Metrent$rent, conf.level = 0.99)$conf
 
 }
 \references{

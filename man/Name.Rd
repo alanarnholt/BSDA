@@ -4,9 +4,9 @@
 \name{Name}
 \alias{Name}
 \title{Estimated value of a brand name product and the conpany's revenue}
-\format{A data frame with 42 observations on the following 3 variables.
+\format{A data frame/tibble with 42 observations on the following 3 variables.
 \describe{ 
-\item{Brand}{a factor with levels \code{Band-Aid}
+\item{brand}{a factor with levels \code{Band-Aid}
 \code{Barbie} \code{Birds Eye} \code{Budweiser} \code{Camel} \code{Campbell}
 \code{Carlsberg} \code{Coca-Cola} \code{Colgate} \code{Del Monte}
 \code{Fisher-Price} \code{Gordon's} \code{Green Giant} \code{Guinness}
@@ -17,23 +17,26 @@ Walker} \code{Kellogg} \code{Kleenex} \code{Kraft} \code{Louis Vuitton}
 \code{Pampers} \code{Pepsi-Cola} \code{Planters} \code{Quaker} \code{Sara
 Lee} \code{Schweppes} \code{Smirnoff} \code{Tampax} \code{Winston}
 \code{Wrigley's}}
-\item{value}{a numeric vector}
-\item{revenue}{a numeric vector} 
+\item{value}{value in billions of dollars}
+\item{revenue}{revenue in billions of dollars} 
 }}
+\source{
+Financial World
+}
+\usage{
+Name
+}
 \description{
 Data for Exercises 2.28, 9.19, and Example 2.8
 }
 \examples{
 
-str(Name)
-attach(Name)
-plot(revenue,value)
-model <- lm(value~revenue)
+plot(value ~ revenue, data = Name)
+model <- lm(value ~ revenue, data = Name)
 abline(model)
-cor(value,revenue)
+cor(Name$value, Name$revenue)
 summary(model)
-detach(Name)
-remove(model)
+rm(model)
 
 }
 \references{

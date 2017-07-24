@@ -4,19 +4,19 @@
 \name{Mercury}
 \alias{Mercury}
 \title{Concentration of mercury in 25 lake trout}
-\format{A data frame with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on the following variable.
 \describe{ 
-\item{mercury}{a numeric vector} 
+\item{mercury}{a numeric vector measuring mercury in parts per million} 
 }}
+\usage{
+Mercury
+}
 \description{
 Data for Example 1.9
 }
 \examples{
 
-str(Mercury)
-attach(Mercury)
-stem(mercury)
-detach(Mercury)
+stem(Mercury$mercury)
 
 }
 \references{

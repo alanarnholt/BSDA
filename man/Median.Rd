@@ -4,26 +4,22 @@
 \name{Median}
 \alias{Median}
 \title{Illustrates test of equality of medians with the Kruskal Wallis test}
-\format{A data frame with 15 observations on the following 3 variables.
+\format{A data frame/tibble with 15 observations on the following 3 variables.
 \describe{ 
-\item{Sample1}{a numeric vector} 
-\item{Sample2}{a numeric vector} 
-\item{Sample3}{a numeric vector} 
+\item{sample}{a vector with values \code{Sample1}, \code{Sample 2}, and \code{Sample 3}} 
+\item{value}{a numeric vector} 
 }}
+\usage{
+Median
+}
 \description{
 Data for Exercise 10.52
 }
 \examples{
 
-str(Median)
-attach(Median)
-STACKED <-stack(Median)
-STACKED[1:5,]
-boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-anova(lm(values~ind,data=STACKED))
-kruskal.test(values~ind,data=STACKED)
-remove(STACKED)
-detach(Median)
+boxplot(value ~ sample, data = Median, col = rainbow(3))
+anova(lm(value ~ sample, data = Median))
+kruskal.test(value ~ factor(sample), data = Median)
 
 }
 \references{

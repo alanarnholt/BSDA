@@ -5,24 +5,30 @@
 \alias{Moisture}
 \title{Moisture content and depth of core sample for marine muds in eastern
 Louisiana}
-\format{A data frame with 16 observations on the following 4 variables.
+\format{A data frame/tibble with 16 observations on the following 4 variables.
 \describe{ 
 \item{depth}{a numeric vector} 
-\item{moisture}{a numeric vector} 
+\item{moisture}{g of water per 100 g of dried sediment} 
 \item{lnmoist}{a numeric vector}
 \item{depthsq}{a numeric vector} 
 }}
+\source{
+Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2d. ed.,
+John Wiley and Sons, New York, pp. 177, 185
+}
+\usage{
+Moisture
+}
 \description{
 Data for Exercise 9.37
 }
 \examples{
 
-str(Moisture)
-attach(Moisture)
-model <- lm(moisture~depth)
-plot(depth,resid(model))
-detach(Moisture)
-remove(model)
+plot(moisture ~ depth, data = Moisture)
+model <- lm(moisture ~ depth, data = Moisture)
+abline(model)
+plot(resid(model) ~ depth, data = Moisture)
+rm(model)
 
 }
 \references{
