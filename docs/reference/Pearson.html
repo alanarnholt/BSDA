@@ -87,13 +87,20 @@
     <p>Data for Exercise 2.20</p>
     
 
+    <pre class="usage"><span class='no'>Pearson</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 11 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>brother</dt><dd><p>a numeric vector</p></dd> 
-<dt>sister</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 11 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>family</dt><dd><p>number indicating family of brother and sister pair</p></dd>
+<dt>brother</dt><dd><p>height of brother (in inches)</p></dd> 
+<dt>sister</dt><dd><p>height of sister (in inches)</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Pearson, K. and Lee, A. (1902-3), On the Laws of Inheritance in Man, 
+<em>Biometrika, 2</em>, 357</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -103,16 +110,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Pearson</span>)</div><div class='output co'>#&gt; 'data.frame':	11 obs. of  2 variables:
-#&gt;  $ brother: int  71 68 66 67 70 71 70 73 72 65 ...
-#&gt;  $ sister : int  69 64 65 63 65 62 65 64 66 59 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Pearson</span>)
-<span class='fu'>plot</span>(<span class='no'>brother</span>,<span class='no'>sister</span>)</div><div class='img'><img src='Pearson-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>cor</span>(<span class='no'>brother</span>,<span class='no'>sister</span>)</div><div class='output co'>#&gt; [1] 0.5580547</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Pearson</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>brother</span> ~ <span class='no'>sister</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Pearson</span>)</div><div class='img'><img src='Pearson-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>cor</span>(<span class='no'>Pearson</span>$<span class='no'>brother</span>, <span class='no'>Pearson</span>$<span class='no'>sister</span>)</div><div class='output co'>#&gt; [1] 0.5580547</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

@@ -89,16 +89,13 @@ and Texas</h1>
     <p>Data for Exercise 10.34 and 10.49</p>
     
 
+    <pre class="usage"><span class='no'>Saving</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 75 observations on the following 6 variables.</p><dl class='dl-horizontal'>
-<dt>calif</dt><dd><p>a numeric vector</p></dd> 
-<dt>newyork</dt><dd><p>a numeric vector</p></dd> 
-<dt>texas</dt><dd><p>a numeric vector</p></dd> 
-<dt>PAR</dt><dd><p>a numeric vector</p></dd> 
-<dt>state</dt><dd><p>a numeric vector</p></dd>
-<dt>ranks</dt><dd><p>a numeric vector</p></dd>
+    <p>A data frame/tibble with 65 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>par</dt><dd><p>problem-asset-ratio for Savings &amp; Loans that were listed as being financially troubled in 1992</p></dd> 
+<dt>state</dt><dd><p>U.S. state</p></dd>
  </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -109,19 +106,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Saving</span>)</div><div class='output co'>#&gt; 'data.frame':	75 obs. of  6 variables:
-#&gt;  $ calif  : num  103 188 108 140 101 ...
-#&gt;  $ newyork: num  124 176 NA 169 111 ...
-#&gt;  $ texas  : num  34033 418 416 565 128 ...
-#&gt;  $ PAR    : num  103 188 108 140 101 ...
-#&gt;  $ state  : int  1 1 1 1 1 1 1 1 1 1 ...
-#&gt;  $ ranks  : int  3 36 7 24 2 4 NA NA 14 31 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Saving</span>)
-<span class='fu'>boxplot</span>(<span class='no'>PAR</span>~<span class='no'>state</span>)</div><div class='img'><img src='Saving-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>PAR</span>~<span class='fu'>as.factor</span>(<span class='no'>state</span>))</div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>par</span> ~ <span class='no'>state</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Saving</span>)</div><div class='img'><img src='Saving-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>par</span> ~ <span class='no'>state</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Saving</span>, <span class='kw'>log</span> <span class='kw'>=</span> <span class='st'>"y"</span>)</div><div class='img'><img src='Saving-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>aov</span>(<span class='no'>par</span> ~ <span class='no'>state</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Saving</span>)
+<span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt;             Df    Sum Sq  Mean Sq F value Pr(&gt;F)
+#&gt; state        2 2.269e+07 11345362   0.638  0.532
+#&gt; Residuals   62 1.103e+09 17784535               </div><div class='input'><span class='fu'>plot</span>(<span class='fu'>TukeyHSD</span>(<span class='no'>model</span>))</div><div class='img'><img src='Saving-3.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>kruskal.test</span>(<span class='no'>par</span> ~ <span class='fu'>factor</span>(<span class='no'>state</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Saving</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Kruskal-Wallis rank sum test
 #&gt; 
-#&gt; data:  PAR by as.factor(state)
+#&gt; data:  par by factor(state)
 #&gt; Kruskal-Wallis chi-squared = 1.708, df = 2, p-value = 0.4257
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Saving</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

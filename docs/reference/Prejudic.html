@@ -87,11 +87,12 @@
     <p>Data for Exercise 5.10 and 5.22</p>
     
 
+    <pre class="usage"><span class='no'>Prejudic</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>A data frame with 25 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>prejud</dt><dd><p>a numeric vector</p></dd> 
+<dt>prejud</dt><dd><p>racial prejudice score</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,14 +103,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Prejudic</span>)</div><div class='output co'>#&gt; 'data.frame':	25 obs. of  1 variable:
-#&gt;  $ prejud: int  59 54 41 51 87 42 65 42 44 46 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Prejudic</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>prejud</span>)</div><div class='output co'>#&gt; [1] "prejud"</div><div class='img'><img src='Prejudic-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+<span class='fu'>stem</span>(<span class='no'>Prejudic</span>$<span class='no'>prejud</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 1 digit(s) to the right of the |
+#&gt; 
+#&gt;   4 | 11224567888
+#&gt;   5 | 124889
+#&gt;   6 | 125
+#&gt;   7 | 249
+#&gt;   8 | 37
+#&gt; </div><div class='input'><span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/EDA'>EDA</a></span>(<span class='no'>Prejudic</span>$<span class='no'>prejud</span>)</div><div class='output co'>#&gt; [1] "Prejudic$prejud"</div><div class='img'><img src='Prejudic-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   25.000    0.000   41.000   45.500   56.280   52.000   55.609   63.500 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;   87.000   13.664  186.710    2.733   18.000   46.000   -0.592    0.786 
 #&gt; SW p-val 
-#&gt;    0.015 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Prejudic</span>)</div></pre>
+#&gt;    0.015 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

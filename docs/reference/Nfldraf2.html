@@ -89,52 +89,14 @@
     <p>Data for Exercise 9.63</p>
     
 
+    <pre class="usage"><span class='no'>Nfldraf2</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 47 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>Rating.forty.weight</dt><dd><p>a factor with levels
-<code>5.000000000e+000 4.870000000e+000 2.810000000e+002</code>
-<code>5.000000000e+000 4.900000000e+000 2.810000000e+002</code>
-<code>5.100000000e+000 5.100000000e+000 2.980000000e+002</code>
-<code>5.200000000e+000 5.000000000e+000 2.920000000e+002</code>
-<code>5.200000000e+000 5.030000000e+000 2.920000000e+002</code>
-<code>5.300000000e+000 4.780000000e+000 2.720000000e+002</code>
-<code>5.300000000e+000 4.800000000e+000 2.720000000e+002</code>
-<code>5.400000000e+000 4.890000000e+000 2.450000000e+002</code>
-<code>5.400000000e+000 4.900000000e+000 2.450000000e+002</code>
-<code>5.400000000e+000 5.000000000e+000 2.650000000e+002</code>
-<code>5.400000000e+000 5.000000000e+000 2.770000000e+002</code>
-<code>5.400000000e+000 5.030000000e+000 2.770000000e+002</code>
-<code>5.500000000e+000 4.800000000e+000 2.640000000e+002</code>
-<code>5.500000000e+000 4.820000000e+000 2.640000000e+002</code>
-<code>5.600000000e+000 4.900000000e+000 2.470000000e+002</code>
-<code>5.600000000e+000 5.100000000e+000 2.870000000e+002</code>
-<code>5.600000000e+000 5.130000000e+000 2.870000000e+002</code>
-<code>5.700000000e+000 4.880000000e+000 2.830000000e+002</code>
-<code>5.700000000e+000 4.900000000e+000 2.830000000e+002</code>
-<code>5.800000000e+000 4.800000000e+000 2.390000000e+002</code>
-<code>5.800000000e+000 4.850000000e+000 2.390000000e+002</code>
-<code>5.800000000e+000 4.900000000e+000 2.710000000e+002</code>
-<code>5.800000000e+000 4.930000000e+000 2.710000000e+002</code>
-<code>5.900000000e+000 4.700000000e+000 2.600000000e+002</code>
-<code>5.900000000e+000 4.720000000e+000 2.600000000e+002</code>
-<code>6.000000000e+000 5.100000000e+000 2.830000000e+002</code>
-<code>6.200000000e+000 5.100000000e+000 3.120000000e+002</code>
-<code>6.400000000e+000 4.800000000e+000 2.840000000e+002</code>
-<code>6.400000000e+000 4.840000000e+000 2.840000000e+002</code>
-<code>6.400000000e+000 5.070000000e+000 2.850000000e+002</code>
-<code>6.400000000e+000 5.100000000e+000 2.850000000e+002</code>
-<code>6.600000000e+000 5.090000000e+000 3.000000000e+002</code>
-<code>6.600000000e+000 5.100000000e+000 3.000000000e+002</code>
-<code>6.900000000e+000 4.680000000e+000 2.550000000e+002</code>
-<code>6.900000000e+000 4.700000000e+000 2.550000000e+002</code>
-<code>7.000000000e+000 5.060000000e+000 2.890000000e+002</code>
-<code>7.000000000e+000 5.100000000e+000 2.890000000e+002</code>
-<code>7.200000000e+000 4.900000000e+000 2.920000000e+002</code>
-<code>7.500000000e+000 4.900000000e+000 2.760000000e+002</code>
-<code>7.500000000e+000 4.940000000e+000 2.760000000e+002</code>
-<code>8.200000000e+000 4.720000000e+000 3.130000000e+002</code></p></dd> 
+    <p>A data frame/tibble with 47 observations on the 3 following variables.</p><dl class='dl-horizontal'>
+<dt>rating</dt><dd><p>rating of each player on a scale out of 10</p></dd>
+<dt>forty</dt><dd><p>forty yard dash time in seconds</p></dd>
+<dt>weight</dt><dd><p>weight of each player in pounds</p></dd>
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -145,7 +107,26 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>data</span>(<span class='no'>Nfldraf2</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>rating</span> ~ <span class='no'>forty</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Nfldraf2</span>)</div><div class='img'><img src='Nfldraf2-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='fu'>lm</span>(<span class='no'>rating</span> ~ <span class='no'>forty</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Nfldraf2</span>))</div><div class='output co'>#&gt; 
+#&gt; Call:
+#&gt; lm(formula = rating ~ forty, data = Nfldraf2)
+#&gt; 
+#&gt; Residuals:
+#&gt;     Min      1Q  Median      3Q     Max 
+#&gt; -1.0476 -0.5691 -0.2625  0.5055  2.0457 
+#&gt; 
+#&gt; Coefficients:
+#&gt;             Estimate Std. Error t value Pr(&gt;|t|)  
+#&gt; (Intercept)   9.5141     4.1838   2.274   0.0278 *
+#&gt; forty        -0.7118     0.8472  -0.840   0.4052  
+#&gt; ---
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#&gt; 
+#&gt; Residual standard error: 0.766 on 45 degrees of freedom
+#&gt; Multiple R-squared:  0.01545,	Adjusted R-squared:  -0.006432 
+#&gt; F-statistic: 0.706 on 1 and 45 DF,  p-value: 0.4052
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

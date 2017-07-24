@@ -89,17 +89,14 @@ City</h1>
     <p>Data for Example 9.3</p>
     
 
+    <pre class="usage"><span class='no'>Patrol</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 10 observations on the following 7 variables.</p><dl class='dl-horizontal'>
-<dt>tickets</dt><dd><p>a numeric vector</p></dd> 
-<dt>years</dt><dd><p>a numeric vector</p></dd> 
-<dt>ln.tickets.</dt><dd><p>a numeric vector</p></dd>
-<dt>SRES1</dt><dd><p>a numeric vector</p></dd> 
-<dt>FITS1</dt><dd><p>a numeric vector</p></dd> 
-<dt>SRES2</dt><dd><p>a numeric vector</p></dd> 
-<dt>FITS2</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 10 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>tickets</dt><dd><p>number of tickets written per week</p></dd> 
+<dt>years</dt><dd><p>patrolperson's years of experience</p></dd> 
+<dt>log_tickets</dt><dd><p>natural log of <code>tickets</code></p></dd>
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -110,18 +107,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Patrol</span>)</div><div class='output co'>#&gt; 'data.frame':	10 obs. of  7 variables:
-#&gt;  $ tickets    : int  42 30 54 12 32 8 75 28 20 15
-#&gt;  $ years      : int  3 8 2 15 5 20 1 10 7 12
-#&gt;  $ ln.tickets.: num  3.74 3.4 3.99 2.48 3.47 ...
-#&gt;  $ SRES1      : num  -0.5079 -0.2332 0.3966 0.0047 -0.8888 ...
-#&gt;  $ FITS1      : num  47.1 32.5 50.1 12 41.3 ...
-#&gt;  $ SRES2      : num  -0.46 0.569 0.271 -0.194 -0.713 ...
-#&gt;  $ FITS2      : num  3.83 3.28 3.94 2.52 3.61 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Patrol</span>)
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>tickets</span>~<span class='no'>years</span>)
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>tickets</span> ~ <span class='no'>years</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Patrol</span>)
 <span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = tickets ~ years)
+#&gt; lm(formula = tickets ~ years, data = Patrol)
 #&gt; 
 #&gt; Residuals:
 #&gt;     Min      1Q  Median      3Q     Max 
@@ -137,8 +126,10 @@ Duxbury</p>
 #&gt; Residual standard error: 11.21 on 8 degrees of freedom
 #&gt; Multiple R-squared:  0.7397,	Adjusted R-squared:  0.7071 
 #&gt; F-statistic: 22.73 on 1 and 8 DF,  p-value: 0.001413
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Patrol</span>)
-<span class='fu'>remove</span>(<span class='no'>model</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>confint</span>(<span class='no'>model</span>, <span class='kw'>level</span> <span class='kw'>=</span> <span class='fl'>0.98</span>)</div><div class='output co'>#&gt;                   1 %      99 %
+#&gt; (Intercept) 37.937415 73.937924
+#&gt; years       -4.713667 -1.150832</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

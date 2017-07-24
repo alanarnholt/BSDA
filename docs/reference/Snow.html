@@ -87,15 +87,18 @@
     <p>Data for Exercise 7.87</p>
     
 
+    <pre class="usage"><span class='no'>Snow</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 34 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>antarc</dt><dd><p>a numeric vector</p></dd> 
-<dt>greenld</dt><dd><p>a numeric vector</p></dd> 
-<dt>concent</dt><dd><p>a numeric vector</p></dd>
-<dt>site</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 34 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>concent</dt><dd><p>concentration of microparticles from melted snow (in parts per billion)</p></dd>
+<dt>site</dt><dd><p>location of snow sample (<code>Antarctica</code> or <code>Greenland</code>)</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Davis, J., <em>Statistics and Data Analysis in Geology</em>, John Wiley, New York.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -105,18 +108,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Snow</span>)</div><div class='output co'>#&gt; 'data.frame':	34 obs. of  4 variables:
-#&gt;  $ antarc : num  3.7 2 1.3 3.9 0.2 1.4 4.2 4.9 0.6 1.4 ...
-#&gt;  $ greenld: num  3.7 7.8 1.9 2 1.1 1.3 1.9 3.7 3.4 1.6 ...
-#&gt;  $ concent: num  3.7 2 1.3 3.9 0.2 1.4 4.2 4.9 0.6 1.4 ...
-#&gt;  $ site   : int  1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Snow</span>)
-<span class='fu'>boxplot</span>(<span class='no'>concent</span>~<span class='no'>site</span>)</div><div class='img'><img src='Snow-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Snow</span>)</div></pre>
+<span class='fu'>boxplot</span>(<span class='no'>concent</span> ~ <span class='no'>site</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Snow</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"lightblue"</span>, <span class='st'>"lightgreen"</span>))</div><div class='img'><img src='Snow-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

@@ -22,12 +22,11 @@ Data for Example 1.18
 boxplot(gpa ~ gender, data = Simpson)
 boxplot(gpa ~ sport, data = Simpson)
 \dontrun{
-ggplot2::ggplot(data = Simpson, aes(x = gender, y = gpa, 
-                                    fill = gender)) +
-                                      geom_boxplot() + 
-                                        facet_grid(.~sport) + theme_bw()
+ggplot2::ggplot(data = Simpson, aes(x = gender, y = gpa, fill = gender)) +
+           geom_boxplot() + 
+           facet_grid(.~sport) + 
+           theme_bw()
                                         }
-
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

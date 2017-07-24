@@ -87,16 +87,20 @@
     <p>Data for Exercises 6.40, 6.59, 7.10, and 7.35</p>
     
 
+    <pre class="usage"><span class='no'>Smokyph</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 75 observations on the following 5 variables.</p><dl class='dl-horizontal'>
-<dt>waterph</dt><dd><p>a numeric vector</p></dd> 
-<dt>code</dt><dd><p>a factor with levels <code>high</code> <code>low</code></p></dd> 
-<dt>elev</dt><dd><p>a numeric vector</p></dd> 
-<dt>SRES1</dt><dd><p>a numeric vector</p></dd> 
-<dt>FITS1</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 75 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>waterph</dt><dd><p>water sample pH level</p></dd> 
+<dt>code</dt><dd><p>charater variable with values <code>low</code> (elevation below 0.6 miles), and <code>high</code> (elevation above 0.6 miles)</p></dd> 
+<dt>elev</dt><dd><p>elevation in miles</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Schmoyer, R. L. (1994), Permutation Tests for Correlation in Regression Errors,
+<em>Journal of the American Statistical Association, 89</em>, 1507-1516.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -106,16 +110,13 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Smokyph</span>)</div><div class='output co'>#&gt; 'data.frame':	75 obs. of  5 variables:
-#&gt;  $ waterph: num  7.91 7.14 6.81 6.97 7.21 6.94 6.59 6.94 6.94 8.43 ...
-#&gt;  $ code   : Factor w/ 2 levels "high","low": 2 2 2 2 2 2 2 2 2 2 ...
-#&gt;  $ elev   : num  0.244 0.375 0.567 0.512 0.408 0.512 0.506 0.488 0.488 0.232 ...
-#&gt;  $ SRES1  : num  1.127 -0.551 -0.939 -0.661 -0.294 ...
-#&gt;  $ FITS1  : num  7.47 7.36 7.18 7.23 7.33 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Smokyph</span>)
-<span class='fu'>t.test</span>(<span class='no'>waterph</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>7</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>summary</span>(<span class='no'>Smokyph</span>$<span class='no'>waterph</span>)</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#&gt;   6.380   6.880   7.030   7.140   7.235   8.430 </div><div class='input'><span class='fu'>tapply</span>(<span class='no'>Smokyph</span>$<span class='no'>waterph</span>, <span class='no'>Smokyph</span>$<span class='no'>code</span>, <span class='no'>mean</span>)</div><div class='output co'>#&gt;     high      low 
+#&gt; 7.039697 7.218095 </div><div class='input'><span class='fu'>stripchart</span>(<span class='no'>waterph</span> ~ <span class='no'>code</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Smokyph</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"stack"</span>,
+           <span class='kw'>pch</span> <span class='kw'>=</span> <span class='fl'>19</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>))</div><div class='img'><img src='Smokyph-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>           <span class='fu'>t.test</span>(<span class='no'>Smokyph</span>$<span class='no'>waterph</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='fl'>7</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
-#&gt; data:  waterph
+#&gt; data:  Smokyph$waterph
 #&gt; t = 2.7516, df = 74, p-value = 0.007452
 #&gt; alternative hypothesis: true mean is not equal to 7
 #&gt; 95 percent confidence interval:
@@ -123,10 +124,10 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt;    7.1396 
-#&gt; </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>waterph</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>7</span>)</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'>           <span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/SIGN.test'>SIGN.test</a></span>(<span class='no'>Smokyph</span>$<span class='no'>waterph</span>, <span class='kw'>md</span> <span class='kw'>=</span> <span class='fl'>7</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  waterph
+#&gt; data:  Smokyph$waterph
 #&gt; s = 42, p-value = 0.2954
 #&gt; alternative hypothesis: true median is not equal to 7
 #&gt; 95 percent confidence interval:
@@ -137,27 +138,44 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
 #&gt; Lower Achieved CI     0.9361 6.9600 7.0800
 #&gt; Interpolated CI       0.9500 6.9548 7.0852
-#&gt; Upper Achieved CI     0.9630 6.9500 7.0900</div><div class='input'><span class='fu'>tapply</span>(<span class='no'>waterph</span>,<span class='no'>code</span>,<span class='no'>mean</span>)</div><div class='output co'>#&gt;     high      low 
-#&gt; 7.039697 7.218095 </div><div class='input'><span class='fu'>stripchart</span>(<span class='no'>waterph</span>~<span class='no'>code</span>,<span class='kw'>method</span><span class='kw'>=</span><span class='st'>"stack"</span>,<span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"red"</span>,<span class='st'>"blue"</span>))</div><div class='img'><img src='Smokyph-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>qqnorm</span>(<span class='no'>waterph</span>[<span class='no'>code</span><span class='kw'>==</span><span class='st'>"low"</span>])</div><div class='img'><img src='Smokyph-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>qqnorm</span>(<span class='no'>waterph</span>[<span class='no'>code</span><span class='kw'>==</span><span class='st'>"high"</span>])</div><div class='img'><img src='Smokyph-3.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>waterph</span>[<span class='no'>code</span><span class='kw'>==</span><span class='st'>"low"</span>],<span class='no'>waterph</span>[<span class='no'>code</span><span class='kw'>==</span><span class='st'>"high"</span>])</div><div class='output co'>#&gt; 
+#&gt; Upper Achieved CI     0.9630 6.9500 7.0900</div><div class='input'>           <span class='fu'>t.test</span>(<span class='no'>waterph</span> ~ <span class='no'>code</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Smokyph</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
-#&gt; data:  waterph[code == "low"] and waterph[code == "high"]
-#&gt; t = 1.859, df = 70.875, p-value = 0.06718
-#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; data:  waterph by code
+#&gt; t = -1.859, df = 70.875, p-value = 0.03359
+#&gt; alternative hypothesis: true difference in means is less than 0
 #&gt; 95 percent confidence interval:
-#&gt;  -0.0129577  0.3697542
+#&gt;         -Inf -0.01845818
 #&gt; sample estimates:
-#&gt; mean of x mean of y 
-#&gt;  7.218095  7.039697 
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>waterph</span>[<span class='no'>code</span><span class='kw'>==</span><span class='st'>"low"</span>],<span class='no'>waterph</span>[<span class='no'>code</span><span class='kw'>==</span><span class='st'>"high"</span>],<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.90</span>)$<span class='no'>conf</span></div><div class='output co'>#&gt; [1] 0.01845818 0.33833836
-#&gt; attr(,"conf.level")
-#&gt; [1] 0.9</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Smokyph</span>)</div></pre>
+#&gt; mean in group high  mean in group low 
+#&gt;           7.039697           7.218095 
+#&gt; </div><div class='input'>           <span class='fu'>t.test</span>(<span class='no'>waterph</span> ~ <span class='no'>code</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Smokyph</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.90</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Welch Two Sample t-test
+#&gt; 
+#&gt; data:  waterph by code
+#&gt; t = -1.859, df = 70.875, p-value = 0.06718
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 90 percent confidence interval:
+#&gt;  -0.33833836 -0.01845818
+#&gt; sample estimates:
+#&gt; mean in group high  mean in group low 
+#&gt;           7.039697           7.218095 
+#&gt; </div><div class='input'>          </div><span class='co'># NOT RUN {</span>
+           <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Smokyph</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>waterph</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>code</span>)) +
+             <span class='fu'>geom_dotplot</span>() +
+               <span class='fu'>facet_grid</span>(<span class='no'>code</span> ~ <span class='no'>.</span>) +
+                 <span class='fu'>guides</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

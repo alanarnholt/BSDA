@@ -87,14 +87,18 @@
     <p>Data for Statistical Insight Chapter 1 and Exercise 5.110</p>
     
 
+    <pre class="usage"><span class='no'>Stamp</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 485 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>thickness</dt><dd><p>a numeric vector</p></dd>
-<dt>thick</dt><dd><p>a numeric vector</p></dd> 
-<dt>freq</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 485 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>thickness</dt><dd><p>stamp thickness (in mm)</p></dd>
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Izenman, A., Sommer, C. (1988), Philatelic Mixtures and Multimodal Densities,
+<em>Journal of the American Statistical Association</em>, 83, 941-953.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -104,19 +108,28 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Stamp</span>)</div><div class='output co'>#&gt; 'data.frame':	485 obs. of  3 variables:
-#&gt;  $ thickness: num  0.06 0.064 0.064 0.065 0.066 0.068 0.069 0.069 0.069 0.069 ...
-#&gt;  $ thick    : num  0.06 0.061 0.062 0.063 0.064 0.065 0.066 0.067 0.068 0.069 ...
-#&gt;  $ freq     : int  1 0 0 0 2 1 1 0 1 7 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Stamp</span>)
-<span class='fu'>hist</span>(<span class='no'>thickness</span>,<span class='kw'>prob</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"lightblue"</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>thickness</span>),<span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"blue"</span>)</div><div class='img'><img src='Stamp-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>thickness</span>,<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.99</span>)$<span class='no'>conf</span></div><div class='output co'>#&gt; [1] 0.08426759 0.08778189
-#&gt; attr(,"conf.level")
-#&gt; [1] 0.99</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Stamp</span>)</div></pre>
+<span class='fu'>hist</span>(<span class='no'>Stamp</span>$<span class='no'>thickness</span>, <span class='kw'>freq</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"lightblue"</span>,
+<span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"stamp thickness (mm)"</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>Stamp</span>$<span class='no'>thickness</span>), <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"blue"</span>)</div><div class='img'><img src='Stamp-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Stamp</span>$<span class='no'>thickness</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.99</span>)</div><div class='output co'>#&gt; 
+#&gt; 	One Sample t-test
+#&gt; 
+#&gt; data:  Stamp$thickness
+#&gt; t = 126.6, df = 484, p-value &lt; 2.2e-16
+#&gt; alternative hypothesis: true mean is not equal to 0
+#&gt; 99 percent confidence interval:
+#&gt;  0.08426759 0.08778189
+#&gt; sample estimates:
+#&gt;  mean of x 
+#&gt; 0.08602474 
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

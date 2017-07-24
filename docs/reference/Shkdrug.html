@@ -89,17 +89,13 @@ tasks</h1>
     <p>Data for Exercises 10.11 and 10.12</p>
     
 
+    <pre class="usage"><span class='no'>Shkdrug</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 64 observations on the following 6 variables.</p><dl class='dl-horizontal'>
-<dt>Drug.Shk</dt><dd><p>a numeric vector</p></dd>
-<dt>Drug.NoS</dt><dd><p>a numeric vector</p></dd> 
-<dt>NoDrug.S</dt><dd><p>a numeric vector</p></dd> 
-<dt>NoDg.NoS</dt><dd><p>a numeric vector</p></dd> 
-<dt>Treatment</dt><dd><p>a factor with levels <code>Drug/NoS</code> <code>Drug/Shk</code> <code>NoDg/NoS</code>
-<code>NoDrug/S</code></p></dd> 
-<dt>Response</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 64 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>treatment</dt><dd><p>type of treament <code>Drug/NoS</code>, <code>Drug/Shk</code>, <code>NoDg/NoS</code>, or <code>NoDrug/S</code></p></dd>
+<dt>response</dt><dd><p>number of tasks completed in a 10-minute period</p></dd>
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -110,21 +106,15 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Shkdrug</span>)</div><div class='output co'>#&gt; 'data.frame':	64 obs. of  6 variables:
-#&gt;  $ Drug.Shk : int  3 1 2 1 4 3 2 4 2 1 ...
-#&gt;  $ Drug.NoS : int  2 3 4 0 2 4 2 4 5 6 ...
-#&gt;  $ NoDrug.S : int  1 2 2 0 1 2 3 1 0 3 ...
-#&gt;  $ NoDg.NoS : int  5 3 2 3 4 6 5 4 6 3 ...
-#&gt;  $ Treatment: Factor w/ 4 levels "Drug/NoS","Drug/Shk",..: 2 2 2 2 2 2 2 2 2 2 ...
-#&gt;  $ Response : int  3 1 2 1 4 3 2 4 2 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Shkdrug</span>)
-<span class='fu'>boxplot</span>(<span class='no'>Response</span>~<span class='no'>Treatment</span>)</div><div class='img'><img src='Shkdrug-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>Response</span>~<span class='no'>Treatment</span>))</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='fu'>boxplot</span>(<span class='no'>response</span> ~ <span class='no'>treatment</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Shkdrug</span>)</div><div class='img'><img src='Shkdrug-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>response</span> ~ <span class='no'>treatment</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Shkdrug</span>)
+<span class='fu'>anova</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
-#&gt; Response: Response
+#&gt; Response: response
 #&gt;           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
-#&gt; Treatment  3  58.125 19.3750  11.006 7.435e-06 ***
+#&gt; treatment  3  58.125 19.3750  11.006 7.435e-06 ***
 #&gt; Residuals 60 105.625  1.7604                      
 #&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Shkdrug</span>)</div></pre>
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

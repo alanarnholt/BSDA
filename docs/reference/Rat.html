@@ -87,12 +87,17 @@
     <p>Data for Exercise 1.52, 1.76, 5.62, and 6.44</p>
     
 
+    <pre class="usage"><span class='no'>Rat</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 20 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>survival.time</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 20 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>survival_time</dt><dd><p>survival time in weeks for rats exposed to a high level of radiation</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>J. Lawless, <em>Statistical Models and Methods for Lifetime Data</em> (New York: Wiley, 1982)</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -102,14 +107,22 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Rat</span>)</div><div class='output co'>#&gt; 'data.frame':	20 obs. of  1 variable:
-#&gt;  $ survival.time: int  152 152 115 109 137 88 94 77 160 165 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Rat</span>)
-<span class='fu'>hist</span>(<span class='no'>survival.time</span>)</div><div class='img'><img src='Rat-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>qqnorm</span>(<span class='no'>survival.time</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"blue"</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>survival.time</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>)</div><div class='img'><img src='Rat-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>survival.time</span>)$<span class='no'>conf</span></div><div class='output co'>#&gt; [1]  96.69997 130.20003
-#&gt; attr(,"conf.level")
-#&gt; [1] 0.95</div><div class='input'><span class='fu'>t.test</span>(<span class='no'>survival.time</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>100</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>hist</span>(<span class='no'>Rat</span>$<span class='no'>survival_time</span>)</div><div class='img'><img src='Rat-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>qqnorm</span>(<span class='no'>Rat</span>$<span class='no'>survival_time</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>Rat</span>$<span class='no'>survival_time</span>)</div><div class='img'><img src='Rat-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>Rat</span>$<span class='no'>survival_time</span>)</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#&gt;   40.00   86.75  119.00  113.45  140.75  165.00 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Rat</span>$<span class='no'>survival_time</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
-#&gt; data:  survival.time
+#&gt; data:  Rat$survival_time
+#&gt; t = 14.176, df = 19, p-value = 1.48e-11
+#&gt; alternative hypothesis: true mean is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;   96.69997 130.20003
+#&gt; sample estimates:
+#&gt; mean of x 
+#&gt;    113.45 
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Rat</span>$<span class='no'>survival_time</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"greater"</span>)</div><div class='output co'>#&gt; 
+#&gt; 	One Sample t-test
+#&gt; 
+#&gt; data:  Rat$survival_time
 #&gt; t = 1.6807, df = 19, p-value = 0.0546
 #&gt; alternative hypothesis: true mean is greater than 100
 #&gt; 95 percent confidence interval:
@@ -117,13 +130,16 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt;    113.45 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Rat</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

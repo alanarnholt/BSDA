@@ -87,13 +87,21 @@
     <p>Data for Exercise 5.20</p>
     
 
+    <pre class="usage"><span class='no'>Skin</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 11 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>close</dt><dd><p>a numeric vector</p></dd> 
-<dt>poor</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 11 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>patient</dt><dd><p>patient identification number</p></dd>
+<dt>close</dt><dd><p>graft survival time in days for a closely matched skin graft on the same burn patient</p></dd> 
+<dt>poor</dt><dd><p>graft survival time in days for a poorly matched skin graft on the same burn patient</p></dd> 
+<dt>differ</dt><dd><p>difference between close and poor (in days)</p></dd>
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>R. F. Woolon and P. A. Lachenbruch, "Rank Tests for Censored Matched Pairs,"
+<em>Biometrika</em>, 67(1980), 597-606.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -103,11 +111,7 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Skin</span>)</div><div class='output co'>#&gt; 'data.frame':	11 obs. of  2 variables:
-#&gt;  $ close: int  37 19 57 93 16 22 20 18 63 29 ...
-#&gt;  $ poor : int  29 13 15 26 11 17 26 21 43 15 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Skin</span>)
-<span class='no'>DIFF</span> <span class='kw'>&lt;-</span> <span class='no'>close</span>-<span class='no'>poor</span>
-<span class='fu'>stem</span>(<span class='no'>DIFF</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Skin</span>$<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the right of the |
 #&gt; 
 #&gt;   -0 | 63
@@ -115,19 +119,17 @@ Duxbury</p>
 #&gt;    2 | 00
 #&gt;    4 | 2
 #&gt;    6 | 7
-#&gt; </div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>DIFF</span>)</div><div class='output co'>#&gt; [1] "DIFF"</div><div class='img'><img src='Skin-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   11.000    0.000   -6.000    5.000   16.182    8.000   16.182   20.000 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   67.000   21.363  456.364    6.441   15.000   73.000    0.290    1.177 
-#&gt; SW p-val 
-#&gt;    0.031 </div><div class='input'><span class='fu'>remove</span>(<span class='no'>DIFF</span>)
-<span class='fu'>detach</span>(<span class='no'>Skin</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Skin</span>$<span class='no'>differ</span>)</div><div class='img'><img src='Skin-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>Skin</span>$<span class='no'>differ</span>)</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#&gt;   -6.00    5.00    8.00   16.18   20.00   67.00 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

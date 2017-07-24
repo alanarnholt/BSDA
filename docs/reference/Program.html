@@ -89,14 +89,14 @@ students</h1>
     <p>Data for Exercise 10.17</p>
     
 
+    <pre class="usage"><span class='no'>Program</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 11 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>Method1</dt><dd><p>a numeric vector</p></dd> 
-<dt>Method2</dt><dd><p>a numeric vector</p></dd> 
-<dt>Method3</dt><dd><p>a numeric vector</p></dd>
-<dt>Method4</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 44 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>method</dt><dd><p>a character variable with values <code>method1</code>, <code>method2</code>, 
+<code>method3</code>, and <code>method4</code></p></dd> 
+<dt>score</dt><dd><p>standardized test score</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -107,26 +107,28 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Program</span>)</div><div class='output co'>#&gt; 'data.frame':	11 obs. of  4 variables:
-#&gt;  $ Method1: int  3 5 6 8 4 3 5 6 4 6 ...
-#&gt;  $ Method2: int  5 7 7 7 6 6 8 4 6 7 ...
-#&gt;  $ Method3: int  7 5 6 8 7 6 9 8 7 7 ...
-#&gt;  $ Method4: int  4 6 6 7 6 5 5 5 6 5 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Program</span>)
-<span class='no'>STACKED</span> <span class='kw'>&lt;-</span><span class='fu'>stack</span>(<span class='no'>Program</span>)
-<span class='no'>STACKED</span>[<span class='fl'>1</span>:<span class='fl'>5</span>,]</div><div class='output co'>#&gt;   values     ind
-#&gt; 1      3 Method1
-#&gt; 2      5 Method1
-#&gt; 3      6 Method1
-#&gt; 4      8 Method1
-#&gt; 5      4 Method1</div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>values</span>~<span class='no'>ind</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"red"</span>,<span class='st'>"blue"</span>,<span class='st'>"green"</span>,<span class='st'>"yellow"</span>),<span class='kw'>data</span><span class='kw'>=</span><span class='no'>STACKED</span>)</div><div class='img'><img src='Program-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>values</span>~<span class='no'>ind</span>,<span class='kw'>data</span><span class='kw'>=</span><span class='no'>STACKED</span>))</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='fu'>boxplot</span>(<span class='no'>score</span> ~ <span class='no'>method</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>, <span class='st'>"green"</span>, <span class='st'>"yellow"</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Program</span>)</div><div class='img'><img src='Program-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>score</span> ~ <span class='no'>method</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Program</span>))</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
-#&gt; Response: values
+#&gt; Response: score
 #&gt;           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
-#&gt; ind        3 32.455 10.8182  7.1257 0.0006043 ***
+#&gt; method     3 32.455 10.8182  7.1257 0.0006043 ***
 #&gt; Residuals 40 60.727  1.5182                      
 #&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>remove</span>(<span class='no'>STACKED</span>)
-<span class='fu'>detach</span>(<span class='no'>Program</span>)</div></pre>
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>TukeyHSD</span>(<span class='fu'>aov</span>(<span class='no'>score</span> ~ <span class='no'>method</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Program</span>))</div><div class='output co'>#&gt;   Tukey multiple comparisons of means
+#&gt;     95% family-wise confidence level
+#&gt; 
+#&gt; Fit: aov(formula = score ~ method, data = Program)
+#&gt; 
+#&gt; $method
+#&gt;                       diff         lwr        upr     p adj
+#&gt; method2-method1  1.3636364 -0.04462508  2.7718978 0.0607727
+#&gt; method3-method1  2.2727273  0.86446583  3.6809887 0.0005511
+#&gt; method4-method1  0.5454545 -0.86280690  1.9537160 0.7282383
+#&gt; method3-method2  0.9090909 -0.49917054  2.3173524 0.3218465
+#&gt; method4-method2 -0.8181818 -2.22644326  0.5900796 0.4140367
+#&gt; method4-method3 -1.7272727 -3.13553417 -0.3190113 0.0109054
+#&gt; </div><div class='input'><span class='fu'>par</span>(<span class='kw'>mar</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>5.1</span>, <span class='fl'>4.1</span> + <span class='fl'>4</span>, <span class='fl'>4.1</span>, <span class='fl'>2.1</span>))
+<span class='fu'>plot</span>(<span class='fu'>TukeyHSD</span>(<span class='fu'>aov</span>(<span class='no'>score</span> ~ <span class='no'>method</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Program</span>)), <span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='img'><img src='Program-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>par</span>(<span class='kw'>mar</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>5.1</span>, <span class='fl'>4.1</span>, <span class='fl'>4.1</span>, <span class='fl'>2.1</span>))</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

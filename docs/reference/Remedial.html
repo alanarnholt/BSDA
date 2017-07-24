@@ -87,12 +87,13 @@
     <p>Data for Exercise 7.43</p>
     
 
+    <pre class="usage"><span class='no'>Remedial</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 42 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>female</dt><dd><p>a numeric vector</p></dd> 
-<dt>male</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 84 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>gender</dt><dd><p>a character variable with values <code>female</code> and <code>male</code></p></dd> 
+<dt>score</dt><dd><p>math placement score</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -103,32 +104,34 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Remedial</span>)</div><div class='output co'>#&gt; 'data.frame':	42 obs. of  2 variables:
-#&gt;  $ female: int  28 21 4 20 16 19 39 22 5 18 ...
-#&gt;  $ male  : int  18 22 16 14 2 16 18 20 22 19 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Remedial</span>)
-<span class='fu'>boxplot</span>(<span class='no'>female</span>,<span class='no'>male</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>))</div><div class='img'><img src='Remedial-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>female</span>,<span class='no'>male</span>,<span class='kw'>conf.int</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact confidence intervals with ties</span></div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>score</span> ~ <span class='no'>gender</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Remedial</span>,
+<span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"purple"</span>, <span class='st'>"blue"</span>))</div><div class='img'><img src='Remedial-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>score</span> ~ <span class='no'>gender</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Remedial</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.98</span>)</div><div class='output co'>#&gt; 
+#&gt; 	Welch Two Sample t-test
+#&gt; 
+#&gt; data:  score by gender
+#&gt; t = 0.20997, df = 68.546, p-value = 0.8343
+#&gt; alternative hypothesis: true difference in means is not equal to 0
+#&gt; 98 percent confidence interval:
+#&gt;  -4.285617  5.114189
+#&gt; sample estimates:
+#&gt; mean in group female   mean in group male 
+#&gt;             19.34286             18.92857 
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>score</span> ~ <span class='no'>gender</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Remedial</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.98</span>)$<span class='no'>conf</span></div><div class='output co'>#&gt; [1] -4.285617  5.114189
+#&gt; attr(,"conf.level")
+#&gt; [1] 0.98</div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>score</span> ~ <span class='no'>gender</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Remedial</span>,
+            <span class='kw'>conf.int</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.98</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact confidence intervals with ties</span></div><div class='output co'>#&gt; 
 #&gt; 	Wilcoxon rank sum test with continuity correction
 #&gt; 
-#&gt; data:  female and male
+#&gt; data:  score by gender
 #&gt; W = 855.5, p-value = 0.218
 #&gt; alternative hypothesis: true location shift is not equal to 0
-#&gt; 95 percent confidence interval:
-#&gt;  -0.9999613  3.0000179
+#&gt; 98 percent confidence interval:
+#&gt;  -1.000053  3.000039
 #&gt; sample estimates:
 #&gt; difference in location 
 #&gt;               1.000093 
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>female</span>,<span class='no'>male</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Welch Two Sample t-test
-#&gt; 
-#&gt; data:  female and male
-#&gt; t = 0.20997, df = 68.546, p-value = 0.8343
-#&gt; alternative hypothesis: true difference in means is not equal to 0
-#&gt; 95 percent confidence interval:
-#&gt;  -3.522407  4.350978
-#&gt; sample estimates:
-#&gt; mean of x mean of y 
-#&gt;  19.34286  18.92857 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Remedial</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

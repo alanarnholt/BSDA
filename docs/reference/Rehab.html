@@ -87,13 +87,15 @@
     <p>Data for Exercise 7.61</p>
     
 
+    <pre class="usage"><span class='no'>Rehab</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 20 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>Psych1</dt><dd><p>a numeric vector</p></dd> 
-<dt>Psych2</dt><dd><p>a numeric vector</p></dd> 
-<dt>differ</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 20 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>inmate</dt><dd><p>inmate identification number</p></dd> 
+<dt>psych1</dt><dd><p>rating from first psychiatrist on the inmates rehabilative potential</p></dd> 
+<dt>psych2</dt><dd><p>rating from second psychiatrist on the inmates rehabilative potential</p></dd> 
+<dt>differ</dt><dd><p><code>psych1</code> - <code>psych2</code></p></dd>
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -104,20 +106,22 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Rehab</span>)</div><div class='output co'>#&gt; 'data.frame':	20 obs. of  3 variables:
-#&gt;  $ Psych1: int  7 12 7 5 8 6 5 8 5 9 ...
-#&gt;  $ Psych2: int  5 10 8 6 5 4 5 6 5 8 ...
-#&gt;  $ differ: int  2 2 -1 -1 3 2 0 2 0 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Rehab</span>)
-<span class='fu'>qqnorm</span>(<span class='no'>differ</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>differ</span>)</div><div class='img'><img src='Rehab-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Shapiro-Wilk normality test
+<span class='fu'>boxplot</span>(<span class='no'>Rehab</span>$<span class='no'>differ</span>)</div><div class='img'><img src='Rehab-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>qqnorm</span>(<span class='no'>Rehab</span>$<span class='no'>differ</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>Rehab</span>$<span class='no'>differ</span>)</div><div class='img'><img src='Rehab-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Rehab</span>$<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
+#&gt; 	One Sample t-test
 #&gt; 
-#&gt; data:  differ
-#&gt; W = 0.95922, p-value = 0.5284
-#&gt; </div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Psych1</span>,<span class='no'>Psych2</span>,<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Psychiatrist 1"</span>,<span class='st'>"Psychiatrist 2"</span>),
-<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"pink"</span>,<span class='st'>"lightblue"</span>))</div><div class='img'><img src='Rehab-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Psych1</span>,<span class='no'>Psych2</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
+#&gt; data:  Rehab$differ
+#&gt; t = 0.85691, df = 19, p-value = 0.4022
+#&gt; alternative hypothesis: true mean is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  -0.5770068  1.3770068
+#&gt; sample estimates:
+#&gt; mean of x 
+#&gt;       0.4 
+#&gt; </div><div class='input'><span class='co'># Or</span>
+<span class='fu'>t.test</span>(<span class='no'>Rehab</span>$<span class='no'>psych1</span>, <span class='no'>Rehab</span>$<span class='no'>psych2</span>, <span class='kw'>paired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Paired t-test
 #&gt; 
-#&gt; data:  Psych1 and Psych2
+#&gt; data:  Rehab$psych1 and Rehab$psych2
 #&gt; t = 0.85691, df = 19, p-value = 0.4022
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
@@ -125,7 +129,8 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of the differences 
 #&gt;                     0.4 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Rehab</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

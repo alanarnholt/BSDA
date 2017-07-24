@@ -87,15 +87,13 @@
     <p>Data for Exercise 8.20</p>
     
 
+    <pre class="usage"><span class='no'>Referend</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 3 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>Response</dt><dd><p>a factor with levels <code>A</code> <code>B</code>
-<code>C</code></p></dd> 
-<dt>For</dt><dd><p>a numeric vector</p></dd> 
-<dt>Against</dt><dd><p>a numeric vector</p></dd> 
-<dt>undecide</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame with 237 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>choice</dt><dd><p>a factor with levels <code>A</code>, <code>B</code>, and <code>C</code></p></dd> 
+<dt>response</dt><dd><p>a factor with levels <code>for</code>, <code>against</code>, and <code>undecided</code></p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -106,17 +104,22 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Referend</span>)</div><div class='output co'>#&gt; 'data.frame':	3 obs. of  4 variables:
-#&gt;  $ Response: Factor w/ 3 levels "A","B","C": 1 2 3
-#&gt;  $ For     : int  24 68 47
-#&gt;  $ Against : int  29 39 8
-#&gt;  $ undecide: int  7 12 3</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Referend</span>)
-<span class='fu'>chisq.test</span>(<span class='no'>Referend</span>[,<span class='fl'>2</span>:<span class='fl'>4</span>])</div><div class='output co'>#&gt; 
+<span class='no'>T1</span> <span class='kw'>&lt;-</span> <span class='fu'>xtabs</span>(~<span class='no'>choice</span> + <span class='no'>response</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Referend</span>)
+<span class='no'>T1</span></div><div class='output co'>#&gt;       response
+#&gt; choice for against undecided
+#&gt;      A  24      29         7
+#&gt;      B  68      39        12
+#&gt;      C  47       8         3</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>T1</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Pearson's Chi-squared test
 #&gt; 
-#&gt; data:  Referend[, 2:4]
+#&gt; data:  T1
 #&gt; X-squared = 21.074, df = 4, p-value = 0.0003062
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Referend</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>T1</span>)$<span class='no'>expected</span></div><div class='output co'>#&gt;       response
+#&gt; choice      for  against undecided
+#&gt;      A 35.18987 19.24051  5.569620
+#&gt;      B 69.79325 38.16034 11.046414
+#&gt;      C 34.01688 18.59916  5.383966</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

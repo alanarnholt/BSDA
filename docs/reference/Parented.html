@@ -87,15 +87,15 @@
     <p>Data for Exercise 1.32</p>
     
 
+    <pre class="usage"><span class='no'>Parented</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 6 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>Educat</dt><dd><p>a factor with levels <code>4yr college
-degree</code> <code>Doctoral degree</code> <code>Grad degree</code> <code>H.S grad or less</code>
-<code>Some college</code> <code>Some grad school</code></p></dd> 
-<dt>Mother</dt><dd><p>a numeric vector</p></dd> 
-<dt>Father</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 200 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>education</dt><dd><p>a factor with levels <code>4yr college
+degree</code>, <code>Doctoral degree</code>, <code>Grad degree</code>, <code>H.S grad or less</code>,
+<code>Some college</code>, and <code>Some grad school</code></p></dd> 
+<dt>parent</dt><dd><p>a factor with levels <code>mother</code> and <code>father</code></p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -106,21 +106,24 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Parented</span>)</div><div class='output co'>#&gt; 'data.frame':	6 obs. of  3 variables:
-#&gt;  $ Educat: Factor w/ 6 levels "4yr college degree",..: 4 5 1 6 3 2
-#&gt;  $ Mother: num  0.23 0.33 0.25 0.05 0.13 0.01
-#&gt;  $ Father: num  0.2 0.25 0.28 0.04 0.17 0.06</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Parented</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Educat</span></div><div class='input'><span class='no'>MAT</span> <span class='kw'>&lt;-</span> <span class='fu'>cbind</span>(<span class='no'>Mother</span>, <span class='no'>Father</span>)
-<span class='fu'>row.names</span>(<span class='no'>MAT</span>) <span class='kw'>&lt;-</span> <span class='no'>Educat</span>
-<span class='no'>MAT</span></div><div class='output co'>#&gt;                    Mother Father
-#&gt; H.S grad or less     0.23   0.20
-#&gt; Some college         0.33   0.25
-#&gt; 4yr college degree   0.25   0.28
-#&gt; Some grad school     0.05   0.04
-#&gt; Grad degree          0.13   0.17
-#&gt; Doctoral degree      0.01   0.06</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>MAT</span>),<span class='kw'>beside</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>legend</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"blue"</span>,<span class='st'>"red"</span>))</div><div class='img'><img src='Parented-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Parented</span>)
-<span class='fu'>remove</span>(<span class='no'>MAT</span>)</div></pre>
+<span class='no'>T1</span> <span class='kw'>&lt;-</span> <span class='fu'>xtabs</span>(~<span class='no'>education</span> + <span class='no'>parent</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Parented</span>)
+<span class='no'>T1</span></div><div class='output co'>#&gt;                     parent
+#&gt; education            mother father
+#&gt;   H.S grad or less       23     20
+#&gt;   Some college           33     25
+#&gt;   4yr college degree     25     28
+#&gt;   Some grad school        5      4
+#&gt;   Grad degree            13     17
+#&gt;   Doctoral degree         1      6</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"blue"</span>, <span class='st'>"red"</span>))</div><div class='img'><img src='Parented-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>rm</span>(<span class='no'>T1</span>)</div><span class='co'># NOT RUN {</span>
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Parented</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>education</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>parent</span>)) +
+  <span class='fu'>geom_bar</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
+    <span class='fu'>theme_bw</span>() +
+      <span class='fu'>theme</span>(<span class='kw'>axis.text.x</span>  <span class='kw'>=</span> <span class='fu'>element_text</span>(<span class='kw'>angle</span> <span class='kw'>=</span> <span class='fl'>85</span>, <span class='kw'>vjust</span> <span class='kw'>=</span> <span class='fl'>0.5</span>)) +
+        <span class='fu'>scale_fill_manual</span>(<span class='kw'>values</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"pink"</span>, <span class='st'>"blue"</span>)) +
+          <span class='fu'>labs</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>""</span>)
+
+<span class='co'># }</span><div class='input'>          
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

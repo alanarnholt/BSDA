@@ -87,11 +87,12 @@
     <p>Data for Exercise 1.83 and 3.67</p>
     
 
+    <pre class="usage"><span class='no'>Senior</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 31 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>reaction</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 31 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>reaction</dt><dd><p>reaction time for senior citizens applying for a driver's license renewal</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,9 +103,22 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Senior</span>)</div><div class='output co'>#&gt; 'data.frame':	31 obs. of  1 variable:
-#&gt;  $ reaction: int  93 105 66 94 64 98 109 71 86 31 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Senior</span>)
-<span class='fu'>fivenum</span>(<span class='no'>reaction</span>)</div><div class='output co'>#&gt; [1]  31  74  90  98 128</div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>reaction</span>,<span class='kw'>horizontal</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Problem 1.83 Part d."</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"orange"</span>)</div><div class='img'><img src='Senior-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Senior</span>)</div></pre>
+<span class='fu'>stem</span>(<span class='no'>Senior</span>$<span class='no'>reaction</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 1 digit(s) to the right of the |
+#&gt; 
+#&gt;    3 | 1
+#&gt;    4 | 2
+#&gt;    5 | 5
+#&gt;    6 | 0446
+#&gt;    7 | 179
+#&gt;    8 | 0456
+#&gt;    9 | 00344667889
+#&gt;   10 | 1579
+#&gt;   11 | 0
+#&gt;   12 | 8
+#&gt; </div><div class='input'><span class='fu'>fivenum</span>(<span class='no'>Senior</span>$<span class='no'>reaction</span>)</div><div class='output co'>#&gt; [1]  31  74  90  98 128</div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Senior</span>$<span class='no'>reaction</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Problem 1.83, part d"</span>,
+        <span class='kw'>horizontal</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"purple"</span>)</div><div class='img'><img src='Senior-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

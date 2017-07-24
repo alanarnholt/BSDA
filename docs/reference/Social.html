@@ -87,11 +87,12 @@
     <p>Data for Exercise 6.63</p>
     
 
+    <pre class="usage"><span class='no'>Social</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 25 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>income</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 25 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>income</dt><dd><p>annual income (in dollars) of North Carolina social workers with less than five years experience.</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,12 +103,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Social</span>)</div><div class='output co'>#&gt; 'data.frame':	25 obs. of  1 variable:
-#&gt;  $ income: int  25200 26500 26700 27900 28000 25500 22200 24700 27000 26500 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Social</span>)
-<span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>income</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>27500</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
+<span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/SIGN.test'>SIGN.test</a></span>(<span class='no'>Social</span>$<span class='no'>income</span>, <span class='kw'>md</span> <span class='kw'>=</span> <span class='fl'>27500</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  income
+#&gt; data:  Social$income
 #&gt; s = 8, p-value = 0.05388
 #&gt; alternative hypothesis: true median is less than 27500
 #&gt; 95 percent confidence interval:
@@ -118,7 +117,8 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt   U.E.pt
 #&gt; Lower Achieved CI     0.9461   -Inf 27400.00
 #&gt; Interpolated CI       0.9500   -Inf 27424.05
-#&gt; Upper Achieved CI     0.9784   -Inf 27600.00</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Social</span>)</div></pre>
+#&gt; Upper Achieved CI     0.9784   -Inf 27600.00</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

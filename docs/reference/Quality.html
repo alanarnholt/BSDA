@@ -87,12 +87,13 @@
     <p>Data for Exercise 7.81</p>
     
 
+    <pre class="usage"><span class='no'>Quality</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 8 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>Process1</dt><dd><p>a numeric vector</p></dd>
-<dt>Process2</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 15 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>process</dt><dd><p>a character variable with values <code>Process1</code> and <code>Process2</code></p></dd>
+<dt>score</dt><dd><p>results of a quality control test</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -103,31 +104,19 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Quality</span>)</div><div class='output co'>#&gt; 'data.frame':	8 obs. of  2 variables:
-#&gt;  $ Process1: num  1.5 2.5 3.4 2.3 3.2 2.8 1.9 NA
-#&gt;  $ Process2: num  2.5 3 2.7 4 3.5 2 1.8 3.7</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Quality</span>)
-<span class='fu'>qqnorm</span>(<span class='no'>Process1</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>Process1</span>)</div><div class='img'><img src='Quality-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>Process1</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Shapiro-Wilk normality test
-#&gt; 
-#&gt; data:  Process1
-#&gt; W = 0.97441, p-value = 0.9282
-#&gt; </div><div class='input'><span class='fu'>qqnorm</span>(<span class='no'>Process2</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>Process2</span>)</div><div class='img'><img src='Quality-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>Process2</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Shapiro-Wilk normality test
-#&gt; 
-#&gt; data:  Process2
-#&gt; W = 0.9566, p-value = 0.7772
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Process1</span>,<span class='no'>Process2</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>score</span> ~ <span class='no'>process</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Quality</span>)</div><div class='img'><img src='Quality-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>score</span> ~ <span class='no'>process</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Quality</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
-#&gt; data:  Process1 and Process2
+#&gt; data:  score by process
 #&gt; t = -1.0106, df = 12.998, p-value = 0.3307
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
 #&gt;  -1.2102969  0.4388683
 #&gt; sample estimates:
-#&gt; mean of x mean of y 
-#&gt;  2.514286  2.900000 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Quality</span>)</div></pre>
+#&gt; mean in group Process1 mean in group Process2 
+#&gt;               2.514286               2.900000 
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
