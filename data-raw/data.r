@@ -3993,7 +3993,7 @@ ggplot2::ggplot(data = Wins, aes(x = era, y = wins)) +
 ##
 #########
 Wool <- read_csv("Wool.csv")
-Wool <- Wool%>%
+Wool <- Wool %>%
   gather(`Type 1`, `Type 2`, key = "type", value = "strength")
 Wool
 #Examples Ex 7.42
