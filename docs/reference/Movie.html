@@ -87,12 +87,13 @@
     <p>Data for Exercise 7.53</p>
     
 
+    <pre class="usage"><span class='no'>Movie</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 12 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>Before</dt><dd><p>a numeric vector</p></dd> 
-<dt>After</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 12 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+<dt>before</dt><dd><p>moral aptitude before viewing the movie</p></dd> 
+<dt>after</dt><dd><p>moral aptitude after viewing the movie</p></dd> 
 <dt>differ</dt><dd><p>a numeric vector</p></dd> 
 </dl>
     
@@ -104,19 +105,15 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Movie</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  3 variables:
-#&gt;  $ Before: int  14 16 15 18 15 17 19 17 17 16 ...
-#&gt;  $ After : int  14 18 16 17 16 19 20 18 19 15 ...
-#&gt;  $ differ: int  0 2 1 -1 1 2 1 1 2 -1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Movie</span>)
-<span class='fu'>qqnorm</span>(<span class='no'>differ</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>differ</span>)</div><div class='img'><img src='Movie-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>qqnorm</span>(<span class='no'>Movie</span>$<span class='no'>differ</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>Movie</span>$<span class='no'>differ</span>)</div><div class='img'><img src='Movie-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>Movie</span>$<span class='no'>differ</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Shapiro-Wilk normality test
 #&gt; 
-#&gt; data:  differ
+#&gt; data:  Movie$differ
 #&gt; W = 0.83643, p-value = 0.02506
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>After</span>,<span class='no'>Before</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.99</span>)</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Movie</span>$<span class='no'>after</span>, <span class='no'>Movie</span>$<span class='no'>before</span>, <span class='kw'>paired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>0.99</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Paired t-test
 #&gt; 
-#&gt; data:  After and Before
+#&gt; data:  Movie$after and Movie$before
 #&gt; t = 2, df = 11, p-value = 0.0708
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 99 percent confidence interval:
@@ -124,13 +121,14 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of the differences 
 #&gt;               0.6666667 
-#&gt; </div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>After</span>,<span class='no'>Before</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with zeroes</span></div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>Movie</span>$<span class='no'>after</span>, <span class='no'>Movie</span>$<span class='no'>before</span>, <span class='kw'>paired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with zeroes</span></div><div class='output co'>#&gt; 
 #&gt; 	Wilcoxon signed rank test with continuity correction
 #&gt; 
-#&gt; data:  After and Before
+#&gt; data:  Movie$after and Movie$before
 #&gt; V = 52.5, p-value = 0.07707
 #&gt; alternative hypothesis: true location shift is not equal to 0
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Movie</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

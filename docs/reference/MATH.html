@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Standardized math test scores for 30 students — MATH • BSDA</title>
+<title>Standardized math test scores for 30 students — Math • BSDA</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -87,11 +87,12 @@
     <p>Data for Exercise 1.69</p>
     
 
+    <pre class="usage"><span class='no'>Math</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 30 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>math</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 30 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>score</dt><dd><p>scores on a standardized test for 30 tenth graders</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,11 +103,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>MATH</span>)</div><div class='output co'>#&gt; 'data.frame':	30 obs. of  1 variable:
-#&gt;  $ math: int  44 49 62 45 51 59 57 55 70 64 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>MATH</span>)
-<span class='fu'>hist</span>(<span class='no'>math</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"pink"</span>)</div><div class='img'><img src='MATH-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>CharlieZ</span> <span class='kw'>&lt;-</span> (<span class='fl'>62</span>-<span class='fu'>mean</span>(<span class='no'>math</span>))/<span class='fu'>sd</span>(<span class='no'>math</span>)
-<span class='no'>CharlieZ</span></div><div class='output co'>#&gt; [1] 0.7284843</div><div class='input'><span class='fu'>detach</span>(<span class='no'>MATH</span>)
-<span class='fu'>remove</span>(<span class='no'>CharlieZ</span>)</div></pre>
+<span class='fu'>stem</span>(<span class='no'>Math</span>$<span class='no'>score</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 1 digit(s) to the right of the |
+#&gt; 
+#&gt;   3 | 8
+#&gt;   4 | 02234
+#&gt;   4 | 599
+#&gt;   5 | 0123444
+#&gt;   5 | 5789
+#&gt;   6 | 01234
+#&gt;   6 | 57
+#&gt;   7 | 01
+#&gt;   7 | 5
+#&gt; </div><div class='input'><span class='fu'>hist</span>(<span class='no'>Math</span>$<span class='no'>score</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Math Scores"</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"score"</span>, <span class='kw'>freq</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>Math</span>$<span class='no'>score</span>), <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"red"</span>)</div><div class='img'><img src='Math-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>CharlieZ</span> <span class='kw'>&lt;-</span> (<span class='fl'>62</span> - <span class='fu'>mean</span>(<span class='no'>Math</span>$<span class='no'>score</span>))/<span class='fu'>sd</span>(<span class='no'>Math</span>$<span class='no'>score</span>)
+<span class='no'>CharlieZ</span></div><div class='output co'>#&gt; [1] 0.7284843</div><div class='input'><span class='fu'>scale</span>(<span class='no'>Math</span>$<span class='no'>score</span>)[<span class='fu'>which</span>(<span class='no'>Math</span>$<span class='no'>score</span> <span class='kw'>==</span> <span class='fl'>62</span>)]</div><div class='output co'>#&gt; [1] 0.7284843</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

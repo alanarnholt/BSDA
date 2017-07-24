@@ -87,11 +87,12 @@
     <p>Data for Exercise 1.41</p>
     
 
+    <pre class="usage"><span class='no'>Miller1</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 20 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>miller</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 20 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>miller</dt><dd><p>scores on the Miller personality test</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,16 +103,14 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Miller1</span>)</div><div class='output co'>#&gt; 'data.frame':	20 obs. of  1 variable:
-#&gt;  $ miller: int  22 21 16 26 22 23 31 25 20 25 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Miller1</span>)
-<span class='fu'>stem</span>(<span class='no'>miller</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Miller1</span>$<span class='no'>miller</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the right of the |
 #&gt; 
 #&gt;   1 | 678
 #&gt;   2 | 0122233
 #&gt;   2 | 5555679
 #&gt;   3 | 013
-#&gt; </div><div class='input'><span class='fu'>stem</span>(<span class='no'>miller</span>,<span class='kw'>scale</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='output co'>#&gt; 
+#&gt; </div><div class='input'><span class='fu'>stem</span>(<span class='no'>Miller1</span>$<span class='no'>miller</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is at the |
 #&gt; 
 #&gt;   16 | 00
@@ -123,7 +122,8 @@ Duxbury</p>
 #&gt;   28 | 0
 #&gt;   30 | 00
 #&gt;   32 | 0
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Miller1</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
