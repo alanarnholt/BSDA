@@ -4,20 +4,22 @@
 \name{Statclas}
 \alias{Statclas}
 \title{Grades for two introductory statistics classes}
-\format{A data frame with 36 observations on the following 2 variables.
+\format{A data frame/tibble with 72 observations on the following 2 variables.
 \describe{ 
-\item{X9am}{a numeric vector} 
-\item{X2pm}{a numeric vector} 
+\item{class}{class meeting time (9am or 2pm)} 
+\item{score}{grade for an introductory statistics class} 
 }}
+\usage{
+Statclas
+}
 \description{
 Data for Exercise 7.30
 }
 \examples{
 
 str(Statclas)
-attach(Statclas)
-t.test(X9am,X2pm)
-detach(Statclas)
+boxplot(score ~ class, data = Statclas)
+t.test(score ~ class, data = Statclas)
 
 }
 \references{

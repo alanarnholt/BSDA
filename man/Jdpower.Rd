@@ -6,13 +6,13 @@
 \title{Number of problems reported per 100 cars in 1994 versus 1995s}
 \format{A data frame/tibble with 29 observations on the following 3 variables.
 \describe{ 
-\item{car}{a factor with levels \code{Acura} \code{BMW}
-\code{Buick} \code{Cadillac} \code{Chevrolet} \code{Dodge} \code{Eagle}
-\code{Ford} \code{Geo} \code{Honda} \code{Hyundai} \code{Infiniti}
-\code{Jaguar} \code{Lexus} \code{Lincoln} \code{Mazda} \code{Mercedes-Benz}
-\code{Mercury} \code{Mitsubishi} \code{Nissan} \code{Oldsmobile}
-\code{Plymouth} \code{Pontiac} \code{Saab} \code{Saturn} \code{Subaru}
-\code{Toyota} \code{Volkswagen} \code{Volvo}} 
+\item{car}{a factor with levels \code{Acura}, \code{BMW},
+\code{Buick}, \code{Cadillac}, \code{Chevrolet}, \code{Dodge} \code{Eagle},
+\code{Ford}, \code{Geo}, \code{Honda}, \code{Hyundai}, \code{Infiniti},
+\code{Jaguar}, \code{Lexus}, \code{Lincoln}, \code{Mazda}, \code{Mercedes-Benz},
+\code{Mercury}, \code{Mitsubishi}, \code{Nissan}, \code{Oldsmobile},
+\code{Plymouth}, \code{Pontiac}, \code{Saab}, \code{Saturn}, and \code{Subaru},
+\code{Toyota} \code{Volkswagen}, \code{Volvo}} 
 \item{1994}{number of problems per 100 cars in 1994} 
 \item{1995}{number of problems per 100 cars in 1995} 
 }}

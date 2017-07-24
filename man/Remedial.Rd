@@ -4,22 +4,25 @@
 \name{Remedial}
 \alias{Remedial}
 \title{Math placement test score for 35 freshmen females and 42 freshmen males}
-\format{A data frame with 42 observations on the following 2 variables.
+\format{A data frame/tibble with 84 observations on the following 2 variables.
 \describe{ 
-\item{female}{a numeric vector} 
-\item{male}{a numeric vector} 
+\item{gender}{a character variable with values \code{female} and \code{male}} 
+\item{score}{math placement score} 
 }}
+\usage{
+Remedial
+}
 \description{
 Data for Exercise 7.43
 }
 \examples{
 
-str(Remedial)
-attach(Remedial)
-boxplot(female,male,col=c("blue","red"))
-wilcox.test(female,male,conf.int=TRUE)
-t.test(female,male)
-detach(Remedial)
+boxplot(score ~ gender, data = Remedial, 
+col = c("purple", "blue"))
+t.test(score ~ gender, data = Remedial, conf.level = 0.98)
+t.test(score ~ gender, data = Remedial, conf.level = 0.98)$conf
+wilcox.test(score ~ gender, data = Remedial, 
+            conf.int = TRUE, conf.level = 0.98)
 
 }
 \references{

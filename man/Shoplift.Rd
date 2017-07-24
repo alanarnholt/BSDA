@@ -4,20 +4,23 @@
 \name{Shoplift}
 \alias{Shoplift}
 \title{Sales receipts versus shoplifting losses for a department store}
-\format{A data frame with 8 observations on the following 2 variables.
+\format{A data frame/tibble with 8 observations on the following 2 variables.
 \describe{ 
-\item{sales}{a numeric vector} 
-\item{loss}{a numeric vector} 
+\item{sales}{sales (in 1000 dollars)} 
+\item{loss}{loss (in 100 dollars)} 
 }}
+\usage{
+Shoplift
+}
 \description{
 Data for Exercise 9.58
 }
 \examples{
 
-str(Shoplift)
-attach(Shoplift)
-summary(lm(loss~sales))
-detach(Shoplift)
+plot(loss ~ sales, data = Shoplift)
+model <- lm(loss ~ sales, data = Shoplift)
+summary(model)
+rm(model)
 
 }
 \references{

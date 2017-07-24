@@ -4,23 +4,28 @@
 \name{Skin}
 \alias{Skin}
 \title{Survival times of closely and poorly matched skin grafts on burn patients}
-\format{A data frame with 11 observations on the following 2 variables.
+\format{A data frame/tibble with 11 observations on the following 4 variables.
 \describe{ 
-\item{close}{a numeric vector} 
-\item{poor}{a numeric vector} 
+\item{patient}{patient identification number}
+\item{close}{graft survival time in days for a closely matched skin graft on the same burn patient} 
+\item{poor}{graft survival time in days for a poorly matched skin graft on the same burn patient} 
+\item{differ}{difference between close and poor (in days)}
 }}
+\source{
+R. F. Woolon and P. A. Lachenbruch, "Rank Tests for Censored Matched Pairs,"
+\emph{Biometrika}, 67(1980), 597-606.
+}
+\usage{
+Skin
+}
 \description{
 Data for Exercise 5.20
 }
 \examples{
 
-str(Skin)
-attach(Skin)
-DIFF <- close-poor
-stem(DIFF)
-EDA(DIFF)
-remove(DIFF)
-detach(Skin)
+stem(Skin$differ)
+boxplot(Skin$differ)
+summary(Skin$differ)
 
 }
 \references{

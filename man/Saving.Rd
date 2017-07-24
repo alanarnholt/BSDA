@@ -5,25 +5,25 @@
 \alias{Saving}
 \title{Problem asset ration for savings and loan companies in California, New York,
 and Texas}
-\format{A data frame with 75 observations on the following 6 variables.
+\format{A data frame/tibble with 65 observations on the following 2 variables.
 \describe{ 
-\item{calif}{a numeric vector} 
-\item{newyork}{a numeric vector} 
-\item{texas}{a numeric vector} 
-\item{PAR}{a numeric vector} 
-\item{state}{a numeric vector}
-\item{ranks}{a numeric vector}
+\item{par}{problem-asset-ratio for Savings & Loans that were listed as being financially troubled in 1992} 
+\item{state}{U.S. state}
  }}
+\usage{
+Saving
+}
 \description{
 Data for Exercise 10.34 and 10.49
 }
 \examples{
 
-str(Saving)
-attach(Saving)
-boxplot(PAR~state)
-kruskal.test(PAR~as.factor(state))
-detach(Saving)
+boxplot(par ~ state, data = Saving)
+boxplot(par ~ state, data = Saving, log = "y")
+model <- aov(par ~ state, data = Saving)
+summary(model)
+plot(TukeyHSD(model))
+kruskal.test(par ~ factor(state), data = Saving)
 
 }
 \references{

@@ -4,22 +4,25 @@
 \name{Readiq}
 \alias{Readiq}
 \title{Reading scores versus IQ scores}
-\format{A data frame with 14 observations on the following 2 variables.
+\format{A data frame/tibble with 14 observations on the following 2 variables.
 \describe{ 
-\item{reading}{a numeric vector} 
-\item{IQ}{a numeric vector} 
+\item{reading}{reading achievement score} 
+\item{iq}{IQ score} 
 }}
+\usage{
+Readiq
+}
 \description{
 Data for Exercises 2.10 and 2.53
 }
 \examples{
 
-str(Readiq)
-attach(Readiq)
-plot(IQ,reading)
-model <- lm(reading~IQ)
+plot(reading ~ iq, data = Readiq)
+model <- lm(reading ~ iq, data = Readiq)
 abline(model)
-detach(Readiq)
+predict(model, newdata = data.frame(iq = c(100, 120)))
+residuals(model)[c(6, 7)]
+rm(model)
 
 }
 \references{

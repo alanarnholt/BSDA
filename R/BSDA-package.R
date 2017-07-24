@@ -5167,13 +5167,13 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 29 observations on the following 3 variables.
 #' \describe{ 
-#' \item{car}{a factor with levels \code{Acura} \code{BMW}
-#' \code{Buick} \code{Cadillac} \code{Chevrolet} \code{Dodge} \code{Eagle}
-#' \code{Ford} \code{Geo} \code{Honda} \code{Hyundai} \code{Infiniti}
-#' \code{Jaguar} \code{Lexus} \code{Lincoln} \code{Mazda} \code{Mercedes-Benz}
-#' \code{Mercury} \code{Mitsubishi} \code{Nissan} \code{Oldsmobile}
-#' \code{Plymouth} \code{Pontiac} \code{Saab} \code{Saturn} \code{Subaru}
-#' \code{Toyota} \code{Volkswagen} \code{Volvo}} 
+#' \item{car}{a factor with levels \code{Acura}, \code{BMW},
+#' \code{Buick}, \code{Cadillac}, \code{Chevrolet}, \code{Dodge} \code{Eagle},
+#' \code{Ford}, \code{Geo}, \code{Honda}, \code{Hyundai}, \code{Infiniti},
+#' \code{Jaguar}, \code{Lexus}, \code{Lincoln}, \code{Mazda}, \code{Mercedes-Benz},
+#' \code{Mercury}, \code{Mitsubishi}, \code{Nissan}, \code{Oldsmobile},
+#' \code{Plymouth}, \code{Pontiac}, \code{Saab}, \code{Saturn}, and \code{Subaru},
+#' \code{Toyota} \code{Volkswagen}, \code{Volvo}} 
 #' \item{1994}{number of problems per 100 cars in 1994} 
 #' \item{1995}{number of problems per 100 cars in 1995} 
 #' }
@@ -5265,18 +5265,18 @@ NULL
 #' @format A data frame/tibble with 51 observations on the following 2 variables.
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
-#' Columbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
-#' \code{Illinois} \code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky}
-#' \code{Louisiana} \code{Maine} \code{Maryland} \code{Massachusetts}
-#' \code{Michigan} \code{Minnesota} \code{Mississippi} \code{Missour}
-#' \code{Montana} \code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New
-#' Jersey} \code{New Mexico} \code{New York} \code{North Carolina} \code{North
-#' Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
-#' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
-#' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
-#' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas} \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{Delaware}, \code{District of
+#' Columbia}, \code{Florida},\code{Georgia}, \code{Hawaii}, \code{Idaho},
+#' \code{Illinois}, \code{Indiana}, \code{Iowa} \code{Kansas} \code{Kentucky},
+#' \code{Louisiana}, \code{Maine}, \code{Maryland}, \code{Massachusetts},
+#' \code{Michigan}, \code{Minnesota}, \code{Mississippi}, \code{Missour},
+#' \code{Montana} \code{Nebraska}, \code{Nevada}, \code{New Hampshire}, \code{New
+#' Jersey}, \code{New Mexico}, \code{New York}, \code{North Carolina}, \code{North
+#' Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
+#' \code{Rhode Island}, \code{South Carolina}, \code{South Dakota},
+#' \code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia}
+#' \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 #' \item{rate}{a numeric vector indicating rates for kilowatt per hour} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -5334,7 +5334,7 @@ NULL
 #' 
 #' @name Laminect
 #' @docType data
-#' @format A data frame/tibble with 46 observations on the following 5 variables.
+#' @format A data frame/tibble with 138 observations on the following 2 variables.
 #' \describe{
 #'  \item{area}{a character vector indicating the area of the hospital with \code{Rural}, \code{Regional},
 #'  and \code{Metropol}} 
@@ -5362,7 +5362,7 @@ NULL
 #' 
 #' @name Lead
 #' @docType data
-#' @format A data frame/tibble with 33 observations on the following 3 variables.
+#' @format A data frame/tibble with 66 observations on the following 2 variables.
 #' \describe{ 
 #' \item{group}{a character vector with values \code{exposed} and \code{control}} 
 #' \item{lead}{a numeric vector indicating the level of lead in children's blood in micrograms/dl} 
@@ -5470,7 +5470,7 @@ NULL
 #' 
 #' @name Lifespan
 #' @docType data
-#' @format A data frame/tibble with 6 observations on the following 4 variables.
+#' @format A data frame/tibble with 6 observations on the following 2 variables.
 #' \describe{ 
 #' \item{heat}{temperature in degrees C} 
 #' \item{life}{lifespan in hours} 
@@ -5565,7 +5565,7 @@ NULL
 #' 
 #' @name Longtail
 #' @docType data
-#' @format A data frame/tibble with 60 observations on the following 6 variables.
+#' @format A data frame/tibble with 60 observations on the following 3 variables.
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' \item{group}{a numeric vector with values \code{1}, \code{2}, and \code{3}} 
@@ -5626,7 +5626,7 @@ NULL
 #' 
 #' @name Magnesiu
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 4 variables.
+#' @format A data frame/tibble with 20 observations on the following 2 variables.
 #' \describe{ 
 #' \item{distance}{distance between samples}
 #' \item{magnesium}{concentration of magnesium} 
@@ -5797,12 +5797,12 @@ NULL
 #' 
 #' @name Mathpro
 #' @docType data
-#' @format A data frame/tibble with 51 observations on the following 10 variables.
+#' @format A data frame/tibble with 51 observations on the following 4 variables.
 #' \describe{ 
-#' \item{state}{a factor with levels \code{} \code{Conn}
-#' \code{D.C.} \code{Del} \code{Ga} \code{Hawaii} \code{Ind} \code{Maine}
-#' \code{Mass} \code{Md} \code{N.C.} \code{N.H.} \code{N.J.} \code{N.Y.}
-#' \code{Ore} \code{Pa} \code{R.I.} \code{S.C.} \code{Va} \code{Vt}}
+#' \item{state}{a factor with levels \code{} \code{Conn},
+#' \code{D.C.}, \code{Del}, \code{Ga}, \code{Hawaii}, \code{Ind}, \code{Maine},
+#' \code{Mass}, \code{Md}, \code{N.C.}, \code{N.H.}, \code{N.J.}, \code{N.Y.},
+#' \code{Ore}, \code{Pa}, \code{R.I.}, \code{S.C.}, \code{Va}, and \code{Vt}}
 #' \item{sat_math}{SAT math scores for high school seniors} 
 #' \item{profic}{math proficiency scores for eigth graders} 
 #' \item{group}{a numeric vector} 
@@ -5835,11 +5835,11 @@ NULL
 #' 
 #' @name Maze
 #' @docType data
-#' @format A data frame/tibble with 32 observations on the following 6 variables.
+#' @format A data frame/tibble with 32 observations on the following 2 variables.
 #' \describe{ 
 #' \item{score}{error scores for animals running through a maze under different conditions} 
-#' \item{condition}{a factor with levels \code{CondA}
-#' \code{CondB} \code{CondC} \code{CondD}} 
+#' \item{condition}{a factor with levels \code{CondA},
+#' \code{CondB,} \code{CondC}, and \code{CondD}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -5862,7 +5862,7 @@ NULL
 #' 
 #' @name Median
 #' @docType data
-#' @format A data frame/tibble with 15 observations on the following 3 variables.
+#' @format A data frame/tibble with 45 observations on the following 2 variables.
 #' \describe{ 
 #' \item{sample}{a vector with values \code{Sample1}, \code{Sample 2}, and \code{Sample 3}} 
 #' \item{value}{a numeric vector} 
@@ -6156,17 +6156,17 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 42 observations on the following 3 variables.
 #' \describe{ 
-#' \item{brand}{a factor with levels \code{Band-Aid}
-#' \code{Barbie} \code{Birds Eye} \code{Budweiser} \code{Camel} \code{Campbell}
-#' \code{Carlsberg} \code{Coca-Cola} \code{Colgate} \code{Del Monte}
-#' \code{Fisher-Price} \code{Gordon's} \code{Green Giant} \code{Guinness}
-#' \code{Haagen-Dazs} \code{Heineken} \code{Heinz} \code{Hennessy}
-#' \code{Hermes} \code{Hershey} \code{Ivory} \code{Jell-o} \code{Johnnie
-#' Walker} \code{Kellogg} \code{Kleenex} \code{Kraft} \code{Louis Vuitton}
-#' \code{Marlboro} \code{Nescafe} \code{Nestle} \code{Nivea} \code{Oil of Olay}
-#' \code{Pampers} \code{Pepsi-Cola} \code{Planters} \code{Quaker} \code{Sara
-#' Lee} \code{Schweppes} \code{Smirnoff} \code{Tampax} \code{Winston}
-#' \code{Wrigley's}}
+#' \item{brand}{a factor with levels \code{Band-Aid},
+#' \code{Barbie}, \code{Birds Eye}, \code{Budweiser}, \code{Camel}, \code{Campbell},
+#' \code{Carlsberg}, \code{Coca-Cola}, \code{Colgate}, \code{Del Monte},
+#' \code{Fisher-Price}, \verb{Gordon's}, \code{Green Giant}, \code{Guinness},
+#' \code{Haagen-Dazs}, \code{Heineken}, \code{Heinz}, \code{Hennessy},
+#' \code{Hermes}, \code{Hershey}, \code{Ivory}, \code{Jell-o}, \code{Johnnie
+#' Walker}, \code{Kellogg}, \code{Kleenex}, \code{Kraft}, \code{Louis Vuitton},
+#' \code{Marlboro}, \code{Nescafe}, \code{Nestle}, \code{Nivea}, \code{Oil of Olay},
+#' \code{Pampers}, \code{Pepsi-Cola}, \code{Planters}, \code{Quaker}, \code{Sara
+#' Lee}, \code{Schweppes}, \code{Smirnoff}, \code{Tampax}, \code{Winston}, and
+#' \verb{Wrigley's}}
 #' \item{value}{value in billions of dollars}
 #' \item{revenue}{revenue in billions of dollars} 
 #' }
@@ -6200,25 +6200,22 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 36 observations on the following 6 variables.
 #' \describe{ 
-#' \item{TeamA}{a numeric vector} 
-#' \item{TeamB}{a numeric vector} 
-#' \item{TeamC}{a numeric vector} 
-#' \item{Time}{a numeric vector} 
-#' \item{Team}{a numeric vector} 
-#' \item{Ranks}{a numeric vector} 
+#' \item{time}{duration of pit stop} 
+#' \item{team}{a numeric vector representing team 1, 2, or 3} 
+#' \item{ranks}{a numeric vector ranking each pit stop in order of speed} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Nascar)
-#' attach(Nascar)
-#' boxplot(Time~Team)
-#' anova(lm(Time~as.factor(Team)))
-#' detach(Nascar)
+#' boxplot(time ~ team, data = Nascar)
+#' model <- lm(time ~ factor(team), data = Nascar)
+#' summary(model)
+#' anova(model)
+#' rm(model)
 #' 
-NULL
+"Nascar"
 
 
 
@@ -6226,28 +6223,28 @@ NULL
 
 #' Reaction effects of 4 drugs on 25 subjects with a nervous disorder
 #' 
-#' Data for Exercise 10.3
+#' Data for Example 10.3
 #' 
 #' 
 #' @name Nervous
 #' @docType data
-#' @format A data frame with 25 observations on the following 2 variables.
+#' @format A data frame/tibble with 25 observations on the following 2 variables.
 #' \describe{ 
-#' \item{react}{a numeric vector} 
-#' \item{drug}{a numeric vector} 
+#' \item{react}{a numeric vector representing reaction time} 
+#' \item{drug}{a numeric vector indicating each of the 4 drugs} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Nervous)
-#' attach(Nervous)
-#' boxplot(react~drug)
-#' anova(lm(react~as.factor(drug)))
-#' detach(Nervous)
+#' boxplot(react ~ drug, data = Nervous, col = rainbow(4))
+#' model <- aov(react ~ factor(drug), data = Nervous)
+#' summary(model)
+#' TukeyHSD(model)
+#' plot(TukeyHSD(model), las = 1)
 #' 
-NULL
+"Nervous"
 
 
 
@@ -6260,22 +6257,19 @@ NULL
 #' 
 #' @name Newsstand
 #' @docType data
-#' @format A data frame with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on the following variable.
 #' \describe{ 
-#' \item{profit}{a numeric vector} 
+#' \item{profit}{profit of each newsstand} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Newsstand)
-#' attach(Newsstand)
-#' stem(profit)
-#' stem(profit,scale=3)
-#' detach(Newsstand)
+#' stem(Newsstand$profit)
+#' stem(Newsstand$profit, scale = 3)
 #' 
-NULL
+"Newsstand"
 
 
 
@@ -6289,59 +6283,21 @@ NULL
 #' 
 #' @name Nfldraf2
 #' @docType data
-#' @format A data frame with 47 observations on the following variable.
+#' @format A data frame/tibble with 47 observations on the 3 following variables.
 #' \describe{ 
-#' \item{Rating.forty.weight}{a factor with levels
-#' \code{5.000000000e+000 4.870000000e+000 2.810000000e+002}
-#' \code{5.000000000e+000 4.900000000e+000 2.810000000e+002}
-#' \code{5.100000000e+000 5.100000000e+000 2.980000000e+002}
-#' \code{5.200000000e+000 5.000000000e+000 2.920000000e+002}
-#' \code{5.200000000e+000 5.030000000e+000 2.920000000e+002}
-#' \code{5.300000000e+000 4.780000000e+000 2.720000000e+002}
-#' \code{5.300000000e+000 4.800000000e+000 2.720000000e+002}
-#' \code{5.400000000e+000 4.890000000e+000 2.450000000e+002}
-#' \code{5.400000000e+000 4.900000000e+000 2.450000000e+002}
-#' \code{5.400000000e+000 5.000000000e+000 2.650000000e+002}
-#' \code{5.400000000e+000 5.000000000e+000 2.770000000e+002}
-#' \code{5.400000000e+000 5.030000000e+000 2.770000000e+002}
-#' \code{5.500000000e+000 4.800000000e+000 2.640000000e+002}
-#' \code{5.500000000e+000 4.820000000e+000 2.640000000e+002}
-#' \code{5.600000000e+000 4.900000000e+000 2.470000000e+002}
-#' \code{5.600000000e+000 5.100000000e+000 2.870000000e+002}
-#' \code{5.600000000e+000 5.130000000e+000 2.870000000e+002}
-#' \code{5.700000000e+000 4.880000000e+000 2.830000000e+002}
-#' \code{5.700000000e+000 4.900000000e+000 2.830000000e+002}
-#' \code{5.800000000e+000 4.800000000e+000 2.390000000e+002}
-#' \code{5.800000000e+000 4.850000000e+000 2.390000000e+002}
-#' \code{5.800000000e+000 4.900000000e+000 2.710000000e+002}
-#' \code{5.800000000e+000 4.930000000e+000 2.710000000e+002}
-#' \code{5.900000000e+000 4.700000000e+000 2.600000000e+002}
-#' \code{5.900000000e+000 4.720000000e+000 2.600000000e+002}
-#' \code{6.000000000e+000 5.100000000e+000 2.830000000e+002}
-#' \code{6.200000000e+000 5.100000000e+000 3.120000000e+002}
-#' \code{6.400000000e+000 4.800000000e+000 2.840000000e+002}
-#' \code{6.400000000e+000 4.840000000e+000 2.840000000e+002}
-#' \code{6.400000000e+000 5.070000000e+000 2.850000000e+002}
-#' \code{6.400000000e+000 5.100000000e+000 2.850000000e+002}
-#' \code{6.600000000e+000 5.090000000e+000 3.000000000e+002}
-#' \code{6.600000000e+000 5.100000000e+000 3.000000000e+002}
-#' \code{6.900000000e+000 4.680000000e+000 2.550000000e+002}
-#' \code{6.900000000e+000 4.700000000e+000 2.550000000e+002}
-#' \code{7.000000000e+000 5.060000000e+000 2.890000000e+002}
-#' \code{7.000000000e+000 5.100000000e+000 2.890000000e+002}
-#' \code{7.200000000e+000 4.900000000e+000 2.920000000e+002}
-#' \code{7.500000000e+000 4.900000000e+000 2.760000000e+002}
-#' \code{7.500000000e+000 4.940000000e+000 2.760000000e+002}
-#' \code{8.200000000e+000 4.720000000e+000 3.130000000e+002}} 
+#' \item{rating}{rating of each player on a scale out of 10}
+#' \item{forty}{forty yard dash time in seconds}
+#' \item{weight}{weight of each player in pounds}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Nfldraf2)
+#' plot(rating ~ forty, data = Nfldraf2)
+#' summary(lm(rating ~ forty, data = Nfldraf2))
 #' 
-NULL
+"Nfldraf2"
 
 
 
@@ -6355,49 +6311,25 @@ NULL
 #' 
 #' @name Nfldraft
 #' @docType data
-#' @format A data frame with 29 observations on the following variable.
+#' @format A data frame/tibble with 29 observations on the 3 following variables.
 #' \describe{ 
-#' \item{Rating.forty.weight}{a factor with levels
-#' \code{5.000000000e+000 5.300000000e+000 3.100000000e+002}
-#' \code{5.200000000e+000 5.230000000e+000 2.740000000e+002}
-#' \code{5.200000000e+000 5.260000000e+000 2.950000000e+002}
-#' \code{5.300000000e+000 5.180000000e+000 3.010000000e+002}
-#' \code{5.400000000e+000 5.290000000e+000 3.010000000e+002}
-#' \code{5.500000000e+000 5.090000000e+000 2.800000000e+002}
-#' \code{5.500000000e+000 5.260000000e+000 3.050000000e+002}
-#' \code{5.500000000e+000 5.560000000e+000 3.590000000e+002}
-#' \code{5.700000000e+000 5.140000000e+000 2.770000000e+002}
-#' \code{5.700000000e+000 5.290000000e+000 2.860000000e+002}
-#' \code{5.900000000e+000 5.200000000e+000 3.130000000e+002}
-#' \code{5.900000000e+000 5.250000000e+000 2.920000000e+002}
-#' \code{6.000000000e+000 5.030000000e+000 2.740000000e+002}
-#' \code{6.000000000e+000 5.270000000e+000 2.850000000e+002}
-#' \code{6.000000000e+000 5.290000000e+000 3.050000000e+002}
-#' \code{6.100000000e+000 5.270000000e+000 2.850000000e+002}
-#' \code{6.100000000e+000 5.350000000e+000 3.210000000e+002}
-#' \code{6.200000000e+000 5.230000000e+000 2.900000000e+002}
-#' \code{6.200000000e+000 5.290000000e+000 2.890000000e+002}
-#' \code{6.300000000e+000 5.360000000e+000 3.110000000e+002}
-#' \code{6.400000000e+000 5.060000000e+000 3.150000000e+002}
-#' \code{6.400000000e+000 5.260000000e+000 3.020000000e+002}
-#' \code{6.500000000e+000 4.940000000e+000 2.850000000e+002}
-#' \code{6.500000000e+000 5.180000000e+000 3.250000000e+002}
-#' \code{7.000000000e+000 5.200000000e+000 3.250000000e+002}
-#' \code{7.000000000e+000 5.360000000e+000 3.170000000e+002}
-#' \code{7.100000000e+000 5.060000000e+000 2.890000000e+002}
-#' \code{7.200000000e+000 5.200000000e+000 3.150000000e+002}
-#' \code{7.600000000e+000 5.150000000e+000 3.030000000e+002}} 
+#' \item{rating}{rating of each player on a scale out of 10}
+#' \item{forty}{forty yard dash time in seconds}
+#' \item{weight}{weight of each player in pounds}
 #' }
+#' 
+#' @source \emph{USA Today}, April 20, 1994
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Nfldraft)
-#' attach(Nfldraft)
-#' detach(Nfldraft)
+#' plot(rating ~ forty, data = Nfldraft)
+#' cor(Nfldraft$rating, Nfldraft$forty)
+#' summary(lm(rating ~ forty, data = Nfldraft))
 #' 
-NULL
+"Nfldraft"
 
 
 
@@ -6410,24 +6342,24 @@ NULL
 #' 
 #' @name Nicotine
 #' @docType data
-#' @format A data frame with 8 observations on the following 2 variables.
+#' @format A data frame/tibble with 8 observations on the following 2 variables.
 #' \describe{ 
-#' \item{nicotine}{a numeric vector} 
-#' \item{sales}{a numeric vector} 
+#' \item{nicotine}{nicotine content in milligrams} 
+#' \item{sales}{sales figures in $100,000} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Nicotine)
-#' attach(Nicotine)
-#' model <- lm(sales~nicotine)
+#' model <- lm(sales ~ nicotine, data = Nicotine)
+#' plot(sales ~ nicotine, data = Nicotine)
+#' abline(model)
 #' summary(model)
-#' detach(Nicotine)
-#' remove(model)
+#' predict(model, newdata = data.frame(nicotine = 1), 
+#'      interval = "confidence", level = 0.99)
 #' 
-NULL
+"Nicotine"
 
 
 
@@ -6440,22 +6372,23 @@ NULL
 #' 
 #' @name Orange
 #' @docType data
-#' @format A data frame with 6 observations on the following 2 variables.
+#' @format A data frame/tibble with 6 observations on the following 2 variables.
 #' \describe{ 
-#' \item{harvest}{a numeric vector} 
-#' \item{price}{a numeric vector} 
+#' \item{harvest}{harvest in millions of boxes} 
+#' \item{price}{price is average price charged by California growers for for 75-pound box of navel oranges} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Orange)
-#' attach(Orange)
-#' summary(lm(price~harvest))
-#' detach(Orange)
+#' plot(price ~ harvest, data = Orange)
+#' model <- lm(price ~ harvest, data = Orange)
+#' abline(model)
+#' summary(model)
+#' rm(model)
 #' 
-NULL
+"Orange"
 
 
 
@@ -6468,30 +6401,36 @@ NULL
 #' 
 #' @name Orioles
 #' @docType data
-#' @format A data frame with 27 observations on the following 3 variables.
+#' @format A data frame/tibble with 27 observations on the following 3 variables.
 #' \describe{ 
-#' \item{first.name}{a factor with levels \code{Albert}
-#' \code{Arthur} \code{B.J.} \code{Brady} \code{Cal} \code{Charles}
-#' \code{dl-Delino} \code{dl-Scott} \code{Doug} \code{Harold} \code{Heathcliff}
-#' \code{Jeff} \code{Jesse} \code{Juan} \code{Lenny} \code{Mike} \code{Rich}
-#' \code{Ricky} \code{Scott} \code{Sidney} \code{Will} \code{Willis}}
-#' \item{last.name}{a factor with levels \code{Amaral} \code{Anderson}
-#' \code{Baines} \code{Belle} \code{Bones} \code{Bordick} \code{Clark}
-#' \code{Conine} \code{Deshields} \code{Erickson} \code{Fetters} \code{Garcia}
-#' \code{Guzman} \code{Johns} \code{Johnson} \code{Kamieniecki} \code{Mussina}
-#' \code{Orosco} \code{Otanez} \code{Ponson} \code{Reboulet} \code{Rhodes}
-#' \code{Ripken Jr.} \code{Slocumb} \code{Surhoff} \code{Timlin}
+#' \item{first name}{a factor with levels \code{Albert},
+#' \code{Arthur}, \code{B.J.}, \code{Brady}, \code{Cal}, \code{Charles},
+#' \code{dl-Delino}, \code{dl-Scott}, \code{Doug}, \code{Harold}, \code{Heathcliff},
+#' \code{Jeff}, \code{Jesse}, \code{Juan}, \code{Lenny}, \code{Mike}, \code{Rich},
+#' \code{Ricky}, \code{Scott}, \code{Sidney}, \code{Will}, and \code{Willis}}
+#' \item{last name}{a factor with levels \code{Amaral}, \code{Anderson},
+#' \code{Baines}, \code{Belle}, \code{Bones}, \code{Bordick}, \code{Clark},
+#' \code{Conine}, \code{Deshields}, \code{Erickson}, \code{Fetters}, \code{Garcia},
+#' \code{Guzman}, \code{Johns}, \code{Johnson}, \code{Kamieniecki}, \code{Mussina},
+#' \code{Orosco}, \code{Otanez}, \code{Ponson}, \code{Reboulet}, \code{Rhodes},
+#' \code{Ripken Jr.}, \code{Slocumb}, \code{Surhoff},\code{Timlin}, and
 #' \code{Webster}} 
-#' \item{X1999salary}{a numeric vector} 
+#' \item{1999salary}{a numeric vector containing each player's salary in dollars} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Orioles)
+#' stripchart(Orioles$`1999salary`, method = "stack", pch = 19)
+#' \dontrun{
+#' ggplot2::ggplot(data = Orioles, aes(x = `1999salary`)) + 
+#'   geom_dotplot(dotsize = 0.5) + 
+#'     labs(x = "1999 Salary") +
+#'       theme_bw()
+#'       }
 #' 
-NULL
+"Orioles"
 
 
 
@@ -6504,27 +6443,25 @@ NULL
 #' 
 #' @name Oxytocin
 #' @docType data
-#' @format A data frame with 11 observations on the following 3 variables.
+#' @format A data frame/tibble with 11 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Subject}{a numeric vector} 
-#' \item{Before}{a numeric vector} 
-#' \item{After}{a numeric vector} 
+#' \item{subject}{a numeric vector indicating each subject} 
+#' \item{before}{mean arterial blood pressure of 11 subjects before receiving oxytocin} 
+#' \item{after}{mean arterial blood pressure of 11 subjects after receiving oxytocin} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Oxytocin)
-#' attach(Oxytocin)
-#' DIF <- Before - After
-#' qqnorm(DIF)
-#' qqline(DIF)
-#' shapiro.test(DIF)
-#' t.test(Before,After,paired=TRUE)
-#' detach(Oxytocin)
+#' diff = Oxytocin$after - Oxytocin$before
+#' qqnorm(diff)
+#' qqline(diff)
+#' shapiro.test(diff)
+#' t.test(Oxytocin$after, Oxytocin$before, paired = TRUE)
+#' rm(diff)
 #' 
-NULL
+"Oxytocin"
 
 
 
@@ -6537,29 +6474,32 @@ NULL
 #' 
 #' @name Parented
 #' @docType data
-#' @format A data frame with 6 observations on the following 3 variables.
+#' @format A data frame/tibble with 200 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Educat}{a factor with levels \code{4yr college
-#' degree} \code{Doctoral degree} \code{Grad degree} \code{H.S grad or less}
-#' \code{Some college} \code{Some grad school}} 
-#' \item{Mother}{a numeric vector} 
-#' \item{Father}{a numeric vector} 
+#' \item{education}{a factor with levels \code{4yr college
+#' degree}, \code{Doctoral degree}, \code{Grad degree}, \code{H.S grad or less},
+#' \code{Some college}, and \code{Some grad school}} 
+#' \item{parent}{a factor with levels \code{mother} and \code{father}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Parented)
-#' attach(Parented)
-#' MAT <- cbind(Mother, Father)
-#' row.names(MAT) <- Educat 
-#' MAT 
-#' barplot(t(MAT),beside=TRUE,legend=TRUE,col=c("blue","red")) 
-#' detach(Parented) 
-#' remove(MAT)
-#' 
-NULL
+#' T1 <- xtabs(~education + parent, data = Parented)
+#' T1
+#' barplot(t(T1), beside = TRUE, legend = TRUE, col = c("blue", "red"))
+#' rm(T1)
+#' \dontrun{
+#' ggplot2::ggplot(data = Parented, aes(x = education, fill = parent)) + 
+#'   geom_bar(position = "dodge") + 
+#'     theme_bw() +
+#'       theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) + 
+#'         scale_fill_manual(values = c("pink", "blue")) + 
+#'           labs(x = "", y = "") 
+#'           }
+#'           
+"Parented"
 
 
 
@@ -6573,29 +6513,22 @@ NULL
 #' 
 #' @name Patrol
 #' @docType data
-#' @format A data frame with 10 observations on the following 7 variables.
+#' @format A data frame/tibble with 10 observations on the following 3 variables.
 #' \describe{ 
-#' \item{tickets}{a numeric vector} 
-#' \item{years}{a numeric vector} 
-#' \item{ln.tickets.}{a numeric vector}
-#' \item{SRES1}{a numeric vector} 
-#' \item{FITS1}{a numeric vector} 
-#' \item{SRES2}{a numeric vector} 
-#' \item{FITS2}{a numeric vector} 
+#' \item{tickets}{number of tickets written per week} 
+#' \item{years}{patrolperson's years of experience} 
+#' \item{log_tickets}{natural log of \code{tickets}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Patrol)
-#' attach(Patrol)
-#' model <- lm(tickets~years)
+#' model <- lm(tickets ~ years, data = Patrol)
 #' summary(model)
-#' detach(Patrol)
-#' remove(model)
+#' confint(model, level = 0.98)
 #' 
-NULL
+"Patrol"
 
 
 
@@ -6608,23 +6541,25 @@ NULL
 #' 
 #' @name Pearson
 #' @docType data
-#' @format A data frame with 11 observations on the following 2 variables.
+#' @format A data frame/tibble with 11 observations on the following 3 variables.
 #' \describe{ 
-#' \item{brother}{a numeric vector} 
-#' \item{sister}{a numeric vector} 
+#' \item{family}{number indicating family of brother and sister pair}
+#' \item{brother}{height of brother (in inches)} 
+#' \item{sister}{height of sister (in inches)} 
 #' }
+#' 
+#' @source Pearson, K. and Lee, A. (1902-3), On the Laws of Inheritance in Man, 
+#' \emph{Biometrika, 2}, 357
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Pearson)
-#' attach(Pearson)
-#' plot(brother,sister)
-#' cor(brother,sister)
-#' detach(Pearson)
+#' plot(brother ~ sister, data = Pearson)
+#' cor(Pearson$brother, Pearson$sister)
 #' 
-NULL
+"Pearson"
 
 
 
@@ -6637,24 +6572,21 @@ NULL
 #' 
 #' @name Phone
 #' @docType data
-#' @format A data frame with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on the following variable.
 #' \describe{ 
-#' \item{time}{a numeric vector} 
+#' \item{time}{duration of long distance phone call (in minutes)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Phone)
-#' attach(Phone)
-#' qqnorm(time)
-#' qqline(time)
-#' shapiro.test(time)
-#' SIGN.test(time,md=5,alternative="greater")
-#' detach(Phone)
+#' qqnorm(Phone$time)
+#' qqline(Phone$time)
+#' shapiro.test(Phone$time)
+#' BSDA::SIGN.test(Phone$time, md = 5, alternative = "greater")
 #' 
-NULL
+"Phone"
 
 
 
@@ -6667,24 +6599,35 @@ NULL
 #' 
 #' @name Poison
 #' @docType data
-#' @format A data frame with 6 observations on the following 2 variables.
+#' @format A data frame/tibble with 226,261 observations on the following variable.
 #' \describe{ 
-#' \item{Type}{a factor with levels \code{Alcohol}
-#' \code{Cleaning agent} \code{Cosmetics} \code{Drugs} \code{Insecticides}
+#' \item{type}{a factor with levels \code{Alcohol},
+#' \code{Cleaning agent}, \code{Cosmetics}, \code{Drugs}, \code{Insecticides}, and
 #' \code{Plants}} 
-#' \item{number}{a numeric vector} 
 #' }
+#' 
+#' @source Centers for Disease Control, Atlanta, Georgia.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Poison)
-#' attach(Poison)
-#' names(number) <- Type
-#' barplot(number,col="red")
+#' T1 <- xtabs(~type, data = Poison)
+#' T1
+#' par(mar = c(5.1 + 2, 4.1, 4.1, 2.1))
+#' barplot(sort(T1, decreasing = TRUE), las = 2, col = rainbow(6))
+#' par(mar = c(5.1, 4.1, 4.1, 2.1))
+#' rm(T1)
+#' \dontrun{
+#' ggplot2::ggplot(data = Poison, aes(x = type, fill = type)) + 
+#'   geom_bar() + 
+#'     theme_bw() + 
+#'       theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) +
+#'         guides(fill = FALSE)
+#'         }
 #' 
-NULL
+"Poison"
 
 
 
@@ -6697,23 +6640,22 @@ NULL
 #' 
 #' @name Politic
 #' @docType data
-#' @format A data frame with 250 observations on the following 2 variables.
+#' @format A data frame/tibble with 250 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Party}{a numeric vector} 
-#' \item{Gender}{a numeric vector} 
+#' \item{party}{a factor with levels \code{republican}, \code{democrat}, and \code{other}} 
+#' \item{gender}{a factor with levels \code{female} and \code{male}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Politic)
-#' attach(Politic)
-#' table(Party,Gender)
-#' chisq.test(table(Party,Gender))
-#' detach(Politic)
+#' T1 <- xtabs(~party + gender, data = Politic)
+#' T1
+#' chisq.test(T1)
+#' rm(T1)
 #' 
-NULL
+"Politic"
 
 
 
@@ -6726,22 +6668,19 @@ NULL
 #' 
 #' @name Pollutio
 #' @docType data
-#' @format A data frame with 15 observations on the following variable.
+#' @format A data frame/tibble with 15 observations on the following variable.
 #' \describe{ 
-#' \item{inde}{a numeric vector} 
+#' \item{inde}{air pollution index} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Pollutio)
-#' attach(Pollutio)
-#' EDA(inde)
-#' t.test(inde,conf.level=.98)$conf
-#' detach(Pollutio)
+#' stem(Pollutio$inde)
+#' t.test(Pollutio$inde, conf.level = 0.98)$conf
 #' 
-NULL
+"Pollutio"
 
 
 
@@ -6755,23 +6694,24 @@ NULL
 #' 
 #' @name Porosity
 #' @docType data
-#' @format A data frame with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on the following variable.
 #' \describe{ 
-#' \item{porosity}{a numeric vector} 
+#' \item{porosity}{porosity measurement (percent)} 
 #' }
+#' 
+#' @source Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2nd edition,
+#' pages 63-65.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Porosity)
-#' attach(Porosity)
-#' stem(porosity)
-#' fivenum(porosity)
-#' boxplot(porosity)
-#' detach(Porosity)
+#' stem(Porosity$porosity)
+#' fivenum(Porosity$porosity)
+#' boxplot(Porosity$porosity)
 #' 
-NULL
+"Porosity"
 
 
 
@@ -6784,35 +6724,33 @@ NULL
 #' 
 #' @name Poverty
 #' @docType data
-#' @format A data frame with 20 observations on the following 6 variables.
+#' @format A data frame/tibble with 20 observations on the following 4 variables.
 #' \describe{ 
-#' \item{City}{a factor with levels \code{Atlanta}
-#' \code{Buffalo} \code{Cincinnati} \code{Cleveland} \code{Dayton, O}
-#' \code{Detroit} \code{Flint, Mich} \code{Fresno, C} \code{Gary, Ind}
-#' \code{Hartford, C} \code{Laredo} \code{Macon, Ga} \code{Miami}
-#' \code{Milwaukee} \code{New Orleans} \code{Newark, NJ} \code{Rochester,NY}
-#' \code{Shreveport} \code{St. Louis} \code{Waco, Tx}} 
-#' \item{Poverty}{a numeric vector} 
-#' \item{Crime}{a numeric vector}
-#' \item{cindex}{a numeric vector} 
-#' \item{popu}{a numeric vector} 
-#' \item{ratio}{a numeric vector}
+#' \item{city}{a factor with levels \code{Atlanta},
+#' \code{Buffalo}, \code{Cincinnati}, \code{Cleveland}, \code{Dayton, O},
+#' \code{Detroit}, \code{Flint, Mich}, \code{Fresno, C}, \code{Gary, Ind},
+#' \code{Hartford, C}, \code{Laredo}, \code{Macon, Ga}, \code{Miami},
+#' \code{Milwaukee}, \code{New Orleans}, \code{Newark, NJ}, \code{Rochester,NY},
+#' \code{Shreveport}, \code{St. Louis}, and \code{Waco, Tx}} 
+#' \item{poverty}{percent of children living in poverty} 
+#' \item{crime}{crime rate (per 1000 people)}
+#' \item{population}{population of city} 
 #' }
+#' 
+#' @source Children's Defense Fund and the Bureau of Justice Statistics
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Poverty)
-#' attach(Poverty)
-#' plot(Crime,Poverty)
-#' model <- lm(Poverty~Crime)
+#' plot(poverty ~ crime, data = Poverty)
+#' model <- lm(poverty ~ crime, data = Poverty)
 #' abline(model)
 #' summary(model)
-#' detach(Poverty)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Poverty"
 
 
 
@@ -6825,25 +6763,22 @@ NULL
 #' 
 #' @name Precinct
 #' @docType data
-#' @format A data frame with 8 observations on the following 2 variables.
+#' @format A data frame/tibble with 8 observations on the following 2 variables.
 #' \describe{ 
-#' \item{rate}{a numeric vector} 
-#' \item{income}{a numeric vector} 
+#' \item{rate}{robbery rate (per 1000 people)} 
+#' \item{income}{percent with low income} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Precinct)
-#' attach(Precinct)
-#' plot(rate,income,main="Exercise 2.2")
-#' model <- lm(income~rate)
-#' model
-#' abline(model,col="green")
-#' detach(Precinct)
+#' plot(rate ~ income, data = Precinct)
+#' model <- (lm(rate ~ income, data = Precinct))
+#' abline(model)
+#' rm(model)
 #' 
-NULL
+"Precinct"
 
 
 
@@ -6858,19 +6793,17 @@ NULL
 #' @docType data
 #' @format A data frame with 25 observations on the following variable.
 #' \describe{ 
-#' \item{prejud}{a numeric vector} 
+#' \item{prejud}{racial prejudice score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Prejudic)
-#' attach(Prejudic)
-#' EDA(prejud)
-#' detach(Prejudic)
+#' stem(Prejudic$prejud)
+#' BSDA::EDA(Prejudic$prejud)
 #' 
-NULL
+"Prejudic"
 
 
 
@@ -6883,41 +6816,42 @@ NULL
 #' 
 #' @name Presiden
 #' @docType data
-#' @format A data frame with 43 observations on the following 5 variables.
+#' @format A data frame/tibble with 43 observations on the following 5 variables.
 #' \describe{ 
-#' \item{firs}{a factor with levels \code{A.} \code{B.}
-#' \code{C.} \code{D.} \code{F.} \code{G.} \code{G. W.} \code{H.} \code{J.}
-#' \code{L.} \code{M.} \code{R.} \code{T.} \code{U.} \code{W.} \code{Z.}}
-#' \item{Presiden}{a factor with levels \code{Adams} \code{Arthur}
-#' \code{Buchanan} \code{Bush} \code{Carter} \code{Cleveland} \code{Clinton}
-#' \code{Coolidge} \code{Eisenhower} \code{Fillmore} \code{Ford}
-#' \code{Garfield} \code{Grant} \code{Harding} \code{Harrison} \code{Hayes}
-#' \code{Hoover} \code{Jackson} \code{Jefferson} \code{Johnson} \code{Kennedy}
-#' \code{Lincoln} \code{Madison} \code{McKinley} \code{Monroe} \code{Nixon}
-#' \code{Pierce} \code{Polk} \code{Reagan} \code{Roosevelt} \code{Taft}
-#' \code{Taylor} \code{Truman} \code{Tyler} \code{VanBuren} \code{Washington}
+#' \item{first_initial}{a factor with levels \code{A.}, \code{B.},
+#' \code{C.}, \code{D.}, \code{F.}, \code{G.}, \code{G. W.}, \code{H.}, \code{J.},
+#' \code{L.}, \code{M.}, \code{R.}, \code{T.}, \code{U.}, \code{W.}, and \code{Z.}}
+#' \item{last_name}{a factor with levels \code{Adams}, \code{Arthur},
+#' \code{Buchanan}, \code{Bush}, \code{Carter}, \code{Cleveland}, \code{Clinton},
+#' \code{Coolidge}, \code{Eisenhower}, \code{Fillmore}, \code{Ford},
+#' \code{Garfield}, \code{Grant}, \code{Harding}, \code{Harrison}, \code{Hayes},
+#' \code{Hoover}, \code{Jackson}, \code{Jefferson}, \code{Johnson}, \code{Kennedy},
+#' \code{Lincoln}, \code{Madison}, \code{McKinley}, \code{Monroe}, \code{Nixon},
+#' \code{Pierce}, \code{Polk}, \code{Reagan}, \code{Roosevelt}, \code{Taft},
+#' \code{Taylor}, \code{Truman}, \code{Tyler}, \code{VanBuren}, \code{Washington}, and
 #' \code{Wilson}} 
-#' \item{Birt}{a factor with levels \code{ARK}
-#' \code{CAL} \code{CONN} \code{GA} \code{IA} \code{ILL} \code{KY} \code{MASS}
-#' \code{MO} \code{NC} \code{NEB} \code{NH} \code{NJ} \code{NY} \code{OH}
-#' \code{PA} \code{SC} \code{TEX} \code{VA} \code{VT}}
-#' \item{Inaugage}{a numeric vector} 
-#' \item{Deathage}{a numeric vector} 
+#' \item{birth_state}{a factor with levels \code{ARK},
+#' \code{CAL}, \code{CONN}, \code{GA}, \code{IA}, \code{ILL}, \code{KY}, \code{MASS},
+#' \code{MO}, \code{NC}, \code{NEB}, \code{NH}, \code{NJ}, \code{NY}, \code{OH},
+#' \code{PA}, \code{SC}, \code{TEX}, \code{VA}, and \code{VT}}
+#' \item{inaugural_age}{President's age at inauguration} 
+#' \item{death_age}{President's age at death} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Presiden)
-#' attach(Presiden)
-#' table(Birt)
-#' pie(table(Birt))
-#' stripchart(x=list(Inaugage,Deathage),method="stack",
-#' group.names=c("Inaugural Age","Death Age"),col=c("green","brown"),pch=19)
-#' detach(Presiden) 
+#' pie(xtabs(~birth_state, data = Presiden))
+#' stem(Presiden$inaugural_age)
+#' stem(Presiden$death_age)
+#' par(mar = c(5.1, 4.1 + 3, 4.1, 2.1))
+#' stripchart(x=list(Presiden$inaugural_age, Presiden$death_age), 
+#'            method = "stack",
+#'                       col = c("green","brown"), pch = 19, las = 1)
+#'                       par(mar = c(5.1, 4.1, 4.1, 2.1)) 
 #' 
-NULL
+"Presiden"
 
 
 
@@ -6931,24 +6865,23 @@ NULL
 #' 
 #' @name Press
 #' @docType data
-#' @format A data frame with 20 observations on the following 4 variables.
+#' @format A data frame/tibble with 20 observations on the following 2 variables.
 #' \describe{ 
-#' \item{educat}{a numeric vector} 
-#' \item{confid}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
+#' \item{education_yrs}{years of education} 
+#' \item{confidence}{degree of confidence in the press (the higher the score, the more confidence)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Press)
-#' attach(Press)
-#' summary(lm(confid~educat))
-#' detach(Press)
+#' plot(confidence ~ education_yrs, data = Press)
+#' model <- lm(confidence ~ education_yrs, data = Press)
+#' abline(model, col = "purple")
+#' summary(model)
+#' rm(model)
 #' 
-NULL
+"Press"
 
 
 
@@ -6962,22 +6895,23 @@ NULL
 #' 
 #' @name Prognost
 #' @docType data
-#' @format A data frame with 15 observations on the following variable.
+#' @format A data frame/tibble with 15 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{kprs_score}{Kloper's Prognostic Rating Scale score} 
 #' }
+#' 
+#' @source Newmark, C., et al. (1973), Predictive Validity of the Rorschach Prognostic Rating Scale
+#' with Behavior Modification Techniques, \emph{Journal of Clinical Psychology, 29}, 246-248
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Prognost)
-#' attach(Prognost)
-#' EDA(score)
-#' t.test(score,mu=9)
-#' detach(Prognost)
+#' BSDA::EDA(Prognost$kprs_score)
+#' t.test(Prognost$kprs_score, mu = 9)
 #' 
-NULL
+"Prognost"
 
 
 
@@ -6991,28 +6925,25 @@ NULL
 #' 
 #' @name Program
 #' @docType data
-#' @format A data frame with 11 observations on the following 4 variables.
+#' @format A data frame/tibble with 44 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Method1}{a numeric vector} 
-#' \item{Method2}{a numeric vector} 
-#' \item{Method3}{a numeric vector}
-#' \item{Method4}{a numeric vector} 
+#' \item{method}{a character variable with values \code{method1}, \code{method2}, 
+#' \code{method3}, and \code{method4}} 
+#' \item{score}{standardized test score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Program)
-#' attach(Program)
-#' STACKED <-stack(Program)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green","yellow"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Program)
+#' boxplot(score ~ method, col = c("red", "blue", "green", "yellow"), data = Program)
+#' anova(lm(score ~ method, data = Program))
+#' TukeyHSD(aov(score ~ method, data = Program))
+#' par(mar = c(5.1, 4.1 + 4, 4.1, 2.1))
+#' plot(TukeyHSD(aov(score ~ method, data = Program)), las = 1)
+#' par(mar = c(5.1, 4.1, 4.1, 2.1))
 #' 
-NULL
+"Program"
 
 
 
@@ -7025,25 +6956,24 @@ NULL
 #' 
 #' @name Psat
 #' @docType data
-#' @format A data frame with 7 observations on the following 4 variables.
+#' @format A data frame/tibble with 7 observations on the following 2 variables.
 #' \describe{
-#' \item{psat}{a numeric vector} 
-#' \item{sat}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
+#' \item{psat}{PSAT score} 
+#' \item{sat}{SAT score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Psat)
-#' attach(Psat)
-#' model <- lm(sat~psat)
-#' plot(psat,resid(model))
-#' detach(Psat)
+#' model <- lm(sat ~ psat, data = Psat)
+#' par(mfrow = c(1, 2))
+#' plot(Psat$psat, resid(model))
+#' plot(model, which = 1)
+#' rm(model)
+#' par(mfrow = c(1, 1))
 #' 
-NULL
+"Psat"
 
 
 
@@ -7056,22 +6986,19 @@ NULL
 #' 
 #' @name Psych
 #' @docType data
-#' @format A data frame with 23 observations on the following variable.
+#' @format A data frame/tibble with 23 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{number of correct repsonses in a psychology experiment} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Psych)
-#' attach(Psych)
-#' stem(score)
-#' EDA(score)
-#' detach(Psych)
+#' stem(Psych$score)
+#' BSDA::EDA(Psych$score)
 #' 
-NULL
+"Psych"
 
 
 
@@ -7084,22 +7011,20 @@ NULL
 #' 
 #' @name Puerto
 #' @docType data
-#' @format A data frame with 50 observations on the following variable.
+#' @format A data frame/tibble with 50 observations on the following variable.
 #' \describe{ 
-#' \item{income}{a numeric vector} 
+#' \item{income}{weekly family income (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Puerto)
-#' attach(Puerto)
-#' EDA(income)
-#' t.test(income,conf.level=.90)$conf
-#' detach(Puerto)
+#' stem(Puerto$income)
+#' boxplot(Puerto$income)
+#' t.test(Puerto$income,conf.level = .90)$conf
 #' 
-NULL
+"Puerto"
 
 
 
@@ -7112,25 +7037,24 @@ NULL
 #' 
 #' @name Quail
 #' @docType data
-#' @format A data frame with 20 observations on the following 2 variables.
+#' @format A data frame/tibble with 40 observations on the following 2 variables.
 #' \describe{ 
-#' \item{placebo}{a numeric vector}
-#' \item{treatmen}{a numeric vector} 
+#' \item{group}{a character variable with values \code{placebo} and \code{treatment}}
+#' \item{level}{low-density lipoprotein (LDL) cholestrol level} 
 #' }
+#' 
+#' @source J. McKean, and T. Vidmar (1994), "A Comparison of Two Rank-Based Methods for the
+#' Analysis of Linear Models," \emph{The American Statistician, 48}, 220-229.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Quail)
-#' attach(Quail)
-#' boxplot(placebo,treatmen,names=c("Placebo","Treatment"),
-#' horizontal=TRUE,xlab="LDL level",col=c("lightblue","yellow"))
-#' boxplot(placebo,treatmen,names=c("Placebo","Treatment"),
-#' ylab="LDL level",col=c("lightblue","yellow"))
-#' detach(Quail)
+#' boxplot(level ~ group, data = Quail, horizontal = TRUE, xlab = "LDL Level",
+#' col = c("yellow", "lightblue"))
 #' 
-NULL
+"Quail"
 
 
 
@@ -7143,28 +7067,20 @@ NULL
 #' 
 #' @name Quality
 #' @docType data
-#' @format A data frame with 8 observations on the following 2 variables.
+#' @format A data frame/tibble with 15 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Process1}{a numeric vector}
-#' \item{Process2}{a numeric vector} 
+#' \item{process}{a character variable with values \code{Process1} and \code{Process2}}
+#' \item{score}{results of a quality control test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Quality)
-#' attach(Quality)
-#' qqnorm(Process1)
-#' qqline(Process1)
-#' shapiro.test(Process1)
-#' qqnorm(Process2)
-#' qqline(Process2)
-#' shapiro.test(Process2)
-#' t.test(Process1,Process2)
-#' detach(Quality)
+#' boxplot(score ~ process, data = Quality)
+#' t.test(score ~ process, data = Quality)
 #' 
-NULL
+"Quality"
 
 
 
@@ -7177,26 +7093,28 @@ NULL
 #' 
 #' @name Rainks
 #' @docType data
-#' @format A data frame with 35 observations on the following 5 variables.
+#' @format A data frame/tibble with 35 observations on the following 5 variables.
 #' \describe{ 
-#' \item{rain}{a numeric vector} 
-#' \item{x1}{a numeric vector} 
-#' \item{x2}{a numeric vector} 
-#' \item{x3}{a numeric vector} 
-#' \item{x4}{a numeric vector} 
+#' \item{rain}{rainfall (in inches)} 
+#' \item{x1}{rainfall (in inches)} 
+#' \item{x2}{rainfall (in inches)} 
+#' \item{x3}{rainfall (in inches)} 
+#' \item{x4}{rainfall (in inches)} 
 #' }
+#' 
+#' @source R. Picard, K. Berk (1990), Data Splitting, \emph{The American Statistician, 44}, (2),
+#' 140-147.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Rainks)
-#' attach(Rainks)
 #' cor(Rainks)
-#' lm(rain~x2)
-#' detach(Rainks)
+#' model <- lm(rain ~ x2, data = Rainks)
+#' summary(model)
 #' 
-NULL
+"Rainks"
 
 
 
@@ -7209,30 +7127,54 @@ NULL
 #' 
 #' @name Randd
 #' @docType data
-#' @format A data frame with 12 observations on the following 5 variables.
+#' @format A data frame/tibble with 12 observations on the following 2 variables.
 #' \describe{ 
-#' \item{rd}{a numeric vector} 
-#' \item{sales}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
-#' \item{RESI1}{a numeric vector} 
+#' \item{rd}{research and development expenditures (in million dollars)} 
+#' \item{sales}{sales (in million dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Randd)
-#' attach(Randd)
-#' plot(rd,sales)
-#' model <- lm(sales~rd)
+#' plot(sales ~ rd, data = Randd)
+#' model <- lm(sales ~ rd, data = Randd)
 #' abline(model)
 #' summary(model)
-#' # plot(model)
-#' detach(Randd)
-#' remove(model)
+#' plot(model, which = 1)
+#' rm(model)
 #' 
-NULL
+"Randd"
+
+
+
+#' Survival times of 20 rats exposed to high levels of radiation
+#' 
+#' Data for Exercise 1.52, 1.76, 5.62, and 6.44
+#' 
+#' 
+#' @name Rat
+#' @docType data
+#' @format A data frame/tibble with 20 observations on the following variable.
+#' \describe{ 
+#' \item{survival_time}{survival time in weeks for rats exposed to a high level of radiation} 
+#' }
+#' 
+#' @source J. Lawless, \emph{Statistical Models and Methods for Lifetime Data} (New York: Wiley, 1982)
+#' 
+#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
+#' Duxbury
+#' @keywords datasets
+#' @examples
+#' 
+#' hist(Rat$survival_time)
+#' qqnorm(Rat$survival_time)
+#' qqline(Rat$survival_time)
+#' summary(Rat$survival_time)
+#' t.test(Rat$survival_time)
+#' t.test(Rat$survival_time, mu = 100, alternative = "greater")
+#' 
+"Rat"
 
 
 
@@ -7245,58 +7187,28 @@ NULL
 #' 
 #' @name Ratings
 #' @docType data
-#' @format A data frame with 250 observations on the following 7 variables.
-#' \describe{ 
-#' \item{F}{a numeric vector} 
-#' \item{D}{a numeric vector} 
-#' \item{C}{a numeric vector} 
-#' \item{B}{a numeric vector} 
-#' \item{A}{a numeric vector} 
-#' \item{Rating}{a factor with levels \code{A} \code{B} \code{C} \code{D} \code{F}}
-#' \item{GPA}{a numeric vector}
+#' @format A data frame/tibble with 250 observations on the following 2 variables.
+#' \describe{
+#' \item{rating}{character variable with students' ratings of instructor (A-F)}
+#' \item{gpa}{students' grade point average}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Ratings)
-#' attach(Ratings)
-#' boxplot(GPA~Rating,xlab="Teacher's Rating",ylab="GPA",main="Example 2.6",col="pink")
-#' detach(Ratings)
+#' boxplot(gpa ~ rating, data = Ratings, xlab = "Student rating of instructor", 
+#' ylab = "Student GPA")
+#' \dontrun{
+#' ggplot2::ggplot(data = Ratings, aes(x = rating, y = gpa, fill = rating)) +
+#'   geom_boxplot() + 
+#'     theme_bw() + 
+#'       theme(legend.position = "none") + 
+#'         labs(x = "Student rating of instructor", y = "Student GPA")
+#'         }
 #' 
-NULL
+"Ratings"
 
-
-
-
-
-#' Survival times of 20 rats exposed to high levels of radiation
-#' 
-#' Data for Exercise 1.52, 1.76, 5.62, and 6.44
-#' 
-#' 
-#' @name Rat
-#' @docType data
-#' @format A data frame with 20 observations on the following variable.
-#' \describe{ 
-#' \item{survival.time}{a numeric vector} 
-#' }
-#' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
-#' @keywords datasets
-#' @examples
-#' 
-#' str(Rat)
-#' attach(Rat)
-#' hist(survival.time)
-#' qqnorm(survival.time,col="blue")
-#' qqline(survival.time,col="red")
-#' t.test(survival.time)$conf
-#' t.test(survival.time,mu=100,alternative="greater")
-#' detach(Rat)
-#' 
-NULL
 
 
 
@@ -7309,21 +7221,19 @@ NULL
 #' 
 #' @name Reaction
 #' @docType data
-#' @format A data frame with 12 observations on the following variable.
+#' @format A data frame/tibble with 12 observations on the following variable.
 #' \describe{ 
-#' \item{time}{a numeric vector} 
+#' \item{time}{threshold reaction time (in seconds) for persons subjected to emotional stress} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Reaction)
-#' attach(Reaction)
-#' SIGN.test(time,md=15,alternative="less")
-#' detach(Reaction)
+#' stem(Reaction$time)
+#' BSDA::SIGN.test(Reaction$time, md = 15, alternative = "less")
 #' 
-NULL
+"Reaction"
 
 
 
@@ -7336,24 +7246,24 @@ NULL
 #' 
 #' @name Reading
 #' @docType data
-#' @format A data frame with 30 observations on the following 4 variables.
+#' @format A data frame/tibble with 30 observations on the following 4 variables.
 #' \describe{ 
-#' \item{reading}{a numeric vector} 
-#' \item{sorted}{a numeric vector} 
-#' \item{trimmed}{a numeric vector}
-#' \item{winsoriz}{a numeric vector} 
+#' \item{score}{standardized reading test score} 
+#' \item{sorted}{sorted values of \code{score}} 
+#' \item{trimmed}{trimmed values of \code{sorted}}
+#' \item{winsoriz}{winsorized values of \code{score}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Reading)
-#' attach(Reading)
-#' EDA(reading)
-#' detach(Reading)
+#' hist(Reading$score, main = "Exercise 1.72", 
+#' col = "lightgreen", xlab = "Standardized reading score")
+#' summary(Reading$score)
+#' sd(Reading$score)
 #' 
-NULL
+"Reading"
 
 
 
@@ -7366,24 +7276,24 @@ NULL
 #' 
 #' @name Readiq
 #' @docType data
-#' @format A data frame with 14 observations on the following 2 variables.
+#' @format A data frame/tibble with 14 observations on the following 2 variables.
 #' \describe{ 
-#' \item{reading}{a numeric vector} 
-#' \item{IQ}{a numeric vector} 
+#' \item{reading}{reading achievement score} 
+#' \item{iq}{IQ score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Readiq)
-#' attach(Readiq)
-#' plot(IQ,reading)
-#' model <- lm(reading~IQ)
+#' plot(reading ~ iq, data = Readiq)
+#' model <- lm(reading ~ iq, data = Readiq)
 #' abline(model)
-#' detach(Readiq)
+#' predict(model, newdata = data.frame(iq = c(100, 120)))
+#' residuals(model)[c(6, 7)]
+#' rm(model)
 #' 
-NULL
+"Readiq"
 
 
 
@@ -7396,25 +7306,22 @@ NULL
 #' 
 #' @name Referend
 #' @docType data
-#' @format A data frame with 3 observations on the following 4 variables.
+#' @format A data frame with 237 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Response}{a factor with levels \code{A} \code{B}
-#' \code{C}} 
-#' \item{For}{a numeric vector} 
-#' \item{Against}{a numeric vector} 
-#' \item{undecide}{a numeric vector} 
+#' \item{choice}{a factor with levels \code{A}, \code{B}, and \code{C}} 
+#' \item{response}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Referend)
-#' attach(Referend)
-#' chisq.test(Referend[,2:4])
-#' detach(Referend)
+#' T1 <- xtabs(~choice + response, data = Referend)
+#' T1
+#' chisq.test(T1)
+#' chisq.test(T1)$expected
 #' 
-NULL
+"Referend"
 
 
 
@@ -7427,27 +7334,21 @@ NULL
 #' 
 #' @name Region
 #' @docType data
-#' @format A data frame with 48 observations on the following 6 variables.
+#' @format A data frame/tibble with 48 observations on the following 3 variables.
 #' \describe{
-#'  \item{West}{a numeric vector} 
-#'  \item{Central}{a numeric vector} 
-#'  \item{East}{a numeric vector} 
-#'  \item{Index}{a numeric vector} 
-#'  \item{Region}{a numeric vector}
-#'  \item{Ranks}{a numeric vector} 
+#'  \item{pollution}{pollution index} 
+#'  \item{region}{region of a county (\code{west}, \code{central}, and \code{east})}
+#'  \item{ranks}{ranked values of \code{pollution}} 
 #'  }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Region)
-#' attach(Region)
-#' boxplot(Index~Region)
-#' anova(lm(Index~as.factor(Region)))
-#' detach(Region)
+#' boxplot(pollution ~ region, data = Region)
+#' anova(lm(pollution ~ region, data = Region))
 #' 
-NULL
+"Region"
 
 
 
@@ -7460,27 +7361,24 @@ NULL
 #' 
 #' @name Register
 #' @docType data
-#' @format A data frame with 9 observations on the following 4 variables.
+#' @format A data frame/tibble with 9 observations on the following 2 variables.
 #' \describe{ 
-#' \item{age}{a numeric vector} 
-#' \item{cost}{a numeric vector} 
-#' \item{SRES1}{a numeric vector}
-#' \item{FITS1}{a numeric vector} 
+#' \item{age}{age of cash register (in years)} 
+#' \item{cost}{maintenance cost of cash register (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Register)
-#' attach(Register)
-#' plot(age,cost,main="Exercise 2.3")
-#' model <- lm(cost~age)
+#' plot(cost ~ age, data = Register)
+#' model <- lm(cost ~ age, data = Register)
 #' abline(model)
-#' plot(age,resid(model))
-#' detach(Register)
+#' predict(model, newdata = data.frame(age = c(5, 10)))
+#' plot(model, which = 1)
+#' rm(model)
 #' 
-NULL
+"Register"
 
 
 
@@ -7493,28 +7391,26 @@ NULL
 #' 
 #' @name Rehab
 #' @docType data
-#' @format A data frame with 20 observations on the following 3 variables.
+#' @format A data frame/tibble with 20 observations on the following 4 variables.
 #' \describe{ 
-#' \item{Psych1}{a numeric vector} 
-#' \item{Psych2}{a numeric vector} 
-#' \item{differ}{a numeric vector} 
+#' \item{inmate}{inmate identification number} 
+#' \item{psych1}{rating from first psychiatrist on the inmates rehabilative potential} 
+#' \item{psych2}{rating from second psychiatrist on the inmates rehabilative potential} 
+#' \item{differ}{\code{psych1} - \code{psych2}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Rehab)
-#' attach(Rehab)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' boxplot(Psych1,Psych2,names=c("Psychiatrist 1","Psychiatrist 2"),
-#' col=c("pink","lightblue"))
-#' t.test(Psych1,Psych2,paired=TRUE)
-#' detach(Rehab)
+#' boxplot(Rehab$differ)
+#' qqnorm(Rehab$differ)
+#' qqline(Rehab$differ)
+#' t.test(Rehab$differ)
+#' # Or
+#' t.test(Rehab$psych1, Rehab$psych2, paired = TRUE)
 #' 
-NULL
+"Rehab"
 
 
 
@@ -7527,24 +7423,24 @@ NULL
 #' 
 #' @name Remedial
 #' @docType data
-#' @format A data frame with 42 observations on the following 2 variables.
+#' @format A data frame/tibble with 84 observations on the following 2 variables.
 #' \describe{ 
-#' \item{female}{a numeric vector} 
-#' \item{male}{a numeric vector} 
+#' \item{gender}{a character variable with values \code{female} and \code{male}} 
+#' \item{score}{math placement score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Remedial)
-#' attach(Remedial)
-#' boxplot(female,male,col=c("blue","red"))
-#' wilcox.test(female,male,conf.int=TRUE)
-#' t.test(female,male)
-#' detach(Remedial)
+#' boxplot(score ~ gender, data = Remedial, 
+#' col = c("purple", "blue"))
+#' t.test(score ~ gender, data = Remedial, conf.level = 0.98)
+#' t.test(score ~ gender, data = Remedial, conf.level = 0.98)$conf
+#' wilcox.test(score ~ gender, data = Remedial, 
+#'             conf.int = TRUE, conf.level = 0.98)
 #' 
-NULL
+"Remedial"
 
 
 
@@ -7557,21 +7453,20 @@ NULL
 #' 
 #' @name Rentals
 #' @docType data
-#' @format A data frame with 45 observations on the following variable.
+#' @format A data frame/tibble with 45 observations on the following variable.
 #' \describe{ 
-#' \item{rent}{a numeric vector} 
+#' \item{rent}{weekly apartment rental price (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Rentals)
-#' attach(Rentals)
-#' EDA(rent)
-#' detach(Rentals)
+#' stem(Rentals$rent)
+#' sum(Rentals$rent < mean(Rentals$rent) - 3*sd(Rentals$rent) | 
+#'    Rentals$rent > mean(Rentals$rent) + 3*sd(Rentals$rent))
 #' 
-NULL
+"Rentals"
 
 
 
@@ -7584,22 +7479,19 @@ NULL
 #' 
 #' @name Repair
 #' @docType data
-#' @format A data frame with 22 observations on the following variable.
+#' @format A data frame/tibble with 22 observations on the following variable.
 #' \describe{ 
-#' \item{time}{a numeric vector} 
+#' \item{time}{time to repair a wrecked in car (in hours)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Repair)
-#' attach(Repair)
-#' stem(time)
-#' SIGN.test(time,conf.level=.98)
-#' detach(Repair)
+#' stem(Repair$time)
+#' BSDA::SIGN.test(Repair$time, conf.level = 0.98)
 #' 
-NULL
+"Repair"
 
 
 
@@ -7613,22 +7505,22 @@ NULL
 #' 
 #' @name Retail
 #' @docType data
-#' @format A data frame with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with 10 observations on the following 2 variables.
 #' \describe{ 
-#' \item{months}{a numeric vector}
-#' \item{sales}{a numeric vector} 
+#' \item{months}{length of employment (in months)}
+#' \item{sales}{employee gross sales (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Retail)
-#' attach(Retail)
-#' summary(lm(sales~months))
-#' detach(Retail)
+#' plot(sales ~ months, data = Retail)
+#' model <- lm(sales ~ months, data = Retail)
+#' abline(model)
+#' summary(model)
 #' 
-NULL
+"Retail"
 
 
 
@@ -7641,32 +7533,19 @@ NULL
 #' 
 #' @name Ronbrown1
 #' @docType data
-#' @format A data frame with 75 observations on the following 12 variables.
+#' @format A data frame/tibble with 75 observations on the following 2 variables.
 #' \describe{ 
-#' \item{depth}{a numeric vector} 
-#' \item{downtemp1}{a numeric vector} 
-#' \item{downtemp2}{a numeric vector}
-#' \item{downsalinity1}{a numeric vector}
-#' \item{downsalinity2}{a numeric vector} 
-#' \item{downdensity}{a numeric vector} 
-#' \item{C7}{a numeric vector} 
-#' \item{uptemp1}{a numeric vector} 
-#' \item{uptemp2}{a numeric vector}
-#' \item{upsalinity1}{a numeric vector} 
-#' \item{upsalinity2}{a numeric vector} 
-#' \item{updensity}{a numeric vector} 
+#' \item{depth}{ocen depth (in meters)} 
+#' \item{temperature}{ocean temperature (in Celsius)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Ronbrown1)
-#' attach(Ronbrown1)
-#' plot(depth,downtemp1)
-#' detach(Ronbrown1)
+#' plot(temperature ~ depth, data = Ronbrown1, ylab = "Temperature")
 #' 
-NULL
+"Ronbrown1"
 
 
 
@@ -7679,27 +7558,24 @@ NULL
 #' 
 #' @name Ronbrown2
 #' @docType data
-#' @format A data frame with 150 observations on the following 6 variables.
+#' @format A data frame/tibble with 150 observations on the following 3 variables.
 #' \describe{ 
-#' \item{depth}{a numeric vector}
-#' \item{primarytemp}{a numeric vector} 
-#' \item{secondarytemp}{a numeric vector} 
-#' \item{primarysalinity}{a numeric vector}
-#' \item{secondarysalinity}{a numeric vector} 
-#' \item{density}{a numeric vector} 
+#' \item{depth}{ocean depth (in meters)}
+#' \item{temperature}{ocean temperature (in Celcius)} 
+#' \item{salinity}{ocean salinity level} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Ronbrown2)
-#' attach(Ronbrown2)
-#' plot(depth,primarysalinity,xlab="Depth",ylab="Salinity",
-#' main="Example 2.4",col="tomato")
-#' detach(Ronbrown2)
+#' plot(salinity ~ depth, data = Ronbrown2)
+#' model <- lm(salinity ~ depth, data = Ronbrown2)
+#' summary(model)
+#' plot(model, which = 1)
+#' rm(model)
 #' 
-NULL
+"Ronbrown2"
 
 
 
@@ -7707,30 +7583,30 @@ NULL
 
 #' Social adjustment scores for a rural group and a city group of children
 #' 
-#' Data for Exercise 7.16
+#' Data for Example 7.16
 #' 
 #' 
 #' @name Rural
 #' @docType data
-#' @format A data frame with 33 observations on the following 4 variables.
+#' @format A data frame/tibble with 33 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Rural}{a numeric vector} 
-#' \item{City}{a numeric vector} 
-#' \item{score}{a numeric vector} 
-#' \item{code}{a numeric vector} 
+#' \item{score}{child's social adjustment score} 
+#' \item{area}{character variable with values \code{city} and \code{rural}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Rural)
-#' attach(Rural)
-#' wilcox.test(score~code)
-#' wilcox.test(Rural,City)
-#' detach(Rural)
+#' boxplot(score ~ area, data = Rural)
+#' wilcox.test(score ~ area, data = Rural)
+#' \dontrun{
+#' Rural <- dplyr::mutate(Rural, r = rank(score))
+#' Rural
+#' t.test(r ~ area, data = Rural)
+#' }
 #' 
-NULL
+"Rural"
 
 
 
@@ -7743,18 +7619,19 @@ NULL
 #' 
 #' @name Salary
 #' @docType data
-#' @format A data frame with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on the following variable.
 #' \describe{ 
-#' \item{salary}{a numeric vector} 
+#' \item{salary}{starting salary for Ph.D. psycholgists} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' data(Salary)
+#' qqnorm(Salary$salary, pch = 19, col = "purple")
+#' qqline(Salary$salary, col = "blue")
 #' 
-NULL
+"Salary"
 
 
 
@@ -7767,22 +7644,25 @@ NULL
 #' 
 #' @name Salinity
 #' @docType data
-#' @format A data frame with 48 observations on the following variable.
+#' @format A data frame/tibble with 48 observations on the following variable.
 #' \describe{ 
-#' \item{salinity}{a numeric vector} 
+#' \item{salinity}{surface-water salinity value} 
 #' }
+#' 
+#' @source J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd ed. (New York: John Wiley, 1986)
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Salinity)
-#' attach(Salinity)
-#' EDA(salinity)
-#' t.test(salinity,conf.level=.99)$conf
-#' detach(Salinity)
+#' stem(Salinity$salinity)
+#' qqnorm(Salinity$salinity, pch = 19, col = "purple")
+#' qqline(Salinity$salinity, col = "blue")
+#' t.test(Salinity$salinity, conf.level = 0.99)
+#' t.test(Salinity$salinity, conf.level = 0.99)$conf
 #' 
-NULL
+"Salinity"
 
 
 
@@ -7796,48 +7676,36 @@ NULL
 #' 
 #' @name Sat
 #' @docType data
-#' @format A data frame with 51 observations on the following 16 variables.
+#' @format A data frame/tibble with 102 observations on the following 7 variables.
 #' \describe{ 
-#' \item{state}{a factor with levels \code{alabama}
-#' \code{alaska} \code{arizona} \code{arkansas} \code{california}
-#' \code{colorado} \code{connecticut} \code{delaware} \code{dist of columbia}
-#' \code{florida} \code{georgia} \code{hawaii} \code{idaho} \code{illinois}
-#' \code{indiana} \code{iowa} \code{kansas} \code{kentucky} \code{louisiana}
-#' \code{maine} \code{maryland} \code{massachusetts} \code{michigan}
-#' \code{minnesota} \code{mississippi} \code{missouri} \code{montana}
-#' \code{nebraska} \code{nevada} \code{new hampshire} \code{new jersey}
-#' \code{new mexico} \code{new york} \code{north carolina} \code{north dakota}
-#' \code{ohio} \code{oklahoma} \code{oregon} \code{pennsylvania} \code{rhode
-#' island} \code{south carolina} \code{south dakota} \code{tennessee}
-#' \code{texas} \code{utah} \code{vermont} \code{virginia} \code{washington}
-#' \code{west virginia} \code{wisconsin} \code{wyoming}}
-#' \item{verbal94}{a numeric vector} 
-#' \item{math94}{a numeric vector} 
-#' \item{total94}{a numeric vector} 
-#' \item{percent94}{a numeric vector} 
-#' \item{code94}{a numeric vector}
-#' \item{expend94}{a numeric vector} 
-#' \item{verbal95}{a numeric vector} 
-#' \item{math95}{a numeric vector} 
-#' \item{total95}{a numeric vector} 
-#' \item{verbal99}{a numeric vector}
-#' \item{math99}{a numeric vector} 
-#' \item{total99}{a numeric vector} 
-#' \item{percent99}{a numeric vector} 
-#' \item{code99}{a numeric vector} 
-#' \item{expend99}{a numeric vector} 
+#' \item{state}{U.S. state}
+#' \item{verbal}{verbal SAT score} 
+#' \item{math}{math SAT score} 
+#' \item{total}{combined verbal and math SAT score} 
+#' \item{percent}{percent of high school seniors taking the SAT} 
+#' \item{expend}{state expenditure per student (in dollars)} 
+#' \item{year}{year} 
 #' }
+#' 
+#' @source \emph{The 2000 World Almanac and Book of Facts}, Funk and Wagnalls Corporation, New Jersey.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Sat)
-#' attach(Sat)
-#' pairs(Sat)
-#' detach(Sat)
+#' Sat94 <- Sat[Sat$year == 1994, ]
+#' Sat94
+#' Sat99 <- subset(Sat, year == 1999)
+#' Sat99
+#' stem(Sat99$total)
+#' plot(total ~ percent, data = Sat99)
+#' model <- lm(total ~ percent, data = Sat99)
+#' abline(model, col = "blue")
+#' summary(model)
+#' rm(model)
 #' 
-NULL
+"Sat"
 
 
 
@@ -7851,27 +7719,24 @@ NULL
 #' 
 #' @name Saving
 #' @docType data
-#' @format A data frame with 75 observations on the following 6 variables.
+#' @format A data frame/tibble with 65 observations on the following 2 variables.
 #' \describe{ 
-#' \item{calif}{a numeric vector} 
-#' \item{newyork}{a numeric vector} 
-#' \item{texas}{a numeric vector} 
-#' \item{PAR}{a numeric vector} 
-#' \item{state}{a numeric vector}
-#' \item{ranks}{a numeric vector}
+#' \item{par}{problem-asset-ratio for Savings & Loans that were listed as being financially troubled in 1992} 
+#' \item{state}{U.S. state}
 #'  }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Saving)
-#' attach(Saving)
-#' boxplot(PAR~state)
-#' kruskal.test(PAR~as.factor(state))
-#' detach(Saving)
+#' boxplot(par ~ state, data = Saving)
+#' boxplot(par ~ state, data = Saving, log = "y")
+#' model <- aov(par ~ state, data = Saving)
+#' summary(model)
+#' plot(TukeyHSD(model))
+#' kruskal.test(par ~ factor(state), data = Saving)
 #' 
-NULL
+"Saving"
 
 
 
@@ -7885,23 +7750,27 @@ NULL
 #' 
 #' @name Scales
 #' @docType data
-#' @format A data frame with 20 observations on the following 2 variables.
+#' @format A data frame/tibble with 20 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Brand}{a factor with levels \code{A} \code{B}
-#' \code{C} \code{D}} 
-#' \item{reading}{a numeric vector} 
+#' \item{brand}{variable indicating brand of bathroom scale (\code{A}, \code{B}, \code{C}, or \code{D})} 
+#' \item{reading}{recorded value (in pounds) of a 100 pound weight} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Scales)
-#' attach(Scales)
-#' boxplot(reading~Brand,ylab="Reading",xlab="Brand",main="Problem 1.89")
-#' detach(Scales)
+#' boxplot(reading ~ brand, data = Scales, col = rainbow(4), 
+#' ylab = "Weight (lbs)")
+#' \dontrun{
+#' ggplot2::ggplot(data = Scales, aes(x = brand, y = reading, fill = brand)) + 
+#'   geom_boxplot() + 
+#'     labs(y = "weight (lbs)") +
+#'      theme_bw() + 
+#'        theme(legend.position = "none") 
+#'        }
 #' 
-NULL
+"Scales"
 
 
 
@@ -7915,22 +7784,21 @@ NULL
 #' 
 #' @name Schizop2
 #' @docType data
-#' @format A data frame with 17 observations on the following variable.
+#' @format A data frame/tibble with 17 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{schizophrenics score on a second standardized exam} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Schizop2)
-#' attach(Schizop2)
-#' EDA(score)
-#' SIGN.test(score,md=22,alternative="greater")
-#' detach(Schizop2)
+#' hist(Schizop2$score, xlab = "score on standardized test after a tranquilizer", 
+#' main = "Exercise 6.99", breaks = 10, col = "orange")
+#' BSDA::EDA(Schizop2$score)
+#' BSDA::SIGN.test(Schizop2$score, md = 22, alternative = "greater")
 #' 
-NULL
+"Schizop2"
 
 
 
@@ -7944,22 +7812,21 @@ NULL
 #' 
 #' @name Schizoph
 #' @docType data
-#' @format A data frame with 13 observations on the following variable.
+#' @format A data frame/tibble with 13 observations on the following variable.
 #' \describe{ 
-#' \item{score}{a numeric vector} 
+#' \item{score}{schizophrenics score on a standardized exam one hour after recieving a specified dose of a tranqilizer.} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Schizoph)
-#' attach(Schizoph)
-#' EDA(score)
-#' t.test(score,mu=20)
-#' detach(Schizoph)
+#' hist(Schizoph$score, xlab = "score on standardized test", 
+#' main = "Example 6.10", breaks = 10, col = "orange")
+#' BSDA::EDA(Schizoph$score)
+#' t.test(Schizoph$score, mu = 20)
 #' 
-NULL
+"Schizoph"
 
 
 
@@ -7972,27 +7839,26 @@ NULL
 #' 
 #' @name Seatbelt
 #' @docType data
-#' @format A data frame with 2 observations on the following 5 variables.
+#' @format A data frame/tibble with 86,759 observations on the following 2 variables.
 #' \describe{ 
-#' \item{seatbelt}{a factor with levels \code{no}
-#' \code{yes}} 
-#' \item{None}{a numeric vector} 
-#' \item{Minimal}{a numeric vector} 
-#' \item{Minor}{a numeric vector}
-#' \item{Major}{a numeric vector} 
+#' \item{seatbelt}{a factor with levels \code{No}
+#' \code{Yes}} 
+#' \item{injuries}{a factor with levels \code{None}, \code{Minimal}, \code{Minor}, or \code{Major} indicating the extent of the drivers injuries.a numeric vector}
 #' }
+#' 
+#' @source Jobson, J. (1982), \emph{Applied Multivariate Data Analysis}, Springer-Verlag, New York, p. 18
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Seatbelt)
-#' attach(Seatbelt)
-#' Seatbelt
-#' chisq.test(Seatbelt[,2:5])
-#' detach(Seatbelt)
+#' T1 <- xtabs(~seatbelt + injuries, data = Seatbelt)
+#' T1
+#' chisq.test(T1)
+#' rm(T1)
 #' 
-NULL
+"Seatbelt"
 
 
 
@@ -8006,28 +7872,24 @@ NULL
 #' 
 #' @name Selfdefe
 #' @docType data
-#' @format A data frame with 9 observations on the following 3 variables.
+#' @format A data frame/tibble with 9 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Woman}{a numeric vector} 
-#' \item{Before}{a numeric vector} 
-#' \item{After}{a numeric vector} 
+#' \item{woman}{number identifying the woman} 
+#' \item{before}{before the course self-confidence score} 
+#' \item{after}{after the course self-confidence score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Selfdefe)
-#' attach(Selfdefe)
-#' DIF <- After-Before
-#' qqnorm(DIF)
-#' qqline(DIF)
-#' shapiro.test(DIF)
-#' t.test(After,Before,paired=TRUE,alternative="greater")
-#' detach(Selfdefe)
-#' remove(DIF)
+#' Selfdefe$differ <- Selfdefe$after - Selfdefe$before
+#' Selfdefe
+#' t.test(Selfdefe$differ, alternative = "greater")
+#' t.test(Selfdefe$after, Selfdefe$before, 
+#'       paired = TRUE, alternative = "greater")
 #' 
-NULL
+"Selfdefe"
 
 
 
@@ -8040,22 +7902,21 @@ NULL
 #' 
 #' @name Senior
 #' @docType data
-#' @format A data frame with 31 observations on the following variable.
+#' @format A data frame/tibble with 31 observations on the following variable.
 #' \describe{ 
-#' \item{reaction}{a numeric vector} 
+#' \item{reaction}{reaction time for senior citizens applying for a driver's license renewal} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Senior)
-#' attach(Senior)
-#' fivenum(reaction)
-#' boxplot(reaction,horizontal=TRUE,main="Problem 1.83 Part d.",col="orange")
-#' detach(Senior)
+#' stem(Senior$reaction)
+#' fivenum(Senior$reaction)
+#' boxplot(Senior$reaction, main = "Problem 1.83, part d",
+#'         horizontal = TRUE, col = "purple")
 #' 
-NULL
+"Senior"
 
 
 
@@ -8068,26 +7929,27 @@ NULL
 #' 
 #' @name Sentence
 #' @docType data
-#' @format A data frame with 41 observations on the following variable.
+#' @format A data frame/tibble with 41 observations on the following variable.
 #' \describe{ 
-#' \item{months}{a numeric vector} 
+#' \item{months}{sentence length (in months) for prisoners convicted of homocide} 
 #' }
+#' 
+#' @source U.S. Department of Justice, Bureau of Justice Statistics, \emph{Prison Sentences
+#' and Time Served for Violence}, NCJ-153858, April 1995
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Sentence)
-#' attach(Sentence)
-#' stem(months)
-#' EDA(months)
-#' ll <- mean(months)-2*sd(months)
-#' ul <- mean(months)+2*sd(months)
-#' limits <- c(ll,ul)
+#' stem(Sentence$months)
+#' ll <- mean(Sentence$months)-2*sd(Sentence$months)
+#' ul <- mean(Sentence$months)+2*sd(Sentence$months)
+#' limits <- c(ll, ul)
 #' limits
-#' detach(Sentence)
+#' rm(ul, ll, limits)
 #' 
-NULL
+"Sentence"
 
 
 
@@ -8101,28 +7963,22 @@ NULL
 #' 
 #' @name Shkdrug
 #' @docType data
-#' @format A data frame with 64 observations on the following 6 variables.
+#' @format A data frame/tibble with 64 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Drug.Shk}{a numeric vector}
-#' \item{Drug.NoS}{a numeric vector} 
-#' \item{NoDrug.S}{a numeric vector} 
-#' \item{NoDg.NoS}{a numeric vector} 
-#' \item{Treatment}{a factor with levels \code{Drug/NoS} \code{Drug/Shk} \code{NoDg/NoS}
-#' \code{NoDrug/S}} 
-#' \item{Response}{a numeric vector} 
+#' \item{treatment}{type of treament \code{Drug/NoS}, \code{Drug/Shk}, \code{NoDg/NoS}, or \code{NoDrug/S}}
+#' \item{response}{number of tasks completed in a 10-minute period}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Shkdrug)
-#' attach(Shkdrug)
-#' boxplot(Response~Treatment)
-#' anova(lm(Response~Treatment))
-#' detach(Shkdrug)
+#' boxplot(response ~ treatment, data = Shkdrug)
+#' model <- lm(response ~ treatment, data = Shkdrug)
+#' anova(model)
+#' rm(model)
 #' 
-NULL
+"Shkdrug"
 
 
 
@@ -8135,28 +7991,24 @@ NULL
 #' 
 #' @name Shock
 #' @docType data
-#' @format A data frame with 9 observations on the following 3 variables.
+#' @format A data frame/tibble with 27 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Group1}{a numeric vector} 
-#' \item{Group2}{a numeric vector} 
-#' \item{Group3}{a numeric vector} 
+#' \item{group}{grouping variable with values of \code{Group1} (no shock), \code{Group2} (medium shock), 
+#' and \code{Group3} (severe shock)} 
+#' \item{attempts}{number of attempts to complete a task}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Shock)
-#' attach(Shock)
-#' STACKED <-stack(Shock)
-#' STACKED[1:5,]
-#' boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-#' anova(lm(values~ind,data=STACKED))
-#' remove(STACKED)
-#' detach(Shock)
+#' boxplot(attempts ~ group, data = Shock)
+#' model <- lm(attempts ~ group, data = Shock)
+#' anova(model)
+#' rm(model)
 #' 
 #' 
-NULL
+"Shock"
 
 
 
@@ -8169,22 +8021,22 @@ NULL
 #' 
 #' @name Shoplift
 #' @docType data
-#' @format A data frame with 8 observations on the following 2 variables.
+#' @format A data frame/tibble with 8 observations on the following 2 variables.
 #' \describe{ 
-#' \item{sales}{a numeric vector} 
-#' \item{loss}{a numeric vector} 
+#' \item{sales}{sales (in 1000 dollars)} 
+#' \item{loss}{loss (in 100 dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Shoplift)
-#' attach(Shoplift)
-#' summary(lm(loss~sales))
-#' detach(Shoplift)
+#' plot(loss ~ sales, data = Shoplift)
+#' model <- lm(loss ~ sales, data = Shoplift)
+#' summary(model)
+#' rm(model)
 #' 
-NULL
+"Shoplift"
 
 
 
@@ -8197,33 +8049,22 @@ NULL
 #' 
 #' @name Short
 #' @docType data
-#' @format A data frame with 158 observations on the following 10 variables.
-#' \describe{ 
-#' \item{Sample.1}{a numeric vector}
-#' \item{Sample.2}{a numeric vector} 
-#' \item{Sample.3}{a numeric vector} 
-#' \item{Sample.4}{a numeric vector} 
-#' \item{Sample.5}{a numeric vector} 
-#' \item{Sample.6}{a numeric vector}
-#' \item{Sample.7}{a numeric vector} 
-#' \item{Sample.8}{a numeric vector} 
-#' \item{Parallax}{a numeric vector} 
-#' \item{Sample}{a numeric vector} 
+#' @format A data frame/tibble with 158 observations on the following 10 variables.
+#' \describe{
+#' \item{sample}{sample number} 
+#' \item{parallax}{parallax measurements (seconds of a degree)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Short)
-#' attach(Short)
-#' hist(Parallax)
-#' EDA(Parallax)
-#' SIGN.test(Parallax,md=8.798)
-#' t.test(Parallax,mu=8.798)
-#' detach(Short)
+#' hist(Short$parallax, main = "Problem 6.65", 
+#' xlab = "", col = "orange")
+#' BSDA::SIGN.test(Short$parallax, md = 8.798)
+#' t.test(Short$parallax, mu = 8.798)
 #' 
-NULL
+"Short"
 
 
 
@@ -8237,24 +8078,22 @@ NULL
 #' 
 #' @name Shuttle
 #' @docType data
-#' @format A data frame with 15 observations on the following 2 variables.
+#' @format A data frame/tibble with 15 observations on the following 2 variables.
 #' \describe{ 
-#' \item{shuttle}{a numeric vector} 
-#' \item{autos}{a numeric vector} 
+#' \item{users}{number of shuttle riders} 
+#' \item{autos}{number of automobiles in the downtown area} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Shuttle)
-#' attach(Shuttle)
-#' model <- lm(autos~shuttle)
+#' plot(autos ~ users, data = Shuttle)
+#' model <- lm(autos ~ users, data = Shuttle)
 #' summary(model)
-#' detach(Shuttle)
-#' remove(model)
+#' rm(model)
 #' 
-NULL
+"Shuttle"
 
 
 
@@ -8268,41 +8107,27 @@ NULL
 #' 
 #' @name Simpson
 #' @docType data
-#' @format A data frame with 100 observations on the following 15 variables.
+#' @format A data frame/tibble with 100 observations on the following 3 variables.
 #' \describe{ 
-#' \item{gpa}{a numeric vector} 
-#' \item{spor}{a numeric vector} 
-#' \item{gender}{a numeric vector}
-#' \item{gpamale}{a numeric vector} 
-#' \item{sptmale}{a numeric vector} 
-#' \item{gpafemal}{a numeric vector} 
-#' \item{sptfemal}{a numeric vector} 
-#' \item{bbgpa}{a numeric vector}
-#' \item{genderbb}{a numeric vector} 
-#' \item{sogpa}{a numeric vector} 
-#' \item{genderso}{a numeric vector} 
-#' \item{tkgpa}{a numeric vector} 
-#' \item{gendertk}{a numeric vector}
-#' \item{gradept}{a numeric vector} 
-#' \item{gender2}{a numeric vector} 
+#' \item{gpa}{grade point average} 
+#' \item{sport}{sport played (basketball, soccer, or track)} 
+#' \item{gender}{athlete sex (male, female)}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Simpson)
-#' attach(Simpson)
-#' par(mfrow=c(1,2))
-#' boxplot(gpa~gender,col=c("blue","pink"),names=c("Male","Female"),
-#' main="GPA versus Gender",xlab="Gender",ylab="Grade Point Average")
-#' boxplot(gradept~gender2,las=2,col=c("blue","pink"),
-#' names=c("M-BBALL","F-BBALL","M-SOCC","F-SOCC","M-TRAC","F-TRAC"),
-#' ylab="Grade Point Average",main="GPA vs Gender by Sports")
-#' par(mfrow=c(1,1))
-#' detach(Simpson)
+#' boxplot(gpa ~ gender, data = Simpson)
+#' boxplot(gpa ~ sport, data = Simpson)
+#' \dontrun{
+#' ggplot2::ggplot(data = Simpson, aes(x = gender, y = gpa, 
+#'                                     fill = gender)) +
+#'                                       geom_boxplot() + 
+#'                                         facet_grid(.~sport) + theme_bw()
+#'                                         }
 #' 
-NULL
+"Simpson"
 
 
 
@@ -8315,25 +8140,23 @@ NULL
 #' 
 #' @name Situp
 #' @docType data
-#' @format A data frame with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on the following variable.
 #' \describe{ 
-#' \item{number}{a numeric vector} 
+#' \item{number}{maximum number of situps completed in an exercise class after 1 month in the program} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Situp)
-#' attach(Situp)
-#' stem(number)
-#' hist(number,breaks=seq(0,70,10))
-#' hist(number,breaks=seq(0,70,10),right=FALSE,col="blue",prob=TRUE,
-#' main="Problems 1.46 & 1.47")
-#' lines(density(number),col="red",lwd=3)
-#' detach(Situp)
+#' stem(Situp$number)
+#' hist(Situp$number, breaks = seq(0, 70, 10), right = FALSE)
+#' hist(Situp$number, breaks = seq(0, 70, 10), right = FALSE, 
+#'      freq = FALSE, col = "pink", main = "Problem 1.47", 
+#'           xlab = "Maximum number of situps")
+#'           lines(density(Situp$number), col = "red")
 #' 
-NULL
+"Situp"
 
 
 
@@ -8346,23 +8169,20 @@ NULL
 #' 
 #' @name Skewed
 #' @docType data
-#' @format A data frame with 21 observations on the following 2 variables.
+#' @format A data frame/tibble with 21 observations on the following 2 variables.
 #' \describe{ 
-#' \item{C1}{a numeric vector} 
-#' \item{C2}{a numeric vector} 
+#' \item{C1}{values from a sample of size 16 from a particular population} 
+#' \item{C2}{values from a sample of size 14 from a particular population} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Skewed)
-#' attach(Skewed)
-#' boxplot(C1,C2)
-#' wilcox.test(C1,C2)
-#' detach(Skewed)
+#' boxplot(Skewed$C1, Skewed$C2, col = c("pink", "lightblue"))
+#' wilcox.test(Skewed$C1, Skewed$C2)
 #' 
-NULL
+"Skewed"
 
 
 
@@ -8375,25 +8195,27 @@ NULL
 #' 
 #' @name Skin
 #' @docType data
-#' @format A data frame with 11 observations on the following 2 variables.
+#' @format A data frame/tibble with 11 observations on the following 4 variables.
 #' \describe{ 
-#' \item{close}{a numeric vector} 
-#' \item{poor}{a numeric vector} 
+#' \item{patient}{patient identification number}
+#' \item{close}{graft survival time in days for a closely matched skin graft on the same burn patient} 
+#' \item{poor}{graft survival time in days for a poorly matched skin graft on the same burn patient} 
+#' \item{differ}{difference between close and poor (in days)}
 #' }
+#' 
+#' @source R. F. Woolon and P. A. Lachenbruch, "Rank Tests for Censored Matched Pairs,"
+#' \emph{Biometrika}, 67(1980), 597-606.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Skin)
-#' attach(Skin)
-#' DIFF <- close-poor
-#' stem(DIFF)
-#' EDA(DIFF)
-#' remove(DIFF)
-#' detach(Skin)
+#' stem(Skin$differ)
+#' boxplot(Skin$differ)
+#' summary(Skin$differ)
 #' 
-NULL
+"Skin"
 
 
 
@@ -8407,21 +8229,25 @@ NULL
 #' 
 #' @name Slc
 #' @docType data
-#' @format A data frame with 190 observations on the following variable.
+#' @format A data frame/tibble with 190 observations on the following variable.
 #' \describe{ 
-#' \item{SLC}{a numeric vector} 
+#' \item{slc}{Red blood cell sodium-lithium countertransport} 
 #' }
+#' 
+#' @source Roeder, K., (1994), "A Graphical Technique for Determining the Number of Components
+#' in a Mixture of Normals," \emph{Journal of the American Statistical Association, 89}, 497-495.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Slc)
-#' attach(Slc)
-#' EDA(SLC)
-#' detach(Slc)
+#' BSDA::EDA(Slc$slc)
+#' hist(Slc$slc, freq = FALSE, xlab = "sodium lithium countertransport",
+#'      main = "", col = "lightblue")
+#'      lines(density(Slc$slc), col = "purple")
 #' 
-NULL
+"Slc"
 
 
 
@@ -8434,32 +8260,37 @@ NULL
 #' 
 #' @name Smokyph
 #' @docType data
-#' @format A data frame with 75 observations on the following 5 variables.
+#' @format A data frame/tibble with 75 observations on the following 3 variables.
 #' \describe{ 
-#' \item{waterph}{a numeric vector} 
-#' \item{code}{a factor with levels \code{high} \code{low}} 
-#' \item{elev}{a numeric vector} 
-#' \item{SRES1}{a numeric vector} 
-#' \item{FITS1}{a numeric vector} 
+#' \item{waterph}{water sample pH level} 
+#' \item{code}{charater variable with values \code{low} (elevation below 0.6 miles), and \code{high} (elevation above 0.6 miles)} 
+#' \item{elev}{elevation in miles} 
 #' }
+#' 
+#' @source Schmoyer, R. L. (1994), Permutation Tests for Correlation in Regression Errors,
+#' \emph{Journal of the American Statistical Association, 89}, 1507-1516.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Smokyph)
-#' attach(Smokyph)
-#' t.test(waterph,mu=7)
-#' SIGN.test(waterph,md=7)
-#' tapply(waterph,code,mean)
-#' stripchart(waterph~code,method="stack",pch=19,col=c("red","blue"))
-#' qqnorm(waterph[code=="low"])
-#' qqnorm(waterph[code=="high"])
-#' t.test(waterph[code=="low"],waterph[code=="high"])
-#' t.test(waterph[code=="low"],waterph[code=="high"],conf.level=.90)$conf
-#' detach(Smokyph)
+#' summary(Smokyph$waterph)
+#' tapply(Smokyph$waterph, Smokyph$code, mean)
+#' stripchart(waterph ~ code, data = Smokyph, method = "stack",
+#'            pch = 19, col = c("red", "blue"))
+#'            t.test(Smokyph$waterph, mu = 7)
+#'            BSDA::SIGN.test(Smokyph$waterph, md = 7)
+#'            t.test(waterph ~ code, data = Smokyph, alternative = "less")
+#'            t.test(waterph ~ code, data = Smokyph, conf.level = 0.90)
+#'           \dontrun{
+#'            ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
+#'              geom_dotplot() + 
+#'                facet_grid(code ~ .) + 
+#'                  guides(fill = FALSE)
+#'                  }
 #' 
-NULL
+"Smokyph"
 
 
 
@@ -8472,25 +8303,26 @@ NULL
 #' 
 #' @name Snore
 #' @docType data
-#' @format A data frame with 2 observations on the following 5 variables.
+#' @format A data frame/tibble with 2,484 observations on the following 2 variables.
 #' \describe{ 
-#' \item{heart}{a factor with levels \code{no} \code{yes}}
-#' \item{Non}{a numeric vector} 
-#' \item{occasion}{a numeric vector} 
-#' \item{nearly}{a numeric vector} 
-#' \item{every}{a numeric vector} 
+#' \item{snore}{factor with levels \code{nonsnorer}, \code{ocassional snorer}, \code{nearly every night}, and \code{snores every night}}
+#' \item{heartdisease}{factor indicating whether the indiviudal has heart disease (\code{no} or \code{yes})} 
 #' }
+#' 
+#' @source Norton, P. and Dunn, E. (1985), Snoring as a Risk Factor for Disease, \emph{British Medical Journal, 291},
+#' 630-632.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Snore)
-#' attach(Snore)
-#' chisq.test(Snore[,2:5])
-#' detach(Snore)
+#' T1 <- xtabs(~ heartdisease + snore, data = Snore)
+#' T1
+#' chisq.test(T1)
+#' rm(T1)
 #' 
-NULL
+"Snore"
 
 
 
@@ -8503,24 +8335,22 @@ NULL
 #' 
 #' @name Snow
 #' @docType data
-#' @format A data frame with 34 observations on the following 4 variables.
+#' @format A data frame/tibble with 34 observations on the following 2 variables.
 #' \describe{ 
-#' \item{antarc}{a numeric vector} 
-#' \item{greenld}{a numeric vector} 
-#' \item{concent}{a numeric vector}
-#' \item{site}{a numeric vector} 
+#' \item{concent}{concentration of microparticles from melted snow (in parts per billion)}
+#' \item{site}{location of snow sample (\code{Antarctica} or \code{Greenland})} 
 #' }
+#' 
+#' @source Davis, J., \emph{Statistics and Data Analysis in Geology}, John Wiley, New York.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Snow)
-#' attach(Snow)
-#' boxplot(concent~site)
-#' detach(Snow)
+#' boxplot(concent ~ site, data = Snow, col = c("lightblue", "lightgreen"))
 #' 
-NULL
+"Snow"
 
 
 
@@ -8533,23 +8363,21 @@ NULL
 #' 
 #' @name Soccer
 #' @docType data
-#' @format A data frame with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on the following variable.
 #' \describe{ 
-#' \item{weight}{a numeric vector} 
+#' \item{weight}{soccer players weight (in pounds)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Soccer)
-#' attach(Soccer)
-#' stem(weight,scale=2)
-#' hist(weight,breaks=seq(110,210,10),col="orange",
-#' main="Problem 1.46 \n Weights of Soccer Players",right=FALSE)
-#' detach(Soccer)
+#' stem(Soccer$weight, scale = 2)
+#' hist(Soccer$weight, breaks = seq(110, 210, 10), col = "orange",
+#'      main = "Problem 1.46 \n Weights of Soccer Players", 
+#'           xlab = "weight (lbs)", right = FALSE)
 #' 
-NULL
+"Soccer"
 
 
 
@@ -8562,21 +8390,18 @@ NULL
 #' 
 #' @name Social
 #' @docType data
-#' @format A data frame with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on the following variable.
 #' \describe{ 
-#' \item{income}{a numeric vector} 
+#' \item{income}{annual income (in dollars) of North Carolina social workers with less than five years experience.} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Social)
-#' attach(Social)
-#' SIGN.test(income,md=27500,alternative="less")
-#' detach(Social)
+#' BSDA::SIGN.test(Social$income, md = 27500, alternative = "less")
 #' 
-NULL
+"Social"
 
 
 
@@ -8590,24 +8415,28 @@ NULL
 #' 
 #' @name Sophomor
 #' @docType data
-#' @format A data frame with 20 observations on the following 4 variables.
+#' @format A data frame/tibble with 20 observations on the following 4 variables.
 #' \describe{ 
-#' \item{Student}{a numeric vector} 
-#' \item{GPA}{a numeric vector} 
-#' \item{SAT}{a numeric vector} 
-#' \item{Exam}{a numeric vector} 
+#' \item{student}{student's identification number} 
+#' \item{gpa}{student's grade point average} 
+#' \item{sat}{student's SAT math score} 
+#' \item{exam}{student's final exam grade in college algebra } 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Sophomor)
-#' attach(Sophomor)
 #' cor(Sophomor)
-#' detach(Sophomor)
+#' plot(exam ~ gpa, data = Sophomor)
+#' \dontrun{
+#' ggplot2::ggplot(data = Sophomor, aes(x = gpa, y = exam)) + 
+#'   geom_point()
+#'   ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
+#'     geom_point()
+#'     }
 #' 
-NULL
+"Sophomor"
 
 
 
@@ -8620,21 +8449,18 @@ NULL
 #' 
 #' @name South
 #' @docType data
-#' @format A data frame with 31 observations on the following variable.
+#' @format A data frame/tibble with 31 observations on the following variable.
 #' \describe{ 
-#' \item{rate}{a numeric vector} 
+#' \item{rate}{murder rate per 100,000 people} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(South)
-#' attach(South)
-#' boxplot(rate,col="yellow",main="Problem 1.83")
-#' detach(South)
+#' boxplot(South$rate, col = "gray", ylab = "Murder rate per 100,000 people")
 #' 
-NULL
+"South"
 
 
 
@@ -8647,28 +8473,23 @@ NULL
 #' 
 #' @name Speed
 #' @docType data
-#' @format A data frame with 15 observations on the following 4 variables.
+#' @format A data frame/tibble with 15 observations on the following 4 variables.
 #' \describe{ 
-#' \item{Before}{a numeric vector} 
-#' \item{After}{a numeric vector} 
-#' \item{differ}{a numeric vector}
-#' \item{signrnks}{a numeric vector} 
+#' \item{before}{reading comprehension score before taking a speed-reading course} 
+#' \item{after}{reading comprehension score after taking a speed-reading course} 
+#' \item{differ}{after - before (comprehension reading scores)}
+#' \item{signranks}{signed ranked differences} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Speed)
-#' attach(Speed)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' t.test(After,Before,paired=TRUE,alternative="greater")
-#' wilcox.test(After,Before,paired=TRUE,alternative="greater")
-#' detach(Speed)
+#' t.test(Speed$differ, alternative = "greater")
+#' t.test(Speed$signranks, alternative = "greater")
+#' wilcox.test(Speed$after, Speed$before, paired = TRUE, alternative = "greater")
 #' 
-NULL
+"Speed"
 
 
 
@@ -8681,22 +8502,20 @@ NULL
 #' 
 #' @name Spellers
 #' @docType data
-#' @format A data frame with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with 10 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Fourth}{a numeric vector} 
-#' \item{Colleag}{a numeric vector} 
+#' \item{teacher}{character variable with values \code{Fourth} and \code{Colleague}} 
+#' \item{score}{score on a standardized spelling test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Spellers)
-#' attach(Spellers)
-#' t.test(Fourth,Colleag,alternative="greater")
-#' detach(Spellers)
+#' boxplot(score ~ teacher, data = Spellers)
+#' t.test(score ~ teacher, data = Spellers)
 #' 
-NULL
+"Spellers"
 
 
 
@@ -8710,26 +8529,24 @@ NULL
 #' 
 #' @name Spelling
 #' @docType data
-#' @format A data frame with 9 observations on the following 3 variables.
+#' @format A data frame/tibble with 9 observations on the following 3 variables.
 #' \describe{ 
-#' \item{Before}{a numeric vector} 
-#' \item{After}{a numeric vector} 
-#' \item{differ}{a numeric vector} 
+#' \item{before}{spelling score before a 2-week course of instruction} 
+#' \item{after}{spelling score after a 2-week course of instruction} 
+#' \item{differ}{after - before (spelling score)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Spelling)
-#' attach(Spelling)
-#' qqnorm(differ)
-#' qqline(differ)
-#' shapiro.test(differ)
-#' t.test(After,Before,paired=TRUE,alternative="greater")
-#' detach(Spelling)
+#' qqnorm(Spelling$differ)
+#' qqline(Spelling$differ)
+#' shapiro.test(Spelling$differ)
+#' t.test(Spelling$before, Spelling$after, paired = TRUE)
+#' t.test(Spelling$differ)
 #' 
-NULL
+"Spelling"
 
 
 
@@ -8742,24 +8559,22 @@ NULL
 #' 
 #' @name Sports
 #' @docType data
-#' @format A data frame with 2 observations on the following variable.
+#' @format A data frame/tibble with 200 observations on the following 2 variables.
 #' \describe{ 
-#' \item{gender.football.basketbl.baseball.tennis}{a factor
-#' with levels \code{female 3.800000000e+001 2.100000000e+001 1.500000000e+001
-#' 2.600000000e+001} \code{male 3.300000000e+001 3.800000000e+001
-#' 2.400000000e+001 5.000000000e+000}} 
+#' \item{gender}{a factor with levels \code{male} and \code{female}}
+#' \item{sport}{a factor with levels \code{football}, \code{basketball}, \code{baseball}, and \code{tennis}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Sports)
-#' attach(Sports)
-#' Sports
-#' detach(Sports)
+#' T1 <- xtabs(~gender + sport, data = Sports)
+#' T1
+#' chisq.test(T1)
+#' rm(T1)
 #' 
-NULL
+"Sports"
 
 
 
@@ -8772,25 +8587,26 @@ NULL
 #' 
 #' @name Spouse
 #' @docType data
-#' @format A data frame with 4 observations on the following 3 variables.
+#' @format A data frame/tibble with 540 observations on the following 2 variables.
 #' \describe{ 
-#' \item{result}{a factor with levels \code{acquitted}
-#' \code{convicted} \code{not prosecuted} \code{pleaded guilty}}
-#' \item{husband}{a numeric vector} 
-#' \item{wife}{a numeric vector} 
+#' \item{result}{a factor with levels \code{not prosecuted}, \code{pleaded guilty}, \code{convicted}, and \code{acquited}}
+#' \item{spouse}{a factor with levels \code{husband} and \code{wife}} 
 #' }
+#' 
+#' @source Bureau of Justice Statistics (September 1995), \emph{Spouse Murder Defendants in Large
+#' Urban Counties}, Executive Summary, NCJ-156831.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Spouse)
-#' attach(Spouse)
-#' Spouse
-#' chisq.test(Spouse[,2:3])
-#' detach(Spouse)
+#' T1 <- xtabs(~result + spouse, data = Spouse)
+#' T1
+#' chisq.test(T1)
+#' rm(T1)
 #' 
-NULL
+"Spouse"
 
 
 
@@ -8803,22 +8619,18 @@ NULL
 #' 
 #' @name Stable
 #' @docType data
-#' @format A data frame with 9 observations on the following variable.
+#' @format A data frame/tibble with 9 observations on the following variable.
 #' \describe{ 
-#' \item{time}{a numeric vector} 
+#' \item{time}{time (in seconds) for horse to run 1 mile} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Stable)
-#' attach(Stable)
-#' EDA(time)
-#' SIGN.test(time,md=98.5,alternative="greater")
-#' detach(Stable)
+#' BSDA::SIGN.test(Stable$time, md = 98.5, alternative = "greater")
 #' 
-NULL
+"Stable"
 
 
 
@@ -8831,25 +8643,25 @@ NULL
 #' 
 #' @name Stamp
 #' @docType data
-#' @format A data frame with 485 observations on the following 3 variables.
+#' @format A data frame/tibble with 485 observations on the following variable.
 #' \describe{ 
-#' \item{thickness}{a numeric vector}
-#' \item{thick}{a numeric vector} 
-#' \item{freq}{a numeric vector} 
+#' \item{thickness}{stamp thickness (in mm)}
 #' }
+#' 
+#' @source Izenman, A., Sommer, C. (1988), Philatelic Mixtures and Multimodal Densities,
+#' \emph{Journal of the American Statistical Association}, 83, 941-953.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Stamp)
-#' attach(Stamp)
-#' hist(thickness,prob=TRUE,col="lightblue")
-#' lines(density(thickness),lwd=2,col="blue")
-#' t.test(thickness,conf.level=.99)$conf
-#' detach(Stamp)
+#' hist(Stamp$thickness, freq = FALSE, col = "lightblue", 
+#' main = "", xlab = "stamp thickness (mm)")
+#' lines(density(Stamp$thickness), col = "blue")
+#' t.test(Stamp$thickness, conf.level = 0.99)
 #' 
-NULL
+"Stamp"
 
 
 
@@ -8862,10 +8674,10 @@ NULL
 #' 
 #' @name Statclas
 #' @docType data
-#' @format A data frame with 36 observations on the following 2 variables.
+#' @format A data frame/tibble with 72 observations on the following 2 variables.
 #' \describe{ 
-#' \item{X9am}{a numeric vector} 
-#' \item{X2pm}{a numeric vector} 
+#' \item{class}{class meeting time (9am or 2pm)} 
+#' \item{score}{grade for an introductory statistics class} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -8873,11 +8685,10 @@ NULL
 #' @examples
 #' 
 #' str(Statclas)
-#' attach(Statclas)
-#' t.test(X9am,X2pm)
-#' detach(Statclas)
+#' boxplot(score ~ class, data = Statclas)
+#' t.test(score ~ class, data = Statclas)
 #' 
-NULL
+"Statclas"
 
 
 
@@ -8891,36 +8702,24 @@ NULL
 #' 
 #' @name Statelaw
 #' @docType data
-#' @format A data frame with 50 observations on the following 2 variables.
+#' @format A data frame/tibble with 50 observations on the following 2 variables.
 #' \describe{ 
-#' \item{State}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{Delaware} \code{Florida}
-#' \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
-#' \code{Iowa} \code{Kansas} \code{Kentucky} \code{Louisiana} \code{Maine}
-#' \code{Maryland} \code{Massachusetts} \code{Michigan} \code{Minnesota}
-#' \code{Mississippi} \code{Missour} \code{Montana} \code{Nebraska}
-#' \code{Nevada} \code{New Hampshire} \code{New Jersey} \code{New Mexico}
-#' \code{New York} \code{North Carolina} \code{North Dakota} \code{Ohio}
-#' \code{Oklahoma} \code{Oregon} \code{Pennsylvania} \code{Rhode Island}
-#' \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
-#' \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
-#' Virginia} \code{Wisconsin} \code{Wyoming}} 
-#' \item{cost}{a numeric vector} 
+#' \item{state}{U.S. state} 
+#' \item{cost}{dollars spent per resident on law enforcement} 
 #' }
+#' 
+#' @source Bureau of Justice Statistics, \emph{Law Enforcement Management and Administrative Statistics, 1993},
+#' NCJ-148825, September 1995, page 84.
+#' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Statelaw)
-#' attach(Statelaw)
-#' summary(cost)
-#' EDA(cost)
-#' SIGN.test(cost,md=8,alternative="less")
-#' detach(Statelaw)
+#' BSDA::EDA(Statelaw$cost)
+#' BSDA::SIGN.test(Statelaw$cost, md = 8, alternative = "less")
 #' 
-NULL
+"Statelaw"
 
 
 
@@ -8933,23 +8732,27 @@ NULL
 #' 
 #' @name Statisti
 #' @docType data
-#' @format A data frame with 31 observations on the following 2 variables.
+#' @format A data frame/tibble with 62 observations on the following 2 variables.
 #' \describe{ 
-#' \item{Class1}{a numeric vector} 
-#' \item{Class2}{a numeric vector} 
+#' \item{class}{character variable with values \code{Class1} and \code{Class2}} 
+#' \item{score}{test score for an introductory statistics test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
 #' @keywords datasets
 #' @examples
 #' 
-#' str(Statisti)
-#' attach(Statisti)
-#' boxplot(Class1,Class2,names=c("Class 1","Class 2"),col=c("red","blue"),
-#' main="Problem 1.87")
-#' detach(Statisti)
+#' boxplot(score ~ class, data = Statisti)
+#' tapply(Statisti$score, Statisti$class, summary, na.rm = TRUE)
+#' \dontrun{
+#' dplyr::group_by(Statisti, class) %>%
+#'  summarize(Mean = mean(score, na.rm = TRUE), 
+#'             Median = median(score, na.rm = TRUE), 
+#'                         SD = sd(score, na.rm = TRUE),
+#'                                     RS = IQR(score, na.rm = TRUE))
+#'                                     }
 #' 
-NULL
+"Statisti"
 
 
 

@@ -5,19 +5,26 @@
 \alias{Slc}
 \title{Sodium-lithium countertransport activity on 190 individuals from six large
 English kindred}
-\format{A data frame with 190 observations on the following variable.
+\format{A data frame/tibble with 190 observations on the following variable.
 \describe{ 
-\item{SLC}{a numeric vector} 
+\item{slc}{Red blood cell sodium-lithium countertransport} 
 }}
+\source{
+Roeder, K., (1994), "A Graphical Technique for Determining the Number of Components
+in a Mixture of Normals," \emph{Journal of the American Statistical Association, 89}, 497-495.
+}
+\usage{
+Slc
+}
 \description{
 Data for Exercise 5.116
 }
 \examples{
 
-str(Slc)
-attach(Slc)
-EDA(SLC)
-detach(Slc)
+BSDA::EDA(Slc$slc)
+hist(Slc$slc, freq = FALSE, xlab = "sodium lithium countertransport",
+     main = "", col = "lightblue")
+     lines(density(Slc$slc), col = "purple")
 
 }
 \references{

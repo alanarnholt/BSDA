@@ -6,17 +6,18 @@
 \title{Racial prejudice measured on a sample of 25 high school students}
 \format{A data frame with 25 observations on the following variable.
 \describe{ 
-\item{prejud}{a numeric vector} 
+\item{prejud}{racial prejudice score} 
 }}
+\usage{
+Prejudic
+}
 \description{
 Data for Exercise 5.10 and 5.22
 }
 \examples{
 
-str(Prejudic)
-attach(Prejudic)
-EDA(prejud)
-detach(Prejudic)
+stem(Prejudic$prejud)
+BSDA::EDA(Prejudic$prejud)
 
 }
 \references{

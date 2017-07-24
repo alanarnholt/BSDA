@@ -5,46 +5,37 @@
 \alias{Sat}
 \title{SAT scores, percent taking exam and state funding per student by state for
 1994, 1995 and 1999}
-\format{A data frame with 51 observations on the following 16 variables.
+\format{A data frame/tibble with 102 observations on the following 7 variables.
 \describe{ 
-\item{state}{a factor with levels \code{alabama}
-\code{alaska} \code{arizona} \code{arkansas} \code{california}
-\code{colorado} \code{connecticut} \code{delaware} \code{dist of columbia}
-\code{florida} \code{georgia} \code{hawaii} \code{idaho} \code{illinois}
-\code{indiana} \code{iowa} \code{kansas} \code{kentucky} \code{louisiana}
-\code{maine} \code{maryland} \code{massachusetts} \code{michigan}
-\code{minnesota} \code{mississippi} \code{missouri} \code{montana}
-\code{nebraska} \code{nevada} \code{new hampshire} \code{new jersey}
-\code{new mexico} \code{new york} \code{north carolina} \code{north dakota}
-\code{ohio} \code{oklahoma} \code{oregon} \code{pennsylvania} \code{rhode
-island} \code{south carolina} \code{south dakota} \code{tennessee}
-\code{texas} \code{utah} \code{vermont} \code{virginia} \code{washington}
-\code{west virginia} \code{wisconsin} \code{wyoming}}
-\item{verbal94}{a numeric vector} 
-\item{math94}{a numeric vector} 
-\item{total94}{a numeric vector} 
-\item{percent94}{a numeric vector} 
-\item{code94}{a numeric vector}
-\item{expend94}{a numeric vector} 
-\item{verbal95}{a numeric vector} 
-\item{math95}{a numeric vector} 
-\item{total95}{a numeric vector} 
-\item{verbal99}{a numeric vector}
-\item{math99}{a numeric vector} 
-\item{total99}{a numeric vector} 
-\item{percent99}{a numeric vector} 
-\item{code99}{a numeric vector} 
-\item{expend99}{a numeric vector} 
+\item{state}{U.S. state}
+\item{verbal}{verbal SAT score} 
+\item{math}{math SAT score} 
+\item{total}{combined verbal and math SAT score} 
+\item{percent}{percent of high school seniors taking the SAT} 
+\item{expend}{state expenditure per student (in dollars)} 
+\item{year}{year} 
 }}
+\source{
+\emph{The 2000 World Almanac and Book of Facts}, Funk and Wagnalls Corporation, New Jersey.
+}
+\usage{
+Sat
+}
 \description{
 Data for Statistical Insight Chapter 9
 }
 \examples{
 
-str(Sat)
-attach(Sat)
-pairs(Sat)
-detach(Sat)
+Sat94 <- Sat[Sat$year == 1994, ]
+Sat94
+Sat99 <- subset(Sat, year == 1999)
+Sat99
+stem(Sat99$total)
+plot(total ~ percent, data = Sat99)
+model <- lm(total ~ percent, data = Sat99)
+abline(model, col = "blue")
+summary(model)
+rm(model)
 
 }
 \references{

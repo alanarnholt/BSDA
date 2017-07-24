@@ -2406,7 +2406,7 @@ devtools::use_data(Newsstand, overwrite = TRUE)
 stem(Newsstand$profit)
 stem(Newsstand$profit, scale = 3)
 #####################
-Nfldraf2 <- read_csv("NFLDRAF2.csv")
+Nfldraf2 <- read_csv("Nfldraf2.csv")
 Nfldraf2 <- Nfldraf2%>%
   rename(rating = Rating)
 Nfldraf2
@@ -2415,7 +2415,7 @@ devtools::use_data(Nfldraf2, overwrite = TRUE)
 plot(rating ~ forty, data = Nfldraf2)
 summary(lm(rating ~ forty, data = Nfldraf2))
 #####################
-Nfldraft <- read_csv("NFLDRAFT.csv")
+Nfldraft <- read_csv("Nfldraft.csv")
 Nfldraft <- Nfldraft %>%
   rename(rating = Rating)
 Nfldraft
@@ -2459,11 +2459,11 @@ ggplot2::ggplot(data = Orioles, aes(x = `1999salary`)) +
   theme_bw()
 ##
 #####################
-Oxytocin <- read_csv("Oxytocin.csv")
+Oxytocin <- read_csv("OXYTOCIN.csv")
 Oxytocin <- Oxytocin %>%
   rename(subject = Subject, before = Before, after = After)
 Oxytocin
-devtools::use_data(Name, overwrite = TRUE)
+devtools::use_data(Oxytocin, overwrite = TRUE)
 #Examples Ex 7.86 (mean arterial blood pressure of 11 subjects
 # before and after they received oxytocin.)
 diff = Oxytocin$after - Oxytocin$before
@@ -2658,7 +2658,6 @@ devtools::use_data(Prejudic, overwrite = TRUE)
 # Examples Exp 5.10 (not Ex 5.22), page 242
 # A data frame/tibble with 25 observations and one variable
 # prejud = racial prejudice score
-
 stem(Prejudic$prejud)
 BSDA::EDA(Prejudic$prejud)
 ##################
@@ -2711,11 +2710,12 @@ devtools::use_data(Prognost, overwrite = TRUE)
 BSDA::EDA(Prognost$kprs_score)
 t.test(Prognost$kprs_score, mu = 9)
 ##################
-Program <- read_csv("Program.csv")
+Program <- read_csv("PROGRAM.csv")
 Program <- Program %>%
   rename(method1 = Method1, method2 = Method2, method3 = Method3, method4 = Method4)%>%
   gather(method1, method2, method3, method4, key = "method", value = "score")
 Program
+devtools::use_data(Program, overwrite = TRUE)
 # Examples Ex 10.17, page 539
 # A data frame/tiblle with 44 observations on two variables
 # method = a character variable with values \code{method1}, \code{method2},
@@ -2805,7 +2805,6 @@ model <- lm(rain ~ x2, data = Rainks)
 summary(model)
 ##################
 Randd <- read_csv("RANDD.csv")
-Randd
 Randd <- Randd %>%
   select(rd, sales)
 Randd
@@ -2824,7 +2823,6 @@ plot(model, which = 1)
 rm(model)
 ##################
 Rat <- read_csv("RAT.csv")
-Rat
 Rat <- Rat %>%
   rename(survival_time = `survival time`)
 Rat
@@ -2950,7 +2948,6 @@ boxplot(pollution ~ region, data = Region)
 anova(lm(pollution ~ region, data = Region))
 ##################
 Register <- read_csv("REGISTER.csv")
-Register
 Register <- Register %>%
   select(age, cost)
 Register
@@ -3059,7 +3056,7 @@ Ronbrown2
 devtools::use_data(Ronbrown2, overwrite = TRUE)
 # Examples Exp 2.4 and Ex 2.56
 # A data frame with 150 observations on three variables
-# depth = ocen depth (in meters)
+# depth = ocean depth (in meters)
 # temperature = ocean temperature (in Celcius)
 # salinity = ocean salinity level
 plot(salinity ~ depth, data = Ronbrown2)
@@ -3488,7 +3485,7 @@ matT <- as.table(mat)
 matDF <- as.data.frame(matT)
 Snore <- vcdExtra::expand.dft(matDF)
 rm(mat, matT, matDF)
-Snore$heart <- factor(Snore$heartdisease, 
+Snore$heartdisease <- factor(Snore$heartdisease, 
                       levels = c("yes", "no"))
 Snore$snore <- factor(Snore$snore, 
                       levels = c("nonsnorer", "occassional snorer", "nearly every night", "snores every night"))
@@ -3513,7 +3510,7 @@ Snow
 devtools::use_data(Snow, overwrite = TRUE)
 # Examples Ex 7.87, page 417
 # A data frame/tibble with 34 observations on two variables
-# conentration = concentration of microparticles from melted snow (in parts per billion)
+# concent = concentration of microparticles from melted snow (in parts per billion)
 # site = location of snow sample (\code{Antarctica} or \code{Greenland})
 boxplot(concent ~ site, data = Snow, col = c("lightblue", "lightgreen"))
 ################

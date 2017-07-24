@@ -4,20 +4,21 @@
 \name{Spellers}
 \alias{Spellers}
 \title{Standardized spelling test scores for two fourth grade classes}
-\format{A data frame with 10 observations on the following 2 variables.
+\format{A data frame/tibble with 10 observations on the following 2 variables.
 \describe{ 
-\item{Fourth}{a numeric vector} 
-\item{Colleag}{a numeric vector} 
+\item{teacher}{character variable with values \code{Fourth} and \code{Colleague}} 
+\item{score}{score on a standardized spelling test} 
 }}
+\usage{
+Spellers
+}
 \description{
 Data for Exercise 7.82
 }
 \examples{
 
-str(Spellers)
-attach(Spellers)
-t.test(Fourth,Colleag,alternative="greater")
-detach(Spellers)
+boxplot(score ~ teacher, data = Spellers)
+t.test(score ~ teacher, data = Spellers)
 
 }
 \references{

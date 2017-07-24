@@ -5,22 +5,29 @@
 \alias{Sophomor}
 \title{Grade point averages, SAT scores and final grade in college algebra for 20
 sophomores}
-\format{A data frame with 20 observations on the following 4 variables.
+\format{A data frame/tibble with 20 observations on the following 4 variables.
 \describe{ 
-\item{Student}{a numeric vector} 
-\item{GPA}{a numeric vector} 
-\item{SAT}{a numeric vector} 
-\item{Exam}{a numeric vector} 
+\item{student}{student's identification number} 
+\item{gpa}{student's grade point average} 
+\item{sat}{student's SAT math score} 
+\item{exam}{student's final exam grade in college algebra } 
 }}
+\usage{
+Sophomor
+}
 \description{
 Data for Exercise 2.42
 }
 \examples{
 
-str(Sophomor)
-attach(Sophomor)
 cor(Sophomor)
-detach(Sophomor)
+plot(exam ~ gpa, data = Sophomor)
+\dontrun{
+ggplot2::ggplot(data = Sophomor, aes(x = gpa, y = exam)) + 
+  geom_point()
+  ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
+    geom_point()
+    }
 
 }
 \references{

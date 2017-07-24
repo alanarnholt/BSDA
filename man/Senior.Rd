@@ -4,20 +4,22 @@
 \name{Senior}
 \alias{Senior}
 \title{Reaction times of 30 senior citizens applying for drivers license renewals}
-\format{A data frame with 31 observations on the following variable.
+\format{A data frame/tibble with 31 observations on the following variable.
 \describe{ 
-\item{reaction}{a numeric vector} 
+\item{reaction}{reaction time for senior citizens applying for a driver's license renewal} 
 }}
+\usage{
+Senior
+}
 \description{
 Data for Exercise 1.83 and 3.67
 }
 \examples{
 
-str(Senior)
-attach(Senior)
-fivenum(reaction)
-boxplot(reaction,horizontal=TRUE,main="Problem 1.83 Part d.",col="orange")
-detach(Senior)
+stem(Senior$reaction)
+fivenum(Senior$reaction)
+boxplot(Senior$reaction, main = "Problem 1.83, part d",
+        horizontal = TRUE, col = "purple")
 
 }
 \references{

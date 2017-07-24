@@ -4,25 +4,26 @@
 \name{Oxytocin}
 \alias{Oxytocin}
 \title{Arterial blood pressure of 11 subjects before and after receiving oxytocin}
-\format{A data frame with 11 observations on the following 3 variables.
+\format{A data frame/tibble with 11 observations on the following 3 variables.
 \describe{ 
-\item{Subject}{a numeric vector} 
-\item{Before}{a numeric vector} 
-\item{After}{a numeric vector} 
+\item{subject}{a numeric vector indicating each subject} 
+\item{before}{mean arterial blood pressure of 11 subjects before receiving oxytocin} 
+\item{after}{mean arterial blood pressure of 11 subjects after receiving oxytocin} 
 }}
+\usage{
+Oxytocin
+}
 \description{
 Data for Exercise 7.86
 }
 \examples{
 
-str(Oxytocin)
-attach(Oxytocin)
-DIF <- Before - After
-qqnorm(DIF)
-qqline(DIF)
-shapiro.test(DIF)
-t.test(Before,After,paired=TRUE)
-detach(Oxytocin)
+diff = Oxytocin$after - Oxytocin$before
+qqnorm(diff)
+qqline(diff)
+shapiro.test(diff)
+t.test(Oxytocin$after, Oxytocin$before, paired = TRUE)
+rm(diff)
 
 }
 \references{

@@ -4,20 +4,26 @@
 \name{Salinity}
 \alias{Salinity}
 \title{Surface-water salinity measurements from Whitewater Bay, Florida}
-\format{A data frame with 48 observations on the following variable.
+\format{A data frame/tibble with 48 observations on the following variable.
 \describe{ 
-\item{salinity}{a numeric vector} 
+\item{salinity}{surface-water salinity value} 
 }}
+\source{
+J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd ed. (New York: John Wiley, 1986)
+}
+\usage{
+Salinity
+}
 \description{
 Data for Exercise 5.27 and 5.64
 }
 \examples{
 
-str(Salinity)
-attach(Salinity)
-EDA(salinity)
-t.test(salinity,conf.level=.99)$conf
-detach(Salinity)
+stem(Salinity$salinity)
+qqnorm(Salinity$salinity, pch = 19, col = "purple")
+qqline(Salinity$salinity, col = "blue")
+t.test(Salinity$salinity, conf.level = 0.99)
+t.test(Salinity$salinity, conf.level = 0.99)$conf
 
 }
 \references{

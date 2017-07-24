@@ -4,28 +4,37 @@
 \name{Orioles}
 \alias{Orioles}
 \title{Salaries of members of the Baltimore Orioles baseball team}
-\format{A data frame with 27 observations on the following 3 variables.
+\format{A data frame/tibble with 27 observations on the following 3 variables.
 \describe{ 
-\item{first.name}{a factor with levels \code{Albert}
-\code{Arthur} \code{B.J.} \code{Brady} \code{Cal} \code{Charles}
-\code{dl-Delino} \code{dl-Scott} \code{Doug} \code{Harold} \code{Heathcliff}
-\code{Jeff} \code{Jesse} \code{Juan} \code{Lenny} \code{Mike} \code{Rich}
-\code{Ricky} \code{Scott} \code{Sidney} \code{Will} \code{Willis}}
-\item{last.name}{a factor with levels \code{Amaral} \code{Anderson}
-\code{Baines} \code{Belle} \code{Bones} \code{Bordick} \code{Clark}
-\code{Conine} \code{Deshields} \code{Erickson} \code{Fetters} \code{Garcia}
-\code{Guzman} \code{Johns} \code{Johnson} \code{Kamieniecki} \code{Mussina}
-\code{Orosco} \code{Otanez} \code{Ponson} \code{Reboulet} \code{Rhodes}
-\code{Ripken Jr.} \code{Slocumb} \code{Surhoff} \code{Timlin}
+\item{first name}{a factor with levels \code{Albert},
+\code{Arthur}, \code{B.J.}, \code{Brady}, \code{Cal}, \code{Charles},
+\code{dl-Delino}, \code{dl-Scott}, \code{Doug}, \code{Harold}, \code{Heathcliff},
+\code{Jeff}, \code{Jesse}, \code{Juan}, \code{Lenny}, \code{Mike}, \code{Rich},
+\code{Ricky}, \code{Scott}, \code{Sidney}, \code{Will}, and \code{Willis}}
+\item{last name}{a factor with levels \code{Amaral}, \code{Anderson},
+\code{Baines}, \code{Belle}, \code{Bones}, \code{Bordick}, \code{Clark},
+\code{Conine}, \code{Deshields}, \code{Erickson}, \code{Fetters}, \code{Garcia},
+\code{Guzman}, \code{Johns}, \code{Johnson}, \code{Kamieniecki}, \code{Mussina},
+\code{Orosco}, \code{Otanez}, \code{Ponson}, \code{Reboulet}, \code{Rhodes},
+\code{Ripken Jr.}, \code{Slocumb}, \code{Surhoff},\code{Timlin}, and
 \code{Webster}} 
-\item{X1999salary}{a numeric vector} 
+\item{1999salary}{a numeric vector containing each player's salary in dollars} 
 }}
+\usage{
+Orioles
+}
 \description{
 Data for Example 1.3
 }
 \examples{
 
-data(Orioles)
+stripchart(Orioles$`1999salary`, method = "stack", pch = 19)
+\dontrun{
+ggplot2::ggplot(data = Orioles, aes(x = `1999salary`)) + 
+  geom_dotplot(dotsize = 0.5) + 
+    labs(x = "1999 Salary") +
+      theme_bw()
+      }
 
 }
 \references{

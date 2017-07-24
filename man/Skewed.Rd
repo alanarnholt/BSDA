@@ -4,21 +4,21 @@
 \name{Skewed}
 \alias{Skewed}
 \title{Illustrates the Wilcoxon Rank Sum test}
-\format{A data frame with 21 observations on the following 2 variables.
+\format{A data frame/tibble with 21 observations on the following 2 variables.
 \describe{ 
-\item{C1}{a numeric vector} 
-\item{C2}{a numeric vector} 
+\item{C1}{values from a sample of size 16 from a particular population} 
+\item{C2}{values from a sample of size 14 from a particular population} 
 }}
+\usage{
+Skewed
+}
 \description{
 Data for Exercise 7.65
 }
 \examples{
 
-str(Skewed)
-attach(Skewed)
-boxplot(C1,C2)
-wilcox.test(C1,C2)
-detach(Skewed)
+boxplot(Skewed$C1, Skewed$C2, col = c("pink", "lightblue"))
+wilcox.test(Skewed$C1, Skewed$C2)
 
 }
 \references{

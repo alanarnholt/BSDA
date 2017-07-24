@@ -4,25 +4,28 @@
 \name{Ratings}
 \alias{Ratings}
 \title{Grade point averages versus teacher's ratings}
-\format{A data frame with 250 observations on the following 7 variables.
-\describe{ 
-\item{F}{a numeric vector} 
-\item{D}{a numeric vector} 
-\item{C}{a numeric vector} 
-\item{B}{a numeric vector} 
-\item{A}{a numeric vector} 
-\item{Rating}{a factor with levels \code{A} \code{B} \code{C} \code{D} \code{F}}
-\item{GPA}{a numeric vector}
+\format{A data frame/tibble with 250 observations on the following 2 variables.
+\describe{
+\item{rating}{character variable with students' ratings of instructor (A-F)}
+\item{gpa}{students' grade point average}
 }}
+\usage{
+Ratings
+}
 \description{
 Data for Example 2.6
 }
 \examples{
 
-str(Ratings)
-attach(Ratings)
-boxplot(GPA~Rating,xlab="Teacher's Rating",ylab="GPA",main="Example 2.6",col="pink")
-detach(Ratings)
+boxplot(gpa ~ rating, data = Ratings, xlab = "Student rating of instructor", 
+ylab = "Student GPA")
+\dontrun{
+ggplot2::ggplot(data = Ratings, aes(x = rating, y = gpa, fill = rating)) +
+  geom_boxplot() + 
+    theme_bw() + 
+      theme(legend.position = "none") + 
+        labs(x = "Student rating of instructor", y = "Student GPA")
+        }
 
 }
 \references{

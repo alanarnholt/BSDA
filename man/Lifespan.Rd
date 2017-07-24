@@ -4,7 +4,7 @@
 \name{Lifespan}
 \alias{Lifespan}
 \title{Life span of electronic components used in a spacecraft versus heat}
-\format{A data frame/tibble with 6 observations on the following 4 variables.
+\format{A data frame/tibble with 6 observations on the following 2 variables.
 \describe{ 
 \item{heat}{temperature in degrees C} 
 \item{life}{lifespan in hours} 

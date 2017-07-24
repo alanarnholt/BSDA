@@ -4,25 +4,27 @@
 \name{Seatbelt}
 \alias{Seatbelt}
 \title{Injury level versus seatbelt usage}
-\format{A data frame with 2 observations on the following 5 variables.
+\format{A data frame/tibble with 86,759 observations on the following 2 variables.
 \describe{ 
-\item{seatbelt}{a factor with levels \code{no}
-\code{yes}} 
-\item{None}{a numeric vector} 
-\item{Minimal}{a numeric vector} 
-\item{Minor}{a numeric vector}
-\item{Major}{a numeric vector} 
+\item{seatbelt}{a factor with levels \code{No}
+\code{Yes}} 
+\item{injuries}{a factor with levels \code{None}, \code{Minimal}, \code{Minor}, or \code{Major} indicating the extent of the drivers injuries.a numeric vector}
 }}
+\source{
+Jobson, J. (1982), \emph{Applied Multivariate Data Analysis}, Springer-Verlag, New York, p. 18
+}
+\usage{
+Seatbelt
+}
 \description{
 Data for Exercise 8.24
 }
 \examples{
 
-str(Seatbelt)
-attach(Seatbelt)
-Seatbelt
-chisq.test(Seatbelt[,2:5])
-detach(Seatbelt)
+T1 <- xtabs(~seatbelt + injuries, data = Seatbelt)
+T1
+chisq.test(T1)
+rm(T1)
 
 }
 \references{

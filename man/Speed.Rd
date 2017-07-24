@@ -4,26 +4,24 @@
 \name{Speed}
 \alias{Speed}
 \title{Speed reading scores before and after a course on speed reading}
-\format{A data frame with 15 observations on the following 4 variables.
+\format{A data frame/tibble with 15 observations on the following 4 variables.
 \describe{ 
-\item{Before}{a numeric vector} 
-\item{After}{a numeric vector} 
-\item{differ}{a numeric vector}
-\item{signrnks}{a numeric vector} 
+\item{before}{reading comprehension score before taking a speed-reading course} 
+\item{after}{reading comprehension score after taking a speed-reading course} 
+\item{differ}{after - before (comprehension reading scores)}
+\item{signranks}{signed ranked differences} 
 }}
+\usage{
+Speed
+}
 \description{
 Data for Exercise 7.58
 }
 \examples{
 
-str(Speed)
-attach(Speed)
-qqnorm(differ)
-qqline(differ)
-shapiro.test(differ)
-t.test(After,Before,paired=TRUE,alternative="greater")
-wilcox.test(After,Before,paired=TRUE,alternative="greater")
-detach(Speed)
+t.test(Speed$differ, alternative = "greater")
+t.test(Speed$signranks, alternative = "greater")
+wilcox.test(Speed$after, Speed$before, paired = TRUE, alternative = "greater")
 
 }
 \references{

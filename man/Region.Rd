@@ -4,25 +4,22 @@
 \name{Region}
 \alias{Region}
 \title{Pollution index taken in three regions of the country}
-\format{A data frame with 48 observations on the following 6 variables.
+\format{A data frame/tibble with 48 observations on the following 3 variables.
 \describe{
- \item{West}{a numeric vector} 
- \item{Central}{a numeric vector} 
- \item{East}{a numeric vector} 
- \item{Index}{a numeric vector} 
- \item{Region}{a numeric vector}
- \item{Ranks}{a numeric vector} 
+ \item{pollution}{pollution index} 
+ \item{region}{region of a county (\code{west}, \code{central}, and \code{east})}
+ \item{ranks}{ranked values of \code{pollution}} 
  }}
+\usage{
+Region
+}
 \description{
 Data for Exercise 10.26
 }
 \examples{
 
-str(Region)
-attach(Region)
-boxplot(Index~Region)
-anova(lm(Index~as.factor(Region)))
-detach(Region)
+boxplot(pollution ~ region, data = Region)
+anova(lm(pollution ~ region, data = Region))
 
 }
 \references{

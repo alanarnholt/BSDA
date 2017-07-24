@@ -4,33 +4,34 @@
 \name{Poverty}
 \alias{Poverty}
 \title{Percent poverty and crime rate for selected cities}
-\format{A data frame with 20 observations on the following 6 variables.
+\format{A data frame/tibble with 20 observations on the following 4 variables.
 \describe{ 
-\item{City}{a factor with levels \code{Atlanta}
-\code{Buffalo} \code{Cincinnati} \code{Cleveland} \code{Dayton, O}
-\code{Detroit} \code{Flint, Mich} \code{Fresno, C} \code{Gary, Ind}
-\code{Hartford, C} \code{Laredo} \code{Macon, Ga} \code{Miami}
-\code{Milwaukee} \code{New Orleans} \code{Newark, NJ} \code{Rochester,NY}
-\code{Shreveport} \code{St. Louis} \code{Waco, Tx}} 
-\item{Poverty}{a numeric vector} 
-\item{Crime}{a numeric vector}
-\item{cindex}{a numeric vector} 
-\item{popu}{a numeric vector} 
-\item{ratio}{a numeric vector}
+\item{city}{a factor with levels \code{Atlanta},
+\code{Buffalo}, \code{Cincinnati}, \code{Cleveland}, \code{Dayton, O},
+\code{Detroit}, \code{Flint, Mich}, \code{Fresno, C}, \code{Gary, Ind},
+\code{Hartford, C}, \code{Laredo}, \code{Macon, Ga}, \code{Miami},
+\code{Milwaukee}, \code{New Orleans}, \code{Newark, NJ}, \code{Rochester,NY},
+\code{Shreveport}, \code{St. Louis}, and \code{Waco, Tx}} 
+\item{poverty}{percent of children living in poverty} 
+\item{crime}{crime rate (per 1000 people)}
+\item{population}{population of city} 
 }}
+\source{
+Children's Defense Fund and the Bureau of Justice Statistics
+}
+\usage{
+Poverty
+}
 \description{
 Data for Exercise 9.11 and 9.17
 }
 \examples{
 
-str(Poverty)
-attach(Poverty)
-plot(Crime,Poverty)
-model <- lm(Poverty~Crime)
+plot(poverty ~ crime, data = Poverty)
+model <- lm(poverty ~ crime, data = Poverty)
 abline(model)
 summary(model)
-detach(Poverty)
-remove(model)
+rm(model)
 
 }
 \references{

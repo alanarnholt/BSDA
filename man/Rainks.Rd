@@ -4,24 +4,29 @@
 \name{Rainks}
 \alias{Rainks}
 \title{Rainfall in an area of west central Kansas and four surrounding counties}
-\format{A data frame with 35 observations on the following 5 variables.
+\format{A data frame/tibble with 35 observations on the following 5 variables.
 \describe{ 
-\item{rain}{a numeric vector} 
-\item{x1}{a numeric vector} 
-\item{x2}{a numeric vector} 
-\item{x3}{a numeric vector} 
-\item{x4}{a numeric vector} 
+\item{rain}{rainfall (in inches)} 
+\item{x1}{rainfall (in inches)} 
+\item{x2}{rainfall (in inches)} 
+\item{x3}{rainfall (in inches)} 
+\item{x4}{rainfall (in inches)} 
 }}
+\source{
+R. Picard, K. Berk (1990), Data Splitting, \emph{The American Statistician, 44}, (2),
+140-147.
+}
+\usage{
+Rainks
+}
 \description{
 Data for Exercise 9.8
 }
 \examples{
 
-str(Rainks)
-attach(Rainks)
 cor(Rainks)
-lm(rain~x2)
-detach(Rainks)
+model <- lm(rain ~ x2, data = Rainks)
+summary(model)
 
 }
 \references{

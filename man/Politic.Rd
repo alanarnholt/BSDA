@@ -4,21 +4,23 @@
 \name{Politic}
 \alias{Politic}
 \title{Political party and gender in a voting district}
-\format{A data frame with 250 observations on the following 2 variables.
+\format{A data frame/tibble with 250 observations on the following 2 variables.
 \describe{ 
-\item{Party}{a numeric vector} 
-\item{Gender}{a numeric vector} 
+\item{party}{a factor with levels \code{republican}, \code{democrat}, and \code{other}} 
+\item{gender}{a factor with levels \code{female} and \code{male}} 
 }}
+\usage{
+Politic
+}
 \description{
 Data for Example 8.3
 }
 \examples{
 
-str(Politic)
-attach(Politic)
-table(Party,Gender)
-chisq.test(table(Party,Gender))
-detach(Politic)
+T1 <- xtabs(~party + gender, data = Politic)
+T1
+chisq.test(T1)
+rm(T1)
 
 }
 \references{

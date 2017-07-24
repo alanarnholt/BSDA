@@ -5,27 +5,23 @@
 \alias{Patrol}
 \title{Years of experience and number of tickets given by patrolpersons in New York
 City}
-\format{A data frame with 10 observations on the following 7 variables.
+\format{A data frame/tibble with 10 observations on the following 3 variables.
 \describe{ 
-\item{tickets}{a numeric vector} 
-\item{years}{a numeric vector} 
-\item{ln.tickets.}{a numeric vector}
-\item{SRES1}{a numeric vector} 
-\item{FITS1}{a numeric vector} 
-\item{SRES2}{a numeric vector} 
-\item{FITS2}{a numeric vector} 
+\item{tickets}{number of tickets written per week} 
+\item{years}{patrolperson's years of experience} 
+\item{log_tickets}{natural log of \code{tickets}}
 }}
+\usage{
+Patrol
+}
 \description{
 Data for Example 9.3
 }
 \examples{
 
-str(Patrol)
-attach(Patrol)
-model <- lm(tickets~years)
+model <- lm(tickets ~ years, data = Patrol)
 summary(model)
-detach(Patrol)
-remove(model)
+confint(model, level = 0.98)
 
 }
 \references{
