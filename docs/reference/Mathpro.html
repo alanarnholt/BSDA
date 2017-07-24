@@ -87,39 +87,23 @@
     <p>Data for Exercise 9.24, Example 9.1, and Example 9.6</p>
     
 
+    <pre class="usage"><span class='no'>Mathpro</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 51 observations on the following 10 variables.</p><dl class='dl-horizontal'>
-<dt>state1</dt><dd><p>a factor with levels <code></code> <code>Conn</code>
+    <p>A data frame/tibble with 51 observations on the following 10 variables.</p><dl class='dl-horizontal'>
+<dt>state</dt><dd><p>a factor with levels <code></code> <code>Conn</code>
 <code>D.C.</code> <code>Del</code> <code>Ga</code> <code>Hawaii</code> <code>Ind</code> <code>Maine</code>
 <code>Mass</code> <code>Md</code> <code>N.C.</code> <code>N.H.</code> <code>N.J.</code> <code>N.Y.</code>
 <code>Ore</code> <code>Pa</code> <code>R.I.</code> <code>S.C.</code> <code>Va</code> <code>Vt</code></p></dd>
-<dt>Sat.M1</dt><dd><p>a numeric vector</p></dd> 
-<dt>Profic1</dt><dd><p>a numeric vector</p></dd> 
-<dt>state2</dt><dd><p>a factor with levels <code></code> <code>Ala</code>
-<code>Alaska</code> <code>Ariz</code> <code>Ark</code> <code>Calif</code> <code>Colo</code> <code>Fla</code>
-<code>Idaho</code> <code>Ill</code> <code>Iowa</code> <code>Kan</code> <code>Ky</code> <code>La</code>
-<code>Mich</code> <code>Minn</code> <code>Miss</code> <code>Mo</code> <code>Mont</code> <code>N.D.</code>
-<code>N.M.</code> <code>Neb</code> <code>Nev</code> <code>Ohio</code> <code>Okla</code> <code>S.D.</code>
-<code>Tenn</code> <code>Texas</code> <code>Utah</code> <code>W.V.</code> <code>Wash</code> <code>Wis</code>
-<code>Wyo</code></p></dd> 
-<dt>Sat.M2</dt><dd><p>a numeric vector</p></dd> 
-<dt>Profic2</dt><dd><p>a numeric vector</p></dd> 
-<dt>state</dt><dd><p>a factor with levels <code>Ala</code>
-<code>Alaska</code> <code>Ariz</code> <code>Ark</code> <code>Calif</code> <code>Colo</code> <code>Conn</code>
-<code>D.C.</code> <code>Del</code> <code>Fla</code> <code>Ga</code> <code>Hawaii</code> <code>Idaho</code>
-<code>Ill</code> <code>Ind</code> <code>Iowa</code> <code>Kan</code> <code>Ky</code> <code>La</code>
-<code>Maine</code> <code>Mass</code> <code>Md</code> <code>Mich</code> <code>Minn</code> <code>Miss</code>
-<code>Mo</code> <code>Mont</code> <code>N.C.</code> <code>N.D.</code> <code>N.H.</code> <code>N.J.</code>
-<code>N.M.</code> <code>N.Y.</code> <code>Neb</code> <code>Nev</code> <code>Ohio</code> <code>Okla</code>
-<code>Ore</code> <code>Pa</code> <code>R.I.</code> <code>S.C.</code> <code>S.D.</code> <code>Tenn</code>
-<code>Texas</code> <code>Utah</code> <code>Va</code> <code>Vt</code> <code>W.V.</code> <code>Wash</code>
-<code>Wis</code> <code>Wyo</code></p></dd> 
-<dt>Sat.M</dt><dd><p>a numeric vector</p></dd>
-<dt>Profic</dt><dd><p>a numeric vector</p></dd> 
-<dt>Group</dt><dd><p>a numeric vector</p></dd> 
+<dt>sat_math</dt><dd><p>SAT math scores for high school seniors</p></dd> 
+<dt>profic</dt><dd><p>math proficiency scores for eigth graders</p></dd> 
+<dt>group</dt><dd><p>a numeric vector</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>National Assessment of Educational Progress and The College Board</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -129,33 +113,35 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Mathpro</span>)</div><div class='output co'>#&gt; 'data.frame':	51 obs. of  10 variables:
-#&gt;  $ state1 : Factor w/ 20 levels "","Conn","D.C.",..: 2 4 3 5 6 7 8 10 9 12 ...
-#&gt;  $ Sat.M1 : int  472 464 443 446 480 466 463 479 475 486 ...
-#&gt;  $ Profic1: num  23.1 16.1 2.8 14.7 12.5 17.5 NA 17.1 NA 22.5 ...
-#&gt;  $ state2 : Factor w/ 33 levels "","Ala","Alaska",..: 2 3 4 5 6 7 8 9 10 11 ...
-#&gt;  $ Sat.M2 : int  529 477 496 518 482 513 466 508 546 574 ...
-#&gt;  $ Profic2: num  8.8 NA NA 9.7 13.9 18.2 12.8 19.5 NA 26.7 ...
-#&gt;  $ state  : Factor w/ 51 levels "Ala","Alaska",..: 7 9 8 11 12 15 20 22 21 30 ...
-#&gt;  $ Sat.M  : int  472 464 443 446 480 466 463 479 475 486 ...
-#&gt;  $ Profic : num  23.1 16.1 2.8 14.7 12.5 17.5 NA 17.1 NA 22.5 ...
-#&gt;  $ Group  : int  1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Mathpro</span>)
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>Sat.M1</span>~<span class='no'>Profic1</span>)
-<span class='fu'>plot</span>(<span class='no'>Profic1</span>,<span class='no'>Sat.M1</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Mathpro-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>model</span></div><div class='output co'>#&gt; 
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>sat_math</span> ~ <span class='no'>profic</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Mathpro</span>)
+<span class='fu'>plot</span>(<span class='no'>sat_math</span> ~ <span class='no'>profic</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Mathpro</span>, <span class='kw'>ylab</span> <span class='kw'>=</span> <span class='st'>"SAT"</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"proficiency"</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Mathpro-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = Sat.M1 ~ Profic1)
+#&gt; lm(formula = sat_math ~ profic, data = Mathpro)
+#&gt; 
+#&gt; Residuals:
+#&gt;    Min     1Q Median     3Q    Max 
+#&gt; -49.06 -27.15 -10.21  35.58  55.44 
 #&gt; 
 #&gt; Coefficients:
-#&gt; (Intercept)      Profic1  
-#&gt;     439.270        1.729  
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Mathpro</span>)
-<span class='fu'>remove</span>(<span class='no'>model</span>)</div></pre>
+#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    
+#&gt; (Intercept) 462.6561    16.2059  28.549   &lt;2e-16 ***
+#&gt; profic        2.2043     0.9117   2.418   0.0213 *  
+#&gt; ---
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#&gt; 
+#&gt; Residual standard error: 34.06 on 33 degrees of freedom
+#&gt;   (16 observations deleted due to missingness)
+#&gt; Multiple R-squared:  0.1505,	Adjusted R-squared:  0.1248 
+#&gt; F-statistic: 5.846 on 1 and 33 DF,  p-value: 0.02129
+#&gt; </div><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       
