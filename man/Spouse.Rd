@@ -4,23 +4,27 @@
 \name{Spouse}
 \alias{Spouse}
 \title{Convictions in spouse murder cases by gender}
-\format{A data frame with 4 observations on the following 3 variables.
+\format{A data frame/tibble with 540 observations on the following 2 variables.
 \describe{ 
-\item{result}{a factor with levels \code{acquitted}
-\code{convicted} \code{not prosecuted} \code{pleaded guilty}}
-\item{husband}{a numeric vector} 
-\item{wife}{a numeric vector} 
+\item{result}{a factor with levels \code{not prosecuted}, \code{pleaded guilty}, \code{convicted}, and \code{acquited}}
+\item{spouse}{a factor with levels \code{husband} and \code{wife}} 
 }}
+\source{
+Bureau of Justice Statistics (September 1995), \emph{Spouse Murder Defendants in Large
+Urban Counties}, Executive Summary, NCJ-156831.
+}
+\usage{
+Spouse
+}
 \description{
 Data for Exercise 8.33
 }
 \examples{
 
-str(Spouse)
-attach(Spouse)
-Spouse
-chisq.test(Spouse[,2:3])
-detach(Spouse)
+T1 <- xtabs(~result + spouse, data = Spouse)
+T1
+chisq.test(T1)
+rm(T1)
 
 }
 \references{

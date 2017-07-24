@@ -4,21 +4,26 @@
 \name{Pearson}
 \alias{Pearson}
 \title{Karl Pearson's data on heights of brothers and sisters}
-\format{A data frame with 11 observations on the following 2 variables.
+\format{A data frame/tibble with 11 observations on the following 3 variables.
 \describe{ 
-\item{brother}{a numeric vector} 
-\item{sister}{a numeric vector} 
+\item{family}{number indicating family of brother and sister pair}
+\item{brother}{height of brother (in inches)} 
+\item{sister}{height of sister (in inches)} 
 }}
+\source{
+Pearson, K. and Lee, A. (1902-3), On the Laws of Inheritance in Man, 
+\emph{Biometrika, 2}, 357
+}
+\usage{
+Pearson
+}
 \description{
 Data for Exercise 2.20
 }
 \examples{
 
-str(Pearson)
-attach(Pearson)
-plot(brother,sister)
-cor(brother,sister)
-detach(Pearson)
+plot(brother ~ sister, data = Pearson)
+cor(Pearson$brother, Pearson$sister)
 
 }
 \references{

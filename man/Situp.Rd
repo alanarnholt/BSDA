@@ -4,23 +4,24 @@
 \name{Situp}
 \alias{Situp}
 \title{Maximum number of situps by participants in an exercise class}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{number}{a numeric vector} 
+\item{number}{maximum number of situps completed in an exercise class after 1 month in the program} 
 }}
+\usage{
+Situp
+}
 \description{
 Data for Exercise 1.47
 }
 \examples{
 
-str(Situp)
-attach(Situp)
-stem(number)
-hist(number,breaks=seq(0,70,10))
-hist(number,breaks=seq(0,70,10),right=FALSE,col="blue",prob=TRUE,
-main="Problems 1.46 & 1.47")
-lines(density(number),col="red",lwd=3)
-detach(Situp)
+stem(Situp$number)
+hist(Situp$number, breaks = seq(0, 70, 10), right = FALSE)
+hist(Situp$number, breaks = seq(0, 70, 10), right = FALSE, 
+     freq = FALSE, col = "pink", main = "Problem 1.47", 
+          xlab = "Maximum number of situps")
+          lines(density(Situp$number), col = "red")
 
 }
 \references{

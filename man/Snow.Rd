@@ -4,22 +4,23 @@
 \name{Snow}
 \alias{Snow}
 \title{Concentration of microparticles in snowfields of Greenland and Antarctica}
-\format{A data frame with 34 observations on the following 4 variables.
+\format{A data frame/tibble with 34 observations on the following 2 variables.
 \describe{ 
-\item{antarc}{a numeric vector} 
-\item{greenld}{a numeric vector} 
-\item{concent}{a numeric vector}
-\item{site}{a numeric vector} 
+\item{concent}{concentration of microparticles from melted snow (in parts per billion)}
+\item{site}{location of snow sample (\code{Antarctica} or \code{Greenland})} 
 }}
+\source{
+Davis, J., \emph{Statistics and Data Analysis in Geology}, John Wiley, New York.
+}
+\usage{
+Snow
+}
 \description{
 Data for Exercise 7.87
 }
 \examples{
 
-str(Snow)
-attach(Snow)
-boxplot(concent~site)
-detach(Snow)
+boxplot(concent ~ site, data = Snow, col = c("lightblue", "lightgreen"))
 
 }
 \references{

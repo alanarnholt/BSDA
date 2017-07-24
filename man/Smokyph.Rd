@@ -4,30 +4,38 @@
 \name{Smokyph}
 \alias{Smokyph}
 \title{Water pH levels of 75 water samples taken in the Great Smoky Mountains}
-\format{A data frame with 75 observations on the following 5 variables.
+\format{A data frame/tibble with 75 observations on the following 3 variables.
 \describe{ 
-\item{waterph}{a numeric vector} 
-\item{code}{a factor with levels \code{high} \code{low}} 
-\item{elev}{a numeric vector} 
-\item{SRES1}{a numeric vector} 
-\item{FITS1}{a numeric vector} 
+\item{waterph}{water sample pH level} 
+\item{code}{charater variable with values \code{low} (elevation below 0.6 miles), and \code{high} (elevation above 0.6 miles)} 
+\item{elev}{elevation in miles} 
 }}
+\source{
+Schmoyer, R. L. (1994), Permutation Tests for Correlation in Regression Errors,
+\emph{Journal of the American Statistical Association, 89}, 1507-1516.
+}
+\usage{
+Smokyph
+}
 \description{
 Data for Exercises 6.40, 6.59, 7.10, and 7.35
 }
 \examples{
 
-str(Smokyph)
-attach(Smokyph)
-t.test(waterph,mu=7)
-SIGN.test(waterph,md=7)
-tapply(waterph,code,mean)
-stripchart(waterph~code,method="stack",pch=19,col=c("red","blue"))
-qqnorm(waterph[code=="low"])
-qqnorm(waterph[code=="high"])
-t.test(waterph[code=="low"],waterph[code=="high"])
-t.test(waterph[code=="low"],waterph[code=="high"],conf.level=.90)$conf
-detach(Smokyph)
+summary(Smokyph$waterph)
+tapply(Smokyph$waterph, Smokyph$code, mean)
+stripchart(waterph ~ code, data = Smokyph, method = "stack",
+           pch = 19, col = c("red", "blue"))
+           t.test(Smokyph$waterph, mu = 7)
+           BSDA::SIGN.test(Smokyph$waterph, md = 7)
+           t.test(waterph ~ code, data = Smokyph, alternative = "less")
+           t.test(waterph ~ code, data = Smokyph, conf.level = 0.90)
+          \dontrun{
+           ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
+             geom_dotplot() + 
+               facet_grid(code ~ .) + 
+                 guides(fill = FALSE)
+                 }
 
 }
 \references{

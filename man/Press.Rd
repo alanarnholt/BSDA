@@ -5,22 +5,24 @@
 \alias{Press}
 \title{Degree of confidence in the press versus education level for 20 randomly
 selected persons}
-\format{A data frame with 20 observations on the following 4 variables.
+\format{A data frame/tibble with 20 observations on the following 2 variables.
 \describe{ 
-\item{educat}{a numeric vector} 
-\item{confid}{a numeric vector} 
-\item{SRES1}{a numeric vector}
-\item{FITS1}{a numeric vector} 
+\item{education_yrs}{years of education} 
+\item{confidence}{degree of confidence in the press (the higher the score, the more confidence)} 
 }}
+\usage{
+Press
+}
 \description{
 Data for Exercise 9.55
 }
 \examples{
 
-str(Press)
-attach(Press)
-summary(lm(confid~educat))
-detach(Press)
+plot(confidence ~ education_yrs, data = Press)
+model <- lm(confidence ~ education_yrs, data = Press)
+abline(model, col = "purple")
+summary(model)
+rm(model)
 
 }
 \references{

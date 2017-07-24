@@ -5,34 +5,25 @@
 \alias{Statelaw}
 \title{Operating expenditures per resident for each of the state law enforcement
 agencies}
-\format{A data frame with 50 observations on the following 2 variables.
+\format{A data frame/tibble with 50 observations on the following 2 variables.
 \describe{ 
-\item{State}{a factor with levels \code{Alabama}
-\code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-\code{Colorado} \code{Connecticut} \code{Delaware} \code{Florida}
-\code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
-\code{Iowa} \code{Kansas} \code{Kentucky} \code{Louisiana} \code{Maine}
-\code{Maryland} \code{Massachusetts} \code{Michigan} \code{Minnesota}
-\code{Mississippi} \code{Missour} \code{Montana} \code{Nebraska}
-\code{Nevada} \code{New Hampshire} \code{New Jersey} \code{New Mexico}
-\code{New York} \code{North Carolina} \code{North Dakota} \code{Ohio}
-\code{Oklahoma} \code{Oregon} \code{Pennsylvania} \code{Rhode Island}
-\code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
-\code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
-Virginia} \code{Wisconsin} \code{Wyoming}} 
-\item{cost}{a numeric vector} 
+\item{state}{U.S. state} 
+\item{cost}{dollars spent per resident on law enforcement} 
 }}
+\source{
+Bureau of Justice Statistics, \emph{Law Enforcement Management and Administrative Statistics, 1993},
+NCJ-148825, September 1995, page 84.
+}
+\usage{
+Statelaw
+}
 \description{
 Data for Exercise 6.62
 }
 \examples{
 
-str(Statelaw)
-attach(Statelaw)
-summary(cost)
-EDA(cost)
-SIGN.test(cost,md=8,alternative="less")
-detach(Statelaw)
+BSDA::EDA(Statelaw$cost)
+BSDA::SIGN.test(Statelaw$cost, md = 8, alternative = "less")
 
 }
 \references{

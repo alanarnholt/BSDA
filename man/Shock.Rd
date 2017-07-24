@@ -4,25 +4,24 @@
 \name{Shock}
 \alias{Shock}
 \title{Effect of experimental shock on time to complete difficult task}
-\format{A data frame with 9 observations on the following 3 variables.
+\format{A data frame/tibble with 27 observations on the following 2 variables.
 \describe{ 
-\item{Group1}{a numeric vector} 
-\item{Group2}{a numeric vector} 
-\item{Group3}{a numeric vector} 
+\item{group}{grouping variable with values of \code{Group1} (no shock), \code{Group2} (medium shock), 
+and \code{Group3} (severe shock)} 
+\item{attempts}{number of attempts to complete a task}
 }}
+\usage{
+Shock
+}
 \description{
 Data for Exercise 10.50
 }
 \examples{
 
-str(Shock)
-attach(Shock)
-STACKED <-stack(Shock)
-STACKED[1:5,]
-boxplot(values~ind,col=c("red","blue","green"),data=STACKED)
-anova(lm(values~ind,data=STACKED))
-remove(STACKED)
-detach(Shock)
+boxplot(attempts ~ group, data = Shock)
+model <- lm(attempts ~ group, data = Shock)
+anova(model)
+rm(model)
 
 
 }

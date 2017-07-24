@@ -6,23 +6,23 @@
 \title{Efficiency of pit crews for three major NASCAR teams}
 \format{A data frame/tibble with 36 observations on the following 6 variables.
 \describe{ 
-\item{TeamA}{a numeric vector} 
-\item{TeamB}{a numeric vector} 
-\item{TeamC}{a numeric vector} 
-\item{Time}{a numeric vector} 
-\item{Team}{a numeric vector} 
-\item{Ranks}{a numeric vector} 
+\item{time}{duration of pit stop} 
+\item{team}{a numeric vector representing team 1, 2, or 3} 
+\item{ranks}{a numeric vector ranking each pit stop in order of speed} 
 }}
+\usage{
+Nascar
+}
 \description{
 Data for Exercise 10.53
 }
 \examples{
 
-str(Nascar)
-attach(Nascar)
-boxplot(Time~Team)
-anova(lm(Time~as.factor(Team)))
-detach(Nascar)
+boxplot(time ~ team, data = Nascar)
+model <- lm(time ~ factor(team), data = Nascar)
+summary(model)
+anova(model)
+rm(model)
 
 }
 \references{

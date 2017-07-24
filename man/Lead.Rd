@@ -4,7 +4,7 @@
 \name{Lead}
 \alias{Lead}
 \title{Lead levels in children's blood whose parents worked in a battery factory}
-\format{A data frame/tibble with 33 observations on the following 3 variables.
+\format{A data frame/tibble with 66 observations on the following 2 variables.
 \describe{ 
 \item{group}{a character vector with values \code{exposed} and \code{control}} 
 \item{lead}{a numeric vector indicating the level of lead in children's blood in micrograms/dl} 

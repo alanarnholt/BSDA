@@ -4,23 +4,25 @@
 \name{Psat}
 \alias{Psat}
 \title{PSAT scores versus SAT scores}
-\format{A data frame with 7 observations on the following 4 variables.
+\format{A data frame/tibble with 7 observations on the following 2 variables.
 \describe{
-\item{psat}{a numeric vector} 
-\item{sat}{a numeric vector} 
-\item{SRES1}{a numeric vector}
-\item{FITS1}{a numeric vector} 
+\item{psat}{PSAT score} 
+\item{sat}{SAT score} 
 }}
+\usage{
+Psat
+}
 \description{
 Data for Exercise 2.50
 }
 \examples{
 
-str(Psat)
-attach(Psat)
-model <- lm(sat~psat)
-plot(psat,resid(model))
-detach(Psat)
+model <- lm(sat ~ psat, data = Psat)
+par(mfrow = c(1, 2))
+plot(Psat$psat, resid(model))
+plot(model, which = 1)
+rm(model)
+par(mfrow = c(1, 1))
 
 }
 \references{

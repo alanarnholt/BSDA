@@ -4,20 +4,20 @@
 \name{Psych}
 \alias{Psych}
 \title{Correct responses for 24 students in a psychology experiment}
-\format{A data frame with 23 observations on the following variable.
+\format{A data frame/tibble with 23 observations on the following variable.
 \describe{ 
-\item{score}{a numeric vector} 
+\item{score}{number of correct repsonses in a psychology experiment} 
 }}
+\usage{
+Psych
+}
 \description{
 Data for Exercise 1.42
 }
 \examples{
 
-str(Psych)
-attach(Psych)
-stem(score)
-EDA(score)
-detach(Psych)
+stem(Psych$score)
+BSDA::EDA(Psych$score)
 
 }
 \references{

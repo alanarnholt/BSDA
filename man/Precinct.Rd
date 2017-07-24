@@ -4,23 +4,23 @@
 \name{Precinct}
 \alias{Precinct}
 \title{Robbery rates versus percent low income in 8 precincts}
-\format{A data frame with 8 observations on the following 2 variables.
+\format{A data frame/tibble with 8 observations on the following 2 variables.
 \describe{ 
-\item{rate}{a numeric vector} 
-\item{income}{a numeric vector} 
+\item{rate}{robbery rate (per 1000 people)} 
+\item{income}{percent with low income} 
 }}
+\usage{
+Precinct
+}
 \description{
 Data for Exercise 2.2 and 2.38
 }
 \examples{
 
-str(Precinct)
-attach(Precinct)
-plot(rate,income,main="Exercise 2.2")
-model <- lm(income~rate)
-model
-abline(model,col="green")
-detach(Precinct)
+plot(rate ~ income, data = Precinct)
+model <- (lm(rate ~ income, data = Precinct))
+abline(model)
+rm(model)
 
 }
 \references{

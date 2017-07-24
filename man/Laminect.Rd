@@ -4,7 +4,7 @@
 \name{Laminect}
 \alias{Laminect}
 \title{Median costs of laminectomies at hospitals across North Carolina in 1992}
-\format{A data frame/tibble with 46 observations on the following 5 variables.
+\format{A data frame/tibble with 138 observations on the following 2 variables.
 \describe{
  \item{area}{a character vector indicating the area of the hospital with \code{Rural}, \code{Regional},
  and \code{Metropol}} 

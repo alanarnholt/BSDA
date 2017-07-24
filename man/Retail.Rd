@@ -5,20 +5,23 @@
 \alias{Retail}
 \title{Length of employment versus gross sales for 10 employees of a large retail
 store}
-\format{A data frame with 10 observations on the following 2 variables.
+\format{A data frame/tibble with 10 observations on the following 2 variables.
 \describe{ 
-\item{months}{a numeric vector}
-\item{sales}{a numeric vector} 
+\item{months}{length of employment (in months)}
+\item{sales}{employee gross sales (in dollars)} 
 }}
+\usage{
+Retail
+}
 \description{
 Data for Exercise 9.59
 }
 \examples{
 
-str(Retail)
-attach(Retail)
-summary(lm(sales~months))
-detach(Retail)
+plot(sales ~ months, data = Retail)
+model <- lm(sales ~ months, data = Retail)
+abline(model)
+summary(model)
 
 }
 \references{

@@ -4,21 +4,22 @@
 \name{Soccer}
 \alias{Soccer}
 \title{Weights of 25 soccer players}
-\format{A data frame with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on the following variable.
 \describe{ 
-\item{weight}{a numeric vector} 
+\item{weight}{soccer players weight (in pounds)} 
 }}
+\usage{
+Soccer
+}
 \description{
 Data for Exercise 1.46
 }
 \examples{
 
-str(Soccer)
-attach(Soccer)
-stem(weight,scale=2)
-hist(weight,breaks=seq(110,210,10),col="orange",
-main="Problem 1.46 \\n Weights of Soccer Players",right=FALSE)
-detach(Soccer)
+stem(Soccer$weight, scale = 2)
+hist(Soccer$weight, breaks = seq(110, 210, 10), col = "orange",
+     main = "Problem 1.46 \\n Weights of Soccer Players", 
+          xlab = "weight (lbs)", right = FALSE)
 
 }
 \references{

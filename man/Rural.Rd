@@ -4,23 +4,26 @@
 \name{Rural}
 \alias{Rural}
 \title{Social adjustment scores for a rural group and a city group of children}
-\format{A data frame with 33 observations on the following 4 variables.
+\format{A data frame/tibble with 33 observations on the following 2 variables.
 \describe{ 
-\item{Rural}{a numeric vector} 
-\item{City}{a numeric vector} 
-\item{score}{a numeric vector} 
-\item{code}{a numeric vector} 
+\item{score}{child's social adjustment score} 
+\item{area}{character variable with values \code{city} and \code{rural}} 
 }}
+\usage{
+Rural
+}
 \description{
-Data for Exercise 7.16
+Data for Example 7.16
 }
 \examples{
 
-str(Rural)
-attach(Rural)
-wilcox.test(score~code)
-wilcox.test(Rural,City)
-detach(Rural)
+boxplot(score ~ area, data = Rural)
+wilcox.test(score ~ area, data = Rural)
+\dontrun{
+Rural <- dplyr::mutate(Rural, r = rank(score))
+Rural
+t.test(r ~ area, data = Rural)
+}
 
 }
 \references{

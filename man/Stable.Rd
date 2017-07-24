@@ -4,20 +4,19 @@
 \name{Stable}
 \alias{Stable}
 \title{Times of a 2-year old stallion on a one mile run}
-\format{A data frame with 9 observations on the following variable.
+\format{A data frame/tibble with 9 observations on the following variable.
 \describe{ 
-\item{time}{a numeric vector} 
+\item{time}{time (in seconds) for horse to run 1 mile} 
 }}
+\usage{
+Stable
+}
 \description{
 Data for Exercise 6.93
 }
 \examples{
 
-str(Stable)
-attach(Stable)
-EDA(time)
-SIGN.test(time,md=98.5,alternative="greater")
-detach(Stable)
+BSDA::SIGN.test(Stable$time, md = 98.5, alternative = "greater")
 
 }
 \references{

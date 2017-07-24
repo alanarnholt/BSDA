@@ -4,24 +4,28 @@
 \name{Sentence}
 \alias{Sentence}
 \title{Sentences of 41 prisoners convicted of a homicide offense}
-\format{A data frame with 41 observations on the following variable.
+\format{A data frame/tibble with 41 observations on the following variable.
 \describe{ 
-\item{months}{a numeric vector} 
+\item{months}{sentence length (in months) for prisoners convicted of homocide} 
 }}
+\source{
+U.S. Department of Justice, Bureau of Justice Statistics, \emph{Prison Sentences
+and Time Served for Violence}, NCJ-153858, April 1995
+}
+\usage{
+Sentence
+}
 \description{
 Data for Exercise 1.123
 }
 \examples{
 
-str(Sentence)
-attach(Sentence)
-stem(months)
-EDA(months)
-ll <- mean(months)-2*sd(months)
-ul <- mean(months)+2*sd(months)
-limits <- c(ll,ul)
+stem(Sentence$months)
+ll <- mean(Sentence$months)-2*sd(Sentence$months)
+ul <- mean(Sentence$months)+2*sd(Sentence$months)
+limits <- c(ll, ul)
 limits
-detach(Sentence)
+rm(ul, ll, limits)
 
 }
 \references{

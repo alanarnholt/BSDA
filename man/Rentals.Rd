@@ -4,19 +4,21 @@
 \name{Rentals}
 \alias{Rentals}
 \title{Weekly rentals for 45 apartments}
-\format{A data frame with 45 observations on the following variable.
+\format{A data frame/tibble with 45 observations on the following variable.
 \describe{ 
-\item{rent}{a numeric vector} 
+\item{rent}{weekly apartment rental price (in dollars)} 
 }}
+\usage{
+Rentals
+}
 \description{
 Data for Exercise 1.122
 }
 \examples{
 
-str(Rentals)
-attach(Rentals)
-EDA(rent)
-detach(Rentals)
+stem(Rentals$rent)
+sum(Rentals$rent < mean(Rentals$rent) - 3*sd(Rentals$rent) | 
+   Rentals$rent > mean(Rentals$rent) + 3*sd(Rentals$rent))
 
 }
 \references{

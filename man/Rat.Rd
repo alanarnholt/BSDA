@@ -4,23 +4,27 @@
 \name{Rat}
 \alias{Rat}
 \title{Survival times of 20 rats exposed to high levels of radiation}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{survival.time}{a numeric vector} 
+\item{survival_time}{survival time in weeks for rats exposed to a high level of radiation} 
 }}
+\source{
+J. Lawless, \emph{Statistical Models and Methods for Lifetime Data} (New York: Wiley, 1982)
+}
+\usage{
+Rat
+}
 \description{
 Data for Exercise 1.52, 1.76, 5.62, and 6.44
 }
 \examples{
 
-str(Rat)
-attach(Rat)
-hist(survival.time)
-qqnorm(survival.time,col="blue")
-qqline(survival.time,col="red")
-t.test(survival.time)$conf
-t.test(survival.time,mu=100,alternative="greater")
-detach(Rat)
+hist(Rat$survival_time)
+qqnorm(Rat$survival_time)
+qqline(Rat$survival_time)
+summary(Rat$survival_time)
+t.test(Rat$survival_time)
+t.test(Rat$survival_time, mu = 100, alternative = "greater")
 
 }
 \references{

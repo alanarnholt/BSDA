@@ -4,20 +4,20 @@
 \name{Pollutio}
 \alias{Pollutio}
 \title{Air pollution index for 15 randomly selected days for a major western city}
-\format{A data frame with 15 observations on the following variable.
+\format{A data frame/tibble with 15 observations on the following variable.
 \describe{ 
-\item{inde}{a numeric vector} 
+\item{inde}{air pollution index} 
 }}
+\usage{
+Pollutio
+}
 \description{
 Data for Exercise 5.59
 }
 \examples{
 
-str(Pollutio)
-attach(Pollutio)
-EDA(inde)
-t.test(inde,conf.level=.98)$conf
-detach(Pollutio)
+stem(Pollutio$inde)
+t.test(Pollutio$inde, conf.level = 0.98)$conf
 
 }
 \references{

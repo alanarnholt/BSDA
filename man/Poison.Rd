@@ -4,22 +4,36 @@
 \name{Poison}
 \alias{Poison}
 \title{Number of poisonings reported to 16 poison control centers}
-\format{A data frame with 6 observations on the following 2 variables.
+\format{A data frame/tibble with 226,261 observations on the following variable.
 \describe{ 
-\item{Type}{a factor with levels \code{Alcohol}
-\code{Cleaning agent} \code{Cosmetics} \code{Drugs} \code{Insecticides}
+\item{type}{a factor with levels \code{Alcohol},
+\code{Cleaning agent}, \code{Cosmetics}, \code{Drugs}, \code{Insecticides}, and
 \code{Plants}} 
-\item{number}{a numeric vector} 
 }}
+\source{
+Centers for Disease Control, Atlanta, Georgia.
+}
+\usage{
+Poison
+}
 \description{
 Data for Exercise 1.113
 }
 \examples{
 
-str(Poison)
-attach(Poison)
-names(number) <- Type
-barplot(number,col="red")
+T1 <- xtabs(~type, data = Poison)
+T1
+par(mar = c(5.1 + 2, 4.1, 4.1, 2.1))
+barplot(sort(T1, decreasing = TRUE), las = 2, col = rainbow(6))
+par(mar = c(5.1, 4.1, 4.1, 2.1))
+rm(T1)
+\dontrun{
+ggplot2::ggplot(data = Poison, aes(x = type, fill = type)) + 
+  geom_bar() + 
+    theme_bw() + 
+      theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) +
+        guides(fill = FALSE)
+        }
 
 }
 \references{

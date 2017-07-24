@@ -4,7 +4,7 @@
 \name{Longtail}
 \alias{Longtail}
 \title{Long-tailed distributions to illustrate Kruskal Wallis test}
-\format{A data frame/tibble with 60 observations on the following 6 variables.
+\format{A data frame/tibble with 60 observations on the following 3 variables.
 \describe{ 
 \item{score}{a numeric vector} 
 \item{group}{a numeric vector with values \code{1}, \code{2}, and \code{3}} 

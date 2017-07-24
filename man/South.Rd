@@ -4,19 +4,19 @@
 \name{South}
 \alias{South}
 \title{Murder rates for 30 cities in the South}
-\format{A data frame with 31 observations on the following variable.
+\format{A data frame/tibble with 31 observations on the following variable.
 \describe{ 
-\item{rate}{a numeric vector} 
+\item{rate}{murder rate per 100,000 people} 
 }}
+\usage{
+South
+}
 \description{
 Data for Exercise 1.84
 }
 \examples{
 
-str(South)
-attach(South)
-boxplot(rate,col="yellow",main="Problem 1.83")
-detach(South)
+boxplot(South$rate, col = "gray", ylab = "Murder rate per 100,000 people")
 
 }
 \references{
