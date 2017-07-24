@@ -4,7 +4,7 @@
 \name{Nascar}
 \alias{Nascar}
 \title{Efficiency of pit crews for three major NASCAR teams}
-\format{A data frame with 36 observations on the following 6 variables.
+\format{A data frame/tibble with 36 observations on the following 6 variables.
 \describe{ 
 \item{TeamA}{a numeric vector} 
 \item{TeamB}{a numeric vector} 
@@ -14,7 +14,7 @@
 \item{Ranks}{a numeric vector} 
 }}
 \description{
-Data for Example 10.53
+Data for Exercise 10.53
 }
 \examples{
 

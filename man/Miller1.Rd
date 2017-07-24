@@ -4,20 +4,20 @@
 \name{Miller1}
 \alias{Miller1}
 \title{Twenty scores on the Miller personality test}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{miller}{a numeric vector} 
+\item{miller}{scores on the Miller personality test} 
 }}
+\usage{
+Miller1
+}
 \description{
 Data for Exercise 1.41
 }
 \examples{
 
-str(Miller1)
-attach(Miller1)
-stem(miller)
-stem(miller,scale=2)
-detach(Miller1)
+stem(Miller1$miller)
+stem(Miller1$miller, scale = 2)
 
 }
 \references{

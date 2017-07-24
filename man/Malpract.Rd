@@ -4,19 +4,19 @@
 \name{Malpract}
 \alias{Malpract}
 \title{Amounts awarded in 17 malpractice cases}
-\format{A data frame with 17 observations on the following variable.
+\format{A data frame/tibble with 17 observations on the following variable.
 \describe{ 
-\item{award}{a numeric vector} 
+\item{award}{malpractice reward in $1000} 
 }}
+\usage{
+Malpract
+}
 \description{
 Data for Exercise 5.73
 }
 \examples{
 
-str(Malpract)
-attach(Malpract)
-SIGN.test(award,conf.level=.90)
-detach(Malpract)
+BSDA::SIGN.test(Malpract$award, conf.level = 0.90)
 
 }
 \references{

@@ -4,21 +4,27 @@
 \name{Monoxide}
 \alias{Monoxide}
 \title{Carbon monoxide emitted by smoke stacks of a manufacturer and a competitor}
-\format{A data frame with 10 observations on the following 2 variables.
+\format{A data frame/tibble with 10 observations on the following 2 variables.
 \describe{ 
-\item{manufac}{a numeric vector} 
-\item{compet}{a numeric vector} 
+\item{company}{a vector with values \code{manufacturer} and \code{competitor}} 
+\item{emission}{carbon monoxide emitted} 
 }}
+\usage{
+Monoxide
+}
 \description{
 Data for Exercise 7.45
 }
 \examples{
 
-str(Monoxide)
-attach(Monoxide)
-t.test(manufac,compet)
-wilcox.test(manufac,compet)
-detach(Monoxide)
+boxplot(emission ~ company, data = Monoxide, col = topo.colors(2))
+t.test(emission ~ company, data = Monoxide)
+wilcox.test(emission ~ company, data = Monoxide)
+\dontrun{
+ggplot2::ggplot(data = Monoxide, aes(x = company, y = emission)) + 
+  geom_boxplot() + 
+    theme_bw()
+}
 
 }
 \references{

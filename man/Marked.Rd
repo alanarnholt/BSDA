@@ -4,21 +4,25 @@
 \name{Marked}
 \alias{Marked}
 \title{Percent of marked cars in 65 police departments in Florida}
-\format{A data frame with 65 observations on the following variable.
+\format{A data frame/tibble with 65 observations on the following variable.
 \describe{ 
-\item{percent}{a numeric vector}
+\item{percent}{percentage of marked cars in 65 Florida police departments}
 }}
+\source{
+\emph{Law Enforcement Management and Administrative Statistics, 1993}, Bureau of 
+Justice Statistics, NCJ-148825, September 1995, p. 147-148
+}
+\usage{
+Marked
+}
 \description{
 Data for Exercise 6.100
 }
 \examples{
 
-str(Marked)
-attach(Marked)
-EDA(percent)
-t.test(percent,mu=60,alternative="greater")
-SIGN.test(percent,md=60,alternative="greater")
-detach(Marked)
+BSDA::EDA(Marked$percent)
+BSDA::SIGN.test(Marked$percent, md = 60, alternative = "greater")
+t.test(Marked$percent, mu = 60, alternative = "greater")
 
 }
 \references{

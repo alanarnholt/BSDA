@@ -4,26 +4,22 @@
 \name{Maze}
 \alias{Maze}
 \title{Error scores for four groups of experimental animals running a maze}
-\format{A data frame with 32 observations on the following 6 variables.
+\format{A data frame/tibble with 32 observations on the following 6 variables.
 \describe{ 
-\item{CondA}{a numeric vector} 
-\item{CondB}{a numeric vector} 
-\item{CondC}{a numeric vector}
-\item{CondD}{a numeric vector} 
-\item{score}{a numeric vector} 
+\item{score}{error scores for animals running through a maze under different conditions} 
 \item{condition}{a factor with levels \code{CondA}
 \code{CondB} \code{CondC} \code{CondD}} 
 }}
+\usage{
+Maze
+}
 \description{
 Data for Exercise 10.13
 }
 \examples{
 
-str(Maze)
-attach(Maze)
-boxplot(score~condition)
-anova(lm(score~condition))
-detach(Maze)
+boxplot(score ~ condition, data = Maze, col = rainbow(4))
+anova(lm(score ~ condition, data = Maze))
 
 }
 \references{

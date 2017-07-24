@@ -5,24 +5,31 @@
 \alias{Music}
 \title{Improvement scores for identical twins taught music recognition by two
 techniques}
-\format{A data frame with 12 observations on the following 3 variables.
+\format{A data frame/tibble with 12 observations on the following 3 variables.
 \describe{ 
-\item{Method1}{a numeric vector} 
-\item{Method2}{a numeric vector} 
+\item{method1}{a numeric vector measuring the improvement scores on a music recognition test} 
+\item{method2}{a numeric vector measuring the improvement scores on a music recognition test} 
 \item{differ}{a numeric vector} 
 }}
+\usage{
+Music
+}
 \description{
 Data for Exercise 7.59
 }
 \examples{
 
-str(Music)
-attach(Music)
-qqnorm(differ)
-qqline(differ)
-shapiro.test(differ)
-t.test(Method1,Method2,paired=TRUE)
-detach(Music)
+qqnorm(Music$differ)
+qqline(Music$differ)
+shapiro.test(Music$differ)
+t.test(Music$method1, Music$method2, paired = TRUE)
+# Or
+t.test(Music$differ)
+\dontrun{
+ggplot2::ggplot(data = Music, aes(x = differ)) + 
+geom_dotplot() + 
+theme_bw()
+}
 
 }
 \references{

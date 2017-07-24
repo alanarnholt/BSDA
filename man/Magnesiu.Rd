@@ -4,26 +4,28 @@
 \name{Magnesiu}
 \alias{Magnesiu}
 \title{Magnesium concentration and distances between samples}
-\format{A data frame with 20 observations on the following 4 variables.
+\format{A data frame/tibble with 20 observations on the following 4 variables.
 \describe{ 
-\item{distance}{a numeric vector}
-\item{magnesiu}{a numeric vector} 
-\item{SRES1}{a numeric vector} 
-\item{FITS1}{a numeric vector} 
+\item{distance}{distance between samples}
+\item{magnesium}{concentration of magnesium} 
 }}
+\source{
+Davis, J. (1986), \emph{Statistics and Data Analysis in Geology}, 2d. Ed.,
+John Wiley and Sons, New York, p. 146
+}
+\usage{
+Magnesiu
+}
 \description{
 Data for Exercise 9.9
 }
 \examples{
 
-str(Magnesiu)
-attach(Magnesiu)
-model <- lm(magnesiu~distance)
-plot(distance,magnesiu)
+plot(magnesium ~ distance, data = Magnesiu)
+model = lm(magnesium ~ distance, data = Magnesiu)
 abline(model)
 summary(model)
-detach(Magnesiu)
-remove(model)
+rm(model)
 
 }
 \references{
