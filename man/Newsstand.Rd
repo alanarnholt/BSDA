@@ -4,20 +4,20 @@
 \name{Newsstand}
 \alias{Newsstand}
 \title{Daily profits for 20 newsstands}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{profit}{a numeric vector} 
+\item{profit}{profit of each newsstand} 
 }}
+\usage{
+Newsstand
+}
 \description{
 Data for Exercise 1.43
 }
 \examples{
 
-str(Newsstand)
-attach(Newsstand)
-stem(profit)
-stem(profit,scale=3)
-detach(Newsstand)
+stem(Newsstand$profit)
+stem(Newsstand$profit, scale = 3)
 
 }
 \references{

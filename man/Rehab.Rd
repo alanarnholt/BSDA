@@ -4,26 +4,27 @@
 \name{Rehab}
 \alias{Rehab}
 \title{Rehabilitative potential of 20 prison inmates as judged by two psychiatrists}
-\format{A data frame with 20 observations on the following 3 variables.
+\format{A data frame/tibble with 20 observations on the following 4 variables.
 \describe{ 
-\item{Psych1}{a numeric vector} 
-\item{Psych2}{a numeric vector} 
-\item{differ}{a numeric vector} 
+\item{inmate}{inmate identification number} 
+\item{psych1}{rating from first psychiatrist on the inmates rehabilative potential} 
+\item{psych2}{rating from second psychiatrist on the inmates rehabilative potential} 
+\item{differ}{\code{psych1} - \code{psych2}}
 }}
+\usage{
+Rehab
+}
 \description{
 Data for Exercise 7.61
 }
 \examples{
 
-str(Rehab)
-attach(Rehab)
-qqnorm(differ)
-qqline(differ)
-shapiro.test(differ)
-boxplot(Psych1,Psych2,names=c("Psychiatrist 1","Psychiatrist 2"),
-col=c("pink","lightblue"))
-t.test(Psych1,Psych2,paired=TRUE)
-detach(Rehab)
+boxplot(Rehab$differ)
+qqnorm(Rehab$differ)
+qqline(Rehab$differ)
+t.test(Rehab$differ)
+# Or
+t.test(Rehab$psych1, Rehab$psych2, paired = TRUE)
 
 }
 \references{

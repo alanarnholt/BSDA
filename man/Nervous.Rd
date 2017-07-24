@@ -4,21 +4,24 @@
 \name{Nervous}
 \alias{Nervous}
 \title{Reaction effects of 4 drugs on 25 subjects with a nervous disorder}
-\format{A data frame with 25 observations on the following 2 variables.
+\format{A data frame/tibble with 25 observations on the following 2 variables.
 \describe{ 
-\item{react}{a numeric vector} 
-\item{drug}{a numeric vector} 
+\item{react}{a numeric vector representing reaction time} 
+\item{drug}{a numeric vector indicating each of the 4 drugs} 
 }}
+\usage{
+Nervous
+}
 \description{
-Data for Exercise 10.3
+Data for Example 10.3
 }
 \examples{
 
-str(Nervous)
-attach(Nervous)
-boxplot(react~drug)
-anova(lm(react~as.factor(drug)))
-detach(Nervous)
+boxplot(react ~ drug, data = Nervous, col = rainbow(4))
+model <- aov(react ~ factor(drug), data = Nervous)
+summary(model)
+TukeyHSD(model)
+plot(TukeyHSD(model), las = 1)
 
 }
 \references{

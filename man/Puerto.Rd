@@ -4,20 +4,21 @@
 \name{Puerto}
 \alias{Puerto}
 \title{Weekly incomes of a random sample of 50 Puerto Rican families in Miami}
-\format{A data frame with 50 observations on the following variable.
+\format{A data frame/tibble with 50 observations on the following variable.
 \describe{ 
-\item{income}{a numeric vector} 
+\item{income}{weekly family income (in dollars)} 
 }}
+\usage{
+Puerto
+}
 \description{
 Data for Exercise 5.22 and 5.65
 }
 \examples{
 
-str(Puerto)
-attach(Puerto)
-EDA(income)
-t.test(income,conf.level=.90)$conf
-detach(Puerto)
+stem(Puerto$income)
+boxplot(Puerto$income)
+t.test(Puerto$income,conf.level = .90)$conf
 
 }
 \references{

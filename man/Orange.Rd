@@ -4,20 +4,24 @@
 \name{Orange}
 \alias{Orange}
 \title{Price of oranges versus size of the harvest}
-\format{A data frame with 6 observations on the following 2 variables.
+\format{A data frame/tibble with 6 observations on the following 2 variables.
 \describe{ 
-\item{harvest}{a numeric vector} 
-\item{price}{a numeric vector} 
+\item{harvest}{harvest in millions of boxes} 
+\item{price}{price is average price charged by California growers for for 75-pound box of navel oranges} 
 }}
+\usage{
+Orange
+}
 \description{
 Data for Exercise 9.61
 }
 \examples{
 
-str(Orange)
-attach(Orange)
-summary(lm(price~harvest))
-detach(Orange)
+plot(price ~ harvest, data = Orange)
+model <- lm(price ~ harvest, data = Orange)
+abline(model)
+summary(model)
+rm(model)
 
 }
 \references{

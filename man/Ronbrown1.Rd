@@ -4,30 +4,20 @@
 \name{Ronbrown1}
 \alias{Ronbrown1}
 \title{Oceanography data obtained at site 1 by scientist aboard the ship Ron Brown}
-\format{A data frame with 75 observations on the following 12 variables.
+\format{A data frame/tibble with 75 observations on the following 2 variables.
 \describe{ 
-\item{depth}{a numeric vector} 
-\item{downtemp1}{a numeric vector} 
-\item{downtemp2}{a numeric vector}
-\item{downsalinity1}{a numeric vector}
-\item{downsalinity2}{a numeric vector} 
-\item{downdensity}{a numeric vector} 
-\item{C7}{a numeric vector} 
-\item{uptemp1}{a numeric vector} 
-\item{uptemp2}{a numeric vector}
-\item{upsalinity1}{a numeric vector} 
-\item{upsalinity2}{a numeric vector} 
-\item{updensity}{a numeric vector} 
+\item{depth}{ocen depth (in meters)} 
+\item{temperature}{ocean temperature (in Celsius)} 
 }}
+\usage{
+Ronbrown1
+}
 \description{
 Data for Exercise 2.9
 }
 \examples{
 
-str(Ronbrown1)
-attach(Ronbrown1)
-plot(depth,downtemp1)
-detach(Ronbrown1)
+plot(temperature ~ depth, data = Ronbrown1, ylab = "Temperature")
 
 }
 \references{

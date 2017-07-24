@@ -5,21 +5,28 @@
 \alias{Scales}
 \title{Readings obtained from a 100 pound weight placed on four brands of bathroom
 scales}
-\format{A data frame with 20 observations on the following 2 variables.
+\format{A data frame/tibble with 20 observations on the following 2 variables.
 \describe{ 
-\item{Brand}{a factor with levels \code{A} \code{B}
-\code{C} \code{D}} 
-\item{reading}{a numeric vector} 
+\item{brand}{variable indicating brand of bathroom scale (\code{A}, \code{B}, \code{C}, or \code{D})} 
+\item{reading}{recorded value (in pounds) of a 100 pound weight} 
 }}
+\usage{
+Scales
+}
 \description{
 Data for Exercise 1.89
 }
 \examples{
 
-str(Scales)
-attach(Scales)
-boxplot(reading~Brand,ylab="Reading",xlab="Brand",main="Problem 1.89")
-detach(Scales)
+boxplot(reading ~ brand, data = Scales, col = rainbow(4), 
+ylab = "Weight (lbs)")
+\dontrun{
+ggplot2::ggplot(data = Scales, aes(x = brand, y = reading, fill = brand)) + 
+  geom_boxplot() + 
+    labs(y = "weight (lbs)") +
+     theme_bw() + 
+       theme(legend.position = "none") 
+       }
 
 }
 \references{

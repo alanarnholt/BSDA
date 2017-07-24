@@ -4,12 +4,12 @@
 \name{Mathpro}
 \alias{Mathpro}
 \title{Math proficiency and SAT scores by states}
-\format{A data frame/tibble with 51 observations on the following 10 variables.
+\format{A data frame/tibble with 51 observations on the following 4 variables.
 \describe{ 
-\item{state}{a factor with levels \code{} \code{Conn}
-\code{D.C.} \code{Del} \code{Ga} \code{Hawaii} \code{Ind} \code{Maine}
-\code{Mass} \code{Md} \code{N.C.} \code{N.H.} \code{N.J.} \code{N.Y.}
-\code{Ore} \code{Pa} \code{R.I.} \code{S.C.} \code{Va} \code{Vt}}
+\item{state}{a factor with levels \code{} \code{Conn},
+\code{D.C.}, \code{Del}, \code{Ga}, \code{Hawaii}, \code{Ind}, \code{Maine},
+\code{Mass}, \code{Md}, \code{N.C.}, \code{N.H.}, \code{N.J.}, \code{N.Y.},
+\code{Ore}, \code{Pa}, \code{R.I.}, \code{S.C.}, \code{Va}, and \code{Vt}}
 \item{sat_math}{SAT math scores for high school seniors} 
 \item{profic}{math proficiency scores for eigth graders} 
 \item{group}{a numeric vector} 

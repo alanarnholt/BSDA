@@ -4,22 +4,25 @@
 \name{Nicotine}
 \alias{Nicotine}
 \title{Nicotine content versus sales for 8 major brands of cigarettes}
-\format{A data frame with 8 observations on the following 2 variables.
+\format{A data frame/tibble with 8 observations on the following 2 variables.
 \describe{ 
-\item{nicotine}{a numeric vector} 
-\item{sales}{a numeric vector} 
+\item{nicotine}{nicotine content in milligrams} 
+\item{sales}{sales figures in $100,000} 
 }}
+\usage{
+Nicotine
+}
 \description{
 Data for Exercise 9.21
 }
 \examples{
 
-str(Nicotine)
-attach(Nicotine)
-model <- lm(sales~nicotine)
+model <- lm(sales ~ nicotine, data = Nicotine)
+plot(sales ~ nicotine, data = Nicotine)
+abline(model)
 summary(model)
-detach(Nicotine)
-remove(model)
+predict(model, newdata = data.frame(nicotine = 1), 
+     interval = "confidence", level = 0.99)
 
 }
 \references{

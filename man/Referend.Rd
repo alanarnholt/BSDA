@@ -4,23 +4,23 @@
 \name{Referend}
 \alias{Referend}
 \title{Opinion on referendum by view on freedom of the press}
-\format{A data frame with 3 observations on the following 4 variables.
+\format{A data frame with 237 observations on the following 2 variables.
 \describe{ 
-\item{Response}{a factor with levels \code{A} \code{B}
-\code{C}} 
-\item{For}{a numeric vector} 
-\item{Against}{a numeric vector} 
-\item{undecide}{a numeric vector} 
+\item{choice}{a factor with levels \code{A}, \code{B}, and \code{C}} 
+\item{response}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 
 }}
+\usage{
+Referend
+}
 \description{
 Data for Exercise 8.20
 }
 \examples{
 
-str(Referend)
-attach(Referend)
-chisq.test(Referend[,2:4])
-detach(Referend)
+T1 <- xtabs(~choice + response, data = Referend)
+T1
+chisq.test(T1)
+chisq.test(T1)$expected
 
 }
 \references{

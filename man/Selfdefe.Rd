@@ -5,26 +5,25 @@
 \alias{Selfdefe}
 \title{Self-confidence scores for 9 women before and after instructions on
 self-defense}
-\format{A data frame with 9 observations on the following 3 variables.
+\format{A data frame/tibble with 9 observations on the following 3 variables.
 \describe{ 
-\item{Woman}{a numeric vector} 
-\item{Before}{a numeric vector} 
-\item{After}{a numeric vector} 
+\item{woman}{number identifying the woman} 
+\item{before}{before the course self-confidence score} 
+\item{after}{after the course self-confidence score} 
 }}
+\usage{
+Selfdefe
+}
 \description{
 Data for Example 7.19
 }
 \examples{
 
-str(Selfdefe)
-attach(Selfdefe)
-DIF <- After-Before
-qqnorm(DIF)
-qqline(DIF)
-shapiro.test(DIF)
-t.test(After,Before,paired=TRUE,alternative="greater")
-detach(Selfdefe)
-remove(DIF)
+Selfdefe$differ <- Selfdefe$after - Selfdefe$before
+Selfdefe
+t.test(Selfdefe$differ, alternative = "greater")
+t.test(Selfdefe$after, Selfdefe$before, 
+      paired = TRUE, alternative = "greater")
 
 }
 \references{

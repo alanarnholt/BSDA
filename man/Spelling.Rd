@@ -5,24 +5,25 @@
 \alias{Spelling}
 \title{Spelling scores for 9 eighth graders before and after a 2-week course of
 instruction}
-\format{A data frame with 9 observations on the following 3 variables.
+\format{A data frame/tibble with 9 observations on the following 3 variables.
 \describe{ 
-\item{Before}{a numeric vector} 
-\item{After}{a numeric vector} 
-\item{differ}{a numeric vector} 
+\item{before}{spelling score before a 2-week course of instruction} 
+\item{after}{spelling score after a 2-week course of instruction} 
+\item{differ}{after - before (spelling score)} 
 }}
+\usage{
+Spelling
+}
 \description{
 Data for Exercise 7.56
 }
 \examples{
 
-str(Spelling)
-attach(Spelling)
-qqnorm(differ)
-qqline(differ)
-shapiro.test(differ)
-t.test(After,Before,paired=TRUE,alternative="greater")
-detach(Spelling)
+qqnorm(Spelling$differ)
+qqline(Spelling$differ)
+shapiro.test(Spelling$differ)
+t.test(Spelling$before, Spelling$after, paired = TRUE)
+t.test(Spelling$differ)
 
 }
 \references{

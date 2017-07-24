@@ -5,21 +5,25 @@
 \alias{Porosity}
 \title{Porosity measurements on 20 samples of Tensleep Sandstone, Pennsylvanian
 from Bighorn Basin in Wyoming}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{porosity}{a numeric vector} 
+\item{porosity}{porosity measurement (percent)} 
 }}
+\source{
+Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2nd edition,
+pages 63-65.
+}
+\usage{
+Porosity
+}
 \description{
 Data for Exercise 5.86
 }
 \examples{
 
-str(Porosity)
-attach(Porosity)
-stem(porosity)
-fivenum(porosity)
-boxplot(porosity)
-detach(Porosity)
+stem(Porosity$porosity)
+fivenum(Porosity$porosity)
+boxplot(Porosity$porosity)
 
 }
 \references{

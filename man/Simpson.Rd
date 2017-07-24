@@ -5,39 +5,28 @@
 \alias{Simpson}
 \title{Grade point averages of men and women participating in various sports-an
 illustration of Simpson's paradox}
-\format{A data frame with 100 observations on the following 15 variables.
+\format{A data frame/tibble with 100 observations on the following 3 variables.
 \describe{ 
-\item{gpa}{a numeric vector} 
-\item{spor}{a numeric vector} 
-\item{gender}{a numeric vector}
-\item{gpamale}{a numeric vector} 
-\item{sptmale}{a numeric vector} 
-\item{gpafemal}{a numeric vector} 
-\item{sptfemal}{a numeric vector} 
-\item{bbgpa}{a numeric vector}
-\item{genderbb}{a numeric vector} 
-\item{sogpa}{a numeric vector} 
-\item{genderso}{a numeric vector} 
-\item{tkgpa}{a numeric vector} 
-\item{gendertk}{a numeric vector}
-\item{gradept}{a numeric vector} 
-\item{gender2}{a numeric vector} 
+\item{gpa}{grade point average} 
+\item{sport}{sport played (basketball, soccer, or track)} 
+\item{gender}{athlete sex (male, female)}
 }}
+\usage{
+Simpson
+}
 \description{
 Data for Example 1.18
 }
 \examples{
 
-str(Simpson)
-attach(Simpson)
-par(mfrow=c(1,2))
-boxplot(gpa~gender,col=c("blue","pink"),names=c("Male","Female"),
-main="GPA versus Gender",xlab="Gender",ylab="Grade Point Average")
-boxplot(gradept~gender2,las=2,col=c("blue","pink"),
-names=c("M-BBALL","F-BBALL","M-SOCC","F-SOCC","M-TRAC","F-TRAC"),
-ylab="Grade Point Average",main="GPA vs Gender by Sports")
-par(mfrow=c(1,1))
-detach(Simpson)
+boxplot(gpa ~ gender, data = Simpson)
+boxplot(gpa ~ sport, data = Simpson)
+\dontrun{
+ggplot2::ggplot(data = Simpson, aes(x = gender, y = gpa, 
+                                    fill = gender)) +
+                                      geom_boxplot() + 
+                                        facet_grid(.~sport) + theme_bw()
+                                        }
 
 }
 \references{

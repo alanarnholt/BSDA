@@ -4,19 +4,20 @@
 \name{Reaction}
 \alias{Reaction}
 \title{Threshold reaction time for persons subjected to emotional stress}
-\format{A data frame with 12 observations on the following variable.
+\format{A data frame/tibble with 12 observations on the following variable.
 \describe{ 
-\item{time}{a numeric vector} 
+\item{time}{threshold reaction time (in seconds) for persons subjected to emotional stress} 
 }}
+\usage{
+Reaction
+}
 \description{
 Data for Example 6.11
 }
 \examples{
 
-str(Reaction)
-attach(Reaction)
-SIGN.test(time,md=15,alternative="less")
-detach(Reaction)
+stem(Reaction$time)
+BSDA::SIGN.test(Reaction$time, md = 15, alternative = "less")
 
 }
 \references{

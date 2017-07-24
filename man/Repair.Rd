@@ -4,20 +4,20 @@
 \name{Repair}
 \alias{Repair}
 \title{Recorded times for repairing 22 automobiles involved in wrecks}
-\format{A data frame with 22 observations on the following variable.
+\format{A data frame/tibble with 22 observations on the following variable.
 \describe{ 
-\item{time}{a numeric vector} 
+\item{time}{time to repair a wrecked in car (in hours)} 
 }}
+\usage{
+Repair
+}
 \description{
 Data for Exercise 5.77
 }
 \examples{
 
-str(Repair)
-attach(Repair)
-stem(time)
-SIGN.test(time,conf.level=.98)
-detach(Repair)
+stem(Repair$time)
+BSDA::SIGN.test(Repair$time, conf.level = 0.98)
 
 }
 \references{

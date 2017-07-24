@@ -5,26 +5,26 @@
 \alias{Program}
 \title{Effects of four different methods of programmed learning for statistics
 students}
-\format{A data frame with 11 observations on the following 4 variables.
+\format{A data frame/tibble with 44 observations on the following 2 variables.
 \describe{ 
-\item{Method1}{a numeric vector} 
-\item{Method2}{a numeric vector} 
-\item{Method3}{a numeric vector}
-\item{Method4}{a numeric vector} 
+\item{method}{a character variable with values \code{method1}, \code{method2}, 
+\code{method3}, and \code{method4}} 
+\item{score}{standardized test score} 
 }}
+\usage{
+Program
+}
 \description{
 Data for Exercise 10.17
 }
 \examples{
 
-str(Program)
-attach(Program)
-STACKED <-stack(Program)
-STACKED[1:5,]
-boxplot(values~ind,col=c("red","blue","green","yellow"),data=STACKED)
-anova(lm(values~ind,data=STACKED))
-remove(STACKED)
-detach(Program)
+boxplot(score ~ method, col = c("red", "blue", "green", "yellow"), data = Program)
+anova(lm(score ~ method, data = Program))
+TukeyHSD(aov(score ~ method, data = Program))
+par(mar = c(5.1, 4.1 + 4, 4.1, 2.1))
+plot(TukeyHSD(aov(score ~ method, data = Program)), las = 1)
+par(mar = c(5.1, 4.1, 4.1, 2.1))
 
 }
 \references{

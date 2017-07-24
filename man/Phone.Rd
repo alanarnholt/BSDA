@@ -4,22 +4,22 @@
 \name{Phone}
 \alias{Phone}
 \title{Length of long-distance phone calls for a small business firm}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{time}{a numeric vector} 
+\item{time}{duration of long distance phone call (in minutes)} 
 }}
+\usage{
+Phone
+}
 \description{
 Data for Exercise 6.95
 }
 \examples{
 
-str(Phone)
-attach(Phone)
-qqnorm(time)
-qqline(time)
-shapiro.test(time)
-SIGN.test(time,md=5,alternative="greater")
-detach(Phone)
+qqnorm(Phone$time)
+qqline(Phone$time)
+shapiro.test(Phone$time)
+BSDA::SIGN.test(Phone$time, md = 5, alternative = "greater")
 
 }
 \references{

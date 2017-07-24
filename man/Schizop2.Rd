@@ -5,20 +5,22 @@
 \alias{Schizop2}
 \title{Exam scores for 17 patients to assess the learning ability of schizophrenics
 after taking a specified does of a tranquilizer}
-\format{A data frame with 17 observations on the following variable.
+\format{A data frame/tibble with 17 observations on the following variable.
 \describe{ 
-\item{score}{a numeric vector} 
+\item{score}{schizophrenics score on a second standardized exam} 
 }}
+\usage{
+Schizop2
+}
 \description{
 Data for Exercise 6.99
 }
 \examples{
 
-str(Schizop2)
-attach(Schizop2)
-EDA(score)
-SIGN.test(score,md=22,alternative="greater")
-detach(Schizop2)
+hist(Schizop2$score, xlab = "score on standardized test after a tranquilizer", 
+main = "Exercise 6.99", breaks = 10, col = "orange")
+BSDA::EDA(Schizop2$score)
+BSDA::SIGN.test(Schizop2$score, md = 22, alternative = "greater")
 
 }
 \references{

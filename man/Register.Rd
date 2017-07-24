@@ -4,25 +4,25 @@
 \name{Register}
 \alias{Register}
 \title{Maintenance cost versus age of cash registers in a department store}
-\format{A data frame with 9 observations on the following 4 variables.
+\format{A data frame/tibble with 9 observations on the following 2 variables.
 \describe{ 
-\item{age}{a numeric vector} 
-\item{cost}{a numeric vector} 
-\item{SRES1}{a numeric vector}
-\item{FITS1}{a numeric vector} 
+\item{age}{age of cash register (in years)} 
+\item{cost}{maintenance cost of cash register (in dollars)} 
 }}
+\usage{
+Register
+}
 \description{
 Data for Exercise 2.3, 2.39, and 2.54
 }
 \examples{
 
-str(Register)
-attach(Register)
-plot(age,cost,main="Exercise 2.3")
-model <- lm(cost~age)
+plot(cost ~ age, data = Register)
+model <- lm(cost ~ age, data = Register)
 abline(model)
-plot(age,resid(model))
-detach(Register)
+predict(model, newdata = data.frame(age = c(5, 10)))
+plot(model, which = 1)
+rm(model)
 
 }
 \references{

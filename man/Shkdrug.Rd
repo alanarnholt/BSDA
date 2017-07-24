@@ -5,26 +5,23 @@
 \alias{Shkdrug}
 \title{Effects of a drug and electroshock therapy on the ability to solve simple
 tasks}
-\format{A data frame with 64 observations on the following 6 variables.
+\format{A data frame/tibble with 64 observations on the following 2 variables.
 \describe{ 
-\item{Drug.Shk}{a numeric vector}
-\item{Drug.NoS}{a numeric vector} 
-\item{NoDrug.S}{a numeric vector} 
-\item{NoDg.NoS}{a numeric vector} 
-\item{Treatment}{a factor with levels \code{Drug/NoS} \code{Drug/Shk} \code{NoDg/NoS}
-\code{NoDrug/S}} 
-\item{Response}{a numeric vector} 
+\item{treatment}{type of treament \code{Drug/NoS}, \code{Drug/Shk}, \code{NoDg/NoS}, or \code{NoDrug/S}}
+\item{response}{number of tasks completed in a 10-minute period}
 }}
+\usage{
+Shkdrug
+}
 \description{
 Data for Exercises 10.11 and 10.12
 }
 \examples{
 
-str(Shkdrug)
-attach(Shkdrug)
-boxplot(Response~Treatment)
-anova(lm(Response~Treatment))
-detach(Shkdrug)
+boxplot(response ~ treatment, data = Shkdrug)
+model <- lm(response ~ treatment, data = Shkdrug)
+anova(model)
+rm(model)
 
 }
 \references{

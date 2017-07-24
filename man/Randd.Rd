@@ -4,28 +4,25 @@
 \name{Randd}
 \alias{Randd}
 \title{Research and development expenditures and sales of a large company}
-\format{A data frame with 12 observations on the following 5 variables.
+\format{A data frame/tibble with 12 observations on the following 2 variables.
 \describe{ 
-\item{rd}{a numeric vector} 
-\item{sales}{a numeric vector} 
-\item{SRES1}{a numeric vector}
-\item{FITS1}{a numeric vector} 
-\item{RESI1}{a numeric vector} 
+\item{rd}{research and development expenditures (in million dollars)} 
+\item{sales}{sales (in million dollars)} 
 }}
+\usage{
+Randd
+}
 \description{
 Data for Exercise 9.36 and Example 9.8
 }
 \examples{
 
-str(Randd)
-attach(Randd)
-plot(rd,sales)
-model <- lm(sales~rd)
+plot(sales ~ rd, data = Randd)
+model <- lm(sales ~ rd, data = Randd)
 abline(model)
 summary(model)
-# plot(model)
-detach(Randd)
-remove(model)
+plot(model, which = 1)
+rm(model)
 
 }
 \references{

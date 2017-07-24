@@ -4,16 +4,20 @@
 \name{Salary}
 \alias{Salary}
 \title{Starting salaries for 25 new PhD psychologist}
-\format{A data frame with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on the following variable.
 \describe{ 
-\item{salary}{a numeric vector} 
+\item{salary}{starting salary for Ph.D. psycholgists} 
 }}
+\usage{
+Salary
+}
 \description{
 Data for Exercise 3.66
 }
 \examples{
 
-data(Salary)
+qqnorm(Salary$salary, pch = 19, col = "purple")
+qqline(Salary$salary, col = "blue")
 
 }
 \references{

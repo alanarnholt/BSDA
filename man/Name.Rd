@@ -6,17 +6,17 @@
 \title{Estimated value of a brand name product and the conpany's revenue}
 \format{A data frame/tibble with 42 observations on the following 3 variables.
 \describe{ 
-\item{brand}{a factor with levels \code{Band-Aid}
-\code{Barbie} \code{Birds Eye} \code{Budweiser} \code{Camel} \code{Campbell}
-\code{Carlsberg} \code{Coca-Cola} \code{Colgate} \code{Del Monte}
-\code{Fisher-Price} \code{Gordon's} \code{Green Giant} \code{Guinness}
-\code{Haagen-Dazs} \code{Heineken} \code{Heinz} \code{Hennessy}
-\code{Hermes} \code{Hershey} \code{Ivory} \code{Jell-o} \code{Johnnie
-Walker} \code{Kellogg} \code{Kleenex} \code{Kraft} \code{Louis Vuitton}
-\code{Marlboro} \code{Nescafe} \code{Nestle} \code{Nivea} \code{Oil of Olay}
-\code{Pampers} \code{Pepsi-Cola} \code{Planters} \code{Quaker} \code{Sara
-Lee} \code{Schweppes} \code{Smirnoff} \code{Tampax} \code{Winston}
-\code{Wrigley's}}
+\item{brand}{a factor with levels \code{Band-Aid},
+\code{Barbie}, \code{Birds Eye}, \code{Budweiser}, \code{Camel}, \code{Campbell},
+\code{Carlsberg}, \code{Coca-Cola}, \code{Colgate}, \code{Del Monte},
+\code{Fisher-Price}, \verb{Gordon's}, \code{Green Giant}, \code{Guinness},
+\code{Haagen-Dazs}, \code{Heineken}, \code{Heinz}, \code{Hennessy},
+\code{Hermes}, \code{Hershey}, \code{Ivory}, \code{Jell-o}, \code{Johnnie
+Walker}, \code{Kellogg}, \code{Kleenex}, \code{Kraft}, \code{Louis Vuitton},
+\code{Marlboro}, \code{Nescafe}, \code{Nestle}, \code{Nivea}, \code{Oil of Olay},
+\code{Pampers}, \code{Pepsi-Cola}, \code{Planters}, \code{Quaker}, \code{Sara
+Lee}, \code{Schweppes}, \code{Smirnoff}, \code{Tampax}, \code{Winston}, and
+\verb{Wrigley's}}
 \item{value}{value in billions of dollars}
 \item{revenue}{revenue in billions of dollars} 
 }}

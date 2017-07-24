@@ -4,22 +4,25 @@
 \name{Reading}
 \alias{Reading}
 \title{Standardized reading scores for 30 fifth graders}
-\format{A data frame with 30 observations on the following 4 variables.
+\format{A data frame/tibble with 30 observations on the following 4 variables.
 \describe{ 
-\item{reading}{a numeric vector} 
-\item{sorted}{a numeric vector} 
-\item{trimmed}{a numeric vector}
-\item{winsoriz}{a numeric vector} 
+\item{score}{standardized reading test score} 
+\item{sorted}{sorted values of \code{score}} 
+\item{trimmed}{trimmed values of \code{sorted}}
+\item{winsoriz}{winsorized values of \code{score}} 
 }}
+\usage{
+Reading
+}
 \description{
 Data for Exercise 1.72 and 2.10
 }
 \examples{
 
-str(Reading)
-attach(Reading)
-EDA(reading)
-detach(Reading)
+hist(Reading$score, main = "Exercise 1.72", 
+col = "lightgreen", xlab = "Standardized reading score")
+summary(Reading$score)
+sd(Reading$score)
 
 }
 \references{

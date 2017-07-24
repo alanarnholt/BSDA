@@ -4,22 +4,23 @@
 \name{Sports}
 \alias{Sports}
 \title{Favorite sport by gender}
-\format{A data frame with 2 observations on the following variable.
+\format{A data frame/tibble with 200 observations on the following 2 variables.
 \describe{ 
-\item{gender.football.basketbl.baseball.tennis}{a factor
-with levels \code{female 3.800000000e+001 2.100000000e+001 1.500000000e+001
-2.600000000e+001} \code{male 3.300000000e+001 3.800000000e+001
-2.400000000e+001 5.000000000e+000}} 
+\item{gender}{a factor with levels \code{male} and \code{female}}
+\item{sport}{a factor with levels \code{football}, \code{basketball}, \code{baseball}, and \code{tennis}} 
 }}
+\usage{
+Sports
+}
 \description{
 Data for Exercise 8.32
 }
 \examples{
 
-str(Sports)
-attach(Sports)
-Sports
-detach(Sports)
+T1 <- xtabs(~gender + sport, data = Sports)
+T1
+chisq.test(T1)
+rm(T1)
 
 }
 \references{

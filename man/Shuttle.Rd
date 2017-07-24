@@ -5,22 +5,23 @@
 \alias{Shuttle}
 \title{Number of people riding shuttle versus number of automobiles in the downtown
 area}
-\format{A data frame with 15 observations on the following 2 variables.
+\format{A data frame/tibble with 15 observations on the following 2 variables.
 \describe{ 
-\item{shuttle}{a numeric vector} 
-\item{autos}{a numeric vector} 
+\item{users}{number of shuttle riders} 
+\item{autos}{number of automobiles in the downtown area} 
 }}
+\usage{
+Shuttle
+}
 \description{
 Data for Exercise 9.20
 }
 \examples{
 
-str(Shuttle)
-attach(Shuttle)
-model <- lm(autos~shuttle)
+plot(autos ~ users, data = Shuttle)
+model <- lm(autos ~ users, data = Shuttle)
 summary(model)
-detach(Shuttle)
-remove(model)
+rm(model)
 
 }
 \references{

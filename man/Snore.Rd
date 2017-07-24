@@ -4,23 +4,27 @@
 \name{Snore}
 \alias{Snore}
 \title{Snoring versus heart disease}
-\format{A data frame with 2 observations on the following 5 variables.
+\format{A data frame/tibble with 2,484 observations on the following 2 variables.
 \describe{ 
-\item{heart}{a factor with levels \code{no} \code{yes}}
-\item{Non}{a numeric vector} 
-\item{occasion}{a numeric vector} 
-\item{nearly}{a numeric vector} 
-\item{every}{a numeric vector} 
+\item{snore}{factor with levels \code{nonsnorer}, \code{ocassional snorer}, \code{nearly every night}, and \code{snores every night}}
+\item{heartdisease}{factor indicating whether the indiviudal has heart disease (\code{no} or \code{yes})} 
 }}
+\source{
+Norton, P. and Dunn, E. (1985), Snoring as a Risk Factor for Disease, \emph{British Medical Journal, 291},
+630-632.
+}
+\usage{
+Snore
+}
 \description{
 Data for Exercise 8.21
 }
 \examples{
 
-str(Snore)
-attach(Snore)
-chisq.test(Snore[,2:5])
-detach(Snore)
+T1 <- xtabs(~ heartdisease + snore, data = Snore)
+T1
+chisq.test(T1)
+rm(T1)
 
 }
 \references{

@@ -4,28 +4,34 @@
 \name{Parented}
 \alias{Parented}
 \title{Education backgrounds of parents of entering freshmen at a state university}
-\format{A data frame with 6 observations on the following 3 variables.
+\format{A data frame/tibble with 200 observations on the following 2 variables.
 \describe{ 
-\item{Educat}{a factor with levels \code{4yr college
-degree} \code{Doctoral degree} \code{Grad degree} \code{H.S grad or less}
-\code{Some college} \code{Some grad school}} 
-\item{Mother}{a numeric vector} 
-\item{Father}{a numeric vector} 
+\item{education}{a factor with levels \code{4yr college
+degree}, \code{Doctoral degree}, \code{Grad degree}, \code{H.S grad or less},
+\code{Some college}, and \code{Some grad school}} 
+\item{parent}{a factor with levels \code{mother} and \code{father}} 
 }}
+\usage{
+Parented
+}
 \description{
 Data for Exercise 1.32
 }
 \examples{
 
-str(Parented)
-attach(Parented)
-MAT <- cbind(Mother, Father)
-row.names(MAT) <- Educat 
-MAT 
-barplot(t(MAT),beside=TRUE,legend=TRUE,col=c("blue","red")) 
-detach(Parented) 
-remove(MAT)
-
+T1 <- xtabs(~education + parent, data = Parented)
+T1
+barplot(t(T1), beside = TRUE, legend = TRUE, col = c("blue", "red"))
+rm(T1)
+\dontrun{
+ggplot2::ggplot(data = Parented, aes(x = education, fill = parent)) + 
+  geom_bar(position = "dodge") + 
+    theme_bw() +
+      theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) + 
+        scale_fill_manual(values = c("pink", "blue")) + 
+          labs(x = "", y = "") 
+          }
+          
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

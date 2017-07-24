@@ -4,23 +4,26 @@
 \name{Stamp}
 \alias{Stamp}
 \title{Thicknesses of 1872 Hidalgo stamps issued in Mexico}
-\format{A data frame with 485 observations on the following 3 variables.
+\format{A data frame/tibble with 485 observations on the following variable.
 \describe{ 
-\item{thickness}{a numeric vector}
-\item{thick}{a numeric vector} 
-\item{freq}{a numeric vector} 
+\item{thickness}{stamp thickness (in mm)}
 }}
+\source{
+Izenman, A., Sommer, C. (1988), Philatelic Mixtures and Multimodal Densities,
+\emph{Journal of the American Statistical Association}, 83, 941-953.
+}
+\usage{
+Stamp
+}
 \description{
 Data for Statistical Insight Chapter 1 and Exercise 5.110
 }
 \examples{
 
-str(Stamp)
-attach(Stamp)
-hist(thickness,prob=TRUE,col="lightblue")
-lines(density(thickness),lwd=2,col="blue")
-t.test(thickness,conf.level=.99)$conf
-detach(Stamp)
+hist(Stamp$thickness, freq = FALSE, col = "lightblue", 
+main = "", xlab = "stamp thickness (mm)")
+lines(density(Stamp$thickness), col = "blue")
+t.test(Stamp$thickness, conf.level = 0.99)
 
 }
 \references{

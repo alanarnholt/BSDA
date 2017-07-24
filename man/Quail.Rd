@@ -4,23 +4,25 @@
 \name{Quail}
 \alias{Quail}
 \title{Plasma LDL levels in two groups of quail}
-\format{A data frame with 20 observations on the following 2 variables.
+\format{A data frame/tibble with 40 observations on the following 2 variables.
 \describe{ 
-\item{placebo}{a numeric vector}
-\item{treatmen}{a numeric vector} 
+\item{group}{a character variable with values \code{placebo} and \code{treatment}}
+\item{level}{low-density lipoprotein (LDL) cholestrol level} 
 }}
+\source{
+J. McKean, and T. Vidmar (1994), "A Comparison of Two Rank-Based Methods for the
+Analysis of Linear Models," \emph{The American Statistician, 48}, 220-229.
+}
+\usage{
+Quail
+}
 \description{
 Data for Exercise 1.53, 1.77, 1.88, 5.66, and 7.50
 }
 \examples{
 
-str(Quail)
-attach(Quail)
-boxplot(placebo,treatmen,names=c("Placebo","Treatment"),
-horizontal=TRUE,xlab="LDL level",col=c("lightblue","yellow"))
-boxplot(placebo,treatmen,names=c("Placebo","Treatment"),
-ylab="LDL level",col=c("lightblue","yellow"))
-detach(Quail)
+boxplot(level ~ group, data = Quail, horizontal = TRUE, xlab = "LDL Level",
+col = c("yellow", "lightblue"))
 
 }
 \references{

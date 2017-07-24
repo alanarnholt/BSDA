@@ -4,19 +4,19 @@
 \name{Social}
 \alias{Social}
 \title{Median income level for 25 social workers from North Carolina}
-\format{A data frame with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on the following variable.
 \describe{ 
-\item{income}{a numeric vector} 
+\item{income}{annual income (in dollars) of North Carolina social workers with less than five years experience.} 
 }}
+\usage{
+Social
+}
 \description{
 Data for Exercise 6.63
 }
 \examples{
 
-str(Social)
-attach(Social)
-SIGN.test(income,md=27500,alternative="less")
-detach(Social)
+BSDA::SIGN.test(Social$income, md = 27500, alternative = "less")
 
 }
 \references{

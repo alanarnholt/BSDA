@@ -4,39 +4,43 @@
 \name{Presiden}
 \alias{Presiden}
 \title{Ages at inauguration and death of U.S. presidents}
-\format{A data frame with 43 observations on the following 5 variables.
+\format{A data frame/tibble with 43 observations on the following 5 variables.
 \describe{ 
-\item{firs}{a factor with levels \code{A.} \code{B.}
-\code{C.} \code{D.} \code{F.} \code{G.} \code{G. W.} \code{H.} \code{J.}
-\code{L.} \code{M.} \code{R.} \code{T.} \code{U.} \code{W.} \code{Z.}}
-\item{Presiden}{a factor with levels \code{Adams} \code{Arthur}
-\code{Buchanan} \code{Bush} \code{Carter} \code{Cleveland} \code{Clinton}
-\code{Coolidge} \code{Eisenhower} \code{Fillmore} \code{Ford}
-\code{Garfield} \code{Grant} \code{Harding} \code{Harrison} \code{Hayes}
-\code{Hoover} \code{Jackson} \code{Jefferson} \code{Johnson} \code{Kennedy}
-\code{Lincoln} \code{Madison} \code{McKinley} \code{Monroe} \code{Nixon}
-\code{Pierce} \code{Polk} \code{Reagan} \code{Roosevelt} \code{Taft}
-\code{Taylor} \code{Truman} \code{Tyler} \code{VanBuren} \code{Washington}
+\item{first_initial}{a factor with levels \code{A.}, \code{B.},
+\code{C.}, \code{D.}, \code{F.}, \code{G.}, \code{G. W.}, \code{H.}, \code{J.},
+\code{L.}, \code{M.}, \code{R.}, \code{T.}, \code{U.}, \code{W.}, and \code{Z.}}
+\item{last_name}{a factor with levels \code{Adams}, \code{Arthur},
+\code{Buchanan}, \code{Bush}, \code{Carter}, \code{Cleveland}, \code{Clinton},
+\code{Coolidge}, \code{Eisenhower}, \code{Fillmore}, \code{Ford},
+\code{Garfield}, \code{Grant}, \code{Harding}, \code{Harrison}, \code{Hayes},
+\code{Hoover}, \code{Jackson}, \code{Jefferson}, \code{Johnson}, \code{Kennedy},
+\code{Lincoln}, \code{Madison}, \code{McKinley}, \code{Monroe}, \code{Nixon},
+\code{Pierce}, \code{Polk}, \code{Reagan}, \code{Roosevelt}, \code{Taft},
+\code{Taylor}, \code{Truman}, \code{Tyler}, \code{VanBuren}, \code{Washington}, and
 \code{Wilson}} 
-\item{Birt}{a factor with levels \code{ARK}
-\code{CAL} \code{CONN} \code{GA} \code{IA} \code{ILL} \code{KY} \code{MASS}
-\code{MO} \code{NC} \code{NEB} \code{NH} \code{NJ} \code{NY} \code{OH}
-\code{PA} \code{SC} \code{TEX} \code{VA} \code{VT}}
-\item{Inaugage}{a numeric vector} 
-\item{Deathage}{a numeric vector} 
+\item{birth_state}{a factor with levels \code{ARK},
+\code{CAL}, \code{CONN}, \code{GA}, \code{IA}, \code{ILL}, \code{KY}, \code{MASS},
+\code{MO}, \code{NC}, \code{NEB}, \code{NH}, \code{NJ}, \code{NY}, \code{OH},
+\code{PA}, \code{SC}, \code{TEX}, \code{VA}, and \code{VT}}
+\item{inaugural_age}{President's age at inauguration} 
+\item{death_age}{President's age at death} 
 }}
+\usage{
+Presiden
+}
 \description{
 Data for Exercise 1.126
 }
 \examples{
 
-str(Presiden)
-attach(Presiden)
-table(Birt)
-pie(table(Birt))
-stripchart(x=list(Inaugage,Deathage),method="stack",
-group.names=c("Inaugural Age","Death Age"),col=c("green","brown"),pch=19)
-detach(Presiden) 
+pie(xtabs(~birth_state, data = Presiden))
+stem(Presiden$inaugural_age)
+stem(Presiden$death_age)
+par(mar = c(5.1, 4.1 + 3, 4.1, 2.1))
+stripchart(x=list(Presiden$inaugural_age, Presiden$death_age), 
+           method = "stack",
+                      col = c("green","brown"), pch = 19, las = 1)
+                      par(mar = c(5.1, 4.1, 4.1, 2.1)) 
 
 }
 \references{

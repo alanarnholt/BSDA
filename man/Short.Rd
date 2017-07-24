@@ -4,31 +4,23 @@
 \name{Short}
 \alias{Short}
 \title{James Short's measurements of the parallax of the sun}
-\format{A data frame with 158 observations on the following 10 variables.
-\describe{ 
-\item{Sample.1}{a numeric vector}
-\item{Sample.2}{a numeric vector} 
-\item{Sample.3}{a numeric vector} 
-\item{Sample.4}{a numeric vector} 
-\item{Sample.5}{a numeric vector} 
-\item{Sample.6}{a numeric vector}
-\item{Sample.7}{a numeric vector} 
-\item{Sample.8}{a numeric vector} 
-\item{Parallax}{a numeric vector} 
-\item{Sample}{a numeric vector} 
+\format{A data frame/tibble with 158 observations on the following 10 variables.
+\describe{
+\item{sample}{sample number} 
+\item{parallax}{parallax measurements (seconds of a degree)} 
 }}
+\usage{
+Short
+}
 \description{
 Data for Exercise 6.65
 }
 \examples{
 
-str(Short)
-attach(Short)
-hist(Parallax)
-EDA(Parallax)
-SIGN.test(Parallax,md=8.798)
-t.test(Parallax,mu=8.798)
-detach(Short)
+hist(Short$parallax, main = "Problem 6.65", 
+xlab = "", col = "orange")
+BSDA::SIGN.test(Short$parallax, md = 8.798)
+t.test(Short$parallax, mu = 8.798)
 
 }
 \references{
