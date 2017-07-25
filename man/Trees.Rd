@@ -4,20 +4,21 @@
 \name{Trees}
 \alias{Trees}
 \title{Number of trees in 20 grids}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{number}{a numeric vector} 
+\item{number}{number of trees in a grid} 
 }}
+\usage{
+Trees
+}
 \description{
 Data for Exercise 1.50
 }
 \examples{
 
-str(Trees)
-attach(Trees)
-stem(number)
-hist(number,breaks=seq(60,110,10),right=FALSE,col="green",main="Problem 1.50")
-detach(Trees)
+stem(Trees$number)
+hist(Trees$number, main = "Exercise 1.50", xlab = "number",
+     col = "brown")
 
 }
 \references{

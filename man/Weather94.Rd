@@ -4,25 +4,33 @@
 \name{Weather94}
 \alias{Weather94}
 \title{Weather casualties in 1994}
-\format{A data frame with 11 observations on the following 2 variables.
+\format{A data frame/tibble with 388 observations on the following 1 variables.
 \describe{ 
-\item{Weather.Type}{a factor with levels \code{Extreme
-Temp} \code{Flash flood} \code{Fog} \code{High wind} \code{Hurricane}
-\code{Lightning} \code{Other} \code{River flood} \code{Thunderstorm}
-\code{Tornado} \code{Winter weather}} 
-\item{Number}{a numeric vector} 
+\item{type}{factor with levels Extreme Temp, Flash Flood, Fog, High Wind, Hurricane, 
+ Lighting, Other, River Flood, Thunderstorm, Tornado, and Winter Weather.} 
 }}
+\usage{
+Weather94
+}
 \description{
 Data for Exercise 1.30
 }
 \examples{
 
-str(Weather94)
-attach(Weather94)
-names(Number) <- Weather.Type
-barplot(Number,col="lightblue",las=2,cex.names=.65,main="Problem 1.30") 
-# las=2 places bar names vertically
-detach(Weather94)
+T1 <- xtabs(~type, data = Weather94)
+T1
+par(mar = c(5.1 + 2, 4.1 - 1, 4.1 - 2, 2.1))
+barplot(sort(T1, decreasing = TRUE), las = 2, col = rainbow(11))
+par(mar = c(5.1, 4.1, 4.1, 2.1))
+\dontrun{
+T2 <- as.data.frame(T1)
+T2
+ggplot2::ggplot(data =T2, aes(x = reorder(type, Freq), y = Freq)) + 
+  geom_bar(stat = "identity", fill = "purple") +
+    theme_bw() + 
+      theme(axis.text.x  = element_text(angle = 55, vjust = 0.5)) + 
+        labs(x = "", y = "count")
+        }
 
 }
 \references{

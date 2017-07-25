@@ -4,24 +4,29 @@
 \name{Toaster}
 \alias{Toaster}
 \title{Consumer Reports (Oct 94) rating of toaster ovens versus the cost}
-\format{A data frame with 17 observations on the following 3 variables.
+\format{A data frame/tibble with 17 observations on the following 3 variables.
 \describe{ 
-\item{toaster}{a factor with levels \code{Black&D
-SO2500G} \code{Black&D T660G} \code{Black&D TRO200} \code{Black&D TRO400}
-\code{Black&D TRO510} \code{DeLonghi XU14} \code{DeLonghi XU20L}
-\code{Hamilton Beach 336} \code{Munsey M88} \code{Panasonic NT855U}
-\code{Proctor-Silex 03008} \code{Proctor-Silex 03010} \code{Proctor-Silex
-03030} \code{Sears Kenmore 48216} \code{Toastmaster 319V} \code{Toastmaster
-336V} \code{Toastmaster 342}} 
-\item{score}{a numeric vector}
-\item{cost}{a numeric vector} 
+\item{toaster}{name of toaster} 
+\item{score}{Consumer Reports score}
+\item{cost}{price of toaster (in dollars)} 
 }}
+\source{
+\emph{Consumer Reports} (October 1994)
+}
+\usage{
+Toaster
+}
 \description{
-Data for Exercise 9.35
+Data for Exercise 9.36
 }
 \examples{
 
-data(Toaster)
+plot(cost ~ score, data = Toaster)
+model <- lm(cost ~ score, data = Toaster)
+summary(model)
+names(summary(model))
+summary(model)$r.squared
+plot(model, which = 1)
 
 }
 \references{

@@ -5,24 +5,30 @@
 \alias{Wastewat}
 \title{Volume of injected waste water from Rocky Mountain Arsenal and number of
 earthquakes near Denver}
-\format{A data frame with 44 observations on the following 4 variables.
+\format{A data frame/tibble with 44 observations on the following 2 variables.
 \describe{ 
-\item{gallons}{a numeric vector} 
-\item{number}{a numeric vector} 
-\item{ln.no.}{a numeric vector}
-\item{index}{a numeric vector} 
+\item{gallons}{injected water (in million gallons)} 
+\item{number}{number of earthqueakes detected in Denver}
 }}
+\source{
+Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2 ed., John Wiley and Sons,
+New York, p. 228, and Bardwell, G. E. (1970), Some Statistical Features of the Relationship between
+Rocky Mountain Arsenal Waste Disposal and Frequency of Earthquakes, \emph{Geological Society of America, Engineering
+Geology Case Histories, 8}, 33-337
+}
+\usage{
+Wastewat
+}
 \description{
 Data for Exercise 9.18
 }
 \examples{
 
-str(Wastewat)
-attach(Wastewat)
-model <- lm(number~gallons)
+plot(number ~ gallons, data = Wastewat)
+model <- lm(number ~ gallons, data = Wastewat)
 summary(model)
-detach(Wastewat)
-remove(model)
+anova(model)
+plot(model, which = 2)
 
 }
 \references{

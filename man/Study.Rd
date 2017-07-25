@@ -4,20 +4,21 @@
 \name{Study}
 \alias{Study}
 \title{Number of hours studied per week by a sample of 50 freshmen}
-\format{A data frame with 50 observations on the following variable.
+\format{A data frame/tibble with 50 observations on the following variable.
 \describe{ 
-\item{hours}{a numeric vector} 
+\item{hours}{number of hours a week freshmen reported studying for their courses} 
 }}
+\usage{
+Study
+}
 \description{
 Data for Exercise 5.25
 }
 \examples{
 
-str(Study)
-attach(Study)
-stem(hours)
-EDA(hours)
-detach(Study)
+stem(Study$hours)
+hist(Study$hours)
+summary(Study$hours)
 
 }
 \references{

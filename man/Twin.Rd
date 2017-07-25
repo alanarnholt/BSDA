@@ -5,24 +5,24 @@
 \alias{Twin}
 \title{Intelligence test scores for identical twins in which one twin is given a
 drug}
-\format{A data frame with 9 observations on the following 3 variables.
+\format{A data frame/tibble with 9 observations on the following 3 variables.
 \describe{ 
-\item{TwinA}{a numeric vector} 
-\item{TwinB}{a numeric vector} 
-\item{differ}{a numeric vector} 
+\item{twinA}{score on intelligence test without drug} 
+\item{twinB}{score on intelligence test after taking drug} 
+\item{differ}{twinA - twinB} 
 }}
+\usage{
+Twin
+}
 \description{
 Data for Exercise 7.54
 }
 \examples{
 
-str(Twin)
-attach(Twin)
-qqnorm(differ)
-qqline(differ)
-shapiro.test(differ)
-t.test(TwinA,TwinB,paired=TRUE)
-detach(Twin)
+qqnorm(Twin$differ)
+qqline(Twin$differ)
+shapiro.test(Twin$differ)
+t.test(Twin$twinA, Twin$twinB, paired = TRUE)
 
 }
 \references{

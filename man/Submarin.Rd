@@ -4,25 +4,29 @@
 \name{Submarin}
 \alias{Submarin}
 \title{Number of German submarines sunk by U.S. Navy in World War II}
-\format{A data frame with 16 observations on the following 3 variables.
+\format{A data frame/tibble with 16 observations on the following 3 variables.
 \describe{ 
-\item{Month}{a numeric vector} 
-\item{reported}{a numeric vector} 
-\item{actual}{a numeric vector} 
+\item{month}{month} 
+\item{reported}{number of submarines reported sunk by U.S. Navy} 
+\item{actual}{number of submarines actually sunk by U.S. Navy} 
 }}
+\source{
+F. Mosteller, S. Fienberg, and R. Rourke, \emph{Beginning Statistics with Data Analysis}
+(Reading, MA: Addison-Wesley, 1983)
+}
+\usage{
+Submarin
+}
 \description{
 Data for Exercises 2.16, 2.45, and 2.59
 }
 \examples{
 
-str(Submarin)
-attach(Submarin)
-plot(reported,actual)
-model <- lm(actual~reported)
-abline(model)
-anova(model)
+model <- lm(actual ~ reported, data = Submarin)
 summary(model)
-detach(Submarin)
+plot(actual ~ reported, data = Submarin)
+abline(model, col = "red")
+rm(model)
 
 }
 \references{

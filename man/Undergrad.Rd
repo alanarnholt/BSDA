@@ -4,35 +4,41 @@
 \name{Undergrad}
 \alias{Undergrad}
 \title{Data set describing a sample of undergraduate students}
-\format{A data frame with 100 observations on the following 6 variables.
+\format{A data frame/tibble with 100 observations on the following 6 variables.
 \describe{ 
-\item{Gender}{a factor with levels \code{Female}
-\code{Male}} 
-\item{Major}{a factor with levels \code{Accounting}
-\code{Biology} \code{Chemistry} \code{English} \code{Geology} \code{History}
-\code{Math} \code{Music} \code{Physics} \code{Psychology} \code{Sociology}}
-\item{Class}{a factor with levels \code{Freshman} \code{Junior}
-\code{Senior} \code{Sophomore}} 
-\item{GPA}{a numeric vector}
-\item{SAT}{a numeric vector} 
-\item{Drops}{a numeric vector}
+\item{gender}{character variable with values \code{Female} and \code{Male}} 
+\item{major}{college major}
+\item{class}{college year group classification} 
+\item{gpa}{grade point average}
+\item{sat}{Scholastic Assessment Test score} 
+\item{drops}{number of courses dropped}
 }}
+\usage{
+Undergrad
+}
 \description{
 Data for Exercise 1.15
 }
 \examples{
 
-str(Undergrad)
-attach(Undergrad)
-stripchart(GPA~Class,method="stack",col=c("blue","red","green","lightblue"),
-pch=19,main="GPA versus Class")
-stripchart(GPA~Gender,method="stack",col=c("red","blue"),pch=19,
-main="GPA versus Gender")
-stripchart(SAT~Drops,method="stack",col=c("blue","red","green","lightblue"),
-pch=19,main="SAT versus Drops")
-stripchart(Drops~Gender,method="stack",col=c("red","blue"),pch=19,
-main="Drops versus Gender")
-detach(Undergrad)
+stripchart(gpa ~ class, data = Undergrad, method = "stack", 
+col = c("blue","red","green","lightblue"),
+pch = 19, main = "GPA versus Class")
+stripchart(gpa ~ gender, data = Undergrad, method = "stack", 
+col = c("red", "blue"), pch = 19,
+           main = "GPA versus Gender")
+           stripchart(sat ~ drops, data = Undergrad, method = "stack", 
+           col = c("blue", "red", "green", "lightblue"),
+                      pch = 19, main = "SAT versus Drops")
+                      stripchart(drops ~ gender, data = Undergrad, 
+                      method = "stack", col = c("red", "blue"), pch = 19,
+                                 main = "Drops versus Gender")
+ \dontrun{
+ ggplot2::ggplot(data = Undergrad, aes(x = sat, y = drops, fill = factor(drops))) + 
+   facet_grid(drops ~.) +
+    geom_dotplot() +
+      guides(fill = FALSE)
+      }
 
 }
 \references{

@@ -4,20 +4,21 @@
 \name{Wool}
 \alias{Wool}
 \title{Strength tests of two types of wool fabric}
-\format{A data frame with 10 observations on the following 2 variables.
+\format{A data frame/tibble with 20 observations on the following 2 variables.
 \describe{ 
-\item{Type.1}{a numeric vector} 
-\item{Type.2}{a numeric vector} 
+\item{type}{type of wool (\code{Type I}, \code{Type 2})} 
+\item{strength}{strength of wool} 
 }}
+\usage{
+Wool
+}
 \description{
 Data for Exercise 7.42
 }
 \examples{
 
-str(Wool)
-attach(Wool)
-t.test(Type.1,Type.2,var.equal=TRUE)
-detach(Wool)
+boxplot(strength ~ type, data = Wool, col = c("blue", "purple"))
+t.test(strength ~ type, data = Wool, var.equal = TRUE)
 
 }
 \references{

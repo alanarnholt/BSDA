@@ -4,26 +4,25 @@
 \name{Vehicle}
 \alias{Vehicle}
 \title{Fatality ratings for foreign and domestic vehicles}
-\format{A data frame with 2 observations on the following 6 variables.
+\format{A data frame/tibble with 151 observations on the following 2 variables.
 \describe{ 
-\item{make}{a factor with levels \code{domestic}
-\code{foreign}} 
-\item{A}{a numeric vector} 
-\item{B}{a numeric vector} 
-\item{C}{a numeric vector} 
-\item{D}{a numeric vector} 
-\item{F}{a numeric vector} 
+\item{make}{a factor with levels \code{domestic} and \code{foreign}} 
+\item{rating}{a factor with levels \code{Much better than average}, \code{Above average}, \code{Average}, \code{Below average}, and \code{Much worse than average}} 
 }}
+\source{
+Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995
+}
+\usage{
+Vehicle
+}
 \description{
 Data for Exercise 8.34
 }
 \examples{
 
-str(Vehicle)
-attach(Vehicle)
-Vehicle
-chisq.test(Vehicle[,2:6])
-detach(Vehicle)
+T1 <- xtabs(~make + rating, data = Vehicle)
+T1
+chisq.test(T1)
 
 }
 \references{

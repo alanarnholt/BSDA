@@ -5,24 +5,22 @@
 \alias{Verbal}
 \title{Verbal test scores and number of library books checked out for 15 eighth
 graders}
-\format{A data frame with 15 observations on the following 4 variables.
+\format{A data frame/tibble with 15 observations on the following 2 variables.
 \describe{ 
-\item{number}{a numeric vector} 
-\item{verbal}{a numeric vector} 
-\item{SRES1}{a numeric vector}
-\item{FITS1}{a numeric vector} 
+\item{number}{number of library books checked out} 
+\item{verbal}{verbal test score}
 }}
+\usage{
+Verbal
+}
 \description{
 Data for Exercise 9.30
 }
 \examples{
 
-str(Verbal)
-attach(Verbal)
-model <- lm(verbal~number)
-summary(model)
-detach(Verbal)
-remove(model)
+plot(verbal ~ number, data = Verbal)
+abline(lm(verbal ~ number, data = Verbal))
+summary(lm(verbal ~ number, data = Verbal))
 
 }
 \references{

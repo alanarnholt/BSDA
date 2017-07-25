@@ -4,20 +4,21 @@
 \name{Step}
 \alias{Step}
 \title{STEP science test scores for a class of ability-grouped students}
-\format{A data frame with 12 observations on the following variable.
+\format{A data frame/tibble with 12 observations on the following variable.
 \describe{ 
-\item{score}{a numeric vector} 
+\item{score}{State test of educational progress (STEP) science test score} 
 }}
+\usage{
+Step
+}
 \description{
 Data for Exercise 6.79
 }
 \examples{
 
-str(Step)
-attach(Step)
-EDA(score)
-t.test(score,mu=80,alternative="less")
-detach(Step)
+BSDA::EDA(Step$score)
+t.test(Step$score, mu = 80, alternative = "less")
+wilcox.test(Step$score, mu = 80, alternative = "less")
 
 }
 \references{

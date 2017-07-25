@@ -4,19 +4,19 @@
 \name{Ticket}
 \alias{Ticket}
 \title{Time to complete an airline ticket reservation}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{time}{a numeric vector}
+\item{time}{time (in seconds) to check out a reservation}
 }}
+\usage{
+Ticket
+}
 \description{
 Data for Exercise 5.18
 }
 \examples{
 
-str(Ticket)
-attach(Ticket)
-EDA(time)
-detach(Ticket)
+BSDA::EDA(Ticket$time)
 
 }
 \references{

@@ -4,20 +4,20 @@
 \name{Window}
 \alias{Window}
 \title{Wind leakage for storm windows exposed to a 50 mph wind}
-\format{A data frame with 9 observations on the following 2 variables.
+\format{A data frame/tibble with 9 observations on the following 2 variables.
 \describe{ 
-\item{Window}{a numeric vector} 
-\item{Leakage}{a numeric vector} 
+\item{window}{window number} 
+\item{leakage}{percent leakage from a 50 mph wind} 
 }}
+\usage{
+Window
+}
 \description{
 Data for Exercise 6.54
 }
 \examples{
 
-str(Window)
-attach(Window)
-SIGN.test(Leakage,md=.125,alternative="greater")
-detach(Window)
+BSDA::SIGN.test(Window$leakage, md = 0.125, alternative = "greater")
 
 }
 \references{

@@ -5,34 +5,25 @@
 \alias{Tv}
 \title{Percent of students that watch more than 6 hours of TV per day versus
 national math test scores}
-\format{A data frame with 53 observations on the following 3 variables.
+\format{A data frame/tibble with 53 observations on the following 3 variables.
 \describe{ 
-\item{State}{a factor with levels \code{Alabama}
-\code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-\code{Colorado} \code{Connecticut} \code{DC} \code{Delaware} \code{Florida}
-\code{Georgia} \code{Guam} \code{Hawaii} \code{Idaho} \code{Illinois}
-\code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky} \code{Louisiana}
-\code{Maine} \code{Maryland} \code{Massachusetts} \code{Michigan}
-\code{Minnesota} \code{Mississippi} \code{Missour} \code{Montana}
-\code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New Jersey}
-\code{New Mexico} \code{New York} \code{North Carolina} \code{North Dakota}
-\code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania} \code{Rhode
-Island} \code{South Carolina} \code{South Dakota} \code{Tennessee}
-\code{Texas} \code{Utah} \code{Vermont} \code{Vir Is} \code{Virginia}
-\code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-\item{percent}{a numeric vector} 
-\item{test}{a numeric vector} 
+\item{state}{U.S. state}
+\item{percent}{percent of students who watch more than six hours of TV a day} 
+\item{test}{state average on national math test} 
 }}
+\source{
+Educational Testing Services
+}
+\usage{
+Tv
+}
 \description{
 Data for Examples 2.1 and 2.7
 }
 \examples{
 
-str(Tv)
-attach(Tv)
-plot(percent,test,col="blue")
-cor(percent,test,use="complete.obs")
-detach(Tv)
+plot(test ~ percent, data = Tv, col = "blue")
+cor(Tv$test, Tv$percent)
 
 }
 \references{

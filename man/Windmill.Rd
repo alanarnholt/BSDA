@@ -4,25 +4,25 @@
 \name{Windmill}
 \alias{Windmill}
 \title{Direct current produced by different wind velocities}
-\format{A data frame with 25 observations on the following 7 variables.
+\format{A data frame/tibble with 25 observations on the following 2 variables.
 \describe{ 
-\item{velocity}{a numeric vector} 
-\item{output}{a numeric vector} 
-\item{SRES1}{a numeric vector}
-\item{FITS1}{a numeric vector} 
-\item{X1.velocity}{a numeric vector} 
-\item{SRES2}{a numeric vector} 
-\item{FITS2}{a numeric vector} 
+\item{velocity}{wind velocity (miles per hour)} 
+\item{output}{power generated (DC volts)} 
 }}
+\source{
+Joglekar, et al. (1989), Lack of Fit Testing when Replicates Are Not Available,
+\emph{The American Statistician, 43},(3), 135-143
+}
+\usage{
+Windmill
+}
 \description{
 Data for Exercise 9.34
 }
 \examples{
 
-str(Windmill)
-attach(Windmill)
-summary(lm(output~velocity))
-detach(Windmill)
+summary(lm(output ~ velocity, data = Windmill))
+anova(lm(output ~ velocity, data = Windmill))
 
 }
 \references{

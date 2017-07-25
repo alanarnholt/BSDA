@@ -4,26 +4,31 @@
 \name{Tonsils}
 \alias{Tonsils}
 \title{Size of tonsils collected from 1,398 children}
-\format{A data frame with 3 observations on the following 3 variables.
+\format{A data frame/tibble with 1398 observations on the following 2 variables.
 \describe{ 
-\item{Size}{a factor with levels \code{Large}
-\code{Normal} \code{Very Large}} 
-\item{Carrier}{a numeric vector}
-\item{Non.carrier}{a numeric vector} 
+\item{size}{a factor with levels \code{Normal}, \code{Large}, and \code{Very Large}} 
+\item{status}{a factor with levels \code{Carrier} and \code{Non-carrier}}
 }}
+\usage{
+Tonsils
+}
 \description{
 Data for Exercise 2.78
 }
 \examples{
 
-str(Tonsils)
-attach(Tonsils)
-TON <- as.matrix(Tonsils[,2:3])
-rownames(TON) <- Size
-TON
-barplot(t(TON),beside=TRUE,legend=TRUE)
-remove(TON)
-detach(Tonsils)
+T1 <- xtabs(~size + status, data = Tonsils)
+T1
+prop.table(T1, 1)
+prop.table(T1, 1)[2, 1]
+barplot(t(T1), legend = TRUE, beside = TRUE, col = c("red", "green"))
+\dontrun{
+NDF <- dplyr::count(Tonsils, size, status) 
+ggplot2::ggplot(data = NDF, aes(x = size, y = n, fill = status)) + 
+ geom_bar(stat = "identity", position = "dodge") + 
+   scale_fill_manual(values = c("red", "green")) + 
+     theme_bw()
+     }
 
 }
 \references{

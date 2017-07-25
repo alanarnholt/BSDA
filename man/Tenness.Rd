@@ -4,21 +4,27 @@
 \name{Tenness}
 \alias{Tenness}
 \title{Tennessee self concept scores for 20 gifted high school students}
-\format{A data frame with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on the following variable.
 \describe{ 
-\item{score}{a numeric vector} 
+\item{score}{Tennessee Self-Concept Scale score} 
 }}
+\usage{
+Tenness
+}
 \description{
 Data for Exercise 6.56
 }
 \examples{
 
-str(Tenness)
-attach(Tenness)
-EDA(score)
-t.test(score,mu=30,alternative="less")
-SIGN.test(score,md=30,alternative="less")
-detach(Tenness)
+hist(Tenness$score, freq= FALSE, main = "", col = "green",
+xlab = "Tennessee Self-Concept Scale score")
+lines(density(Tenness$score))
+\dontrun{
+ggplot2::ggplot(data = Tenness, aes(x = score, y = ..density..)) + 
+  geom_histogram(binwidth = 2, fill = "purple", color = "black") +
+    geom_density(color = "red", fill = "pink", alpha = 0.3) + 
+      theme_bw()
+      }
 
 }
 \references{

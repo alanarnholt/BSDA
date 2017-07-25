@@ -4,33 +4,14 @@
 \name{Yearsunspot}
 \alias{Yearsunspot}
 \title{Monthly sunspot activity from 1974 to 2000}
-\format{A data frame with 252 observations on the following 24 variables.
+\format{A data frame/tibble with 252 observations on the following 22 variables.
 \describe{ 
-\item{X1979}{a numeric vector} 
-\item{X1980}{a numeric vector} 
-\item{X1981}{a numeric vector}
-\item{X1982}{a numeric vector} 
-\item{X1983}{a numeric vector} 
-\item{X1984}{a numeric vector} 
-\item{X1985}{a numeric vector} 
-\item{X1986}{a numeric vector}
-\item{X1987}{a numeric vector} 
-\item{X1988}{a numeric vector} 
-\item{X1989}{a numeric vector} 
-\item{X1990}{a numeric vector} 
-\item{X1991}{a numeric vector}
-\item{X1992}{a numeric vector} 
-\item{X1993}{a numeric vector} 
-\item{X1994}{a numeric vector} 
-\item{X1995}{a numeric vector} 
-\item{X1996}{a numeric vector}
-\item{X1997}{a numeric vector}
-\item{X1998}{a numeric vector} 
-\item{X1999}{a numeric vector} 
-\item{X2000}{a numeric vector} 
-\item{SSN}{a numeric vector} 
-\item{year}{a numeric vector} 
+\item{number}{average number of sunspots} 
+\item{year}{date} 
 }}
+\source{
+NASA/Marshall Space Flight Center, Huntsville, AL 35812.
+}
 \usage{
 Yearsunspot
 }
@@ -39,10 +20,7 @@ Data for Exercise 2.7
 }
 \examples{
 
-str(Yearsunspot)
-attach(Yearsunspot)
-boxplot(SSN~year,main="Exercise 2.7",col="lightblue")
-detach(Yearsunspot)
+plot(number ~ year, data = Yearsunspot)
 
 }
 \references{

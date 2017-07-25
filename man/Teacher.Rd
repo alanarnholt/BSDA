@@ -4,35 +4,39 @@
 \name{Teacher}
 \alias{Teacher}
 \title{Average teacher's salaries across the states in the 70s 80s and 90s}
-\format{A data frame with 51 observations on the following 4 variables.
+\format{A data frame/tibble with 51 observations on the following 3 variables.
 \describe{
- \item{State}{a factor with levels \code{Alabama}
-\code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-\code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
-Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
-\code{Illinois} \code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky}
-\code{Louisiana} \code{Maine} \code{Maryland} \code{Massachusetts}
-\code{Michigan} \code{Minnesota} \code{Mississippi} \code{Missouri}
-\code{Montana} \code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New
-Jersey} \code{New Mexico} \code{New York} \code{North Carolina} \code{North
-Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
-\code{Rhode Island} \code{South Carolina} \code{South Dakota}
-\code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
-\code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-\item{X1973.74}{a numeric vector} 
-\item{X1983.84}{a numeric vector} 
-\item{X1993.94}{a numeric vector} 
+ \item{state}{U.S. state}
+\item{year}{academic year} 
+\item{salary}{avaerage salary (in dollars)}
 }}
+\source{
+National Education Association
+}
+\usage{
+Teacher
+}
 \description{
 Data for Exercise 5.114
 }
 \examples{
 
-str(Teacher)
-attach(Teacher)
-boxplot(X1973.74,X1983.84,X1993.94,
-names=c("1973-1974","1983-1984","1993-1994"),ylab="Average Salary")
-detach(Teacher)
+par(mfrow = c(3, 1))
+hist(Teacher$salary[Teacher$year == "1973-74"],
+     main = "Teacher salary 1973-74", xlab = "salary",
+          xlim = range(Teacher$salary, na.rm = TRUE))
+          hist(Teacher$salary[Teacher$year == "1983-84"],
+               main = "Teacher salary 1983-84", xlab = "salary",
+                    xlim = range(Teacher$salary, na.rm = TRUE))
+                    hist(Teacher$salary[Teacher$year == "1993-94"],
+                         main = "Teacher salary 1993-94", xlab = "salary",
+                              xlim = range(Teacher$salary, na.rm = TRUE))
+                              par(mfrow = c(1, 1))
+    \dontrun{                       
+    ggplot2::ggplot(data = Teacher, aes(x = salary)) + 
+     geom_histogram(fill = "purple", color = "black") +  facet_grid(year ~ .) + 
+       theme_bw()
+       }
 
 }
 \references{

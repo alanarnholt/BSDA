@@ -4,21 +4,20 @@
 \name{Visual}
 \alias{Visual}
 \title{Visual acuity of a group of subjects tested under a specified dose of a drug}
-\format{A data frame with 18 observations on the following variable.
+\format{A data frame/tibble with 18 observations on the following variable.
 \describe{ 
-\item{visual}{a numeric vector} 
+\item{visual}{visual acuity measurement} 
 }}
+\usage{
+Visual
+}
 \description{
 Data for Exercise 5.6
 }
 \examples{
 
-str(Visual)
-attach(Visual)
-stem(visual)
-fivenum(visual)
-boxplot(visual)
-detach(Visual)
+stem(Visual$visual)
+boxplot(Visual$visual, col = "purple")
 
 }
 \references{
