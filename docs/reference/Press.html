@@ -89,14 +89,13 @@ selected persons</h1>
     <p>Data for Exercise 9.55</p>
     
 
+    <pre class="usage"><span class='no'>Press</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 20 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>educat</dt><dd><p>a numeric vector</p></dd> 
-<dt>confid</dt><dd><p>a numeric vector</p></dd> 
-<dt>SRES1</dt><dd><p>a numeric vector</p></dd>
-<dt>FITS1</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 20 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>education_yrs</dt><dd><p>years of education</p></dd> 
+<dt>confidence</dt><dd><p>degree of confidence in the press (the higher the score, the more confidence)</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -107,30 +106,26 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Press</span>)</div><div class='output co'>#&gt; 'data.frame':	20 obs. of  4 variables:
-#&gt;  $ educat: int  12 12 14 8 10 12 11 12 16 14 ...
-#&gt;  $ confid: int  28 36 22 58 41 32 30 62 14 21 ...
-#&gt;  $ SRES1 : num  -0.67 0.123 -0.435 0.686 -0.225 ...
-#&gt;  $ FITS1 : num  34.8 34.8 26.3 51.7 43.2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Press</span>)
-<span class='fu'>summary</span>(<span class='fu'>lm</span>(<span class='no'>confid</span>~<span class='no'>educat</span>))</div><div class='output co'>#&gt; 
+<span class='fu'>plot</span>(<span class='no'>confidence</span> ~ <span class='no'>education_yrs</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Press</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>confidence</span> ~ <span class='no'>education_yrs</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Press</span>)
+<span class='fu'>abline</span>(<span class='no'>model</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"purple"</span>)</div><div class='img'><img src='Press-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = confid ~ educat)
+#&gt; lm(formula = confidence ~ education_yrs, data = Press)
 #&gt; 
 #&gt; Residuals:
 #&gt;     Min      1Q  Median      3Q     Max 
 #&gt; -18.762  -5.665  -2.492   3.777  27.238 
 #&gt; 
 #&gt; Coefficients:
-#&gt;             Estimate Std. Error t value Pr(&gt;|t|)    
-#&gt; (Intercept)   85.530     12.508   6.838 2.12e-06 ***
-#&gt; educat        -4.231      1.020  -4.147 0.000605 ***
+#&gt;               Estimate Std. Error t value Pr(&gt;|t|)    
+#&gt; (Intercept)     85.530     12.508   6.838 2.12e-06 ***
+#&gt; education_yrs   -4.231      1.020  -4.147 0.000605 ***
 #&gt; ---
 #&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #&gt; 
 #&gt; Residual standard error: 10.35 on 18 degrees of freedom
 #&gt; Multiple R-squared:  0.4887,	Adjusted R-squared:  0.4602 
 #&gt; F-statistic:  17.2 on 1 and 18 DF,  p-value: 0.0006049
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Press</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

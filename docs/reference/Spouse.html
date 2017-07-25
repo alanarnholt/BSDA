@@ -87,15 +87,19 @@
     <p>Data for Exercise 8.33</p>
     
 
+    <pre class="usage"><span class='no'>Spouse</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 4 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>result</dt><dd><p>a factor with levels <code>acquitted</code>
-<code>convicted</code> <code>not prosecuted</code> <code>pleaded guilty</code></p></dd>
-<dt>husband</dt><dd><p>a numeric vector</p></dd> 
-<dt>wife</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 540 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>result</dt><dd><p>a factor with levels <code>not prosecuted</code>, <code>pleaded guilty</code>, <code>convicted</code>, and <code>acquited</code></p></dd>
+<dt>spouse</dt><dd><p>a factor with levels <code>husband</code> and <code>wife</code></p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Bureau of Justice Statistics (September 1995), <em>Spouse Murder Defendants in Large
+Urban Counties</em>, Executive Summary, NCJ-156831.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -105,26 +109,26 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Spouse</span>)</div><div class='output co'>#&gt; 'data.frame':	4 obs. of  3 variables:
-#&gt;  $ result : Factor w/ 4 levels "acquitted","convicted",..: 3 4 2 1
-#&gt;  $ husband: int  35 146 130 7
-#&gt;  $ wife   : int  35 87 69 31</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Spouse</span>)
-<span class='no'>Spouse</span></div><div class='output co'>#&gt;           result husband wife
-#&gt; 1 not prosecuted      35   35
-#&gt; 2 pleaded guilty     146   87
-#&gt; 3      convicted     130   69
-#&gt; 4      acquitted       7   31</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>Spouse</span>[,<span class='fl'>2</span>:<span class='fl'>3</span>])</div><div class='output co'>#&gt; 
+<span class='no'>T1</span> <span class='kw'>&lt;-</span> <span class='fu'>xtabs</span>(~<span class='no'>result</span> + <span class='no'>spouse</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Spouse</span>)
+<span class='no'>T1</span></div><div class='output co'>#&gt;                 spouse
+#&gt; result           husband wife
+#&gt;   not prosecuted      35   35
+#&gt;   pleaded guilty     146   87
+#&gt;   convicted          130   69
+#&gt;   acquitted            7   31</div><div class='input'><span class='fu'>chisq.test</span>(<span class='no'>T1</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Pearson's Chi-squared test
 #&gt; 
-#&gt; data:  Spouse[, 2:3]
+#&gt; data:  T1
 #&gt; X-squared = 32.765, df = 3, p-value = 3.61e-07
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Spouse</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>rm</span>(<span class='no'>T1</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

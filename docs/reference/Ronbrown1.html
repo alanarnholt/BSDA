@@ -87,22 +87,13 @@
     <p>Data for Exercise 2.9</p>
     
 
+    <pre class="usage"><span class='no'>Ronbrown1</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 75 observations on the following 12 variables.</p><dl class='dl-horizontal'>
-<dt>depth</dt><dd><p>a numeric vector</p></dd> 
-<dt>downtemp1</dt><dd><p>a numeric vector</p></dd> 
-<dt>downtemp2</dt><dd><p>a numeric vector</p></dd>
-<dt>downsalinity1</dt><dd><p>a numeric vector</p></dd>
-<dt>downsalinity2</dt><dd><p>a numeric vector</p></dd> 
-<dt>downdensity</dt><dd><p>a numeric vector</p></dd> 
-<dt>C7</dt><dd><p>a numeric vector</p></dd> 
-<dt>uptemp1</dt><dd><p>a numeric vector</p></dd> 
-<dt>uptemp2</dt><dd><p>a numeric vector</p></dd>
-<dt>upsalinity1</dt><dd><p>a numeric vector</p></dd> 
-<dt>upsalinity2</dt><dd><p>a numeric vector</p></dd> 
-<dt>updensity</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 75 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>depth</dt><dd><p>ocen depth (in meters)</p></dd> 
+<dt>temperature</dt><dd><p>ocean temperature (in Celsius)</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -113,20 +104,8 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Ronbrown1</span>)</div><div class='output co'>#&gt; 'data.frame':	75 obs. of  12 variables:
-#&gt;  $ depth        : int  10 20 30 40 50 60 70 80 90 100 ...
-#&gt;  $ downtemp1    : num  27.4 27.4 27.3 27.2 26.8 ...
-#&gt;  $ downtemp2    : num  27.4 27.4 27.3 27.2 26.8 ...
-#&gt;  $ downsalinity1: num  33.3 33.3 33.3 33.3 33.4 ...
-#&gt;  $ downsalinity2: num  33.3 33.3 33.3 33.3 33.4 ...
-#&gt;  $ downdensity  : num  21.3 21.3 21.3 21.4 21.6 ...
-#&gt;  $ C7           : int  10 20 30 40 50 60 70 80 90 100 ...
-#&gt;  $ uptemp1      : num  27.5 27.4 27.3 27.1 26.8 ...
-#&gt;  $ uptemp2      : num  27.5 27.4 27.3 27.1 26.8 ...
-#&gt;  $ upsalinity1  : num  33.3 33.3 33.3 33.4 33.5 ...
-#&gt;  $ upsalinity2  : num  33.3 33.3 33.3 33.4 33.5 ...
-#&gt;  $ updensity    : num  21.3 21.3 21.3 21.5 21.6 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Ronbrown1</span>)
-<span class='fu'>plot</span>(<span class='no'>depth</span>,<span class='no'>downtemp1</span>)</div><div class='img'><img src='Ronbrown1-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Ronbrown1</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>temperature</span> ~ <span class='no'>depth</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Ronbrown1</span>, <span class='kw'>ylab</span> <span class='kw'>=</span> <span class='st'>"Temperature"</span>)</div><div class='img'><img src='Ronbrown1-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -89,12 +89,18 @@ modification therapy</h1>
     <p>Data for Exercise 6.61</p>
     
 
+    <pre class="usage"><span class='no'>Prognost</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 15 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>score</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 15 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>kprs_score</dt><dd><p>Kloper's Prognostic Rating Scale score</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Newmark, C., et al. (1973), Predictive Validity of the Rorschach Prognostic Rating Scale
+with Behavior Modification Techniques, <em>Journal of Clinical Psychology, 29</em>, 246-248</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -104,17 +110,15 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Prognost</span>)</div><div class='output co'>#&gt; 'data.frame':	15 obs. of  1 variable:
-#&gt;  $ score: num  11.9 8.2 6.9 11.7 7.4 6.5 9.5 7.4 6.3 9.4 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Prognost</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>score</span>)</div><div class='output co'>#&gt; [1] "score"</div><div class='img'><img src='Prognost-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+<span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/EDA'>EDA</a></span>(<span class='no'>Prognost</span>$<span class='no'>kprs_score</span>)</div><div class='output co'>#&gt; [1] "Prognost$kprs_score"</div><div class='img'><img src='Prognost-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   15.000    0.000    4.900    6.800    8.000    7.400    8.000    9.400 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;   11.900    1.947    3.790    0.503    2.600    7.000   -0.501    0.667 
 #&gt; SW p-val 
-#&gt;    0.169 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>score</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>9</span>)</div><div class='output co'>#&gt; 
+#&gt;    0.169 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Prognost</span>$<span class='no'>kprs_score</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='fl'>9</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
-#&gt; data:  score
+#&gt; data:  Prognost$kprs_score
 #&gt; t = -1.9894, df = 14, p-value = 0.06656
 #&gt; alternative hypothesis: true mean is not equal to 9
 #&gt; 95 percent confidence interval:
@@ -122,13 +126,16 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt;         8 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Prognost</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

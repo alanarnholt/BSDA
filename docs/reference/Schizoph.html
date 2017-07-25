@@ -89,11 +89,12 @@ of schizophrenics after a specified dose of a tranquilizer</h1>
     <p>Data for Example 6.10</p>
     
 
+    <pre class="usage"><span class='no'>Schizoph</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 13 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>score</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 13 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>score</dt><dd><p>schizophrenics score on a standardized exam one hour after recieving a specified dose of a tranqilizer.</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -104,17 +105,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Schizoph</span>)</div><div class='output co'>#&gt; 'data.frame':	13 obs. of  1 variable:
-#&gt;  $ score: int  15 20 30 27 24 22 22 17 21 25 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Schizoph</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>score</span>)</div><div class='output co'>#&gt; [1] "score"</div><div class='img'><img src='Schizoph-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+<span class='fu'>hist</span>(<span class='no'>Schizoph</span>$<span class='no'>score</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"score on standardized test"</span>,
+<span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Example 6.10"</span>, <span class='kw'>breaks</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"orange"</span>)</div><div class='img'><img src='Schizoph-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/EDA'>EDA</a></span>(<span class='no'>Schizoph</span>$<span class='no'>score</span>)</div><div class='output co'>#&gt; [1] "Schizoph$score"</div><div class='img'><img src='Schizoph-2.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   13.000    0.000   15.000   20.500   22.923   23.000   22.923   26.000 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;   30.000    4.132   17.077    1.146    5.500   15.000   -0.795   -0.250 
 #&gt; SW p-val 
-#&gt;    0.980 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>score</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>20</span>)</div><div class='output co'>#&gt; 
+#&gt;    0.980 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Schizoph</span>$<span class='no'>score</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='fl'>20</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
-#&gt; data:  score
+#&gt; data:  Schizoph$score
 #&gt; t = 2.5504, df = 12, p-value = 0.02545
 #&gt; alternative hypothesis: true mean is not equal to 20
 #&gt; 95 percent confidence interval:
@@ -122,7 +122,8 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt;  22.92308 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Schizoph</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

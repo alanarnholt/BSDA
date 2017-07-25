@@ -89,39 +89,23 @@
     <p>Data for Statistical Insight Chapter 9</p>
     
 
+    <pre class="usage"><span class='no'>Sat</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 51 observations on the following 16 variables.</p><dl class='dl-horizontal'>
-<dt>state</dt><dd><p>a factor with levels <code>alabama</code>
-<code>alaska</code> <code>arizona</code> <code>arkansas</code> <code>california</code>
-<code>colorado</code> <code>connecticut</code> <code>delaware</code> <code>dist of columbia</code>
-<code>florida</code> <code>georgia</code> <code>hawaii</code> <code>idaho</code> <code>illinois</code>
-<code>indiana</code> <code>iowa</code> <code>kansas</code> <code>kentucky</code> <code>louisiana</code>
-<code>maine</code> <code>maryland</code> <code>massachusetts</code> <code>michigan</code>
-<code>minnesota</code> <code>mississippi</code> <code>missouri</code> <code>montana</code>
-<code>nebraska</code> <code>nevada</code> <code>new hampshire</code> <code>new jersey</code>
-<code>new mexico</code> <code>new york</code> <code>north carolina</code> <code>north dakota</code>
-<code>ohio</code> <code>oklahoma</code> <code>oregon</code> <code>pennsylvania</code> <code>rhode
-island</code> <code>south carolina</code> <code>south dakota</code> <code>tennessee</code>
-<code>texas</code> <code>utah</code> <code>vermont</code> <code>virginia</code> <code>washington</code>
-<code>west virginia</code> <code>wisconsin</code> <code>wyoming</code></p></dd>
-<dt>verbal94</dt><dd><p>a numeric vector</p></dd> 
-<dt>math94</dt><dd><p>a numeric vector</p></dd> 
-<dt>total94</dt><dd><p>a numeric vector</p></dd> 
-<dt>percent94</dt><dd><p>a numeric vector</p></dd> 
-<dt>code94</dt><dd><p>a numeric vector</p></dd>
-<dt>expend94</dt><dd><p>a numeric vector</p></dd> 
-<dt>verbal95</dt><dd><p>a numeric vector</p></dd> 
-<dt>math95</dt><dd><p>a numeric vector</p></dd> 
-<dt>total95</dt><dd><p>a numeric vector</p></dd> 
-<dt>verbal99</dt><dd><p>a numeric vector</p></dd>
-<dt>math99</dt><dd><p>a numeric vector</p></dd> 
-<dt>total99</dt><dd><p>a numeric vector</p></dd> 
-<dt>percent99</dt><dd><p>a numeric vector</p></dd> 
-<dt>code99</dt><dd><p>a numeric vector</p></dd> 
-<dt>expend99</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 102 observations on the following 7 variables.</p><dl class='dl-horizontal'>
+<dt>state</dt><dd><p>U.S. state</p></dd>
+<dt>verbal</dt><dd><p>verbal SAT score</p></dd> 
+<dt>math</dt><dd><p>math SAT score</p></dd> 
+<dt>total</dt><dd><p>combined verbal and math SAT score</p></dd> 
+<dt>percent</dt><dd><p>percent of high school seniors taking the SAT</p></dd> 
+<dt>expend</dt><dd><p>state expenditure per student (in dollars)</p></dd> 
+<dt>year</dt><dd><p>year</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><em>The 2000 World Almanac and Book of Facts</em>, Funk and Wagnalls Corporation, New Jersey.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -131,30 +115,78 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Sat</span>)</div><div class='output co'>#&gt; 'data.frame':	51 obs. of  16 variables:
-#&gt;  $ state    : Factor w/ 51 levels "alabama","alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ verbal94 : int  482 434 443 417 413 456 426 428 406 413 ...
-#&gt;  $ math94   : int  529 477 496 518 482 513 472 464 443 466 ...
-#&gt;  $ total94  : int  1011 911 939 935 895 969 898 892 849 879 ...
-#&gt;  $ percent94: int  8 49 26 6 46 28 80 68 53 49 ...
-#&gt;  $ code94   : int  1 2 1 1 2 1 2 2 2 2 ...
-#&gt;  $ expend94 : int  3616 8450 4381 4031 4746 5172 8017 6093 9549 5243 ...
-#&gt;  $ verbal95 : int  565 521 524 556 492 538 507 505 485 497 ...
-#&gt;  $ math95   : int  555 513 520 542 509 538 502 494 471 496 ...
-#&gt;  $ total95  : int  1120 1034 1044 1098 1001 1076 1009 999 956 993 ...
-#&gt;  $ verbal99 : int  561 516 524 563 497 536 510 503 494 499 ...
-#&gt;  $ math99   : int  555 514 525 556 514 540 509 497 478 498 ...
-#&gt;  $ total99  : int  1116 1030 1049 1119 1011 1076 1019 1000 972 997 ...
-#&gt;  $ percent99: int  9 50 34 6 49 32 80 67 77 53 ...
-#&gt;  $ code99   : int  1 2 2 1 2 2 2 2 2 2 ...
-#&gt;  $ expend99 : int  4903 9097 4940 4840 5414 5728 8901 7804 9019 5986 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Sat</span>)
-<span class='fu'>pairs</span>(<span class='no'>Sat</span>)</div><div class='img'><img src='Sat-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Sat</span>)</div></pre>
+<span class='no'>Sat94</span> <span class='kw'>&lt;-</span> <span class='no'>Sat</span>[<span class='no'>Sat</span>$<span class='no'>year</span> <span class='kw'>==</span> <span class='fl'>1994</span>, ]
+<span class='no'>Sat94</span></div><div class='output co'>#&gt; # A tibble: 51 x 7
+#&gt;               state verbal  math total percent expend   year
+#&gt;               &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;  &lt;int&gt; &lt;fctr&gt;
+#&gt;  1          alabama    482   529  1011       8   3616   1994
+#&gt;  2           alaska    434   477   911      49   8450   1994
+#&gt;  3          arizona    443   496   939      26   4381   1994
+#&gt;  4         arkansas    417   518   935       6   4031   1994
+#&gt;  5       california    413   482   895      46   4746   1994
+#&gt;  6         colorado    456   513   969      28   5172   1994
+#&gt;  7      connecticut    426   472   898      80   8017   1994
+#&gt;  8         delaware    428   464   892      68   6093   1994
+#&gt;  9 dist of columbia    406   443   849      53   9549   1994
+#&gt; 10          florida    413   466   879      49   5243   1994
+#&gt; # ... with 41 more rows</div><div class='input'><span class='no'>Sat99</span> <span class='kw'>&lt;-</span> <span class='fu'>subset</span>(<span class='no'>Sat</span>, <span class='no'>year</span> <span class='kw'>==</span> <span class='fl'>1999</span>)
+<span class='no'>Sat99</span></div><div class='output co'>#&gt; # A tibble: 51 x 7
+#&gt;               state verbal  math total percent expend   year
+#&gt;               &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt;  &lt;int&gt; &lt;fctr&gt;
+#&gt;  1          alabama    561   555  1116       9   4903   1999
+#&gt;  2           alaska    516   514  1030      50   9097   1999
+#&gt;  3          arizona    524   525  1049      34   4940   1999
+#&gt;  4         arkansas    563   556  1119       6   4840   1999
+#&gt;  5       california    497   514  1011      49   5414   1999
+#&gt;  6         colorado    536   540  1076      32   5728   1999
+#&gt;  7      connecticut    510   509  1019      80   8901   1999
+#&gt;  8         delaware    503   497  1000      67   7804   1999
+#&gt;  9 dist of columbia    494   478   972      77   9019   1999
+#&gt; 10          florida    499   498   997      53   5986   1999
+#&gt; # ... with 41 more rows</div><div class='input'><span class='fu'>stem</span>(<span class='no'>Sat99</span>$<span class='no'>total</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 1 digit(s) to the right of the |
+#&gt; 
+#&gt;    94 | 4
+#&gt;    96 | 92
+#&gt;    98 | 6334577
+#&gt;   100 | 03780149
+#&gt;   102 | 029089
+#&gt;   104 | 901
+#&gt;   106 | 6
+#&gt;   108 | 21147
+#&gt;   110 | 212699
+#&gt;   112 | 2789
+#&gt;   114 | 444
+#&gt;   116 | 39
+#&gt;   118 | 429
+#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='no'>total</span> ~ <span class='no'>percent</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Sat99</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>total</span> ~ <span class='no'>percent</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Sat99</span>)
+<span class='fu'>abline</span>(<span class='no'>model</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"blue"</span>)</div><div class='img'><img src='Sat-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
+#&gt; Call:
+#&gt; lm(formula = total ~ percent, data = Sat99)
+#&gt; 
+#&gt; Residuals:
+#&gt;     Min      1Q  Median      3Q     Max 
+#&gt; -68.343 -26.613  -0.865  18.263  63.356 
+#&gt; 
+#&gt; Coefficients:
+#&gt;              Estimate Std. Error t value Pr(&gt;|t|)    
+#&gt; (Intercept) 1146.5289     7.4940  152.99   &lt;2e-16 ***
+#&gt; percent       -2.1770     0.1629  -13.37   &lt;2e-16 ***
+#&gt; ---
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#&gt; 
+#&gt; Residual standard error: 31.81 on 49 degrees of freedom
+#&gt; Multiple R-squared:  0.7848,	Adjusted R-squared:  0.7804 
+#&gt; F-statistic: 178.7 on 1 and 49 DF,  p-value: &lt; 2.2e-16
+#&gt; </div><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

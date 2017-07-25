@@ -87,20 +87,13 @@
     <p>Data for Exercise 6.65</p>
     
 
+    <pre class="usage"><span class='no'>Short</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 158 observations on the following 10 variables.</p><dl class='dl-horizontal'>
-<dt>Sample.1</dt><dd><p>a numeric vector</p></dd>
-<dt>Sample.2</dt><dd><p>a numeric vector</p></dd> 
-<dt>Sample.3</dt><dd><p>a numeric vector</p></dd> 
-<dt>Sample.4</dt><dd><p>a numeric vector</p></dd> 
-<dt>Sample.5</dt><dd><p>a numeric vector</p></dd> 
-<dt>Sample.6</dt><dd><p>a numeric vector</p></dd>
-<dt>Sample.7</dt><dd><p>a numeric vector</p></dd> 
-<dt>Sample.8</dt><dd><p>a numeric vector</p></dd> 
-<dt>Parallax</dt><dd><p>a numeric vector</p></dd> 
-<dt>Sample</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 158 observations on the following 10 variables.</p><dl class='dl-horizontal'>
+<dt>sample</dt><dd><p>sample number</p></dd> 
+<dt>parallax</dt><dd><p>parallax measurements (seconds of a degree)</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -111,26 +104,11 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Short</span>)</div><div class='output co'>#&gt; 'data.frame':	158 obs. of  10 variables:
-#&gt;  $ Sample.1: num  8.5 8.5 7.33 8.64 9.27 9.06 9.25 9.09 8.5 8.06 ...
-#&gt;  $ Sample.2: num  8.65 8.35 8.71 8.31 8.36 8.58 7.8 7.71 8.3 9.71 ...
-#&gt;  $ Sample.3: num  8.5 8.8 8.4 8.82 9.02 ...
-#&gt;  $ Sample.4: num  8.7 9.66 8.5 8.65 10.33 ...
-#&gt;  $ Sample.5: num  8.43 9.09 8.5 8.44 9.71 8.07 8.36 8.6 9.11 8.66 ...
-#&gt;  $ Sample.6: num  8.63 10.16 8.5 8.31 10.8 ...
-#&gt;  $ Sample.7: num  8.54 8.56 8.54 8.74 8.91 8.4 8.4 8.57 8.69 8.55 ...
-#&gt;  $ Sample.8: num  8.54 8.58 8.54 8.94 9.24 8.3 8.33 8.59 8.81 8.56 ...
-#&gt;  $ Parallax: num  8.5 8.5 7.33 8.64 9.27 9.06 9.25 9.09 8.5 8.06 ...
-#&gt;  $ Sample  : int  1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Short</span>)
-<span class='fu'>hist</span>(<span class='no'>Parallax</span>)</div><div class='img'><img src='Short-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>Parallax</span>)</div><div class='output co'>#&gt; [1] "Parallax"</div><div class='img'><img src='Short-2.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;  158.000    0.000    5.760    8.338    8.610    8.550    8.594    8.803 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   10.800    0.674    0.455    0.054    0.465    5.040    2.763    0.323 
-#&gt; SW p-val 
-#&gt;    0.000 </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>Parallax</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>8.798</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>hist</span>(<span class='no'>Short</span>$<span class='no'>parallax</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Problem 6.65"</span>,
+<span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"orange"</span>)</div><div class='img'><img src='Short-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/SIGN.test'>SIGN.test</a></span>(<span class='no'>Short</span>$<span class='no'>parallax</span>, <span class='kw'>md</span> <span class='kw'>=</span> <span class='fl'>8.798</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  Parallax
+#&gt; data:  Short$parallax
 #&gt; s = 40, p-value = 3.966e-10
 #&gt; alternative hypothesis: true median is not equal to 8.798
 #&gt; 95 percent confidence interval:
@@ -141,10 +119,10 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
 #&gt; Lower Achieved CI     0.9331    8.5   8.58
 #&gt; Interpolated CI       0.9500    8.5   8.58
-#&gt; Upper Achieved CI     0.9536    8.5   8.58</div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Parallax</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>8.798</span>)</div><div class='output co'>#&gt; 
+#&gt; Upper Achieved CI     0.9536    8.5   8.58</div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Short</span>$<span class='no'>parallax</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='fl'>8.798</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
-#&gt; data:  Parallax
+#&gt; data:  Short$parallax
 #&gt; t = -3.5135, df = 157, p-value = 0.000578
 #&gt; alternative hypothesis: true mean is not equal to 8.798
 #&gt; 95 percent confidence interval:
@@ -152,7 +130,8 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt;  8.609557 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Short</span>)</div></pre>
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

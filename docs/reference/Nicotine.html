@@ -87,12 +87,13 @@
     <p>Data for Exercise 9.21</p>
     
 
+    <pre class="usage"><span class='no'>Nicotine</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 8 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>nicotine</dt><dd><p>a numeric vector</p></dd> 
-<dt>sales</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 8 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>nicotine</dt><dd><p>nicotine content in milligrams</p></dd> 
+<dt>sales</dt><dd><p>sales figures in $100,000</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -103,13 +104,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Nicotine</span>)</div><div class='output co'>#&gt; 'data.frame':	8 obs. of  2 variables:
-#&gt;  $ nicotine: num  0.86 1.38 1.67 0.25 0.59 1.17 1 0.66
-#&gt;  $ sales   : int  24 65 83 34 59 62 85 38</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Nicotine</span>)
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>sales</span>~<span class='no'>nicotine</span>)
-<span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>sales</span> ~ <span class='no'>nicotine</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Nicotine</span>)
+<span class='fu'>plot</span>(<span class='no'>sales</span> ~ <span class='no'>nicotine</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Nicotine</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Nicotine-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = sales ~ nicotine)
+#&gt; lm(formula = sales ~ nicotine, data = Nicotine)
 #&gt; 
 #&gt; Residuals:
 #&gt;      Min       1Q   Median       3Q      Max 
@@ -125,8 +123,10 @@ Duxbury</p>
 #&gt; Residual standard error: 17.9 on 6 degrees of freedom
 #&gt; Multiple R-squared:  0.455,	Adjusted R-squared:  0.3641 
 #&gt; F-statistic: 5.009 on 1 and 6 DF,  p-value: 0.06653
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Nicotine</span>)
-<span class='fu'>remove</span>(<span class='no'>model</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>predict</span>(<span class='no'>model</span>, <span class='kw'>newdata</span> <span class='kw'>=</span> <span class='fu'>data.frame</span>(<span class='kw'>nicotine</span> <span class='kw'>=</span> <span class='fl'>1</span>),
+     <span class='kw'>interval</span> <span class='kw'>=</span> <span class='st'>"confidence"</span>, <span class='kw'>level</span> <span class='kw'>=</span> <span class='fl'>0.99</span>)</div><div class='output co'>#&gt;        fit      lwr      upr
+#&gt; 1 57.98711 34.34773 81.62648</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

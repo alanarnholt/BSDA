@@ -87,12 +87,13 @@
     <p>Data for Exercises 2.10 and 2.53</p>
     
 
+    <pre class="usage"><span class='no'>Readiq</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 14 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>reading</dt><dd><p>a numeric vector</p></dd> 
-<dt>IQ</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 14 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>reading</dt><dd><p>reading achievement score</p></dd> 
+<dt>iq</dt><dd><p>IQ score</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -103,11 +104,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Readiq</span>)</div><div class='output co'>#&gt; 'data.frame':	14 obs. of  2 variables:
-#&gt;  $ reading: int  42 35 61 28 48 46 59 21 47 29 ...
-#&gt;  $ IQ     : int  105 110 122 92 112 100 120 85 125 96 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Readiq</span>)
-<span class='fu'>plot</span>(<span class='no'>IQ</span>,<span class='no'>reading</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>reading</span>~<span class='no'>IQ</span>)
-<span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Readiq-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Readiq</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>reading</span> ~ <span class='no'>iq</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Readiq</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>reading</span> ~ <span class='no'>iq</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Readiq</span>)
+<span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Readiq-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>predict</span>(<span class='no'>model</span>, <span class='kw'>newdata</span> <span class='kw'>=</span> <span class='fu'>data.frame</span>(<span class='kw'>iq</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>100</span>, <span class='fl'>120</span>)))</div><div class='output co'>#&gt;        1        2 
+#&gt; 36.62927 52.97844 </div><div class='input'><span class='fu'>residuals</span>(<span class='no'>model</span>)[<span class='fu'>c</span>(<span class='fl'>6</span>, <span class='fl'>7</span>)]</div><div class='output co'>#&gt;        6        7 
+#&gt; 9.370734 6.021563 </div><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

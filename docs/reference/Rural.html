@@ -84,17 +84,16 @@
     </div>
 
     
-    <p>Data for Exercise 7.16</p>
+    <p>Data for Example 7.16</p>
     
 
+    <pre class="usage"><span class='no'>Rural</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 33 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>Rural</dt><dd><p>a numeric vector</p></dd> 
-<dt>City</dt><dd><p>a numeric vector</p></dd> 
-<dt>score</dt><dd><p>a numeric vector</p></dd> 
-<dt>code</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 33 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>score</dt><dd><p>child's social adjustment score</p></dd> 
+<dt>area</dt><dd><p>character variable with values <code>city</code> and <code>rural</code></p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -105,25 +104,18 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Rural</span>)</div><div class='output co'>#&gt; 'data.frame':	33 obs. of  4 variables:
-#&gt;  $ Rural: int  55 57 62 58 34 52 63 84 50 56 ...
-#&gt;  $ City : int  61 59 64 42 58 65 81 67 69 23 ...
-#&gt;  $ score: int  55 57 62 58 34 52 63 84 50 56 ...
-#&gt;  $ code : int  1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Rural</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Rural</span></div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>score</span>~<span class='no'>code</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>score</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)</div><div class='img'><img src='Rural-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>score</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
 #&gt; 	Wilcoxon rank sum test with continuity correction
 #&gt; 
-#&gt; data:  score by code
-#&gt; W = 94, p-value = 0.1346
+#&gt; data:  score by area
+#&gt; W = 178, p-value = 0.1346
 #&gt; alternative hypothesis: true location shift is not equal to 0
-#&gt; </div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>Rural</span>,<span class='no'>City</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
-#&gt; 	Wilcoxon rank sum test with continuity correction
-#&gt; 
-#&gt; data:  Rural and City
-#&gt; W = 94, p-value = 0.1346
-#&gt; alternative hypothesis: true location shift is not equal to 0
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Rural</span>)</div></pre>
+#&gt; </div><span class='co'># NOT RUN {</span>
+<span class='no'>Rural</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='no'>Rural</span>, <span class='kw'>r</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>score</span>))
+<span class='no'>Rural</span>
+<span class='fu'>t.test</span>(<span class='no'>r</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

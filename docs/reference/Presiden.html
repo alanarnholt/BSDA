@@ -87,28 +87,29 @@
     <p>Data for Exercise 1.126</p>
     
 
+    <pre class="usage"><span class='no'>Presiden</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 43 observations on the following 5 variables.</p><dl class='dl-horizontal'>
-<dt>firs</dt><dd><p>a factor with levels <code>A.</code> <code>B.</code>
-<code>C.</code> <code>D.</code> <code>F.</code> <code>G.</code> <code>G. W.</code> <code>H.</code> <code>J.</code>
-<code>L.</code> <code>M.</code> <code>R.</code> <code>T.</code> <code>U.</code> <code>W.</code> <code>Z.</code></p></dd>
-<dt>Presiden</dt><dd><p>a factor with levels <code>Adams</code> <code>Arthur</code>
-<code>Buchanan</code> <code>Bush</code> <code>Carter</code> <code>Cleveland</code> <code>Clinton</code>
-<code>Coolidge</code> <code>Eisenhower</code> <code>Fillmore</code> <code>Ford</code>
-<code>Garfield</code> <code>Grant</code> <code>Harding</code> <code>Harrison</code> <code>Hayes</code>
-<code>Hoover</code> <code>Jackson</code> <code>Jefferson</code> <code>Johnson</code> <code>Kennedy</code>
-<code>Lincoln</code> <code>Madison</code> <code>McKinley</code> <code>Monroe</code> <code>Nixon</code>
-<code>Pierce</code> <code>Polk</code> <code>Reagan</code> <code>Roosevelt</code> <code>Taft</code>
-<code>Taylor</code> <code>Truman</code> <code>Tyler</code> <code>VanBuren</code> <code>Washington</code>
+    <p>A data frame/tibble with 43 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+<dt>first_initial</dt><dd><p>a factor with levels <code>A.</code>, <code>B.</code>,
+<code>C.</code>, <code>D.</code>, <code>F.</code>, <code>G.</code>, <code>G. W.</code>, <code>H.</code>, <code>J.</code>,
+<code>L.</code>, <code>M.</code>, <code>R.</code>, <code>T.</code>, <code>U.</code>, <code>W.</code>, and <code>Z.</code></p></dd>
+<dt>last_name</dt><dd><p>a factor with levels <code>Adams</code>, <code>Arthur</code>,
+<code>Buchanan</code>, <code>Bush</code>, <code>Carter</code>, <code>Cleveland</code>, <code>Clinton</code>,
+<code>Coolidge</code>, <code>Eisenhower</code>, <code>Fillmore</code>, <code>Ford</code>,
+<code>Garfield</code>, <code>Grant</code>, <code>Harding</code>, <code>Harrison</code>, <code>Hayes</code>,
+<code>Hoover</code>, <code>Jackson</code>, <code>Jefferson</code>, <code>Johnson</code>, <code>Kennedy</code>,
+<code>Lincoln</code>, <code>Madison</code>, <code>McKinley</code>, <code>Monroe</code>, <code>Nixon</code>,
+<code>Pierce</code>, <code>Polk</code>, <code>Reagan</code>, <code>Roosevelt</code>, <code>Taft</code>,
+<code>Taylor</code>, <code>Truman</code>, <code>Tyler</code>, <code>VanBuren</code>, <code>Washington</code>, and
 <code>Wilson</code></p></dd> 
-<dt>Birt</dt><dd><p>a factor with levels <code>ARK</code>
-<code>CAL</code> <code>CONN</code> <code>GA</code> <code>IA</code> <code>ILL</code> <code>KY</code> <code>MASS</code>
-<code>MO</code> <code>NC</code> <code>NEB</code> <code>NH</code> <code>NJ</code> <code>NY</code> <code>OH</code>
-<code>PA</code> <code>SC</code> <code>TEX</code> <code>VA</code> <code>VT</code></p></dd>
-<dt>Inaugage</dt><dd><p>a numeric vector</p></dd> 
-<dt>Deathage</dt><dd><p>a numeric vector</p></dd> 
+<dt>birth_state</dt><dd><p>a factor with levels <code>ARK</code>,
+<code>CAL</code>, <code>CONN</code>, <code>GA</code>, <code>IA</code>, <code>ILL</code>, <code>KY</code>, <code>MASS</code>,
+<code>MO</code>, <code>NC</code>, <code>NEB</code>, <code>NH</code>, <code>NJ</code>, <code>NY</code>, <code>OH</code>,
+<code>PA</code>, <code>SC</code>, <code>TEX</code>, <code>VA</code>, and <code>VT</code></p></dd>
+<dt>inaugural_age</dt><dd><p>President's age at inauguration</p></dd> 
+<dt>death_age</dt><dd><p>President's age at death</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -119,19 +120,32 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Presiden</span>)</div><div class='output co'>#&gt; 'data.frame':	43 obs. of  5 variables:
-#&gt;  $ firs    : Factor w/ 16 levels "A.","B.","C.",..: 6 9 13 9 9 9 1 11 15 9 ...
-#&gt;  $ Presiden: Factor w/ 37 levels "Adams","Arthur",..: 36 1 19 23 25 1 18 35 15 34 ...
-#&gt;  $ Birt    : Factor w/ 20 levels "ARK","CAL","CONN",..: 19 8 19 19 19 8 17 14 19 19 ...
-#&gt;  $ Inaugage: int  57 61 57 57 58 57 61 54 68 51 ...
-#&gt;  $ Deathage: int  67 90 83 85 73 80 78 79 68 71 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Presiden</span>)</div><div class='output co'>#&gt; <span class='message'>The following object is masked from package:BSDA:</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    Presiden</span></div><div class='input'><span class='fu'>table</span>(<span class='no'>Birt</span>)</div><div class='output co'>#&gt; Birt
-#&gt;  ARK  CAL CONN   GA   IA  ILL   KY MASS   MO   NC  NEB   NH   NJ   NY   OH   PA 
-#&gt;    1    1    1    1    1    1    1    4    1    2    1    1    2    4    7    1 
-#&gt;   SC  TEX   VA   VT 
-#&gt;    1    2    8    2 </div><div class='input'><span class='fu'>pie</span>(<span class='fu'>table</span>(<span class='no'>Birt</span>))</div><div class='img'><img src='Presiden-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>stripchart</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='no'>Inaugage</span>,<span class='no'>Deathage</span>),<span class='kw'>method</span><span class='kw'>=</span><span class='st'>"stack"</span>,
-<span class='kw'>group.names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"Inaugural Age"</span>,<span class='st'>"Death Age"</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"green"</span>,<span class='st'>"brown"</span>),<span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>)</div><div class='img'><img src='Presiden-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Presiden</span>)</div></pre>
+<span class='fu'>pie</span>(<span class='fu'>xtabs</span>(~<span class='no'>birth_state</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Presiden</span>))</div><div class='img'><img src='Presiden-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>stem</span>(<span class='no'>Presiden</span>$<span class='no'>inaugural_age</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 1 digit(s) to the right of the |
+#&gt; 
+#&gt;   4 | 23
+#&gt;   4 | 667899
+#&gt;   5 | 0011112244444
+#&gt;   5 | 555566677778
+#&gt;   6 | 0111244
+#&gt;   6 | 589
+#&gt; </div><div class='input'><span class='fu'>stem</span>(<span class='no'>Presiden</span>$<span class='no'>death_age</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 1 digit(s) to the right of the |
+#&gt; 
+#&gt;   4 | 69
+#&gt;   5 | 3
+#&gt;   5 | 6778
+#&gt;   6 | 003344
+#&gt;   6 | 567778
+#&gt;   7 | 0111234
+#&gt;   7 | 7889
+#&gt;   8 | 013
+#&gt;   8 | 58
+#&gt;   9 | 00
+#&gt; </div><div class='input'><span class='fu'>par</span>(<span class='kw'>mar</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>5.1</span>, <span class='fl'>4.1</span> + <span class='fl'>3</span>, <span class='fl'>4.1</span>, <span class='fl'>2.1</span>))
+<span class='fu'>stripchart</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'>list</span>(<span class='no'>Presiden</span>$<span class='no'>inaugural_age</span>, <span class='no'>Presiden</span>$<span class='no'>death_age</span>),
+           <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"stack"</span>,
+                      <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"green"</span>,<span class='st'>"brown"</span>), <span class='kw'>pch</span> <span class='kw'>=</span> <span class='fl'>19</span>, <span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='img'><img src='Presiden-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>                      <span class='fu'>par</span>(<span class='kw'>mar</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>5.1</span>, <span class='fl'>4.1</span>, <span class='fl'>4.1</span>, <span class='fl'>2.1</span>))</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

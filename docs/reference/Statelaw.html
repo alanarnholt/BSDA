@@ -89,25 +89,19 @@ agencies</h1>
     <p>Data for Exercise 6.62</p>
     
 
+    <pre class="usage"><span class='no'>Statelaw</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 50 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>State</dt><dd><p>a factor with levels <code>Alabama</code>
-<code>Alaska</code> <code>Arizona</code> <code>Arkansas</code> <code>California</code>
-<code>Colorado</code> <code>Connecticut</code> <code>Delaware</code> <code>Florida</code>
-<code>Georgia</code> <code>Hawaii</code> <code>Idaho</code> <code>Illinois</code> <code>Indiana</code>
-<code>Iowa</code> <code>Kansas</code> <code>Kentucky</code> <code>Louisiana</code> <code>Maine</code>
-<code>Maryland</code> <code>Massachusetts</code> <code>Michigan</code> <code>Minnesota</code>
-<code>Mississippi</code> <code>Missour</code> <code>Montana</code> <code>Nebraska</code>
-<code>Nevada</code> <code>New Hampshire</code> <code>New Jersey</code> <code>New Mexico</code>
-<code>New York</code> <code>North Carolina</code> <code>North Dakota</code> <code>Ohio</code>
-<code>Oklahoma</code> <code>Oregon</code> <code>Pennsylvania</code> <code>Rhode Island</code>
-<code>South Carolina</code> <code>South Dakota</code> <code>Tennessee</code> <code>Texas</code>
-<code>Utah</code> <code>Vermont</code> <code>Virginia</code> <code>Washington</code> <code>West
-Virginia</code> <code>Wisconsin</code> <code>Wyoming</code></p></dd> 
-<dt>cost</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 50 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+<dt>state</dt><dd><p>U.S. state</p></dd> 
+<dt>cost</dt><dd><p>dollars spent per resident on law enforcement</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Bureau of Justice Statistics, <em>Law Enforcement Management and Administrative Statistics, 1993</em>,
+NCJ-148825, September 1995, page 84.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -117,19 +111,15 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Statelaw</span>)</div><div class='output co'>#&gt; 'data.frame':	50 obs. of  2 variables:
-#&gt;  $ State: Factor w/ 50 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ cost : int  5 4 8 3 59 4 9 3 11 8 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Statelaw</span>)
-<span class='fu'>summary</span>(<span class='no'>cost</span>)</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
-#&gt;   1.000   3.000   5.500   8.957  11.000  59.000       4 </div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>cost</span>)</div><div class='output co'>#&gt; [1] "cost"</div><div class='img'><img src='Statelaw-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+<span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/EDA'>EDA</a></span>(<span class='no'>Statelaw</span>$<span class='no'>cost</span>)</div><div class='output co'>#&gt; [1] "Statelaw$cost"</div><div class='img'><img src='Statelaw-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   46.000    4.000    1.000    3.000    8.957    5.500    7.571   11.000 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;   59.000   10.696  114.398    1.577    8.000   58.000    8.676    2.705 
 #&gt; SW p-val 
-#&gt;    0.000 </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>cost</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>8</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
+#&gt;    0.000 </div><div class='input'><span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/SIGN.test'>SIGN.test</a></span>(<span class='no'>Statelaw</span>$<span class='no'>cost</span>, <span class='kw'>md</span> <span class='kw'>=</span> <span class='fl'>8</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  cost
+#&gt; data:  Statelaw$cost
 #&gt; s = 15, p-value = 0.05864
 #&gt; alternative hypothesis: true median is less than 8
 #&gt; 95 percent confidence interval:
@@ -140,13 +130,16 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
 #&gt; Lower Achieved CI     0.9481   -Inf      8
 #&gt; Interpolated CI       0.9500   -Inf      8
-#&gt; Upper Achieved CI     0.9730   -Inf      8</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Statelaw</span>)</div></pre>
+#&gt; Upper Achieved CI     0.9730   -Inf      8</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

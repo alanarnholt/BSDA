@@ -87,11 +87,12 @@
     <p>Data for Example 6.11</p>
     
 
+    <pre class="usage"><span class='no'>Reaction</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 12 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>time</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 12 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>time</dt><dd><p>threshold reaction time (in seconds) for persons subjected to emotional stress</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,12 +103,17 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Reaction</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  1 variable:
-#&gt;  $ time: num  14.3 13.7 15.4 14.7 12.4 13.1 9.2 14.2 14.4 15.8 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Reaction</span>)
-<span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>time</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>15</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Reaction</span>$<span class='no'>time</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is at the |
+#&gt; 
+#&gt;    8 | 2
+#&gt;   10 | 3
+#&gt;   12 | 417
+#&gt;   14 | 2347048
+#&gt; </div><div class='input'><span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/SIGN.test'>SIGN.test</a></span>(<span class='no'>Reaction</span>$<span class='no'>time</span>, <span class='kw'>md</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>alternative</span> <span class='kw'>=</span> <span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
 #&gt; 	One-sample Sign-Test
 #&gt; 
-#&gt; data:  time
+#&gt; data:  Reaction$time
 #&gt; s = 2, p-value = 0.03271
 #&gt; alternative hypothesis: true median is less than 15
 #&gt; 95 percent confidence interval:
@@ -118,7 +124,8 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt  U.E.pt
 #&gt; Lower Achieved CI     0.9270   -Inf 14.7000
 #&gt; Interpolated CI       0.9500   -Inf 14.8285
-#&gt; Upper Achieved CI     0.9807   -Inf 15.0000</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Reaction</span>)</div></pre>
+#&gt; Upper Achieved CI     0.9807   -Inf 15.0000</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

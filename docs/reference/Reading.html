@@ -87,14 +87,15 @@
     <p>Data for Exercise 1.72 and 2.10</p>
     
 
+    <pre class="usage"><span class='no'>Reading</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 30 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>reading</dt><dd><p>a numeric vector</p></dd> 
-<dt>sorted</dt><dd><p>a numeric vector</p></dd> 
-<dt>trimmed</dt><dd><p>a numeric vector</p></dd>
-<dt>winsoriz</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 30 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+<dt>score</dt><dd><p>standardized reading test score</p></dd> 
+<dt>sorted</dt><dd><p>sorted values of <code>score</code></p></dd> 
+<dt>trimmed</dt><dd><p>trimmed values of <code>sorted</code></p></dd>
+<dt>winsoriz</dt><dd><p>winsorized values of <code>score</code></p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -105,17 +106,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Reading</span>)</div><div class='output co'>#&gt; 'data.frame':	30 obs. of  4 variables:
-#&gt;  $ reading : int  86 103 92 115 94 102 123 81 108 93 ...
-#&gt;  $ sorted  : int  48 67 73 81 83 86 92 93 94 94 ...
-#&gt;  $ trimmed : int  NA NA NA 81 83 86 92 93 94 94 ...
-#&gt;  $ winsoriz: int  81 81 81 81 83 86 92 93 94 94 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Reading</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>reading</span>)</div><div class='output co'>#&gt; [1] "reading"</div><div class='img'><img src='Reading-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   30.000    0.000   48.000   92.750   98.800   98.500   98.821  106.250 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;  149.000   18.920  357.959    3.454   13.500  101.000    1.356    0.018 
-#&gt; SW p-val 
-#&gt;    0.118 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Reading</span>)</div></pre>
+<span class='fu'>hist</span>(<span class='no'>Reading</span>$<span class='no'>score</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Exercise 1.72"</span>,
+<span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"lightgreen"</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"Standardized reading score"</span>)</div><div class='img'><img src='Reading-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>Reading</span>$<span class='no'>score</span>)</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#&gt;   48.00   93.25   98.50   98.80  105.75  149.00 </div><div class='input'><span class='fu'>sd</span>(<span class='no'>Reading</span>$<span class='no'>score</span>)</div><div class='output co'>#&gt; [1] 18.91979</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

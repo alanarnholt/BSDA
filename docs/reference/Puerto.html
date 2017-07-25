@@ -87,11 +87,12 @@
     <p>Data for Exercise 5.22 and 5.65</p>
     
 
+    <pre class="usage"><span class='no'>Puerto</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 50 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>income</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 50 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>income</dt><dd><p>weekly family income (in dollars)</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,16 +103,22 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Puerto</span>)</div><div class='output co'>#&gt; 'data.frame':	50 obs. of  1 variable:
-#&gt;  $ income: int  150 280 175 190 305 380 290 300 170 315 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Puerto</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>income</span>)</div><div class='output co'>#&gt; [1] "income"</div><div class='img'><img src='Puerto-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   50.000    0.000  150.000  223.750  277.500  272.500  274.239  335.000 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;  550.000   75.918 5763.520   10.736  111.250  400.000    1.375    0.756 
-#&gt; SW p-val 
-#&gt;    0.022 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>income</span>,<span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.90</span>)$<span class='no'>conf</span></div><div class='output co'>#&gt; [1] 259.4999 295.5001
+<span class='fu'>stem</span>(<span class='no'>Puerto</span>$<span class='no'>income</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 2 digit(s) to the right of the |
+#&gt; 
+#&gt;   1 | 578888899
+#&gt;   2 | 0123344
+#&gt;   2 | 555666777888889
+#&gt;   3 | 01122344
+#&gt;   3 | 5555667889
+#&gt;   4 | 
+#&gt;   4 | 
+#&gt;   5 | 
+#&gt;   5 | 5
+#&gt; </div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Puerto</span>$<span class='no'>income</span>)</div><div class='img'><img src='Puerto-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Puerto</span>$<span class='no'>income</span>,<span class='kw'>conf.level</span> <span class='kw'>=</span> <span class='fl'>.90</span>)$<span class='no'>conf</span></div><div class='output co'>#&gt; [1] 259.4999 295.5001
 #&gt; attr(,"conf.level")
-#&gt; [1] 0.9</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Puerto</span>)</div></pre>
+#&gt; [1] 0.9</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

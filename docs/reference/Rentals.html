@@ -87,11 +87,12 @@
     <p>Data for Exercise 1.122</p>
     
 
+    <pre class="usage"><span class='no'>Rentals</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 45 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>rent</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 45 observations on the following variable.</p><dl class='dl-horizontal'>
+<dt>rent</dt><dd><p>weekly apartment rental price (in dollars)</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,14 +103,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Rentals</span>)</div><div class='output co'>#&gt; 'data.frame':	45 obs. of  1 variable:
-#&gt;  $ rent: int  100 130 130 305 175 155 150 95 295 210 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Rentals</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>rent</span>)</div><div class='output co'>#&gt; [1] "rent"</div><div class='img'><img src='Rentals-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt;  Size (n)   Missing   Minimum    1st Qu      Mean    Median    TrMean    3rd Qu 
-#&gt;    45.000     0.000    60.000    95.000   179.444   150.000   171.585   242.500 
-#&gt;      Max.    Stdev.      Var.   SE Mean    I.Q.R.     Range  Kurtosis  Skewness 
-#&gt;   490.000   101.445 10291.162    15.123   147.500   430.000     0.516     1.047 
-#&gt;  SW p-val 
-#&gt;     0.001 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Rentals</span>)</div></pre>
+<span class='fu'>stem</span>(<span class='no'>Rentals</span>$<span class='no'>rent</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 2 digit(s) to the right of the |
+#&gt; 
+#&gt;   0 | 6778888999
+#&gt;   1 | 00013333344
+#&gt;   1 | 555667889
+#&gt;   2 | 1344
+#&gt;   2 | 579
+#&gt;   3 | 00114
+#&gt;   3 | 5
+#&gt;   4 | 3
+#&gt;   4 | 9
+#&gt; </div><div class='input'><span class='fu'>sum</span>(<span class='no'>Rentals</span>$<span class='no'>rent</span> <span class='kw'>&lt;</span> <span class='fu'>mean</span>(<span class='no'>Rentals</span>$<span class='no'>rent</span>) - <span class='fl'>3</span>*<span class='fu'>sd</span>(<span class='no'>Rentals</span>$<span class='no'>rent</span>) <span class='kw'>|</span>
+   <span class='no'>Rentals</span>$<span class='no'>rent</span> <span class='kw'>&gt;</span> <span class='fu'>mean</span>(<span class='no'>Rentals</span>$<span class='no'>rent</span>) + <span class='fl'>3</span>*<span class='fu'>sd</span>(<span class='no'>Rentals</span>$<span class='no'>rent</span>))</div><div class='output co'>#&gt; [1] 1</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
