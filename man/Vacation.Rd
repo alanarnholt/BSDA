@@ -5,20 +5,22 @@
 \alias{Vacation}
 \title{Number of days of paid holidays and vacation leave for sample of 35 textile
 workers}
-\format{A data frame with 35 observations on the following variable.
+\format{A data frame/tibble with 35 observations on the following variable.
 \describe{ 
-\item{number}{a numeric vector} 
+\item{number}{number of days of paid holidays and vacation leave taken} 
 }}
+\usage{
+Vacation
+}
 \description{
 Data for Exercise 6.46 and 6.98
 }
 \examples{
 
-str(Vacation)
-attach(Vacation)
-EDA(number)
-t.test(number,mu=24)
-detach(Vacation)
+boxplot(Vacation$number)
+hist(Vacation$number, main = "Exercise 6.46", col = "blue",
+     xlab = "number of days of paid holidays and vacation leave taken")
+     t.test(Vacation$number, mu = 24)
 
 }
 \references{

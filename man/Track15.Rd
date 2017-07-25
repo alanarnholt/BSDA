@@ -4,21 +4,24 @@
 \name{Track15}
 \alias{Track15}
 \title{Olympic winning times for the men's 1500-meter run}
-\format{A data frame with 26 observations on the following 2 variables.
+\format{A data frame/tibble with 26 observations on the following 2 variables.
 \describe{ 
-\item{Year}{a numeric vector} 
-\item{X1500m}{a numeric vector} 
+\item{year}{Olympic year} 
+\item{time}{Olympic winning time (in seconds) for the 1500-meter run} 
 }}
+\source{
+\emph{The World Almanac and Book of Facts}, 2000
+}
+\usage{
+Track15
+}
 \description{
 Data for Exercise 1.36
 }
 \examples{
 
-str(Track15)
-attach(Track15)
-plot(Year,X1500m,type="l",lwd=2,lty=2,col="red",xlab="Year",
-ylab="1500m Time (seconds)",main="Problem 1.36")       
-detach(Track15) 
+plot(time~ year, data = Track15, type = "b", pch = 19,
+ylab = "1500m time in seconds", col = "green") 
 
 }
 \references{

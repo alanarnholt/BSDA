@@ -5,25 +5,20 @@
 \alias{Vocab}
 \title{Reading scores before and after vocabulary training for 14 employees who did
 not complete high school}
-\format{A data frame with 14 observations on the following 2 variables.
+\format{A data frame/tibble with 14 observations on the following 2 variables.
 \describe{ 
-\item{First}{a numeric vector} 
-\item{Second}{a numeric vector} 
+\item{first}{reading test score before formal vocabulary training} 
+\item{second}{reading test score after formal vocabulary training} 
 }}
+\usage{
+Vocab
+}
 \description{
 Data for Exercise 7.80
 }
 \examples{
 
-str(Vocab)
-attach(Vocab)
-DIF <- Second - First
-qqnorm(DIF)
-qqline(DIF)
-shapiro.test(DIF)
-t.test(Second,First,paired=TRUE)
-detach(Vocab)
-remove(DIF)
+t.test(Vocab$first, Vocab$second, paired = TRUE)
 
 }
 \references{

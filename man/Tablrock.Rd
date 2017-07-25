@@ -4,16 +4,12 @@
 \name{Tablrock}
 \alias{Tablrock}
 \title{Ozone concentrations at Mt. Mitchell, North Carolina}
-\format{A data frame with 719 observations on the following 16 variables.
+\format{A data frame/tibble with 719 observations on the following 17 variables.
 \describe{ 
-\item{hour}{a factor with levels \code{00:00}
-\code{01:00} \code{02:00} \code{03:00} \code{04:00} \code{05:00}
-\code{06:00} \code{07:00} \code{08:00} \code{09:00} \code{10:00}
-\code{11:00} \code{12:00} \code{13:00} \code{14:00} \code{15:00}
-\code{16:00} \code{17:00} \code{18:00} \code{19:00} \code{20:00}
-\code{21:00} \code{22:00} \code{23:00}} 
-\item{X03}{a numeric vector}
-\item{tmp}{a numeric vector} 
+\item{day}{date}
+\item{hour}{time of day} 
+\item{ozone}{ozone concentration}
+\item{tmp}{temperature (in Celcius)} 
 \item{vdc}{a numeric vector}
 \item{wd}{a numeric vector} 
 \item{ws}{a numeric vector}
@@ -28,16 +24,32 @@
 \item{gas}{a numeric vector} 
 \item{air}{a numeric vector} 
 }}
+\usage{
+Tablrock
+}
 \description{
 Data for Exercise 5.63
 }
 \examples{
 
-str(Tablrock)
-attach(Tablrock)
-EDA(X03)
-t.test(X03,conf.level=.99)$conf
-detach(Tablrock)
+summary(Tablrock$ozone)
+boxplot(Tablrock$ozone)
+qqnorm(Tablrock$ozone)
+qqline(Tablrock$ozone)
+par(mar = c(5.1 - 1, 4.1 + 2, 4.1 - 2, 2.1))
+boxplot(ozone ~ day, data = Tablrock, 
+        horizontal = TRUE, las = 1, cex.axis = 0.7)
+        par(mar = c(5.1, 4.1, 4.1, 2.1))
+       \dontrun{
+       ggplot2::ggplot(data = Tablrock, aes(sample = ozone)) + 
+         geom_qq() + 
+           theme_bw()
+           ggplot2::ggplot(data = Tablrock, aes(x = as.factor(day), y = ozone)) + 
+             geom_boxplot(fill = "pink") + 
+               coord_flip() + 
+                 labs(x = "") + 
+                   theme_bw()
+                   }
 
 }
 \references{

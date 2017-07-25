@@ -4,22 +4,24 @@
 \name{Thermal}
 \alias{Thermal}
 \title{Heat loss of thermal pane windows versus outside temperature}
-\format{A data frame with 12 observations on the following 3 variables.
+\format{A data frame/tibble with 12 observations on the following 2 variables.
 \describe{ 
-\item{temp}{a numeric vector} 
-\item{loss}{a numeric vector} 
-\item{x}{a numeric vector} 
+\item{temp}{temperature (degrees Celcius) } 
+\item{loss}{heat loss (BTUs)} 
 }}
+\usage{
+Thermal
+}
 \description{
 Data for Example 9.5
 }
 \examples{
 
-str(Thermal)
-attach(Thermal)
-model <- lm(loss~temp)
+model <- lm(loss ~ temp, data = Thermal)
 summary(model)
-detach(Thermal)
+plot(loss ~ temp, data = Thermal)
+abline(model)
+rm(model)
 
 }
 \references{

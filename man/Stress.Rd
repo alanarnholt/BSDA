@@ -5,25 +5,27 @@
 \alias{Stress}
 \title{Short-term memory test scores on 12 subjects before and after a stressful
 situation}
-\format{A data frame with 12 observations on the following 2 variables.
+\format{A data frame/tibble with 12 observations on the following 2 variables.
 \describe{ 
-\item{Prestre}{a numeric vector}
-\item{Poststre}{a numeric vector} 
+\item{prestress}{short term memory score before being exposed to a stressful situation}
+\item{poststress}{short term memory score after being exposed to a stressful situation} 
 }}
+\usage{
+Stress
+}
 \description{
 Data for Example 7.20
 }
 \examples{
 
-str(Stress)
-attach(Stress)
-DIF <- Poststre -Prestre
-qqnorm(DIF)
-qqline(DIF)
-shapiro.test(DIF)
-t.test(Poststre,Prestre,paired=TRUE,alternative="less")
-detach(Stress)
-remove(DIF)
+diff <- Stress$prestress - Stress$poststress
+qqnorm(diff)
+qqline(diff)
+t.test(diff)
+t.test(Stress$prestress, Stress$poststress, paired = TRUE)
+\dontrun{
+wilcox.test(Stress$prestress, Stress$poststress, paired = TRUE)
+}
 
 }
 \references{

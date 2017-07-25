@@ -4,34 +4,23 @@
 \name{Superbowl}
 \alias{Superbowl}
 \title{Margin of victory in Superbowls I to XXXV}
-\format{A data frame with 35 observations on the following 5 variables.
+\format{A data frame/tibble with 35 observations on the following 5 variables.
 \describe{ 
-\item{Winning.team}{a factor with levels \code{Baltimore
-Colts} \code{Baltimore Ravens} \code{Chicago Bears} \code{Dallas Cowboys}
-\code{Denver Broncos} \code{Green Bay Packers} \code{Kansas City Chiefs}
-\code{Los Angeles Raiders} \code{Miami Dolphins} \code{New York Giants}
-\code{New York Jets} \code{Oakland Raiders} \code{Pittsburgh Steelers}
-\code{San Francisco 49ers} \code{St Louis Rams} \code{Washington Redskins}}
-\item{winner.score}{a numeric vector} 
-\item{Losing.team}{a factor with levels \code{Atlanta Falcons} \code{Baltimore Colts}
-\code{Buffalo Bills} \code{Cincinnati Bengals} \code{Dallas Cowboys}
-\code{Denver Broncos} \code{Green Bay Packers} \code{Kansas City Chiefs}
-\code{Los Angeles Rams} \code{Miami Dolphins} \code{Minnesota Vikings}
-\code{New England Patriots} \code{New York Giants} \code{Oakland Raiders}
-\code{Philadelphia Eagles} \code{Pittsburgh Steelers} \code{San Diego
-Chargers} \code{Tennessee Titans} \code{Washington Redskins}}
-\item{loser.score}{a numeric vector} 
-\item{margin}{a numeric vector} 
+\item{winning_team}{name of Suberbowl winning team}
+\item{winner_score}{winning score for the Superbowl} 
+\item{losing_team}{name of Suberbowl losing team}
+\item{loser_score}{score of losing teama numeric vector} 
+\item{victory_margin}{winner_score - loser_score} 
 }}
+\usage{
+Superbowl
+}
 \description{
 Data for Exercise 1.54
 }
 \examples{
 
-str(Superbowl)
-attach(Superbowl)
-stem(margin)
-detach(Superbowl)
+stem(Superbowl$victory_margin)
 
 }
 \references{

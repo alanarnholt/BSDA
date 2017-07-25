@@ -4,19 +4,21 @@
 \name{Subway}
 \alias{Subway}
 \title{Time it takes a subway to travel from the airport to downtown}
-\format{A data frame with 30 observations on the following variable.
+\format{A data frame/tibble with 30 observations on the following variable.
 \describe{ 
-\item{time}{a numeric vector} 
+\item{time}{time (in minutes) it takes a subway to travel from the airport to downtown} 
 }}
+\usage{
+Subway
+}
 \description{
 Data for Exercise 5.19
 }
 \examples{
 
-str(Subway)
-attach(Subway)
-EDA(time)
-detach(Subway)
+hist(Subway$time, main = "Exercise 5.19", 
+xlab = "Time (in minutes)", col = "purple")
+summary(Subway$time)
 
 }
 \references{

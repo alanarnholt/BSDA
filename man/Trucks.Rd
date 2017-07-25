@@ -5,23 +5,21 @@
 \alias{Trucks}
 \title{Miles per gallon for standard 4-wheel drive trucks manufactured by
 Chevrolet, Dodge and Ford}
-\format{A data frame with 15 observations on the following 5 variables.
+\format{A data frame/tibble with 15 observations on the following 2 variables.
 \describe{ 
-\item{chevy}{a numeric vector} 
-\item{dodge}{a numeric vector} 
-\item{ford}{a numeric vector}
-\item{gas.mileage}{a numeric vector} 
-\item{truck}{a factor with levels \code{chevy} \code{dodge} \code{ford}} 
+\item{mpg}{miles per gallon} 
+\item{truck}{a factor with levels \code{chevy}, \code{dodge}, and \code{ford}} 
 }}
+\usage{
+Trucks
+}
 \description{
 Data for Example 10.2
 }
 \examples{
 
-str(Trucks)
-attach(Trucks)
-anova(lm(gas.mileage~truck))
-detach(Trucks)
+boxplot(mpg ~ truck, data = Trucks, horizontal = TRUE, las = 1)
+summary(aov(mpg ~ truck, data = Trucks))
 
 }
 \references{

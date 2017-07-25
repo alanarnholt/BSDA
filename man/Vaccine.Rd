@@ -4,30 +4,27 @@
 \name{Vaccine}
 \alias{Vaccine}
 \title{Reported serious reactions due to vaccines in 11 southern states}
-\format{A data frame with 11 observations on the following 2 variables.
+\format{A data frame/tibble with 11 observations on the following 2 variables.
 \describe{ 
-\item{State}{a factor with levels \code{Alabama}
-\code{Arkansas} \code{Florida} \code{Georgia} \code{Louisiana}
-\code{Mississippi} \code{North Carolina} \code{Oklahoma} \code{South
-Carolina} \code{Tennessee} \code{Texas}} 
-\item{number}{a numeric vector} 
+\item{state}{U.S. state} 
+\item{number}{number of reported serious reactions per million doses of a vaccine} 
 }}
+\source{
+Center for Disease Control, Atlanta, Georgia.
+}
+\usage{
+Vaccine
+}
 \description{
 Data for Exercise 1.111
 }
 \examples{
 
-str(Vaccine)
-attach(Vaccine)
-fn <- fivenum(number)
+stem(Vaccine$number, scale = 2) 
+fn <- fivenum(Vaccine$number)
 fn
-iqr <- IQR(number)
-ll <- fn[2]-1.5*iqr
-ul <- fn[4]+1.5*iqr
-limits <- c(ll,ul)
-limits
-boxplot(number)
-detach(Vaccine)
+iqr <- IQR(Vaccine$number)
+iqr
 
 }
 \references{

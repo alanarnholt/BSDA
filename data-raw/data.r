@@ -3930,7 +3930,7 @@ Tensile
 devtools::use_data(Tensile, overwrite = TRUE)
 # Examples Exp 7.11, page 368
 # A data frame/tibble with 72 observations on two variables
-# tensile = plastic bag tensile strength (pounds per square inch?)
+# tensile = plastic bag tensile strength (pounds per square inch)
 # run = factor with run number (1 or 2)
 boxplot(tensile ~ run, data = Tensile, 
         col = c("purple", "cyan"))
@@ -4064,7 +4064,7 @@ kruskal.test(sites ~ factor(region), data = Toxic)
 Track <- read_csv("TRACK.csv")
 Track
 devtools::use_data(Track, overwrite = TRUE)
-# Examples Ex 2.97, 5.15, 9.62
+# Examples Ex 2.97, 5.115, 9.62
 # A data frame with 55 observations on eight variables
 # country = athletes country
 # `100m` = time in seconds for 100 m

@@ -7,32 +7,31 @@
 in 1990}
 \format{A data frame with 12 observations on the following 9 variables.
 \describe{ 
-\item{team}{a factor with levels \code{Atlanta}
-\code{Chicago} \code{Cincinnati} \code{Houston} \code{Los Angeles}
-\code{Montreal} \code{New York} \code{Philadelphia} \code{Pittsburgh}
-\code{San Diego} \code{San Francisco} \code{St. Louis}}
-\item{wins}{a numeric vector} 
-\item{batavg}{a numeric vector} 
-\item{rbi}{a numeric vector} 
-\item{stole}{a numeric vector} 
-\item{strkout}{a numeric vector} 
-\item{caught}{a numeric vector} 
-\item{errors}{a numeric vector} 
-\item{era}{a numeric vector} 
+\item{team}{name of team}
+\item{wins}{number of wins} 
+\item{batavg}{batting average} 
+\item{rbi}{runs batted in} 
+\item{stole}{bases stole} 
+\item{strkout}{number of strikeots} 
+\item{caught}{number of times caught stealing} 
+\item{errors}{number of errors} 
+\item{era}{earned run average} 
 }}
+\usage{
+Wins
+}
 \description{
 Data for Exercise 9.23
 }
 \examples{
 
-str(Wins)
-attach(Wins)
-plot(era,wins)
-model <- lm(wins~era)
-abline(model)
-summary(model)
-detach(Wins)
-remove(model)
+plot(wins ~ era, data = Wins)
+\dontrun{
+ggplot2::ggplot(data = Wins, aes(x = era, y = wins)) + 
+  geom_point() + 
+    geom_smooth(method = "lm", se = FALSE) + 
+      theme_bw()
+      }
 
 }
 \references{

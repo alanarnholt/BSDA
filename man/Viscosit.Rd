@@ -4,20 +4,21 @@
 \name{Viscosit}
 \alias{Viscosit}
 \title{Viscosity measurements of a substance on two different days}
-\format{A data frame with 11 observations on the following 2 variables.
+\format{A data frame/tibble with 11 observations on the following 2 variables.
 \describe{ 
-\item{first}{a numeric vector} 
-\item{second}{a numeric vector} 
+\item{first}{viscosity measurement for a certain substance on day one} 
+\item{second}{viscosity measurement for a certain substance on day two} 
 }}
+\usage{
+Viscosit
+}
 \description{
 Data for Exercise 7.44
 }
 \examples{
 
-str(Viscosit)
-attach(Viscosit)
-t.test(first,second)
-detach(Viscosit)
+boxplot(Viscosit$first, Viscosit$second)
+t.test(Viscosit$first, Viscosit$second, var.equal = TRUE)
 
 }
 \references{

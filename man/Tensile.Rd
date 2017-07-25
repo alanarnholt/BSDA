@@ -4,25 +4,22 @@
 \name{Tensile}
 \alias{Tensile}
 \title{Tensile strength of plastic bags from two production runs}
-\format{A data frame with 72 observations on the following 4 variables.
-\describe{ 
-\item{Run.1}{a numeric vector} 
-\item{Run.2}{a numeric vector} 
-\item{Tensile}{a numeric vector}
-\item{Run}{a numeric vector} 
+\format{A data frame/tibble with 72 observations on the following 2 variables.
+\describe{
+\item{tensile}{plastic bag tensile strength (pounds per square inch)}
+\item{run}{factor with run number (1 or 2)} 
 }}
+\usage{
+Tensile
+}
 \description{
 Data for Example 7.11
 }
 \examples{
 
-str(Tensile)
-attach(Tensile)
-boxplot(Run.1,Run.2,names=c("Run 1","Run 2"),col=c("red","Blue"))
-boxplot(Tensile~Run,names=c("Run 1","Run 2"),col=c("red","Blue"))
-t.test(Tensile~Run)
-t.test(Run.1,Run.2)
-detach(Tensile)
+boxplot(tensile ~ run, data = Tensile, 
+col = c("purple", "cyan"))
+t.test(tensile ~ run, data = Tensile)
 
 }
 \references{

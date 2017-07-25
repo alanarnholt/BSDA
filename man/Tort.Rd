@@ -5,35 +5,27 @@
 \alias{Tort}
 \title{The number of torts, average number of months to process a tort, and county
 population from the court files of the nation's largest counties}
-\format{A data frame with 45 observations on the following 5 variables.
+\format{A data frame/tibble with 45 observations on the following 5 variables.
 \describe{ 
-\item{county}{a factor with levels \code{alameda, ca}
-\code{allegheny, pa} \code{bergen, nj} \code{bexar, tx} \code{contra costa,
-ca} \code{cook, il} \code{cuyahoga, oh} \code{dade, fl} \code{dallas, tx}
-\code{dupage, il} \code{essex, ma} \code{essex, nj} \code{fairfax, va}
-\code{fairfield, ct} \code{franklin, oh} \code{fresno, ca} \code{fulton, ga}
-\code{harris, tx} \code{hartford, ct} \code{hennepin, mn} \code{honolulu,
-hi} \code{jefferson, ky} \code{king, wa} \code{los angeles, ca}
-\code{maricopa, az} \code{marion, in} \code{middlesex, ma} \code{middlesex,
-nj} \code{milwaukee, wi} \code{new york, ny} \code{norfolk, ma}
-\code{oakland, mi} \code{orange, ca} \code{orange, fl} \code{palm beach, fl}
-\code{philadelphia, pa} \code{pima, az} \code{san bernadino, ca} \code{san
-francisco, ca} \code{santa clara, ca} \code{st. louis, mo} \code{suffolk,
-ma} \code{ventura, ca} \code{wayne, mi} \code{worchester, ma}}
-\item{months}{a numeric vector} 
-\item{populat}{a numeric vector} 
-\item{torts}{a numeric vector} 
-\item{rate}{a numeric vector} 
+\item{county}{U.S. county}
+\item{months}{average number of months to process a tort} 
+\item{population}{population of the county} 
+\item{torts}{number of torts} 
+\item{rate}{rate per 10,000 residents} 
 }}
+\source{
+U.S. Department of Justice, \emph{Tort Cases in Large Counties}, Bureau of Justice
+Statistics Special Report, April 1995
+}
+\usage{
+Tort
+}
 \description{
 Data for Exercise 5.13
 }
 \examples{
 
-str(Tort)
-attach(Tort)
-EDA(months)
-detach(Tort)
+BSDA::EDA(Tort$months)
 
 }
 \references{

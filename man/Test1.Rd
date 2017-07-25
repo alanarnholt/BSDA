@@ -4,19 +4,20 @@
 \name{Test1}
 \alias{Test1}
 \title{Grades on the first test in a statistics class}
-\format{A data frame with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on the following variable.
 \describe{ 
-\item{test1}{a numeric vector} 
+\item{score}{score on first statistics exam} 
 }}
+\usage{
+Test1
+}
 \description{
 Data for Exercise 5.80
 }
 \examples{
 
-str(Test1)
-attach(Test1)
-EDA(test1)
-detach(Test1)
+stem(Test1$score)
+boxplot(Test1$score)
 
 }
 \references{

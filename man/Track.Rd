@@ -6,36 +6,30 @@
 \title{National Olympic records for women in several races}
 \format{A data frame with 55 observations on the following 8 variables.
 \describe{ 
-\item{country}{a factor with levels \code{argentina}
-\code{australia} \code{austria} \code{belgium} \code{bermuda} \code{brazil}
-\code{burma} \code{canada} \code{chile} \code{china} \code{colombia}
-\code{cookis} \code{costa} \code{czech} \code{denmark} \code{domrep}
-\code{dprkorea} \code{finland} \code{france} \code{frg} \code{gbni}
-\code{gdr} \code{greece} \code{guatemala} \code{hungary} \code{india}
-\code{indonesia} \code{ireland} \code{israel} \code{italy} \code{japan}
-\code{kenya} \code{korea} \code{luxembourg} \code{malaysia} \code{mauritius}
-\code{mexico} \code{netherlands} \code{norway} \code{nz} \code{philippines}
-\code{png} \code{poland} \code{portugal} \code{rumania} \code{singapore}
-\code{spain} \code{sweden} \code{switzerland} \code{taipei} \code{thailand}
-\code{turkey} \code{usa} \code{ussr} \code{wsamoa}} 
-\item{X100m}{a numeric vector} 
-\item{X200m}{a numeric vector}
-\item{X400m}{a numeric vector} 
-\item{X800m}{a numeric vector} 
-\item{X1500m}{a numeric vector} 
-\item{X3000m}{a numeric vector} 
-\item{marathon}{a numeric vector} 
+\item{country}{athlete's country} 
+\item{100m}{time in seconds for 100 m} 
+\item{200m}{time in seconds for 200 m}
+\item{400m}{time in seconds for 400 m} 
+\item{800m}{time in minutes for 800 m} 
+\item{1500m}{time in minutes for 1500 m} 
+\item{3000m}{time in minutes for 3000 m} 
+\item{marathon}{time in minutes for marathon} 
 }}
+\source{
+Dawkins, B. (1989), "Multivariate Analysis of National Track Records," \emph{The American Statistician, 43}(2), 110-115
+}
+\usage{
+Track
+}
 \description{
 Data for Exercises 2.97, 5.115, and 9.62
 }
 \examples{
 
-str(Track)
-attach(Track)
-cor(Track[,2:8])
-pairs(Track[,2:8])
-detach(Track)
+plot(`200m` ~ `100m`, data = Track)
+plot(`400m` ~ `100m`, data = Track)
+plot(`400m` ~ `200m`, data = Track)
+cor(Track[, 2:8])
 
 }
 \references{

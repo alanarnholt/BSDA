@@ -4,26 +4,26 @@
 \name{Supercar}
 \alias{Supercar}
 \title{Top speeds attained by five makes of supercars}
-\format{A data frame with 30 observations on the following 7 variables.
-\describe{ 
-\item{Acura}{a numeric vector} 
-\item{Ferrari}{a numeric vector} 
-\item{Lotus}{a numeric vector}
-\item{Porsche}{a numeric vector} 
-\item{Viper}{a numeric vector} 
-\item{speed}{a numeric vector} 
-\item{car}{a numeric vector} 
+\format{A data frame/tibble with 30 observations on the following 2 variables.
+\describe{
+\item{speed}{top speed (in miles per hour) of car without redlining} 
+\item{car}{name of sports car} 
 }}
+\source{
+\emph{Car and Drvier} (July 1995)
+}
+\usage{
+Supercar
+}
 \description{
 Data for Statistical Insight Chapter 10
 }
 \examples{
 
-str(Supercar)
-attach(Supercar)
-boxplot(speed~car)
-anova(lm(speed~as.factor(car)))
-detach(Supercar)
+boxplot(speed ~ car, data = Supercar, col = rainbow(6),
+ylab = "Speed (mph)")
+summary(aov(speed ~ car, data = Supercar))
+anova(lm(speed ~ car, data = Supercar))
 
 }
 \references{
