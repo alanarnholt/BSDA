@@ -19,8 +19,8 @@ Data for Exercise 6.99
 
 hist(Schizop2$score, xlab = "score on standardized test after a tranquilizer", 
 main = "Exercise 6.99", breaks = 10, col = "orange")
-BSDA::EDA(Schizop2$score)
-BSDA::SIGN.test(Schizop2$score, md = 22, alternative = "greater")
+EDA(Schizop2$score)
+SIGN.test(Schizop2$score, md = 22, alternative = "greater")
 
 }
 \references{

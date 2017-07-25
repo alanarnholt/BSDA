@@ -19,7 +19,7 @@ Data for Exercise 6.95
 qqnorm(Phone$time)
 qqline(Phone$time)
 shapiro.test(Phone$time)
-BSDA::SIGN.test(Phone$time, md = 5, alternative = "greater")
+SIGN.test(Phone$time, md = 5, alternative = "greater")
 
 }
 \references{

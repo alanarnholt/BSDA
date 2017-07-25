@@ -17,7 +17,7 @@ Data for Exercise 6.54
 }
 \examples{
 
-BSDA::SIGN.test(Window$leakage, md = 0.125, alternative = "greater")
+SIGN.test(Window$leakage, md = 0.125, alternative = "greater")
 
 }
 \references{

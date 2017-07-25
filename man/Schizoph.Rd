@@ -19,7 +19,7 @@ Data for Example 6.10
 
 hist(Schizoph$score, xlab = "score on standardized test", 
 main = "Example 6.10", breaks = 10, col = "orange")
-BSDA::EDA(Schizoph$score)
+EDA(Schizoph$score)
 t.test(Schizoph$score, mu = 20)
 
 }

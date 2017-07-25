@@ -17,7 +17,7 @@ Data for Exercise 1.42
 \examples{
 
 stem(Psych$score)
-BSDA::EDA(Psych$score)
+EDA(Psych$score)
 
 }
 \references{

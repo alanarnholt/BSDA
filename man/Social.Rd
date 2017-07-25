@@ -16,7 +16,7 @@ Data for Exercise 6.63
 }
 \examples{
 
-BSDA::SIGN.test(Social$income, md = 27500, alternative = "less")
+SIGN.test(Social$income, md = 27500, alternative = "less")
 
 }
 \references{

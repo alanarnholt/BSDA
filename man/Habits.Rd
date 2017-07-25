@@ -27,8 +27,8 @@ t.test(Habits$signrks, alternative = "less")
 
 \dontrun{
 ggplot2::ggplot(data = Habits, aes(x = differ)) + 
-    geom_dotplot(fill = "blue") + 
-    theme_bw()
+           geom_dotplot(fill = "blue") + 
+           theme_bw()
 }
 
 }

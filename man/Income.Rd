@@ -41,8 +41,8 @@ barplot(T1, col = "pink")
 DF <- as.data.frame(T1)
 DF
 ggplot2::ggplot(data = DF,  aes(x = class, y = Freq)) + 
-   geom_bar(stat = "identity", fill = "purple") + 
-   theme_bw()
+           geom_bar(stat = "identity", fill = "purple") + 
+           theme_bw()
 }  
 
 }

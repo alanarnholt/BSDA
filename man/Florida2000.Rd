@@ -4,7 +4,36 @@
 \name{Florida2000}
 \alias{Florida2000}
 \title{Florida voter results in the 2000 presidential election}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 67 rows and 12 columns.}
+\format{A data frame/tibble with 67 observations on 12 variables
+\describe{ 
+\item{county}{a character variable with values \code{ALACHUA},
+\code{BAKER}, \code{BAY}, \code{BRADFORD}, \code{BREVARD}, \code{BROWARD},
+\code{CALHOUN}, \code{CHARLOTTE}, \code{CITRUS}, \code{CLAY}, \code{COLLIER},
+\code{COLUMBIA}, \code{DADE}, \code{DE SOTO}, \code{DIXIE}, \code{DUVAL},
+\code{ESCAMBIA}, \code{FLAGLER}, \code{FRANKLIN}, \code{GADSDEN},
+\code{GILCHRIST}, \code{GLADES}, \code{GULF}, \code{HAMILTON}, \code{HARDEE},
+\code{HENDRY}, \code{HERNANDO}, \code{HIGHLANDS}, \code{HILLSBOROUGH},
+\code{HOLMES}, \code{INDIAN RIVER}, \code{JACKSON}, \code{JEFFERSON},
+\code{LAFAYETTE}, \code{LAKE}, \code{LEE}, \code{LEON}, \code{LEVY},
+\code{LIBERTY}, \code{MADISON}, \code{MANATEE}, \code{MARION}, \code{MARTIN},
+\code{MONROE}, \code{NASSAU}, \code{OKALOOSA}, \code{OKEECHOBEE}, \code{ORANGE},
+\code{OSCEOLA}, \code{PALM BEACH}, \code{PASCO}, \code{PINELLAS}, \code{POLK},
+\code{PUTNAM}, \code{SANTA ROSA}, \code{SARASOTA}, \code{SEMINOLE}, 
+\code{ST. JOHNS}, \code{ST. LUCIE}, \code{SUMTER}, \code{SUWANNEE}, \code{TAYLOR},
+\code{UNION}, \code{VOLUSIA}, \code{WAKULLA}, \code{WALTON}, and \code{WASHINGTON}
+}
+\item{gore}{number of votes} 
+\item{bush}{number of votes}
+\item{buchanan}{number of votes} 
+\item{nader}{number of votes} 
+\item{browne}{number of votes} 
+\item{hagelin}{number of votes} 
+\item{harris}{number of votes}
+\item{mcreynolds}{number of votes} 
+\item{moorehead}{number of votes} 
+\item{phillips}{number of votes}
+\item{total}{number of votes} 
+}}
 \usage{
 Florida2000
 }
@@ -14,8 +43,8 @@ Data for Statistical Insight Chapter 2
 \examples{
 
 plot(buchanan ~ total, data = Florida2000, 
-xlab = "Total votes cast (in thousands)", 
-ylab = "Votes for Buchanan")
+     xlab = "Total votes cast (in thousands)", 
+     ylab = "Votes for Buchanan")
 
 }
 \references{

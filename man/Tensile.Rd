@@ -18,7 +18,7 @@ Data for Example 7.11
 \examples{
 
 boxplot(tensile ~ run, data = Tensile, 
-col = c("purple", "cyan"))
+        col = c("purple", "cyan"))
 t.test(tensile ~ run, data = Tensile)
 
 }

@@ -21,7 +21,7 @@ Data for Statistical Insight Chapter 10
 \examples{
 
 boxplot(speed ~ car, data = Supercar, col = rainbow(6),
-ylab = "Speed (mph)")
+        ylab = "Speed (mph)")
 summary(aov(speed ~ car, data = Supercar))
 anova(lm(speed ~ car, data = Supercar))
 

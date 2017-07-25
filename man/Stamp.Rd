@@ -21,7 +21,7 @@ Data for Statistical Insight Chapter 1 and Exercise 5.110
 \examples{
 
 hist(Stamp$thickness, freq = FALSE, col = "lightblue", 
-main = "", xlab = "stamp thickness (mm)")
+     main = "", xlab = "stamp thickness (mm)")
 lines(density(Stamp$thickness), col = "blue")
 t.test(Stamp$thickness, conf.level = 0.99)
 

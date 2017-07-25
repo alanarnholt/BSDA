@@ -21,7 +21,7 @@ Data for Exercise 1.36
 \examples{
 
 plot(time~ year, data = Track15, type = "b", pch = 19,
-ylab = "1500m time in seconds", col = "green") 
+     ylab = "1500m time in seconds", col = "green") 
 
 }
 \references{

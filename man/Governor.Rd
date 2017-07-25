@@ -37,9 +37,9 @@ boxplot(salary ~ year, data = Governor)
 
 \dontrun{
 ggplot2::ggplot(data = Governor, aes(x = salary)) + 
-geom_density(fill = "pink") + 
-facet_grid(year ~ .) + 
-theme_bw()
+           geom_density(fill = "pink") + 
+           facet_grid(year ~ .) + 
+           theme_bw()
 }
 
 }

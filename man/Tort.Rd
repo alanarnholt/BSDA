@@ -25,7 +25,7 @@ Data for Exercise 5.13
 }
 \examples{
 
-BSDA::EDA(Tort$months)
+EDA(Tort$months)
 
 }
 \references{

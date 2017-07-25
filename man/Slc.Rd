@@ -21,10 +21,10 @@ Data for Exercise 5.116
 }
 \examples{
 
-BSDA::EDA(Slc$slc)
+EDA(Slc$slc)
 hist(Slc$slc, freq = FALSE, xlab = "sodium lithium countertransport",
      main = "", col = "lightblue")
-     lines(density(Slc$slc), col = "purple")
+lines(density(Slc$slc), col = "purple")
 
 }
 \references{

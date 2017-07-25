@@ -40,7 +40,8 @@ stripchart(x = list(percent1998, percent1985), method = "stack", pch = 19,
 with(data = Elderly, cor(percent1998, percent1985))
 \dontrun{
 ggplot2::ggplot(data = Elderly, aes(x = percent1985, y = percent1998)) +
-               geom_point() + theme_bw()
+           geom_point() + 
+           theme_bw()
 }
 }
 \references{

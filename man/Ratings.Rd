@@ -18,13 +18,13 @@ Data for Example 2.6
 \examples{
 
 boxplot(gpa ~ rating, data = Ratings, xlab = "Student rating of instructor", 
-ylab = "Student GPA")
+        ylab = "Student GPA")
 \dontrun{
 ggplot2::ggplot(data = Ratings, aes(x = rating, y = gpa, fill = rating)) +
-    geom_boxplot() + 
-    theme_bw() + 
-    theme(legend.position = "none") + 
-    labs(x = "Student rating of instructor", y = "Student GPA")
+           geom_boxplot() + 
+           theme_bw() + 
+           theme(legend.position = "none") + 
+           labs(x = "Student rating of instructor", y = "Student GPA")
 }
 
 }

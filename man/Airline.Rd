@@ -25,10 +25,10 @@ Data for Example 2.9
 \examples{
 
 with(data = Airline, 
-barplot(complaints, names.arg = airline, col = "lightblue")
+     barplot(complaints, names.arg = airline, col = "lightblue")
 )
 plot(complaints ~ ontime, data = Airline, pch = 19, col = "red",
-xlab = "On time", ylab = "Complaints")
+     xlab = "On time", ylab = "Complaints")
 
 }
 \references{

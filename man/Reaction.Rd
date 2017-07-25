@@ -17,7 +17,7 @@ Data for Example 6.11
 \examples{
 
 stem(Reaction$time)
-BSDA::SIGN.test(Reaction$time, md = 15, alternative = "less")
+SIGN.test(Reaction$time, md = 15, alternative = "less")
 
 }
 \references{

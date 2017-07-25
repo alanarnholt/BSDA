@@ -17,7 +17,7 @@ Data for Exercise 5.77
 \examples{
 
 stem(Repair$time)
-BSDA::SIGN.test(Repair$time, conf.level = 0.98)
+SIGN.test(Repair$time, conf.level = 0.98)
 
 }
 \references{

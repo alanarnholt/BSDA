@@ -17,7 +17,7 @@ Data for Exercise 5.10 and 5.22
 \examples{
 
 stem(Prejudic$prejud)
-BSDA::EDA(Prejudic$prejud)
+EDA(Prejudic$prejud)
 
 }
 \references{

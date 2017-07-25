@@ -16,7 +16,7 @@ Data for Exercise 5.73
 }
 \examples{
 
-BSDA::SIGN.test(Malpract$award, conf.level = 0.90)
+SIGN.test(Malpract$award, conf.level = 0.90)
 
 }
 \references{

@@ -27,18 +27,18 @@ Data for Exercise 2.8
 par(las = 2)
 boxplot(pricepergallon ~ location, data = Diesel)
 boxplot(pricepergallon ~ location, 
-         data = droplevels(Diesel[Diesel$location == "EastCoast" | 
-         Diesel$location == "Gulf" | Diesel$location == "NatAvg" | 
-         Diesel$location == "Rocky" | Diesel$location == "California", ]), 
-         col = "pink", main = "Exercise 2.8")
+       data = droplevels(Diesel[Diesel$location == "EastCoast" | 
+       Diesel$location == "Gulf" | Diesel$location == "NatAvg" | 
+       Diesel$location == "Rocky" | Diesel$location == "California", ]), 
+       col = "pink", main = "Exercise 2.8")
 par(las = 1) 
 \dontrun{
 ggplot2::ggplot(data = Diesel, aes(x = date, y = pricepergallon, 
-               color = location)) + 
-               geom_point() + 
-               geom_smooth(se = FALSE) + 
-               theme_bw() + 
-               labs(y = "Price per Gallon (in dollars)")
+           color = location)) + 
+           geom_point() + 
+           geom_smooth(se = FALSE) + 
+           theme_bw() + 
+           labs(y = "Price per Gallon (in dollars)")
 }         
 }
 \references{

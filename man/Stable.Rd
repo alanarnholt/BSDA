@@ -16,7 +16,7 @@ Data for Exercise 6.93
 }
 \examples{
 
-BSDA::SIGN.test(Stable$time, md = 98.5, alternative = "greater")
+SIGN.test(Stable$time, md = 98.5, alternative = "greater")
 
 }
 \references{

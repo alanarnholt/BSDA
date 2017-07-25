@@ -97,11 +97,10 @@ NULL
 #' par(mfrow = c(1, 1))
 #' 
 #' \dontrun{
-#' library(ggplot2)
-#' ggplot(data = Abilene, aes(x = crimetype, y = number, fill = year)) +
-#'   geom_bar(stat = "identity", position = "dodge") +
-#'   theme_bw() +
-#'   theme(axis.text.x = element_text(angle = 30, hjust = 1))
+#' ggplot2::ggplot(data = Abilene, aes(x = crimetype, y = number, fill = year)) +
+#'            geom_bar(stat = "identity", position = "dodge") +
+#'            theme_bw() +
+#'            theme(axis.text.x = element_text(angle = 30, hjust = 1))
 #' }
 #' 
 "Abilene"
@@ -365,10 +364,10 @@ NULL
 #' EDA(duration)
 #' )
 #' with(data = Aids, 
-#' t.test(duration, mu = 30, alternative = "greater")
+#'      t.test(duration, mu = 30, alternative = "greater")
 #' )
 #' with(data = Aids, 
-#' SIGN.test(duration, md = 24, alternative = "greater")
+#'      SIGN.test(duration, md = 24, alternative = "greater")
 #' )
 #' 
 "Aids"
@@ -437,10 +436,10 @@ NULL
 #' @examples
 #' 
 #' with(data = Airline, 
-#' barplot(complaints, names.arg = airline, col = "lightblue")
+#'      barplot(complaints, names.arg = airline, col = "lightblue")
 #' )
 #' plot(complaints ~ ontime, data = Airline, pch = 19, col = "red",
-#' xlab = "On time", ylab = "Complaints")
+#'      xlab = "On time", ylab = "Complaints")
 #' 
 "Airline"
 
@@ -814,8 +813,7 @@ NULL
 #' qqline(Asthmati$difference)
 #' shapiro.test(Asthmati$difference)
 #' with(data = Asthmati,
-#' t.test(placebo, drug, paired = TRUE, mu = 0, 
-#' alternative = "greater")
+#'      t.test(placebo, drug, paired = TRUE, mu = 0, alternative = "greater")
 #' )
 #' 
 "Asthmati"
@@ -988,7 +986,7 @@ NULL
 #' horizontal = TRUE, main = "Graduation Rates 1993-1994")
 #' with(data = Bigten,
 #'      tapply(rate, list(year, status), mean)
-#'     )
+#' )
 #' 
 "Bigten"
 
@@ -1156,7 +1154,7 @@ NULL
 #' anova(lm(salary ~ university, data = Board))
 #' \dontrun{
 #' dplyr::group_by(Board, university) %>%
-#' summarize(Average = mean(salary))
+#'          summarize(Average = mean(salary))
 #' }
 "Board"
 
@@ -1437,7 +1435,7 @@ NULL
 #' )
 #' with(data = Cabinets,
 #'      wilcox.test(supplA, supplB, paired = TRUE)
-#')
+#' )
 #' rm(DIF)
 #' 
 "Cabinets"
@@ -1805,7 +1803,8 @@ NULL
 #' @examples
 #' 
 #' with(data = Chips, 
-#' boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, wafer22, wafer23, wafer24)
+#'      boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, 
+#'              wafer22, wafer23, wafer24)
 #' )
 #' 
 "Chips"
@@ -1835,7 +1834,7 @@ NULL
 #' model <- lm(weight ~ cigarettes, data = Cigarett)
 #' abline(model)
 #' with(data = Cigarett,
-#' cor(weight, cigarettes)
+#'      cor(weight, cigarettes)
 #' )
 #' rm(model)
 #' 
@@ -2597,18 +2596,18 @@ NULL
 #' par(las = 2)
 #' boxplot(pricepergallon ~ location, data = Diesel)
 #' boxplot(pricepergallon ~ location, 
-#'          data = droplevels(Diesel[Diesel$location == "EastCoast" | 
-#'          Diesel$location == "Gulf" | Diesel$location == "NatAvg" | 
-#'          Diesel$location == "Rocky" | Diesel$location == "California", ]), 
-#'          col = "pink", main = "Exercise 2.8")
+#'        data = droplevels(Diesel[Diesel$location == "EastCoast" | 
+#'        Diesel$location == "Gulf" | Diesel$location == "NatAvg" | 
+#'        Diesel$location == "Rocky" | Diesel$location == "California", ]), 
+#'        col = "pink", main = "Exercise 2.8")
 #' par(las = 1) 
 #' \dontrun{
 #' ggplot2::ggplot(data = Diesel, aes(x = date, y = pricepergallon, 
-#'                color = location)) + 
-#'                geom_point() + 
-#'                geom_smooth(se = FALSE) + 
-#'                theme_bw() + 
-#'                labs(y = "Price per Gallon (in dollars)")
+#'            color = location)) + 
+#'            geom_point() + 
+#'            geom_smooth(se = FALSE) + 
+#'            theme_bw() + 
+#'            labs(y = "Price per Gallon (in dollars)")
 #' }         
 "Diesel"
 
@@ -2726,9 +2725,9 @@ NULL
 #' cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
 #' \dontrun{
 #' ggplot2::ggplot(data = Dogs, aes(x = reorder(breed, ranking), y = ranking)) + 
-#'      geom_bar(stat = "identity") + 
-#'      facet_grid(year ~. ) + 
-#'      theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) 
+#'            geom_bar(stat = "identity") + 
+#'            facet_grid(year ~. ) + 
+#'            theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) 
 #' }
 "Dogs"
 
@@ -2760,9 +2759,9 @@ NULL
 #' barplot(Domestic$rate, names.arg = Domestic$age)
 #' \dontrun{
 #' ggplot2::ggplot(data = Domestic, aes(x = age, y = rate)) + 
-#'      geom_bar(stat = "identity", fill = "purple", color = "black") + 
-#'      labs(x = "", y = "Domestic violence per 1000 women") + 
-#'      theme_bw()
+#'            geom_bar(stat = "identity", fill = "purple", color = "black") + 
+#'            labs(x = "", y = "Domestic violence per 1000 women") + 
+#'            theme_bw()
 #' }
 "Domestic"
 
@@ -2822,10 +2821,10 @@ NULL
 #' plot(close ~ year, data = Dowjones, type = "l", main = "Exercise 1.35")
 #' \dontrun{
 #' ggplot2::ggplot(data = Dowjones, aes(x = year, y = close)) +
-#' geom_point(size = 0.5) + 
-#' geom_line(color = "red") + 
-#' theme_bw() + 
-#' labs(y = "Dow Jones Closing Price")
+#'            geom_point(size = 0.5) + 
+#'            geom_line(color = "red") + 
+#'            theme_bw() + 
+#'            labs(y = "Dow Jones Closing Price")
 #' }
 "Dowjones"
 
@@ -3059,7 +3058,8 @@ NULL
 #' with(data = Elderly, cor(percent1998, percent1985))
 #' \dontrun{
 #' ggplot2::ggplot(data = Elderly, aes(x = percent1985, y = percent1998)) +
-#'                geom_point() + theme_bw()
+#'            geom_point() + 
+#'            theme_bw()
 #' }
 "Elderly"
 
@@ -3349,10 +3349,10 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Faithful, aes(x = time, y = ..density..)) + 
-#' geom_histogram(binwidth = 5, fill = "pink", col = "black") + 
-#' geom_density() + 
-#' theme_bw() + 
-#' labs(x = "wait time")
+#'            geom_histogram(binwidth = 5, fill = "pink", col = "black") + 
+#'            geom_density() + 
+#'            theme_bw() + 
+#'            labs(x = "wait time")
 #' }
 "Faithful"
 
@@ -3383,9 +3383,9 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Family, aes(x = number, y = cost)) + 
-#'    geom_point() + 
-#'    geom_smooth(method = "lm") + 
-#'    theme_bw()
+#'            geom_point() + 
+#'            geom_smooth(method = "lm") + 
+#'            theme_bw()
 #' }
 #' 
 "Family"
@@ -3544,7 +3544,7 @@ NULL
 #' SIGN.test(Fish$length[Fish$codend == "smallmesh"], conf.level = 0.99)
 #' \dontrun{
 #' dplyr::group_by(Fish, codend) %>%
-#'     summarize(MEDIAN = median(length, na.rm = TRUE))
+#'          summarize(MEDIAN = median(length, na.rm = TRUE))
 #' }
 #' 
 "Fish"
@@ -3594,7 +3594,7 @@ NULL
 #' 
 #' @name Florida2000
 #' @docType data
-#' @format A data frame/tibble with 67 observations on the 12 variables
+#' @format A data frame/tibble with 67 observations on 12 variables
 #' \describe{ 
 #' \item{county}{a character variable with values \code{ALACHUA},
 #' \code{BAKER}, \code{BAY}, \code{BRADFORD}, \code{BREVARD}, \code{BROWARD},
@@ -3606,11 +3606,12 @@ NULL
 #' \code{HOLMES}, \code{INDIAN RIVER}, \code{JACKSON}, \code{JEFFERSON},
 #' \code{LAFAYETTE}, \code{LAKE}, \code{LEE}, \code{LEON}, \code{LEVY},
 #' \code{LIBERTY}, \code{MADISON}, \code{MANATEE}, \code{MARION}, \code{MARTIN},
-#' \code{MONROE}, \code{NASSAU}, \code{OKALOOSA, \code{OKEECHOBEE}, \code{ORANGE},
+#' \code{MONROE}, \code{NASSAU}, \code{OKALOOSA}, \code{OKEECHOBEE}, \code{ORANGE},
 #' \code{OSCEOLA}, \code{PALM BEACH}, \code{PASCO}, \code{PINELLAS}, \code{POLK},
-#' \code{PUTNAM}, \code{SANTA ROSA}, \code{SARASOTA}, \code{SEMINOLE}, \code{ST.
-#' JOHNS}, \code{ST. LUCIE}, \code{SUMTER}, \code{SUWANNEE}, \code{TAYLOR},
-#' \code{UNION}, \code{VOLUSIA}, \code{WAKULLA}, \code{WALTON}, and \code{WASHINGTON}}
+#' \code{PUTNAM}, \code{SANTA ROSA}, \code{SARASOTA}, \code{SEMINOLE}, 
+#' \code{ST. JOHNS}, \code{ST. LUCIE}, \code{SUMTER}, \code{SUWANNEE}, \code{TAYLOR},
+#' \code{UNION}, \code{VOLUSIA}, \code{WAKULLA}, \code{WALTON}, and \code{WASHINGTON}
+#' }
 #' \item{gore}{number of votes} 
 #' \item{bush}{number of votes}
 #' \item{buchanan}{number of votes} 
@@ -3629,8 +3630,8 @@ NULL
 #' @examples
 #' 
 #' plot(buchanan ~ total, data = Florida2000, 
-#' xlab = "Total votes cast (in thousands)", 
-#' ylab = "Votes for Buchanan")
+#'      xlab = "Total votes cast (in thousands)", 
+#'      ylab = "Votes for Buchanan")
 #' 
 "Florida2000"
 
@@ -3732,15 +3733,15 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Framingh, aes(x = factor(1), y = cholest)) + 
-#' geom_boxplot() +                 # boxplot
-#' labs(x = "") +                   # no x label  
-#' theme_bw() +                     # black and white theme  
-#' geom_jitter(width = 0.2) +       # jitter points
-#' coord_flip()                     # Create horizontal plot
+#'   geom_boxplot() +                 # boxplot
+#'   labs(x = "") +                   # no x label  
+#'   theme_bw() +                     # black and white theme  
+#'   geom_jitter(width = 0.2) +       # jitter points
+#'   coord_flip()                     # Create horizontal plot
 #' ggplot2::ggplot(data = Framingh, aes(x = cholest, y = ..density..)) +
-#' geom_histogram(fill = "pink", binwidth = 15, color = "black") + 
-#' geom_density() + 
-#' theme_bw()
+#'   geom_histogram(fill = "pink", binwidth = 15, color = "black") + 
+#'   geom_density() + 
+#'   theme_bw()
 #' }
 #' 
 "Framingh"
@@ -3864,9 +3865,9 @@ NULL
 #' \dontrun{
 #' dplyr::filter(Gallup, demographics == "Gender: Male" | demographics == "Gender: Female") %>%
 #' ggplot2::ggplot(aes(x = demographics, fill = opinion)) + 
-#' geom_bar() + 
-#' theme_bw() + 
-#' labs(y = "Fraction")
+#'            geom_bar() + 
+#'            theme_bw() + 
+#'            labs(y = "Fraction")
 #' }
 #' 
 "Gallup"
@@ -3895,9 +3896,9 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Gasoline, aes(x = factor(1), y = price)) + 
-#'     geom_violin() + 
-#'     geom_jitter() + 
-#'     theme_bw()
+#'            geom_violin() + 
+#'            geom_jitter() + 
+#'            theme_bw()
 #' }
 #' 
 "Gasoline"
@@ -3966,8 +3967,8 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Golf, aes(sample = yards)) + 
-#' geom_qq() + 
-#' theme_bw()
+#'            geom_qq() + 
+#'            theme_bw()
 #' }
 #' 
 "Golf"
@@ -4012,9 +4013,9 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Governor, aes(x = salary)) + 
-#' geom_density(fill = "pink") + 
-#' facet_grid(year ~ .) + 
-#' theme_bw()
+#'            geom_density(fill = "pink") + 
+#'            facet_grid(year ~ .) + 
+#'            theme_bw()
 #' }
 #' 
 "Governor"
@@ -4050,9 +4051,9 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
-#' geom_point() + 
-#' geom_smooth(method = "lm") + 
-#' theme_bw()
+#'            geom_point() + 
+#'            geom_smooth(method = "lm") + 
+#'            theme_bw()
 #' }
 #' 
 #' 
@@ -4082,9 +4083,9 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Grades, aes(x = grades, y = ..density..)) + 
-#'     geom_histogram(fill = "pink", binwidth = 5, color = "black") + 
-#'     geom_density(lwd = 2, color = "red") + 
-#'     theme_bw() 
+#'            geom_histogram(fill = "pink", binwidth = 5, color = "black") + 
+#'            geom_density(lwd = 2, color = "red") + 
+#'            theme_bw() 
 #' }
 #' 
 "Grades"
@@ -4290,8 +4291,8 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Habits, aes(x = differ)) + 
-#'     geom_dotplot(fill = "blue") + 
-#'     theme_bw()
+#'            geom_dotplot(fill = "blue") + 
+#'            theme_bw()
 #' }
 #' 
 "Habits"
@@ -4414,10 +4415,10 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Heat, aes(x = fuel, fill = location)) + 
-#'    geom_bar(position = "dodge") + 
-#'    labs(y = "percent") + 
-#'    theme_bw() + 
-#'    theme(axis.text.x = element_text(angle = 30, hjust = 1)) 
+#'            geom_bar(position = "dodge") + 
+#'            labs(y = "percent") + 
+#'            theme_bw() + 
+#'            theme(axis.text.x = element_text(angle = 30, hjust = 1)) 
 #' }
 #' 
 "Heat"
@@ -4480,8 +4481,8 @@ NULL
 #' 
 #' \dontrun{
 #' ggplot2::ggplot(data = Hodgkin, aes(x = type, fill = response)) + 
-#'     geom_bar(position = "dodge") + 
-#'     theme_bw()
+#'            geom_bar(position = "dodge") + 
+#'            theme_bw()
 #' }
 #' 
 "Hodgkin"
@@ -4537,9 +4538,9 @@ NULL
 #' dplyr::group_by(Homes, year, region) %>%
 #'    summarize(AvgPrice = mean(price))
 #' ggplot2::ggplot(data = Homes, aes(x = region, y = price)) + 
-#'    geom_boxplot() + 
-#'    theme_bw() + 
-#'    facet_grid(year ~ .)
+#'            geom_boxplot() + 
+#'            theme_bw() + 
+#'            facet_grid(year ~ .)
 #' }
 #' 
 #' 
@@ -4665,9 +4666,9 @@ NULL
 #'            pch = 1, col = c("red", "blue"))
 #' \dontrun{
 #' ggplot2::ggplot(data = Housing, aes(x = price, fill = year)) + 
-#'               geom_dotplot() + 
-#'               facet_grid(year ~ .) + 
-#'               theme_bw()
+#'            geom_dotplot() + 
+#'            facet_grid(year ~ .) + 
+#'            theme_bw()
 #' }               
 #' 
 "Housing"
@@ -4702,11 +4703,11 @@ NULL
 #' T1 <- xtabs(~hurrican, data = Hurrican)
 #' T1
 #' barplot(T1, col = "blue", main = "Problem 1.38",
-#'      xlab = "Number of hurricanes", 
-#'      ylab = "Number of seasons")
+#'         xlab = "Number of hurricanes", 
+#'         ylab = "Number of seasons")
 #' boxplot(storms ~ elnino, data = Hurrican, 
-#'      col = c("blue", "yellow", "red"))
-#'      anova(lm(storms ~ elnino, data = Hurrican))
+#'         col = c("blue", "yellow", "red"))
+#' anova(lm(storms ~ elnino, data = Hurrican))
 #' rm(T1)
 #' 
 "Hurrican"
@@ -4788,8 +4789,8 @@ NULL
 #' DF <- as.data.frame(T1)
 #' DF
 #' ggplot2::ggplot(data = DF,  aes(x = class, y = Freq)) + 
-#'    geom_bar(stat = "identity", fill = "purple") + 
-#'    theme_bw()
+#'            geom_bar(stat = "identity", fill = "purple") + 
+#'            theme_bw()
 #' }  
 #' 
 "Income"
@@ -4852,9 +4853,9 @@ NULL
 #' 
 #' par(mfrow = c(1, 2))
 #' plot(`per capita income` ~ `percent high school`, data = Indian, 
-#'   xlab = "Percent high school graudates", ylab = "Per capita income")
+#'      xlab = "Percent high school graudates", ylab = "Per capita income")
 #' plot(`poverty rate` ~ `percent high school`, data = Indian, 
-#'   xlab = "Percent high school graudates", ylab = "Percent poverty")
+#'      xlab = "Percent high school graudates", ylab = "Percent poverty")
 #' par(mfrow = c(1, 1))
 #' 
 "Indian"
@@ -4925,9 +4926,9 @@ NULL
 #' t.test(qualif ~ group, data = Indy500)
 #' \dontrun{
 #' ggplot2::ggplot(data = Indy500, aes(sample = qualif)) + 
-#'           geom_qq() + 
-#'           facet_grid(group ~ .) + 
-#'           theme_bw()
+#'            geom_qq() + 
+#'            facet_grid(group ~ .) + 
+#'            theme_bw()
 #' }
 #' 
 "Indy500"
@@ -5290,7 +5291,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::EDA(Kilowatt$rate)
+#' EDA(Kilowatt$rate)
 #' 
 "Kilowatt"
 
@@ -5427,7 +5428,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#'BSDA::SIGN.test(Lethal$survival, md = 45, alternative = "less")
+#'SIGN.test(Lethal$survival, md = 45, alternative = "less")
 #'
 #'
 "Lethal"
@@ -5457,8 +5458,9 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#'plot(men ~ year, type = "l", ylim = c(min(men, women), max(men, women)), col = "blue",
-#'main = "Life Expectancy vs Year", ylab = "Age", xlab = "Year", data = Life)
+#'plot(men ~ year, type = "l", ylim = c(min(men, women), max(men, women)), 
+#'     col = "blue", main = "Life Expectancy vs Year", ylab = "Age", 
+#'     xlab = "Year", data = Life)
 #'lines(women ~ year, col = "red", data = Life)
 #'text(1955, 65, "Men", col = "blue")
 #'text(1955, 70, "Women", col = "red")
@@ -5674,7 +5676,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::SIGN.test(Malpract$award, conf.level = 0.90)
+#' SIGN.test(Malpract$award, conf.level = 0.90)
 #' 
 "Malpract"
 
@@ -5699,7 +5701,7 @@ NULL
 #' @examples
 #' 
 #' stem(Manager$salary)
-#' BSDA::SIGN.test(Manager$salary)
+#' SIGN.test(Manager$salary)
 #' 
 "Manager"
 
@@ -5727,8 +5729,8 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::EDA(Marked$percent)
-#' BSDA::SIGN.test(Marked$percent, md = 60, alternative = "greater")
+#' EDA(Marked$percent)
+#' SIGN.test(Marked$percent, md = 60, alternative = "greater")
 #' t.test(Marked$percent, mu = 60, alternative = "greater")
 #' 
 "Marked"
@@ -5788,7 +5790,7 @@ NULL
 #' @examples
 #' 
 #' stem(Mathcomp$score)
-#' BSDA::EDA(Mathcomp$score)
+#' EDA(Mathcomp$score)
 #' 
 "Mathcomp"
 
@@ -5904,7 +5906,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::SIGN.test(Mental$age, md = 100)
+#' SIGN.test(Mental$age, md = 100)
 #' 
 "Mental"
 
@@ -6076,8 +6078,8 @@ NULL
 #' wilcox.test(emission ~ company, data = Monoxide)
 #' \dontrun{
 #' ggplot2::ggplot(data = Monoxide, aes(x = company, y = emission)) + 
-#'   geom_boxplot() + 
-#'     theme_bw()
+#'            geom_boxplot() + 
+#'            theme_bw()
 #' }
 #' 
 "Monoxide"
@@ -6143,8 +6145,8 @@ NULL
 #' t.test(Music$differ)
 #' \dontrun{
 #' ggplot2::ggplot(data = Music, aes(x = differ)) + 
-#' geom_dotplot() + 
-#' theme_bw()
+#'            geom_dotplot() + 
+#'            theme_bw()
 #' }
 #' 
 "Music"
@@ -6363,7 +6365,7 @@ NULL
 #' abline(model)
 #' summary(model)
 #' predict(model, newdata = data.frame(nicotine = 1), 
-#'      interval = "confidence", level = 0.99)
+#'         interval = "confidence", level = 0.99)
 #' 
 "Nicotine"
 
@@ -6431,9 +6433,9 @@ NULL
 #' stripchart(Orioles$`1999salary`, method = "stack", pch = 19)
 #' \dontrun{
 #' ggplot2::ggplot(data = Orioles, aes(x = `1999salary`)) + 
-#'     geom_dotplot(dotsize = 0.5) + 
-#'     labs(x = "1999 Salary") +
-#'     theme_bw()
+#'            geom_dotplot(dotsize = 0.5) + 
+#'            labs(x = "1999 Salary") +
+#'            theme_bw()
 #' }
 #' 
 "Orioles"
@@ -6590,7 +6592,7 @@ NULL
 #' qqnorm(Phone$time)
 #' qqline(Phone$time)
 #' shapiro.test(Phone$time)
-#' BSDA::SIGN.test(Phone$time, md = 5, alternative = "greater")
+#' SIGN.test(Phone$time, md = 5, alternative = "greater")
 #' 
 "Phone"
 
@@ -6627,11 +6629,11 @@ NULL
 #' rm(T1)
 #' \dontrun{
 #' ggplot2::ggplot(data = Poison, aes(x = type, fill = type)) + 
-#'   geom_bar() + 
-#'     theme_bw() + 
-#'       theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) +
-#'         guides(fill = FALSE)
-#'         }
+#'            geom_bar() + 
+#'            theme_bw() + 
+#'            theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) +
+#'            guides(fill = FALSE)
+#' }
 #' 
 "Poison"
 
@@ -6807,7 +6809,7 @@ NULL
 #' @examples
 #' 
 #' stem(Prejudic$prejud)
-#' BSDA::EDA(Prejudic$prejud)
+#' EDA(Prejudic$prejud)
 #' 
 "Prejudic"
 
@@ -6853,9 +6855,8 @@ NULL
 #' stem(Presiden$death_age)
 #' par(mar = c(5.1, 4.1 + 3, 4.1, 2.1))
 #' stripchart(x=list(Presiden$inaugural_age, Presiden$death_age), 
-#'            method = "stack",
-#'                       col = c("green","brown"), pch = 19, las = 1)
-#'                       par(mar = c(5.1, 4.1, 4.1, 2.1)) 
+#'            method = "stack", col = c("green","brown"), pch = 19, las = 1)
+#' par(mar = c(5.1, 4.1, 4.1, 2.1)) 
 #' 
 "Presiden"
 
@@ -6914,7 +6915,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::EDA(Prognost$kprs_score)
+#' EDA(Prognost$kprs_score)
 #' t.test(Prognost$kprs_score, mu = 9)
 #' 
 "Prognost"
@@ -7002,7 +7003,7 @@ NULL
 #' @examples
 #' 
 #' stem(Psych$score)
-#' BSDA::EDA(Psych$score)
+#' EDA(Psych$score)
 #' 
 "Psych"
 
@@ -7058,7 +7059,7 @@ NULL
 #' @examples
 #' 
 #' boxplot(level ~ group, data = Quail, horizontal = TRUE, xlab = "LDL Level",
-#' col = c("yellow", "lightblue"))
+#'         col = c("yellow", "lightblue"))
 #' 
 "Quail"
 
@@ -7204,13 +7205,13 @@ NULL
 #' @examples
 #' 
 #' boxplot(gpa ~ rating, data = Ratings, xlab = "Student rating of instructor", 
-#' ylab = "Student GPA")
+#'         ylab = "Student GPA")
 #' \dontrun{
 #' ggplot2::ggplot(data = Ratings, aes(x = rating, y = gpa, fill = rating)) +
-#'     geom_boxplot() + 
-#'     theme_bw() + 
-#'     theme(legend.position = "none") + 
-#'     labs(x = "Student rating of instructor", y = "Student GPA")
+#'            geom_boxplot() + 
+#'            theme_bw() + 
+#'            theme(legend.position = "none") + 
+#'            labs(x = "Student rating of instructor", y = "Student GPA")
 #' }
 #' 
 "Ratings"
@@ -7237,7 +7238,7 @@ NULL
 #' @examples
 #' 
 #' stem(Reaction$time)
-#' BSDA::SIGN.test(Reaction$time, md = 15, alternative = "less")
+#' SIGN.test(Reaction$time, md = 15, alternative = "less")
 #' 
 "Reaction"
 
@@ -7265,7 +7266,7 @@ NULL
 #' @examples
 #' 
 #' hist(Reading$score, main = "Exercise 1.72", 
-#' col = "lightgreen", xlab = "Standardized reading score")
+#'      col = "lightgreen", xlab = "Standardized reading score")
 #' summary(Reading$score)
 #' sd(Reading$score)
 #' 
@@ -7495,7 +7496,7 @@ NULL
 #' @examples
 #' 
 #' stem(Repair$time)
-#' BSDA::SIGN.test(Repair$time, conf.level = 0.98)
+#' SIGN.test(Repair$time, conf.level = 0.98)
 #' 
 "Repair"
 
@@ -7770,10 +7771,10 @@ NULL
 #' ylab = "Weight (lbs)")
 #' \dontrun{
 #' ggplot2::ggplot(data = Scales, aes(x = brand, y = reading, fill = brand)) + 
-#'     geom_boxplot() + 
-#'     labs(y = "weight (lbs)") +
-#'     theme_bw() + 
-#'     theme(legend.position = "none") 
+#'            geom_boxplot() + 
+#'            labs(y = "weight (lbs)") +
+#'            theme_bw() + 
+#'            theme(legend.position = "none") 
 #' }
 #' 
 "Scales"
@@ -7801,8 +7802,8 @@ NULL
 #' 
 #' hist(Schizop2$score, xlab = "score on standardized test after a tranquilizer", 
 #' main = "Exercise 6.99", breaks = 10, col = "orange")
-#' BSDA::EDA(Schizop2$score)
-#' BSDA::SIGN.test(Schizop2$score, md = 22, alternative = "greater")
+#' EDA(Schizop2$score)
+#' SIGN.test(Schizop2$score, md = 22, alternative = "greater")
 #' 
 "Schizop2"
 
@@ -7829,7 +7830,7 @@ NULL
 #' 
 #' hist(Schizoph$score, xlab = "score on standardized test", 
 #' main = "Example 6.10", breaks = 10, col = "orange")
-#' BSDA::EDA(Schizoph$score)
+#' EDA(Schizoph$score)
 #' t.test(Schizoph$score, mu = 20)
 #' 
 "Schizoph"
@@ -7892,7 +7893,7 @@ NULL
 #' Selfdefe
 #' t.test(Selfdefe$differ, alternative = "greater")
 #' t.test(Selfdefe$after, Selfdefe$before, 
-#'       paired = TRUE, alternative = "greater")
+#'        paired = TRUE, alternative = "greater")
 #' 
 "Selfdefe"
 
@@ -8066,7 +8067,7 @@ NULL
 #' 
 #' hist(Short$parallax, main = "Problem 6.65", 
 #' xlab = "", col = "orange")
-#' BSDA::SIGN.test(Short$parallax, md = 8.798)
+#' SIGN.test(Short$parallax, md = 8.798)
 #' t.test(Short$parallax, mu = 8.798)
 #' 
 "Short"
@@ -8157,8 +8158,8 @@ NULL
 #' hist(Situp$number, breaks = seq(0, 70, 10), right = FALSE)
 #' hist(Situp$number, breaks = seq(0, 70, 10), right = FALSE, 
 #'      freq = FALSE, col = "pink", main = "Problem 1.47", 
-#'           xlab = "Maximum number of situps")
-#'           lines(density(Situp$number), col = "red")
+#'      xlab = "Maximum number of situps")
+#' lines(density(Situp$number), col = "red")
 #' 
 "Situp"
 
@@ -8246,10 +8247,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::EDA(Slc$slc)
+#' EDA(Slc$slc)
 #' hist(Slc$slc, freq = FALSE, xlab = "sodium lithium countertransport",
 #'      main = "", col = "lightblue")
-#'      lines(density(Slc$slc), col = "purple")
+#' lines(density(Slc$slc), col = "purple")
 #' 
 "Slc"
 
@@ -8284,14 +8285,14 @@ NULL
 #' stripchart(waterph ~ code, data = Smokyph, method = "stack",
 #'            pch = 19, col = c("red", "blue"))
 #'            t.test(Smokyph$waterph, mu = 7)
-#'            BSDA::SIGN.test(Smokyph$waterph, md = 7)
+#'            SIGN.test(Smokyph$waterph, md = 7)
 #'            t.test(waterph ~ code, data = Smokyph, alternative = "less")
 #'            t.test(waterph ~ code, data = Smokyph, conf.level = 0.90)
 #'  \dontrun{
 #'  ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
-#'        geom_dotplot() + 
-#'        facet_grid(code ~ .) + 
-#'        guides(fill = FALSE)
+#'             geom_dotplot() + 
+#'             facet_grid(code ~ .) + 
+#'             guides(fill = FALSE)
 #' }
 #' 
 "Smokyph"
@@ -8403,7 +8404,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::SIGN.test(Social$income, md = 27500, alternative = "less")
+#' SIGN.test(Social$income, md = 27500, alternative = "less")
 #' 
 "Social"
 
@@ -8435,9 +8436,9 @@ NULL
 #' plot(exam ~ gpa, data = Sophomor)
 #' \dontrun{
 #' ggplot2::ggplot(data = Sophomor, aes(x = gpa, y = exam)) + 
-#'    geom_point()
-#'    ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
-#'    geom_point()
+#'            geom_point()
+#'            ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
+#'            geom_point()
 #' }
 #' 
 "Sophomor"
@@ -8632,7 +8633,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::SIGN.test(Stable$time, md = 98.5, alternative = "greater")
+#' SIGN.test(Stable$time, md = 98.5, alternative = "greater")
 #' 
 "Stable"
 
@@ -8661,7 +8662,7 @@ NULL
 #' @examples
 #' 
 #' hist(Stamp$thickness, freq = FALSE, col = "lightblue", 
-#' main = "", xlab = "stamp thickness (mm)")
+#'      main = "", xlab = "stamp thickness (mm)")
 #' lines(density(Stamp$thickness), col = "blue")
 #' t.test(Stamp$thickness, conf.level = 0.99)
 #' 
@@ -8720,8 +8721,8 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::EDA(Statelaw$cost)
-#' BSDA::SIGN.test(Statelaw$cost, md = 8, alternative = "less")
+#' EDA(Statelaw$cost)
+#' SIGN.test(Statelaw$cost, md = 8, alternative = "less")
 #' 
 "Statelaw"
 
@@ -8778,7 +8779,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::EDA(Step$score)
+#' EDA(Step$score)
 #' t.test(Step$score, mu = 80, alternative = "less")
 #' wilcox.test(Step$score, mu = 80, alternative = "less")
 #' 
@@ -8990,7 +8991,7 @@ NULL
 #' @examples
 #' 
 #' boxplot(speed ~ car, data = Supercar, col = rainbow(6),
-#' ylab = "Speed (mph)")
+#'         ylab = "Speed (mph)")
 #' summary(aov(speed ~ car, data = Supercar))
 #' anova(lm(speed ~ car, data = Supercar))
 #' 
@@ -9152,7 +9153,7 @@ NULL
 #' @examples
 #' 
 #' boxplot(tensile ~ run, data = Tensile, 
-#' col = c("purple", "cyan"))
+#'         col = c("purple", "cyan"))
 #' t.test(tensile ~ run, data = Tensile)
 #' 
 "Tensile"
@@ -9258,7 +9259,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::EDA(Ticket$time)
+#' EDA(Ticket$time)
 #' 
 "Ticket"
 
@@ -9361,7 +9362,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::EDA(Tort$months)
+#' EDA(Tort$months)
 #' 
 "Tort"
 
@@ -9460,7 +9461,7 @@ NULL
 #' @examples
 #' 
 #' plot(time~ year, data = Track15, type = "b", pch = 19,
-#' ylab = "1500m time in seconds", col = "green") 
+#'      ylab = "1500m time in seconds", col = "green") 
 #' 
 "Track15"
 
@@ -9636,14 +9637,13 @@ NULL
 #' col = c("blue","red","green","lightblue"),
 #' pch = 19, main = "GPA versus Class")
 #' stripchart(gpa ~ gender, data = Undergrad, method = "stack", 
-#' col = c("red", "blue"), pch = 19,
+#'            col = c("red", "blue"), pch = 19,
 #'            main = "GPA versus Gender")
 #'            stripchart(sat ~ drops, data = Undergrad, method = "stack", 
 #'            col = c("blue", "red", "green", "lightblue"),
-#'                       pch = 19, main = "SAT versus Drops")
-#'                       stripchart(drops ~ gender, data = Undergrad, 
-#'                       method = "stack", col = c("red", "blue"), pch = 19,
-#'                                  main = "Drops versus Gender")
+#'            pch = 19, main = "SAT versus Drops")
+#' stripchart(drops ~ gender, data = Undergrad, method = "stack", 
+#'            col = c("red", "blue"), pch = 19, main = "Drops versus Gender")
 #'  \dontrun{
 #'  ggplot2::ggplot(data = Undergrad, aes(x = sat, y = drops, fill = factor(drops))) + 
 #'             facet_grid(drops ~.) +
@@ -10041,7 +10041,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' BSDA::SIGN.test(Window$leakage, md = 0.125, alternative = "greater")
+#' SIGN.test(Window$leakage, md = 0.125, alternative = "greater")
 #' 
 "Window"
 

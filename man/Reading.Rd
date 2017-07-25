@@ -20,7 +20,7 @@ Data for Exercise 1.72 and 2.10
 \examples{
 
 hist(Reading$score, main = "Exercise 1.72", 
-col = "lightgreen", xlab = "Standardized reading score")
+     col = "lightgreen", xlab = "Standardized reading score")
 summary(Reading$score)
 sd(Reading$score)
 

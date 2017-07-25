@@ -16,7 +16,7 @@ Data for Exercise 6.79
 }
 \examples{
 
-BSDA::EDA(Step$score)
+EDA(Step$score)
 t.test(Step$score, mu = 80, alternative = "less")
 wilcox.test(Step$score, mu = 80, alternative = "less")
 

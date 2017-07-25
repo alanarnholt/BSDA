@@ -28,8 +28,8 @@ barplot(t(T1), legend = TRUE, beside = TRUE)
 
 \dontrun{
 ggplot2::ggplot(data = Hodgkin, aes(x = type, fill = response)) + 
-    geom_bar(position = "dodge") + 
-    theme_bw()
+           geom_bar(position = "dodge") + 
+           theme_bw()
 }
 
 }

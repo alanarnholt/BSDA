@@ -31,9 +31,9 @@ cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
 cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
 \dontrun{
 ggplot2::ggplot(data = Dogs, aes(x = reorder(breed, ranking), y = ranking)) + 
-     geom_bar(stat = "identity") + 
-     facet_grid(year ~. ) + 
-     theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) 
+           geom_bar(stat = "identity") + 
+           facet_grid(year ~. ) + 
+           theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) 
 }
 }
 \references{

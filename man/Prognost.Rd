@@ -21,7 +21,7 @@ Data for Exercise 6.61
 }
 \examples{
 
-BSDA::EDA(Prognost$kprs_score)
+EDA(Prognost$kprs_score)
 t.test(Prognost$kprs_score, mu = 9)
 
 }

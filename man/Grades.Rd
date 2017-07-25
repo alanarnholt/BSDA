@@ -20,9 +20,9 @@ hist(Grades$grades, main = "", xlab = "Test grades", right = FALSE)
 
 \dontrun{
 ggplot2::ggplot(data = Grades, aes(x = grades, y = ..density..)) + 
-    geom_histogram(fill = "pink", binwidth = 5, color = "black") + 
-    geom_density(lwd = 2, color = "red") + 
-    theme_bw() 
+           geom_histogram(fill = "pink", binwidth = 5, color = "black") + 
+           geom_density(lwd = 2, color = "red") + 
+           theme_bw() 
 }
 
 }

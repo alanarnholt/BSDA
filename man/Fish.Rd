@@ -25,7 +25,7 @@ tapply(Fish$length, Fish$codend, median, na.rm = TRUE)
 SIGN.test(Fish$length[Fish$codend == "smallmesh"], conf.level = 0.99)
 \dontrun{
 dplyr::group_by(Fish, codend) \%>\%
-    summarize(MEDIAN = median(length, na.rm = TRUE))
+         summarize(MEDIAN = median(length, na.rm = TRUE))
 }
 
 }

@@ -16,7 +16,7 @@ Data for Exercise 6.52
 }
 \examples{
 
-BSDA::SIGN.test(Mental$age, md = 100)
+SIGN.test(Mental$age, md = 100)
 
 }
 \references{

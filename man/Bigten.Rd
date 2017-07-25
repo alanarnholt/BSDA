@@ -29,7 +29,7 @@ boxplot(rate ~ status, data = subset(Bigten, year = "1993-1994"),
 horizontal = TRUE, main = "Graduation Rates 1993-1994")
 with(data = Bigten,
      tapply(rate, list(year, status), mean)
-    )
+)
 
 }
 \references{

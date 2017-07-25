@@ -21,7 +21,7 @@ plot(weight ~ cigarettes, data = Cigarett)
 model <- lm(weight ~ cigarettes, data = Cigarett)
 abline(model)
 with(data = Cigarett,
-cor(weight, cigarettes)
+     cor(weight, cigarettes)
 )
 rm(model)
 

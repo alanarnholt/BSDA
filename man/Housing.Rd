@@ -34,9 +34,9 @@ stripchart(price ~ year, data = Housing, method = "stack",
            pch = 1, col = c("red", "blue"))
 \dontrun{
 ggplot2::ggplot(data = Housing, aes(x = price, fill = year)) + 
-              geom_dotplot() + 
-              facet_grid(year ~ .) + 
-              theme_bw()
+           geom_dotplot() + 
+           facet_grid(year ~ .) + 
+           theme_bw()
 }               
 
 }

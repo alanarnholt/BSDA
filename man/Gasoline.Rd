@@ -20,9 +20,9 @@ stem(Gasoline$price)
 
 \dontrun{
 ggplot2::ggplot(data = Gasoline, aes(x = factor(1), y = price)) + 
-    geom_violin() + 
-    geom_jitter() + 
-    theme_bw()
+           geom_violin() + 
+           geom_jitter() + 
+           theme_bw()
 }
 
 }

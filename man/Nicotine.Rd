@@ -22,7 +22,7 @@ plot(sales ~ nicotine, data = Nicotine)
 abline(model)
 summary(model)
 predict(model, newdata = data.frame(nicotine = 1), 
-     interval = "confidence", level = 0.99)
+        interval = "confidence", level = 0.99)
 
 }
 \references{

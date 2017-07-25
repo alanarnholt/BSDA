@@ -16,7 +16,7 @@ Data for Exercise 5.18
 }
 \examples{
 
-BSDA::EDA(Ticket$time)
+EDA(Ticket$time)
 
 }
 \references{

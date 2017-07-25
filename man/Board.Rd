@@ -23,7 +23,7 @@ tapply(Board$salary, Board$university, summary)
 anova(lm(salary ~ university, data = Board))
 \dontrun{
 dplyr::group_by(Board, university) \%>\%
-summarize(Average = mean(salary))
+         summarize(Average = mean(salary))
 }
 }
 \references{

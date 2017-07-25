@@ -27,14 +27,14 @@ tapply(Smokyph$waterph, Smokyph$code, mean)
 stripchart(waterph ~ code, data = Smokyph, method = "stack",
            pch = 19, col = c("red", "blue"))
            t.test(Smokyph$waterph, mu = 7)
-           BSDA::SIGN.test(Smokyph$waterph, md = 7)
+           SIGN.test(Smokyph$waterph, md = 7)
            t.test(waterph ~ code, data = Smokyph, alternative = "less")
            t.test(waterph ~ code, data = Smokyph, conf.level = 0.90)
  \dontrun{
  ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
-       geom_dotplot() + 
-       facet_grid(code ~ .) + 
-       guides(fill = FALSE)
+            geom_dotplot() + 
+            facet_grid(code ~ .) + 
+            guides(fill = FALSE)
 }
 
 }

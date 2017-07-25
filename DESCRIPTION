@@ -17,5 +17,7 @@ Imports:
     e1071
 License: GPL (>= 2)
 Suggests:
-    ggplot2 (>= 2.1.0)
+    ggplot2 (>= 2.1.0),
+    dplyr,
+    tidyr
 RoxygenNote: 6.0.1

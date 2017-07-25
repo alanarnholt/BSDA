@@ -51,9 +51,9 @@ p1994 <- subset(Homes, year == "1994")
 dplyr::group_by(Homes, year, region) \%>\%
    summarize(AvgPrice = mean(price))
 ggplot2::ggplot(data = Homes, aes(x = region, y = price)) + 
-   geom_boxplot() + 
-   theme_bw() + 
-   facet_grid(year ~ .)
+           geom_boxplot() + 
+           theme_bw() + 
+           facet_grid(year ~ .)
 }
 
 

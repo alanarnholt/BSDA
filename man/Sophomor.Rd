@@ -24,9 +24,9 @@ cor(Sophomor)
 plot(exam ~ gpa, data = Sophomor)
 \dontrun{
 ggplot2::ggplot(data = Sophomor, aes(x = gpa, y = exam)) + 
-   geom_point()
-   ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
-   geom_point()
+           geom_point()
+           ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
+           geom_point()
 }
 
 }

@@ -22,10 +22,10 @@ boxplot(reading ~ brand, data = Scales, col = rainbow(4),
 ylab = "Weight (lbs)")
 \dontrun{
 ggplot2::ggplot(data = Scales, aes(x = brand, y = reading, fill = brand)) + 
-    geom_boxplot() + 
-    labs(y = "weight (lbs)") +
-    theme_bw() + 
-    theme(legend.position = "none") 
+           geom_boxplot() + 
+           labs(y = "weight (lbs)") +
+           theme_bw() + 
+           theme(legend.position = "none") 
 }
 
 }

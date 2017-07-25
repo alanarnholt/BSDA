@@ -18,7 +18,7 @@ Data for Exercise 5.26
 \examples{
 
 stem(Mathcomp$score)
-BSDA::EDA(Mathcomp$score)
+EDA(Mathcomp$score)
 
 }
 \references{

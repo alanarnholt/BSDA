@@ -29,7 +29,7 @@ Data for Example 5.9
 }
 \examples{
 
-BSDA::EDA(Kilowatt$rate)
+EDA(Kilowatt$rate)
 
 }
 \references{

@@ -23,7 +23,7 @@ Selfdefe$differ <- Selfdefe$after - Selfdefe$before
 Selfdefe
 t.test(Selfdefe$differ, alternative = "greater")
 t.test(Selfdefe$after, Selfdefe$before, 
-      paired = TRUE, alternative = "greater")
+       paired = TRUE, alternative = "greater")
 
 }
 \references{

@@ -28,15 +28,15 @@ mean(Framingh$cholest > 200 & Framingh$cholest < 240)
 
 \dontrun{
 ggplot2::ggplot(data = Framingh, aes(x = factor(1), y = cholest)) + 
-geom_boxplot() +                 # boxplot
-labs(x = "") +                   # no x label  
-theme_bw() +                     # black and white theme  
-geom_jitter(width = 0.2) +       # jitter points
-coord_flip()                     # Create horizontal plot
+  geom_boxplot() +                 # boxplot
+  labs(x = "") +                   # no x label  
+  theme_bw() +                     # black and white theme  
+  geom_jitter(width = 0.2) +       # jitter points
+  coord_flip()                     # Create horizontal plot
 ggplot2::ggplot(data = Framingh, aes(x = cholest, y = ..density..)) +
-geom_histogram(fill = "pink", binwidth = 15, color = "black") + 
-geom_density() + 
-theme_bw()
+  geom_histogram(fill = "pink", binwidth = 15, color = "black") + 
+  geom_density() + 
+  theme_bw()
 }
 
 }

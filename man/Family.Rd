@@ -23,9 +23,9 @@ cor(Family$cost, Family$number)
 
 \dontrun{
 ggplot2::ggplot(data = Family, aes(x = number, y = cost)) + 
-   geom_point() + 
-   geom_smooth(method = "lm") + 
-   theme_bw()
+           geom_point() + 
+           geom_smooth(method = "lm") + 
+           theme_bw()
 }
 
 }

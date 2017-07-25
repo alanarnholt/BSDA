@@ -19,7 +19,7 @@ Data for Exercise 6.65
 
 hist(Short$parallax, main = "Problem 6.65", 
 xlab = "", col = "orange")
-BSDA::SIGN.test(Short$parallax, md = 8.798)
+SIGN.test(Short$parallax, md = 8.798)
 t.test(Short$parallax, mu = 8.798)
 
 }

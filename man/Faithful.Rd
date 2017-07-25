@@ -27,10 +27,10 @@ lines(density(Faithful$time))
 
 \dontrun{
 ggplot2::ggplot(data = Faithful, aes(x = time, y = ..density..)) + 
-geom_histogram(binwidth = 5, fill = "pink", col = "black") + 
-geom_density() + 
-theme_bw() + 
-labs(x = "wait time")
+           geom_histogram(binwidth = 5, fill = "pink", col = "black") + 
+           geom_density() + 
+           theme_bw() + 
+           labs(x = "wait time")
 }
 }
 \references{

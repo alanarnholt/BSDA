@@ -20,8 +20,8 @@ Data for Exercise 6.100
 }
 \examples{
 
-BSDA::EDA(Marked$percent)
-BSDA::SIGN.test(Marked$percent, md = 60, alternative = "greater")
+EDA(Marked$percent)
+SIGN.test(Marked$percent, md = 60, alternative = "greater")
 t.test(Marked$percent, mu = 60, alternative = "greater")
 
 }

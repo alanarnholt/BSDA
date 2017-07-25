@@ -31,10 +31,10 @@ barplot(t(T1), beside = TRUE, legend = TRUE)
 
 \dontrun{
 ggplot2::ggplot(data = Heat, aes(x = fuel, fill = location)) + 
-   geom_bar(position = "dodge") + 
-   labs(y = "percent") + 
-   theme_bw() + 
-   theme(axis.text.x = element_text(angle = 30, hjust = 1)) 
+           geom_bar(position = "dodge") + 
+           labs(y = "percent") + 
+           theme_bw() + 
+           theme(axis.text.x = element_text(angle = 30, hjust = 1)) 
 }
 
 }

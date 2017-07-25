@@ -17,7 +17,7 @@ Data for Exercise 5.81
 \examples{
 
 stem(Manager$salary)
-BSDA::SIGN.test(Manager$salary)
+SIGN.test(Manager$salary)
 
 }
 \references{

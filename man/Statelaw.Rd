@@ -22,8 +22,8 @@ Data for Exercise 6.62
 }
 \examples{
 
-BSDA::EDA(Statelaw$cost)
-BSDA::SIGN.test(Statelaw$cost, md = 8, alternative = "less")
+EDA(Statelaw$cost)
+SIGN.test(Statelaw$cost, md = 8, alternative = "less")
 
 }
 \references{

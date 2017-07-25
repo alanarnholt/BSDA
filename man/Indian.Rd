@@ -24,9 +24,9 @@ Data for Exercise 2.95
 
 par(mfrow = c(1, 2))
 plot(`per capita income` ~ `percent high school`, data = Indian, 
-  xlab = "Percent high school graudates", ylab = "Per capita income")
+     xlab = "Percent high school graudates", ylab = "Per capita income")
 plot(`poverty rate` ~ `percent high school`, data = Indian, 
-  xlab = "Percent high school graudates", ylab = "Percent poverty")
+     xlab = "Percent high school graudates", ylab = "Percent poverty")
 par(mfrow = c(1, 1))
 
 }

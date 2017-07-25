@@ -27,9 +27,9 @@ cor(Gpa$hsgpa, Gpa$collgpa)
 
 \dontrun{
 ggplot2::ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
-geom_point() + 
-geom_smooth(method = "lm") + 
-theme_bw()
+           geom_point() + 
+           geom_smooth(method = "lm") + 
+           theme_bw()
 }
 
 

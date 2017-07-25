@@ -16,7 +16,7 @@ Data for Example 6.12
 }
 \examples{
 
-BSDA::SIGN.test(Lethal$survival, md = 45, alternative = "less")
+SIGN.test(Lethal$survival, md = 45, alternative = "less")
 
 
 }

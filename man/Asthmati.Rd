@@ -22,8 +22,7 @@ qqnorm(Asthmati$difference)
 qqline(Asthmati$difference)
 shapiro.test(Asthmati$difference)
 with(data = Asthmati,
-t.test(placebo, drug, paired = TRUE, mu = 0, 
-alternative = "greater")
+     t.test(placebo, drug, paired = TRUE, mu = 0, alternative = "greater")
 )
 
 }

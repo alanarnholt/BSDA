@@ -22,7 +22,7 @@ Data for Exercise 1.53, 1.77, 1.88, 5.66, and 7.50
 \examples{
 
 boxplot(level ~ group, data = Quail, horizontal = TRUE, xlab = "LDL Level",
-col = c("yellow", "lightblue"))
+        col = c("yellow", "lightblue"))
 
 }
 \references{
