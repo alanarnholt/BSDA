@@ -4,7 +4,7 @@
 \name{Spouse}
 \alias{Spouse}
 \title{Convictions in spouse murder cases by gender}
-\format{A data frame/tibble with 540 observations on the following 2 variables.
+\format{A data frame/tibble with 540 observations on two variables
 \describe{ 
 \item{result}{a factor with levels \code{not prosecuted}, \code{pleaded guilty}, \code{convicted}, and \code{acquited}}
 \item{spouse}{a factor with levels \code{husband} and \code{wife}} 

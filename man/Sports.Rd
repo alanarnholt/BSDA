@@ -4,7 +4,7 @@
 \name{Sports}
 \alias{Sports}
 \title{Favorite sport by gender}
-\format{A data frame/tibble with 200 observations on the following 2 variables.
+\format{A data frame/tibble with 200 observations on two variables
 \describe{ 
 \item{gender}{a factor with levels \code{male} and \code{female}}
 \item{sport}{a factor with levels \code{football}, \code{basketball}, \code{baseball}, and \code{tennis}} 

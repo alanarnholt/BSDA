@@ -4,7 +4,7 @@
 \name{Tensile}
 \alias{Tensile}
 \title{Tensile strength of plastic bags from two production runs}
-\format{A data frame/tibble with 72 observations on the following 2 variables.
+\format{A data frame/tibble with 72 observations on two variables
 \describe{
 \item{tensile}{plastic bag tensile strength (pounds per square inch)}
 \item{run}{factor with run number (1 or 2)} 

@@ -4,7 +4,7 @@
 \name{Salinity}
 \alias{Salinity}
 \title{Surface-water salinity measurements from Whitewater Bay, Florida}
-\format{A data frame/tibble with 48 observations on the following variable.
+\format{A data frame/tibble with 48 observations on one variable
 \describe{ 
 \item{salinity}{surface-water salinity value} 
 }}

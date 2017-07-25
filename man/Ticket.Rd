@@ -4,7 +4,7 @@
 \name{Ticket}
 \alias{Ticket}
 \title{Time to complete an airline ticket reservation}
-\format{A data frame/tibble with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{time}{time (in seconds) to check out a reservation}
 }}

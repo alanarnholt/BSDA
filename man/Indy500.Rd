@@ -5,7 +5,7 @@
 \alias{Indy500}
 \title{Qualifying miles per hour and number of previous starts for drivers in 79th
 Indianapolis 500 race}
-\format{A data frame/tibble with 33 observations on the following 4 variables.
+\format{A data frame/tibble with 33 observations on four variables
 \describe{ 
 \item{driver}{a character variable with values \code{andretti},
 \code{bachelart}, \code{boesel}, \code{brayton}, \code{c.guerrero},
@@ -15,7 +15,7 @@ Indianapolis 500 race}
 \code{matsuda}, \code{matsushita}, \code{pruett}, \code{r.guerrero},
 \code{rahal}, \code{ribeiro}, \code{salazar}, \code{sharp}, \code{sullivan},
 \code{tracy}, \code{vasser}, \code{villeneuve}, and \code{zampedri}}
-\item{qualif}{qualifying speed (mph)} 
+\item{qualif}{qualifying speed (in mph)} 
 \item{starts}{number of Indianapolis 500 starts} 
 \item{group}{a numeric vector where 1 indicates the driver has 4 or fewer 
 Indianapolis 500 starts and a 2 for drivers with 5 or more Indianapolis 500 starts} 

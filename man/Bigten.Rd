@@ -4,12 +4,12 @@
 \name{Bigten}
 \alias{Bigten}
 \title{Graduation rates for student athletes and nonathletes in the Big Ten Conf.}
-\format{A data frame/tibble  with 44 observations on the following four variables.
+\format{A data frame/tibble  with 44 observations on the following four variables
 \describe{ 
-\item{school}{a factor with levels \code{Illinois}
-\code{Indiana} \code{Iowa} \code{Michigan} \code{Michigan State}
-\code{Minnesota} \code{Northwestern} \code{Ohio State} \code{Penn State}
-\code{Purdue} \code{Wisconsin}} 
+\item{school}{a factor with levels \code{Illinois},
+\code{Indiana}, \code{Iowa}, \code{Michigan}, \code{Michigan State},
+\code{Minnesota}, \code{Northwestern}, \code{Ohio State}, \code{Penn State},
+\code{Purdue}, and \code{Wisconsin}} 
 \item{rate}{graduation rate} 
 \item{year}{factor with two levels \code{1984-1985} and \code{1993-1994}}
 \item{status}{factor with two levels \code{athlete} and \code{student}}

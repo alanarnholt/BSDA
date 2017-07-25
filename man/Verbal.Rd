@@ -5,7 +5,7 @@
 \alias{Verbal}
 \title{Verbal test scores and number of library books checked out for 15 eighth
 graders}
-\format{A data frame/tibble with 15 observations on the following 2 variables.
+\format{A data frame/tibble with 15 observations on two variables
 \describe{ 
 \item{number}{number of library books checked out} 
 \item{verbal}{verbal test score}

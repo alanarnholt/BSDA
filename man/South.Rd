@@ -4,7 +4,7 @@
 \name{South}
 \alias{South}
 \title{Murder rates for 30 cities in the South}
-\format{A data frame/tibble with 31 observations on the following variable.
+\format{A data frame/tibble with 31 observations on one variable
 \describe{ 
 \item{rate}{murder rate per 100,000 people} 
 }}

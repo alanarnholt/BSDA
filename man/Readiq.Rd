@@ -4,7 +4,7 @@
 \name{Readiq}
 \alias{Readiq}
 \title{Reading scores versus IQ scores}
-\format{A data frame/tibble with 14 observations on the following 2 variables.
+\format{A data frame/tibble with 14 observations on two variables
 \describe{ 
 \item{reading}{reading achievement score} 
 \item{iq}{IQ score} 

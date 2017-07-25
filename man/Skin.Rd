@@ -4,7 +4,7 @@
 \name{Skin}
 \alias{Skin}
 \title{Survival times of closely and poorly matched skin grafts on burn patients}
-\format{A data frame/tibble with 11 observations on the following 4 variables.
+\format{A data frame/tibble with 11 observations on four variables
 \describe{ 
 \item{patient}{patient identification number}
 \item{close}{graft survival time in days for a closely matched skin graft on the same burn patient} 

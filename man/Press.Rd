@@ -5,7 +5,7 @@
 \alias{Press}
 \title{Degree of confidence in the press versus education level for 20 randomly
 selected persons}
-\format{A data frame/tibble with 20 observations on the following 2 variables.
+\format{A data frame/tibble with 20 observations on two variables
 \describe{ 
 \item{education_yrs}{years of education} 
 \item{confidence}{degree of confidence in the press (the higher the score, the more confidence)} 

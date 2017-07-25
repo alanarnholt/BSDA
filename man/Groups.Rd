@@ -4,7 +4,7 @@
 \name{Groups}
 \alias{Groups}
 \title{An illustration of analysis of variance}
-\format{A data frame/tibble with 78 observations on the following 2 variables.
+\format{A data frame/tibble with 78 observations on two variables
 \describe{ 
 \item{group}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 \item{response}{a numeric vector} 

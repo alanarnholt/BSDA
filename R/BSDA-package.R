@@ -16,7 +16,7 @@ NULL
 #' 
 #' @name Abbey
 #' @docType data
-#' @format A data frame/tibble with 50 observations on the following variable.
+#' @format A data frame/tibble with 50 observations on one variable
 #' \describe{ 
 #' \item{price}{daily price returns (in pence) of Abbey National shares} 
 #' }
@@ -44,7 +44,7 @@ NULL
 #' 
 #' @name Abc
 #' @docType data
-#' @format A data frame/tibble with 54 observations on two variables.
+#' @format A data frame/tibble with 54 observations on two variables
 #' \describe{ 
 #' \item{response}{a numeric vector}
 #' \item{group}{a character vector \code{A}, \code{B}, and \code{C}}
@@ -70,7 +70,7 @@ NULL
 #' 
 #' @name Abilene
 #' @docType data
-#' @format A data frame/tibble with 16 observations on three variables.
+#' @format A data frame/tibble with 16 observations on three variables
 #' \describe{ 
 #' \item{crimetype}{a character variable with values \code{Aggravated
 #' assault}, \code{Arson}, \code{Burglary}, \code{Forcible rape}, \code{Larceny
@@ -99,9 +99,9 @@ NULL
 #' \dontrun{
 #' library(ggplot2)
 #' ggplot(data = Abilene, aes(x = crimetype, y = number, fill = year)) +
-#' geom_bar(stat = "identity", position = "dodge") +
-#' theme_bw() +
-#' theme(axis.text.x = element_text(angle = 30, hjust = 1))
+#'   geom_bar(stat = "identity", position = "dodge") +
+#'   theme_bw() +
+#'   theme(axis.text.x = element_text(angle = 30, hjust = 1))
 #' }
 #' 
 "Abilene"
@@ -117,7 +117,7 @@ NULL
 #' 
 #' @name Ability
 #' @docType data
-#' @format A data frame/tibble with 400 observations on two variables.
+#' @format A data frame/tibble with 400 observations on two variables
 #' \describe{ 
 #' \item{gender}{a factor with levels \code{girls} and \code{boys}} 
 #' \item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
@@ -144,21 +144,21 @@ NULL
 #' 
 #' @name Abortion
 #' @docType data
-#' @format A data frame/tibble with 51 observations on the following 10 variables.
+#' @format A data frame/tibble with 51 observations on the following 10 variables:
 #' \describe{ 
-#' \item{state}{a character variable with values \code{alabama}
-#' \code{alaska} \code{arizona} \code{arkansas} \code{california}
-#' \code{colorado} \code{connecticut} \code{delaware} \code{dist of columbia}
-#' \code{florida} \code{georgia} \code{hawaii} \code{idaho} \code{illinois}
-#' \code{indiana} \code{iowa} \code{kansas} \code{kentucky} \code{louisiana}
-#' \code{maine} \code{maryland} \code{massachusetts} \code{michigan}
-#' \code{minnesota} \code{mississippi} \code{missouri} \code{montana}
-#' \code{nebraska} \code{nevada} \code{new hampshire} \code{new jersey}
-#' \code{new mexico} \code{new york} \code{north carolina} \code{north dakota}
-#' \code{ohio} \code{oklahoma} \code{oregon} \code{pennsylvania} \code{rhode
-#' island} \code{south carolina} \code{south dakota} \code{tennessee}
-#' \code{texas} \code{utah} \code{vermont} \code{virginia} \code{washington}
-#' \code{west virginia} \code{wisconsin} \code{wyoming}}
+#' \item{state}{a character variable with values \code{alabama},
+#' \code{alaska}, \code{arizona}, \code{arkansas}, \code{california},
+#' \code{colorado}, \code{connecticut}, \code{delaware}, \code{dist of columbia},
+#' \code{florida,} \code{georgia}, \code{hawaii}, \code{idaho}, \code{illinois},
+#' \code{indiana}, \code{iowa}, \code{kansas}, \code{kentucky}, \code{louisiana},
+#' \code{maine}, \code{maryland}, \code{massachusetts}, \code{michigan},
+#' \code{minnesota}, \code{mississippi}, \code{missouri}, \code{montana},
+#' \code{nebraska}, \code{nevada}, \code{new hampshire}, \code{new jersey},
+#' \code{new mexico}, \code{new york}, \code{north carolina}, \code{north dakota},
+#' \code{ohio}, \code{oklahoma}, \code{oregon}, \code{pennsylvania}, \code{rhode
+#' island}, \code{south carolina}, \code{south dakota}, \code{tennessee},
+#' \code{texas}, \code{utah}, \code{vermont}, \code{virginia}, \code{washington},
+#' \code{west virginia}, \code{wisconsin}, and \code{wyoming}}
 #' \item{region}{a character variable with values \code{midwest} \code{northeast}
 #' \code{south} \code{west}} 
 #' \item{regcode}{a numeric vector}
@@ -191,7 +191,7 @@ NULL
 #' 
 #' @name Absent
 #' @docType data
-#' @format A data frame/tibble with 20 observations on one variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{days}{a numeric vector} 
 #' }
@@ -218,7 +218,7 @@ NULL
 #' 
 #' @name Achieve
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following two variables.
+#' @format A data frame/tibble with 25 observations on two variables
 #' \describe{ 
 #' \item{score}{mathematics achiement score} 
 #' \item{gender}{a factor with 2 levels \code{boys} and \code{girls}} 
@@ -244,7 +244,7 @@ NULL
 #' 
 #' @name Adsales
 #' @docType data
-#' @format A data frame/tibble with six observations on the following three variables.
+#' @format A data frame/tibble with six observations on three variables
 #' \describe{ 
 #' \item{month}{a character vector listing month}
 #' \item{ads}{a numeric vector containing number of ads} 
@@ -274,7 +274,7 @@ NULL
 #' 
 #' @name Aggress
 #' @docType data
-#' @format A data frame/tibble with 28 observations on the following variable.
+#' @format A data frame/tibble with 28 observations on one variable
 #' \describe{ 
 #' \item{aggres}{measure of aggresive tendency, ranging from 10-50} 
 #' }
@@ -302,21 +302,21 @@ NULL
 #' 
 #' @name Aid
 #' @docType data
-#' @format A data frame/tibble with 51 observations on the following two variables.
+#' @format A data frame/tibble with 51 observations on two variables
 #' \describe{ 
-#' \item{state}{a factor with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
-#' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
-#' \code{Illinois} \code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky}
-#' \code{Louisiana} \code{Maine} \code{Maryland} \code{Massachusetts}
-#' \code{Michigan} \code{Minnesota} \code{Mississippi} \code{Missour}
-#' \code{Montana} \code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New
-#' Jersey} \code{New Mexico} \code{New York} \code{North Carolina} \code{North
-#' Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
-#' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
-#' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
-#' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
+#' \item{state}{a factor with levels \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{Delaware}, \code{District of
+#' Colunbia}, \code{Florida}, \code{Georgia}, \code{Hawaii}, \code{Idaho},
+#' \code{Illinois}, \code{Indiana}, \code{Iowa}, \code{Kansas}, \code{Kentucky},
+#' \code{Louisiana}, \code{Maine}, \code{Maryland}, \code{Massachusetts},
+#' \code{Michigan}, \code{Minnesota}, \code{Mississippi}, \code{Missour},
+#' \code{Montana}, \code{Nebraska}, \code{Nevada}, \code{New Hampshire}, \code{New
+#' Jersey}, \code{New Mexico}, \code{New York}, \code{North Carolina}, \code{North
+#' Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
+#' \code{Rhode Island}, \code{South Carolina}, \code{South Dakota},
+#' \code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia},
+#' \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 #' \item{payment}{average monthly payment per person in a family} 
 #' }
 #' 
@@ -346,7 +346,7 @@ NULL
 #' 
 #' @name Aids
 #' @docType data
-#' @format A data frame/tibble with 295 observations on the following three variables.
+#' @format A data frame/tibble with 295 observations on three variables
 #' \describe{ 
 #' \item{duration}{time (in months) from HIV infection to the clinical manifestation of full-blown AIDS} 
 #' \item{age}{age (in years) of patient} 
@@ -371,7 +371,7 @@ NULL
 #' SIGN.test(duration, md = 24, alternative = "greater")
 #' )
 #' 
-NULL
+"Aids"
 
 
 
@@ -384,7 +384,7 @@ NULL
 #' 
 #' @name Airdisasters
 #' @docType data
-#' @format A data frame /tibble with 141 observations on the following seven variables.
+#' @format A data frame /tibble with 141 observations on the following seven variables
 #' \describe{ 
 #' \item{year}{a numeric vector indicating the year of an aircraft accident} 
 #' \item{deaths}{a numeric vector indicating the number of deaths of an aircraft accident}
@@ -419,7 +419,7 @@ NULL
 #' 
 #' @name Airline
 #' @docType data
-#' @format A data frame/tibble with 11 observations on the following three variables.
+#' @format A data frame/tibble with 11 observations on three variables
 #' \describe{ 
 #' \item{airline}{a charater variable with values \code{Alaska}
 #' \code{Amer West} \code{American} \code{Continental} \code{Delta}
@@ -455,7 +455,7 @@ NULL
 #' 
 #' @name Alcohol
 #' @docType data
-#' @format A data frame/tibble with 14 observations on the following variable.
+#' @format A data frame/tibble with 14 observations on one variable
 #' \describe{ 
 #' \item{age}{age when individual started drinking} 
 #' }
@@ -478,7 +478,7 @@ NULL
 #' 
 #' @name Allergy
 #' @docType data
-#' @format A data frame/tibble with 406 observations on two variables.
+#' @format A data frame/tibble with 406 observations on two variables
 #' \describe{ 
 #' \item{event}{a factor with levels \code{insomnia},
 #' \code{headache}, and \code{drowsiness}} 
@@ -510,7 +510,7 @@ NULL
 #' 
 #' @name Anesthet
 #' @docType data
-#' @format A  with 10 observations on the following variable.
+#' @format A  with 10 observations on one variable
 #' \describe{ 
 #' \item{recover}{recovery time (in hours)} 
 #' }
@@ -538,7 +538,7 @@ NULL
 #' 
 #' @name Anxiety
 #' @docType data
-#' @format A data frame/tibble  with 20 observations on the following two variables.
+#' @format A data frame/tibble  with 20 observations on two variables
 #' \describe{ 
 #' \item{anxiety}{anxiety score before a major math test} 
 #' \item{math}{math test score} 
@@ -570,7 +570,7 @@ NULL
 #' 
 #' @name Apolipop
 #' @docType data
-#' @format A data frame/tibble  with 15 observations on the following two variables.
+#' @format A data frame/tibble  with 15 observations on two variables
 #' \describe{ 
 #' \item{coffee}{number of cups of coffee per day} 
 #' \item{apolipB}{level of apoliprotein B} 
@@ -600,7 +600,7 @@ NULL
 #' 
 #' @name Append
 #' @docType data
-#' @format A data frame/tibble  with 20 observations on the following variable.
+#' @format A data frame/tibble  with 20 observations on one variable
 #' \describe{ 
 #' \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 #' }
@@ -630,7 +630,7 @@ NULL
 #' 
 #' @name Appendec
 #' @docType data
-#' @format A data frame/tibble  with 59 observations on the following two variables.
+#' @format A data frame/tibble  with 59 observations on two variables
 #' \describe{ 
 #' \item{cost}{median costs of appendectomies at hospitals across the state of North Carolina in 1992} 
 #' \item{region}{a vector classifying each hospital as rural, regional, or metropolitan} 
@@ -658,7 +658,7 @@ NULL
 #' 
 #' @name Aptitude
 #' @docType data
-#' @format A data frame/tibble  with 8 observations on the following two variables.
+#' @format A data frame/tibble  with 8 observations on two variables
 #' \describe{ 
 #' \item{aptitude}{aptitude test scores}
 #' \item{product}{productivity scores} 
@@ -689,7 +689,7 @@ NULL
 #' 
 #' @name Archaeo
 #' @docType data
-#' @format A data frame/tibble  with 60 observations on the following two variables.
+#' @format A data frame/tibble  with 60 observations on two variables
 #' \describe{ 
 #' \item{age}{number of years before 1983 - the year the data were obtained}
 #' \item{phase}{Ceramic Phase numbers} 
@@ -719,7 +719,7 @@ NULL
 #' 
 #' @name Arthriti
 #' @docType data
-#' @format A data frame/tibble  with 51 observations on the following two variables.
+#' @format A data frame/tibblewith 51 observations on two variables
 #' \describe{ 
 #' \item{time}{time (measured in days) until an arthritis sufferer experienced relief} 
 #' \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -745,7 +745,7 @@ NULL
 #' 
 #' @name Artifici
 #' @docType data
-#' @format A data frame/tibble  with 15 observations on the following variable.
+#' @format A data frame/tibble with 15 observations on one variable
 #' \describe{ 
 #' \item{duration}{duration (in hours) for transplant} 
 #' }
@@ -773,7 +773,7 @@ NULL
 #' 
 #' @name Asprin
 #' @docType data
-#' @format A data frame/tibble  with 15 observations on two variables.
+#' @format A data frame/tibble with 15 observations on two variables
 #' \describe{ 
 #' \item{time}{time (in seconds) for aspirin to dissolve} 
 #' \item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
@@ -799,7 +799,7 @@ NULL
 #' 
 #' @name Asthmati
 #' @docType data
-#' @format A data frame/tibble  with nine observations on the following three variables.
+#' @format A data frame/tibble  with nine observations on three variables
 #' \describe{
 #' \item{drug}{asthmatic relief index for patients given a drug} 
 #' \item{placebo}{asthmatic relief index for patients given a placebo} 
@@ -831,7 +831,7 @@ NULL
 #' 
 #' @name Attorney
 #' @docType data
-#' @format A data frame/tibble  with 88 observations on the following three variables.
+#' @format A data frame/tibble with 88 observations on three variables
 #' \describe{ 
 #' \item{staff}{U.S. attorneys' office staff per 1 million population} 
 #' \item{convict}{U.S. attorneys' office convictions per 1 million population} 
@@ -886,7 +886,7 @@ NULL
 #' 
 #' @name Autogear
 #' @docType data
-#' @format A data frame/tibble  with 20 observations on the following 2 variables.
+#' @format A data frame/tibble  with 20 observations on two variables
 #' \describe{ 
 #' \item{defectives}{number of defective gears in the production of 100 gears per day} 
 #' \item{manufacturer}{a factor with levels \code{A} and \code{B}} 
@@ -913,7 +913,7 @@ NULL
 #' 
 #' @name Backtoback
 #' @docType data
-#' @format A data frame/tibble  with 24 observations on the following two variables.
+#' @format A data frame/tibble with 24 observations on two variables
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' \item{group}{a numeric vector} 
@@ -939,7 +939,7 @@ NULL
 #' 
 #' @name Bbsalaries
 #' @docType data
-#' @format A data frame/tibble  with 142 observations on two variables.
+#' @format A data frame/tibble  with 142 observations on two variables
 #' \describe{ 
 #' \item{salary}{1999 salary for baseball player} 
 #' \item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
@@ -966,12 +966,12 @@ NULL
 #' 
 #' @name Bigten
 #' @docType data
-#' @format A data frame/tibble  with 44 observations on the following four variables.
+#' @format A data frame/tibble  with 44 observations on the following four variables
 #' \describe{ 
-#' \item{school}{a factor with levels \code{Illinois}
-#' \code{Indiana} \code{Iowa} \code{Michigan} \code{Michigan State}
-#' \code{Minnesota} \code{Northwestern} \code{Ohio State} \code{Penn State}
-#' \code{Purdue} \code{Wisconsin}} 
+#' \item{school}{a factor with levels \code{Illinois},
+#' \code{Indiana}, \code{Iowa}, \code{Michigan}, \code{Michigan State},
+#' \code{Minnesota}, \code{Northwestern}, \code{Ohio State}, \code{Penn State},
+#' \code{Purdue}, and \code{Wisconsin}} 
 #' \item{rate}{graduation rate} 
 #' \item{year}{factor with two levels \code{1984-1985} and \code{1993-1994}}
 #' \item{status}{factor with two levels \code{athlete} and \code{student}}
@@ -1003,7 +1003,7 @@ NULL
 #' 
 #' @name Biology
 #' @docType data
-#' @format A data frame/tibble  with 30 observations on the following variable.
+#' @format A data frame/tibble  with 30 observations on one variable
 #' \describe{ 
 #' \item{score}{test scores on the first test in a beginning biology class} 
 #' }
@@ -1029,21 +1029,21 @@ NULL
 #' 
 #' @name Birth
 #' @docType data
-#' @format A data frame/tibble  with 51 observations on the following three variables.
+#' @format A data frame/tibble  with 51 observations on three variables
 #' \describe{ 
-#' \item{state}{a character with levels \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
-#' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
-#' \code{Illinois} \code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky}
-#' \code{Louisiana} \code{Maine} \code{Maryland} \code{Massachusetts}
-#' \code{Michigan} \code{Minnesota} \code{Mississippi} \code{Missour}
-#' \code{Montana} \code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New
-#' Jersey} \code{New Mexico} \code{New York} \code{North Carolina} \code{North
-#' Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
-#' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
-#' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
-#' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
+#' \item{state}{a character with levels \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{Delaware}, \code{District of
+#' Colunbia}, \code{Florida}, \code{Georgia}, \code{Hawaii}, \code{Idaho},
+#' \code{Illinois}, \code{Indiana}, \code{Iowa}, \code{Kansas}, \code{Kentucky},
+#' \code{Louisiana}, \code{Maine}, \code{Maryland}, \code{Massachusetts},
+#' \code{Michigan}, \code{Minnesota}, \code{Mississippi}, \code{Missour},
+#' \code{Montana}, \code{Nebraska}, \code{Nevada}, \code{New Hampshire}, \code{New
+#' Jersey}, \code{New Mexico}, \code{New York}, \code{North Carolina}, \code{North
+#' Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
+#' \code{Rhode Island}, \code{South Carolina}, \code{South Dakota},
+#' \code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia},
+#' \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 #' \item{rate}{live birth rates per 1000 population} 
 #' \item{year}{a factor with levels \code{1990} and \code{1998}} 
 #' }
@@ -1078,7 +1078,7 @@ NULL
 #' 
 #' @name Blackedu
 #' @docType data
-#' @format A data frame/tibble  with 3800 observations on two variables.
+#' @format A data frame/tibble  with 3800 observations on two variables
 #' \describe{
 #' \item{gender}{a factor with levels \code{Female} and \code{Male}}
 #' \item{education}{a factor with levels \code{High school dropout},
@@ -1110,7 +1110,7 @@ NULL
 #' 
 #' @name Blood
 #' @docType data
-#' @format A data frame/tibble  with 15 observations on the following two variables.
+#' @format A data frame/tibble with 15 observations on the following two variables
 #' \describe{ 
 #' \item{machine}{blood pressure recorded from an automated blood pressure machine} 
 #' \item{expert}{blood pressure recorded by an expert using an at-home device} 
@@ -1140,7 +1140,7 @@ NULL
 #' 
 #' @name Board
 #' @docType data
-#' @format A data frame/tibble  with 7 observations on the following three variables.
+#' @format A data frame/tibble with 7 observations on three variables
 #' \describe{ 
 #' \item{salary}{1999 salary (in $1000) for board directors} 
 #' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -1154,7 +1154,10 @@ NULL
 #'         ylab = "Income")
 #' tapply(Board$salary, Board$university, summary)
 #' anova(lm(salary ~ university, data = Board))
-#' 
+#' \dontrun{
+#' dplyr::group_by(Board, university) %>%
+#' summarize(Average = mean(salary))
+#' }
 "Board"
 
 
@@ -1166,7 +1169,7 @@ NULL
 #' 
 #' @name Bones
 #' @docType data
-#' @format A data frame/tibble  with 70 observations on two variables.
+#' @format A data frame/tibble  with 70 observations on two variables
 #' \describe{ 
 #' \item{density}{bone density measurements}
 #' \item{group}{a factor with levels \code{active} and \code{nonactive}} 
@@ -1194,7 +1197,7 @@ NULL
 #' 
 #' @name Books
 #' @docType data
-#' @format A data frame/tibble  with 17 observations on the following two variables.
+#' @format A data frame/tibble  with 17 observations on  two variables
 #' \describe{ 
 #' \item{book}{number of books read} 
 #' \item{spelling}{spelling score} 
@@ -1222,7 +1225,7 @@ NULL
 #' 
 #' @name Bookstor
 #' @docType data
-#' @format A data frame/tibble  with 72 observations on 2 variables.
+#' @format A data frame/tibble  with 72 observations on two variables
 #' \describe{ 
 #' \item{dollars}{money obtained for selling textbooks} 
 #' \item{store}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -1249,7 +1252,7 @@ NULL
 #' 
 #' @name Brain
 #' @docType data
-#' @format A data frame/tibble  with 28 observations on the following three variables.
+#' @format A data frame/tibble  with 28 observations on three variables
 #' \describe{ 
 #' \item{species}{a factor with levels \code{African
 #' elephant}, \code{Asian Elephant}, \code{Brachiosaurus}, \code{Cat},
@@ -1310,7 +1313,7 @@ NULL
 #' 
 #' @name Bumpers
 #' @docType data
-#' @format A data frame/tibble  with 23 observations on the following two variables.
+#' @format A data frame/tibble with 23 observations on two variables
 #' \describe{ 
 #' \item{car}{a factor with levels \code{Buick Century},
 #' \code{Buick Skylark}, \code{Chevrolet Cavalier}, \code{Chevrolet Corsica},
@@ -1348,7 +1351,7 @@ NULL
 #' 
 #' @name Bus
 #' @docType data
-#' @format A data frame/tibble  with 29363 observations on two variables.
+#' @format A data frame/tibble  with 29363 observations on two variables
 #' \describe{ 
 #' \item{attendance}{a factor with levels \code{absent} and
 #' \code{present}} 
@@ -1376,7 +1379,7 @@ NULL
 #' 
 #' @name Bypass
 #' @docType data
-#' @format A data frame/tibble  with 17 observations on the following two variables.
+#' @format A data frame/tibble  with 17 observations on two variables
 #' \describe{ 
 #' \item{hospital}{a factor with levels \code{Carolinas Med
 #' Ct}, \code{Duke Med Ct}, \code{Durham Regional}, \code{Forsyth Memorial},
@@ -1414,7 +1417,7 @@ NULL
 #' 
 #' @name Cabinets
 #' @docType data
-#' @format A data frame/tibble  with 20 observations on the following three variables.
+#' @format A data frame/tibble with 20 observations on three variables
 #' \describe{ 
 #' \item{home}{a numeric vector} 
 #' \item{supplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
@@ -1450,7 +1453,7 @@ NULL
 #' 
 #' @name Cancer
 #' @docType data
-#' @format A data frame/tibble  with 64 observations on two variables.
+#' @format A data frame/tibble  with 64 observations on two variables
 #' \describe{ 
 #' \item{survival}{survival time (in days) of terminal patients 
 #' treated with vitamin C}
@@ -1491,7 +1494,7 @@ NULL
 #' 
 #' @name Carbon
 #' @docType data
-#' @format A data frame/tibble  with 24 observations on two variables.
+#' @format A data frame/tibble  with 24 observations on two variables
 #' \describe{ 
 #' \item{CO}{carbon monoxide measured (in parts per million)} 
 #' \item{site}{a factor with levels \code{SiteA}, \code{SiteB}, and \code{SiteC}} 
@@ -1517,7 +1520,7 @@ NULL
 #' 
 #' @name Cat
 #' @docType data
-#' @format A data frame/tibble  with 17 observations on the following variable.
+#' @format A data frame/tibble  with 17 observations on one variable
 #' \describe{ 
 #' \item{score}{reading score on the California Achievement Test} 
 #' }
@@ -1544,7 +1547,7 @@ NULL
 #' 
 #' @name Censored
 #' @docType data
-#' @format A data frame/tibble  with 121 observations on the following 3 variables.
+#' @format A data frame/tibble  with 121 observations on three variables
 #' \describe{ 
 #' \item{survival}{survival time (in days) of patients with small cell lung cancer} 
 #' \item{treatment}{a factor with levels \code{armA} and \code{armB} indicating the 
@@ -1577,7 +1580,7 @@ NULL
 #' 
 #' @name Challeng
 #' @docType data
-#' @format A data frame/tibble  with 25 observations on the following four variables.
+#' @format A data frame/tibble  with 25 observations on four variables
 #' \describe{ 
 #' \item{flight}{a character variable indicating the flight}
 #' \item{date}{date of the flight} 
@@ -1624,7 +1627,7 @@ NULL
 #' 
 #' @name Chemist
 #' @docType data
-#' @format A data frame/tibble  with 50 observations on the following variable.
+#' @format A data frame/tibble with 50 observations on one variable
 #' \describe{ 
 #' \item{salary}{starting salary (in dollars) for chemistry major} 
 #' }
@@ -1649,7 +1652,7 @@ NULL
 #' 
 #' @name Chesapea
 #' @docType data
-#' @format A data frame/tibble  with 16 observations on the following variable.
+#' @format A data frame/tibble with 16 observations on one variable
 #' \describe{ 
 #' \item{salinity}{surface salinity measurements (in parts per 1000) for station 11, 
 #' offshore from Annanapolis, Maryland, on July 3-4, 1927.} 
@@ -1681,7 +1684,7 @@ NULL
 #' 
 #' @name Chevy
 #' @docType data
-#' @format A data frame/tibble  with 67 observations on two variables.
+#' @format A data frame/tibble with 67 observations on two variables
 #' \describe{ 
 #' \item{year}{a factor with levels \code{1988-90} and
 #' \code{1991-93}} 
@@ -1714,7 +1717,7 @@ NULL
 #' 
 #' @name Chicken
 #' @docType data
-#' @format A data frame/tibble  with 13 observations on the following three variables.
+#' @format A data frame/tibble with 13 observations onthree variables
 #' \describe{ 
 #' \item{gain}{weight gain over a specified period} 
 #' \item{feed}{a factor with levels \code{ration1}, \code{ration2}, 
@@ -1742,7 +1745,7 @@ NULL
 #' 
 #' @name Chipavg
 #' @docType data
-#' @format A data frame/tibble  with 30 observations on the following three variables.
+#' @format A data frame/tibble with 30 observations on three variables
 #' \describe{ 
 #' \item{wafer1}{thickness of the oxide layer for \code{wafer1}} 
 #' \item{wafer2}{thickness of the oxide layer for \code{wafer2}}
@@ -1780,7 +1783,7 @@ NULL
 #' 
 #' @name Chips
 #' @docType data
-#' @format A data frame/tibble  with 30 observations on the following eight variables.
+#' @format A data frame/tibble  with 30 observations on eight variables
 #' \describe{ 
 #' \item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
 #' \item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
@@ -1818,7 +1821,7 @@ NULL
 #' 
 #' @name Cigarett
 #' @docType data
-#' @format A data frame/tibble  with 16 observations on the following two variables.
+#' @format A data frame/tibble with 16 observations on two variables
 #' \describe{ 
 #' \item{cigarettes}{mothers' estimated average number of cigarettes smoked per day} 
 #' \item{weight}{children's birth weights (in pounds)} 
@@ -1849,7 +1852,7 @@ NULL
 #' 
 #' @name Cigar
 #' @docType data
-#' @format A data frame/tibble  with 100 observations on the following two variables.
+#' @format A data frame/tibble with 100 observations on two variables
 #' \describe{ 
 #' \item{tar}{amount of tar (measured in milligrams)}
 #' \item{brand}{a factor indicating cigarette brand with levels \code{brandA}, \code{brandB},
@@ -1876,7 +1879,7 @@ NULL
 #' 
 #' @name Citrus
 #' @docType data
-#' @format A data frame/tibble  with nine observations on the following two variables.
+#' @format A data frame/tibble with nine observations on two variables
 #' \describe{ 
 #' \item{age}{age of children} 
 #' \item{percent}{percent peak bone density} 
@@ -1904,7 +1907,7 @@ NULL
 #' 
 #' @name Clean
 #' @docType data
-#' @format A data frame/tibble  with 45 observations on the following two variables.
+#' @format A data frame/tibble with 45 observations on two variables
 #' \describe{ 
 #' \item{clean}{residual contaminants} 
 #' \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -1930,7 +1933,7 @@ NULL
 #' 
 #' @name Coaxial
 #' @docType data
-#' @format A data frame/tibble  with 45 observations on the following two variables.
+#' @format A data frame/tibble with 45 observations on two variables
 #' \describe{ 
 #' \item{signal}{signal loss per 1000 feet} 
 #' \item{cable}{factor with three levels of coaxial cable \code{typeA}, 
@@ -1957,7 +1960,7 @@ NULL
 #' 
 #' @name Coffee
 #' @docType data
-#' @format A data frame/tibble  with 9 observations on the following three variables.
+#' @format A data frame/tibble with nine observations on three variables
 #' \describe{ 
 #' \item{without}{workers' productivity scores without a coffee break} 
 #' \item{with}{workers' productivity scores with a coffee break}
@@ -1988,7 +1991,7 @@ NULL
 #' 
 #' @name Coins
 #' @docType data
-#' @format A data frame/tibble  with 12 observations on the following variable.
+#' @format A data frame/tibble with 12 observations on one variable
 #' \describe{ 
 #' \item{return}{yearly returns on each of 12 possible investments} 
 #' }
@@ -2013,7 +2016,7 @@ NULL
 #' 
 #' @name Commute
 #' @docType data
-#' @format A data frame/tibble  with 39 observations on the following three variables.
+#' @format A data frame/tibble with 39 observations on three variables
 #' \describe{ 
 #' \item{city}{a factor with levels \code{Atlanta},
 #' \code{Baltimore}, \code{Boston}, \code{Buffalo}, \code{Charlotte},
@@ -2062,7 +2065,7 @@ NULL
 #' 
 #' @name Concept
 #' @docType data
-#' @format A data frame/tibble  with 28 observations on the following variable.
+#' @format A data frame/tibble with 28 observations on one variable
 #' \describe{ 
 #' \item{self}{Tennessee self concept scores} 
 #' }
@@ -2093,7 +2096,7 @@ NULL
 #' 
 #' @name Concrete
 #' @docType data
-#' @format A data frame/tibble  with 20 observations on the following 2 variables.
+#' @format A data frame/tibble with 20 observations on two variables
 #' \describe{ 
 #' \item{strength}{comprehensive strength (in pounds per square inch)} 
 #' \item{method}{factor with levels \code{new} and \code{old} indicating the 
@@ -2120,7 +2123,7 @@ NULL
 #' 
 #' @name Corn
 #' @docType data
-#' @format A data frame/tibble  with 12 observations on the following three variables.
+#' @format A data frame/tibble with 12 observations on three variables
 #' \describe{ 
 #' \item{new}{corn yield with new meathod} 
 #' \item{standard}{corn yield with standard method}
@@ -2150,7 +2153,7 @@ NULL
 #' 
 #' @name Correlat
 #' @docType data
-#' @format A data frame/tibble  with 13 observations on the following two variables.
+#' @format A data frame/tibble with 13 observations on two variables
 #' \describe{ 
 #' \item{x}{a numeric vector} 
 #' \item{y}{a numeric vector} 
@@ -2178,7 +2181,7 @@ NULL
 #' 
 #' @name Counsel
 #' @docType data
-#' @format A data frame/tibble  with 18 observations on the following variable.
+#' @format A data frame/tibble with 18 observations on one variable
 #' \describe{ 
 #' \item{score}{standardized psychology scores after a counseling process} 
 #' }
@@ -2203,7 +2206,7 @@ NULL
 #' 
 #' @name Cpi
 #' @docType data
-#' @format A data frame/tibble  with 20 observations on the following two variables.
+#' @format A data frame/tibble with 20 observations on two variables
 #' \describe{ 
 #' \item{year}{year} 
 #' \item{cpi}{consumer price index} 
@@ -2232,7 +2235,7 @@ NULL
 #' 
 #' @name Crime
 #' @docType data
-#' @format A data frame/tibble  with 102 observations on the following three variables.
+#' @format A data frame/tibble with 102 observations on three variables
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama},
 #' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -2274,7 +2277,7 @@ NULL
 #' 
 #' @name Darwin
 #' @docType data
-#' @format A data frame/tibble  with 15 observations on the following three variables.
+#' @format A data frame/tibble with 15 observations on three variables
 #' \describe{ 
 #' \item{pot}{number of pot} 
 #' \item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
@@ -2310,7 +2313,7 @@ NULL
 #' 
 #' @name Dealers
 #' @docType data
-#' @format A data frame/tibble  with 122 observations on the following two variables.
+#' @format A data frame/tibble with 122 observations on two variables
 #' \describe{ 
 #' \item{type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
 #' \code{Ford}, \code{Dodge}, and \code{Saturn}} 
@@ -2343,7 +2346,7 @@ NULL
 #' 
 #' @name Defectiv
 #' @docType data
-#' @format A data frame/tibble  with 20 observations on one variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{number}{number of defective items produced by the employees in a small business firm} 
 #' }
@@ -2367,7 +2370,7 @@ NULL
 #' 
 #' @name Degree
 #' @docType data
-#' @format A data frame/tibble  with 1064 observations on the following two variables.
+#' @format A data frame/tibble with 1064 observations on two variables
 #' \describe{ 
 #' \item{field}{a factor with levels \code{Health},
 #' \code{Education}, \code{Foreign Language}, \code{Psychology}, \code{Fine Arts},
@@ -2401,7 +2404,7 @@ NULL
 #' 
 #' @name Delay
 #' @docType data
-#' @format A data frame/tibble  with 80 observations on the following two variables.
+#' @format A data frame/tibble with 80 observations on two variables
 #' \describe{ 
 #' \item{delay}{the delay time (in minutes) for 80 randomly selected flights}
 #' \item{carrier}{a factor with levels \code{A}, \code{B}, \code{C}, and \code{D}} 
@@ -2428,7 +2431,7 @@ NULL
 #' 
 #' @name Depend
 #' @docType data
-#' @format A data frame/tibble  with 50 observations on one variable.
+#' @format A data frame/tibble with 50 observations on one variable
 #' \describe{ 
 #' \item{number}{number of dependent children in a family} 
 #' }
@@ -2456,7 +2459,7 @@ NULL
 #' 
 #' @name Detroit
 #' @docType data
-#' @format A data frame/tibble  with 40 observations on the following variable.
+#' @format A data frame/tibble with 40 observations on one variable
 #' \describe{ 
 #' \item{educ}{the educational level (in years) of a sample of 40 auto workers in a plant in Detroit} 
 #' }
@@ -2481,7 +2484,7 @@ NULL
 #' 
 #' @name Develop
 #' @docType data
-#' @format A data frame/tibble  with 5656 observations on the following two variables.
+#' @format A data frame/tibble with 5656 observations on two variables
 #' \describe{ 
 #' \item{race}{a factor with levels \code{African American}, \code{American Indian},
 #' \code{Asian}, \code{Latino}, and \code{White}} 
@@ -2514,7 +2517,7 @@ NULL
 #' 
 #' @name Devmath
 #' @docType data
-#' @format A data frame/tibble  with 40 observations on the following variable.
+#' @format A data frame/tibble with 40 observations on one variable
 #' \describe{ 
 #' \item{score}{first exam score} 
 #' }
@@ -2542,7 +2545,7 @@ NULL
 #' 
 #' @name Dice
 #' @docType data
-#' @format A data frame/tibble  with 11 observations on the following two variables.
+#' @format A data frame/tibble with 11 observations on two variables
 #' \describe{ 
 #' \item{x}{possible outcomes for the sum of two dice} 
 #' \item{px}{probability for outcome \code{x}} 
@@ -2574,7 +2577,7 @@ NULL
 #' 
 #' @name Diesel
 #' @docType data
-#' @format A data frame/tibble  with 650 observations on the following three variables.
+#' @format A data frame/tibble with 650 observations on three variables
 #' \describe{ 
 #' \item{date}{date when price was recorded}
 #' \item{pricepergallon}{price per gallon (in dollars)}
@@ -2620,11 +2623,11 @@ NULL
 #' 
 #' @name Diplomat
 #' @docType data
-#' @format A data frame/tibble  with 10 observations on the following three variables.
+#' @format A data frame/tibble with 10 observations on three variables
 #' \describe{ 
-#' \item{country}{a factor with levels \code{Brazil}
-#' \code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
-#' \code{Russia} \code{S. Korea} \code{Ukraine} \code{Venezuela}}
+#' \item{country}{a factor with levels \code{Brazil},
+#' \code{Bulgaria}, \code{Egypt}, \code{Indonesia}, \code{Israel}, \code{Nigeria},
+#' \code{Russia}, \code{S. Korea}, \code{Ukraine}, and \code{Venezuela}}
 #' \item{number}{total number of tickets} 
 #' \item{rate}{number of tickets per vehicle per month} 
 #' }
@@ -2669,7 +2672,7 @@ NULL
 #' 
 #' @name Disposal
 #' @docType data
-#' @format A data frame/tibble  with 29 observations on the following variable.
+#' @format A data frame/tibble with 29 observations on one variable
 #' \describe{ 
 #' \item{pounds}{pounds of toxic waste per $1000 of shipments of its products} 
 #' }
@@ -2699,7 +2702,7 @@ NULL
 #' 
 #' @name Dogs
 #' @docType data
-#' @format A data frame/tibble  with 20 observations on the following three variables.
+#' @format A data frame/tibble with 20 observations on three variables
 #' \describe{ 
 #' \item{breed}{a factor with levels \code{Beagle},
 #' \code{Boxer}, \code{Chihuahua}, \code{Chow}, \code{Dachshund}, 
@@ -2740,7 +2743,7 @@ NULL
 #' 
 #' @name Domestic
 #' @docType data
-#' @format A data frame/tibble  with 5 observations on the following two variables.
+#' @format A data frame/tibble with five observations on two variables
 #' \describe{ 
 #' \item{age}{a factor with levels \code{12-19}, \code{20-24},
 #' \code{25-34}, \code{35-49}, and \code{50-64}} 
@@ -2775,7 +2778,7 @@ NULL
 #' 
 #' @name Dopamine
 #' @docType data
-#' @format A data frame/tibble  with 25 observations on the following two variables.
+#' @format A data frame/tibble  with 25 observations on two variables
 #' \describe{ 
 #' \item{dbh}{dopamine b-hydroxylase activity (units are nmol/(ml)(h)/(mg) of protein)} 
 #' \item{group}{a factor with levels \code{nonpsychotic} and \code{psychotic}} 
@@ -2805,7 +2808,7 @@ NULL
 #' 
 #' @name Dowjones
 #' @docType data
-#' @format A data frame/tibble  with 105 observations on the following 3 variables.
+#' @format A data frame/tibble with 105 observations on three variables
 #' \describe{ 
 #' \item{year}{date} 
 #' \item{close}{Dow Jones closing price} 
@@ -2834,7 +2837,7 @@ NULL
 #' 
 #' @name Drink
 #' @docType data
-#' @format A data frame/tibble  with 472 observations on two variables.
+#' @format A data frame/tibble with 472 observations on two variables
 #' \describe{ 
 #' \item{drinking}{a factor with levels \code{ok},
 #' \code{tolerated}, and \code{immoral}} 
@@ -2864,7 +2867,7 @@ NULL
 #' 
 #' @name Drug
 #' @docType data
-#' @format A data frame/tibble  with 28 observations on the following two variables.
+#' @format A data frame/tibble with 28 observations on two variables
 #' \describe{ 
 #' \item{trials}{number of trials to master a task} 
 #' \item{group}{a factor with levels \code{control} and \code{experimental}} 
@@ -2891,7 +2894,7 @@ NULL
 #' 
 #' @name Dyslexia
 #' @docType data
-#' @format A data frame/tibble  with 8 observations on the following seven variables.
+#' @format A data frame/tibble with eight observations on seven variables
 #' \describe{ 
 #' \item{words}{number of words read per minute} 
 #' \item{age}{age of participant} 
@@ -2923,7 +2926,7 @@ NULL
 #' 
 #' @name Earthqk
 #' @docType data
-#' @format A data frame/tibble  with 100 observations on the following two variables.
+#' @format A data frame/tibble with 100 observations on two variables
 #' \describe{ 
 #' \item{year}{year seimic activity recorded} 
 #' \item{severity}{annual incidence of sever earthquakes} 
@@ -2954,7 +2957,7 @@ NULL
 #' 
 #' @name Educat
 #' @docType data
-#' @format A data frame/tibble  with 51 observations on the following three variables.
+#' @format A data frame/tibble with 51 observations on three variables
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama},
 #' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -2994,7 +2997,7 @@ NULL
 #' 
 #' @name Eggs
 #' @docType data
-#' @format A data frame/tibble  with 12 observations on the following two variables.
+#' @format A data frame/tibble with 12 observations on two variables
 #' \describe{ 
 #' \item{feed}{amount of feed supplement} 
 #' \item{eggs}{number of eggs per day for 100 chickens} 
@@ -3023,7 +3026,7 @@ NULL
 #' 
 #' @name Elderly
 #' @docType data
-#' @format A data frame/tibble  with 51 observations on the following three variables.
+#' @format A data frame/tibble with 51 observations on three variables
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama},
 #' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -3071,7 +3074,7 @@ NULL
 #' 
 #' @name Energy
 #' @docType data
-#' @format A data frame/tibble  with 12 observations on the following two variables.
+#' @format A data frame/tibble with 12 observations on two variables
 #' \describe{ 
 #' \item{size}{size of home (in square feet)} 
 #' \item{kilowatt}{killowatt-hours per month} 
@@ -3096,7 +3099,7 @@ NULL
 #' 
 #' @name Engineer
 #' @docType data
-#' @format A data frame/tibble  with 51 observations on the following two variables.
+#' @format A data frame/tibble with 51 observations on two variables
 #' \describe{ 
 #' \item{salary}{salary (in $1000) 10 years after graduation} 
 #' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -3124,7 +3127,7 @@ NULL
 #' 
 #' @name Entrance
 #' @docType data
-#' @format A data frame/tibble  with 24 observations on the following variable.
+#' @format A data frame/tibble with 24 observations on one variable
 #' \describe{ 
 #' \item{score}{college entrance exam score} 
 #' }
@@ -3149,25 +3152,26 @@ NULL
 #' 
 #' @name Epaminicompact
 #' @docType data
-#' @format A data frame/tibble with 22 observations on the following 10 variables.
+#' @format A data frame/tibble with 22 observations on ten variables
 #' \describe{ 
-#' \item{class}{a character variable with values \code{MINICOMPACT CARS}} 
-#' \item{manufacturer}{a character variable with values \code{AUDI}
-#' \code{BMW} \code{JAGUAR} \code{MERCEDES-BENZ} \code{MITSUBISHI}
+#' \item{class}{a character variable with value \code{MINICOMPACT CARS}} 
+#' \item{manufacturer}{a character variable with values \code{AUDI},
+#' \code{BMW}, \code{JAGUAR}, \code{MERCEDES-BENZ}, \code{MITSUBISHI}, and
 #' \code{PORSCHE}} 
 #' \item{carline}{a character variable with values \code{325CI
-#' CONVERTIBLE} \code{330CI CONVERTIBLE} \code{911 CARRERA 2/4} \code{911
-#' TURBO} \code{CLK320 (CABRIOLET)} \code{CLK430 (CABRIOLET)} \code{ECLIPSE
-#' SPYDER} \code{JAGUAR XK8 CONVERTIBLE} \code{JAGUAR XKR CONVERTIBLE} \code{M3
-#' CONVERTIBLE} \code{TT COUPE} \code{TT COUPE QUATTRO}} 
-#' \item{displ}{a numeric vector} 
-#' \item{cyl}{a numeric vector} 
-#' \item{trans}{a factor with levels \code{Auto(L5)} \code{Auto(S4)} \code{Auto(S5)}
-#' \code{Manual(M5)} \code{Manual(M6)}} 
-#' \item{drv}{a factor with levels \code{4} \code{F} \code{R}} 
-#' \item{cty}{a numeric vector}
-#' \item{hwy}{a numeric vector} 
-#' \item{cmb}{a numeric vector} 
+#' CONVERTIBLE}, \code{330CI CONVERTIBLE}, \code{911 CARRERA 2/4}, \code{911
+#' TURBO}, \code{CLK320 (CABRIOLET)}, \code{CLK430 (CABRIOLET)}, \code{ECLIPSE
+#' SPYDER}, \code{JAGUAR XK8 CONVERTIBLE}, \code{JAGUAR XKR CONVERTIBLE}, \code{M3
+#' CONVERTIBLE}, \code{TT COUPE}, and \code{TT COUPE QUATTRO}} 
+#' \item{displ}{engine displacement (in liters)} 
+#' \item{cyl}{number of cylinders} 
+#' \item{trans}{a factor with levels \code{Auto(L5)}, \code{Auto(S4)}, \code{Auto(S5)},
+#' \code{Manual(M5)}, and \code{Manual(M6)}} 
+#' \item{drv}{a factor with levels \code{4}(four wheel drive), \code{F}(front wheel drive), 
+#' and \code{R}(rear wheel drive)} 
+#' \item{cty}{city mpg}
+#' \item{hwy}{highway mpg} 
+#' \item{cmb}{combined city and highway mpg} 
 #' }
 #' 
 #' @source EPA data
@@ -3193,29 +3197,29 @@ NULL
 #' 
 #' @name Epatwoseater
 #' @docType data
-#' @format A data frame/tibble with 36 observations on the following 10 variables.
+#' @format A data frame/tibble with 36 observations on ten variables
 #' \describe{ 
-#' \item{class}{a character variable with values \code{TWO SEATERS}}
-#' \item{manufacturer}{a character variable with values \code{ACURA} \code{AUDI}
-#' \code{BMW} \code{CHEVROLET} \code{DODGE} \code{FERRARI} \code{HONDA}
-#' \code{LAMBORGHINI} \code{MAZDA} \code{MERCEDES-BENZ} \code{PLYMOUTH}
-#' \code{PORSCHE} \code{TOYOTA}} 
+#' \item{class}{a character variable with value \code{TWO SEATERS}}
+#' \item{manufacturer}{a character variable with values \code{ACURA}, \code{AUDI},
+#' \code{BMW}, \code{CHEVROLET}, \code{DODGE}, \code{FERRARI}, \code{HONDA},
+#' \code{LAMBORGHINI}, \code{MAZDA}, \code{MERCEDES-BENZ}, \code{PLYMOUTH},
+#' \code{PORSCHE}, and \code{TOYOTA}} 
 #' \item{carline}{a character variable with values
-#' \code{BOXSTER} \code{BOXSTER S} \code{CORVETTE} \code{DB132/144
-#' DIABLO} \code{FERRARI 360 MODENA/SPIDER} \code{FERRARI 550
-#' MARANELLO/BARCHETTA} \code{INSIGHT} \code{MR2} \code{MX-5 MIATA} \code{NSX}
-#' \code{PROWLER} \code{S2000} \code{SL500} \code{SL600} \code{SLK230
-#' KOMPRESSOR} \code{SLK320} \code{TT ROADSTER} \code{TT ROADSTER QUATTRO}
-#' \code{VIPER CONVERTIBLE} \code{VIPER COUPE} \code{Z3 COUPE} \code{Z3
-#' ROADSTER} \code{Z8}} 
-#' \item{displ}{a numeric vector}
-#' \item{cyl}{a numeric vector} 
-#' \item{trans}{a factor with levels \code{Auto(L4)} \code{Auto(L5)} \code{Auto(S4)} \code{Auto(S5)}
-#' \code{Auto(S6)} \code{Manual(M5)} \code{Manual(M6)}} 
-#' \item{drv}{a factor with levels \code{4} \code{F} \code{R}} 
-#' \item{cty}{a numeric vector} 
-#' \item{hwy}{a numeric vector} 
-#' \item{cmb}{a numeric vector} 
+#' \code{BOXSTER}, \code{BOXSTER S}, \code{CORVETTE}, \code{DB132/144
+#' DIABLO}, \code{FERRARI 360 MODENA/SPIDER}, \code{FERRARI 550
+#' MARANELLO/BARCHETTA}, \code{INSIGHT}, \code{MR2} ,\code{MX-5 MIATA}, \code{NSX},
+#' \code{PROWLER}, \code{S2000}, \code{SL500}, \code{SL600}, \code{SLK230
+#' KOMPRESSOR}, \code{SLK320}, \code{TT ROADSTER}, \code{TT ROADSTER QUATTRO},
+#' \code{VIPER CONVERTIBLE}, \code{VIPER COUPE}, \code{Z3 COUPE}, \code{Z3
+#' ROADSTER}, and \code{Z8}} 
+#' \item{displ}{engine displacement (in liters)}
+#' \item{cyl}{number of cylinders} 
+#' \item{trans}{a factor with levels \code{Auto(L4)}, \code{Auto(L5)}, \code{Auto(S4)}, 
+#' \code{Auto(S5)}, \code{Auto(S6)}, \code{Manual(M5)}, and \code{Manual(M6)}} 
+#' \item{drv}{a factor with levels \code{4}(four wheel drive) \code{F}(front wheel drive) \code{R}(rear wheel drive)} 
+#' \item{cty}{city mpg} 
+#' \item{hwy}{highway mpg} 
+#' \item{cmb}{combined city and highway mpg} 
 #'  }
 #'  
 #'  @source Environmental Protection Agency
@@ -3242,7 +3246,7 @@ NULL
 #' 
 #' @name Executiv
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on one variable
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
@@ -3267,7 +3271,7 @@ NULL
 #' 
 #' @name Exercise
 #' @docType data
-#' @format A data frame/tibble with 30 observations on the following variable.
+#' @format A data frame/tibble with 30 observations on one variable
 #' \describe{ 
 #' \item{loss}{a numeric vector} 
 #' }
@@ -3284,7 +3288,7 @@ NULL
 
 
 
-#' Measures of softness of 10 different clothing garments washed with and
+#' Measures of softness of ten different clothing garments washed with and
 #' without a softener
 #' 
 #' Data for Example 7.21
@@ -3292,7 +3296,7 @@ NULL
 #' 
 #' @name Fabric
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 3 variables.
+#' @format A data frame/tibble with 20 observations on three variables
 #' \describe{ 
 #' \item{garment}{a numeric vector} 
 #' \item{softner}{a character variable with values \code{with} and \code{without}} 
@@ -3325,7 +3329,7 @@ NULL
 #' 
 #' @name Faithful
 #' @docType data
-#' @format A data frame/tibble with 299 observations on the following 2 variables.
+#' @format A data frame/tibble with 299 observations on two variables
 #' \describe{ 
 #' \item{time}{a numeric vector} 
 #' \item{eruption}{a factor with levels \code{1} and \code{2}} 
@@ -3363,7 +3367,7 @@ NULL
 #' 
 #' @name Family
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 2 variables.
+#' @format A data frame/tibble with 20 observations on two variables
 #' \describe{ 
 #' \item{number}{a numeric vector} 
 #' \item{cost}{a numeric vector} 
@@ -3397,7 +3401,7 @@ NULL
 #' 
 #' @name Ferraro1
 #' @docType data
-#' @format A data frame/tibble with 1000 observations on the following 2 variables.
+#' @format A data frame/tibble with 1000 observations on two variables
 #' \describe{ 
 #' \item{gender}{a factor with levels \code{Men}
 #' \code{Women}} 
@@ -3426,7 +3430,7 @@ NULL
 #' 
 #' @name Ferraro2
 #' @docType data
-#' @format A data frame/tibble with 1000 observations on the following 2 variables.
+#' @format A data frame/tibble with 1000 observations on two variables
 #' \describe{ 
 #' \item{gender}{a factor with levels \code{Men}
 #' \code{Women}} 
@@ -3456,22 +3460,22 @@ NULL
 #' 
 #' @name Fertility
 #' @docType data
-#' @format A data frame/tibble with 51 observations on the following 2 variables.
+#' @format A data frame/tibble with 51 observations on two variables
 #' \describe{ 
-#' \item{state}{a character variable with values \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{Delaware} \code{District of
-#' Colunbia} \code{Florida} \code{Georgia} \code{Hawaii} \code{Idaho}
-#' \code{Illinois} \code{Indiana} \code{Iowa} \code{Kansas} \code{Kentucky}
-#' \code{Louisiana} \code{Maine} \code{Maryland} \code{Massachusetts}
-#' \code{Michigan} \code{Minnesota} \code{Mississippi} \code{Missour}
-#' \code{Montana} \code{Nebraska} \code{Nevada} \code{New Hampshire} \code{New
-#' Jersey} \code{New Mexico} \code{New York} \code{North Carolina} \code{North
-#' Dakota} \code{Ohio} \code{Oklahoma} \code{Oregon} \code{Pennsylvania}
-#' \code{Rhode Island} \code{South Carolina} \code{South Dakota}
-#' \code{Tennessee} \code{Texas} \code{Utah} \code{Vermont} \code{Virginia}
-#' \code{Washington} \code{West Virginia} \code{Wisconsin} \code{Wyoming}}
-#' \item{rate}{a numeric vector}
+#' \item{state}{a character variable with values \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{Delaware}, \code{District of
+#' Colunbia}, \code{Florida}, \code{Georgia}, \code{Hawaii}, \code{Idaho},
+#' \code{Illinois}, \code{Indiana}, \code{Iowa}, \code{Kansas}, \code{Kentucky},
+#' \code{Louisiana}, \code{Maine}, \code{Maryland},\code{Massachusetts},
+#' \code{Michigan}, \code{Minnesota}, \code{Mississippi}, \code{Missour},
+#' \code{Montana}, \code{Nebraska}, \code{Nevada}, \code{New Hampshire}, \code{New
+#' Jersey}, \code{New Mexico}, \code{New York}, \code{North Carolina}, \code{North
+#' Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
+#' \code{Rhode Island}, \code{South Carolina}, \code{South Dakota},
+#' \code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia},
+#' \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
+#' \item{rate}{fertility rate (expected number of births during childbearing years)}
 #' }
 #' 
 #' @source Population Reference Bureau.
@@ -3498,7 +3502,7 @@ NULL
 #' 
 #' @name Firstchi
 #' @docType data
-#' @format A data frame/tibble with 87 observations on the following variable.
+#' @format A data frame/tibble with 87 observations on one variable
 #' \describe{ 
 #' \item{age}{a numeric vector} 
 #' }
@@ -3522,7 +3526,7 @@ NULL
 #' 
 #' @name Fish
 #' @docType data
-#' @format A data frame/tibble with 1534 observations on two variables.
+#' @format A data frame/tibble with 1534 observations on two variables
 #' \describe{ 
 #' \item{codend}{a character variable with values \code{smallmesh} and \code{largemesh} } 
 #' \item{length}{length of the fish measured in centimeters} 
@@ -3556,7 +3560,7 @@ NULL
 #' 
 #' @name Fitness
 #' @docType data
-#' @format A data frame/tibble with 18 observations on the following 3 variables.
+#' @format A data frame/tibble with 18 observations on the three variables
 #' \describe{ 
 #' \item{subject}{a character variable indicating subject number}
 #' \item{test}{a character variable with values \code{After} and \code{Before}} 
@@ -3590,34 +3594,34 @@ NULL
 #' 
 #' @name Florida2000
 #' @docType data
-#' @format A data frame/tibble with 67 observations on the following 12 variables.
+#' @format A data frame/tibble with 67 observations on the 12 variables
 #' \describe{ 
-#' \item{county}{a character variable with values \code{ALACHUA}
-#' \code{BAKER} \code{BAY} \code{BRADFORD} \code{BREVARD} \code{BROWARD}
-#' \code{CALHOUN} \code{CHARLOTTE} \code{CITRUS} \code{CLAY} \code{COLLIER}
-#' \code{COLUMBIA} \code{DADE} \code{DE SOTO} \code{DIXIE} \code{DUVAL}
-#' \code{ESCAMBIA} \code{FLAGLER} \code{FRANKLIN} \code{GADSDEN}
-#' \code{GILCHRIST} \code{GLADES} \code{GULF} \code{HAMILTON} \code{HARDEE}
-#' \code{HENDRY} \code{HERNANDO} \code{HIGHLANDS} \code{HILLSBOROUGH}
-#' \code{HOLMES} \code{INDIAN RIVER} \code{JACKSON} \code{JEFFERSON}
-#' \code{LAFAYETTE} \code{LAKE} \code{LEE} \code{LEON} \code{LEVY}
-#' \code{LIBERTY} \code{MADISON} \code{MANATEE} \code{MARION} \code{MARTIN}
-#' \code{MONROE} \code{NASSAU} \code{OKALOOSA} \code{OKEECHOBEE} \code{ORANGE}
-#' \code{OSCEOLA} \code{PALM BEACH} \code{PASCO} \code{PINELLAS} \code{POLK}
-#' \code{PUTNAM} \code{SANTA ROSA} \code{SARASOTA} \code{SEMINOLE} \code{ST.
-#' JOHNS} \code{ST. LUCIE} \code{SUMTER} \code{SUWANNEE} \code{TAYLOR}
-#' \code{UNION} \code{VOLUSIA} \code{WAKULLA} \code{WALTON} \code{WASHINGTON}}
-#' \item{gore}{a numeric vector} 
-#' \item{bush}{a numeric vector}
-#' \item{buchanan}{a numeric vector} 
-#' \item{nader}{a numeric vector} 
-#' \item{browne}{a numeric vector} 
-#' \item{hagelin}{a numeric vector} 
-#' \item{harris}{a numeric vector}
-#' \item{mcreynolds}{a numeric vector} 
-#' \item{moorehead}{a numeric vector} 
-#' \item{phillips}{a numeric vector}
-#' \item{total}{a numeric vector} 
+#' \item{county}{a character variable with values \code{ALACHUA},
+#' \code{BAKER}, \code{BAY}, \code{BRADFORD}, \code{BREVARD}, \code{BROWARD},
+#' \code{CALHOUN}, \code{CHARLOTTE}, \code{CITRUS}, \code{CLAY}, \code{COLLIER},
+#' \code{COLUMBIA}, \code{DADE}, \code{DE SOTO}, \code{DIXIE}, \code{DUVAL},
+#' \code{ESCAMBIA}, \code{FLAGLER}, \code{FRANKLIN}, \code{GADSDEN},
+#' \code{GILCHRIST}, \code{GLADES}, \code{GULF}, \code{HAMILTON}, \code{HARDEE},
+#' \code{HENDRY}, \code{HERNANDO}, \code{HIGHLANDS}, \code{HILLSBOROUGH},
+#' \code{HOLMES}, \code{INDIAN RIVER}, \code{JACKSON}, \code{JEFFERSON},
+#' \code{LAFAYETTE}, \code{LAKE}, \code{LEE}, \code{LEON}, \code{LEVY},
+#' \code{LIBERTY}, \code{MADISON}, \code{MANATEE}, \code{MARION}, \code{MARTIN},
+#' \code{MONROE}, \code{NASSAU}, \code{OKALOOSA, \code{OKEECHOBEE}, \code{ORANGE},
+#' \code{OSCEOLA}, \code{PALM BEACH}, \code{PASCO}, \code{PINELLAS}, \code{POLK},
+#' \code{PUTNAM}, \code{SANTA ROSA}, \code{SARASOTA}, \code{SEMINOLE}, \code{ST.
+#' JOHNS}, \code{ST. LUCIE}, \code{SUMTER}, \code{SUWANNEE}, \code{TAYLOR},
+#' \code{UNION}, \code{VOLUSIA}, \code{WAKULLA}, \code{WALTON}, and \code{WASHINGTON}}
+#' \item{gore}{number of votes} 
+#' \item{bush}{number of votes}
+#' \item{buchanan}{number of votes} 
+#' \item{nader}{number of votes} 
+#' \item{browne}{number of votes} 
+#' \item{hagelin}{number of votes} 
+#' \item{harris}{number of votes}
+#' \item{mcreynolds}{number of votes} 
+#' \item{moorehead}{number of votes} 
+#' \item{phillips}{number of votes}
+#' \item{total}{number of votes} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -3642,7 +3646,7 @@ NULL
 #' 
 #' @name Fluid
 #' @docType data
-#' @format A data frame/tibble with 76 observations on the following 2 variables.
+#' @format A data frame/tibble with 76 observations on two variables
 #' \describe{ 
 #' \item{kilovolts}{a character variable showing kilowats} 
 #' \item{time}{breakdown time (in minutes)} 
@@ -3680,7 +3684,7 @@ NULL
 #' 
 #' @name Food
 #' @docType data
-#' @format A data frame/tibble with 40 observations on the following variable.
+#' @format A data frame/tibble with 40 observations on one variable
 #' \describe{ 
 #' \item{expenditure}{a numeric vector recording annual food expenditure (in dollars) in the state of Ohio.} 
 #' }
@@ -3707,7 +3711,7 @@ NULL
 #' 
 #' @name Framingh
 #' @docType data
-#' @format A data frame/tibble with 62 observations on the following variable.
+#' @format A data frame/tibble with 62 observations on one variable
 #' \describe{ 
 #' \item{cholest}{a numeric vector with cholesterol values} 
 #' }
@@ -3750,7 +3754,7 @@ NULL
 #' 
 #' @name Freshman
 #' @docType data
-#' @format A data frame/tibble with 30 observations on the following variable.
+#' @format A data frame/tibble with 30 observations on one variable
 #' \describe{ 
 #' \item{age}{a numeric vector of ages} 
 #' }
@@ -3774,7 +3778,7 @@ NULL
 #' 
 #' @name Funeral
 #' @docType data
-#' @format A data frame/tibble with 400 observations on the following 2 variables.
+#' @format A data frame/tibble with 400 observations on two variables
 #' \describe{ 
 #' \item{region}{a factor with levels \code{Central}
 #' \code{East} \code{South} \code{West}} 
@@ -3804,7 +3808,7 @@ NULL
 #' 
 #' @name Galaxie
 #' @docType data
-#' @format A data frame/tibble with 82 observations on the following variable.
+#' @format A data frame/tibble with 82 observations on one variable
 #' \describe{ 
 #' \item{velocity}{velocity measured in kilometers per second} 
 #' }
@@ -3834,7 +3838,7 @@ NULL
 #' 
 #' @name Gallup
 #' @docType data
-#' @format A data frame/tibble with 1,200 observations on the following 2 variables.
+#' @format A data frame/tibble with 1,200 observations on two variables
 #' \describe{ 
 #' \item{demographics}{a factor with levels \code{National}, \code{Gender: Male}
 #' \code{Gender: Female}, \code{Education: College}, \code{Eduction: High School},
@@ -3878,7 +3882,7 @@ NULL
 #' 
 #' @name Gasoline
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on one variable
 #' \describe{ 
 #' \item{price}{price for one gallon of gasoline} 
 #' }
@@ -3910,7 +3914,7 @@ NULL
 #' 
 #' @name German
 #' @docType data
-#' @format A data frame/tibble with 10 observations on the following 3 variables.
+#' @format A data frame/tibble with ten observations on three variables
 #' \describe{ 
 #' \item{student}{a character variable indicating student number} 
 #' \item{when}{a character variable with either code\{Before} or \code{After} 
@@ -3947,7 +3951,7 @@ NULL
 #' 
 #' @name Golf
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{yards}{distance a golf ball is driven in yards} 
 #' }
@@ -3978,23 +3982,23 @@ NULL
 #' 
 #' @name Governor
 #' @docType data
-#' @format A data frame/tibble with 50 observations on the following 3 variables.
+#' @format A data frame/tibble with 50 observations on three variables
 #' \describe{ 
-#' \item{state}{a character variable with values \code{Alabama}
-#' \code{Alaska} \code{Arizona} \code{Arkansas} \code{California}
-#' \code{Colorado} \code{Connecticut} \code{Delaware} \code{Florida}
-#' \code{Georgia} \code{Hawaii} \code{Idaho} \code{Illinois} \code{Indiana}
-#' \code{Iowa} \code{Kansas} \code{Kentucky} \code{Louisiana} \code{Maine}
-#' \code{Maryland} \code{Massachusetts} \code{Michigan} \code{Minnesota}
-#' \code{Mississippi} \code{Missouri} \code{Montana} \code{Nebraska}
-#' \code{Nevada} \code{New Hampshire} \code{New Jersey} \code{New Mexico}
-#' \code{New York} \code{North Carolina} \code{North Dakota} \code{Ohio}
-#' \code{Oklahoma} \code{Oregon} \code{Pennsylvania} \code{Rhode Island}
-#' \code{South Carolina} \code{South Dakota} \code{Tennessee} \code{Texas}
-#' \code{Utah} \code{Vermont} \code{Virginia} \code{Washington} \code{West
-#' Virginia} \code{Wisconsin} \code{Wyoming}} 
+#' \item{state}{a character variable with values \code{Alabama},
+#' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
+#' \code{Colorado}, \code{Connecticut}, \code{Delaware}, \code{Florida},
+#' \code{Georgia}, \code{Hawaii}, \code{Idaho}, \code{Illinois}, \code{Indiana},
+#' \code{Iowa}, \code{Kansas}, \code{Kentucky}, \code{Louisiana}, \code{Maine},
+#' \code{Maryland}, \code{Massachusetts}, \code{Michigan}, \code{Minnesota},
+#' \code{Mississippi}, \code{Missouri}, \code{Montana}, \code{Nebraska},
+#' \code{Nevada}, \code{New Hampshire}, \code{New Jersey}, \code{New Mexico},
+#' \code{New York}, \code{North Carolina}, \code{North Dakota}, \code{Ohio},
+#' \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania}, \code{Rhode Island},
+#' \code{South Carolina}, \code{South Dakota}, \code{Tennessee}, \code{Texas},
+#' \code{Utah}, \code{Vermont}, \code{Virginia}, \code{Washington}, \code{West
+#' Virginia}, \code{Wisconsin}, and \code{Wyoming}} 
 #' \item{year}{a factor indicating year} 
-#' \item{salary}{a numeric vector with the governor's salary in dollars} 
+#' \item{salary}{a numeric vector with the governor's salary (in dollars)} 
 #' }
 #' 
 #' @source \emph{The 2000 World Almanac and Book of Facts}
@@ -4026,7 +4030,7 @@ NULL
 #' 
 #' @name Gpa
 #' @docType data
-#' @format A data frame/tibble with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with 10 observations on two variables
 #' \describe{ 
 #' \item{hsgpa}{high school gpa} 
 #' \item{collgpa}{college gpa} 
@@ -4065,7 +4069,7 @@ NULL
 #' 
 #' @name Grades
 #' @docType data
-#' @format A data frame with 29 observations on the following variable.
+#' @format A data frame with 29 observations on one variable
 #' \describe{ 
 #' \item{grades}{a numeric vector} 
 #' }
@@ -4096,15 +4100,16 @@ NULL
 #' 
 #' @name Graduate
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following 3 variables.
+#' @format A data frame/tibble with 12 observations on three variables
 #' \describe{ 
-#' \item{school}{a character variable with values \code{Alabama}
-#' \code{Arkansas} \code{Auburn} \code{Florida} \code{Georgia} \code{Kentucky}
-#' \code{Louisiana St} \code{Mississippi} \code{Mississippi St} \code{South
-#' Carolina} \code{Tennessee} \code{Vanderbilt}} 
-#' \item{code}{a character variable with values \code{Al} \code{Ar} \code{Au} \code{Fl} \code{Ge} \code{Ke}
-#' \code{LSt} \code{Mi} \code{MSt} \code{SC} \code{Te} \code{Va}}
-#' \item{percent}{a numeric vector} 
+#' \item{school}{a character variable with values \code{Alabama},
+#' \code{Arkansas}, \code{Auburn}, \code{Florida}, \code{Georgia}, \code{Kentucky},
+#' \code{Louisiana St}, \code{Mississippi}, \code{Mississippi St}, \code{South
+#' Carolina,} \code{Tennessee}, and \code{Vanderbilt}} 
+#' \item{code}{a character variable with values \code{Al}, \code{Ar}, \code{Au}
+#'  \code{Fl}, \code{Ge}, \code{Ke}, \code{LSt}, \code{Mi}, \code{MSt}, \code{SC}, 
+#'  \code{Te}, and \code{Va}}
+#' \item{percent}{graduation rate} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -4128,7 +4133,7 @@ NULL
 #' 
 #' @name Greenriv
 #' @docType data
-#' @format A data frame/tibble with 37 observations on the following variable.
+#' @format A data frame/tibble with 37 observations on one variable
 #' \describe{ 
 #' \item{thick}{varve thickness in millimeters} 
 #' }
@@ -4154,9 +4159,9 @@ NULL
 #' 
 #' @name Grnriv2
 #' @docType data
-#' @format A data frame/tibble with 101 observations on the following variable.
+#' @format A data frame/tibble with 101 observations on one variable
 #' \describe{ 
-#' \item{thick}{varve thickness in millimeters} 
+#' \item{thick}{varve thickness (in millimeters)} 
 #' }
 #' 
 #' @source J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd Ed., Jon Wiley and Sons, New York.
@@ -4182,7 +4187,7 @@ NULL
 #' 
 #' @name Groupabc
 #' @docType data
-#' @format A data frame/tibble with 45 observations on the following 2 variables.
+#' @format A data frame/tibble with 45 observations on two variables
 #' \describe{ 
 #' \item{group}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' \item{response}{a numeric vector} 
@@ -4209,7 +4214,7 @@ NULL
 #' 
 #' @name Groups
 #' @docType data
-#' @format A data frame/tibble with 78 observations on the following 2 variables.
+#' @format A data frame/tibble with 78 observations on two variables
 #' \describe{ 
 #' \item{group}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' \item{response}{a numeric vector} 
@@ -4237,10 +4242,10 @@ NULL
 #' 
 #' @name Gym
 #' @docType data
-#' @format A data frame/tibble with 8 observations on the following 3 variables.
+#' @format A data frame/tibble with eight observations on three variables
 #' \describe{
-#' \item{age}{a numeric vector} 
-#' \item{number}{a numeric vector} 
+#' \item{age}{age of child} 
+#' \item{number}{number of gymnastic activities successfully completed} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -4265,10 +4270,10 @@ NULL
 #' 
 #' @name Habits
 #' @docType data
-#' @format A data frame/tibble with 11 observations on the following 4 variables.
+#' @format A data frame/tibble with 11 observations on four variables
 #' \describe{ 
-#' \item{A}{a numeric vector} 
-#' \item{B}{a numeric vector} 
+#' \item{A}{study habit score} 
+#' \item{B}{study habit score} 
 #' \item{differ}{\code{B} minus \code{A}} 
 #' \item{signrks}{the signed-ranked-differences} 
 #' }
@@ -4302,7 +4307,7 @@ NULL
 #' 
 #' @name Haptoglo
 #' @docType data
-#' @format A data frame/tibble with 8 observations on the following variable.
+#' @format A data frame/tibble with eight observations on one variable
 #' \describe{ 
 #' \item{concent}{haptoglobin concentration (in grams per liter)} 
 #' }
@@ -4323,12 +4328,11 @@ NULL
 
 #' Daily receipts for a small hardware store for 31 working days
 #' 
-#' Data for ???
 #' 
 #' 
 #' @name Hardware
 #' @docType data
-#' @format A data frame with 31 observations on the following variable.
+#' @format A data frame with 31 observations on one variable
 #' \describe{ 
 #' \item{receipt}{a numeric vector} 
 #' }
@@ -4357,7 +4361,7 @@ NULL
 #' 
 #' @name Hardwood
 #' @docType data
-#' @format A data frame/tibble with 19 observations on 2 variables.
+#' @format A data frame/tibble with 19 observations on two variables
 #' \describe{ 
 #' \item{tensile}{tensile strength of kraft paper (in pounds per square inch)}
 #' \item{hardwood}{percent of hardwood in the batch of pulp that was used to produce the paper} 
@@ -4387,13 +4391,13 @@ NULL
 #' 
 #' @name Heat
 #' @docType data
-#' @format A data frame/tibble with 301 observations on the following 2 variables.
+#' @format A data frame/tibble with 301 observations on two variables
 #' \describe{ 
 #' \item{fuel}{a factor with levels \code{Utility gas},
 #' \code{LP bottled gas}, \code{Electricity}, \code{Fuel oil}, \code{Wood}, and
 #' \code{Other}} 
-#' \item{location}{a factor with levels \code{American Indians on reservation} \code{All U.S. households},
-#'  and \code{American Indians not on reservations}} 
+#' \item{location}{a factor with levels \code{American Indians on reservation},
+#'  \code{All U.S. households}, and \code{American Indians not on reservations}} 
 #' }
 #' 
 #' @source Bureau of the Census, \emph{Housing of the American Indians on Reservations},
@@ -4428,7 +4432,7 @@ NULL
 #' 
 #' @name Heating
 #' @docType data
-#' @format A data frame/tibble with 90 observations on the following 2 variables.
+#' @format A data frame/tibble with 90 observations on the two variables
 #' \describe{ 
 #' \item{type}{a factor with levels \code{A}, \code{B}, and \code{C} denoting the type of oil heater} 
 #' \item{efficiency}{heater efficiency rating} 
@@ -4455,11 +4459,11 @@ NULL
 #' 
 #' @name Hodgkin
 #' @docType data
-#' @format A data frame/tibble with 538 observations on the following 2 variables.
+#' @format A data frame/tibble with 538 observations on two variables
 #' \describe{ 
 #' \item{type}{a factor with levels \code{LD},
 #' \code{LP}, \code{MC}, and \code{NS}} 
-#' \item{response}{a factor with levels \code{Positive}, \code{Partial}. and \code{None}}
+#' \item{response}{a factor with levels \code{Positive}, \code{Partial}, and \code{None}}
 #' }
 #' 
 #' @source I. Dunsmore, F. Daly, \emph{Statistical Methods, Unit 9, Categorical Data}, 
@@ -4489,7 +4493,7 @@ NULL
 #' 
 #' @name Homes
 #' @docType data
-#' @format A data frame/tibble with 65 observations on the following 4 variables.
+#' @format A data frame/tibble with 65 observations on the four variables
 #' \describe{ 
 #' \item{city}{a character variable with values \code{Akron OH},
 #' \code{Albuquerque NM}, \code{Anaheim CA}, \code{Atlanta GA}, \code{Baltimore
@@ -4515,7 +4519,7 @@ NULL
 #' \item{region}{a character variable with values \code{Midwest}, \code{Northeast},
 #' \code{South}, and \code{West}} 
 #' \item{year}{a factor with levels \code{1994} and \code{2000}}
-#' \item{price}{median house price in dollars} 
+#' \item{price}{median house price (in dollars)} 
 #' }
 #' 
 #' @source National Association of Realtors
@@ -4530,6 +4534,8 @@ NULL
 #' p2000 <- subset(Homes, year == "2000")
 #' p1994 <- subset(Homes, year == "1994")
 #' \dontrun{
+#' dplyr::group_by(Homes, year, region) %>%
+#'    summarize(AvgPrice = mean(price))
 #' ggplot2::ggplot(data = Homes, aes(x = region, y = price)) + 
 #'    geom_boxplot() + 
 #'    theme_bw() + 
@@ -4551,7 +4557,7 @@ NULL
 #' 
 #' @name Homework
 #' @docType data
-#' @format A data frame with 30 observations on the following 2 variables.
+#' @format A data frame with 30 observations on two variables
 #' \describe{ 
 #' \item{school}{type of school either \code{private} or \code{public}} 
 #' \item{time}{number of hours per week spent on homework} 
@@ -4579,7 +4585,7 @@ NULL
 #' 
 #' @name Honda
 #' @docType data
-#' @format A data frame/tibble with 35 observations on the following variable.
+#' @format A data frame/tibble with 35 observations on one variable
 #' \describe{ 
 #' \item{mileage}{miles per gallon for a Honda Civic} 
 #' }
@@ -4605,7 +4611,7 @@ NULL
 #' 
 #' @name Hostile
 #' @docType data
-#' @format A data frame/tibble with 135 observations on the following 2 variables.
+#' @format A data frame/tibble with 135 observations on two variables
 #' \describe{ 
 #' \item{location}{a factor with the location of the high school student (\code{Rural}, \code{Suburban}, or \code{Urban})} 
 #' \item{hostility}{the score from the Hostility Level Test} 
@@ -4632,20 +4638,20 @@ NULL
 #' 
 #' @name Housing
 #' @docType data
-#' @format A data frame/tibble with 74 observations on the following 3 variables.
+#' @format A data frame/tibble with 74 observations on three variables
 #' \describe{ 
-#' \item{city}{a character variable with values \code{Albany}
-#' \code{Anaheim} \code{Atlanta} \code{Baltimore} \code{Birmingham}
-#' \code{Boston} \code{Chicago} \code{Cincinnati} \code{Cleveland}
-#' \code{Columbus} \code{Dallas} \code{Denver} \code{Detroit} \code{Ft
-#' Lauderdale} \code{Houston} \code{Indianapolis} \code{Kansas City} \code{Los
-#' Angeles} \code{Louisville} \code{Memphis} \code{Miami} \code{Milwaukee}
-#' \code{Minneapolis} \code{Nashville} \code{New York} \code{Oklahoma City}
-#' \code{Philadelphia} \code{Providence} \code{Rochester} \code{Salt Lake City}
-#' \code{San Antonio} \code{San Diego} \code{San Francisco} \code{San Jose}
-#' \code{St Louis} \code{Tampa} \code{Washington}} 
+#' \item{city}{a character variable with values \code{Albany},
+#' \code{Anaheim}, \code{Atlanta}, \code{Baltimore}, \code{Birmingham},
+#' \code{Boston}, \code{Chicago}, \code{Cincinnati}, \code{Cleveland},
+#' \code{Columbus}, \code{Dallas}, \code{Denver}, \code{Detroit}, \code{Ft
+#' Lauderdale}, \code{Houston}, \code{Indianapolis}, \code{Kansas City}, \code{Los
+#' Angeles}, \code{Louisville}, \code{Memphis}, \code{Miami}, \code{Milwaukee},
+#' \code{Minneapolis}, \code{Nashville}, \code{New York}, \code{Oklahoma City},
+#' \code{Philadelphia}, \code{Providence}, \code{Rochester}, \code{Salt Lake City},
+#' \code{San Antonio}, \code{San Diego}, \code{San Francisco}, \code{San Jose},
+#' \code{St Louis}, \code{Tampa}, and \code{Washington}} 
 #' \item{year}{a factor with levels \code{1984} and \code{1993}} 
-#' \item{price}{median house price} 
+#' \item{price}{median house price (in dollars)} 
 #' }
 #' 
 #' @source National Association of Realtors
@@ -4677,7 +4683,7 @@ NULL
 #' 
 #' @name Hurrican
 #' @docType data
-#' @format A data frame/tibble with 46 observations on the following 4 variables.
+#' @format A data frame/tibble with 46 observations on four variables
 #' \describe{ 
 #' \item{year}{a numeric vector indicating year} 
 #' \item{storms}{a numeric vector recording number of storms} 
@@ -4717,7 +4723,7 @@ NULL
 #' 
 #' @name Iceberg
 #' @docType data
-#' @format A data frame with 12 observations on the following 3 variables.
+#' @format A data frame with 12 observations on three variables
 #' \describe{
 #'  \item{month}{a character variable with abbreviated months of the year} 
 #' \item{Newfoundland}{number of icebergs sighted south of Newfoundland}
@@ -4748,7 +4754,7 @@ NULL
 #' 
 #' @name Income
 #' @docType data
-#' @format A data frame/tibble with 51 observations on the following 2 variables.
+#' @format A data frame/tibble with 51 observations on two variables
 #' \describe{ 
 #' \item{state}{a character variable with values \code{Alabama},
 #' \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -4799,7 +4805,7 @@ NULL
 #' 
 #' @name Independent
 #' @docType data
-#' @format A data frame/tibble with 46 observations on the following 2 variables.
+#' @format A data frame/tibble with 46 observations on two variables
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' \item{group}{a factor with levels \code{A} and \code{B}} 
@@ -4830,13 +4836,13 @@ NULL
 #' 
 #' @name Indian
 #' @docType data
-#' @format A data frame/tibble with 10 observations on the following 4 variables.
+#' @format A data frame/tibble with ten observations on four variables
 #' \describe{ 
 #' \item{reservation}{a character variable with values \code{Blackfeet},
 #' \code{Fort Apache}, \code{Gila River}, \code{Hopi}, \code{Navajo}, \code{Papago},
 #' \code{Pine Ridge}, \code{Rosebud}, \code{San Carlos}, and \code{Zuni Pueblo}}
 #' \item{percent high school}{percent who have graduated from high school} 
-#' \item{per capita income}{per capita income} 
+#' \item{per capita income}{per capita income (in dollars)} 
 #' \item{poverty rate}{percent poverty} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -4864,10 +4870,10 @@ NULL
 #' 
 #' @name Indiapol
 #' @docType data
-#' @format A data frame/tibble with 39 observations on the following 2 variables.
+#' @format A data frame/tibble with 39 observations on two variables
 #' \describe{ 
 #' \item{year}{the year of the race} 
-#' \item{speed}{the winners average speed} 
+#' \item{speed}{the winners average speed (in mph)} 
 #' }
 #' 
 #' @source The World Almanac and Book of Facts, 2000, p. 1004
@@ -4893,7 +4899,7 @@ NULL
 #' 
 #' @name Indy500
 #' @docType data
-#' @format A data frame/tibble with 33 observations on the following 4 variables.
+#' @format A data frame/tibble with 33 observations on four variables
 #' \describe{ 
 #' \item{driver}{a character variable with values \code{andretti},
 #' \code{bachelart}, \code{boesel}, \code{brayton}, \code{c.guerrero},
@@ -4903,7 +4909,7 @@ NULL
 #' \code{matsuda}, \code{matsushita}, \code{pruett}, \code{r.guerrero},
 #' \code{rahal}, \code{ribeiro}, \code{salazar}, \code{sharp}, \code{sullivan},
 #' \code{tracy}, \code{vasser}, \code{villeneuve}, and \code{zampedri}}
-#' \item{qualif}{qualifying speed (mph)} 
+#' \item{qualif}{qualifying speed (in mph)} 
 #' \item{starts}{number of Indianapolis 500 starts} 
 #' \item{group}{a numeric vector where 1 indicates the driver has 4 or fewer 
 #' Indianapolis 500 starts and a 2 for drivers with 5 or more Indianapolis 500 starts} 
@@ -4935,10 +4941,10 @@ NULL
 #' 
 #' @name Inflatio
 #' @docType data
-#' @format A data frame/tibble with 24 observations on the following 4 variables.
+#' @format A data frame/tibble with 24 observations on four variables
 #' \describe{
 #' \item{year}{a numeric vector of years} 
-#' \item{pay}{average hourly wage for salaried employees} 
+#' \item{pay}{average hourly wage for salaried employees (in dollars)} 
 #' \item{increase}{percent increase in hourly wage over previous year}
 #' \item{inflation}{percent inflation rate} 
 #' }
@@ -4966,7 +4972,7 @@ NULL
 #' 
 #' @name Inletoil
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following variable.
+#' @format A data frame/tibble with 12 observations on one variable
 #' \describe{ 
 #' \item{temp}{inlet oil temperature (Fahrenheit)} 
 #' }
@@ -4994,7 +5000,7 @@ NULL
 #' 
 #' @name Inmate
 #' @docType data
-#' @format A data frame/tibble with 28,037 observations on the following 2 variables.
+#' @format A data frame/tibble with 28,047 observations on two variables
 #' \describe{ 
 #' \item{race}{a factor with levels \code{white},
 #' \code{black}, and \code{hispanic}} 
@@ -5027,7 +5033,7 @@ NULL
 #' 
 #' @name Inspect
 #' @docType data
-#' @format A data frame/tibble with 174 observations on the following 2 variables.
+#' @format A data frame/tibble with 174 observations on two variables
 #' \describe{ 
 #' \item{station}{a factor with levels \code{auto inspection},
 #' \code{auto repair}, \code{car care center}, \code{gas station}, \code{new car
@@ -5066,9 +5072,9 @@ NULL
 #' 
 #' @name Insulate
 #' @docType data
-#' @format A data frame/tibble with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with ten observations on two variables
 #' \describe{ 
-#' \item{temp}{outside temperature (in degrees centigrade)} 
+#' \item{temp}{outside temperature (in degrees Celcius)} 
 #' \item{loss}{heat loss (in BTUs)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -5101,7 +5107,7 @@ NULL
 #' 
 #' @name Iqgpa
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following 2 variables.
+#' @format A data frame/tibble with 12 observations on two variables
 #' \describe{ 
 #' \item{iq}{IQ scores} 
 #' \item{gpa}{Grade point average} 
@@ -5129,7 +5135,7 @@ NULL
 #' 
 #' @name Irises
 #' @docType data
-#' @format A data frame/tibble with 150 observations on the following 5 variables.
+#' @format A data frame/tibble with 150 observations on five variables
 #' \describe{ 
 #' \item{sepal_length}{sepal length (in cm)} 
 #' \item{sepal_width}{sepal width (in cm)} 
@@ -5165,7 +5171,7 @@ NULL
 #' 
 #' @name Jdpower
 #' @docType data
-#' @format A data frame/tibble with 29 observations on the following 3 variables.
+#' @format A data frame/tibble with 29 observations on three variables
 #' \describe{ 
 #' \item{car}{a factor with levels \code{Acura}, \code{BMW},
 #' \code{Buick}, \code{Cadillac}, \code{Chevrolet}, \code{Dodge} \code{Eagle},
@@ -5204,7 +5210,7 @@ NULL
 #' 
 #' @name Jobsat
 #' @docType data
-#' @format A data frame/tibble with 9 observations on the following 2 variables.
+#' @format A data frame/tibble with nine observations on two variables
 #' \describe{ 
 #' \item{wspt}{Wilson Stress Profile score for teachers} 
 #' \item{satisfaction}{job satisfaction score} 
@@ -5233,7 +5239,7 @@ NULL
 #' 
 #' @name Kidsmoke
 #' @docType data
-#' @format A data frame/tibble with 1000 observations on the following 2 variables.
+#' @format A data frame/tibble with 1000 observations on two variables
 #' \describe{ 
 #' \item{gender}{character vector with values \code{female} and \code{male}} 
 #' \item{smoke}{a character vector with values \code{no} and \code{yes}} 
@@ -5262,7 +5268,7 @@ NULL
 #' 
 #' @name Kilowatt
 #' @docType data
-#' @format A data frame/tibble with 51 observations on the following 2 variables.
+#' @format A data frame/tibble with 51 observations on two variables
 #' \describe{ 
 #' \item{state}{a factor with levels \code{Alabama}
 #' \code{Alaska}, \code{Arizona}, \code{Arkansas} \code{California},
@@ -5300,7 +5306,7 @@ NULL
 #' 
 #' @name Kinder
 #' @docType data
-#' @format A data frame/tibble with 8 observations on the following 3 variables.
+#' @format A data frame/tibble with eight observations on three variables
 #' \describe{ 
 #' \item{pair}{a numeric indicator of pair} 
 #' \item{kinder}{reading score of kids who went to kindergarten} 
@@ -5334,7 +5340,7 @@ NULL
 #' 
 #' @name Laminect
 #' @docType data
-#' @format A data frame/tibble with 138 observations on the following 2 variables.
+#' @format A data frame/tibble with 138 observations on two variables
 #' \describe{
 #'  \item{area}{a character vector indicating the area of the hospital with \code{Rural}, \code{Regional},
 #'  and \code{Metropol}} 
@@ -5362,10 +5368,10 @@ NULL
 #' 
 #' @name Lead
 #' @docType data
-#' @format A data frame/tibble with 66 observations on the following 2 variables.
+#' @format A data frame/tibble with 66 observations on the two variables
 #' \describe{ 
 #' \item{group}{a character vector with values \code{exposed} and \code{control}} 
-#' \item{lead}{a numeric vector indicating the level of lead in children's blood in micrograms/dl} 
+#' \item{lead}{a numeric vector indicating the level of lead in children's blood (in micrograms/dl)} 
 #' }
 #' 
 #' @source Morton, D. et al. (1982), "Lead Absorption in Children of Employees in a Lead-Related
@@ -5389,7 +5395,7 @@ NULL
 #' 
 #' @name Leader
 #' @docType data
-#' @format A data frame/tibble with 34 observations on the following 2 variables.
+#' @format A data frame/tibble with 34 observations on two variables
 #' \describe{ 
 #' \item{age}{a character vector indicating age with values \code{under35} and \code{over35}} 
 #' \item{score}{score on a leadership exam} 
@@ -5412,7 +5418,7 @@ NULL
 #' 
 #' @name Lethal
 #' @docType data
-#' @format A data frame/tibble with 30 observations on the following variable.
+#' @format A data frame/tibble with 30 observations on one variable
 #' \describe{ 
 #' \item{survival}{a numeric vector indicating time surivived after injection} 
 #' }
@@ -5437,11 +5443,11 @@ NULL
 #' 
 #' @name Life
 #' @docType data
-#' @format A data frame/tibble with 8 observations on the following 3 variables.
+#' @format A data frame/tibble with eight observations on three variables
 #' \describe{ 
 #' \item{year}{a numeric vector indicating year} 
-#' \item{men}{life expectancy for men} 
-#' \item{women}{life expectancy for women} 
+#' \item{men}{life expectancy for men (in years)} 
+#' \item{women}{life expectancy for women (in years)} 
 #' }
 #' 
 #' @source National Center for Health Statistics
@@ -5470,10 +5476,10 @@ NULL
 #' 
 #' @name Lifespan
 #' @docType data
-#' @format A data frame/tibble with 6 observations on the following 2 variables.
+#' @format A data frame/tibble with six observations two variables
 #' \describe{ 
-#' \item{heat}{temperature in degrees C} 
-#' \item{life}{lifespan in hours} 
+#' \item{heat}{temperature (in Celcius)} 
+#' \item{life}{lifespan of component (in hours)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -5501,15 +5507,15 @@ NULL
 #' 
 #' @name Ligntmonth
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following 4 variables.
+#' @format A data frame/tibble with 12 observations on four variables
 #' \describe{ 
-#' \item{month}{a factor with levels \code{1/01/2000}
-#' \code{10/01/2000} \code{11/01/2000} \code{12/01/2000} \code{2/01/2000}
-#' \code{3/01/2000} \code{4/01/2000} \code{5/01/2000} \code{6/01/2000}
-#' \code{7/01/2000} \code{8/01/2000} \code{9/01/2000}} 
-#' \item{deaths}{a numeric vector} 
-#' \item{injuries}{a numeric vector}
-#' \item{damage}{a numeric vector} 
+#' \item{month}{a factor with levels \code{1/01/2000},
+#' \code{10/01/2000}, \code{11/01/2000}, \code{12/01/2000}, \code{2/01/2000},
+#' \code{3/01/2000}, \code{4/01/2000}, \code{5/01/2000}, \code{6/01/2000},
+#' \code{7/01/2000}, \code{8/01/2000}, and \code{9/01/2000}} 
+#' \item{deaths}{number of deaths due to lightning strikes} 
+#' \item{injuries}{number of injuries due to lightning strikes}
+#' \item{damage}{damage due to lightning strikes (in dollars)} 
 #' }
 #' 
 #' @source \emph{Lighting Fatalities, Injuries and Damage Reports in the United States},
@@ -5538,7 +5544,7 @@ NULL
 #' 
 #' @name Lodge
 #' @docType data
-#' @format A data frame/tibble with 45 observations on the following 6 variables.
+#' @format A data frame/tibble with 45 observations on six variables
 #' \describe{ 
 #' \item{traffic}{a numeric vector indicating the amount of vehicles that passed a site in 1 hour} 
 #' \item{site}{a numeric vector with values \code{1}, \code{2}, and \code{3}} 
@@ -5565,7 +5571,7 @@ NULL
 #' 
 #' @name Longtail
 #' @docType data
-#' @format A data frame/tibble with 60 observations on the following 3 variables.
+#' @format A data frame/tibble with 60 observations on three variables
 #' \describe{ 
 #' \item{score}{a numeric vector} 
 #' \item{group}{a numeric vector with values \code{1}, \code{2}, and \code{3}} 
@@ -5593,7 +5599,7 @@ NULL
 #' 
 #' @name Lowabil
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following 3 variables.
+#' @format A data frame/tibble with 12 observations on three variables
 #' \describe{ 
 #' \item{pair}{a numeric indicator of pair} 
 #' \item{experiment}{score of the  child with the experimental method} 
@@ -5626,7 +5632,7 @@ NULL
 #' 
 #' @name Magnesiu
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 2 variables.
+#' @format A data frame/tibble with 20 observations on two variables
 #' \describe{ 
 #' \item{distance}{distance between samples}
 #' \item{magnesium}{concentration of magnesium} 
@@ -5659,9 +5665,9 @@ NULL
 #' 
 #' @name Malpract
 #' @docType data
-#' @format A data frame/tibble with 17 observations on the following variable.
+#' @format A data frame/tibble with 17 observations on one variable
 #' \describe{ 
-#' \item{award}{malpractice reward in $1000} 
+#' \item{award}{malpractice reward (in $1000)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -5683,9 +5689,9 @@ NULL
 #' 
 #' @name Manager
 #' @docType data
-#' @format A data frame/tibble with 26 observations on the following variable.
+#' @format A data frame/tibble with 26 observations on one variable
 #' \describe{ 
-#' \item{salary}{random sample of advertised salaries of top executives} 
+#' \item{salary}{random sample of advertised annual salaries of top executives (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -5708,7 +5714,7 @@ NULL
 #' 
 #' @name Marked
 #' @docType data
-#' @format A data frame/tibble with 65 observations on the following variable.
+#' @format A data frame/tibble with 65 observations on one variable
 #' \describe{ 
 #' \item{percent}{percentage of marked cars in 65 Florida police departments}
 #' }
@@ -5739,7 +5745,7 @@ NULL
 #' 
 #' @name Math
 #' @docType data
-#' @format A data frame/tibble with 30 observations on the following variable.
+#' @format A data frame/tibble with 30 observations on one variable
 #' \describe{ 
 #' \item{score}{scores on a standardized test for 30 tenth graders} 
 #' }
@@ -5772,7 +5778,7 @@ NULL
 #' 
 #' @name Mathcomp
 #' @docType data
-#' @format A data frame/tibble with 31 observations on the following variable.
+#' @format A data frame/tibble with 31 observations one variable
 #' \describe{ 
 #' \item{score}{scores of 31 entering freshmen at a community college on a national standardized test} 
 #' }
@@ -5797,7 +5803,7 @@ NULL
 #' 
 #' @name Mathpro
 #' @docType data
-#' @format A data frame/tibble with 51 observations on the following 4 variables.
+#' @format A data frame/tibble with 51 observations on four variables
 #' \describe{ 
 #' \item{state}{a factor with levels \code{} \code{Conn},
 #' \code{D.C.}, \code{Del}, \code{Ga}, \code{Hawaii}, \code{Ind}, \code{Maine},
@@ -5835,7 +5841,7 @@ NULL
 #' 
 #' @name Maze
 #' @docType data
-#' @format A data frame/tibble with 32 observations on the following 2 variables.
+#' @format A data frame/tibble with 32 observations on two variables
 #' \describe{ 
 #' \item{score}{error scores for animals running through a maze under different conditions} 
 #' \item{condition}{a factor with levels \code{CondA},
@@ -5862,7 +5868,7 @@ NULL
 #' 
 #' @name Median
 #' @docType data
-#' @format A data frame/tibble with 45 observations on the following 2 variables.
+#' @format A data frame/tibble with 45 observations on two variables
 #' \describe{ 
 #' \item{sample}{a vector with values \code{Sample1}, \code{Sample 2}, and \code{Sample 3}} 
 #' \item{value}{a numeric vector} 
@@ -5889,7 +5895,7 @@ NULL
 #' 
 #' @name Mental
 #' @docType data
-#' @format A data frame/tibble with 16 observations on the following variable.
+#' @format A data frame/tibble with 16 observations on one variable
 #' \describe{ 
 #' \item{age}{mental age of 16 girls} 
 #' }
@@ -5913,9 +5919,9 @@ NULL
 #' 
 #' @name Mercury
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on one variable
 #' \describe{ 
-#' \item{mercury}{a numeric vector measuring mercury in parts per million} 
+#' \item{mercury}{a numeric vector measuring mercury (in parts per million)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -5937,7 +5943,7 @@ NULL
 #' 
 #' @name Metrent
 #' @docType data
-#' @format A data frame/tibble with 46 observations on the following variable.
+#' @format A data frame/tibble with 46 observations on one variable
 #' \describe{ 
 #' \item{rent}{monthly rent in dollars} 
 #' }
@@ -5966,7 +5972,7 @@ NULL
 #' 
 #' @name Miller
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on one variable
 #' \describe{ 
 #' \item{miller}{scores on the Miller Personality test} 
 #' }
@@ -5994,7 +6000,7 @@ NULL
 #' 
 #' @name Miller1
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{miller}{scores on the Miller personality test} 
 #' }
@@ -6015,12 +6021,12 @@ NULL
 #' Moisture content and depth of core sample for marine muds in eastern
 #' Louisiana
 #' 
-#' Data for Exercise 9.37
+#' Data for Exercise 9.32
 #' 
 #' 
 #' @name Moisture
 #' @docType data
-#' @format A data frame/tibble with 16 observations on the following 4 variables.
+#' @format A data frame/tibble with 16 observations on four variables
 #' \describe{ 
 #' \item{depth}{a numeric vector} 
 #' \item{moisture}{g of water per 100 g of dried sediment} 
@@ -6055,7 +6061,7 @@ NULL
 #' 
 #' @name Monoxide
 #' @docType data
-#' @format A data frame/tibble with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with ten observations on two variables
 #' \describe{ 
 #' \item{company}{a vector with values \code{manufacturer} and \code{competitor}} 
 #' \item{emission}{carbon monoxide emitted} 
@@ -6087,7 +6093,7 @@ NULL
 #' 
 #' @name Movie
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following 3 variables.
+#' @format A data frame/tibble with 12 observations on three variables
 #' \describe{ 
 #' \item{before}{moral aptitude before viewing the movie} 
 #' \item{after}{moral aptitude after viewing the movie} 
@@ -6118,11 +6124,11 @@ NULL
 #' 
 #' @name Music
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following 3 variables.
+#' @format A data frame/tibble with 12 observations on three variables
 #' \describe{ 
 #' \item{method1}{a numeric vector measuring the improvement scores on a music recognition test} 
 #' \item{method2}{a numeric vector measuring the improvement scores on a music recognition test} 
-#' \item{differ}{a numeric vector} 
+#' \item{differ}{\code{method1} - \code{method2}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -6154,7 +6160,7 @@ NULL
 #' 
 #' @name Name
 #' @docType data
-#' @format A data frame/tibble with 42 observations on the following 3 variables.
+#' @format A data frame/tibble with 42 observations on three variables
 #' \describe{ 
 #' \item{brand}{a factor with levels \code{Band-Aid},
 #' \code{Barbie}, \code{Birds Eye}, \code{Budweiser}, \code{Camel}, \code{Campbell},
@@ -6198,9 +6204,9 @@ NULL
 #' 
 #' @name Nascar
 #' @docType data
-#' @format A data frame/tibble with 36 observations on the following 6 variables.
+#' @format A data frame/tibble with 36 observations on six variables
 #' \describe{ 
-#' \item{time}{duration of pit stop} 
+#' \item{time}{duration of pit stop (in seconds)} 
 #' \item{team}{a numeric vector representing team 1, 2, or 3} 
 #' \item{ranks}{a numeric vector ranking each pit stop in order of speed} 
 #' }
@@ -6228,7 +6234,7 @@ NULL
 #' 
 #' @name Nervous
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following 2 variables.
+#' @format A data frame/tibble with 25 observations on two variables
 #' \describe{ 
 #' \item{react}{a numeric vector representing reaction time} 
 #' \item{drug}{a numeric vector indicating each of the 4 drugs} 
@@ -6257,9 +6263,9 @@ NULL
 #' 
 #' @name Newsstand
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
-#' \item{profit}{profit of each newsstand} 
+#' \item{profit}{profit of each newsstand (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -6283,11 +6289,11 @@ NULL
 #' 
 #' @name Nfldraf2
 #' @docType data
-#' @format A data frame/tibble with 47 observations on the 3 following variables.
+#' @format A data frame/tibble with 47 observations on three variables
 #' \describe{ 
 #' \item{rating}{rating of each player on a scale out of 10}
-#' \item{forty}{forty yard dash time in seconds}
-#' \item{weight}{weight of each player in pounds}
+#' \item{forty}{forty yard dash time (in seconds)}
+#' \item{weight}{weight of each player (in pounds)}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -6311,11 +6317,11 @@ NULL
 #' 
 #' @name Nfldraft
 #' @docType data
-#' @format A data frame/tibble with 29 observations on the 3 following variables.
+#' @format A data frame/tibble with 29 observations on three variables
 #' \describe{ 
 #' \item{rating}{rating of each player on a scale out of 10}
-#' \item{forty}{forty yard dash time in seconds}
-#' \item{weight}{weight of each player in pounds}
+#' \item{forty}{forty yard dash time (in seconds)}
+#' \item{weight}{weight of each player (in pounds)}
 #' }
 #' 
 #' @source \emph{USA Today}, April 20, 1994
@@ -6335,17 +6341,17 @@ NULL
 
 
 
-#' Nicotine content versus sales for 8 major brands of cigarettes
+#' Nicotine content versus sales for eight major brands of cigarettes
 #' 
 #' Data for Exercise 9.21
 #' 
 #' 
 #' @name Nicotine
 #' @docType data
-#' @format A data frame/tibble with 8 observations on the following 2 variables.
+#' @format A data frame/tibble with eight observations on two variables
 #' \describe{ 
-#' \item{nicotine}{nicotine content in milligrams} 
-#' \item{sales}{sales figures in $100,000} 
+#' \item{nicotine}{nicotine content (in milligrams)} 
+#' \item{sales}{sales figures (in $100,000)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -6372,7 +6378,7 @@ NULL
 #' 
 #' @name Orange
 #' @docType data
-#' @format A data frame/tibble with 6 observations on the following 2 variables.
+#' @format A data frame/tibble with six observations on two variables
 #' \describe{ 
 #' \item{harvest}{harvest in millions of boxes} 
 #' \item{price}{price is average price charged by California growers for for 75-pound box of navel oranges} 
@@ -6401,7 +6407,7 @@ NULL
 #' 
 #' @name Orioles
 #' @docType data
-#' @format A data frame/tibble with 27 observations on the following 3 variables.
+#' @format A data frame/tibble with 27 observations on three variables
 #' \describe{ 
 #' \item{first name}{a factor with levels \code{Albert},
 #' \code{Arthur}, \code{B.J.}, \code{Brady}, \code{Cal}, \code{Charles},
@@ -6415,7 +6421,7 @@ NULL
 #' \code{Orosco}, \code{Otanez}, \code{Ponson}, \code{Reboulet}, \code{Rhodes},
 #' \code{Ripken Jr.}, \code{Slocumb}, \code{Surhoff},\code{Timlin}, and
 #' \code{Webster}} 
-#' \item{1999salary}{a numeric vector containing each player's salary in dollars} 
+#' \item{1999salary}{a numeric vector containing each player's salary (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -6425,10 +6431,10 @@ NULL
 #' stripchart(Orioles$`1999salary`, method = "stack", pch = 19)
 #' \dontrun{
 #' ggplot2::ggplot(data = Orioles, aes(x = `1999salary`)) + 
-#'   geom_dotplot(dotsize = 0.5) + 
+#'     geom_dotplot(dotsize = 0.5) + 
 #'     labs(x = "1999 Salary") +
-#'       theme_bw()
-#'       }
+#'     theme_bw()
+#' }
 #' 
 "Orioles"
 
@@ -6443,11 +6449,11 @@ NULL
 #' 
 #' @name Oxytocin
 #' @docType data
-#' @format A data frame/tibble with 11 observations on the following 3 variables.
+#' @format A data frame/tibble with 11 observations on three variables
 #' \describe{ 
 #' \item{subject}{a numeric vector indicating each subject} 
-#' \item{before}{mean arterial blood pressure of 11 subjects before receiving oxytocin} 
-#' \item{after}{mean arterial blood pressure of 11 subjects after receiving oxytocin} 
+#' \item{before}{mean arterial blood pressure of subject before receiving oxytocin} 
+#' \item{after}{mean arterial blood pressure of subject after receiving oxytocin} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -6474,7 +6480,7 @@ NULL
 #' 
 #' @name Parented
 #' @docType data
-#' @format A data frame/tibble with 200 observations on the following 2 variables.
+#' @format A data frame/tibble with 200 observations on two variables
 #' \describe{ 
 #' \item{education}{a factor with levels \code{4yr college
 #' degree}, \code{Doctoral degree}, \code{Grad degree}, \code{H.S grad or less},
@@ -6492,12 +6498,12 @@ NULL
 #' rm(T1)
 #' \dontrun{
 #' ggplot2::ggplot(data = Parented, aes(x = education, fill = parent)) + 
-#'   geom_bar(position = "dodge") + 
+#'     geom_bar(position = "dodge") + 
 #'     theme_bw() +
-#'       theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) + 
-#'         scale_fill_manual(values = c("pink", "blue")) + 
-#'           labs(x = "", y = "") 
-#'           }
+#'     theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) + 
+#'     scale_fill_manual(values = c("pink", "blue")) + 
+#'     labs(x = "", y = "") 
+#' }
 #'           
 "Parented"
 
@@ -6513,10 +6519,10 @@ NULL
 #' 
 #' @name Patrol
 #' @docType data
-#' @format A data frame/tibble with 10 observations on the following 3 variables.
+#' @format A data frame/tibble with ten observations on three variables
 #' \describe{ 
 #' \item{tickets}{number of tickets written per week} 
-#' \item{years}{patrolperson's years of experience} 
+#' \item{years}{patrolperson's experience (in years)} 
 #' \item{log_tickets}{natural log of \code{tickets}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -6541,7 +6547,7 @@ NULL
 #' 
 #' @name Pearson
 #' @docType data
-#' @format A data frame/tibble with 11 observations on the following 3 variables.
+#' @format A data frame/tibble with 11 observations on three variables
 #' \describe{ 
 #' \item{family}{number indicating family of brother and sister pair}
 #' \item{brother}{height of brother (in inches)} 
@@ -6572,7 +6578,7 @@ NULL
 #' 
 #' @name Phone
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{time}{duration of long distance phone call (in minutes)} 
 #' }
@@ -6599,7 +6605,7 @@ NULL
 #' 
 #' @name Poison
 #' @docType data
-#' @format A data frame/tibble with 226,261 observations on the following variable.
+#' @format A data frame/tibble with 226,361 observations on one variable
 #' \describe{ 
 #' \item{type}{a factor with levels \code{Alcohol},
 #' \code{Cleaning agent}, \code{Cosmetics}, \code{Drugs}, \code{Insecticides}, and
@@ -6640,7 +6646,7 @@ NULL
 #' 
 #' @name Politic
 #' @docType data
-#' @format A data frame/tibble with 250 observations on the following 2 variables.
+#' @format A data frame/tibble with 250 observations on two variables
 #' \describe{ 
 #' \item{party}{a factor with levels \code{republican}, \code{democrat}, and \code{other}} 
 #' \item{gender}{a factor with levels \code{female} and \code{male}} 
@@ -6668,7 +6674,7 @@ NULL
 #' 
 #' @name Pollutio
 #' @docType data
-#' @format A data frame/tibble with 15 observations on the following variable.
+#' @format A data frame/tibble with 15 observations on one variable
 #' \describe{ 
 #' \item{inde}{air pollution index} 
 #' }
@@ -6694,7 +6700,7 @@ NULL
 #' 
 #' @name Porosity
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{porosity}{porosity measurement (percent)} 
 #' }
@@ -6724,7 +6730,7 @@ NULL
 #' 
 #' @name Poverty
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 4 variables.
+#' @format A data frame/tibble with 20 observations on four variables
 #' \describe{ 
 #' \item{city}{a factor with levels \code{Atlanta},
 #' \code{Buffalo}, \code{Cincinnati}, \code{Cleveland}, \code{Dayton, O},
@@ -6756,14 +6762,14 @@ NULL
 
 
 
-#' Robbery rates versus percent low income in 8 precincts
+#' Robbery rates versus percent low income in eight precincts
 #' 
 #' Data for Exercise 2.2 and 2.38
 #' 
 #' 
 #' @name Precinct
 #' @docType data
-#' @format A data frame/tibble with 8 observations on the following 2 variables.
+#' @format A data frame/tibble with eight observations on two variables
 #' \describe{ 
 #' \item{rate}{robbery rate (per 1000 people)} 
 #' \item{income}{percent with low income} 
@@ -6791,7 +6797,7 @@ NULL
 #' 
 #' @name Prejudic
 #' @docType data
-#' @format A data frame with 25 observations on the following variable.
+#' @format A data frame with 25 observations on one variable
 #' \describe{ 
 #' \item{prejud}{racial prejudice score} 
 #' }
@@ -6816,7 +6822,7 @@ NULL
 #' 
 #' @name Presiden
 #' @docType data
-#' @format A data frame/tibble with 43 observations on the following 5 variables.
+#' @format A data frame/tibble with 43 observations on five variables
 #' \describe{ 
 #' \item{first_initial}{a factor with levels \code{A.}, \code{B.},
 #' \code{C.}, \code{D.}, \code{F.}, \code{G.}, \code{G. W.}, \code{H.}, \code{J.},
@@ -6865,7 +6871,7 @@ NULL
 #' 
 #' @name Press
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 2 variables.
+#' @format A data frame/tibble with 20 observations on two variables
 #' \describe{ 
 #' \item{education_yrs}{years of education} 
 #' \item{confidence}{degree of confidence in the press (the higher the score, the more confidence)} 
@@ -6895,7 +6901,7 @@ NULL
 #' 
 #' @name Prognost
 #' @docType data
-#' @format A data frame/tibble with 15 observations on the following variable.
+#' @format A data frame/tibble with 15 observations on one variable
 #' \describe{ 
 #' \item{kprs_score}{Kloper's Prognostic Rating Scale score} 
 #' }
@@ -6925,7 +6931,7 @@ NULL
 #' 
 #' @name Program
 #' @docType data
-#' @format A data frame/tibble with 44 observations on the following 2 variables.
+#' @format A data frame/tibble with 44 observations on two variables
 #' \describe{ 
 #' \item{method}{a character variable with values \code{method1}, \code{method2}, 
 #' \code{method3}, and \code{method4}} 
@@ -6956,7 +6962,7 @@ NULL
 #' 
 #' @name Psat
 #' @docType data
-#' @format A data frame/tibble with 7 observations on the following 2 variables.
+#' @format A data frame/tibble with seven observations on the two variables
 #' \describe{
 #' \item{psat}{PSAT score} 
 #' \item{sat}{SAT score} 
@@ -6986,7 +6992,7 @@ NULL
 #' 
 #' @name Psych
 #' @docType data
-#' @format A data frame/tibble with 23 observations on the following variable.
+#' @format A data frame/tibble with 23 observations on one variable
 #' \describe{ 
 #' \item{score}{number of correct repsonses in a psychology experiment} 
 #' }
@@ -7011,7 +7017,7 @@ NULL
 #' 
 #' @name Puerto
 #' @docType data
-#' @format A data frame/tibble with 50 observations on the following variable.
+#' @format A data frame/tibble with 50 observations on one variable
 #' \describe{ 
 #' \item{income}{weekly family income (in dollars)} 
 #' }
@@ -7037,7 +7043,7 @@ NULL
 #' 
 #' @name Quail
 #' @docType data
-#' @format A data frame/tibble with 40 observations on the following 2 variables.
+#' @format A data frame/tibble with 40 observations on two variables
 #' \describe{ 
 #' \item{group}{a character variable with values \code{placebo} and \code{treatment}}
 #' \item{level}{low-density lipoprotein (LDL) cholestrol level} 
@@ -7067,7 +7073,7 @@ NULL
 #' 
 #' @name Quality
 #' @docType data
-#' @format A data frame/tibble with 15 observations on the following 2 variables.
+#' @format A data frame/tibble with 15 observations on two variables
 #' \describe{ 
 #' \item{process}{a character variable with values \code{Process1} and \code{Process2}}
 #' \item{score}{results of a quality control test} 
@@ -7093,7 +7099,7 @@ NULL
 #' 
 #' @name Rainks
 #' @docType data
-#' @format A data frame/tibble with 35 observations on the following 5 variables.
+#' @format A data frame/tibble with 35 observations on five variables
 #' \describe{ 
 #' \item{rain}{rainfall (in inches)} 
 #' \item{x1}{rainfall (in inches)} 
@@ -7127,7 +7133,7 @@ NULL
 #' 
 #' @name Randd
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following 2 variables.
+#' @format A data frame/tibble with 12 observations on two variables
 #' \describe{ 
 #' \item{rd}{research and development expenditures (in million dollars)} 
 #' \item{sales}{sales (in million dollars)} 
@@ -7155,7 +7161,7 @@ NULL
 #' 
 #' @name Rat
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{survival_time}{survival time in weeks for rats exposed to a high level of radiation} 
 #' }
@@ -7187,7 +7193,7 @@ NULL
 #' 
 #' @name Ratings
 #' @docType data
-#' @format A data frame/tibble with 250 observations on the following 2 variables.
+#' @format A data frame/tibble with 250 observations on two variables
 #' \describe{
 #' \item{rating}{character variable with students' ratings of instructor (A-F)}
 #' \item{gpa}{students' grade point average}
@@ -7201,11 +7207,11 @@ NULL
 #' ylab = "Student GPA")
 #' \dontrun{
 #' ggplot2::ggplot(data = Ratings, aes(x = rating, y = gpa, fill = rating)) +
-#'   geom_boxplot() + 
+#'     geom_boxplot() + 
 #'     theme_bw() + 
-#'       theme(legend.position = "none") + 
-#'         labs(x = "Student rating of instructor", y = "Student GPA")
-#'         }
+#'     theme(legend.position = "none") + 
+#'     labs(x = "Student rating of instructor", y = "Student GPA")
+#' }
 #' 
 "Ratings"
 
@@ -7221,7 +7227,7 @@ NULL
 #' 
 #' @name Reaction
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following variable.
+#' @format A data frame/tibble with 12 observations on one variable
 #' \describe{ 
 #' \item{time}{threshold reaction time (in seconds) for persons subjected to emotional stress} 
 #' }
@@ -7246,7 +7252,7 @@ NULL
 #' 
 #' @name Reading
 #' @docType data
-#' @format A data frame/tibble with 30 observations on the following 4 variables.
+#' @format A data frame/tibble with 30 observations on four variables
 #' \describe{ 
 #' \item{score}{standardized reading test score} 
 #' \item{sorted}{sorted values of \code{score}} 
@@ -7276,7 +7282,7 @@ NULL
 #' 
 #' @name Readiq
 #' @docType data
-#' @format A data frame/tibble with 14 observations on the following 2 variables.
+#' @format A data frame/tibble with 14 observations on two variables
 #' \describe{ 
 #' \item{reading}{reading achievement score} 
 #' \item{iq}{IQ score} 
@@ -7306,7 +7312,7 @@ NULL
 #' 
 #' @name Referend
 #' @docType data
-#' @format A data frame with 237 observations on the following 2 variables.
+#' @format A data frame with 237 observations on two variables
 #' \describe{ 
 #' \item{choice}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' \item{response}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 
@@ -7334,7 +7340,7 @@ NULL
 #' 
 #' @name Region
 #' @docType data
-#' @format A data frame/tibble with 48 observations on the following 3 variables.
+#' @format A data frame/tibble with 48 observations on three variables
 #' \describe{
 #'  \item{pollution}{pollution index} 
 #'  \item{region}{region of a county (\code{west}, \code{central}, and \code{east})}
@@ -7361,7 +7367,7 @@ NULL
 #' 
 #' @name Register
 #' @docType data
-#' @format A data frame/tibble with 9 observations on the following 2 variables.
+#' @format A data frame/tibble with nine observations on two variables
 #' \describe{ 
 #' \item{age}{age of cash register (in years)} 
 #' \item{cost}{maintenance cost of cash register (in dollars)} 
@@ -7391,7 +7397,7 @@ NULL
 #' 
 #' @name Rehab
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 4 variables.
+#' @format A data frame/tibble with 20 observations on four variables
 #' \describe{ 
 #' \item{inmate}{inmate identification number} 
 #' \item{psych1}{rating from first psychiatrist on the inmates rehabilative potential} 
@@ -7423,7 +7429,7 @@ NULL
 #' 
 #' @name Remedial
 #' @docType data
-#' @format A data frame/tibble with 84 observations on the following 2 variables.
+#' @format A data frame/tibble with 84 observations on two variables
 #' \describe{ 
 #' \item{gender}{a character variable with values \code{female} and \code{male}} 
 #' \item{score}{math placement score} 
@@ -7453,7 +7459,7 @@ NULL
 #' 
 #' @name Rentals
 #' @docType data
-#' @format A data frame/tibble with 45 observations on the following variable.
+#' @format A data frame/tibble with 45 observations on one variable
 #' \describe{ 
 #' \item{rent}{weekly apartment rental price (in dollars)} 
 #' }
@@ -7479,7 +7485,7 @@ NULL
 #' 
 #' @name Repair
 #' @docType data
-#' @format A data frame/tibble with 22 observations on the following variable.
+#' @format A data frame/tibble with 22 observations on one variable
 #' \describe{ 
 #' \item{time}{time to repair a wrecked in car (in hours)} 
 #' }
@@ -7505,7 +7511,7 @@ NULL
 #' 
 #' @name Retail
 #' @docType data
-#' @format A data frame/tibble with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with 10 observations on two variables
 #' \describe{ 
 #' \item{months}{length of employment (in months)}
 #' \item{sales}{employee gross sales (in dollars)} 
@@ -7533,7 +7539,7 @@ NULL
 #' 
 #' @name Ronbrown1
 #' @docType data
-#' @format A data frame/tibble with 75 observations on the following 2 variables.
+#' @format A data frame/tibble with 75 observations on two variables
 #' \describe{ 
 #' \item{depth}{ocen depth (in meters)} 
 #' \item{temperature}{ocean temperature (in Celsius)} 
@@ -7558,7 +7564,7 @@ NULL
 #' 
 #' @name Ronbrown2
 #' @docType data
-#' @format A data frame/tibble with 150 observations on the following 3 variables.
+#' @format A data frame/tibble with 150 observations on three variables
 #' \describe{ 
 #' \item{depth}{ocean depth (in meters)}
 #' \item{temperature}{ocean temperature (in Celcius)} 
@@ -7588,7 +7594,7 @@ NULL
 #' 
 #' @name Rural
 #' @docType data
-#' @format A data frame/tibble with 33 observations on the following 2 variables.
+#' @format A data frame/tibble with 33 observations on two variables
 #' \describe{ 
 #' \item{score}{child's social adjustment score} 
 #' \item{area}{character variable with values \code{city} and \code{rural}} 
@@ -7619,9 +7625,9 @@ NULL
 #' 
 #' @name Salary
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on one variable
 #' \describe{ 
-#' \item{salary}{starting salary for Ph.D. psycholgists} 
+#' \item{salary}{starting salary for Ph.D. psycholgists (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -7644,7 +7650,7 @@ NULL
 #' 
 #' @name Salinity
 #' @docType data
-#' @format A data frame/tibble with 48 observations on the following variable.
+#' @format A data frame/tibble with 48 observations on one variable
 #' \describe{ 
 #' \item{salinity}{surface-water salinity value} 
 #' }
@@ -7676,7 +7682,7 @@ NULL
 #' 
 #' @name Sat
 #' @docType data
-#' @format A data frame/tibble with 102 observations on the following 7 variables.
+#' @format A data frame/tibble with 102 observations on seven variables
 #' \describe{ 
 #' \item{state}{U.S. state}
 #' \item{verbal}{verbal SAT score} 
@@ -7719,7 +7725,7 @@ NULL
 #' 
 #' @name Saving
 #' @docType data
-#' @format A data frame/tibble with 65 observations on the following 2 variables.
+#' @format A data frame/tibble with 65 observations on two variables
 #' \describe{ 
 #' \item{par}{problem-asset-ratio for Savings & Loans that were listed as being financially troubled in 1992} 
 #' \item{state}{U.S. state}
@@ -7750,7 +7756,7 @@ NULL
 #' 
 #' @name Scales
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 2 variables.
+#' @format A data frame/tibble with 20 observations on two variables
 #' \describe{ 
 #' \item{brand}{variable indicating brand of bathroom scale (\code{A}, \code{B}, \code{C}, or \code{D})} 
 #' \item{reading}{recorded value (in pounds) of a 100 pound weight} 
@@ -7764,11 +7770,11 @@ NULL
 #' ylab = "Weight (lbs)")
 #' \dontrun{
 #' ggplot2::ggplot(data = Scales, aes(x = brand, y = reading, fill = brand)) + 
-#'   geom_boxplot() + 
+#'     geom_boxplot() + 
 #'     labs(y = "weight (lbs)") +
-#'      theme_bw() + 
-#'        theme(legend.position = "none") 
-#'        }
+#'     theme_bw() + 
+#'     theme(legend.position = "none") 
+#' }
 #' 
 "Scales"
 
@@ -7784,7 +7790,7 @@ NULL
 #' 
 #' @name Schizop2
 #' @docType data
-#' @format A data frame/tibble with 17 observations on the following variable.
+#' @format A data frame/tibble with 17 observations on one variable
 #' \describe{ 
 #' \item{score}{schizophrenics score on a second standardized exam} 
 #' }
@@ -7812,7 +7818,7 @@ NULL
 #' 
 #' @name Schizoph
 #' @docType data
-#' @format A data frame/tibble with 13 observations on the following variable.
+#' @format A data frame/tibble with 13 observations on one variable
 #' \describe{ 
 #' \item{score}{schizophrenics score on a standardized exam one hour after recieving a specified dose of a tranqilizer.} 
 #' }
@@ -7839,10 +7845,9 @@ NULL
 #' 
 #' @name Seatbelt
 #' @docType data
-#' @format A data frame/tibble with 86,759 observations on the following 2 variables.
+#' @format A data frame/tibble with 86,759 observations on two variables
 #' \describe{ 
-#' \item{seatbelt}{a factor with levels \code{No}
-#' \code{Yes}} 
+#' \item{seatbelt}{a factor with levels \code{No} and \code{Yes}} 
 #' \item{injuries}{a factor with levels \code{None}, \code{Minimal}, \code{Minor}, or \code{Major} indicating the extent of the drivers injuries.a numeric vector}
 #' }
 #' 
@@ -7872,7 +7877,7 @@ NULL
 #' 
 #' @name Selfdefe
 #' @docType data
-#' @format A data frame/tibble with 9 observations on the following 3 variables.
+#' @format A data frame/tibble with nine observations on three variables
 #' \describe{ 
 #' \item{woman}{number identifying the woman} 
 #' \item{before}{before the course self-confidence score} 
@@ -7902,7 +7907,7 @@ NULL
 #' 
 #' @name Senior
 #' @docType data
-#' @format A data frame/tibble with 31 observations on the following variable.
+#' @format A data frame/tibble with 31 observations on one variable
 #' \describe{ 
 #' \item{reaction}{reaction time for senior citizens applying for a driver's license renewal} 
 #' }
@@ -7929,7 +7934,7 @@ NULL
 #' 
 #' @name Sentence
 #' @docType data
-#' @format A data frame/tibble with 41 observations on the following variable.
+#' @format A data frame/tibble with 41 observations on one variable
 #' \describe{ 
 #' \item{months}{sentence length (in months) for prisoners convicted of homocide} 
 #' }
@@ -7963,7 +7968,7 @@ NULL
 #' 
 #' @name Shkdrug
 #' @docType data
-#' @format A data frame/tibble with 64 observations on the following 2 variables.
+#' @format A data frame/tibble with 64 observations on two variables
 #' \describe{ 
 #' \item{treatment}{type of treament \code{Drug/NoS}, \code{Drug/Shk}, \code{NoDg/NoS}, or \code{NoDrug/S}}
 #' \item{response}{number of tasks completed in a 10-minute period}
@@ -7991,7 +7996,7 @@ NULL
 #' 
 #' @name Shock
 #' @docType data
-#' @format A data frame/tibble with 27 observations on the following 2 variables.
+#' @format A data frame/tibble with 27 observations on two variables
 #' \describe{ 
 #' \item{group}{grouping variable with values of \code{Group1} (no shock), \code{Group2} (medium shock), 
 #' and \code{Group3} (severe shock)} 
@@ -8021,7 +8026,7 @@ NULL
 #' 
 #' @name Shoplift
 #' @docType data
-#' @format A data frame/tibble with 8 observations on the following 2 variables.
+#' @format A data frame/tibble with eight observations on two variables
 #' \describe{ 
 #' \item{sales}{sales (in 1000 dollars)} 
 #' \item{loss}{loss (in 100 dollars)} 
@@ -8049,7 +8054,7 @@ NULL
 #' 
 #' @name Short
 #' @docType data
-#' @format A data frame/tibble with 158 observations on the following 10 variables.
+#' @format A data frame/tibble with 158 observations on two variables
 #' \describe{
 #' \item{sample}{sample number} 
 #' \item{parallax}{parallax measurements (seconds of a degree)} 
@@ -8078,7 +8083,7 @@ NULL
 #' 
 #' @name Shuttle
 #' @docType data
-#' @format A data frame/tibble with 15 observations on the following 2 variables.
+#' @format A data frame/tibble with 15 observations on two variables
 #' \describe{ 
 #' \item{users}{number of shuttle riders} 
 #' \item{autos}{number of automobiles in the downtown area} 
@@ -8107,7 +8112,7 @@ NULL
 #' 
 #' @name Simpson
 #' @docType data
-#' @format A data frame/tibble with 100 observations on the following 3 variables.
+#' @format A data frame/tibble with 100 observations on three variables
 #' \describe{ 
 #' \item{gpa}{grade point average} 
 #' \item{sport}{sport played (basketball, soccer, or track)} 
@@ -8125,7 +8130,7 @@ NULL
 #'            geom_boxplot() + 
 #'            facet_grid(.~sport) + 
 #'            theme_bw()
-#'                                         }
+#' }
 "Simpson"
 
 
@@ -8139,7 +8144,7 @@ NULL
 #' 
 #' @name Situp
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{number}{maximum number of situps completed in an exercise class after 1 month in the program} 
 #' }
@@ -8168,7 +8173,7 @@ NULL
 #' 
 #' @name Skewed
 #' @docType data
-#' @format A data frame/tibble with 21 observations on the following 2 variables.
+#' @format A data frame/tibble with 21 observations on two variables
 #' \describe{ 
 #' \item{C1}{values from a sample of size 16 from a particular population} 
 #' \item{C2}{values from a sample of size 14 from a particular population} 
@@ -8194,7 +8199,7 @@ NULL
 #' 
 #' @name Skin
 #' @docType data
-#' @format A data frame/tibble with 11 observations on the following 4 variables.
+#' @format A data frame/tibble with 11 observations on four variables
 #' \describe{ 
 #' \item{patient}{patient identification number}
 #' \item{close}{graft survival time in days for a closely matched skin graft on the same burn patient} 
@@ -8228,7 +8233,7 @@ NULL
 #' 
 #' @name Slc
 #' @docType data
-#' @format A data frame/tibble with 190 observations on the following variable.
+#' @format A data frame/tibble with 190 observations on one variable
 #' \describe{ 
 #' \item{slc}{Red blood cell sodium-lithium countertransport} 
 #' }
@@ -8259,7 +8264,7 @@ NULL
 #' 
 #' @name Smokyph
 #' @docType data
-#' @format A data frame/tibble with 75 observations on the following 3 variables.
+#' @format A data frame/tibble with 75 observations on three variables
 #' \describe{ 
 #' \item{waterph}{water sample pH level} 
 #' \item{code}{charater variable with values \code{low} (elevation below 0.6 miles), and \code{high} (elevation above 0.6 miles)} 
@@ -8282,12 +8287,12 @@ NULL
 #'            BSDA::SIGN.test(Smokyph$waterph, md = 7)
 #'            t.test(waterph ~ code, data = Smokyph, alternative = "less")
 #'            t.test(waterph ~ code, data = Smokyph, conf.level = 0.90)
-#'           \dontrun{
-#'            ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
-#'              geom_dotplot() + 
-#'                facet_grid(code ~ .) + 
-#'                  guides(fill = FALSE)
-#'                  }
+#'  \dontrun{
+#'  ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
+#'        geom_dotplot() + 
+#'        facet_grid(code ~ .) + 
+#'        guides(fill = FALSE)
+#' }
 #' 
 "Smokyph"
 
@@ -8302,7 +8307,7 @@ NULL
 #' 
 #' @name Snore
 #' @docType data
-#' @format A data frame/tibble with 2,484 observations on the following 2 variables.
+#' @format A data frame/tibble with 2,484 observations on two variables
 #' \describe{ 
 #' \item{snore}{factor with levels \code{nonsnorer}, \code{ocassional snorer}, \code{nearly every night}, and \code{snores every night}}
 #' \item{heartdisease}{factor indicating whether the indiviudal has heart disease (\code{no} or \code{yes})} 
@@ -8334,7 +8339,7 @@ NULL
 #' 
 #' @name Snow
 #' @docType data
-#' @format A data frame/tibble with 34 observations on the following 2 variables.
+#' @format A data frame/tibble with 34 observations on two variables
 #' \describe{ 
 #' \item{concent}{concentration of microparticles from melted snow (in parts per billion)}
 #' \item{site}{location of snow sample (\code{Antarctica} or \code{Greenland})} 
@@ -8362,7 +8367,7 @@ NULL
 #' 
 #' @name Soccer
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on one variable
 #' \describe{ 
 #' \item{weight}{soccer players weight (in pounds)} 
 #' }
@@ -8374,7 +8379,7 @@ NULL
 #' stem(Soccer$weight, scale = 2)
 #' hist(Soccer$weight, breaks = seq(110, 210, 10), col = "orange",
 #'      main = "Problem 1.46 \n Weights of Soccer Players", 
-#'           xlab = "weight (lbs)", right = FALSE)
+#'      xlab = "weight (lbs)", right = FALSE)
 #' 
 "Soccer"
 
@@ -8389,7 +8394,7 @@ NULL
 #' 
 #' @name Social
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on one variable
 #' \describe{ 
 #' \item{income}{annual income (in dollars) of North Carolina social workers with less than five years experience.} 
 #' }
@@ -8414,12 +8419,12 @@ NULL
 #' 
 #' @name Sophomor
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 4 variables.
+#' @format A data frame/tibble with 20 observations on four variables
 #' \describe{ 
-#' \item{student}{student's identification number} 
-#' \item{gpa}{student's grade point average} 
-#' \item{sat}{student's SAT math score} 
-#' \item{exam}{student's final exam grade in college algebra } 
+#' \item{student}{identification number} 
+#' \item{gpa}{grade point average} 
+#' \item{sat}{SAT math score} 
+#' \item{exam}{final exam grade in college algebra} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -8430,10 +8435,10 @@ NULL
 #' plot(exam ~ gpa, data = Sophomor)
 #' \dontrun{
 #' ggplot2::ggplot(data = Sophomor, aes(x = gpa, y = exam)) + 
-#'   geom_point()
-#'   ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
-#'     geom_point()
-#'     }
+#'    geom_point()
+#'    ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
+#'    geom_point()
+#' }
 #' 
 "Sophomor"
 
@@ -8448,7 +8453,7 @@ NULL
 #' 
 #' @name South
 #' @docType data
-#' @format A data frame/tibble with 31 observations on the following variable.
+#' @format A data frame/tibble with 31 observations on one variable
 #' \describe{ 
 #' \item{rate}{murder rate per 100,000 people} 
 #' }
@@ -8472,7 +8477,7 @@ NULL
 #' 
 #' @name Speed
 #' @docType data
-#' @format A data frame/tibble with 15 observations on the following 4 variables.
+#' @format A data frame/tibble with 15 observations on four variables
 #' \describe{ 
 #' \item{before}{reading comprehension score before taking a speed-reading course} 
 #' \item{after}{reading comprehension score after taking a speed-reading course} 
@@ -8501,7 +8506,7 @@ NULL
 #' 
 #' @name Spellers
 #' @docType data
-#' @format A data frame/tibble with 10 observations on the following 2 variables.
+#' @format A data frame/tibble with ten observations on two variables
 #' \describe{ 
 #' \item{teacher}{character variable with values \code{Fourth} and \code{Colleague}} 
 #' \item{score}{score on a standardized spelling test} 
@@ -8528,7 +8533,7 @@ NULL
 #' 
 #' @name Spelling
 #' @docType data
-#' @format A data frame/tibble with 9 observations on the following 3 variables.
+#' @format A data frame/tibble with nine observations on three variables
 #' \describe{ 
 #' \item{before}{spelling score before a 2-week course of instruction} 
 #' \item{after}{spelling score after a 2-week course of instruction} 
@@ -8558,7 +8563,7 @@ NULL
 #' 
 #' @name Sports
 #' @docType data
-#' @format A data frame/tibble with 200 observations on the following 2 variables.
+#' @format A data frame/tibble with 200 observations on two variables
 #' \describe{ 
 #' \item{gender}{a factor with levels \code{male} and \code{female}}
 #' \item{sport}{a factor with levels \code{football}, \code{basketball}, \code{baseball}, and \code{tennis}} 
@@ -8586,7 +8591,7 @@ NULL
 #' 
 #' @name Spouse
 #' @docType data
-#' @format A data frame/tibble with 540 observations on the following 2 variables.
+#' @format A data frame/tibble with 540 observations on two variables
 #' \describe{ 
 #' \item{result}{a factor with levels \code{not prosecuted}, \code{pleaded guilty}, \code{convicted}, and \code{acquited}}
 #' \item{spouse}{a factor with levels \code{husband} and \code{wife}} 
@@ -8618,7 +8623,7 @@ NULL
 #' 
 #' @name Stable
 #' @docType data
-#' @format A data frame/tibble with 9 observations on the following variable.
+#' @format A data frame/tibble with nine observations on one variable
 #' \describe{ 
 #' \item{time}{time (in seconds) for horse to run 1 mile} 
 #' }
@@ -8642,7 +8647,7 @@ NULL
 #' 
 #' @name Stamp
 #' @docType data
-#' @format A data frame/tibble with 485 observations on the following variable.
+#' @format A data frame/tibble with 485 observations on one variable
 #' \describe{ 
 #' \item{thickness}{stamp thickness (in mm)}
 #' }
@@ -8673,7 +8678,7 @@ NULL
 #' 
 #' @name Statclas
 #' @docType data
-#' @format A data frame/tibble with 72 observations on the following 2 variables.
+#' @format A data frame/tibble with 72 observations on two variables
 #' \describe{ 
 #' \item{class}{class meeting time (9am or 2pm)} 
 #' \item{score}{grade for an introductory statistics class} 
@@ -8701,7 +8706,7 @@ NULL
 #' 
 #' @name Statelaw
 #' @docType data
-#' @format A data frame/tibble with 50 observations on the following 2 variables.
+#' @format A data frame/tibble with 50 observations on two variables
 #' \describe{ 
 #' \item{state}{U.S. state} 
 #' \item{cost}{dollars spent per resident on law enforcement} 
@@ -8731,7 +8736,7 @@ NULL
 #' 
 #' @name Statisti
 #' @docType data
-#' @format A data frame/tibble with 62 observations on the following 2 variables.
+#' @format A data frame/tibble with 62 observations on two variables
 #' \describe{ 
 #' \item{class}{character variable with values \code{Class1} and \code{Class2}} 
 #' \item{score}{test score for an introductory statistics test} 
@@ -8746,10 +8751,10 @@ NULL
 #' \dontrun{
 #' dplyr::group_by(Statisti, class) %>%
 #'  summarize(Mean = mean(score, na.rm = TRUE), 
-#'             Median = median(score, na.rm = TRUE), 
-#'                         SD = sd(score, na.rm = TRUE),
-#'                                     RS = IQR(score, na.rm = TRUE))
-#'                                     }
+#'            Median = median(score, na.rm = TRUE), 
+#'            SD = sd(score, na.rm = TRUE),
+#'            RS = IQR(score, na.rm = TRUE))
+#' }
 #' 
 "Statisti"
 
@@ -8764,7 +8769,7 @@ NULL
 #' 
 #' @name Step
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following variable.
+#' @format A data frame/tibble with 12 observations on one variable
 #' \describe{ 
 #' \item{score}{State test of educational progress (STEP) science test score} 
 #' }
@@ -8791,7 +8796,7 @@ NULL
 #' 
 #' @name Stress
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following 2 variables.
+#' @format A data frame/tibble with 12 observations on two variables
 #' \describe{ 
 #' \item{prestress}{short term memory score before being exposed to a stressful situation}
 #' \item{poststress}{short term memory score after being exposed to a stressful situation} 
@@ -8823,7 +8828,7 @@ NULL
 #' 
 #' @name Study
 #' @docType data
-#' @format A data frame/tibble with 50 observations on the following variable.
+#' @format A data frame/tibble with 50 observations on one variable
 #' \describe{ 
 #' \item{hours}{number of hours a week freshmen reported studying for their courses} 
 #' }
@@ -8849,7 +8854,7 @@ NULL
 #' 
 #' @name Submarin
 #' @docType data
-#' @format A data frame/tibble with 16 observations on the following 3 variables.
+#' @format A data frame/tibble with 16 observations on three variables
 #' \describe{ 
 #' \item{month}{month} 
 #' \item{reported}{number of submarines reported sunk by U.S. Navy} 
@@ -8883,7 +8888,7 @@ NULL
 #' 
 #' @name Subway
 #' @docType data
-#' @format A data frame/tibble with 30 observations on the following variable.
+#' @format A data frame/tibble with 30 observations on one variable
 #' \describe{ 
 #' \item{time}{time (in minutes) it takes a subway to travel from the airport to downtown} 
 #' }
@@ -8909,7 +8914,7 @@ NULL
 #' 
 #' @name Sunspot
 #' @docType data
-#' @format A data frame/tibble with 301 observations on the following 2 variables.
+#' @format A data frame/tibble with 301 observations on two variables
 #' \describe{ 
 #' \item{year}{year} 
 #' \item{sunspots}{average number of sunspots for the year} 
@@ -8923,12 +8928,12 @@ NULL
 #' \dontrun{
 #' lattice::xyplot(sunspots ~ year, data = Sunspot, 
 #'                 main = "Yearly sunspots", type = "l")
-#'                 lattice::xyplot(sunspots ~ year, data = Sunspot, type = "l", 
-#'                                 main = "Yearly sunspots", aspect = "xy")
-#'                                 ggplot2::ggplot(data = Sunspot, aes(x = year, y = sunspots)) + 
-#'                                   geom_line() + 
-#'                                     theme_bw()
-#'                                    }
+#' lattice::xyplot(sunspots ~ year, data = Sunspot, type = "l", 
+#'                 main = "Yearly sunspots", aspect = "xy")
+#' ggplot2::ggplot(data = Sunspot, aes(x = year, y = sunspots)) + 
+#'            geom_line() + 
+#'            theme_bw()
+#' }
 #' 
 "Sunspot"
 
@@ -8943,7 +8948,7 @@ NULL
 #' 
 #' @name Superbowl
 #' @docType data
-#' @format A data frame/tibble with 35 observations on the following 5 variables.
+#' @format A data frame/tibble with 35 observations on five variables
 #' \describe{ 
 #' \item{winning_team}{name of Suberbowl winning team}
 #' \item{winner_score}{winning score for the Superbowl} 
@@ -8971,7 +8976,7 @@ NULL
 #' 
 #' @name Supercar
 #' @docType data
-#' @format A data frame/tibble with 30 observations on the following 2 variables.
+#' @format A data frame/tibble with 30 observations on two variables
 #' \describe{
 #' \item{speed}{top speed (in miles per hour) of car without redlining} 
 #' \item{car}{name of sports car} 
@@ -9035,16 +9040,16 @@ NULL
 #' boxplot(ozone ~ day, data = Tablrock, 
 #'         horizontal = TRUE, las = 1, cex.axis = 0.7)
 #'         par(mar = c(5.1, 4.1, 4.1, 2.1))
-#'        \dontrun{
-#'        ggplot2::ggplot(data = Tablrock, aes(sample = ozone)) + 
-#'          geom_qq() + 
-#'            theme_bw()
-#'            ggplot2::ggplot(data = Tablrock, aes(x = as.factor(day), y = ozone)) + 
+#' \dontrun{
+#'   ggplot2::ggplot(data = Tablrock, aes(sample = ozone)) + 
+#'              geom_qq() + 
+#'              theme_bw()
+#'   ggplot2::ggplot(data = Tablrock, aes(x = as.factor(day), y = ozone)) + 
 #'              geom_boxplot(fill = "pink") + 
-#'                coord_flip() + 
-#'                  labs(x = "") + 
-#'                    theme_bw()
-#'                    }
+#'              coord_flip() + 
+#'              labs(x = "") + 
+#'              theme_bw()
+#' }
 #' 
 "Tablrock"
 
@@ -9059,7 +9064,7 @@ NULL
 #' 
 #' @name Teacher
 #' @docType data
-#' @format A data frame/tibble with 51 observations on the following 3 variables.
+#' @format A data frame/tibble with 51 observations on three variables
 #' \describe{
 #'  \item{state}{U.S. state}
 #' \item{year}{academic year} 
@@ -9076,19 +9081,20 @@ NULL
 #' par(mfrow = c(3, 1))
 #' hist(Teacher$salary[Teacher$year == "1973-74"],
 #'      main = "Teacher salary 1973-74", xlab = "salary",
-#'           xlim = range(Teacher$salary, na.rm = TRUE))
-#'           hist(Teacher$salary[Teacher$year == "1983-84"],
-#'                main = "Teacher salary 1983-84", xlab = "salary",
-#'                     xlim = range(Teacher$salary, na.rm = TRUE))
-#'                     hist(Teacher$salary[Teacher$year == "1993-94"],
-#'                          main = "Teacher salary 1993-94", xlab = "salary",
-#'                               xlim = range(Teacher$salary, na.rm = TRUE))
-#'                               par(mfrow = c(1, 1))
-#'     \dontrun{                       
+#'      xlim = range(Teacher$salary, na.rm = TRUE))
+#' hist(Teacher$salary[Teacher$year == "1983-84"],
+#'      main = "Teacher salary 1983-84", xlab = "salary",
+#'      xlim = range(Teacher$salary, na.rm = TRUE))
+#' hist(Teacher$salary[Teacher$year == "1993-94"],
+#'      main = "Teacher salary 1993-94", xlab = "salary",
+#'      xlim = range(Teacher$salary, na.rm = TRUE))
+#' par(mfrow = c(1, 1))
+#' \dontrun{                       
 #'     ggplot2::ggplot(data = Teacher, aes(x = salary)) + 
-#'      geom_histogram(fill = "purple", color = "black") +  facet_grid(year ~ .) + 
-#'        theme_bw()
-#'        }
+#'                geom_histogram(fill = "purple", color = "black") +  
+#'                facet_grid(year ~ .) + 
+#'                theme_bw()
+#' }
 #' 
 "Teacher"
 
@@ -9103,7 +9109,7 @@ NULL
 #' 
 #' @name Tenness
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{score}{Tennessee Self-Concept Scale score} 
 #' }
@@ -9117,10 +9123,10 @@ NULL
 #' lines(density(Tenness$score))
 #' \dontrun{
 #' ggplot2::ggplot(data = Tenness, aes(x = score, y = ..density..)) + 
-#'   geom_histogram(binwidth = 2, fill = "purple", color = "black") +
-#'     geom_density(color = "red", fill = "pink", alpha = 0.3) + 
-#'       theme_bw()
-#'       }
+#'            geom_histogram(binwidth = 2, fill = "purple", color = "black") +
+#'            geom_density(color = "red", fill = "pink", alpha = 0.3) + 
+#'            theme_bw()
+#' }
 #' 
 "Tenness"
 
@@ -9135,7 +9141,7 @@ NULL
 #' 
 #' @name Tensile
 #' @docType data
-#' @format A data frame/tibble with 72 observations on the following 2 variables.
+#' @format A data frame/tibble with 72 observations on two variables
 #' \describe{
 #' \item{tensile}{plastic bag tensile strength (pounds per square inch)}
 #' \item{run}{factor with run number (1 or 2)} 
@@ -9162,7 +9168,7 @@ NULL
 #' 
 #' @name Test1
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following variable.
+#' @format A data frame/tibble with 25 observations on one variable
 #' \describe{ 
 #' \item{score}{score on first statistics exam} 
 #' }
@@ -9187,9 +9193,9 @@ NULL
 #' 
 #' @name Thermal
 #' @docType data
-#' @format A data frame/tibble with 12 observations on the following 2 variables.
+#' @format A data frame/tibble with 12 observations on the two variables
 #' \describe{ 
-#' \item{temp}{temperature (degrees Celcius) } 
+#' \item{temp}{temperature (degrees Celcius)} 
 #' \item{loss}{heat loss (BTUs)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -9216,11 +9222,11 @@ NULL
 #' 
 #' @name Tiaa
 #' @docType data
-#' @format A data frame/tibble with 365 observations on the following 4 variables.
+#' @format A data frame/tibble with 365 observations on four variables
 #' \describe{ 
-#' \item{crefstk}{a numeric vector} 
-#' \item{crefgwt}{a numeric vector} 
-#' \item{tiaa}{a numeric vector} 
+#' \item{crefstk}{closing price (in dollars)} 
+#' \item{crefgwt}{closing price (in dollars)} 
+#' \item{tiaa}{closing price (in dollars)} 
 #' \item{date}{day of the year} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
@@ -9243,7 +9249,7 @@ NULL
 #' 
 #' @name Ticket
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{time}{time (in seconds) to check out a reservation}
 #' }
@@ -9267,7 +9273,7 @@ NULL
 #' 
 #' @name Toaster
 #' @docType data
-#' @format A data frame/tibble with 17 observations on the following 3 variables.
+#' @format A data frame/tibble with 17 observations on three variables
 #' \describe{ 
 #' \item{toaster}{name of toaster} 
 #' \item{score}{Consumer Reports score}
@@ -9301,7 +9307,7 @@ NULL
 #' 
 #' @name Tonsils
 #' @docType data
-#' @format A data frame/tibble with 1398 observations on the following 2 variables.
+#' @format A data frame/tibble with 1,398 observations on two variables
 #' \describe{ 
 #' \item{size}{a factor with levels \code{Normal}, \code{Large}, and \code{Very Large}} 
 #' \item{status}{a factor with levels \code{Carrier} and \code{Non-carrier}}
@@ -9319,10 +9325,10 @@ NULL
 #' \dontrun{
 #' NDF <- dplyr::count(Tonsils, size, status) 
 #' ggplot2::ggplot(data = NDF, aes(x = size, y = n, fill = status)) + 
-#'  geom_bar(stat = "identity", position = "dodge") + 
-#'    scale_fill_manual(values = c("red", "green")) + 
-#'      theme_bw()
-#'      }
+#'            geom_bar(stat = "identity", position = "dodge") + 
+#'            scale_fill_manual(values = c("red", "green")) + 
+#'            theme_bw()
+#' }
 #' 
 "Tonsils"
 
@@ -9338,7 +9344,7 @@ NULL
 #' 
 #' @name Tort
 #' @docType data
-#' @format A data frame/tibble with 45 observations on the following 5 variables.
+#' @format A data frame/tibble with 45 observations on five variables
 #' \describe{ 
 #' \item{county}{U.S. county}
 #' \item{months}{average number of months to process a tort} 
@@ -9370,7 +9376,7 @@ NULL
 #' 
 #' @name Toxic
 #' @docType data
-#' @format A data frame/tibble with 51 observations on the following 5 variables.
+#' @format A data frame/tibble with 51 observations on five variables
 #' \describe{ 
 #' \item{state}{U.S. state}
 #' \item{region}{U.S. region} 
@@ -9403,7 +9409,7 @@ NULL
 #' 
 #' @name Track
 #' @docType data
-#' @format A data frame with 55 observations on the following 8 variables.
+#' @format A data frame with 55 observations on eight variables
 #' \describe{ 
 #' \item{country}{athlete's country} 
 #' \item{100m}{time in seconds for 100 m} 
@@ -9440,7 +9446,7 @@ NULL
 #' 
 #' @name Track15
 #' @docType data
-#' @format A data frame/tibble with 26 observations on the following 2 variables.
+#' @format A data frame/tibble with 26 observations on two variables
 #' \describe{ 
 #' \item{year}{Olympic year} 
 #' \item{time}{Olympic winning time (in seconds) for the 1500-meter run} 
@@ -9470,7 +9476,7 @@ NULL
 #' 
 #' @name Treatments
 #' @docType data
-#' @format A data frame/tibble with 24 observations on the following 2 variables.
+#' @format A data frame/tibble with 24 observations on two variables
 #' \describe{
 #' \item{score}{score from an experiment} 
 #' \item{group}{factor with levels 1, 2, and 3} 
@@ -9498,7 +9504,7 @@ NULL
 #' 
 #' @name Trees
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following variable.
+#' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
 #' \item{number}{number of trees in a grid} 
 #' }
@@ -9525,7 +9531,7 @@ NULL
 #' 
 #' @name Trucks
 #' @docType data
-#' @format A data frame/tibble with 15 observations on the following 2 variables.
+#' @format A data frame/tibble with 15 observations on two variables
 #' \describe{ 
 #' \item{mpg}{miles per gallon} 
 #' \item{truck}{a factor with levels \code{chevy}, \code{dodge}, and \code{ford}} 
@@ -9552,7 +9558,7 @@ NULL
 #' 
 #' @name Tv
 #' @docType data
-#' @format A data frame/tibble with 53 observations on the following 3 variables.
+#' @format A data frame/tibble with 53 observations on three variables
 #' \describe{ 
 #' \item{state}{U.S. state}
 #' \item{percent}{percent of students who watch more than six hours of TV a day} 
@@ -9583,11 +9589,11 @@ NULL
 #' 
 #' @name Twin
 #' @docType data
-#' @format A data frame/tibble with 9 observations on the following 3 variables.
+#' @format A data frame/tibble with nine observations on three variables
 #' \describe{ 
 #' \item{twinA}{score on intelligence test without drug} 
 #' \item{twinB}{score on intelligence test after taking drug} 
-#' \item{differ}{twinA - twinB} 
+#' \item{differ}{\code{twinA} - \code{twinB}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -9612,7 +9618,7 @@ NULL
 #' 
 #' @name Undergrad
 #' @docType data
-#' @format A data frame/tibble with 100 observations on the following 6 variables.
+#' @format A data frame/tibble with 100 observations on six variables
 #' \describe{ 
 #' \item{gender}{character variable with values \code{Female} and \code{Male}} 
 #' \item{major}{college major}
@@ -9640,10 +9646,10 @@ NULL
 #'                                  main = "Drops versus Gender")
 #'  \dontrun{
 #'  ggplot2::ggplot(data = Undergrad, aes(x = sat, y = drops, fill = factor(drops))) + 
-#'    facet_grid(drops ~.) +
-#'     geom_dotplot() +
-#'       guides(fill = FALSE)
-#'       }
+#'             facet_grid(drops ~.) +
+#'             geom_dotplot() +
+#'             guides(fill = FALSE)
+#' }
 #' 
 "Undergrad"
 
@@ -9659,7 +9665,7 @@ NULL
 #' 
 #' @name Vacation
 #' @docType data
-#' @format A data frame/tibble with 35 observations on the following variable.
+#' @format A data frame/tibble with 35 observations on one variable
 #' \describe{ 
 #' \item{number}{number of days of paid holidays and vacation leave taken} 
 #' }
@@ -9686,7 +9692,7 @@ NULL
 #' 
 #' @name Vaccine
 #' @docType data
-#' @format A data frame/tibble with 11 observations on the following 2 variables.
+#' @format A data frame/tibble with 11 observations on two variables
 #' \describe{ 
 #' \item{state}{U.S. state} 
 #' \item{number}{number of reported serious reactions per million doses of a vaccine} 
@@ -9718,7 +9724,7 @@ NULL
 #' 
 #' @name Vehicle
 #' @docType data
-#' @format A data frame/tibble with 151 observations on the following 2 variables.
+#' @format A data frame/tibble with 151 observations on two variables
 #' \describe{ 
 #' \item{make}{a factor with levels \code{domestic} and \code{foreign}} 
 #' \item{rating}{a factor with levels \code{Much better than average}, \code{Above average}, \code{Average}, \code{Below average}, and \code{Much worse than average}} 
@@ -9749,7 +9755,7 @@ NULL
 #' 
 #' @name Verbal
 #' @docType data
-#' @format A data frame/tibble with 15 observations on the following 2 variables.
+#' @format A data frame/tibble with 15 observations on two variables
 #' \describe{ 
 #' \item{number}{number of library books checked out} 
 #' \item{verbal}{verbal test score}
@@ -9777,7 +9783,7 @@ NULL
 #' 
 #' @name Victoria
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 3 variables.
+#' @format A data frame/tibble with 20 observations on three variables
 #' \describe{ 
 #' \item{year}{year} 
 #' \item{level}{mean annual level of Lake Victoria Nyanza} 
@@ -9810,7 +9816,7 @@ NULL
 #' 
 #' @name Viscosit
 #' @docType data
-#' @format A data frame/tibble with 11 observations on the following 2 variables.
+#' @format A data frame/tibble with 11 observations on two variables
 #' \describe{ 
 #' \item{first}{viscosity measurement for a certain substance on day one} 
 #' \item{second}{viscosity measurement for a certain substance on day two} 
@@ -9836,7 +9842,7 @@ NULL
 #' 
 #' @name Visual
 #' @docType data
-#' @format A data frame/tibble with 18 observations on the following variable.
+#' @format A data frame/tibble with 18 observations on one variable
 #' \describe{ 
 #' \item{visual}{visual acuity measurement} 
 #' }
@@ -9862,7 +9868,7 @@ NULL
 #' 
 #' @name Vocab
 #' @docType data
-#' @format A data frame/tibble with 14 observations on the following 2 variables.
+#' @format A data frame/tibble with 14 observations on two variables
 #' \describe{ 
 #' \item{first}{reading test score before formal vocabulary training} 
 #' \item{second}{reading test score after formal vocabulary training} 
@@ -9888,7 +9894,7 @@ NULL
 #' 
 #' @name Wastewat
 #' @docType data
-#' @format A data frame/tibble with 44 observations on the following 2 variables.
+#' @format A data frame/tibble with 44 observations on two variables
 #' \describe{ 
 #' \item{gallons}{injected water (in million gallons)} 
 #' \item{number}{number of earthqueakes detected in Denver}
@@ -9923,10 +9929,11 @@ NULL
 #' 
 #' @name Weather94
 #' @docType data
-#' @format A data frame/tibble with 388 observations on the following 1 variables.
+#' @format A data frame/tibble with 388 observations on one variable
 #' \describe{ 
-#' \item{type}{factor with levels Extreme Temp, Flash Flood, Fog, High Wind, Hurricane, 
-#'  Lighting, Other, River Flood, Thunderstorm, Tornado, and Winter Weather.} 
+#' \item{type}{factor with levels \code{Extreme Temp}, \code{Flash Flood}, 
+#' \code{Fog}, \code{High Wind}, \code{Hurricane}, \code{Lighting}, \code{Other}, 
+#' \code{River Flood}, \code{Thunderstorm}, \code{Tornado}, and \code{Winter Weather}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -9942,11 +9949,11 @@ NULL
 #' T2 <- as.data.frame(T1)
 #' T2
 #' ggplot2::ggplot(data =T2, aes(x = reorder(type, Freq), y = Freq)) + 
-#'   geom_bar(stat = "identity", fill = "purple") +
-#'     theme_bw() + 
-#'       theme(axis.text.x  = element_text(angle = 55, vjust = 0.5)) + 
-#'         labs(x = "", y = "count")
-#'         }
+#'            geom_bar(stat = "identity", fill = "purple") +
+#'            theme_bw() + 
+#'            theme(axis.text.x  = element_text(angle = 55, vjust = 0.5)) + 
+#'            labs(x = "", y = "count")
+#' }
 #' 
 "Weather94"
 
@@ -9962,7 +9969,7 @@ NULL
 #' 
 #' @name Wheat
 #' @docType data
-#' @format A data frame/tibble with 19 observations on the following 3 variables.
+#' @format A data frame/tibble with 19 observations on three variables
 #' \describe{ 
 #' \item{year}{year} 
 #' \item{earnings}{national weekly earnings (in dollars) for production workers} 
@@ -9994,7 +10001,7 @@ NULL
 #' 
 #' @name Windmill
 #' @docType data
-#' @format A data frame/tibble with 25 observations on the following 2 variables.
+#' @format A data frame/tibble with 25 observations on two variables
 #' \describe{ 
 #' \item{velocity}{wind velocity (miles per hour)} 
 #' \item{output}{power generated (DC volts)} 
@@ -10024,7 +10031,7 @@ NULL
 #' 
 #' @name Window
 #' @docType data
-#' @format A data frame/tibble with 9 observations on the following 2 variables.
+#' @format A data frame/tibble with nine observations on two variables
 #' \describe{ 
 #' \item{window}{window number} 
 #' \item{leakage}{percent leakage from a 50 mph wind} 
@@ -10042,7 +10049,7 @@ NULL
 
 
 
-#' Baseball team wins versus 7 independent variables for National league teams
+#' Baseball team wins versus seven independent variables for National league teams
 #' in 1990
 #' 
 #' Data for Exercise 9.23
@@ -10050,7 +10057,7 @@ NULL
 #' 
 #' @name Wins
 #' @docType data
-#' @format A data frame with 12 observations on the following 9 variables.
+#' @format A data frame with 12 observations on nine variables
 #' \describe{ 
 #' \item{team}{name of team}
 #' \item{wins}{number of wins} 
@@ -10070,10 +10077,10 @@ NULL
 #' plot(wins ~ era, data = Wins)
 #' \dontrun{
 #' ggplot2::ggplot(data = Wins, aes(x = era, y = wins)) + 
-#'   geom_point() + 
-#'     geom_smooth(method = "lm", se = FALSE) + 
-#'       theme_bw()
-#'       }
+#'            geom_point() + 
+#'            geom_smooth(method = "lm", se = FALSE) + 
+#'            theme_bw()
+#' }
 #' 
 "Wins"
 
@@ -10088,7 +10095,7 @@ NULL
 #' 
 #' @name Wool
 #' @docType data
-#' @format A data frame/tibble with 20 observations on the following 2 variables.
+#' @format A data frame/tibble with 20 observations on two variables
 #' \describe{ 
 #' \item{type}{type of wool (\code{Type I}, \code{Type 2})} 
 #' \item{strength}{strength of wool} 
@@ -10114,7 +10121,7 @@ NULL
 #' 
 #' @name Yearsunspot
 #' @docType data
-#' @format A data frame/tibble with 252 observations on the following 22 variables.
+#' @format A data frame/tibble with 252 observations on two variables
 #' \describe{ 
 #' \item{number}{average number of sunspots} 
 #' \item{year}{date} 

@@ -5,7 +5,7 @@
 \alias{Chesapea}
 \title{Surface salinity measurements taken offshore from Annapolis, Maryland in
 1927}
-\format{A data frame/tibble  with 16 observations on the following variable.
+\format{A data frame/tibble with 16 observations on one variable
 \describe{ 
 \item{salinity}{surface salinity measurements (in parts per 1000) for station 11, 
 offshore from Annanapolis, Maryland, on July 3-4, 1927.} 

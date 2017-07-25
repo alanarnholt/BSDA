@@ -5,7 +5,7 @@
 \alias{Porosity}
 \title{Porosity measurements on 20 samples of Tensleep Sandstone, Pennsylvanian
 from Bighorn Basin in Wyoming}
-\format{A data frame/tibble with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{porosity}{porosity measurement (percent)} 
 }}

@@ -4,7 +4,7 @@
 \name{Galaxie}
 \alias{Galaxie}
 \title{Velocities of 82 galaxies in the Corona Borealis region}
-\format{A data frame/tibble with 82 observations on the following variable.
+\format{A data frame/tibble with 82 observations on one variable
 \describe{ 
 \item{velocity}{velocity measured in kilometers per second} 
 }}

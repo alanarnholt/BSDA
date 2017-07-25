@@ -4,7 +4,7 @@
 \name{Sentence}
 \alias{Sentence}
 \title{Sentences of 41 prisoners convicted of a homicide offense}
-\format{A data frame/tibble with 41 observations on the following variable.
+\format{A data frame/tibble with 41 observations on one variable
 \describe{ 
 \item{months}{sentence length (in months) for prisoners convicted of homocide} 
 }}

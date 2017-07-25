@@ -4,7 +4,7 @@
 \name{Board}
 \alias{Board}
 \title{Incomes of board members from three different universities}
-\format{A data frame/tibble  with 7 observations on the following three variables.
+\format{A data frame/tibble with 7 observations on three variables
 \describe{ 
 \item{salary}{1999 salary (in $1000) for board directors} 
 \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
@@ -21,7 +21,10 @@ boxplot(salary ~ university, data = Board, col = c("red", "blue", "green"),
         ylab = "Income")
 tapply(Board$salary, Board$university, summary)
 anova(lm(salary ~ university, data = Board))
-
+\dontrun{
+dplyr::group_by(Board, university) \%>\%
+summarize(Average = mean(salary))
+}
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.

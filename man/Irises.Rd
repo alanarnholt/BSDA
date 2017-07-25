@@ -4,7 +4,7 @@
 \name{Irises}
 \alias{Irises}
 \title{R.A. Fishers famous data on Irises}
-\format{A data frame/tibble with 150 observations on the following 5 variables.
+\format{A data frame/tibble with 150 observations on five variables
 \describe{ 
 \item{sepal_length}{sepal length (in cm)} 
 \item{sepal_width}{sepal width (in cm)} 

@@ -5,7 +5,7 @@
 \alias{Trucks}
 \title{Miles per gallon for standard 4-wheel drive trucks manufactured by
 Chevrolet, Dodge and Ford}
-\format{A data frame/tibble with 15 observations on the following 2 variables.
+\format{A data frame/tibble with 15 observations on two variables
 \describe{ 
 \item{mpg}{miles per gallon} 
 \item{truck}{a factor with levels \code{chevy}, \code{dodge}, and \code{ford}} 

@@ -4,7 +4,7 @@
 \name{Poverty}
 \alias{Poverty}
 \title{Percent poverty and crime rate for selected cities}
-\format{A data frame/tibble with 20 observations on the following 4 variables.
+\format{A data frame/tibble with 20 observations on four variables
 \describe{ 
 \item{city}{a factor with levels \code{Atlanta},
 \code{Buffalo}, \code{Cincinnati}, \code{Cleveland}, \code{Dayton, O},

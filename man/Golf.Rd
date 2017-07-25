@@ -4,7 +4,7 @@
 \name{Golf}
 \alias{Golf}
 \title{Distances a golf ball can be driven by 20 professional golfers}
-\format{A data frame/tibble with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{yards}{distance a golf ball is driven in yards} 
 }}

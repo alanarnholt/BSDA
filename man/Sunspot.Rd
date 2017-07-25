@@ -4,7 +4,7 @@
 \name{Sunspot}
 \alias{Sunspot}
 \title{Wolfer sunspot numbers from 1700 through 2000}
-\format{A data frame/tibble with 301 observations on the following 2 variables.
+\format{A data frame/tibble with 301 observations on two variables
 \describe{ 
 \item{year}{year} 
 \item{sunspots}{average number of sunspots for the year} 
@@ -21,12 +21,12 @@ plot(sunspots ~ year, data = Sunspot, type = "l")
 \dontrun{
 lattice::xyplot(sunspots ~ year, data = Sunspot, 
                 main = "Yearly sunspots", type = "l")
-                lattice::xyplot(sunspots ~ year, data = Sunspot, type = "l", 
-                                main = "Yearly sunspots", aspect = "xy")
-                                ggplot2::ggplot(data = Sunspot, aes(x = year, y = sunspots)) + 
-                                  geom_line() + 
-                                    theme_bw()
-                                   }
+lattice::xyplot(sunspots ~ year, data = Sunspot, type = "l", 
+                main = "Yearly sunspots", aspect = "xy")
+ggplot2::ggplot(data = Sunspot, aes(x = year, y = sunspots)) + 
+           geom_line() + 
+           theme_bw()
+}
 
 }
 \references{

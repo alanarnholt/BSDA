@@ -4,10 +4,10 @@
 \name{Habits}
 \alias{Habits}
 \title{Study habits of students in two matched school districts}
-\format{A data frame/tibble with 11 observations on the following 4 variables.
+\format{A data frame/tibble with 11 observations on four variables
 \describe{ 
-\item{A}{a numeric vector} 
-\item{B}{a numeric vector} 
+\item{A}{study habit score} 
+\item{B}{study habit score} 
 \item{differ}{\code{B} minus \code{A}} 
 \item{signrks}{the signed-ranked-differences} 
 }}

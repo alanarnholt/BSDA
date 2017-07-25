@@ -4,15 +4,16 @@
 \name{Graduate}
 \alias{Graduate}
 \title{Graduation rates for student athletes in the Southeastern Conf.}
-\format{A data frame/tibble with 12 observations on the following 3 variables.
+\format{A data frame/tibble with 12 observations on three variables
 \describe{ 
-\item{school}{a character variable with values \code{Alabama}
-\code{Arkansas} \code{Auburn} \code{Florida} \code{Georgia} \code{Kentucky}
-\code{Louisiana St} \code{Mississippi} \code{Mississippi St} \code{South
-Carolina} \code{Tennessee} \code{Vanderbilt}} 
-\item{code}{a character variable with values \code{Al} \code{Ar} \code{Au} \code{Fl} \code{Ge} \code{Ke}
-\code{LSt} \code{Mi} \code{MSt} \code{SC} \code{Te} \code{Va}}
-\item{percent}{a numeric vector} 
+\item{school}{a character variable with values \code{Alabama},
+\code{Arkansas}, \code{Auburn}, \code{Florida}, \code{Georgia}, \code{Kentucky},
+\code{Louisiana St}, \code{Mississippi}, \code{Mississippi St}, \code{South
+Carolina,} \code{Tennessee}, and \code{Vanderbilt}} 
+\item{code}{a character variable with values \code{Al}, \code{Ar}, \code{Au}
+ \code{Fl}, \code{Ge}, \code{Ke}, \code{LSt}, \code{Mi}, \code{MSt}, \code{SC}, 
+ \code{Te}, and \code{Va}}
+\item{percent}{graduation rate} 
 }}
 \usage{
 Graduate

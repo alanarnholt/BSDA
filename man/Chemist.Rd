@@ -4,7 +4,7 @@
 \name{Chemist}
 \alias{Chemist}
 \title{Starting salaries of 50 chemistry majors}
-\format{A data frame/tibble  with 50 observations on the following variable.
+\format{A data frame/tibble with 50 observations on one variable
 \describe{ 
 \item{salary}{starting salary (in dollars) for chemistry major} 
 }}

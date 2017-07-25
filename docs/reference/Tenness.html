@@ -87,11 +87,12 @@
     <p>Data for Exercise 6.56</p>
     
 
+    <pre class="usage"><span class='no'>Tenness</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 20 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>score</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 20 observations on one variable</p><dl class='dl-horizontal'>
+<dt>score</dt><dd><p>Tennessee Self-Concept Scale score</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,39 +103,14 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Tenness</span>)</div><div class='output co'>#&gt; 'data.frame':	20 obs. of  1 variable:
-#&gt;  $ score: num  29.8 29.4 27.5 29.8 31 29.2 29.5 29 27 35.8 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Tenness</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>score</span>)</div><div class='output co'>#&gt; [1] "score"</div><div class='img'><img src='Tenness-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   20.000    0.000   24.200   28.275   29.510   29.300   29.456   30.700 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   35.800    2.669    7.121    0.597    2.425   11.600    0.234    0.370 
-#&gt; SW p-val 
-#&gt;    0.371 </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>score</span>,<span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>30</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
-#&gt; 	One Sample t-test
-#&gt; 
-#&gt; data:  score
-#&gt; t = -0.82119, df = 19, p-value = 0.2109
-#&gt; alternative hypothesis: true mean is less than 30
-#&gt; 95 percent confidence interval:
-#&gt;      -Inf 30.54177
-#&gt; sample estimates:
-#&gt; mean of x 
-#&gt;     29.51 
-#&gt; </div><div class='input'><span class='fu'><a href='SIGN.test.html'>SIGN.test</a></span>(<span class='no'>score</span>,<span class='kw'>md</span><span class='kw'>=</span><span class='fl'>30</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
-#&gt; 	One-sample Sign-Test
-#&gt; 
-#&gt; data:  score
-#&gt; s = 5, p-value = 0.02069
-#&gt; alternative hypothesis: true median is less than 30
-#&gt; 95 percent confidence interval:
-#&gt;  -Inf 29.8
-#&gt; sample estimates:
-#&gt; median of x 
-#&gt;        29.3 
-#&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
-#&gt; Lower Achieved CI     0.9423   -Inf   29.8
-#&gt; Interpolated CI       0.9500   -Inf   29.8
-#&gt; Upper Achieved CI     0.9793   -Inf   29.8</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Tenness</span>)</div></pre>
+<span class='fu'>hist</span>(<span class='no'>Tenness</span>$<span class='no'>score</span>, <span class='kw'>freq</span><span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"green"</span>,
+<span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"Tennessee Self-Concept Scale score"</span>)</div><div class='input'><span class='fu'>lines</span>(<span class='fu'>density</span>(<span class='no'>Tenness</span>$<span class='no'>score</span>))</div><div class='img'><img src='Tenness-1.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Tenness</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>score</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>..density..</span>)) +
+           <span class='fu'>geom_histogram</span>(<span class='kw'>binwidth</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"purple"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>) +
+           <span class='fu'>geom_density</span>(<span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"red"</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"pink"</span>, <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>0.3</span>) +
+           <span class='fu'>theme_bw</span>()
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

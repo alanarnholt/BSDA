@@ -4,7 +4,7 @@
 \name{Leader}
 \alias{Leader}
 \title{Leadership exam scores by age for employees on an industrial plant}
-\format{A data frame/tibble with 34 observations on the following 2 variables.
+\format{A data frame/tibble with 34 observations on two variables
 \describe{ 
 \item{age}{a character vector indicating age with values \code{under35} and \code{over35}} 
 \item{score}{score on a leadership exam} 

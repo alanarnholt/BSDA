@@ -4,7 +4,7 @@
 \name{Lowabil}
 \alias{Lowabil}
 \title{Reading skills of 24 matched low ability students}
-\format{A data frame/tibble with 12 observations on the following 3 variables.
+\format{A data frame/tibble with 12 observations on three variables
 \describe{ 
 \item{pair}{a numeric indicator of pair} 
 \item{experiment}{score of the  child with the experimental method} 

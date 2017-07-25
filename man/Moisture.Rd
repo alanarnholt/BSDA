@@ -5,7 +5,7 @@
 \alias{Moisture}
 \title{Moisture content and depth of core sample for marine muds in eastern
 Louisiana}
-\format{A data frame/tibble with 16 observations on the following 4 variables.
+\format{A data frame/tibble with 16 observations on four variables
 \describe{ 
 \item{depth}{a numeric vector} 
 \item{moisture}{g of water per 100 g of dried sediment} 
@@ -20,7 +20,7 @@ John Wiley and Sons, New York, pp. 177, 185
 Moisture
 }
 \description{
-Data for Exercise 9.37
+Data for Exercise 9.32
 }
 \examples{
 

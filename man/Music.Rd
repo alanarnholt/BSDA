@@ -5,11 +5,11 @@
 \alias{Music}
 \title{Improvement scores for identical twins taught music recognition by two
 techniques}
-\format{A data frame/tibble with 12 observations on the following 3 variables.
+\format{A data frame/tibble with 12 observations on three variables
 \describe{ 
 \item{method1}{a numeric vector measuring the improvement scores on a music recognition test} 
 \item{method2}{a numeric vector measuring the improvement scores on a music recognition test} 
-\item{differ}{a numeric vector} 
+\item{differ}{\code{method1} - \code{method2}} 
 }}
 \usage{
 Music

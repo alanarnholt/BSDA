@@ -4,7 +4,7 @@
 \name{Anesthet}
 \alias{Anesthet}
 \title{Recovery times for anesthetized patients}
-\format{A  with 10 observations on the following variable.
+\format{A  with 10 observations on one variable
 \describe{ 
 \item{recover}{recovery time (in hours)} 
 }}

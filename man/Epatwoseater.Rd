@@ -4,29 +4,29 @@
 \name{Epatwoseater}
 \alias{Epatwoseater}
 \title{Fuel efficiency ratings for two-seater vehicles in 2001}
-\format{A data frame/tibble with 36 observations on the following 10 variables.
+\format{A data frame/tibble with 36 observations on ten variables
 \describe{ 
-\item{class}{a character variable with values \code{TWO SEATERS}}
-\item{manufacturer}{a character variable with values \code{ACURA} \code{AUDI}
-\code{BMW} \code{CHEVROLET} \code{DODGE} \code{FERRARI} \code{HONDA}
-\code{LAMBORGHINI} \code{MAZDA} \code{MERCEDES-BENZ} \code{PLYMOUTH}
-\code{PORSCHE} \code{TOYOTA}} 
+\item{class}{a character variable with value \code{TWO SEATERS}}
+\item{manufacturer}{a character variable with values \code{ACURA}, \code{AUDI},
+\code{BMW}, \code{CHEVROLET}, \code{DODGE}, \code{FERRARI}, \code{HONDA},
+\code{LAMBORGHINI}, \code{MAZDA}, \code{MERCEDES-BENZ}, \code{PLYMOUTH},
+\code{PORSCHE}, and \code{TOYOTA}} 
 \item{carline}{a character variable with values
-\code{BOXSTER} \code{BOXSTER S} \code{CORVETTE} \code{DB132/144
-DIABLO} \code{FERRARI 360 MODENA/SPIDER} \code{FERRARI 550
-MARANELLO/BARCHETTA} \code{INSIGHT} \code{MR2} \code{MX-5 MIATA} \code{NSX}
-\code{PROWLER} \code{S2000} \code{SL500} \code{SL600} \code{SLK230
-KOMPRESSOR} \code{SLK320} \code{TT ROADSTER} \code{TT ROADSTER QUATTRO}
-\code{VIPER CONVERTIBLE} \code{VIPER COUPE} \code{Z3 COUPE} \code{Z3
-ROADSTER} \code{Z8}} 
-\item{displ}{a numeric vector}
-\item{cyl}{a numeric vector} 
-\item{trans}{a factor with levels \code{Auto(L4)} \code{Auto(L5)} \code{Auto(S4)} \code{Auto(S5)}
-\code{Auto(S6)} \code{Manual(M5)} \code{Manual(M6)}} 
-\item{drv}{a factor with levels \code{4} \code{F} \code{R}} 
-\item{cty}{a numeric vector} 
-\item{hwy}{a numeric vector} 
-\item{cmb}{a numeric vector} 
+\code{BOXSTER}, \code{BOXSTER S}, \code{CORVETTE}, \code{DB132/144
+DIABLO}, \code{FERRARI 360 MODENA/SPIDER}, \code{FERRARI 550
+MARANELLO/BARCHETTA}, \code{INSIGHT}, \code{MR2} ,\code{MX-5 MIATA}, \code{NSX},
+\code{PROWLER}, \code{S2000}, \code{SL500}, \code{SL600}, \code{SLK230
+KOMPRESSOR}, \code{SLK320}, \code{TT ROADSTER}, \code{TT ROADSTER QUATTRO},
+\code{VIPER CONVERTIBLE}, \code{VIPER COUPE}, \code{Z3 COUPE}, \code{Z3
+ROADSTER}, and \code{Z8}} 
+\item{displ}{engine displacement (in liters)}
+\item{cyl}{number of cylinders} 
+\item{trans}{a factor with levels \code{Auto(L4)}, \code{Auto(L5)}, \code{Auto(S4)}, 
+\code{Auto(S5)}, \code{Auto(S6)}, \code{Manual(M5)}, and \code{Manual(M6)}} 
+\item{drv}{a factor with levels \code{4}(four wheel drive) \code{F}(front wheel drive) \code{R}(rear wheel drive)} 
+\item{cty}{city mpg} 
+\item{hwy}{highway mpg} 
+\item{cmb}{combined city and highway mpg} 
  }
  
  @source Environmental Protection Agency}

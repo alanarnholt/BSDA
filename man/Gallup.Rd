@@ -5,7 +5,7 @@
 \alias{Gallup}
 \title{Results of a Gallup poll on possession of marijuana as a criminal offense
 conducted in 1980}
-\format{A data frame/tibble with 1,200 observations on the following 2 variables.
+\format{A data frame/tibble with 1,200 observations on two variables
 \describe{ 
 \item{demographics}{a factor with levels \code{National}, \code{Gender: Male}
 \code{Gender: Female}, \code{Education: College}, \code{Eduction: High School},

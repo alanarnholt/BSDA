@@ -5,7 +5,7 @@
 \alias{Miller}
 \title{Miller personality test scores for a group of college students applying for
 graduate school}
-\format{A data frame/tibble with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on one variable
 \describe{ 
 \item{miller}{scores on the Miller Personality test} 
 }}

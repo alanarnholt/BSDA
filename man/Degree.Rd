@@ -4,7 +4,7 @@
 \name{Degree}
 \alias{Degree}
 \title{Percent of bachelor's degrees awarded women in 1970 versus 1990}
-\format{A data frame/tibble  with 1064 observations on the following two variables.
+\format{A data frame/tibble with 1064 observations on two variables
 \describe{ 
 \item{field}{a factor with levels \code{Health},
 \code{Education}, \code{Foreign Language}, \code{Psychology}, \code{Fine Arts},

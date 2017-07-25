@@ -4,7 +4,7 @@
 \name{Track}
 \alias{Track}
 \title{National Olympic records for women in several races}
-\format{A data frame with 55 observations on the following 8 variables.
+\format{A data frame with 55 observations on eight variables
 \describe{ 
 \item{country}{athlete's country} 
 \item{100m}{time in seconds for 100 m} 

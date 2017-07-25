@@ -4,7 +4,7 @@
 \name{Rehab}
 \alias{Rehab}
 \title{Rehabilitative potential of 20 prison inmates as judged by two psychiatrists}
-\format{A data frame/tibble with 20 observations on the following 4 variables.
+\format{A data frame/tibble with 20 observations on four variables
 \describe{ 
 \item{inmate}{inmate identification number} 
 \item{psych1}{rating from first psychiatrist on the inmates rehabilative potential} 

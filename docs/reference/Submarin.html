@@ -87,14 +87,20 @@
     <p>Data for Exercises 2.16, 2.45, and 2.59</p>
     
 
+    <pre class="usage"><span class='no'>Submarin</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 16 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>Month</dt><dd><p>a numeric vector</p></dd> 
-<dt>reported</dt><dd><p>a numeric vector</p></dd> 
-<dt>actual</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 16 observations on three variables</p><dl class='dl-horizontal'>
+<dt>month</dt><dd><p>month</p></dd> 
+<dt>reported</dt><dd><p>number of submarines reported sunk by U.S. Navy</p></dd> 
+<dt>actual</dt><dd><p>number of submarines actually sunk by U.S. Navy</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>F. Mosteller, S. Fienberg, and R. Rourke, <em>Beginning Statistics with Data Analysis</em>
+(Reading, MA: Addison-Wesley, 1983)</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -104,21 +110,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Submarin</span>)</div><div class='output co'>#&gt; 'data.frame':	16 obs. of  3 variables:
-#&gt;  $ Month   : int  1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ reported: int  3 2 4 2 5 5 9 12 8 13 ...
-#&gt;  $ actual  : int  3 2 6 3 4 3 11 9 10 16 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Submarin</span>)
-<span class='fu'>plot</span>(<span class='no'>reported</span>,<span class='no'>actual</span>)</div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>actual</span>~<span class='no'>reported</span>)
-<span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Submarin-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>anova</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
-#&gt; 
-#&gt; Response: actual
-#&gt;           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
-#&gt; reported   1 368.58  368.58  58.361 2.333e-06 ***
-#&gt; Residuals 14  88.42    6.32                      
-#&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>actual</span> ~ <span class='no'>reported</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Submarin</span>)
+<span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = actual ~ reported)
+#&gt; lm(formula = actual ~ reported, data = Submarin)
 #&gt; 
 #&gt; Residuals:
 #&gt;     Min      1Q  Median      3Q     Max 
@@ -134,13 +129,15 @@ Duxbury</p>
 #&gt; Residual standard error: 2.513 on 14 degrees of freedom
 #&gt; Multiple R-squared:  0.8065,	Adjusted R-squared:  0.7927 
 #&gt; F-statistic: 58.36 on 1 and 14 DF,  p-value: 2.333e-06
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Submarin</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='no'>actual</span> ~ <span class='no'>reported</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Submarin</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='no'>model</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"red"</span>)</div><div class='img'><img src='Submarin-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

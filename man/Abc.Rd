@@ -4,7 +4,7 @@
 \name{Abc}
 \alias{Abc}
 \title{Three samples to illustrate analysis of variance}
-\format{A data frame/tibble with 54 observations on two variables.
+\format{A data frame/tibble with 54 observations on two variables
 \describe{ 
 \item{response}{a numeric vector}
 \item{group}{a character vector \code{A}, \code{B}, and \code{C}}

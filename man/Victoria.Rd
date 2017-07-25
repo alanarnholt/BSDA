@@ -5,7 +5,7 @@
 \alias{Victoria}
 \title{Number of sunspots versus mean annual level of Lake Victoria Nyanza from
 1902 to 1921}
-\format{A data frame/tibble with 20 observations on the following 3 variables.
+\format{A data frame/tibble with 20 observations on three variables
 \describe{ 
 \item{year}{year} 
 \item{level}{mean annual level of Lake Victoria Nyanza} 

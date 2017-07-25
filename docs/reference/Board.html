@@ -91,7 +91,7 @@
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame/tibble  with 7 observations on the following three variables.</p><dl class='dl-horizontal'>
+    <p>A data frame/tibble with 7 observations on three variables</p><dl class='dl-horizontal'>
 <dt>salary</dt><dd><p>1999 salary (in $1000) for board directors</p></dd> 
 <dt>university</dt><dd><p>a factor with levels <code>A</code>, <code>B</code>, and <code>C</code></p></dd> 
 </dl>
@@ -123,8 +123,10 @@ Duxbury</p>
 #&gt; university  2  408431  204215   2.815 0.08635 .
 #&gt; Residuals  18 1305800   72544                  
 #&gt; ---
-#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'>
-</div></pre>
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><span class='co'># NOT RUN {</span>
+<span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>Board</span>, <span class='no'>university</span>) <span class='kw'>%&gt;%</span>
+<span class='fu'>summarize</span>(<span class='kw'>Average</span> <span class='kw'>=</span> <span class='fu'>mean</span>(<span class='no'>salary</span>))
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

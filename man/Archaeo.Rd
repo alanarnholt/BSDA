@@ -4,7 +4,7 @@
 \name{Archaeo}
 \alias{Archaeo}
 \title{Radiocarbon ages of observations taken from an archaeological site}
-\format{A data frame/tibble  with 60 observations on the following two variables.
+\format{A data frame/tibble  with 60 observations on two variables
 \describe{ 
 \item{age}{number of years before 1983 - the year the data were obtained}
 \item{phase}{Ceramic Phase numbers} 

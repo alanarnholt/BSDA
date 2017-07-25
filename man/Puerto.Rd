@@ -4,7 +4,7 @@
 \name{Puerto}
 \alias{Puerto}
 \title{Weekly incomes of a random sample of 50 Puerto Rican families in Miami}
-\format{A data frame/tibble with 50 observations on the following variable.
+\format{A data frame/tibble with 50 observations on one variable
 \describe{ 
 \item{income}{weekly family income (in dollars)} 
 }}

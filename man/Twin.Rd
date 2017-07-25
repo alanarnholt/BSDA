@@ -5,11 +5,11 @@
 \alias{Twin}
 \title{Intelligence test scores for identical twins in which one twin is given a
 drug}
-\format{A data frame/tibble with 9 observations on the following 3 variables.
+\format{A data frame/tibble with nine observations on three variables
 \describe{ 
 \item{twinA}{score on intelligence test without drug} 
 \item{twinB}{score on intelligence test after taking drug} 
-\item{differ}{twinA - twinB} 
+\item{differ}{\code{twinA} - \code{twinB}} 
 }}
 \usage{
 Twin

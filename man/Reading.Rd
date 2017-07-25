@@ -4,7 +4,7 @@
 \name{Reading}
 \alias{Reading}
 \title{Standardized reading scores for 30 fifth graders}
-\format{A data frame/tibble with 30 observations on the following 4 variables.
+\format{A data frame/tibble with 30 observations on four variables
 \describe{ 
 \item{score}{standardized reading test score} 
 \item{sorted}{sorted values of \code{score}} 

@@ -4,7 +4,7 @@
 \name{Ferraro1}
 \alias{Ferraro1}
 \title{Choice of presidental ticket in 1984 by gender}
-\format{A data frame/tibble with 1000 observations on the following 2 variables.
+\format{A data frame/tibble with 1000 observations on two variables
 \describe{ 
 \item{gender}{a factor with levels \code{Men}
 \code{Women}} 

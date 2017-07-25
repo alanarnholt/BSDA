@@ -89,26 +89,19 @@ national math test scores</h1>
     <p>Data for Examples 2.1 and 2.7</p>
     
 
+    <pre class="usage"><span class='no'>Tv</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 53 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>State</dt><dd><p>a factor with levels <code>Alabama</code>
-<code>Alaska</code> <code>Arizona</code> <code>Arkansas</code> <code>California</code>
-<code>Colorado</code> <code>Connecticut</code> <code>DC</code> <code>Delaware</code> <code>Florida</code>
-<code>Georgia</code> <code>Guam</code> <code>Hawaii</code> <code>Idaho</code> <code>Illinois</code>
-<code>Indiana</code> <code>Iowa</code> <code>Kansas</code> <code>Kentucky</code> <code>Louisiana</code>
-<code>Maine</code> <code>Maryland</code> <code>Massachusetts</code> <code>Michigan</code>
-<code>Minnesota</code> <code>Mississippi</code> <code>Missour</code> <code>Montana</code>
-<code>Nebraska</code> <code>Nevada</code> <code>New Hampshire</code> <code>New Jersey</code>
-<code>New Mexico</code> <code>New York</code> <code>North Carolina</code> <code>North Dakota</code>
-<code>Ohio</code> <code>Oklahoma</code> <code>Oregon</code> <code>Pennsylvania</code> <code>Rhode
-Island</code> <code>South Carolina</code> <code>South Dakota</code> <code>Tennessee</code>
-<code>Texas</code> <code>Utah</code> <code>Vermont</code> <code>Vir Is</code> <code>Virginia</code>
-<code>Washington</code> <code>West Virginia</code> <code>Wisconsin</code> <code>Wyoming</code></p></dd>
-<dt>percent</dt><dd><p>a numeric vector</p></dd> 
-<dt>test</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 53 observations on three variables</p><dl class='dl-horizontal'>
+<dt>state</dt><dd><p>U.S. state</p></dd>
+<dt>percent</dt><dd><p>percent of students who watch more than six hours of TV a day</p></dd> 
+<dt>test</dt><dd><p>state average on national math test</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Educational Testing Services</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -118,17 +111,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Tv</span>)</div><div class='output co'>#&gt; 'data.frame':	53 obs. of  3 variables:
-#&gt;  $ State  : Factor w/ 53 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 9 10 11 ...
-#&gt;  $ percent: int  18 NA 12 20 11 9 12 18 19 17 ...
-#&gt;  $ test   : int  253 NA 258 256 256 267 270 262 255 258 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Tv</span>)
-<span class='fu'>plot</span>(<span class='no'>percent</span>,<span class='no'>test</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"blue"</span>)</div><div class='img'><img src='Tv-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>cor</span>(<span class='no'>percent</span>,<span class='no'>test</span>,<span class='kw'>use</span><span class='kw'>=</span><span class='st'>"complete.obs"</span>)</div><div class='output co'>#&gt; [1] -0.8619163</div><div class='input'><span class='fu'>detach</span>(<span class='no'>Tv</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>test</span> ~ <span class='no'>percent</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Tv</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"blue"</span>)</div><div class='img'><img src='Tv-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>cor</span>(<span class='no'>Tv</span>$<span class='no'>test</span>, <span class='no'>Tv</span>$<span class='no'>percent</span>)</div><div class='output co'>#&gt; [1] NA</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

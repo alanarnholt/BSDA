@@ -89,12 +89,13 @@ situation</h1>
     <p>Data for Example 7.20</p>
     
 
+    <pre class="usage"><span class='no'>Stress</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 12 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>Prestre</dt><dd><p>a numeric vector</p></dd>
-<dt>Poststre</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 12 observations on two variables</p><dl class='dl-horizontal'>
+<dt>prestress</dt><dd><p>short term memory score before being exposed to a stressful situation</p></dd>
+<dt>poststress</dt><dd><p>short term memory score after being exposed to a stressful situation</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -105,28 +106,33 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Stress</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  2 variables:
-#&gt;  $ Prestre : int  13 15 9 13 15 17 13 16 11 13 ...
-#&gt;  $ Poststre: int  10 14 7 15 11 14 13 14 9 14 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Stress</span>)
-<span class='no'>DIF</span> <span class='kw'>&lt;-</span> <span class='no'>Poststre</span> -<span class='no'>Prestre</span>
-<span class='fu'>qqnorm</span>(<span class='no'>DIF</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>DIF</span>)</div><div class='img'><img src='Stress-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Shapiro-Wilk normality test
+<span class='no'>diff</span> <span class='kw'>&lt;-</span> <span class='no'>Stress</span>$<span class='no'>prestress</span> - <span class='no'>Stress</span>$<span class='no'>poststress</span>
+<span class='fu'>qqnorm</span>(<span class='no'>diff</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>diff</span>)</div><div class='img'><img src='Stress-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>diff</span>)</div><div class='output co'>#&gt; 
+#&gt; 	One Sample t-test
 #&gt; 
-#&gt; data:  DIF
-#&gt; W = 0.94666, p-value = 0.5888
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Poststre</span>,<span class='no'>Prestre</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>,<span class='kw'>alternative</span><span class='kw'>=</span><span class='st'>"less"</span>)</div><div class='output co'>#&gt; 
+#&gt; data:  diff
+#&gt; t = 2.6018, df = 11, p-value = 0.02462
+#&gt; alternative hypothesis: true mean is not equal to 0
+#&gt; 95 percent confidence interval:
+#&gt;  0.2053928 2.4612738
+#&gt; sample estimates:
+#&gt; mean of x 
+#&gt;  1.333333 
+#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Stress</span>$<span class='no'>prestress</span>, <span class='no'>Stress</span>$<span class='no'>poststress</span>, <span class='kw'>paired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Paired t-test
 #&gt; 
-#&gt; data:  Poststre and Prestre
-#&gt; t = -2.6018, df = 11, p-value = 0.01231
-#&gt; alternative hypothesis: true difference in means is less than 0
+#&gt; data:  Stress$prestress and Stress$poststress
+#&gt; t = 2.6018, df = 11, p-value = 0.02462
+#&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;        -Inf -0.4129949
+#&gt;  0.2053928 2.4612738
 #&gt; sample estimates:
 #&gt; mean of the differences 
-#&gt;               -1.333333 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Stress</span>)
-<span class='fu'>remove</span>(<span class='no'>DIF</span>)</div></pre>
+#&gt;                1.333333 
+#&gt; </div><span class='co'># NOT RUN {</span>
+<span class='fu'>wilcox.test</span>(<span class='no'>Stress</span>$<span class='no'>prestress</span>, <span class='no'>Stress</span>$<span class='no'>poststress</span>, <span class='kw'>paired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

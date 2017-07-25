@@ -87,15 +87,14 @@
     <p>Data for Exercise 1.30</p>
     
 
+    <pre class="usage"><span class='no'>Weather94</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 11 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>Weather.Type</dt><dd><p>a factor with levels <code>Extreme
-Temp</code> <code>Flash flood</code> <code>Fog</code> <code>High wind</code> <code>Hurricane</code>
-<code>Lightning</code> <code>Other</code> <code>River flood</code> <code>Thunderstorm</code>
-<code>Tornado</code> <code>Winter weather</code></p></dd> 
-<dt>Number</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 388 observations on one variable</p><dl class='dl-horizontal'>
+<dt>type</dt><dd><p>factor with levels <code>Extreme Temp</code>, <code>Flash Flood</code>, 
+<code>Fog</code>, <code>High Wind</code>, <code>Hurricane</code>, <code>Lighting</code>, <code>Other</code>, 
+<code>River Flood</code>, <code>Thunderstorm</code>, <code>Tornado</code>, and <code>Winter Weather</code></p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -106,12 +105,24 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Weather94</span>)</div><div class='output co'>#&gt; 'data.frame':	11 obs. of  2 variables:
-#&gt;  $ Weather.Type: Factor w/ 11 levels "Extreme Temp",..: 2 8 6 10 5 1 11 9 4 3 ...
-#&gt;  $ Number      : int  59 32 69 69 9 81 31 17 12 3 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Weather94</span>)
-<span class='fu'>names</span>(<span class='no'>Number</span>) <span class='kw'>&lt;-</span> <span class='no'>Weather.Type</span>
-<span class='fu'>barplot</span>(<span class='no'>Number</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"lightblue"</span>,<span class='kw'>las</span><span class='kw'>=</span><span class='fl'>2</span>,<span class='kw'>cex.names</span><span class='kw'>=</span><span class='fl'>.65</span>,<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Problem 1.30"</span>)</div><div class='img'><img src='Weather94-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='co'># las=2 places bar names vertically</span>
-<span class='fu'>detach</span>(<span class='no'>Weather94</span>)</div></pre>
+<span class='no'>T1</span> <span class='kw'>&lt;-</span> <span class='fu'>xtabs</span>(~<span class='no'>type</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Weather94</span>)
+<span class='no'>T1</span></div><div class='output co'>#&gt; type
+#&gt;   Extreme Temp    Flash Flood            Fog      High Wind      Hurricane 
+#&gt;             81             59              3             12              9 
+#&gt;      Lightning          Other    River Flood   Thunderstorm        Tornado 
+#&gt;             69              6             32             17             69 
+#&gt; Winter Weather 
+#&gt;             31 </div><div class='input'><span class='fu'>par</span>(<span class='kw'>mar</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>5.1</span> + <span class='fl'>2</span>, <span class='fl'>4.1</span> - <span class='fl'>1</span>, <span class='fl'>4.1</span> - <span class='fl'>2</span>, <span class='fl'>2.1</span>))
+<span class='fu'>barplot</span>(<span class='fu'>sort</span>(<span class='no'>T1</span>, <span class='kw'>decreasing</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>), <span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>rainbow</span>(<span class='fl'>11</span>))</div><div class='img'><img src='Weather94-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>par</span>(<span class='kw'>mar</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>5.1</span>, <span class='fl'>4.1</span>, <span class='fl'>4.1</span>, <span class='fl'>2.1</span>))</div><span class='co'># NOT RUN {</span>
+<span class='no'>T2</span> <span class='kw'>&lt;-</span> <span class='fu'>as.data.frame</span>(<span class='no'>T1</span>)
+<span class='no'>T2</span>
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span><span class='no'>T2</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'>reorder</span>(<span class='no'>type</span>, <span class='no'>Freq</span>), <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>Freq</span>)) +
+           <span class='fu'>geom_bar</span>(<span class='kw'>stat</span> <span class='kw'>=</span> <span class='st'>"identity"</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"purple"</span>) +
+           <span class='fu'>theme_bw</span>() +
+           <span class='fu'>theme</span>(<span class='kw'>axis.text.x</span>  <span class='kw'>=</span> <span class='fu'>element_text</span>(<span class='kw'>angle</span> <span class='kw'>=</span> <span class='fl'>55</span>, <span class='kw'>vjust</span> <span class='kw'>=</span> <span class='fl'>0.5</span>)) +
+           <span class='fu'>labs</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>"count"</span>)
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

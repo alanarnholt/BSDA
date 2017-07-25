@@ -5,7 +5,7 @@
 \alias{Statelaw}
 \title{Operating expenditures per resident for each of the state law enforcement
 agencies}
-\format{A data frame/tibble with 50 observations on the following 2 variables.
+\format{A data frame/tibble with 50 observations on two variables
 \describe{ 
 \item{state}{U.S. state} 
 \item{cost}{dollars spent per resident on law enforcement} 

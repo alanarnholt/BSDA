@@ -4,7 +4,7 @@
 \name{Funeral}
 \alias{Funeral}
 \title{Cost of funeral by region of country}
-\format{A data frame/tibble with 400 observations on the following 2 variables.
+\format{A data frame/tibble with 400 observations on two variables
 \describe{ 
 \item{region}{a factor with levels \code{Central}
 \code{East} \code{South} \code{West}} 

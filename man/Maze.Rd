@@ -4,7 +4,7 @@
 \name{Maze}
 \alias{Maze}
 \title{Error scores for four groups of experimental animals running a maze}
-\format{A data frame/tibble with 32 observations on the following 2 variables.
+\format{A data frame/tibble with 32 observations on two variables
 \describe{ 
 \item{score}{error scores for animals running through a maze under different conditions} 
 \item{condition}{a factor with levels \code{CondA},

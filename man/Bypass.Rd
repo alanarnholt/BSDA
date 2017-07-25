@@ -4,7 +4,7 @@
 \name{Bypass}
 \alias{Bypass}
 \title{Median charges for coronary bypass at 17 hospitals in North Carolina}
-\format{A data frame/tibble  with 17 observations on the following two variables.
+\format{A data frame/tibble  with 17 observations on two variables
 \describe{ 
 \item{hospital}{a factor with levels \code{Carolinas Med
 Ct}, \code{Duke Med Ct}, \code{Durham Regional}, \code{Forsyth Memorial},

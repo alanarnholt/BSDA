@@ -4,7 +4,7 @@
 \name{Coins}
 \alias{Coins}
 \title{Yearly returns on 12 investments}
-\format{A data frame/tibble  with 12 observations on the following variable.
+\format{A data frame/tibble with 12 observations on one variable
 \describe{ 
 \item{return}{yearly returns on each of 12 possible investments} 
 }}

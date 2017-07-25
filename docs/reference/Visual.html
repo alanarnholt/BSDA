@@ -87,11 +87,12 @@
     <p>Data for Exercise 5.6</p>
     
 
+    <pre class="usage"><span class='no'>Visual</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 18 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>visual</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 18 observations on one variable</p><dl class='dl-horizontal'>
+<dt>visual</dt><dd><p>visual acuity measurement</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,9 +103,7 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Visual</span>)</div><div class='output co'>#&gt; 'data.frame':	18 obs. of  1 variable:
-#&gt;  $ visual: num  0.36 0.41 0.55 0.33 0.28 0.25 0.17 0.14 0.23 0.27 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Visual</span>)
-<span class='fu'>stem</span>(<span class='no'>visual</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Visual</span>$<span class='no'>visual</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the left of the |
 #&gt; 
 #&gt;   1 | 3479
@@ -112,7 +111,8 @@ Duxbury</p>
 #&gt;   3 | 34567
 #&gt;   4 | 1
 #&gt;   5 | 5
-#&gt; </div><div class='input'><span class='fu'>fivenum</span>(<span class='no'>visual</span>)</div><div class='output co'>#&gt; [1] 0.13 0.23 0.26 0.35 0.55</div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>visual</span>)</div><div class='img'><img src='Visual-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Visual</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Visual</span>$<span class='no'>visual</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"purple"</span>)</div><div class='img'><img src='Visual-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

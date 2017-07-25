@@ -87,27 +87,19 @@
     <p>Data for Exercise 5.114</p>
     
 
+    <pre class="usage"><span class='no'>Teacher</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 51 observations on the following 4 variables.</p><dl class='dl-horizontal'>
- <dt>State</dt><dd><p>a factor with levels <code>Alabama</code>
-<code>Alaska</code> <code>Arizona</code> <code>Arkansas</code> <code>California</code>
-<code>Colorado</code> <code>Connecticut</code> <code>Delaware</code> <code>District of
-Colunbia</code> <code>Florida</code> <code>Georgia</code> <code>Hawaii</code> <code>Idaho</code>
-<code>Illinois</code> <code>Indiana</code> <code>Iowa</code> <code>Kansas</code> <code>Kentucky</code>
-<code>Louisiana</code> <code>Maine</code> <code>Maryland</code> <code>Massachusetts</code>
-<code>Michigan</code> <code>Minnesota</code> <code>Mississippi</code> <code>Missouri</code>
-<code>Montana</code> <code>Nebraska</code> <code>Nevada</code> <code>New Hampshire</code> <code>New
-Jersey</code> <code>New Mexico</code> <code>New York</code> <code>North Carolina</code> <code>North
-Dakota</code> <code>Ohio</code> <code>Oklahoma</code> <code>Oregon</code> <code>Pennsylvania</code>
-<code>Rhode Island</code> <code>South Carolina</code> <code>South Dakota</code>
-<code>Tennessee</code> <code>Texas</code> <code>Utah</code> <code>Vermont</code> <code>Virginia</code>
-<code>Washington</code> <code>West Virginia</code> <code>Wisconsin</code> <code>Wyoming</code></p></dd>
-<dt>X1973.74</dt><dd><p>a numeric vector</p></dd> 
-<dt>X1983.84</dt><dd><p>a numeric vector</p></dd> 
-<dt>X1993.94</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 51 observations on three variables</p><dl class='dl-horizontal'>
+ <dt>state</dt><dd><p>U.S. state</p></dd>
+<dt>year</dt><dd><p>academic year</p></dd> 
+<dt>salary</dt><dd><p>avaerage salary (in dollars)</p></dd>
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>National Education Association</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -117,19 +109,30 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Teacher</span>)</div><div class='output co'>#&gt; 'data.frame':	51 obs. of  4 variables:
-#&gt;  $ State   : Factor w/ 51 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ X1973.74: int  9226 15667 10414 7820 13113 10131 11030 11304 NA 10018 ...
-#&gt;  $ X1983.84: int  18000 36564 21605 16929 26403 22895 22624 20925 27659 19545 ...
-#&gt;  $ X1993.94: int  27000 44700 31200 26600 40200 33100 47000 34500 41300 31100 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Teacher</span>)
-<span class='fu'>boxplot</span>(<span class='no'>X1973.74</span>,<span class='no'>X1983.84</span>,<span class='no'>X1993.94</span>,
-<span class='kw'>names</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"1973-1974"</span>,<span class='st'>"1983-1984"</span>,<span class='st'>"1993-1994"</span>),<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Average Salary"</span>)</div><div class='img'><img src='Teacher-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Teacher</span>)</div></pre>
+<span class='fu'>par</span>(<span class='kw'>mfrow</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>3</span>, <span class='fl'>1</span>))
+<span class='fu'>hist</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>[<span class='no'>Teacher</span>$<span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"1973-74"</span>],
+     <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Teacher salary 1973-74"</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"salary"</span>,
+     <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))
+<span class='fu'>hist</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>[<span class='no'>Teacher</span>$<span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"1983-84"</span>],
+     <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Teacher salary 1983-84"</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"salary"</span>,
+     <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))
+<span class='fu'>hist</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>[<span class='no'>Teacher</span>$<span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"1993-94"</span>],
+     <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Teacher salary 1993-94"</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"salary"</span>,
+     <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))</div><div class='img'><img src='Teacher-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>1</span>))</div><span class='co'># NOT RUN {</span>
+    <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Teacher</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>salary</span>)) +
+               <span class='fu'>geom_histogram</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"purple"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>) +
+               <span class='fu'>facet_grid</span>(<span class='no'>year</span> ~ <span class='no'>.</span>) +
+               <span class='fu'>theme_bw</span>()
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

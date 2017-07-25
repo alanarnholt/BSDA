@@ -4,7 +4,7 @@
 \name{Allergy}
 \alias{Allergy}
 \title{Allergy medicines by adverse events}
-\format{A data frame/tibble with 406 observations on two variables.
+\format{A data frame/tibble with 406 observations on two variables
 \describe{ 
 \item{event}{a factor with levels \code{insomnia},
 \code{headache}, and \code{drowsiness}} 

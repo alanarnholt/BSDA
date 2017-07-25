@@ -4,7 +4,7 @@
 \name{Marked}
 \alias{Marked}
 \title{Percent of marked cars in 65 police departments in Florida}
-\format{A data frame/tibble with 65 observations on the following variable.
+\format{A data frame/tibble with 65 observations on one variable
 \describe{ 
 \item{percent}{percentage of marked cars in 65 Florida police departments}
 }}

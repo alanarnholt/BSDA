@@ -89,28 +89,22 @@ population from the court files of the nation's largest counties</h1>
     <p>Data for Exercise 5.13</p>
     
 
+    <pre class="usage"><span class='no'>Tort</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 45 observations on the following 5 variables.</p><dl class='dl-horizontal'>
-<dt>county</dt><dd><p>a factor with levels <code>alameda, ca</code>
-<code>allegheny, pa</code> <code>bergen, nj</code> <code>bexar, tx</code> <code>contra costa,
-ca</code> <code>cook, il</code> <code>cuyahoga, oh</code> <code>dade, fl</code> <code>dallas, tx</code>
-<code>dupage, il</code> <code>essex, ma</code> <code>essex, nj</code> <code>fairfax, va</code>
-<code>fairfield, ct</code> <code>franklin, oh</code> <code>fresno, ca</code> <code>fulton, ga</code>
-<code>harris, tx</code> <code>hartford, ct</code> <code>hennepin, mn</code> <code>honolulu,
-hi</code> <code>jefferson, ky</code> <code>king, wa</code> <code>los angeles, ca</code>
-<code>maricopa, az</code> <code>marion, in</code> <code>middlesex, ma</code> <code>middlesex,
-nj</code> <code>milwaukee, wi</code> <code>new york, ny</code> <code>norfolk, ma</code>
-<code>oakland, mi</code> <code>orange, ca</code> <code>orange, fl</code> <code>palm beach, fl</code>
-<code>philadelphia, pa</code> <code>pima, az</code> <code>san bernadino, ca</code> <code>san
-francisco, ca</code> <code>santa clara, ca</code> <code>st. louis, mo</code> <code>suffolk,
-ma</code> <code>ventura, ca</code> <code>wayne, mi</code> <code>worchester, ma</code></p></dd>
-<dt>months</dt><dd><p>a numeric vector</p></dd> 
-<dt>populat</dt><dd><p>a numeric vector</p></dd> 
-<dt>torts</dt><dd><p>a numeric vector</p></dd> 
-<dt>rate</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 45 observations on five variables</p><dl class='dl-horizontal'>
+<dt>county</dt><dd><p>U.S. county</p></dd>
+<dt>months</dt><dd><p>average number of months to process a tort</p></dd> 
+<dt>population</dt><dd><p>population of the county</p></dd> 
+<dt>torts</dt><dd><p>number of torts</p></dd> 
+<dt>rate</dt><dd><p>rate per 10,000 residents</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>U.S. Department of Justice, <em>Tort Cases in Large Counties</em>, Bureau of Justice
+Statistics Special Report, April 1995</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -120,24 +114,21 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Tort</span>)</div><div class='output co'>#&gt; 'data.frame':	45 obs. of  5 variables:
-#&gt;  $ county : Factor w/ 45 levels "alameda, ca",..: 25 37 1 5 16 24 33 38 39 40 ...
-#&gt;  $ months : int  11 17 22 15 42 12 21 30 21 20 ...
-#&gt;  $ populat: int  2209567 690202 1307572 840585 705613 3485398 2484789 1534343 728921 1528527 ...
-#&gt;  $ torts  : int  9914 3346 3258 2469 2364 21954 18297 7583 3467 5148 ...
-#&gt;  $ rate   : int  449 485 249 294 335 630 736 494 476 337 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Tort</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>months</span>)</div><div class='output co'>#&gt; [1] "months"</div><div class='img'><img src='Tort-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
+<span class='kw pkg'>BSDA</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/BSDA/topics/EDA'>EDA</a></span>(<span class='no'>Tort</span>$<span class='no'>months</span>)</div><div class='output co'>#&gt; [1] "Tort$months"</div><div class='img'><img src='Tort-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
 #&gt;   45.000    0.000   10.000   13.500   18.933   19.000   18.415   22.000 
 #&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
 #&gt;   42.000    6.489   42.109    0.967    8.500   32.000    1.919    1.210 
 #&gt; SW p-val 
-#&gt;    0.001 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Tort</span>)</div></pre>
+#&gt;    0.001 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

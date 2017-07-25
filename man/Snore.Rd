@@ -4,7 +4,7 @@
 \name{Snore}
 \alias{Snore}
 \title{Snoring versus heart disease}
-\format{A data frame/tibble with 2,484 observations on the following 2 variables.
+\format{A data frame/tibble with 2,484 observations on two variables
 \describe{ 
 \item{snore}{factor with levels \code{nonsnorer}, \code{ocassional snorer}, \code{nearly every night}, and \code{snores every night}}
 \item{heartdisease}{factor indicating whether the indiviudal has heart disease (\code{no} or \code{yes})} 

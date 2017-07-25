@@ -89,15 +89,13 @@ Chevrolet, Dodge and Ford</h1>
     <p>Data for Example 10.2</p>
     
 
+    <pre class="usage"><span class='no'>Trucks</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 15 observations on the following 5 variables.</p><dl class='dl-horizontal'>
-<dt>chevy</dt><dd><p>a numeric vector</p></dd> 
-<dt>dodge</dt><dd><p>a numeric vector</p></dd> 
-<dt>ford</dt><dd><p>a numeric vector</p></dd>
-<dt>gas.mileage</dt><dd><p>a numeric vector</p></dd> 
-<dt>truck</dt><dd><p>a factor with levels <code>chevy</code> <code>dodge</code> <code>ford</code></p></dd> 
+    <p>A data frame/tibble with 15 observations on two variables</p><dl class='dl-horizontal'>
+<dt>mpg</dt><dd><p>miles per gallon</p></dd> 
+<dt>truck</dt><dd><p>a factor with levels <code>chevy</code>, <code>dodge</code>, and <code>ford</code></p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -108,18 +106,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Trucks</span>)</div><div class='output co'>#&gt; 'data.frame':	15 obs. of  5 variables:
-#&gt;  $ chevy      : num  15.2 15.4 14.8 14.4 14.7 NA NA NA NA NA ...
-#&gt;  $ dodge      : num  14.8 14.4 14.3 14.1 14.4 NA NA NA NA NA ...
-#&gt;  $ ford       : num  15.1 14.3 14.6 13.9 14.6 NA NA NA NA NA ...
-#&gt;  $ gas.mileage: num  15.2 15.4 14.8 14.4 14.7 14.8 14.4 14.3 14.1 14.4 ...
-#&gt;  $ truck      : Factor w/ 3 levels "chevy","dodge",..: 1 1 1 1 1 2 2 2 2 2 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Trucks</span>)
-<span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>gas.mileage</span>~<span class='no'>truck</span>))</div><div class='output co'>#&gt; Analysis of Variance Table
-#&gt; 
-#&gt; Response: gas.mileage
-#&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)
-#&gt; truck      2   0.70    0.35     2.5 0.1237
-#&gt; Residuals 12   1.68    0.14               </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Trucks</span>)</div></pre>
+<span class='fu'>boxplot</span>(<span class='no'>mpg</span> ~ <span class='no'>truck</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Trucks</span>, <span class='kw'>horizontal</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='img'><img src='Trucks-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='fu'>aov</span>(<span class='no'>mpg</span> ~ <span class='no'>truck</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Trucks</span>))</div><div class='output co'>#&gt;             Df Sum Sq Mean Sq F value Pr(&gt;F)
+#&gt; truck        2   0.70    0.35     2.5  0.124
+#&gt; Residuals   12   1.68    0.14               </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

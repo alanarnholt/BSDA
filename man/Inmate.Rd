@@ -4,7 +4,7 @@
 \name{Inmate}
 \alias{Inmate}
 \title{Type of drug offense by race}
-\format{A data frame/tibble with 28,037 observations on the following 2 variables.
+\format{A data frame/tibble with 28,047 observations on two variables
 \describe{ 
 \item{race}{a factor with levels \code{white},
 \code{black}, and \code{hispanic}} 

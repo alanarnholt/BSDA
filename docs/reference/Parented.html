@@ -91,7 +91,7 @@
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame/tibble with 200 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame/tibble with 200 observations on two variables</p><dl class='dl-horizontal'>
 <dt>education</dt><dd><p>a factor with levels <code>4yr college
 degree</code>, <code>Doctoral degree</code>, <code>Grad degree</code>, <code>H.S grad or less</code>,
 <code>Some college</code>, and <code>Some grad school</code></p></dd> 
@@ -116,12 +116,11 @@ Duxbury</p>
 #&gt;   Grad degree            13     17
 #&gt;   Doctoral degree         1      6</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"blue"</span>, <span class='st'>"red"</span>))</div><div class='img'><img src='Parented-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>rm</span>(<span class='no'>T1</span>)</div><span class='co'># NOT RUN {</span>
 <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Parented</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>education</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>parent</span>)) +
-  <span class='fu'>geom_bar</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
+    <span class='fu'>geom_bar</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
     <span class='fu'>theme_bw</span>() +
-      <span class='fu'>theme</span>(<span class='kw'>axis.text.x</span>  <span class='kw'>=</span> <span class='fu'>element_text</span>(<span class='kw'>angle</span> <span class='kw'>=</span> <span class='fl'>85</span>, <span class='kw'>vjust</span> <span class='kw'>=</span> <span class='fl'>0.5</span>)) +
-        <span class='fu'>scale_fill_manual</span>(<span class='kw'>values</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"pink"</span>, <span class='st'>"blue"</span>)) +
-          <span class='fu'>labs</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>""</span>)
-
+    <span class='fu'>theme</span>(<span class='kw'>axis.text.x</span>  <span class='kw'>=</span> <span class='fu'>element_text</span>(<span class='kw'>angle</span> <span class='kw'>=</span> <span class='fl'>85</span>, <span class='kw'>vjust</span> <span class='kw'>=</span> <span class='fl'>0.5</span>)) +
+    <span class='fu'>scale_fill_manual</span>(<span class='kw'>values</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"pink"</span>, <span class='st'>"blue"</span>)) +
+    <span class='fu'>labs</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>""</span>)
 <span class='co'># }</span><div class='input'>          
 </div></pre>
   </div>

@@ -91,7 +91,7 @@
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame/tibble with 65 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame/tibble with 65 observations on the four variables</p><dl class='dl-horizontal'>
 <dt>city</dt><dd><p>a character variable with values <code>Akron OH</code>,
 <code>Albuquerque NM</code>, <code>Anaheim CA</code>, <code>Atlanta GA</code>, <code>Baltimore
 MD</code>, <code>Baton Rouge LA</code>, <code>Birmingham AL</code>, <code>Boston MA</code>,
@@ -116,7 +116,7 @@ Francisco CA</code>, <code>Seattle WA</code>, <code>Spokane WA</code>, <code>St 
 <dt>region</dt><dd><p>a character variable with values <code>Midwest</code>, <code>Northeast</code>,
 <code>South</code>, and <code>West</code></p></dd> 
 <dt>year</dt><dd><p>a factor with levels <code>1994</code> and <code>2000</code></p></dd>
-<dt>price</dt><dd><p>median house price in dollars</p></dd> 
+<dt>price</dt><dd><p>median house price (in dollars)</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
@@ -135,6 +135,8 @@ Duxbury</p>
 #&gt; 107158.5 136493.8 </div><div class='input'><span class='fu'>tapply</span>(<span class='no'>Homes</span>$<span class='no'>price</span>, <span class='no'>Homes</span>$<span class='no'>region</span>, <span class='no'>mean</span>)</div><div class='output co'>#&gt;   Midwest Northeast     South      West 
 #&gt; 106402.94 133309.09  93769.57 177625.00 </div><div class='input'><span class='no'>p2000</span> <span class='kw'>&lt;-</span> <span class='fu'>subset</span>(<span class='no'>Homes</span>, <span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"2000"</span>)
 <span class='no'>p1994</span> <span class='kw'>&lt;-</span> <span class='fu'>subset</span>(<span class='no'>Homes</span>, <span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"1994"</span>)</div><span class='co'># NOT RUN {</span>
+<span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>Homes</span>, <span class='no'>year</span>, <span class='no'>region</span>) <span class='kw'>%&gt;%</span>
+   <span class='fu'>summarize</span>(<span class='kw'>AvgPrice</span> <span class='kw'>=</span> <span class='fu'>mean</span>(<span class='no'>price</span>))
 <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Homes</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>region</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>price</span>)) +
    <span class='fu'>geom_boxplot</span>() +
    <span class='fu'>theme_bw</span>() +

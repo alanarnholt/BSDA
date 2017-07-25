@@ -4,7 +4,7 @@
 \name{Toaster}
 \alias{Toaster}
 \title{Consumer Reports (Oct 94) rating of toaster ovens versus the cost}
-\format{A data frame/tibble with 17 observations on the following 3 variables.
+\format{A data frame/tibble with 17 observations on three variables
 \describe{ 
 \item{toaster}{name of toaster} 
 \item{score}{Consumer Reports score}

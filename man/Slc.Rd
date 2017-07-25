@@ -5,7 +5,7 @@
 \alias{Slc}
 \title{Sodium-lithium countertransport activity on 190 individuals from six large
 English kindred}
-\format{A data frame/tibble with 190 observations on the following variable.
+\format{A data frame/tibble with 190 observations on one variable
 \describe{ 
 \item{slc}{Red blood cell sodium-lithium countertransport} 
 }}

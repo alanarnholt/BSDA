@@ -4,7 +4,7 @@
 \name{Ronbrown1}
 \alias{Ronbrown1}
 \title{Oceanography data obtained at site 1 by scientist aboard the ship Ron Brown}
-\format{A data frame/tibble with 75 observations on the following 2 variables.
+\format{A data frame/tibble with 75 observations on two variables
 \describe{ 
 \item{depth}{ocen depth (in meters)} 
 \item{temperature}{ocean temperature (in Celsius)} 

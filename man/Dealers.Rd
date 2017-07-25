@@ -5,7 +5,7 @@
 \alias{Dealers}
 \title{Automobile dealers classified according to type dealership and service
 rendered to customers}
-\format{A data frame/tibble  with 122 observations on the following two variables.
+\format{A data frame/tibble with 122 observations on two variables
 \describe{ 
 \item{type}{a factor with levels \code{Honda}, \code{Toyota}, \code{Mazda}, 
 \code{Ford}, \code{Dodge}, and \code{Saturn}} 

@@ -3,9 +3,9 @@
 \docType{data}
 \name{Wins}
 \alias{Wins}
-\title{Baseball team wins versus 7 independent variables for National league teams
+\title{Baseball team wins versus seven independent variables for National league teams
 in 1990}
-\format{A data frame with 12 observations on the following 9 variables.
+\format{A data frame with 12 observations on nine variables
 \describe{ 
 \item{team}{name of team}
 \item{wins}{number of wins} 
@@ -28,10 +28,10 @@ Data for Exercise 9.23
 plot(wins ~ era, data = Wins)
 \dontrun{
 ggplot2::ggplot(data = Wins, aes(x = era, y = wins)) + 
-  geom_point() + 
-    geom_smooth(method = "lm", se = FALSE) + 
-      theme_bw()
-      }
+           geom_point() + 
+           geom_smooth(method = "lm", se = FALSE) + 
+           theme_bw()
+}
 
 }
 \references{

@@ -89,12 +89,13 @@ not complete high school</h1>
     <p>Data for Exercise 7.80</p>
     
 
+    <pre class="usage"><span class='no'>Vocab</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 14 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>First</dt><dd><p>a numeric vector</p></dd> 
-<dt>Second</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 14 observations on two variables</p><dl class='dl-horizontal'>
+<dt>first</dt><dd><p>reading test score before formal vocabulary training</p></dd> 
+<dt>second</dt><dd><p>reading test score after formal vocabulary training</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -105,28 +106,19 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Vocab</span>)</div><div class='output co'>#&gt; 'data.frame':	14 obs. of  2 variables:
-#&gt;  $ First : int  84 55 43 64 72 65 72 52 49 80 ...
-#&gt;  $ Second: int  86 52 50 72 70 67 80 50 62 81 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Vocab</span>)
-<span class='no'>DIF</span> <span class='kw'>&lt;-</span> <span class='no'>Second</span> - <span class='no'>First</span>
-<span class='fu'>qqnorm</span>(<span class='no'>DIF</span>)</div><div class='input'><span class='fu'>qqline</span>(<span class='no'>DIF</span>)</div><div class='img'><img src='Vocab-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>shapiro.test</span>(<span class='no'>DIF</span>)</div><div class='output co'>#&gt; 
-#&gt; 	Shapiro-Wilk normality test
-#&gt; 
-#&gt; data:  DIF
-#&gt; W = 0.90487, p-value = 0.1327
-#&gt; </div><div class='input'><span class='fu'>t.test</span>(<span class='no'>Second</span>,<span class='no'>First</span>,<span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>t.test</span>(<span class='no'>Vocab</span>$<span class='no'>first</span>, <span class='no'>Vocab</span>$<span class='no'>second</span>, <span class='kw'>paired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Paired t-test
 #&gt; 
-#&gt; data:  Second and First
-#&gt; t = 2.2958, df = 13, p-value = 0.03896
+#&gt; data:  Vocab$first and Vocab$second
+#&gt; t = -2.2958, df = 13, p-value = 0.03896
 #&gt; alternative hypothesis: true difference in means is not equal to 0
 #&gt; 95 percent confidence interval:
-#&gt;  0.2275911 7.4866946
+#&gt;  -7.4866946 -0.2275911
 #&gt; sample estimates:
 #&gt; mean of the differences 
-#&gt;                3.857143 
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Vocab</span>)
-<span class='fu'>remove</span>(<span class='no'>DIF</span>)</div></pre>
+#&gt;               -3.857143 
+#&gt; </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

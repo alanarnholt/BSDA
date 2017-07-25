@@ -91,7 +91,7 @@
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame/tibble with 62 observations on the following 2 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame/tibble with 62 observations on two variables</p><dl class='dl-horizontal'>
 <dt>class</dt><dd><p>character variable with values <code>Class1</code> and <code>Class2</code></p></dd> 
 <dt>score</dt><dd><p>test score for an introductory statistics test</p></dd> 
 </dl>
@@ -114,10 +114,9 @@ Duxbury</p>
 #&gt; </div><span class='co'># NOT RUN {</span>
 <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>Statisti</span>, <span class='no'>class</span>) <span class='kw'>%&gt;%</span>
  <span class='fu'>summarize</span>(<span class='kw'>Mean</span> <span class='kw'>=</span> <span class='fu'>mean</span>(<span class='no'>score</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>),
-            <span class='kw'>Median</span> <span class='kw'>=</span> <span class='fu'>median</span>(<span class='no'>score</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>),
-                        <span class='kw'>SD</span> <span class='kw'>=</span> <span class='fu'>sd</span>(<span class='no'>score</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>),
-                                    <span class='kw'>RS</span> <span class='kw'>=</span> <span class='fu'>IQR</span>(<span class='no'>score</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))
-
+           <span class='kw'>Median</span> <span class='kw'>=</span> <span class='fu'>median</span>(<span class='no'>score</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>),
+           <span class='kw'>SD</span> <span class='kw'>=</span> <span class='fu'>sd</span>(<span class='no'>score</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>),
+           <span class='kw'>RS</span> <span class='kw'>=</span> <span class='fu'>IQR</span>(<span class='no'>score</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))
 <span class='co'># }</span><div class='input'>
 </div></pre>
   </div>

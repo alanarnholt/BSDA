@@ -4,7 +4,7 @@
 \name{Parented}
 \alias{Parented}
 \title{Education backgrounds of parents of entering freshmen at a state university}
-\format{A data frame/tibble with 200 observations on the following 2 variables.
+\format{A data frame/tibble with 200 observations on two variables
 \describe{ 
 \item{education}{a factor with levels \code{4yr college
 degree}, \code{Doctoral degree}, \code{Grad degree}, \code{H.S grad or less},
@@ -25,12 +25,12 @@ barplot(t(T1), beside = TRUE, legend = TRUE, col = c("blue", "red"))
 rm(T1)
 \dontrun{
 ggplot2::ggplot(data = Parented, aes(x = education, fill = parent)) + 
-  geom_bar(position = "dodge") + 
+    geom_bar(position = "dodge") + 
     theme_bw() +
-      theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) + 
-        scale_fill_manual(values = c("pink", "blue")) + 
-          labs(x = "", y = "") 
-          }
+    theme(axis.text.x  = element_text(angle = 85, vjust = 0.5)) + 
+    scale_fill_manual(values = c("pink", "blue")) + 
+    labs(x = "", y = "") 
+}
           
 }
 \references{

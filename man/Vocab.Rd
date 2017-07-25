@@ -5,7 +5,7 @@
 \alias{Vocab}
 \title{Reading scores before and after vocabulary training for 14 employees who did
 not complete high school}
-\format{A data frame/tibble with 14 observations on the following 2 variables.
+\format{A data frame/tibble with 14 observations on two variables
 \describe{ 
 \item{first}{reading test score before formal vocabulary training} 
 \item{second}{reading test score after formal vocabulary training} 

@@ -4,7 +4,7 @@
 \name{Lodge}
 \alias{Lodge}
 \title{Measured traffic at three prospective locations for a motor lodge}
-\format{A data frame/tibble with 45 observations on the following 6 variables.
+\format{A data frame/tibble with 45 observations on six variables
 \describe{ 
 \item{traffic}{a numeric vector indicating the amount of vehicles that passed a site in 1 hour} 
 \item{site}{a numeric vector with values \code{1}, \code{2}, and \code{3}} 

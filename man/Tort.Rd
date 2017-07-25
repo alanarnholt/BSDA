@@ -5,7 +5,7 @@
 \alias{Tort}
 \title{The number of torts, average number of months to process a tort, and county
 population from the court files of the nation's largest counties}
-\format{A data frame/tibble with 45 observations on the following 5 variables.
+\format{A data frame/tibble with 45 observations on five variables
 \describe{ 
 \item{county}{U.S. county}
 \item{months}{average number of months to process a tort} 

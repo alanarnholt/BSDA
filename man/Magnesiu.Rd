@@ -4,7 +4,7 @@
 \name{Magnesiu}
 \alias{Magnesiu}
 \title{Magnesium concentration and distances between samples}
-\format{A data frame/tibble with 20 observations on the following 2 variables.
+\format{A data frame/tibble with 20 observations on two variables
 \describe{ 
 \item{distance}{distance between samples}
 \item{magnesium}{concentration of magnesium} 

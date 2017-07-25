@@ -5,7 +5,7 @@
 \alias{Iceberg}
 \title{Number of icebergs sighted each month south of Newfoundland and south of the
 Grand Banks in 1920}
-\format{A data frame with 12 observations on the following 3 variables.
+\format{A data frame with 12 observations on three variables
 \describe{
  \item{month}{a character variable with abbreviated months of the year} 
 \item{Newfoundland}{number of icebergs sighted south of Newfoundland}

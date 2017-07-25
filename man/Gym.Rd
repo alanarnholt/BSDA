@@ -4,10 +4,10 @@
 \name{Gym}
 \alias{Gym}
 \title{Children's age versus number of completed gymnastic activities}
-\format{A data frame/tibble with 8 observations on the following 3 variables.
+\format{A data frame/tibble with eight observations on three variables
 \describe{
-\item{age}{a numeric vector} 
-\item{number}{a numeric vector} 
+\item{age}{age of child} 
+\item{number}{number of gymnastic activities successfully completed} 
 }}
 \usage{
 Gym

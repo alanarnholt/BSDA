@@ -4,7 +4,7 @@
 \name{Inletoil}
 \alias{Inletoil}
 \title{Inlet oil temperature through a valve}
-\format{A data frame/tibble with 12 observations on the following variable.
+\format{A data frame/tibble with 12 observations on one variable
 \describe{ 
 \item{temp}{inlet oil temperature (Fahrenheit)} 
 }}

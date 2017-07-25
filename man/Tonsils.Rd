@@ -4,7 +4,7 @@
 \name{Tonsils}
 \alias{Tonsils}
 \title{Size of tonsils collected from 1,398 children}
-\format{A data frame/tibble with 1398 observations on the following 2 variables.
+\format{A data frame/tibble with 1,398 observations on two variables
 \describe{ 
 \item{size}{a factor with levels \code{Normal}, \code{Large}, and \code{Very Large}} 
 \item{status}{a factor with levels \code{Carrier} and \code{Non-carrier}}
@@ -25,10 +25,10 @@ barplot(t(T1), legend = TRUE, beside = TRUE, col = c("red", "green"))
 \dontrun{
 NDF <- dplyr::count(Tonsils, size, status) 
 ggplot2::ggplot(data = NDF, aes(x = size, y = n, fill = status)) + 
- geom_bar(stat = "identity", position = "dodge") + 
-   scale_fill_manual(values = c("red", "green")) + 
-     theme_bw()
-     }
+           geom_bar(stat = "identity", position = "dodge") + 
+           scale_fill_manual(values = c("red", "green")) + 
+           theme_bw()
+}
 
 }
 \references{

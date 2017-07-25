@@ -4,7 +4,7 @@
 \name{Statisti}
 \alias{Statisti}
 \title{Test scores for two beginning statistics classes}
-\format{A data frame/tibble with 62 observations on the following 2 variables.
+\format{A data frame/tibble with 62 observations on two variables
 \describe{ 
 \item{class}{character variable with values \code{Class1} and \code{Class2}} 
 \item{score}{test score for an introductory statistics test} 
@@ -22,10 +22,10 @@ tapply(Statisti$score, Statisti$class, summary, na.rm = TRUE)
 \dontrun{
 dplyr::group_by(Statisti, class) \%>\%
  summarize(Mean = mean(score, na.rm = TRUE), 
-            Median = median(score, na.rm = TRUE), 
-                        SD = sd(score, na.rm = TRUE),
-                                    RS = IQR(score, na.rm = TRUE))
-                                    }
+           Median = median(score, na.rm = TRUE), 
+           SD = sd(score, na.rm = TRUE),
+           RS = IQR(score, na.rm = TRUE))
+}
 
 }
 \references{

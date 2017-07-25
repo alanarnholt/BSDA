@@ -4,7 +4,7 @@
 \name{Psych}
 \alias{Psych}
 \title{Correct responses for 24 students in a psychology experiment}
-\format{A data frame/tibble with 23 observations on the following variable.
+\format{A data frame/tibble with 23 observations on one variable
 \describe{ 
 \item{score}{number of correct repsonses in a psychology experiment} 
 }}

@@ -4,7 +4,7 @@
 \name{Orioles}
 \alias{Orioles}
 \title{Salaries of members of the Baltimore Orioles baseball team}
-\format{A data frame/tibble with 27 observations on the following 3 variables.
+\format{A data frame/tibble with 27 observations on three variables
 \describe{ 
 \item{first name}{a factor with levels \code{Albert},
 \code{Arthur}, \code{B.J.}, \code{Brady}, \code{Cal}, \code{Charles},
@@ -18,7 +18,7 @@
 \code{Orosco}, \code{Otanez}, \code{Ponson}, \code{Reboulet}, \code{Rhodes},
 \code{Ripken Jr.}, \code{Slocumb}, \code{Surhoff},\code{Timlin}, and
 \code{Webster}} 
-\item{1999salary}{a numeric vector containing each player's salary in dollars} 
+\item{1999salary}{a numeric vector containing each player's salary (in dollars)} 
 }}
 \usage{
 Orioles
@@ -31,10 +31,10 @@ Data for Example 1.3
 stripchart(Orioles$`1999salary`, method = "stack", pch = 19)
 \dontrun{
 ggplot2::ggplot(data = Orioles, aes(x = `1999salary`)) + 
-  geom_dotplot(dotsize = 0.5) + 
+    geom_dotplot(dotsize = 0.5) + 
     labs(x = "1999 Salary") +
-      theme_bw()
-      }
+    theme_bw()
+}
 
 }
 \references{

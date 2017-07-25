@@ -4,7 +4,7 @@
 \name{Mathpro}
 \alias{Mathpro}
 \title{Math proficiency and SAT scores by states}
-\format{A data frame/tibble with 51 observations on the following 4 variables.
+\format{A data frame/tibble with 51 observations on four variables
 \describe{ 
 \item{state}{a factor with levels \code{} \code{Conn},
 \code{D.C.}, \code{Del}, \code{Ga}, \code{Hawaii}, \code{Ind}, \code{Maine},

@@ -4,7 +4,7 @@
 \name{Smokyph}
 \alias{Smokyph}
 \title{Water pH levels of 75 water samples taken in the Great Smoky Mountains}
-\format{A data frame/tibble with 75 observations on the following 3 variables.
+\format{A data frame/tibble with 75 observations on three variables
 \describe{ 
 \item{waterph}{water sample pH level} 
 \item{code}{charater variable with values \code{low} (elevation below 0.6 miles), and \code{high} (elevation above 0.6 miles)} 
@@ -30,12 +30,12 @@ stripchart(waterph ~ code, data = Smokyph, method = "stack",
            BSDA::SIGN.test(Smokyph$waterph, md = 7)
            t.test(waterph ~ code, data = Smokyph, alternative = "less")
            t.test(waterph ~ code, data = Smokyph, conf.level = 0.90)
-          \dontrun{
-           ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
-             geom_dotplot() + 
-               facet_grid(code ~ .) + 
-                 guides(fill = FALSE)
-                 }
+ \dontrun{
+ ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
+       geom_dotplot() + 
+       facet_grid(code ~ .) + 
+       guides(fill = FALSE)
+}
 
 }
 \references{

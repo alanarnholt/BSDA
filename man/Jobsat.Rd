@@ -4,7 +4,7 @@
 \name{Jobsat}
 \alias{Jobsat}
 \title{Job satisfaction and stress level for 9 school teachers}
-\format{A data frame/tibble with 9 observations on the following 2 variables.
+\format{A data frame/tibble with nine observations on two variables
 \describe{ 
 \item{wspt}{Wilson Stress Profile score for teachers} 
 \item{satisfaction}{job satisfaction score} 

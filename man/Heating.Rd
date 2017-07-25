@@ -4,7 +4,7 @@
 \name{Heating}
 \alias{Heating}
 \title{Fuel efficiency ratings for three types of oil heaters}
-\format{A data frame/tibble with 90 observations on the following 2 variables.
+\format{A data frame/tibble with 90 observations on the two variables
 \describe{ 
 \item{type}{a factor with levels \code{A}, \code{B}, and \code{C} denoting the type of oil heater} 
 \item{efficiency}{heater efficiency rating} 

@@ -4,7 +4,7 @@
 \name{Undergrad}
 \alias{Undergrad}
 \title{Data set describing a sample of undergraduate students}
-\format{A data frame/tibble with 100 observations on the following 6 variables.
+\format{A data frame/tibble with 100 observations on six variables
 \describe{ 
 \item{gender}{character variable with values \code{Female} and \code{Male}} 
 \item{major}{college major}
@@ -35,10 +35,10 @@ col = c("red", "blue"), pch = 19,
                                  main = "Drops versus Gender")
  \dontrun{
  ggplot2::ggplot(data = Undergrad, aes(x = sat, y = drops, fill = factor(drops))) + 
-   facet_grid(drops ~.) +
-    geom_dotplot() +
-      guides(fill = FALSE)
-      }
+            facet_grid(drops ~.) +
+            geom_dotplot() +
+            guides(fill = FALSE)
+}
 
 }
 \references{

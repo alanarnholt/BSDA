@@ -4,7 +4,7 @@
 \name{Toxic}
 \alias{Toxic}
 \title{Hazardous waste sites near minority communities}
-\format{A data frame/tibble with 51 observations on the following 5 variables.
+\format{A data frame/tibble with 51 observations on five variables
 \describe{ 
 \item{state}{U.S. state}
 \item{region}{U.S. region} 

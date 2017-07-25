@@ -87,11 +87,12 @@
     <p>Data for Exercise 5.80</p>
     
 
+    <pre class="usage"><span class='no'>Test1</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 25 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>test1</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 25 observations on one variable</p><dl class='dl-horizontal'>
+<dt>score</dt><dd><p>score on first statistics exam</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,14 +103,16 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Test1</span>)</div><div class='output co'>#&gt; 'data.frame':	25 obs. of  1 variable:
-#&gt;  $ test1: int  61 38 64 70 81 11 61 92 77 47 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Test1</span>)
-<span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>test1</span>)</div><div class='output co'>#&gt; [1] "test1"</div><div class='img'><img src='Test1-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   25.000    0.000   11.000   59.500   68.440   76.000   69.652   82.000 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   98.000   23.475  551.090    4.695   22.500   87.000    0.185   -0.934 
-#&gt; SW p-val 
-#&gt;    0.024 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Test1</span>)</div></pre>
+<span class='fu'>stem</span>(<span class='no'>Test1</span>$<span class='no'>score</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 1 digit(s) to the right of the |
+#&gt; 
+#&gt;   0 | 14
+#&gt;   2 | 8
+#&gt;   4 | 178
+#&gt;   6 | 1145026788
+#&gt;   8 | 011302788
+#&gt; </div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>Test1</span>$<span class='no'>score</span>)</div><div class='img'><img src='Test1-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

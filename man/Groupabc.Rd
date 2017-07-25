@@ -4,7 +4,7 @@
 \name{Groupabc}
 \alias{Groupabc}
 \title{Group data to illustrate analysis of variance}
-\format{A data frame/tibble with 45 observations on the following 2 variables.
+\format{A data frame/tibble with 45 observations on two variables
 \describe{ 
 \item{group}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 \item{response}{a numeric vector} 

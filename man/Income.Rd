@@ -4,7 +4,7 @@
 \name{Income}
 \alias{Income}
 \title{Percent change in personal income from 1st to 2nd quarter in 2000}
-\format{A data frame/tibble with 51 observations on the following 2 variables.
+\format{A data frame/tibble with 51 observations on two variables
 \describe{ 
 \item{state}{a character variable with values \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},

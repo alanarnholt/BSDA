@@ -4,7 +4,7 @@
 \name{Domestic}
 \alias{Domestic}
 \title{Rates of domestic violence per 1,000 women by age groups}
-\format{A data frame/tibble  with 5 observations on the following two variables.
+\format{A data frame/tibble with five observations on two variables
 \describe{ 
 \item{age}{a factor with levels \code{12-19}, \code{20-24},
 \code{25-34}, \code{35-49}, and \code{50-64}} 

@@ -87,16 +87,18 @@
     <p>Data for Exercise 1.111</p>
     
 
+    <pre class="usage"><span class='no'>Vaccine</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 11 observations on the following 2 variables.</p><dl class='dl-horizontal'>
-<dt>State</dt><dd><p>a factor with levels <code>Alabama</code>
-<code>Arkansas</code> <code>Florida</code> <code>Georgia</code> <code>Louisiana</code>
-<code>Mississippi</code> <code>North Carolina</code> <code>Oklahoma</code> <code>South
-Carolina</code> <code>Tennessee</code> <code>Texas</code></p></dd> 
-<dt>number</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 11 observations on two variables</p><dl class='dl-horizontal'>
+<dt>state</dt><dd><p>U.S. state</p></dd> 
+<dt>number</dt><dd><p>number of reported serious reactions per million doses of a vaccine</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Center for Disease Control, Atlanta, Georgia.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -106,21 +108,28 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Vaccine</span>)</div><div class='output co'>#&gt; 'data.frame':	11 obs. of  2 variables:
-#&gt;  $ State : Factor w/ 11 levels "Alabama","Arkansas",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ number: num  3.9 27.8 5 73.5 24.8 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Vaccine</span>)
-<span class='no'>fn</span> <span class='kw'>&lt;-</span> <span class='fu'>fivenum</span>(<span class='no'>number</span>)
-<span class='no'>fn</span></div><div class='output co'>#&gt; [1]   3.9  10.2  24.8  45.1 138.8</div><div class='input'><span class='no'>iqr</span> <span class='kw'>&lt;-</span> <span class='fu'>IQR</span>(<span class='no'>number</span>)
-<span class='no'>ll</span> <span class='kw'>&lt;-</span> <span class='no'>fn</span>[<span class='fl'>2</span>]-<span class='fl'>1.5</span>*<span class='no'>iqr</span>
-<span class='no'>ul</span> <span class='kw'>&lt;-</span> <span class='no'>fn</span>[<span class='fl'>4</span>]+<span class='fl'>1.5</span>*<span class='no'>iqr</span>
-<span class='no'>limits</span> <span class='kw'>&lt;-</span> <span class='fu'>c</span>(<span class='no'>ll</span>,<span class='no'>ul</span>)
-<span class='no'>limits</span></div><div class='output co'>#&gt; [1] -42.15  97.45</div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>number</span>)</div><div class='img'><img src='Vaccine-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Vaccine</span>)</div></pre>
+<span class='fu'>stem</span>(<span class='no'>Vaccine</span>$<span class='no'>number</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; 
+#&gt;   The decimal point is 1 digit(s) to the right of the |
+#&gt; 
+#&gt;    0 | 45912
+#&gt;    2 | 585
+#&gt;    4 | 5
+#&gt;    6 | 4
+#&gt;    8 | 
+#&gt;   10 | 
+#&gt;   12 | 9
+#&gt; </div><div class='input'><span class='no'>fn</span> <span class='kw'>&lt;-</span> <span class='fu'>fivenum</span>(<span class='no'>Vaccine</span>$<span class='no'>number</span>)
+<span class='no'>fn</span></div><div class='output co'>#&gt; [1]   3.9  10.2  24.8  45.1 138.8</div><div class='input'><span class='no'>iqr</span> <span class='kw'>&lt;-</span> <span class='fu'>IQR</span>(<span class='no'>Vaccine</span>$<span class='no'>number</span>)
+<span class='no'>iqr</span></div><div class='output co'>#&gt; [1] 34.9</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

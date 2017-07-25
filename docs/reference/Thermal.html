@@ -87,13 +87,13 @@
     <p>Data for Example 9.5</p>
     
 
+    <pre class="usage"><span class='no'>Thermal</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 12 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>temp</dt><dd><p>a numeric vector</p></dd> 
-<dt>loss</dt><dd><p>a numeric vector</p></dd> 
-<dt>x</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 12 observations on the two variables</p><dl class='dl-horizontal'>
+<dt>temp</dt><dd><p>temperature (degrees Celcius)</p></dd> 
+<dt>loss</dt><dd><p>heat loss (BTUs)</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -104,14 +104,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Thermal</span>)</div><div class='output co'>#&gt; 'data.frame':	12 obs. of  3 variables:
-#&gt;  $ temp: int  -10 -10 -10 0 0 0 10 10 10 20 ...
-#&gt;  $ loss: int  58 62 54 39 41 36 22 26 20 10 ...
-#&gt;  $ x   : int  -10 0 10 20 30 40 NA NA NA NA ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Thermal</span>)
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>loss</span>~<span class='no'>temp</span>)
+<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>loss</span> ~ <span class='no'>temp</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Thermal</span>)
 <span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = loss ~ temp)
+#&gt; lm(formula = loss ~ temp, data = Thermal)
 #&gt; 
 #&gt; Residuals:
 #&gt;    Min     1Q Median     3Q    Max 
@@ -127,7 +123,7 @@ Duxbury</p>
 #&gt; Residual standard error: 3.774 on 10 degrees of freedom
 #&gt; Multiple R-squared:  0.9605,	Adjusted R-squared:  0.9566 
 #&gt; F-statistic: 243.4 on 1 and 10 DF,  p-value: 2.397e-08
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Thermal</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='no'>loss</span> ~ <span class='no'>temp</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Thermal</span>)</div><div class='input'><span class='fu'>abline</span>(<span class='no'>model</span>)</div><div class='img'><img src='Thermal-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>rm</span>(<span class='no'>model</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -4,7 +4,7 @@
 \name{Rat}
 \alias{Rat}
 \title{Survival times of 20 rats exposed to high levels of radiation}
-\format{A data frame/tibble with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{survival_time}{survival time in weeks for rats exposed to a high level of radiation} 
 }}

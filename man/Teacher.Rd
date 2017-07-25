@@ -4,7 +4,7 @@
 \name{Teacher}
 \alias{Teacher}
 \title{Average teacher's salaries across the states in the 70s 80s and 90s}
-\format{A data frame/tibble with 51 observations on the following 3 variables.
+\format{A data frame/tibble with 51 observations on three variables
 \describe{
  \item{state}{U.S. state}
 \item{year}{academic year} 
@@ -24,19 +24,20 @@ Data for Exercise 5.114
 par(mfrow = c(3, 1))
 hist(Teacher$salary[Teacher$year == "1973-74"],
      main = "Teacher salary 1973-74", xlab = "salary",
-          xlim = range(Teacher$salary, na.rm = TRUE))
-          hist(Teacher$salary[Teacher$year == "1983-84"],
-               main = "Teacher salary 1983-84", xlab = "salary",
-                    xlim = range(Teacher$salary, na.rm = TRUE))
-                    hist(Teacher$salary[Teacher$year == "1993-94"],
-                         main = "Teacher salary 1993-94", xlab = "salary",
-                              xlim = range(Teacher$salary, na.rm = TRUE))
-                              par(mfrow = c(1, 1))
-    \dontrun{                       
+     xlim = range(Teacher$salary, na.rm = TRUE))
+hist(Teacher$salary[Teacher$year == "1983-84"],
+     main = "Teacher salary 1983-84", xlab = "salary",
+     xlim = range(Teacher$salary, na.rm = TRUE))
+hist(Teacher$salary[Teacher$year == "1993-94"],
+     main = "Teacher salary 1993-94", xlab = "salary",
+     xlim = range(Teacher$salary, na.rm = TRUE))
+par(mfrow = c(1, 1))
+\dontrun{                       
     ggplot2::ggplot(data = Teacher, aes(x = salary)) + 
-     geom_histogram(fill = "purple", color = "black") +  facet_grid(year ~ .) + 
-       theme_bw()
-       }
+               geom_histogram(fill = "purple", color = "black") +  
+               facet_grid(year ~ .) + 
+               theme_bw()
+}
 
 }
 \references{

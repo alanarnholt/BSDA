@@ -4,11 +4,11 @@
 \name{Hodgkin}
 \alias{Hodgkin}
 \title{Results of treatments for Hodgkin's disease}
-\format{A data frame/tibble with 538 observations on the following 2 variables.
+\format{A data frame/tibble with 538 observations on two variables
 \describe{ 
 \item{type}{a factor with levels \code{LD},
 \code{LP}, \code{MC}, and \code{NS}} 
-\item{response}{a factor with levels \code{Positive}, \code{Partial}. and \code{None}}
+\item{response}{a factor with levels \code{Positive}, \code{Partial}, and \code{None}}
 }}
 \source{
 I. Dunsmore, F. Daly, \emph{Statistical Methods, Unit 9, Categorical Data}, 

@@ -4,7 +4,7 @@
 \name{Skewed}
 \alias{Skewed}
 \title{Illustrates the Wilcoxon Rank Sum test}
-\format{A data frame/tibble with 21 observations on the following 2 variables.
+\format{A data frame/tibble with 21 observations on two variables
 \describe{ 
 \item{C1}{values from a sample of size 16 from a particular population} 
 \item{C2}{values from a sample of size 14 from a particular population} 

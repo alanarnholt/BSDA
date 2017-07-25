@@ -4,7 +4,7 @@
 \name{Referend}
 \alias{Referend}
 \title{Opinion on referendum by view on freedom of the press}
-\format{A data frame with 237 observations on the following 2 variables.
+\format{A data frame with 237 observations on two variables
 \describe{ 
 \item{choice}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 \item{response}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 

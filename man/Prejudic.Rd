@@ -4,7 +4,7 @@
 \name{Prejudic}
 \alias{Prejudic}
 \title{Racial prejudice measured on a sample of 25 high school students}
-\format{A data frame with 25 observations on the following variable.
+\format{A data frame with 25 observations on one variable
 \describe{ 
 \item{prejud}{racial prejudice score} 
 }}

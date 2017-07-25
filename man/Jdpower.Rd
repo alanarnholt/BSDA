@@ -4,7 +4,7 @@
 \name{Jdpower}
 \alias{Jdpower}
 \title{Number of problems reported per 100 cars in 1994 versus 1995s}
-\format{A data frame/tibble with 29 observations on the following 3 variables.
+\format{A data frame/tibble with 29 observations on three variables
 \describe{ 
 \item{car}{a factor with levels \code{Acura}, \code{BMW},
 \code{Buick}, \code{Cadillac}, \code{Chevrolet}, \code{Dodge} \code{Eagle},

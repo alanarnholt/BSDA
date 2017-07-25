@@ -4,7 +4,7 @@
 \name{Wool}
 \alias{Wool}
 \title{Strength tests of two types of wool fabric}
-\format{A data frame/tibble with 20 observations on the following 2 variables.
+\format{A data frame/tibble with 20 observations on two variables
 \describe{ 
 \item{type}{type of wool (\code{Type I}, \code{Type 2})} 
 \item{strength}{strength of wool} 

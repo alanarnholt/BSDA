@@ -5,7 +5,7 @@
 \alias{Dopamine}
 \title{Dopamine b-hydroxylase activity of schizophrenic patients treated with an
 antipsychotic drug}
-\format{A data frame/tibble  with 25 observations on the following two variables.
+\format{A data frame/tibble  with 25 observations on two variables
 \describe{ 
 \item{dbh}{dopamine b-hydroxylase activity (units are nmol/(ml)(h)/(mg) of protein)} 
 \item{group}{a factor with levels \code{nonpsychotic} and \code{psychotic}} 

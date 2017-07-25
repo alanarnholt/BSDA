@@ -5,7 +5,7 @@
 \alias{Spelling}
 \title{Spelling scores for 9 eighth graders before and after a 2-week course of
 instruction}
-\format{A data frame/tibble with 9 observations on the following 3 variables.
+\format{A data frame/tibble with nine observations on three variables
 \describe{ 
 \item{before}{spelling score before a 2-week course of instruction} 
 \item{after}{spelling score after a 2-week course of instruction} 

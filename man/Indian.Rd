@@ -5,13 +5,13 @@
 \alias{Indian}
 \title{Educational attainment versus per capita income and poverty rate for
 American indians living on reservations}
-\format{A data frame/tibble with 10 observations on the following 4 variables.
+\format{A data frame/tibble with ten observations on four variables
 \describe{ 
 \item{reservation}{a character variable with values \code{Blackfeet},
 \code{Fort Apache}, \code{Gila River}, \code{Hopi}, \code{Navajo}, \code{Papago},
 \code{Pine Ridge}, \code{Rosebud}, \code{San Carlos}, and \code{Zuni Pueblo}}
 \item{percent high school}{percent who have graduated from high school} 
-\item{per capita income}{per capita income} 
+\item{per capita income}{per capita income (in dollars)} 
 \item{poverty rate}{percent poverty} 
 }}
 \usage{

@@ -4,7 +4,7 @@
 \name{Superbowl}
 \alias{Superbowl}
 \title{Margin of victory in Superbowls I to XXXV}
-\format{A data frame/tibble with 35 observations on the following 5 variables.
+\format{A data frame/tibble with 35 observations on five variables
 \describe{ 
 \item{winning_team}{name of Suberbowl winning team}
 \item{winner_score}{winning score for the Superbowl} 

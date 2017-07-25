@@ -4,7 +4,7 @@
 \name{Speed}
 \alias{Speed}
 \title{Speed reading scores before and after a course on speed reading}
-\format{A data frame/tibble with 15 observations on the following 4 variables.
+\format{A data frame/tibble with 15 observations on four variables
 \describe{ 
 \item{before}{reading comprehension score before taking a speed-reading course} 
 \item{after}{reading comprehension score after taking a speed-reading course} 

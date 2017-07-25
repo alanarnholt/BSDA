@@ -5,12 +5,12 @@
 \alias{Sophomor}
 \title{Grade point averages, SAT scores and final grade in college algebra for 20
 sophomores}
-\format{A data frame/tibble with 20 observations on the following 4 variables.
+\format{A data frame/tibble with 20 observations on four variables
 \describe{ 
-\item{student}{student's identification number} 
-\item{gpa}{student's grade point average} 
-\item{sat}{student's SAT math score} 
-\item{exam}{student's final exam grade in college algebra } 
+\item{student}{identification number} 
+\item{gpa}{grade point average} 
+\item{sat}{SAT math score} 
+\item{exam}{final exam grade in college algebra} 
 }}
 \usage{
 Sophomor
@@ -24,10 +24,10 @@ cor(Sophomor)
 plot(exam ~ gpa, data = Sophomor)
 \dontrun{
 ggplot2::ggplot(data = Sophomor, aes(x = gpa, y = exam)) + 
-  geom_point()
-  ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
-    geom_point()
-    }
+   geom_point()
+   ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
+   geom_point()
+}
 
 }
 \references{

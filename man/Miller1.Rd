@@ -4,7 +4,7 @@
 \name{Miller1}
 \alias{Miller1}
 \title{Twenty scores on the Miller personality test}
-\format{A data frame/tibble with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{miller}{scores on the Miller personality test} 
 }}

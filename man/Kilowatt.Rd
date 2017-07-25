@@ -4,7 +4,7 @@
 \name{Kilowatt}
 \alias{Kilowatt}
 \title{Rates per kilowatt-hour for each of the 50 states and DC}
-\format{A data frame/tibble with 51 observations on the following 2 variables.
+\format{A data frame/tibble with 51 observations on two variables
 \describe{ 
 \item{state}{a factor with levels \code{Alabama}
 \code{Alaska}, \code{Arizona}, \code{Arkansas} \code{California},

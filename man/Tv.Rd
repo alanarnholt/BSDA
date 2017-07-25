@@ -5,7 +5,7 @@
 \alias{Tv}
 \title{Percent of students that watch more than 6 hours of TV per day versus
 national math test scores}
-\format{A data frame/tibble with 53 observations on the following 3 variables.
+\format{A data frame/tibble with 53 observations on three variables
 \describe{ 
 \item{state}{U.S. state}
 \item{percent}{percent of students who watch more than six hours of TV a day} 

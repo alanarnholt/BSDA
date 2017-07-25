@@ -4,7 +4,7 @@
 \name{Politic}
 \alias{Politic}
 \title{Political party and gender in a voting district}
-\format{A data frame/tibble with 250 observations on the following 2 variables.
+\format{A data frame/tibble with 250 observations on two variables
 \describe{ 
 \item{party}{a factor with levels \code{republican}, \code{democrat}, and \code{other}} 
 \item{gender}{a factor with levels \code{female} and \code{male}} 

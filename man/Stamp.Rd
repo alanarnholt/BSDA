@@ -4,7 +4,7 @@
 \name{Stamp}
 \alias{Stamp}
 \title{Thicknesses of 1872 Hidalgo stamps issued in Mexico}
-\format{A data frame/tibble with 485 observations on the following variable.
+\format{A data frame/tibble with 485 observations on one variable
 \describe{ 
 \item{thickness}{stamp thickness (in mm)}
 }}

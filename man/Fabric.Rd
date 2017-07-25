@@ -3,9 +3,9 @@
 \docType{data}
 \name{Fabric}
 \alias{Fabric}
-\title{Measures of softness of 10 different clothing garments washed with and
+\title{Measures of softness of ten different clothing garments washed with and
 without a softener}
-\format{A data frame/tibble with 20 observations on the following 3 variables.
+\format{A data frame/tibble with 20 observations on three variables
 \describe{ 
 \item{garment}{a numeric vector} 
 \item{softner}{a character variable with values \code{with} and \code{without}} 

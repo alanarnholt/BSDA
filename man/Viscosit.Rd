@@ -4,7 +4,7 @@
 \name{Viscosit}
 \alias{Viscosit}
 \title{Viscosity measurements of a substance on two different days}
-\format{A data frame/tibble with 11 observations on the following 2 variables.
+\format{A data frame/tibble with 11 observations on two variables
 \describe{ 
 \item{first}{viscosity measurement for a certain substance on day one} 
 \item{second}{viscosity measurement for a certain substance on day two} 

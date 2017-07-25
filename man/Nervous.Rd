@@ -4,7 +4,7 @@
 \name{Nervous}
 \alias{Nervous}
 \title{Reaction effects of 4 drugs on 25 subjects with a nervous disorder}
-\format{A data frame/tibble with 25 observations on the following 2 variables.
+\format{A data frame/tibble with 25 observations on two variables
 \describe{ 
 \item{react}{a numeric vector representing reaction time} 
 \item{drug}{a numeric vector indicating each of the 4 drugs} 

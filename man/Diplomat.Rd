@@ -4,11 +4,11 @@
 \name{Diplomat}
 \alias{Diplomat}
 \title{Parking tickets issued to diplomats}
-\format{A data frame/tibble  with 10 observations on the following three variables.
+\format{A data frame/tibble with 10 observations on three variables
 \describe{ 
-\item{country}{a factor with levels \code{Brazil}
-\code{Bulgaria} \code{Egypt} \code{Indonesia} \code{Israel} \code{Nigeria}
-\code{Russia} \code{S. Korea} \code{Ukraine} \code{Venezuela}}
+\item{country}{a factor with levels \code{Brazil},
+\code{Bulgaria}, \code{Egypt}, \code{Indonesia}, \code{Israel}, \code{Nigeria},
+\code{Russia}, \code{S. Korea}, \code{Ukraine}, and \code{Venezuela}}
 \item{number}{total number of tickets} 
 \item{rate}{number of tickets per vehicle per month} 
 }}

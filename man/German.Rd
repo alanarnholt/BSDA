@@ -5,7 +5,7 @@
 \alias{German}
 \title{Number of errors in copying a German passage before and after an
 experimental course in German}
-\format{A data frame/tibble with 10 observations on the following 3 variables.
+\format{A data frame/tibble with ten observations on three variables
 \describe{ 
 \item{student}{a character variable indicating student number} 
 \item{when}{a character variable with either code\{Before} or \code{After} 

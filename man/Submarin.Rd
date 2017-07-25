@@ -4,7 +4,7 @@
 \name{Submarin}
 \alias{Submarin}
 \title{Number of German submarines sunk by U.S. Navy in World War II}
-\format{A data frame/tibble with 16 observations on the following 3 variables.
+\format{A data frame/tibble with 16 observations on three variables
 \describe{ 
 \item{month}{month} 
 \item{reported}{number of submarines reported sunk by U.S. Navy} 

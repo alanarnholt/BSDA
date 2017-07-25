@@ -3,8 +3,8 @@
 \docType{data}
 \name{Precinct}
 \alias{Precinct}
-\title{Robbery rates versus percent low income in 8 precincts}
-\format{A data frame/tibble with 8 observations on the following 2 variables.
+\title{Robbery rates versus percent low income in eight precincts}
+\format{A data frame/tibble with eight observations on two variables
 \describe{ 
 \item{rate}{robbery rate (per 1000 people)} 
 \item{income}{percent with low income} 

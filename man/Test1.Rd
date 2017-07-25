@@ -4,7 +4,7 @@
 \name{Test1}
 \alias{Test1}
 \title{Grades on the first test in a statistics class}
-\format{A data frame/tibble with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on one variable
 \describe{ 
 \item{score}{score on first statistics exam} 
 }}

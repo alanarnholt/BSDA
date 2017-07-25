@@ -5,7 +5,7 @@
 \alias{Shkdrug}
 \title{Effects of a drug and electroshock therapy on the ability to solve simple
 tasks}
-\format{A data frame/tibble with 64 observations on the following 2 variables.
+\format{A data frame/tibble with 64 observations on two variables
 \describe{ 
 \item{treatment}{type of treament \code{Drug/NoS}, \code{Drug/Shk}, \code{NoDg/NoS}, or \code{NoDrug/S}}
 \item{response}{number of tasks completed in a 10-minute period}

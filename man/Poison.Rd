@@ -4,7 +4,7 @@
 \name{Poison}
 \alias{Poison}
 \title{Number of poisonings reported to 16 poison control centers}
-\format{A data frame/tibble with 226,261 observations on the following variable.
+\format{A data frame/tibble with 226,361 observations on one variable
 \describe{ 
 \item{type}{a factor with levels \code{Alcohol},
 \code{Cleaning agent}, \code{Cosmetics}, \code{Drugs}, \code{Insecticides}, and

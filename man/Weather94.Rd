@@ -4,10 +4,11 @@
 \name{Weather94}
 \alias{Weather94}
 \title{Weather casualties in 1994}
-\format{A data frame/tibble with 388 observations on the following 1 variables.
+\format{A data frame/tibble with 388 observations on one variable
 \describe{ 
-\item{type}{factor with levels Extreme Temp, Flash Flood, Fog, High Wind, Hurricane, 
- Lighting, Other, River Flood, Thunderstorm, Tornado, and Winter Weather.} 
+\item{type}{factor with levels \code{Extreme Temp}, \code{Flash Flood}, 
+\code{Fog}, \code{High Wind}, \code{Hurricane}, \code{Lighting}, \code{Other}, 
+\code{River Flood}, \code{Thunderstorm}, \code{Tornado}, and \code{Winter Weather}} 
 }}
 \usage{
 Weather94
@@ -26,11 +27,11 @@ par(mar = c(5.1, 4.1, 4.1, 2.1))
 T2 <- as.data.frame(T1)
 T2
 ggplot2::ggplot(data =T2, aes(x = reorder(type, Freq), y = Freq)) + 
-  geom_bar(stat = "identity", fill = "purple") +
-    theme_bw() + 
-      theme(axis.text.x  = element_text(angle = 55, vjust = 0.5)) + 
-        labs(x = "", y = "count")
-        }
+           geom_bar(stat = "identity", fill = "purple") +
+           theme_bw() + 
+           theme(axis.text.x  = element_text(angle = 55, vjust = 0.5)) + 
+           labs(x = "", y = "count")
+}
 
 }
 \references{

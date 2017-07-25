@@ -5,7 +5,7 @@
 \alias{Develop}
 \title{Demographic characteristics of developmental students at 2-year colleges and
 4-year colleges}
-\format{A data frame/tibble  with 5656 observations on the following two variables.
+\format{A data frame/tibble with 5656 observations on two variables
 \describe{ 
 \item{race}{a factor with levels \code{African American}, \code{American Indian},
 \code{Asian}, \code{Latino}, and \code{White}} 

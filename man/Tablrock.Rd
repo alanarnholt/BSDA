@@ -40,16 +40,16 @@ par(mar = c(5.1 - 1, 4.1 + 2, 4.1 - 2, 2.1))
 boxplot(ozone ~ day, data = Tablrock, 
         horizontal = TRUE, las = 1, cex.axis = 0.7)
         par(mar = c(5.1, 4.1, 4.1, 2.1))
-       \dontrun{
-       ggplot2::ggplot(data = Tablrock, aes(sample = ozone)) + 
-         geom_qq() + 
-           theme_bw()
-           ggplot2::ggplot(data = Tablrock, aes(x = as.factor(day), y = ozone)) + 
+\dontrun{
+  ggplot2::ggplot(data = Tablrock, aes(sample = ozone)) + 
+             geom_qq() + 
+             theme_bw()
+  ggplot2::ggplot(data = Tablrock, aes(x = as.factor(day), y = ozone)) + 
              geom_boxplot(fill = "pink") + 
-               coord_flip() + 
-                 labs(x = "") + 
-                   theme_bw()
-                   }
+             coord_flip() + 
+             labs(x = "") + 
+             theme_bw()
+}
 
 }
 \references{

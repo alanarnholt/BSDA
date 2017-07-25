@@ -5,7 +5,7 @@
 \alias{Greenriv}
 \title{Varve thickness from a sequence through an Eocene lake deposit in the Rocky
 Mountains}
-\format{A data frame/tibble with 37 observations on the following variable.
+\format{A data frame/tibble with 37 observations on one variable
 \describe{ 
 \item{thick}{varve thickness in millimeters} 
 }}

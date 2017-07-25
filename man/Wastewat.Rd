@@ -5,7 +5,7 @@
 \alias{Wastewat}
 \title{Volume of injected waste water from Rocky Mountain Arsenal and number of
 earthquakes near Denver}
-\format{A data frame/tibble with 44 observations on the following 2 variables.
+\format{A data frame/tibble with 44 observations on two variables
 \describe{ 
 \item{gallons}{injected water (in million gallons)} 
 \item{number}{number of earthqueakes detected in Denver}

@@ -4,7 +4,7 @@
 \name{Yearsunspot}
 \alias{Yearsunspot}
 \title{Monthly sunspot activity from 1974 to 2000}
-\format{A data frame/tibble with 252 observations on the following 22 variables.
+\format{A data frame/tibble with 252 observations on two variables
 \describe{ 
 \item{number}{average number of sunspots} 
 \item{year}{date} 

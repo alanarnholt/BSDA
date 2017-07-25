@@ -4,7 +4,7 @@
 \name{Executiv}
 \alias{Executiv}
 \title{Ages of 25 executives}
-\format{A data frame/tibble with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on one variable
 \describe{ 
 \item{age}{a numeric vector} 
 }}

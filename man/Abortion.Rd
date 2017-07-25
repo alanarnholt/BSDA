@@ -4,21 +4,21 @@
 \name{Abortion}
 \alias{Abortion}
 \title{Abortion rate by region of country}
-\format{A data frame/tibble with 51 observations on the following 10 variables.
+\format{A data frame/tibble with 51 observations on the following 10 variables:
 \describe{ 
-\item{state}{a character variable with values \code{alabama}
-\code{alaska} \code{arizona} \code{arkansas} \code{california}
-\code{colorado} \code{connecticut} \code{delaware} \code{dist of columbia}
-\code{florida} \code{georgia} \code{hawaii} \code{idaho} \code{illinois}
-\code{indiana} \code{iowa} \code{kansas} \code{kentucky} \code{louisiana}
-\code{maine} \code{maryland} \code{massachusetts} \code{michigan}
-\code{minnesota} \code{mississippi} \code{missouri} \code{montana}
-\code{nebraska} \code{nevada} \code{new hampshire} \code{new jersey}
-\code{new mexico} \code{new york} \code{north carolina} \code{north dakota}
-\code{ohio} \code{oklahoma} \code{oregon} \code{pennsylvania} \code{rhode
-island} \code{south carolina} \code{south dakota} \code{tennessee}
-\code{texas} \code{utah} \code{vermont} \code{virginia} \code{washington}
-\code{west virginia} \code{wisconsin} \code{wyoming}}
+\item{state}{a character variable with values \code{alabama},
+\code{alaska}, \code{arizona}, \code{arkansas}, \code{california},
+\code{colorado}, \code{connecticut}, \code{delaware}, \code{dist of columbia},
+\code{florida,} \code{georgia}, \code{hawaii}, \code{idaho}, \code{illinois},
+\code{indiana}, \code{iowa}, \code{kansas}, \code{kentucky}, \code{louisiana},
+\code{maine}, \code{maryland}, \code{massachusetts}, \code{michigan},
+\code{minnesota}, \code{mississippi}, \code{missouri}, \code{montana},
+\code{nebraska}, \code{nevada}, \code{new hampshire}, \code{new jersey},
+\code{new mexico}, \code{new york}, \code{north carolina}, \code{north dakota},
+\code{ohio}, \code{oklahoma}, \code{oregon}, \code{pennsylvania}, \code{rhode
+island}, \code{south carolina}, \code{south dakota}, \code{tennessee},
+\code{texas}, \code{utah}, \code{vermont}, \code{virginia}, \code{washington},
+\code{west virginia}, \code{wisconsin}, and \code{wyoming}}
 \item{region}{a character variable with values \code{midwest} \code{northeast}
 \code{south} \code{west}} 
 \item{regcode}{a numeric vector}

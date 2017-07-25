@@ -87,11 +87,12 @@
     <p>Data for Exercise 5.25</p>
     
 
+    <pre class="usage"><span class='no'>Study</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 50 observations on the following variable.</p><dl class='dl-horizontal'>
-<dt>hours</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 50 observations on one variable</p><dl class='dl-horizontal'>
+<dt>hours</dt><dd><p>number of hours a week freshmen reported studying for their courses</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -102,9 +103,7 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Study</span>)</div><div class='output co'>#&gt; 'data.frame':	50 obs. of  1 variable:
-#&gt;  $ hours: int  30 34 32 40 33 25 15 29 37 30 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Study</span>)
-<span class='fu'>stem</span>(<span class='no'>hours</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>stem</span>(<span class='no'>Study</span>$<span class='no'>hours</span>)</div><div class='output co'>#&gt; 
 #&gt;   The decimal point is 1 digit(s) to the right of the |
 #&gt; 
 #&gt;   0 | 5
@@ -114,12 +113,9 @@ Duxbury</p>
 #&gt;   4 | 00001123455
 #&gt;   5 | 0
 #&gt;   6 | 05
-#&gt; </div><div class='input'><span class='fu'><a href='EDA.html'>EDA</a></span>(<span class='no'>hours</span>)</div><div class='output co'>#&gt; [1] "hours"</div><div class='img'><img src='Study-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu 
-#&gt;   50.000    0.000    5.000   28.750   34.060   35.000   33.978   40.000 
-#&gt;     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness 
-#&gt;   65.000   10.655  113.527    1.507   11.250   60.000    1.373    0.013 
-#&gt; SW p-val 
-#&gt;    0.068 </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Study</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>hist</span>(<span class='no'>Study</span>$<span class='no'>hours</span>)</div><div class='img'><img src='Study-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>summary</span>(<span class='no'>Study</span>$<span class='no'>hours</span>)</div><div class='output co'>#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#&gt;    5.00   29.25   35.00   34.06   40.00   65.00 </div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

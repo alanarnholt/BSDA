@@ -4,7 +4,7 @@
 \name{Framingh}
 \alias{Framingh}
 \title{Cholesterol values of 62 subjects in the Framingham Heart Study}
-\format{A data frame/tibble with 62 observations on the following variable.
+\format{A data frame/tibble with 62 observations on one variable
 \describe{ 
 \item{cholest}{a numeric vector with cholesterol values} 
 }}

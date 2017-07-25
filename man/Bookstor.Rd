@@ -4,7 +4,7 @@
 \name{Bookstor}
 \alias{Bookstor}
 \title{Prices paid for used books at three different bookstores}
-\format{A data frame/tibble  with 72 observations on 2 variables.
+\format{A data frame/tibble  with 72 observations on two variables
 \describe{ 
 \item{dollars}{money obtained for selling textbooks} 
 \item{store}{a factor with levels \code{A}, \code{B}, and \code{C}} 

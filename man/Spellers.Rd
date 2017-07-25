@@ -4,7 +4,7 @@
 \name{Spellers}
 \alias{Spellers}
 \title{Standardized spelling test scores for two fourth grade classes}
-\format{A data frame/tibble with 10 observations on the following 2 variables.
+\format{A data frame/tibble with ten observations on two variables
 \describe{ 
 \item{teacher}{character variable with values \code{Fourth} and \code{Colleague}} 
 \item{score}{score on a standardized spelling test} 

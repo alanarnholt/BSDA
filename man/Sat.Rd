@@ -5,7 +5,7 @@
 \alias{Sat}
 \title{SAT scores, percent taking exam and state funding per student by state for
 1994, 1995 and 1999}
-\format{A data frame/tibble with 102 observations on the following 7 variables.
+\format{A data frame/tibble with 102 observations on seven variables
 \describe{ 
 \item{state}{U.S. state}
 \item{verbal}{verbal SAT score} 

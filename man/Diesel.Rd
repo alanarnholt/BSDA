@@ -4,7 +4,7 @@
 \name{Diesel}
 \alias{Diesel}
 \title{Diesel fuel prices in 1999-2000 in nine regions of the country}
-\format{A data frame/tibble  with 650 observations on the following three variables.
+\format{A data frame/tibble with 650 observations on three variables
 \describe{ 
 \item{date}{date when price was recorded}
 \item{pricepergallon}{price per gallon (in dollars)}

@@ -4,7 +4,7 @@
 \name{Tenness}
 \alias{Tenness}
 \title{Tennessee self concept scores for 20 gifted high school students}
-\format{A data frame/tibble with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{score}{Tennessee Self-Concept Scale score} 
 }}
@@ -21,10 +21,10 @@ xlab = "Tennessee Self-Concept Scale score")
 lines(density(Tenness$score))
 \dontrun{
 ggplot2::ggplot(data = Tenness, aes(x = score, y = ..density..)) + 
-  geom_histogram(binwidth = 2, fill = "purple", color = "black") +
-    geom_density(color = "red", fill = "pink", alpha = 0.3) + 
-      theme_bw()
-      }
+           geom_histogram(binwidth = 2, fill = "purple", color = "black") +
+           geom_density(color = "red", fill = "pink", alpha = 0.3) + 
+           theme_bw()
+}
 
 }
 \references{

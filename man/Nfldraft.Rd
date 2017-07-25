@@ -5,11 +5,11 @@
 \alias{Nfldraft}
 \title{Rating, time in 40-yard dash, and weight of top offensive linemen in the
 1994 NFL draft}
-\format{A data frame/tibble with 29 observations on the 3 following variables.
+\format{A data frame/tibble with 29 observations on three variables
 \describe{ 
 \item{rating}{rating of each player on a scale out of 10}
-\item{forty}{forty yard dash time in seconds}
-\item{weight}{weight of each player in pounds}
+\item{forty}{forty yard dash time (in seconds)}
+\item{weight}{weight of each player (in pounds)}
 }}
 \source{
 \emph{USA Today}, April 20, 1994

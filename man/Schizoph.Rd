@@ -5,7 +5,7 @@
 \alias{Schizoph}
 \title{Standardized exam scores for 13 patients to investigate the learning ability
 of schizophrenics after a specified dose of a tranquilizer}
-\format{A data frame/tibble with 13 observations on the following variable.
+\format{A data frame/tibble with 13 observations on one variable
 \describe{ 
 \item{score}{schizophrenics score on a standardized exam one hour after recieving a specified dose of a tranqilizer.} 
 }}

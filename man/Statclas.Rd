@@ -4,7 +4,7 @@
 \name{Statclas}
 \alias{Statclas}
 \title{Grades for two introductory statistics classes}
-\format{A data frame/tibble with 72 observations on the following 2 variables.
+\format{A data frame/tibble with 72 observations on two variables
 \describe{ 
 \item{class}{class meeting time (9am or 2pm)} 
 \item{score}{grade for an introductory statistics class} 

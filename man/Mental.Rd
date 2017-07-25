@@ -4,7 +4,7 @@
 \name{Mental}
 \alias{Mental}
 \title{Median mental ages of 16 girls}
-\format{A data frame/tibble with 16 observations on the following variable.
+\format{A data frame/tibble with 16 observations on one variable
 \describe{ 
 \item{age}{mental age of 16 girls} 
 }}

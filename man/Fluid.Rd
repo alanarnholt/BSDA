@@ -5,7 +5,7 @@
 \alias{Fluid}
 \title{Breakdown times of an insulating fluid under various levels of voltage
 stress}
-\format{A data frame/tibble with 76 observations on the following 2 variables.
+\format{A data frame/tibble with 76 observations on two variables
 \describe{ 
 \item{kilovolts}{a character variable showing kilowats} 
 \item{time}{breakdown time (in minutes)} 

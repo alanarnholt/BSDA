@@ -5,7 +5,7 @@
 \alias{Scales}
 \title{Readings obtained from a 100 pound weight placed on four brands of bathroom
 scales}
-\format{A data frame/tibble with 20 observations on the following 2 variables.
+\format{A data frame/tibble with 20 observations on two variables
 \describe{ 
 \item{brand}{variable indicating brand of bathroom scale (\code{A}, \code{B}, \code{C}, or \code{D})} 
 \item{reading}{recorded value (in pounds) of a 100 pound weight} 
@@ -22,11 +22,11 @@ boxplot(reading ~ brand, data = Scales, col = rainbow(4),
 ylab = "Weight (lbs)")
 \dontrun{
 ggplot2::ggplot(data = Scales, aes(x = brand, y = reading, fill = brand)) + 
-  geom_boxplot() + 
+    geom_boxplot() + 
     labs(y = "weight (lbs)") +
-     theme_bw() + 
-       theme(legend.position = "none") 
-       }
+    theme_bw() + 
+    theme(legend.position = "none") 
+}
 
 }
 \references{

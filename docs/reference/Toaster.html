@@ -84,23 +84,22 @@
     </div>
 
     
-    <p>Data for Exercise 9.35</p>
+    <p>Data for Exercise 9.36</p>
     
 
+    <pre class="usage"><span class='no'>Toaster</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 17 observations on the following 3 variables.</p><dl class='dl-horizontal'>
-<dt>toaster</dt><dd><p>a factor with levels <code>Black&amp;D
-SO2500G</code> <code>Black&amp;D T660G</code> <code>Black&amp;D TRO200</code> <code>Black&amp;D TRO400</code>
-<code>Black&amp;D TRO510</code> <code>DeLonghi XU14</code> <code>DeLonghi XU20L</code>
-<code>Hamilton Beach 336</code> <code>Munsey M88</code> <code>Panasonic NT855U</code>
-<code>Proctor-Silex 03008</code> <code>Proctor-Silex 03010</code> <code>Proctor-Silex
-03030</code> <code>Sears Kenmore 48216</code> <code>Toastmaster 319V</code> <code>Toastmaster
-336V</code> <code>Toastmaster 342</code></p></dd> 
-<dt>score</dt><dd><p>a numeric vector</p></dd>
-<dt>cost</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 17 observations on three variables</p><dl class='dl-horizontal'>
+<dt>toaster</dt><dd><p>name of toaster</p></dd> 
+<dt>score</dt><dd><p>Consumer Reports score</p></dd>
+<dt>cost</dt><dd><p>price of toaster (in dollars)</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><em>Consumer Reports</em> (October 1994)</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -110,13 +109,37 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>data</span>(<span class='no'>Toaster</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>cost</span> ~ <span class='no'>score</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Toaster</span>)</div><div class='img'><img src='Toaster-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>cost</span> ~ <span class='no'>score</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Toaster</span>)
+<span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
+#&gt; Call:
+#&gt; lm(formula = cost ~ score, data = Toaster)
+#&gt; 
+#&gt; Residuals:
+#&gt;     Min      1Q  Median      3Q     Max 
+#&gt; -33.058  -9.638  -4.441   8.605  60.989 
+#&gt; 
+#&gt; Coefficients:
+#&gt;             Estimate Std. Error t value Pr(&gt;|t|)  
+#&gt; (Intercept) -45.2373    51.5966  -0.877    0.394  
+#&gt; score         1.5233     0.7387   2.062    0.057 .
+#&gt; ---
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+#&gt; 
+#&gt; Residual standard error: 22.14 on 15 degrees of freedom
+#&gt; Multiple R-squared:  0.2209,	Adjusted R-squared:  0.1689 
+#&gt; F-statistic: 4.253 on 1 and 15 DF,  p-value: 0.05695
+#&gt; </div><div class='input'><span class='fu'>names</span>(<span class='fu'>summary</span>(<span class='no'>model</span>))</div><div class='output co'>#&gt;  [1] "call"          "terms"         "residuals"     "coefficients" 
+#&gt;  [5] "aliased"       "sigma"         "df"            "r.squared"    
+#&gt;  [9] "adj.r.squared" "fstatistic"    "cov.unscaled" </div><div class='input'><span class='fu'>summary</span>(<span class='no'>model</span>)$<span class='no'>r.squared</span></div><div class='output co'>#&gt; [1] 0.2208897</div><div class='input'><span class='fu'>plot</span>(<span class='no'>model</span>, <span class='kw'>which</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='img'><img src='Toaster-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

@@ -4,25 +4,26 @@
 \name{Epaminicompact}
 \alias{Epaminicompact}
 \title{Fuel efficiency ratings for compact vehicles in 2001}
-\format{A data frame/tibble with 22 observations on the following 10 variables.
+\format{A data frame/tibble with 22 observations on ten variables
 \describe{ 
-\item{class}{a character variable with values \code{MINICOMPACT CARS}} 
-\item{manufacturer}{a character variable with values \code{AUDI}
-\code{BMW} \code{JAGUAR} \code{MERCEDES-BENZ} \code{MITSUBISHI}
+\item{class}{a character variable with value \code{MINICOMPACT CARS}} 
+\item{manufacturer}{a character variable with values \code{AUDI},
+\code{BMW}, \code{JAGUAR}, \code{MERCEDES-BENZ}, \code{MITSUBISHI}, and
 \code{PORSCHE}} 
 \item{carline}{a character variable with values \code{325CI
-CONVERTIBLE} \code{330CI CONVERTIBLE} \code{911 CARRERA 2/4} \code{911
-TURBO} \code{CLK320 (CABRIOLET)} \code{CLK430 (CABRIOLET)} \code{ECLIPSE
-SPYDER} \code{JAGUAR XK8 CONVERTIBLE} \code{JAGUAR XKR CONVERTIBLE} \code{M3
-CONVERTIBLE} \code{TT COUPE} \code{TT COUPE QUATTRO}} 
-\item{displ}{a numeric vector} 
-\item{cyl}{a numeric vector} 
-\item{trans}{a factor with levels \code{Auto(L5)} \code{Auto(S4)} \code{Auto(S5)}
-\code{Manual(M5)} \code{Manual(M6)}} 
-\item{drv}{a factor with levels \code{4} \code{F} \code{R}} 
-\item{cty}{a numeric vector}
-\item{hwy}{a numeric vector} 
-\item{cmb}{a numeric vector} 
+CONVERTIBLE}, \code{330CI CONVERTIBLE}, \code{911 CARRERA 2/4}, \code{911
+TURBO}, \code{CLK320 (CABRIOLET)}, \code{CLK430 (CABRIOLET)}, \code{ECLIPSE
+SPYDER}, \code{JAGUAR XK8 CONVERTIBLE}, \code{JAGUAR XKR CONVERTIBLE}, \code{M3
+CONVERTIBLE}, \code{TT COUPE}, and \code{TT COUPE QUATTRO}} 
+\item{displ}{engine displacement (in liters)} 
+\item{cyl}{number of cylinders} 
+\item{trans}{a factor with levels \code{Auto(L5)}, \code{Auto(S4)}, \code{Auto(S5)},
+\code{Manual(M5)}, and \code{Manual(M6)}} 
+\item{drv}{a factor with levels \code{4}(four wheel drive), \code{F}(front wheel drive), 
+and \code{R}(rear wheel drive)} 
+\item{cty}{city mpg}
+\item{hwy}{highway mpg} 
+\item{cmb}{combined city and highway mpg} 
 }}
 \source{
 EPA data

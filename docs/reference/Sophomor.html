@@ -93,11 +93,11 @@ sophomores</h1>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame/tibble with 20 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>student</dt><dd><p>student's identification number</p></dd> 
-<dt>gpa</dt><dd><p>student's grade point average</p></dd> 
-<dt>sat</dt><dd><p>student's SAT math score</p></dd> 
-<dt>exam</dt><dd><p>student's final exam grade in college algebra</p></dd> 
+    <p>A data frame/tibble with 20 observations on four variables</p><dl class='dl-horizontal'>
+<dt>student</dt><dd><p>identification number</p></dd> 
+<dt>gpa</dt><dd><p>grade point average</p></dd> 
+<dt>sat</dt><dd><p>SAT math score</p></dd> 
+<dt>exam</dt><dd><p>final exam grade in college algebra</p></dd> 
 </dl>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
@@ -114,10 +114,9 @@ Duxbury</p>
 #&gt; sat     0.00558619 0.90061435 1.00000000 0.82544464
 #&gt; exam    0.06689427 0.86065205 0.82544464 1.00000000</div><div class='input'><span class='fu'>plot</span>(<span class='no'>exam</span> ~ <span class='no'>gpa</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Sophomor</span>)</div><div class='img'><img src='Sophomor-1.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
 <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Sophomor</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>gpa</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>exam</span>)) +
-  <span class='fu'>geom_point</span>()
-  <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Sophomor</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>sat</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>exam</span>)) +
-    <span class='fu'>geom_point</span>()
-
+   <span class='fu'>geom_point</span>()
+   <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Sophomor</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>sat</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>exam</span>)) +
+   <span class='fu'>geom_point</span>()
 <span class='co'># }</span><div class='input'>
 </div></pre>
   </div>

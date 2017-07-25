@@ -4,7 +4,7 @@
 \name{Faithful}
 \alias{Faithful}
 \title{Waiting times between successive eruptions of the Old Faithful geyser}
-\format{A data frame/tibble with 299 observations on the following 2 variables.
+\format{A data frame/tibble with 299 observations on two variables
 \describe{ 
 \item{time}{a numeric vector} 
 \item{eruption}{a factor with levels \code{1} and \code{2}} 

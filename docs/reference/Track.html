@@ -87,30 +87,24 @@
     <p>Data for Exercises 2.97, 5.115, and 9.62</p>
     
 
+    <pre class="usage"><span class='no'>Track</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 55 observations on the following 8 variables.</p><dl class='dl-horizontal'>
-<dt>country</dt><dd><p>a factor with levels <code>argentina</code>
-<code>australia</code> <code>austria</code> <code>belgium</code> <code>bermuda</code> <code>brazil</code>
-<code>burma</code> <code>canada</code> <code>chile</code> <code>china</code> <code>colombia</code>
-<code>cookis</code> <code>costa</code> <code>czech</code> <code>denmark</code> <code>domrep</code>
-<code>dprkorea</code> <code>finland</code> <code>france</code> <code>frg</code> <code>gbni</code>
-<code>gdr</code> <code>greece</code> <code>guatemala</code> <code>hungary</code> <code>india</code>
-<code>indonesia</code> <code>ireland</code> <code>israel</code> <code>italy</code> <code>japan</code>
-<code>kenya</code> <code>korea</code> <code>luxembourg</code> <code>malaysia</code> <code>mauritius</code>
-<code>mexico</code> <code>netherlands</code> <code>norway</code> <code>nz</code> <code>philippines</code>
-<code>png</code> <code>poland</code> <code>portugal</code> <code>rumania</code> <code>singapore</code>
-<code>spain</code> <code>sweden</code> <code>switzerland</code> <code>taipei</code> <code>thailand</code>
-<code>turkey</code> <code>usa</code> <code>ussr</code> <code>wsamoa</code></p></dd> 
-<dt>X100m</dt><dd><p>a numeric vector</p></dd> 
-<dt>X200m</dt><dd><p>a numeric vector</p></dd>
-<dt>X400m</dt><dd><p>a numeric vector</p></dd> 
-<dt>X800m</dt><dd><p>a numeric vector</p></dd> 
-<dt>X1500m</dt><dd><p>a numeric vector</p></dd> 
-<dt>X3000m</dt><dd><p>a numeric vector</p></dd> 
-<dt>marathon</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame with 55 observations on eight variables</p><dl class='dl-horizontal'>
+<dt>country</dt><dd><p>athlete's country</p></dd> 
+<dt>100m</dt><dd><p>time in seconds for 100 m</p></dd> 
+<dt>200m</dt><dd><p>time in seconds for 200 m</p></dd>
+<dt>400m</dt><dd><p>time in seconds for 400 m</p></dd> 
+<dt>800m</dt><dd><p>time in minutes for 800 m</p></dd> 
+<dt>1500m</dt><dd><p>time in minutes for 1500 m</p></dd> 
+<dt>3000m</dt><dd><p>time in minutes for 3000 m</p></dd> 
+<dt>marathon</dt><dd><p>time in minutes for marathon</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Dawkins, B. (1989), "Multivariate Analysis of National Track Records," <em>The American Statistician, 43</em>(2), 110-115</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -120,29 +114,23 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Track</span>)</div><div class='output co'>#&gt; 'data.frame':	55 obs. of  8 variables:
-#&gt;  $ country : Factor w/ 55 levels "argentina","australia",..: 1 2 3 4 5 6 7 8 9 10 ...
-#&gt;  $ X100m   : num  11.6 11.2 11.4 11.4 11.5 ...
-#&gt;  $ X200m   : num  22.9 22.4 23.1 23 23.1 ...
-#&gt;  $ X400m   : num  54.5 51.1 50.6 52 53.3 ...
-#&gt;  $ X800m   : num  2.15 1.98 1.99 2 2.16 2.1 2.18 2 2.05 2.08 ...
-#&gt;  $ X1500m  : num  4.43 4.13 4.22 4.14 4.58 4.49 4.45 4.06 4.23 4.33 ...
-#&gt;  $ X3000m  : num  9.79 9.08 9.34 8.88 9.81 9.77 9.51 9.81 9.37 9.31 ...
-#&gt;  $ marathon: num  179 152 159 158 170 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Track</span>)
-<span class='fu'>cor</span>(<span class='no'>Track</span>[,<span class='fl'>2</span>:<span class='fl'>8</span>])</div><div class='output co'>#&gt;              X100m     X200m     X400m     X800m    X1500m    X3000m  marathon
-#&gt; X100m    1.0000000 0.9527911 0.8346918 0.7276888 0.7283709 0.7138310 0.6863358
-#&gt; X200m    0.9527911 1.0000000 0.8569621 0.7240597 0.6983643 0.6844756 0.6855745
-#&gt; X400m    0.8346918 0.8569621 1.0000000 0.8984052 0.7878417 0.7525889 0.7054241
-#&gt; X800m    0.7276888 0.7240597 0.8984052 1.0000000 0.9016138 0.8511240 0.7792922
-#&gt; X1500m   0.7283709 0.6983643 0.7878417 0.9016138 1.0000000 0.9550566 0.8779334
-#&gt; X3000m   0.7138310 0.6844756 0.7525889 0.8511240 0.9550566 1.0000000 0.8858136
-#&gt; marathon 0.6863358 0.6855745 0.7054241 0.7792922 0.8779334 0.8858136 1.0000000</div><div class='input'><span class='fu'>pairs</span>(<span class='no'>Track</span>[,<span class='fl'>2</span>:<span class='fl'>8</span>])</div><div class='img'><img src='Track-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>detach</span>(<span class='no'>Track</span>)</div></pre>
+<span class='fu'>plot</span>(<span class='no'>`200m`</span> ~ <span class='no'>`100m`</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Track</span>)</div><div class='img'><img src='Track-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>plot</span>(<span class='no'>`400m`</span> ~ <span class='no'>`100m`</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Track</span>)</div><div class='img'><img src='Track-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>plot</span>(<span class='no'>`400m`</span> ~ <span class='no'>`200m`</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Track</span>)</div><div class='img'><img src='Track-3.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>cor</span>(<span class='no'>Track</span>[, <span class='fl'>2</span>:<span class='fl'>8</span>])</div><div class='output co'>#&gt;               100m      200m      400m      800m     1500m     3000m  marathon
+#&gt; 100m     1.0000000 0.9527911 0.8346918 0.7276888 0.7283709 0.7138310 0.6863358
+#&gt; 200m     0.9527911 1.0000000 0.8569621 0.7240597 0.6983643 0.6844756 0.6855745
+#&gt; 400m     0.8346918 0.8569621 1.0000000 0.8984052 0.7878417 0.7525889 0.7054241
+#&gt; 800m     0.7276888 0.7240597 0.8984052 1.0000000 0.9016138 0.8511240 0.7792922
+#&gt; 1500m    0.7283709 0.6983643 0.7878417 0.9016138 1.0000000 0.9550566 0.8779334
+#&gt; 3000m    0.7138310 0.6844756 0.7525889 0.8511240 0.9550566 1.0000000 0.8858136
+#&gt; marathon 0.6863358 0.6855745 0.7054241 0.7792922 0.8779334 0.8858136 1.0000000</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

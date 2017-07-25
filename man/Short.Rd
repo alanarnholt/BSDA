@@ -4,7 +4,7 @@
 \name{Short}
 \alias{Short}
 \title{James Short's measurements of the parallax of the sun}
-\format{A data frame/tibble with 158 observations on the following 10 variables.
+\format{A data frame/tibble with 158 observations on two variables
 \describe{
 \item{sample}{sample number} 
 \item{parallax}{parallax measurements (seconds of a degree)} 

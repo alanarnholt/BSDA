@@ -4,7 +4,7 @@
 \name{Snow}
 \alias{Snow}
 \title{Concentration of microparticles in snowfields of Greenland and Antarctica}
-\format{A data frame/tibble with 34 observations on the following 2 variables.
+\format{A data frame/tibble with 34 observations on two variables
 \describe{ 
 \item{concent}{concentration of microparticles from melted snow (in parts per billion)}
 \item{site}{location of snow sample (\code{Antarctica} or \code{Greenland})} 

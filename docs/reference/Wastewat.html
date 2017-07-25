@@ -89,15 +89,21 @@ earthquakes near Denver</h1>
     <p>Data for Exercise 9.18</p>
     
 
+    <pre class="usage"><span class='no'>Wastewat</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 44 observations on the following 4 variables.</p><dl class='dl-horizontal'>
-<dt>gallons</dt><dd><p>a numeric vector</p></dd> 
-<dt>number</dt><dd><p>a numeric vector</p></dd> 
-<dt>ln.no.</dt><dd><p>a numeric vector</p></dd>
-<dt>index</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 44 observations on two variables</p><dl class='dl-horizontal'>
+<dt>gallons</dt><dd><p>injected water (in million gallons)</p></dd> 
+<dt>number</dt><dd><p>number of earthqueakes detected in Denver</p></dd>
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Davis, J. C. (1986), <em>Statistics and Data Analysis in Geology</em>, 2 ed., John Wiley and Sons,
+New York, p. 228, and Bardwell, G. E. (1970), Some Statistical Features of the Relationship between
+Rocky Mountain Arsenal Waste Disposal and Frequency of Earthquakes, <em>Geological Society of America, Engineering
+Geology Case Histories, 8</em>, 33-337</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -107,15 +113,10 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Wastewat</span>)</div><div class='output co'>#&gt; 'data.frame':	44 obs. of  4 variables:
-#&gt;  $ gallons: num  4.2 7.2 8.4 8 5.2 6 5 5.6 4 3.6 ...
-#&gt;  $ number : int  NA 2 12 35 23 29 24 8 6 20 ...
-#&gt;  $ ln.no. : num  NA 0.693 2.485 3.555 3.135 ...
-#&gt;  $ index  : int  1 2 3 4 5 6 7 8 9 10 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Wastewat</span>)
-<span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>number</span>~<span class='no'>gallons</span>)
+<span class='fu'>plot</span>(<span class='no'>number</span> ~ <span class='no'>gallons</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Wastewat</span>)</div><div class='img'><img src='Wastewat-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>number</span> ~ <span class='no'>gallons</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Wastewat</span>)
 <span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = number ~ gallons)
+#&gt; lm(formula = number ~ gallons, data = Wastewat)
 #&gt; 
 #&gt; Residuals:
 #&gt;     Min      1Q  Median      3Q     Max 
@@ -132,14 +133,23 @@ Duxbury</p>
 #&gt;   (1 observation deleted due to missingness)
 #&gt; Multiple R-squared:  0.363,	Adjusted R-squared:  0.3474 
 #&gt; F-statistic: 23.36 on 1 and 41 DF,  p-value: 1.915e-05
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Wastewat</span>)
-<span class='fu'>remove</span>(<span class='no'>model</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>anova</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
+#&gt; 
+#&gt; Response: number
+#&gt;           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+#&gt; gallons    1 4800.2  4800.2   23.36 1.915e-05 ***
+#&gt; Residuals 41 8424.9   205.5                      
+#&gt; ---
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'><span class='fu'>plot</span>(<span class='no'>model</span>, <span class='kw'>which</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='img'><img src='Wastewat-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

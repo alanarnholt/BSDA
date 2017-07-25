@@ -4,7 +4,7 @@
 \name{Depend}
 \alias{Depend}
 \title{Number of dependent children for 50 families}
-\format{A data frame/tibble  with 50 observations on one variable.
+\format{A data frame/tibble with 50 observations on one variable
 \describe{ 
 \item{number}{number of dependent children in a family} 
 }}

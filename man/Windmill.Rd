@@ -4,7 +4,7 @@
 \name{Windmill}
 \alias{Windmill}
 \title{Direct current produced by different wind velocities}
-\format{A data frame/tibble with 25 observations on the following 2 variables.
+\format{A data frame/tibble with 25 observations on two variables
 \describe{ 
 \item{velocity}{wind velocity (miles per hour)} 
 \item{output}{power generated (DC volts)} 

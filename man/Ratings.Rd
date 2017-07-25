@@ -4,7 +4,7 @@
 \name{Ratings}
 \alias{Ratings}
 \title{Grade point averages versus teacher's ratings}
-\format{A data frame/tibble with 250 observations on the following 2 variables.
+\format{A data frame/tibble with 250 observations on two variables
 \describe{
 \item{rating}{character variable with students' ratings of instructor (A-F)}
 \item{gpa}{students' grade point average}
@@ -21,11 +21,11 @@ boxplot(gpa ~ rating, data = Ratings, xlab = "Student rating of instructor",
 ylab = "Student GPA")
 \dontrun{
 ggplot2::ggplot(data = Ratings, aes(x = rating, y = gpa, fill = rating)) +
-  geom_boxplot() + 
+    geom_boxplot() + 
     theme_bw() + 
-      theme(legend.position = "none") + 
-        labs(x = "Student rating of instructor", y = "Student GPA")
-        }
+    theme(legend.position = "none") + 
+    labs(x = "Student rating of instructor", y = "Student GPA")
+}
 
 }
 \references{

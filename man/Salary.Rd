@@ -4,9 +4,9 @@
 \name{Salary}
 \alias{Salary}
 \title{Starting salaries for 25 new PhD psychologist}
-\format{A data frame/tibble with 25 observations on the following variable.
+\format{A data frame/tibble with 25 observations on one variable
 \describe{ 
-\item{salary}{starting salary for Ph.D. psycholgists} 
+\item{salary}{starting salary for Ph.D. psycholgists (in dollars)} 
 }}
 \usage{
 Salary

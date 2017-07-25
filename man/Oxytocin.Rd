@@ -4,11 +4,11 @@
 \name{Oxytocin}
 \alias{Oxytocin}
 \title{Arterial blood pressure of 11 subjects before and after receiving oxytocin}
-\format{A data frame/tibble with 11 observations on the following 3 variables.
+\format{A data frame/tibble with 11 observations on three variables
 \describe{ 
 \item{subject}{a numeric vector indicating each subject} 
-\item{before}{mean arterial blood pressure of 11 subjects before receiving oxytocin} 
-\item{after}{mean arterial blood pressure of 11 subjects after receiving oxytocin} 
+\item{before}{mean arterial blood pressure of subject before receiving oxytocin} 
+\item{after}{mean arterial blood pressure of subject after receiving oxytocin} 
 }}
 \usage{
 Oxytocin

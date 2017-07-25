@@ -87,18 +87,19 @@
     <p>Data for Exercise 9.34</p>
     
 
+    <pre class="usage"><span class='no'>Windmill</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 25 observations on the following 7 variables.</p><dl class='dl-horizontal'>
-<dt>velocity</dt><dd><p>a numeric vector</p></dd> 
-<dt>output</dt><dd><p>a numeric vector</p></dd> 
-<dt>SRES1</dt><dd><p>a numeric vector</p></dd>
-<dt>FITS1</dt><dd><p>a numeric vector</p></dd> 
-<dt>X1.velocity</dt><dd><p>a numeric vector</p></dd> 
-<dt>SRES2</dt><dd><p>a numeric vector</p></dd> 
-<dt>FITS2</dt><dd><p>a numeric vector</p></dd> 
+    <p>A data frame/tibble with 25 observations on two variables</p><dl class='dl-horizontal'>
+<dt>velocity</dt><dd><p>wind velocity (miles per hour)</p></dd> 
+<dt>output</dt><dd><p>power generated (DC volts)</p></dd> 
 </dl>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Joglekar, et al. (1989), Lack of Fit Testing when Replicates Are Not Available,
+<em>The American Statistician, 43</em>,(3), 135-143</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
@@ -108,17 +109,9 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>str</span>(<span class='no'>Windmill</span>)</div><div class='output co'>#&gt; 'data.frame':	25 obs. of  7 variables:
-#&gt;  $ velocity   : num  2.45 2.7 2.9 3.05 3.4 3.6 3.95 4.1 4.6 5 ...
-#&gt;  $ output     : num  0.123 0.5 0.653 0.558 1.057 ...
-#&gt;  $ SRES1      : num  -2.716 -1.271 -0.795 -1.378 0.471 ...
-#&gt;  $ FITS1      : num  0.722 0.782 0.83 0.866 0.951 ...
-#&gt;  $ X1.velocity: num  0.408 0.37 0.345 0.328 0.294 ...
-#&gt;  $ SRES2      : num  -0.313 1.052 0.75 -1.668 1.307 ...
-#&gt;  $ FITS2      : num  0.148 0.411 0.588 0.705 0.939 ...</div><div class='input'><span class='fu'>attach</span>(<span class='no'>Windmill</span>)
-<span class='fu'>summary</span>(<span class='fu'>lm</span>(<span class='no'>output</span>~<span class='no'>velocity</span>))</div><div class='output co'>#&gt; 
+<span class='fu'>summary</span>(<span class='fu'>lm</span>(<span class='no'>output</span> ~ <span class='no'>velocity</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Windmill</span>))</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm(formula = output ~ velocity)
+#&gt; lm(formula = output ~ velocity, data = Windmill)
 #&gt; 
 #&gt; Residuals:
 #&gt;      Min       1Q   Median       3Q      Max 
@@ -134,13 +127,23 @@ Duxbury</p>
 #&gt; Residual standard error: 0.2361 on 23 degrees of freedom
 #&gt; Multiple R-squared:  0.8745,	Adjusted R-squared:  0.869 
 #&gt; F-statistic: 160.3 on 1 and 23 DF,  p-value: 7.546e-12
-#&gt; </div><div class='input'><span class='fu'>detach</span>(<span class='no'>Windmill</span>)</div></pre>
+#&gt; </div><div class='input'><span class='fu'>anova</span>(<span class='fu'>lm</span>(<span class='no'>output</span> ~ <span class='no'>velocity</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Windmill</span>))</div><div class='output co'>#&gt; Analysis of Variance Table
+#&gt; 
+#&gt; Response: output
+#&gt;           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+#&gt; velocity   1 8.9296  8.9296  160.26 7.546e-12 ***
+#&gt; Residuals 23 1.2816  0.0557                      
+#&gt; ---
+#&gt; Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
+
+      <li><a href="#source">Source</a></li>
 
       <li><a href="#references">References</a></li>
       

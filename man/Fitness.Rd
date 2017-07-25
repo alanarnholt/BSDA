@@ -4,7 +4,7 @@
 \name{Fitness}
 \alias{Fitness}
 \title{Number of sit-ups before and after a physical fitness course}
-\format{A data frame/tibble with 18 observations on the following 3 variables.
+\format{A data frame/tibble with 18 observations on the three variables
 \describe{ 
 \item{subject}{a character variable indicating subject number}
 \item{test}{a character variable with values \code{After} and \code{Before}} 

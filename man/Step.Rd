@@ -4,7 +4,7 @@
 \name{Step}
 \alias{Step}
 \title{STEP science test scores for a class of ability-grouped students}
-\format{A data frame/tibble with 12 observations on the following variable.
+\format{A data frame/tibble with 12 observations on one variable
 \describe{ 
 \item{score}{State test of educational progress (STEP) science test score} 
 }}

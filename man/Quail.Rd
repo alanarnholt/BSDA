@@ -4,7 +4,7 @@
 \name{Quail}
 \alias{Quail}
 \title{Plasma LDL levels in two groups of quail}
-\format{A data frame/tibble with 40 observations on the following 2 variables.
+\format{A data frame/tibble with 40 observations on two variables
 \describe{ 
 \item{group}{a character variable with values \code{placebo} and \code{treatment}}
 \item{level}{low-density lipoprotein (LDL) cholestrol level} 

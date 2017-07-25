@@ -4,7 +4,7 @@
 \name{Absent}
 \alias{Absent}
 \title{Number of absent days for 20 employees}
-\format{A data frame/tibble with 20 observations on one variable.
+\format{A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{days}{a numeric vector} 
 }}

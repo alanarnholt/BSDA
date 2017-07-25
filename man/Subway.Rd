@@ -4,7 +4,7 @@
 \name{Subway}
 \alias{Subway}
 \title{Time it takes a subway to travel from the airport to downtown}
-\format{A data frame/tibble with 30 observations on the following variable.
+\format{A data frame/tibble with 30 observations on one variable
 \describe{ 
 \item{time}{time (in minutes) it takes a subway to travel from the airport to downtown} 
 }}

@@ -4,7 +4,7 @@
 \name{Abilene}
 \alias{Abilene}
 \title{Crimes reported in Abilene, Texas}
-\format{A data frame/tibble with 16 observations on three variables.
+\format{A data frame/tibble with 16 observations on three variables
 \describe{ 
 \item{crimetype}{a character variable with values \code{Aggravated
 assault}, \code{Arson}, \code{Burglary}, \code{Forcible rape}, \code{Larceny
@@ -35,9 +35,9 @@ par(mfrow = c(1, 1))
 \dontrun{
 library(ggplot2)
 ggplot(data = Abilene, aes(x = crimetype, y = number, fill = year)) +
-geom_bar(stat = "identity", position = "dodge") +
-theme_bw() +
-theme(axis.text.x = element_text(angle = 30, hjust = 1))
+  geom_bar(stat = "identity", position = "dodge") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
 }
 
 }

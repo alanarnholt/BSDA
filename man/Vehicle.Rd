@@ -4,7 +4,7 @@
 \name{Vehicle}
 \alias{Vehicle}
 \title{Fatality ratings for foreign and domestic vehicles}
-\format{A data frame/tibble with 151 observations on the following 2 variables.
+\format{A data frame/tibble with 151 observations on two variables
 \describe{ 
 \item{make}{a factor with levels \code{domestic} and \code{foreign}} 
 \item{rating}{a factor with levels \code{Much better than average}, \code{Above average}, \code{Average}, \code{Below average}, and \code{Much worse than average}} 

@@ -4,7 +4,7 @@
 \name{Senior}
 \alias{Senior}
 \title{Reaction times of 30 senior citizens applying for drivers license renewals}
-\format{A data frame/tibble with 31 observations on the following variable.
+\format{A data frame/tibble with 31 observations on one variable
 \describe{ 
 \item{reaction}{reaction time for senior citizens applying for a driver's license renewal} 
 }}

@@ -4,9 +4,9 @@
 \name{Newsstand}
 \alias{Newsstand}
 \title{Daily profits for 20 newsstands}
-\format{A data frame/tibble with 20 observations on the following variable.
+\format{A data frame/tibble with 20 observations on one variable
 \describe{ 
-\item{profit}{profit of each newsstand} 
+\item{profit}{profit of each newsstand (in dollars)} 
 }}
 \usage{
 Newsstand

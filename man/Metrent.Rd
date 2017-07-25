@@ -4,7 +4,7 @@
 \name{Metrent}
 \alias{Metrent}
 \title{Monthly rental costs in metro areas with 1 million or more persons}
-\format{A data frame/tibble with 46 observations on the following variable.
+\format{A data frame/tibble with 46 observations on one variable
 \describe{ 
 \item{rent}{monthly rent in dollars} 
 }}

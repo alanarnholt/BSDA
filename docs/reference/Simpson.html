@@ -93,7 +93,7 @@ illustration of Simpson's paradox</h1>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame/tibble with 100 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame/tibble with 100 observations on three variables</p><dl class='dl-horizontal'>
 <dt>gpa</dt><dd><p>grade point average</p></dd> 
 <dt>sport</dt><dd><p>sport played (basketball, soccer, or track)</p></dd> 
 <dt>gender</dt><dd><p>athlete sex (male, female)</p></dd>
@@ -108,13 +108,11 @@ Duxbury</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>boxplot</span>(<span class='no'>gpa</span> ~ <span class='no'>gender</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>)</div><div class='img'><img src='Simpson-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>gpa</span> ~ <span class='no'>sport</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>)</div><div class='img'><img src='Simpson-2.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
-<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>gender</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>gpa</span>,
-                                    <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>gender</span>)) +
-                                      <span class='fu'>geom_boxplot</span>() +
-                                        <span class='fu'>facet_grid</span>(<span class='no'>.</span>~<span class='no'>sport</span>) + <span class='fu'>theme_bw</span>()
-
-<span class='co'># }</span><div class='input'>
-</div></pre>
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>gender</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>gpa</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>gender</span>)) +
+           <span class='fu'>geom_boxplot</span>() +
+           <span class='fu'>facet_grid</span>(<span class='no'>.</span>~<span class='no'>sport</span>) +
+           <span class='fu'>theme_bw</span>()
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

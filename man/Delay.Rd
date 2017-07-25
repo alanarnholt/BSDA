@@ -4,7 +4,7 @@
 \name{Delay}
 \alias{Delay}
 \title{Delay times on 20 flights from four major air carriers}
-\format{A data frame/tibble  with 80 observations on the following two variables.
+\format{A data frame/tibble with 80 observations on two variables
 \describe{ 
 \item{delay}{the delay time (in minutes) for 80 randomly selected flights}
 \item{carrier}{a factor with levels \code{A}, \code{B}, \code{C}, and \code{D}} 

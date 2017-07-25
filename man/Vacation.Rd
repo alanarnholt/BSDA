@@ -5,7 +5,7 @@
 \alias{Vacation}
 \title{Number of days of paid holidays and vacation leave for sample of 35 textile
 workers}
-\format{A data frame/tibble with 35 observations on the following variable.
+\format{A data frame/tibble with 35 observations on one variable
 \describe{ 
 \item{number}{number of days of paid holidays and vacation leave taken} 
 }}

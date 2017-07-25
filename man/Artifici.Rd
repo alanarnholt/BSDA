@@ -4,7 +4,7 @@
 \name{Artifici}
 \alias{Artifici}
 \title{Durations of operation for 15 artificial heart transplants}
-\format{A data frame/tibble  with 15 observations on the following variable.
+\format{A data frame/tibble with 15 observations on one variable
 \describe{ 
 \item{duration}{duration (in hours) for transplant} 
 }}

@@ -4,7 +4,7 @@
 \name{Pearson}
 \alias{Pearson}
 \title{Karl Pearson's data on heights of brothers and sisters}
-\format{A data frame/tibble with 11 observations on the following 3 variables.
+\format{A data frame/tibble with 11 observations on three variables
 \describe{ 
 \item{family}{number indicating family of brother and sister pair}
 \item{brother}{height of brother (in inches)} 
