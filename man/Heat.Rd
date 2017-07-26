@@ -30,6 +30,7 @@ T1
 barplot(t(T1), beside = TRUE, legend = TRUE)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Heat, aes(x = fuel, fill = location)) + 
            geom_bar(position = "dodge") + 
            labs(y = "percent") + 

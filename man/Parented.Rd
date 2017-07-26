@@ -24,6 +24,7 @@ T1
 barplot(t(T1), beside = TRUE, legend = TRUE, col = c("blue", "red"))
 rm(T1)
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Parented, aes(x = education, fill = parent)) + 
     geom_bar(position = "dodge") + 
     theme_bw() +

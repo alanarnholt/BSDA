@@ -26,6 +26,7 @@ hist(Faithful$time, xlab = "wait time", main = "", freq = FALSE)
 lines(density(Faithful$time))
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Faithful, aes(x = time, y = ..density..)) + 
            geom_histogram(binwidth = 5, fill = "pink", col = "black") + 
            geom_density() + 

@@ -26,6 +26,7 @@ cbind(Gpa, yhat, e)       # Table 2.1
 cor(Gpa$hsgpa, Gpa$collgpa)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
            geom_point() + 
            geom_smooth(method = "lm") + 

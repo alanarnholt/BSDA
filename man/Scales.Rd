@@ -21,6 +21,7 @@ Data for Exercise 1.89
 boxplot(reading ~ brand, data = Scales, col = rainbow(4), 
 ylab = "Weight (lbs)")
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Scales, aes(x = brand, y = reading, fill = brand)) + 
            geom_boxplot() + 
            labs(y = "weight (lbs)") +

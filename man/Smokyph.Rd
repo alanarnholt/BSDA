@@ -31,6 +31,7 @@ stripchart(waterph ~ code, data = Smokyph, method = "stack",
            t.test(waterph ~ code, data = Smokyph, alternative = "less")
            t.test(waterph ~ code, data = Smokyph, conf.level = 0.90)
  \dontrun{
+ library(ggplot2)
  ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
             geom_dotplot() + 
             facet_grid(code ~ .) + 

@@ -22,6 +22,7 @@ boxplot(salary ~ university, data = Board, col = c("red", "blue", "green"),
 tapply(Board$salary, Board$university, summary)
 anova(lm(salary ~ university, data = Board))
 \dontrun{
+library(dplyr)
 dplyr::group_by(Board, university) \%>\%
          summarize(Average = mean(salary))
 }

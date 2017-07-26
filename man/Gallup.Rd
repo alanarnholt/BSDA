@@ -32,6 +32,8 @@ barplot(t(T1[c(2, 3), ]))
 barplot(t(T1[c(2, 3), ]), beside = TRUE)
 
 \dontrun{
+library(dplyr)
+library(ggplot2)
 dplyr::filter(Gallup, demographics == "Gender: Male" | demographics == "Gender: Female") \%>\%
 ggplot2::ggplot(aes(x = demographics, fill = opinion)) + 
            geom_bar() + 

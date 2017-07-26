@@ -33,6 +33,7 @@ Data for Exercise 5.82
 stripchart(price ~ year, data = Housing, method = "stack", 
            pch = 1, col = c("red", "blue"))
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Housing, aes(x = price, fill = year)) + 
            geom_dotplot() + 
            facet_grid(year ~ .) + 

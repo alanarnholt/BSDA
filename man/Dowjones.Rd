@@ -20,6 +20,7 @@ Data for Exercise 1.35
 
 plot(close ~ year, data = Dowjones, type = "l", main = "Exercise 1.35")
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Dowjones, aes(x = year, y = close)) +
            geom_point(size = 0.5) + 
            geom_line(color = "red") + 

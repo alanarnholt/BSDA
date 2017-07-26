@@ -33,6 +33,7 @@ main = "1999 Crime Stats", col = "blue")
 par(mfrow = c(1, 1))
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Abilene, aes(x = crimetype, y = number, fill = year)) +
            geom_bar(stat = "identity", position = "dodge") +
            theme_bw() +

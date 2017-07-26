@@ -26,6 +26,7 @@ t.test(Music$method1, Music$method2, paired = TRUE)
 # Or
 t.test(Music$differ)
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Music, aes(x = differ)) + 
            geom_dotplot() + 
            theme_bw()

@@ -30,6 +30,7 @@ Data for Exercise 2.88
 cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
 cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Dogs, aes(x = reorder(breed, ranking), y = ranking)) + 
            geom_bar(stat = "identity") + 
            facet_grid(year ~. ) + 

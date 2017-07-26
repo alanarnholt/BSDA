@@ -20,6 +20,7 @@ hist(Tenness$score, freq= FALSE, main = "", col = "green",
 xlab = "Tennessee Self-Concept Scale score")
 lines(density(Tenness$score))
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Tenness, aes(x = score, y = ..density..)) + 
            geom_histogram(binwidth = 2, fill = "purple", color = "black") +
            geom_density(color = "red", fill = "pink", alpha = 0.3) + 

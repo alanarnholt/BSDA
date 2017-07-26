@@ -20,6 +20,7 @@ Data for Exercises 1.70 and 1.87
 boxplot(score ~ class, data = Statisti)
 tapply(Statisti$score, Statisti$class, summary, na.rm = TRUE)
 \dontrun{
+library(dplyr)
 dplyr::group_by(Statisti, class) \%>\%
  summarize(Mean = mean(score, na.rm = TRUE), 
            Median = median(score, na.rm = TRUE), 

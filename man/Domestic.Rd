@@ -23,6 +23,7 @@ Data for Exercise 1.20
 
 barplot(Domestic$rate, names.arg = Domestic$age)
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Domestic, aes(x = age, y = rate)) + 
            geom_bar(stat = "identity", fill = "purple", color = "black") + 
            labs(x = "", y = "Domestic violence per 1000 women") + 

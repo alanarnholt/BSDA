@@ -20,6 +20,7 @@ Data for Example 2.6
 boxplot(gpa ~ rating, data = Ratings, xlab = "Student rating of instructor", 
         ylab = "Student GPA")
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Ratings, aes(x = rating, y = gpa, fill = rating)) +
            geom_boxplot() + 
            theme_bw() + 

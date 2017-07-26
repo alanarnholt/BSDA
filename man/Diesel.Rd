@@ -33,6 +33,7 @@ boxplot(pricepergallon ~ location,
        col = "pink", main = "Exercise 2.8")
 par(las = 1) 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Diesel, aes(x = date, y = pricepergallon, 
            color = location)) + 
            geom_point() + 

@@ -32,7 +32,8 @@ hist(Teacher$salary[Teacher$year == "1993-94"],
      main = "Teacher salary 1993-94", xlab = "salary",
      xlim = range(Teacher$salary, na.rm = TRUE))
 par(mfrow = c(1, 1))
-\dontrun{                       
+\dontrun{   
+library(ggplot2)                    
     ggplot2::ggplot(data = Teacher, aes(x = salary)) + 
                geom_histogram(fill = "purple", color = "black") +  
                facet_grid(year ~ .) + 

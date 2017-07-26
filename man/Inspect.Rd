@@ -29,6 +29,7 @@ chisq.test(T1)
 rm(T1)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Inspect, aes(x = passed, fill = station)) + 
            geom_bar(position = "dodge") + 
            theme_bw()

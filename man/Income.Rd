@@ -38,6 +38,7 @@ T1 <- xtabs(~class, data = Income)
 T1
 barplot(T1, col = "pink")   
 \dontrun{
+library(ggplot2)
 DF <- as.data.frame(T1)
 DF
 ggplot2::ggplot(data = DF,  aes(x = class, y = Freq)) + 

@@ -27,6 +27,7 @@ lines(density(Framingh$cholest))
 mean(Framingh$cholest > 200 & Framingh$cholest < 240)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Framingh, aes(x = factor(1), y = cholest)) + 
   geom_boxplot() +                 # boxplot
   labs(x = "") +                   # no x label  

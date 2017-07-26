@@ -36,6 +36,7 @@ Data for Exercise 5.112
 boxplot(salary ~ year, data = Governor)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Governor, aes(x = salary)) + 
            geom_density(fill = "pink") + 
            facet_grid(year ~ .) + 

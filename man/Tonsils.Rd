@@ -23,6 +23,8 @@ prop.table(T1, 1)
 prop.table(T1, 1)[2, 1]
 barplot(t(T1), legend = TRUE, beside = TRUE, col = c("red", "green"))
 \dontrun{
+library(dplyr)
+library(ggplot2)
 NDF <- dplyr::count(Tonsils, size, status) 
 ggplot2::ggplot(data = NDF, aes(x = size, y = n, fill = status)) + 
            geom_bar(stat = "identity", position = "dodge") + 

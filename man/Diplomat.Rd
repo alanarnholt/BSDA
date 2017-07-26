@@ -34,6 +34,7 @@ with(data = Diplomat,
      barplot(rate, names.arg = country, col = "blue"))           
 par(las = 1, mfrow = c(1, 1))
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Diplomat, aes(x = reorder(country, number), 
                  y = number)) + 
            geom_bar(stat = "identity", fill = "pink", color = "black") + 

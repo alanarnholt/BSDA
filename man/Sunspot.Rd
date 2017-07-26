@@ -19,6 +19,7 @@ Data for Example 1.7
 
 plot(sunspots ~ year, data = Sunspot, type = "l")
 \dontrun{
+library(ggplot2)
 lattice::xyplot(sunspots ~ year, data = Sunspot, 
                 main = "Yearly sunspots", type = "l")
 lattice::xyplot(sunspots ~ year, data = Sunspot, type = "l", 

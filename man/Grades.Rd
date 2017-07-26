@@ -19,6 +19,7 @@ Data for Exercise 1.120
 hist(Grades$grades, main = "", xlab = "Test grades", right = FALSE)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Grades, aes(x = grades, y = ..density..)) + 
            geom_histogram(fill = "pink", binwidth = 5, color = "black") + 
            geom_density(lwd = 2, color = "red") + 

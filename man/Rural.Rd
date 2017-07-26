@@ -20,6 +20,7 @@ Data for Example 7.16
 boxplot(score ~ area, data = Rural)
 wilcox.test(score ~ area, data = Rural)
 \dontrun{
+library(dplyr)
 Rural <- dplyr::mutate(Rural, r = rank(score))
 Rural
 t.test(r ~ area, data = Rural)

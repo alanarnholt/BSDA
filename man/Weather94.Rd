@@ -24,6 +24,7 @@ par(mar = c(5.1 + 2, 4.1 - 1, 4.1 - 2, 2.1))
 barplot(sort(T1, decreasing = TRUE), las = 2, col = rainbow(11))
 par(mar = c(5.1, 4.1, 4.1, 2.1))
 \dontrun{
+library(ggplot2)
 T2 <- as.data.frame(T1)
 T2
 ggplot2::ggplot(data =T2, aes(x = reorder(type, Freq), y = Freq)) + 

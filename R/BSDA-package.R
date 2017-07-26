@@ -97,6 +97,7 @@ NULL
 #' par(mfrow = c(1, 1))
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Abilene, aes(x = crimetype, y = number, fill = year)) +
 #'            geom_bar(stat = "identity", position = "dodge") +
 #'            theme_bw() +
@@ -1153,6 +1154,7 @@ NULL
 #' tapply(Board$salary, Board$university, summary)
 #' anova(lm(salary ~ university, data = Board))
 #' \dontrun{
+#' library(dplyr)
 #' dplyr::group_by(Board, university) %>%
 #'          summarize(Average = mean(salary))
 #' }
@@ -2602,6 +2604,7 @@ NULL
 #'        col = "pink", main = "Exercise 2.8")
 #' par(las = 1) 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Diesel, aes(x = date, y = pricepergallon, 
 #'            color = location)) + 
 #'            geom_point() + 
@@ -2649,6 +2652,7 @@ NULL
 #'      barplot(rate, names.arg = country, col = "blue"))           
 #' par(las = 1, mfrow = c(1, 1))
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Diplomat, aes(x = reorder(country, number), 
 #'                  y = number)) + 
 #'            geom_bar(stat = "identity", fill = "pink", color = "black") + 
@@ -2724,6 +2728,7 @@ NULL
 #' cor(Dogs$ranking[Dogs$year == "1992"], Dogs$ranking[Dogs$year == "1993"])
 #' cor(Dogs$ranking[Dogs$year == "1997"], Dogs$ranking[Dogs$year == "1998"])
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Dogs, aes(x = reorder(breed, ranking), y = ranking)) + 
 #'            geom_bar(stat = "identity") + 
 #'            facet_grid(year ~. ) + 
@@ -2758,6 +2763,7 @@ NULL
 #' 
 #' barplot(Domestic$rate, names.arg = Domestic$age)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Domestic, aes(x = age, y = rate)) + 
 #'            geom_bar(stat = "identity", fill = "purple", color = "black") + 
 #'            labs(x = "", y = "Domestic violence per 1000 women") + 
@@ -2820,6 +2826,7 @@ NULL
 #' 
 #' plot(close ~ year, data = Dowjones, type = "l", main = "Exercise 1.35")
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Dowjones, aes(x = year, y = close)) +
 #'            geom_point(size = 0.5) + 
 #'            geom_line(color = "red") + 
@@ -3057,6 +3064,7 @@ NULL
 #'            )
 #' with(data = Elderly, cor(percent1998, percent1985))
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Elderly, aes(x = percent1985, y = percent1998)) +
 #'            geom_point() + 
 #'            theme_bw()
@@ -3311,6 +3319,7 @@ NULL
 #'             paired = TRUE, alternative = "greater")
 #' 
 #' \dontrun{
+#' library(tidyr)
 #' T7 <- tidyr::spread(Fabric, softner, softness) %>% 
 #' mutate(di = with - without, adi = abs(di), rk = rank(adi), 
 #'        srk = sign(di)*rk)
@@ -3348,6 +3357,7 @@ NULL
 #' lines(density(Faithful$time))
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Faithful, aes(x = time, y = ..density..)) + 
 #'            geom_histogram(binwidth = 5, fill = "pink", col = "black") + 
 #'            geom_density() + 
@@ -3382,6 +3392,7 @@ NULL
 #' cor(Family$cost, Family$number)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Family, aes(x = number, y = cost)) + 
 #'            geom_point() + 
 #'            geom_smooth(method = "lm") + 
@@ -3668,6 +3679,7 @@ NULL
 #' stem(DF2$time)
 #' SIGN.test(DF2$time)
 #' \dontrun{
+#' library(dplyr)
 #' DF3 <- dplyr::filter(Fluid, kilovolts == "34kV") 
 #' DF3
 #' }
@@ -3732,6 +3744,7 @@ NULL
 #' mean(Framingh$cholest > 200 & Framingh$cholest < 240)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Framingh, aes(x = factor(1), y = cholest)) + 
 #'   geom_boxplot() +                 # boxplot
 #'   labs(x = "") +                   # no x label  
@@ -3863,6 +3876,8 @@ NULL
 #' barplot(t(T1[c(2, 3), ]), beside = TRUE)
 #' 
 #' \dontrun{
+#' library(dplyr)
+#' library(ggplot2)
 #' dplyr::filter(Gallup, demographics == "Gender: Male" | demographics == "Gender: Female") %>%
 #' ggplot2::ggplot(aes(x = demographics, fill = opinion)) + 
 #'            geom_bar() + 
@@ -3895,6 +3910,7 @@ NULL
 #' stem(Gasoline$price)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Gasoline, aes(x = factor(1), y = price)) + 
 #'            geom_violin() + 
 #'            geom_jitter() + 
@@ -3966,6 +3982,7 @@ NULL
 #' qqline(Golf$yards)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Golf, aes(sample = yards)) + 
 #'            geom_qq() + 
 #'            theme_bw()
@@ -4012,6 +4029,7 @@ NULL
 #' boxplot(salary ~ year, data = Governor)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Governor, aes(x = salary)) + 
 #'            geom_density(fill = "pink") + 
 #'            facet_grid(year ~ .) + 
@@ -4050,6 +4068,7 @@ NULL
 #' cor(Gpa$hsgpa, Gpa$collgpa)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Gpa, aes(x = hsgpa, y = collgpa)) + 
 #'            geom_point() + 
 #'            geom_smooth(method = "lm") + 
@@ -4082,6 +4101,7 @@ NULL
 #' hist(Grades$grades, main = "", xlab = "Test grades", right = FALSE)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Grades, aes(x = grades, y = ..density..)) + 
 #'            geom_histogram(fill = "pink", binwidth = 5, color = "black") + 
 #'            geom_density(lwd = 2, color = "red") + 
@@ -4290,6 +4310,7 @@ NULL
 #' t.test(Habits$signrks, alternative = "less")
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Habits, aes(x = differ)) + 
 #'            geom_dotplot(fill = "blue") + 
 #'            theme_bw()
@@ -4414,6 +4435,7 @@ NULL
 #' barplot(t(T1), beside = TRUE, legend = TRUE)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Heat, aes(x = fuel, fill = location)) + 
 #'            geom_bar(position = "dodge") + 
 #'            labs(y = "percent") + 
@@ -4480,6 +4502,7 @@ NULL
 #' barplot(t(T1), legend = TRUE, beside = TRUE)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Hodgkin, aes(x = type, fill = response)) + 
 #'            geom_bar(position = "dodge") + 
 #'            theme_bw()
@@ -4535,6 +4558,8 @@ NULL
 #' p2000 <- subset(Homes, year == "2000")
 #' p1994 <- subset(Homes, year == "1994")
 #' \dontrun{
+#' library(dplyr)
+#' library(ggplot2)
 #' dplyr::group_by(Homes, year, region) %>%
 #'    summarize(AvgPrice = mean(price))
 #' ggplot2::ggplot(data = Homes, aes(x = region, y = price)) + 
@@ -4665,6 +4690,7 @@ NULL
 #' stripchart(price ~ year, data = Housing, method = "stack", 
 #'            pch = 1, col = c("red", "blue"))
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Housing, aes(x = price, fill = year)) + 
 #'            geom_dotplot() + 
 #'            facet_grid(year ~ .) + 
@@ -4786,6 +4812,7 @@ NULL
 #' T1
 #' barplot(T1, col = "pink")   
 #' \dontrun{
+#' library(ggplot2)
 #' DF <- as.data.frame(T1)
 #' DF
 #' ggplot2::ggplot(data = DF,  aes(x = class, y = Freq)) + 
@@ -4925,6 +4952,7 @@ NULL
 #' boxplot(qualif ~ group, data = Indy500)
 #' t.test(qualif ~ group, data = Indy500)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Indy500, aes(sample = qualif)) + 
 #'            geom_qq() + 
 #'            facet_grid(group ~ .) + 
@@ -5056,6 +5084,7 @@ NULL
 #' rm(T1)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Inspect, aes(x = passed, fill = station)) + 
 #'            geom_bar(position = "dodge") + 
 #'            theme_bw()
@@ -5089,6 +5118,7 @@ NULL
 #' summary(model)
 #' 
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Insulate, aes(x = temp, y = loss)) + 
 #'            geom_point() + 
 #'            geom_smooth(method = "lm", se = FALSE) + 
@@ -6077,6 +6107,7 @@ NULL
 #' t.test(emission ~ company, data = Monoxide)
 #' wilcox.test(emission ~ company, data = Monoxide)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Monoxide, aes(x = company, y = emission)) + 
 #'            geom_boxplot() + 
 #'            theme_bw()
@@ -6144,6 +6175,7 @@ NULL
 #' # Or
 #' t.test(Music$differ)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Music, aes(x = differ)) + 
 #'            geom_dotplot() + 
 #'            theme_bw()
@@ -6432,6 +6464,7 @@ NULL
 #' 
 #' stripchart(Orioles$`1999salary`, method = "stack", pch = 19)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Orioles, aes(x = `1999salary`)) + 
 #'            geom_dotplot(dotsize = 0.5) + 
 #'            labs(x = "1999 Salary") +
@@ -6499,6 +6532,7 @@ NULL
 #' barplot(t(T1), beside = TRUE, legend = TRUE, col = c("blue", "red"))
 #' rm(T1)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Parented, aes(x = education, fill = parent)) + 
 #'     geom_bar(position = "dodge") + 
 #'     theme_bw() +
@@ -6628,6 +6662,7 @@ NULL
 #' par(mar = c(5.1, 4.1, 4.1, 2.1))
 #' rm(T1)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Poison, aes(x = type, fill = type)) + 
 #'            geom_bar() + 
 #'            theme_bw() + 
@@ -7207,6 +7242,7 @@ NULL
 #' boxplot(gpa ~ rating, data = Ratings, xlab = "Student rating of instructor", 
 #'         ylab = "Student GPA")
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Ratings, aes(x = rating, y = gpa, fill = rating)) +
 #'            geom_boxplot() + 
 #'            theme_bw() + 
@@ -7608,6 +7644,7 @@ NULL
 #' boxplot(score ~ area, data = Rural)
 #' wilcox.test(score ~ area, data = Rural)
 #' \dontrun{
+#' library(dplyr)
 #' Rural <- dplyr::mutate(Rural, r = rank(score))
 #' Rural
 #' t.test(r ~ area, data = Rural)
@@ -7770,6 +7807,7 @@ NULL
 #' boxplot(reading ~ brand, data = Scales, col = rainbow(4), 
 #' ylab = "Weight (lbs)")
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Scales, aes(x = brand, y = reading, fill = brand)) + 
 #'            geom_boxplot() + 
 #'            labs(y = "weight (lbs)") +
@@ -8127,6 +8165,7 @@ NULL
 #' boxplot(gpa ~ gender, data = Simpson)
 #' boxplot(gpa ~ sport, data = Simpson)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Simpson, aes(x = gender, y = gpa, fill = gender)) +
 #'            geom_boxplot() + 
 #'            facet_grid(.~sport) + 
@@ -8289,6 +8328,7 @@ NULL
 #'            t.test(waterph ~ code, data = Smokyph, alternative = "less")
 #'            t.test(waterph ~ code, data = Smokyph, conf.level = 0.90)
 #'  \dontrun{
+#'  library(ggplot2)
 #'  ggplot2::ggplot(data = Smokyph, aes(x = waterph, fill = code)) + 
 #'             geom_dotplot() + 
 #'             facet_grid(code ~ .) + 
@@ -8435,6 +8475,7 @@ NULL
 #' cor(Sophomor)
 #' plot(exam ~ gpa, data = Sophomor)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Sophomor, aes(x = gpa, y = exam)) + 
 #'            geom_point()
 #'            ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 
@@ -8750,6 +8791,7 @@ NULL
 #' boxplot(score ~ class, data = Statisti)
 #' tapply(Statisti$score, Statisti$class, summary, na.rm = TRUE)
 #' \dontrun{
+#' library(dplyr)
 #' dplyr::group_by(Statisti, class) %>%
 #'  summarize(Mean = mean(score, na.rm = TRUE), 
 #'            Median = median(score, na.rm = TRUE), 
@@ -8927,6 +8969,7 @@ NULL
 #' 
 #' plot(sunspots ~ year, data = Sunspot, type = "l")
 #' \dontrun{
+#' library(ggplot2)
 #' lattice::xyplot(sunspots ~ year, data = Sunspot, 
 #'                 main = "Yearly sunspots", type = "l")
 #' lattice::xyplot(sunspots ~ year, data = Sunspot, type = "l", 
@@ -9042,6 +9085,7 @@ NULL
 #'         horizontal = TRUE, las = 1, cex.axis = 0.7)
 #'         par(mar = c(5.1, 4.1, 4.1, 2.1))
 #' \dontrun{
+#' library(ggplot2)
 #'   ggplot2::ggplot(data = Tablrock, aes(sample = ozone)) + 
 #'              geom_qq() + 
 #'              theme_bw()
@@ -9090,7 +9134,8 @@ NULL
 #'      main = "Teacher salary 1993-94", xlab = "salary",
 #'      xlim = range(Teacher$salary, na.rm = TRUE))
 #' par(mfrow = c(1, 1))
-#' \dontrun{                       
+#' \dontrun{   
+#' library(ggplot2)                    
 #'     ggplot2::ggplot(data = Teacher, aes(x = salary)) + 
 #'                geom_histogram(fill = "purple", color = "black") +  
 #'                facet_grid(year ~ .) + 
@@ -9123,6 +9168,7 @@ NULL
 #' xlab = "Tennessee Self-Concept Scale score")
 #' lines(density(Tenness$score))
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Tenness, aes(x = score, y = ..density..)) + 
 #'            geom_histogram(binwidth = 2, fill = "purple", color = "black") +
 #'            geom_density(color = "red", fill = "pink", alpha = 0.3) + 
@@ -9324,6 +9370,8 @@ NULL
 #' prop.table(T1, 1)[2, 1]
 #' barplot(t(T1), legend = TRUE, beside = TRUE, col = c("red", "green"))
 #' \dontrun{
+#' library(dplyr)
+#' library(ggplot2)
 #' NDF <- dplyr::count(Tonsils, size, status) 
 #' ggplot2::ggplot(data = NDF, aes(x = size, y = n, fill = status)) + 
 #'            geom_bar(stat = "identity", position = "dodge") + 
@@ -9645,6 +9693,7 @@ NULL
 #' stripchart(drops ~ gender, data = Undergrad, method = "stack", 
 #'            col = c("red", "blue"), pch = 19, main = "Drops versus Gender")
 #'  \dontrun{
+#'  library(ggplot2)
 #'  ggplot2::ggplot(data = Undergrad, aes(x = sat, y = drops, fill = factor(drops))) + 
 #'             facet_grid(drops ~.) +
 #'             geom_dotplot() +
@@ -9946,6 +9995,7 @@ NULL
 #' barplot(sort(T1, decreasing = TRUE), las = 2, col = rainbow(11))
 #' par(mar = c(5.1, 4.1, 4.1, 2.1))
 #' \dontrun{
+#' library(ggplot2)
 #' T2 <- as.data.frame(T1)
 #' T2
 #' ggplot2::ggplot(data =T2, aes(x = reorder(type, Freq), y = Freq)) + 
@@ -10076,6 +10126,7 @@ NULL
 #' 
 #' plot(wins ~ era, data = Wins)
 #' \dontrun{
+#' library(ggplot2)
 #' ggplot2::ggplot(data = Wins, aes(x = era, y = wins)) + 
 #'            geom_point() + 
 #'            geom_smooth(method = "lm", se = FALSE) + 

@@ -33,6 +33,7 @@ stripchart(gpa ~ gender, data = Undergrad, method = "stack",
 stripchart(drops ~ gender, data = Undergrad, method = "stack", 
            col = c("red", "blue"), pch = 19, main = "Drops versus Gender")
  \dontrun{
+ library(ggplot2)
  ggplot2::ggplot(data = Undergrad, aes(x = sat, y = drops, fill = factor(drops))) + 
             facet_grid(drops ~.) +
             geom_dotplot() +

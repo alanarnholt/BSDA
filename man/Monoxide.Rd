@@ -21,6 +21,7 @@ boxplot(emission ~ company, data = Monoxide, col = topo.colors(2))
 t.test(emission ~ company, data = Monoxide)
 wilcox.test(emission ~ company, data = Monoxide)
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Monoxide, aes(x = company, y = emission)) + 
            geom_boxplot() + 
            theme_bw()

@@ -29,6 +29,7 @@ DF2
 stem(DF2$time)
 SIGN.test(DF2$time)
 \dontrun{
+library(dplyr)
 DF3 <- dplyr::filter(Fluid, kilovolts == "34kV") 
 DF3
 }

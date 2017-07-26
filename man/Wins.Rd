@@ -27,6 +27,7 @@ Data for Exercise 9.23
 
 plot(wins ~ era, data = Wins)
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Wins, aes(x = era, y = wins)) + 
            geom_point() + 
            geom_smooth(method = "lm", se = FALSE) + 

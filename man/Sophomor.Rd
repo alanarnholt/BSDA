@@ -23,6 +23,7 @@ Data for Exercise 2.42
 cor(Sophomor)
 plot(exam ~ gpa, data = Sophomor)
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Sophomor, aes(x = gpa, y = exam)) + 
            geom_point()
            ggplot2::ggplot(data = Sophomor, aes(x = sat, y = exam)) + 

@@ -33,6 +33,7 @@ stripchart(qualif ~ group, data = Indy500, method = "stack",
 boxplot(qualif ~ group, data = Indy500)
 t.test(qualif ~ group, data = Indy500)
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Indy500, aes(sample = qualif)) + 
            geom_qq() + 
            facet_grid(group ~ .) + 

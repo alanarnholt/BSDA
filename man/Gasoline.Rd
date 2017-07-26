@@ -19,6 +19,7 @@ Data for Exercise 1.45
 stem(Gasoline$price)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Gasoline, aes(x = factor(1), y = price)) + 
            geom_violin() + 
            geom_jitter() + 

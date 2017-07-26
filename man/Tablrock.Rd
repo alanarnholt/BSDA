@@ -41,6 +41,7 @@ boxplot(ozone ~ day, data = Tablrock,
         horizontal = TRUE, las = 1, cex.axis = 0.7)
         par(mar = c(5.1, 4.1, 4.1, 2.1))
 \dontrun{
+library(ggplot2)
   ggplot2::ggplot(data = Tablrock, aes(sample = ozone)) + 
              geom_qq() + 
              theme_bw()

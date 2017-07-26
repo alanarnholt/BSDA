@@ -23,6 +23,7 @@ abline(model, col = "blue")
 summary(model)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Insulate, aes(x = temp, y = loss)) + 
            geom_point() + 
            geom_smooth(method = "lm", se = FALSE) + 

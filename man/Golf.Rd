@@ -21,6 +21,7 @@ qqnorm(Golf$yards)
 qqline(Golf$yards)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Golf, aes(sample = yards)) + 
            geom_qq() + 
            theme_bw()

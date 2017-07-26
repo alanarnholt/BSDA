@@ -27,6 +27,7 @@ T1
 barplot(t(T1), legend = TRUE, beside = TRUE)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Hodgkin, aes(x = type, fill = response)) + 
            geom_bar(position = "dodge") + 
            theme_bw()

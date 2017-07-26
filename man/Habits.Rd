@@ -26,6 +26,7 @@ wilcox.test(Habits$B, Habits$A, paired = TRUE, alternative = "less")
 t.test(Habits$signrks, alternative = "less")
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Habits, aes(x = differ)) + 
            geom_dotplot(fill = "blue") + 
            theme_bw()

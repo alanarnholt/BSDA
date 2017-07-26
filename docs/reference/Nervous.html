@@ -104,7 +104,7 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>boxplot</span>(<span class='no'>react</span> ~ <span class='no'>drug</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Nervous</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>rainbow</span>(<span class='fl'>4</span>))</div><div class='img'><img src='Nervous-3.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>aov</span>(<span class='no'>react</span> ~ <span class='fu'>factor</span>(<span class='no'>drug</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Nervous</span>)
+<span class='fu'>boxplot</span>(<span class='no'>react</span> ~ <span class='no'>drug</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Nervous</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>rainbow</span>(<span class='fl'>4</span>))</div><div class='img'><img src='Nervous-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>model</span> <span class='kw'>&lt;-</span> <span class='fu'>aov</span>(<span class='no'>react</span> ~ <span class='fu'>factor</span>(<span class='no'>drug</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Nervous</span>)
 <span class='fu'>summary</span>(<span class='no'>model</span>)</div><div class='output co'>#&gt;              Df Sum Sq Mean Sq F value  Pr(&gt;F)    
 #&gt; factor(drug)  3  43.02  14.340   8.179 0.00085 ***
 #&gt; Residuals    21  36.82   1.753                    
@@ -122,7 +122,7 @@ Duxbury</p>
 #&gt; 3-2  2.1428571  0.1700676  4.1156467 0.0301086
 #&gt; 4-2 -1.3809524 -3.4342969  0.6723921 0.2686560
 #&gt; 4-3 -3.5238095 -5.5771540 -1.4704650 0.0005391
-#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='fu'>TukeyHSD</span>(<span class='no'>model</span>), <span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='img'><img src='Nervous-4.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+#&gt; </div><div class='input'><span class='fu'>plot</span>(<span class='fu'>TukeyHSD</span>(<span class='no'>model</span>), <span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='img'><img src='Nervous-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

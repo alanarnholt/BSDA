@@ -28,6 +28,7 @@ barplot(sort(T1, decreasing = TRUE), las = 2, col = rainbow(6))
 par(mar = c(5.1, 4.1, 4.1, 2.1))
 rm(T1)
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Poison, aes(x = type, fill = type)) + 
            geom_bar() + 
            theme_bw() + 

@@ -30,6 +30,7 @@ Data for Example 1.3
 
 stripchart(Orioles$`1999salary`, method = "stack", pch = 19)
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Orioles, aes(x = `1999salary`)) + 
            geom_dotplot(dotsize = 0.5) + 
            labs(x = "1999 Salary") +

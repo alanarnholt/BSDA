@@ -22,6 +22,7 @@ abline(lm(cost ~ number, data = Family))
 cor(Family$cost, Family$number)
 
 \dontrun{
+library(ggplot2)
 ggplot2::ggplot(data = Family, aes(x = number, y = cost)) + 
            geom_point() + 
            geom_smooth(method = "lm") + 

@@ -48,6 +48,8 @@ tapply(Homes$price, Homes$region, mean)
 p2000 <- subset(Homes, year == "2000")
 p1994 <- subset(Homes, year == "1994")
 \dontrun{
+library(dplyr)
+library(ggplot2)
 dplyr::group_by(Homes, year, region) \%>\%
    summarize(AvgPrice = mean(price))
 ggplot2::ggplot(data = Homes, aes(x = region, y = price)) + 

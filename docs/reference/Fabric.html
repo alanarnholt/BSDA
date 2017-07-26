@@ -116,6 +116,7 @@ Duxbury</p>
 #&gt; alternative hypothesis: true location shift is greater than 0
 #&gt; </div><div class='input'>
 </div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>tidyr</span>)
 <span class='no'>T7</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>tidyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/tidyr/topics/spread'>spread</a></span>(<span class='no'>Fabric</span>, <span class='no'>softner</span>, <span class='no'>softness</span>) <span class='kw'>%&gt;%</span>
 <span class='fu'>mutate</span>(<span class='kw'>di</span> <span class='kw'>=</span> <span class='no'>with</span> - <span class='no'>without</span>, <span class='kw'>adi</span> <span class='kw'>=</span> <span class='fu'>abs</span>(<span class='no'>di</span>), <span class='kw'>rk</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>adi</span>),
        <span class='kw'>srk</span> <span class='kw'>=</span> <span class='fu'>sign</span>(<span class='no'>di</span>)*<span class='no'>rk</span>)
