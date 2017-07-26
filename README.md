@@ -20,11 +20,11 @@ Please report any **bugs** or **suggestions** at:
 The package is available for download from
 [CRAN](http://cran.r-project.org/web/packages/BSDA/).
 
-You may download the most recent version using the [devtools](http://github.com/hdaley/devtools) function `install_github()` to install **BSDA** in R.
+You may download the most recent version using the [devtools](https://github.com/hadley/devtools) function `install_github()` to install **BSDA** in R.
 
 However, you need to make sure you're set up to develop packages. This is platform specific:
 
-* On Windows, download and install [Rtools](http://http://cran.r-project.org/bin/windows/Rtools/).
+* On Windows, download and install [Rtools](https://cran.r-project.org/bin/windows/Rtools/).
 * On the Mac, make sure you have [Xcode](https://developer.apple.com/xcode/) installed.
 * On Linux, make sure you have the R-dev packages installed.
 

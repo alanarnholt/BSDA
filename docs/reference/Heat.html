@@ -130,7 +130,7 @@ Duxbury</p>
 #&gt;   Electricity                                      26
 #&gt;   Fuel oil                                         12
 #&gt;   Wood                                              4
-#&gt;   Other                                             1</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='Heat-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+#&gt;   Other                                             1</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='Heat-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
 </div><span class='co'># NOT RUN {</span>
 <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Heat</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>fuel</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>location</span>)) +
            <span class='fu'>geom_bar</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
