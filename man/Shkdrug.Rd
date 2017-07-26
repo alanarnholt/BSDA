@@ -18,7 +18,7 @@ Data for Exercises 10.11 and 10.12
 }
 \examples{
 
-boxplot(response ~ treatment, data = Shkdrug)
+boxplot(response ~ treatment, data = Shkdrug, col = "gray")
 model <- lm(response ~ treatment, data = Shkdrug)
 anova(model)
 rm(model)

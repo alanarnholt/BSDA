@@ -18,7 +18,7 @@ Data for Exercise 10.26
 }
 \examples{
 
-boxplot(pollution ~ region, data = Region)
+boxplot(pollution ~ region, data = Region, col = "gray")
 anova(lm(pollution ~ region, data = Region))
 
 }

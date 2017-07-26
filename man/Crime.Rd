@@ -34,7 +34,7 @@ Data for Exercises 1.90, 2.32, 3.64, and 5.113
 }
 \examples{
 
-boxplot(rate ~ year, data = Crime)
+boxplot(rate ~ year, data = Crime, col = "red")
 
 }
 \references{

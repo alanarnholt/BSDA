@@ -29,7 +29,7 @@ Data for Exercise 9.11 and 9.17
 
 plot(poverty ~ crime, data = Poverty)
 model <- lm(poverty ~ crime, data = Poverty)
-abline(model)
+abline(model, col = "red")
 summary(model)
 rm(model)
 

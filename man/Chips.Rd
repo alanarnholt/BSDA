@@ -31,7 +31,7 @@ Data for Exercise 10.9
 
 with(data = Chips, 
      boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, 
-             wafer22, wafer23, wafer24)
+             wafer22, wafer23, wafer24, col = "pink")
 )
 
 }

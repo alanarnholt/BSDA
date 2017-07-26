@@ -17,7 +17,7 @@ Data for Exercise 5.25
 \examples{
 
 stem(Study$hours)
-hist(Study$hours)
+hist(Study$hours, col = "violet")
 summary(Study$hours)
 
 }

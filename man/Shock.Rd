@@ -18,7 +18,7 @@ Data for Exercise 10.50
 }
 \examples{
 
-boxplot(attempts ~ group, data = Shock)
+boxplot(attempts ~ group, data = Shock, col = "violet")
 model <- lm(attempts ~ group, data = Shock)
 anova(model)
 rm(model)

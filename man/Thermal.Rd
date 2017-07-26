@@ -20,7 +20,7 @@ Data for Example 9.5
 model <- lm(loss ~ temp, data = Thermal)
 summary(model)
 plot(loss ~ temp, data = Thermal)
-abline(model)
+abline(model, col = "red")
 rm(model)
 
 }

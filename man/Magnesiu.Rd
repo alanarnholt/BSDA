@@ -23,7 +23,7 @@ Data for Exercise 9.9
 
 plot(magnesium ~ distance, data = Magnesiu)
 model = lm(magnesium ~ distance, data = Magnesiu)
-abline(model)
+abline(model, col = "red")
 summary(model)
 rm(model)
 

@@ -40,7 +40,7 @@ Data for Exercise 5.8
 
 summary(Epatwoseater$cty)
 plot(hwy ~ cty, data = Epatwoseater)
-boxplot(cty ~ drv, data = Epatwoseater)
+boxplot(cty ~ drv, data = Epatwoseater, col = "lightgreen")
 
 }
 \references{

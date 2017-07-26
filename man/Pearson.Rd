@@ -22,7 +22,7 @@ Data for Exercise 2.20
 }
 \examples{
 
-plot(brother ~ sister, data = Pearson)
+plot(brother ~ sister, data = Pearson, col = "lightblue")
 cor(Pearson$brother, Pearson$sister)
 
 }

@@ -24,7 +24,9 @@ Data used in problem 6.39
 qqnorm(Abbey$price)
 qqline(Abbey$price)
 t.test(Abbey$price, mu = 300)
-hist(Abbey$price)
+hist(Abbey$price, main = "Exercise 6.39", 
+     xlab = "daily price returns (in pence)",
+     col = "blue")
 
 }
 \references{

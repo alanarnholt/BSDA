@@ -18,7 +18,7 @@ Data for Exercise 10.53
 }
 \examples{
 
-boxplot(time ~ team, data = Nascar)
+boxplot(time ~ team, data = Nascar, col = rainbow(3))
 model <- lm(time ~ factor(team), data = Nascar)
 summary(model)
 anova(model)

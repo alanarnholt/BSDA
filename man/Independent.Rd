@@ -21,7 +21,7 @@ qqnorm(Independent$score[Independent$group=="A"])
 qqline(Independent$score[Independent$group=="A"])
 qqnorm(Independent$score[Independent$group=="B"])
 qqline(Independent$score[Independent$group=="B"])
-boxplot(score ~ group, data = Independent)
+boxplot(score ~ group, data = Independent, col = "blue")
 wilcox.test(score ~ group, data = Independent)
 
 }

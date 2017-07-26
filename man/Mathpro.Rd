@@ -27,7 +27,7 @@ Data for Exercise 9.24, Example 9.1, and Example 9.6
 
 model <- lm(sat_math ~ profic, data = Mathpro)
 plot(sat_math ~ profic, data = Mathpro, ylab = "SAT", xlab = "proficiency")
-abline(model)
+abline(model, col = "red")
 summary(model)
 rm(model)
 

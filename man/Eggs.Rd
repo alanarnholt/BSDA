@@ -19,7 +19,7 @@ Data for Exercise 9.22
 
 plot(eggs ~ feed, data = Eggs)
 model <- lm(eggs ~ feed, data = Eggs)
-abline(model)
+abline(model, col = "red")
 summary(model)
 rm(model)
 

@@ -17,7 +17,7 @@ Data for Exercises 1.70 and 1.87
 }
 \examples{
 
-boxplot(score ~ class, data = Statisti)
+boxplot(score ~ class, data = Statisti, col = "violet")
 tapply(Statisti$score, Statisti$class, summary, na.rm = TRUE)
 \dontrun{
 library(dplyr)

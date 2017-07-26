@@ -6,7 +6,7 @@
 \title{Number of absent days for 20 employees}
 \format{A data frame/tibble with 20 observations on one variable
 \describe{ 
-\item{days}{a numeric vector} 
+\item{days}{days absent} 
 }}
 \usage{
 Absent
@@ -18,7 +18,7 @@ Data used in Exercise 1.28
 
 CT <- xtabs(~ days, data = Absent)
 CT
-barplot(CT, col = "pink")
+barplot(CT, col = "pink", main = "Exercise 1.28")
 plot(ecdf(Absent$days), main = "ECDF")
 
 }

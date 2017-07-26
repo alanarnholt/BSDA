@@ -19,7 +19,7 @@ Data for Exercise 9.60
 
 plot(satisfaction ~ wspt, data = Jobsat)
 model <- lm(satisfaction ~ wspt, data = Jobsat)
-abline(model)
+abline(model, col = "blue")
 summary(model)
 rm(model)
 

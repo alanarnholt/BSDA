@@ -24,7 +24,7 @@ Data for Exercise 2.46 and 2.60
 \examples{
 
 plot(Newfoundland ~ `Grand Banks`, data = Iceberg)
-abline(lm(Newfoundland ~ `Grand Banks`, data = Iceberg))
+abline(lm(Newfoundland ~ `Grand Banks`, data = Iceberg), col = "blue")
 
 }
 \references{

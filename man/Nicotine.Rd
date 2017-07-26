@@ -19,7 +19,7 @@ Data for Exercise 9.21
 
 model <- lm(sales ~ nicotine, data = Nicotine)
 plot(sales ~ nicotine, data = Nicotine)
-abline(model)
+abline(model, col = "red")
 summary(model)
 predict(model, newdata = data.frame(nicotine = 1), 
         interval = "confidence", level = 0.99)

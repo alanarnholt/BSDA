@@ -24,7 +24,7 @@ Data for Exercises 7.34 and 7.48
 }
 \examples{
 
-boxplot(survival ~ treatment, data = Censored)
+boxplot(survival ~ treatment, data = Censored, col = "yellow")
 wilcox.test(survival ~ treatment, data = Censored, alternative = "greater")
 
 }

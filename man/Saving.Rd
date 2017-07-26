@@ -18,8 +18,8 @@ Data for Exercise 10.34 and 10.49
 }
 \examples{
 
-boxplot(par ~ state, data = Saving)
-boxplot(par ~ state, data = Saving, log = "y")
+boxplot(par ~ state, data = Saving, col = "red")
+boxplot(par ~ state, data = Saving, log = "y", col = "red")
 model <- aov(par ~ state, data = Saving)
 summary(model)
 plot(TukeyHSD(model))

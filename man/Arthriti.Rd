@@ -17,7 +17,9 @@ Data for Exercise 10.58
 }
 \examples{
 
-boxplot(time ~ treatment, data = Arthriti)
+boxplot(time ~ treatment, data = Arthriti, 
+col = c("lightblue", "lightgreen", "yellow"),
+ylab = "days")
 anova(lm(time ~ treatment, data = Arthriti))
 
 }

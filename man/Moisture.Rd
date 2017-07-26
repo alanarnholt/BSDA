@@ -26,7 +26,7 @@ Data for Exercise 9.32
 
 plot(moisture ~ depth, data = Moisture)
 model <- lm(moisture ~ depth, data = Moisture)
-abline(model)
+abline(model, col = "red")
 plot(resid(model) ~ depth, data = Moisture)
 rm(model)
 

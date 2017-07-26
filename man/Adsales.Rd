@@ -18,9 +18,9 @@ Data used in Exercise 9.15
 }
 \examples{
 
-plot(sales ~ ads, data = Adsales)
+plot(sales ~ ads, data = Adsales, main = "Exercise 9.15")
 mod <- lm(sales ~ ads, data = Adsales)
-abline(mod)
+abline(mod, col = "red")
 summary(mod)
 predict(mod, newdata = data.frame(ads = 6), interval = "conf", level = 0.99)
 

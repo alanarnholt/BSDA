@@ -24,7 +24,7 @@ Data for Exercise 5.20
 \examples{
 
 stem(Skin$differ)
-boxplot(Skin$differ)
+boxplot(Skin$differ, col = "pink")
 summary(Skin$differ)
 
 }

@@ -17,7 +17,7 @@ Data for Exercise 7.82
 }
 \examples{
 
-boxplot(score ~ teacher, data = Spellers)
+boxplot(score ~ teacher, data = Spellers, col = "pink")
 t.test(score ~ teacher, data = Spellers)
 
 }

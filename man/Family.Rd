@@ -18,7 +18,7 @@ Data for Exercise 2.89
 \examples{
 
 plot(cost ~ number, data = Family)
-abline(lm(cost ~ number, data = Family))
+abline(lm(cost ~ number, data = Family), col = "red")
 cor(Family$cost, Family$number)
 
 \dontrun{

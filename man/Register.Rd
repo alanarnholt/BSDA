@@ -19,7 +19,7 @@ Data for Exercise 2.3, 2.39, and 2.54
 
 plot(cost ~ age, data = Register)
 model <- lm(cost ~ age, data = Register)
-abline(model)
+abline(model, col = "red")
 predict(model, newdata = data.frame(age = c(5, 10)))
 plot(model, which = 1)
 rm(model)
