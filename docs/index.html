@@ -83,14 +83,14 @@
 </ul>
 <p>You can check everything is installed correctly with the <code>has_devel()</code> function from the <strong>devtools</strong> package. Type the following at the <strong>R</strong> prompt:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"devtools"</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)    
-devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/has_devel">has_devel</a></span>()</code></pre></div>
+devtools::<span class="kw">has_devel</span>()</code></pre></div>
 <p>If everything is installed correctly, the function will print some output and then return <strong>TRUE</strong>.</p>
 <p>To install the <strong>BSDA</strong> package, type the following at the <strong>R</strong> prompt:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">'alanarnholt/BSDA'</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">'alanarnholt/BSDA'</span>)</code></pre></div>
 <p>It is possible to install <strong>BSDA</strong> with <a href="http://git-scm.com/">GIT</a> and the <strong>R CMD build</strong> assuming you have GIT installed and the appropriate tools to build <strong>R</strong> from source.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> clone https://github.com/alanarnholt/BSDA.git
-<span class="ex">R</span> CMD build BSDA
-<span class="ex">R</span> CMD INSTALL BSDA_*.tar.gz</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/alanarnholt/BSDA.git
+<span class="kw">R</span> CMD build BSDA
+<span class="kw">R</span> CMD INSTALL BSDA_*.tar.gz</code></pre></div>
 </div>
 </div>
   </div>
