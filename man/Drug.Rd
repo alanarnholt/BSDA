@@ -18,7 +18,8 @@ Data for Example 7.15
 }
 \examples{
 
-boxplot(trials ~ group, data = Drug)
+boxplot(trials ~ group, data = Drug,
+        main = "Example 7.15", col = c("yellow", "red"))
 wilcox.test(trials ~ group, data = Drug)
 t.test(rank(trials) ~ group, data = Drug, var.equal = TRUE)
 

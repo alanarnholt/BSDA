@@ -20,7 +20,7 @@ Data for Exercises 2.5, 2.24, and 2.55
 plot(kilowatt ~ size, data = Energy)
 with(data = Energy, cor(size, kilowatt))
 model <- lm(kilowatt ~ size, data = Energy)
-plot(Energy$size, resid(model))
+plot(Energy$size, resid(model), xlab = "size")
 
 }
 \references{

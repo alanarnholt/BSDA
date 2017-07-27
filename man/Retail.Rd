@@ -20,7 +20,7 @@ Data for Exercise 9.59
 
 plot(sales ~ months, data = Retail)
 model <- lm(sales ~ months, data = Retail)
-abline(model)
+abline(model, col = "blue")
 summary(model)
 
 }

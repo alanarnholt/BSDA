@@ -21,7 +21,7 @@ Data for Example 1.17
 }
 \examples{
 
-boxplot(lead ~ group, data = Lead)
+boxplot(lead ~ group, data = Lead, col = topo.colors(2))
 
 }
 \references{

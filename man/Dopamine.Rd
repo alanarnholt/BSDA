@@ -22,7 +22,7 @@ Data for Exercises 5.14 and 7.49
 }
 \examples{
 
-boxplot(dbh ~ group, data = Dopamine)
+boxplot(dbh ~ group, data = Dopamine, col = "orange")
 t.test(dbh ~ group, data = Dopamine, var.equal = TRUE)
 
 }

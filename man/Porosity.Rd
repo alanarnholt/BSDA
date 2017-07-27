@@ -23,7 +23,7 @@ Data for Exercise 5.86
 
 stem(Porosity$porosity)
 fivenum(Porosity$porosity)
-boxplot(Porosity$porosity)
+boxplot(Porosity$porosity, col = "lightgreen")
 
 }
 \references{

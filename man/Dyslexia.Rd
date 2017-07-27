@@ -24,7 +24,8 @@ Data for Exercise 2.90
 \examples{
 
 plot(height ~ weight, data = Dyslexia)
-plot(words ~ factor(handed), data = Dyslexia)
+plot(words ~ factor(handed), data = Dyslexia,
+     xlab = "hand", col = "lightblue")
 
 }
 \references{

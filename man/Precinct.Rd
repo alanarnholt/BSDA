@@ -19,7 +19,7 @@ Data for Exercise 2.2 and 2.38
 
 plot(rate ~ income, data = Precinct)
 model <- (lm(rate ~ income, data = Precinct))
-abline(model)
+abline(model, col = "red")
 rm(model)
 
 }

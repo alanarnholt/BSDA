@@ -19,7 +19,7 @@ Data for Exercises 2.10 and 2.53
 
 plot(reading ~ iq, data = Readiq)
 model <- lm(reading ~ iq, data = Readiq)
-abline(model)
+abline(model, col = "purple")
 predict(model, newdata = data.frame(iq = c(100, 120)))
 residuals(model)[c(6, 7)]
 rm(model)

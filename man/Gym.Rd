@@ -19,7 +19,7 @@ Data for Exercises 2.21 and 9.14
 
 plot(number ~ age, data = Gym)
 model <- lm(number ~ age, data = Gym)
-abline(model)
+abline(model, col = "red")
 summary(model)
 
 }

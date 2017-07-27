@@ -19,7 +19,7 @@ Data for Exercise 9.30
 \examples{
 
 plot(verbal ~ number, data = Verbal)
-abline(lm(verbal ~ number, data = Verbal))
+abline(lm(verbal ~ number, data = Verbal), col = "red")
 summary(lm(verbal ~ number, data = Verbal))
 
 }

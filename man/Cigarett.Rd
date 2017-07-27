@@ -19,7 +19,7 @@ Data for Exercise 2.27
 
 plot(weight ~ cigarettes, data = Cigarett)
 model <- lm(weight ~ cigarettes, data = Cigarett)
-abline(model)
+abline(model, col = "red")
 with(data = Cigarett,
      cor(weight, cigarettes)
 )

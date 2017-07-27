@@ -19,7 +19,7 @@ Data for Exercise 9.36 and Example 9.8
 
 plot(sales ~ rd, data = Randd)
 model <- lm(sales ~ rd, data = Randd)
-abline(model)
+abline(model, col = "purple")
 summary(model)
 plot(model, which = 1)
 rm(model)

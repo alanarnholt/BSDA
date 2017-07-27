@@ -17,7 +17,8 @@ Data for Example 10.7
 }
 \examples{
 
-boxplot(salary ~ university, data = Engineer)
+boxplot(salary ~ university, data = Engineer,
+        main = "Example 10.7", col = "yellow")
 kruskal.test(salary ~ university, data = Engineer)
 anova(lm(salary ~ university, data = Engineer))
 anova(lm(rank(salary) ~ university, data = Engineer))

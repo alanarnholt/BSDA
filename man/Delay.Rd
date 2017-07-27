@@ -17,7 +17,9 @@ Data for Exercise 10.55
 }
 \examples{
 
-boxplot(delay ~ carrier, data = Delay)
+boxplot(delay ~ carrier, data = Delay, 
+        main = "Exercise 10.55", ylab = "minutes",
+        col = "pink")
 kruskal.test(delay ~carrier, data = Delay)
 
 }

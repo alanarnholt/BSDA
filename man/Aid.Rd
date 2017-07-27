@@ -32,9 +32,10 @@ Data used in Exercises 1.91 and 3.68
 }
 \examples{
 
-hist(Aid$payment, xlab = "payment", main = "Your Title Here", 
+hist(Aid$payment, xlab = "payment", main = 
+"Average monthly payment per person in a family", 
 col = "lightblue")
-boxplot(Aid$payment)
+boxplot(Aid$payment, col = "lightblue")
 dotplot(state ~ payment, data = Aid)
 
 }

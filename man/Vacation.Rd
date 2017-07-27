@@ -17,7 +17,7 @@ Data for Exercise 6.46 and 6.98
 }
 \examples{
 
-boxplot(Vacation$number)
+boxplot(Vacation$number, col = "violet")
 hist(Vacation$number, main = "Exercise 6.46", col = "blue",
      xlab = "number of days of paid holidays and vacation leave taken")
      t.test(Vacation$number, mu = 24)

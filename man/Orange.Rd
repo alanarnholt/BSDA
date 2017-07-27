@@ -19,7 +19,7 @@ Data for Exercise 9.61
 
 plot(price ~ harvest, data = Orange)
 model <- lm(price ~ harvest, data = Orange)
-abline(model)
+abline(model, col = "red")
 summary(model)
 rm(model)
 

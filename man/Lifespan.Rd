@@ -19,7 +19,7 @@ Data for Exercise 2.4, 2.37, and 2.49
 
 plot(life ~ heat, data = Lifespan)
 model <- lm(life ~ heat, data = Lifespan)
-abline(model)
+abline(model, col = "red")
 resid(model)
 sum((resid(model))^2)
 anova(model)

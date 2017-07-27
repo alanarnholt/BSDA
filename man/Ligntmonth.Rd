@@ -28,7 +28,7 @@ Data for Exercise 2.6
 
 plot(deaths ~ damage, data = Ligntmonth)
 model = lm(deaths ~ damage, data = Ligntmonth)
-abline(model)
+abline(model, col = "red")
 rm(model)
 
 }

@@ -19,8 +19,8 @@ Data for Example 1.18
 }
 \examples{
 
-boxplot(gpa ~ gender, data = Simpson)
-boxplot(gpa ~ sport, data = Simpson)
+boxplot(gpa ~ gender, data = Simpson, col = "violet")
+boxplot(gpa ~ sport, data = Simpson, col = "lightgreen")
 \dontrun{
 library(ggplot2)
 ggplot2::ggplot(data = Simpson, aes(x = gender, y = gpa, fill = gender)) +

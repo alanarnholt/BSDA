@@ -17,7 +17,7 @@ Data for Exercise 5.22 and 5.65
 \examples{
 
 stem(Puerto$income)
-boxplot(Puerto$income)
+boxplot(Puerto$income, col = "purple")
 t.test(Puerto$income,conf.level = .90)$conf
 
 }

@@ -17,7 +17,7 @@ Data for Exercise 10.44
 }
 \examples{
 
-boxplot(score ~ group, data = Treatments)
+boxplot(score ~ group, data = Treatments, col = "violet")
 summary(aov(score ~ group, data = Treatments))
 summary(lm(score ~ group, data = Treatments))
 anova(lm(score ~ group, data = Treatments))

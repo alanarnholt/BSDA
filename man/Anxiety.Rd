@@ -17,12 +17,13 @@ Data used in Exercise 2.96
 }
 \examples{
 
-plot(math ~ anxiety, data = Anxiety)
+plot(math ~ anxiety, data = Anxiety, ylab = "score",
+     main = "Exercise 2.96")
 with(data = Anxiety,
 cor(math, anxiety)
 )
 linmod <- lm(math ~ anxiety, data = Anxiety)
-abline(linmod)
+abline(linmod, col = "purple")
 summary(linmod)
 
 }

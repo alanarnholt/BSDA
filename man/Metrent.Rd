@@ -20,7 +20,7 @@ Data for Exercise 5.117
 }
 \examples{
 
-boxplot(Metrent$rent)
+boxplot(Metrent$rent, col = "magenta")
 t.test(Metrent$rent, conf.level = 0.99)$conf
 
 }

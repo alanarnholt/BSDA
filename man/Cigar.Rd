@@ -18,7 +18,7 @@ Data for Example 10.4
 }
 \examples{
 
-boxplot(tar ~ brand, data = Cigar)
+boxplot(tar ~ brand, data = Cigar, col = "cyan", ylab = "mg tar")
 anova(lm(tar ~ brand, data = Cigar))
 
 }

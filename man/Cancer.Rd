@@ -25,7 +25,7 @@ Data for Exercises 6.55 and 6.64
 }
 \examples{
 
-boxplot(survival ~ type, Cancer)
+boxplot(survival ~ type, Cancer, col = "blue")
 stomach <- Cancer$survival[Cancer$type == "stomach"]
 bronchus <- Cancer$survival[Cancer$type == "bronchus"]
 boxplot(stomach, ylab = "Days")

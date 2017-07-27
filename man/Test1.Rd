@@ -17,7 +17,7 @@ Data for Exercise 5.80
 \examples{
 
 stem(Test1$score)
-boxplot(Test1$score)
+boxplot(Test1$score, col = "purple")
 
 }
 \references{

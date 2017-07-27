@@ -33,7 +33,7 @@ Data for Exercises 2.28, 9.19, and Example 2.8
 
 plot(value ~ revenue, data = Name)
 model <- lm(value ~ revenue, data = Name)
-abline(model)
+abline(model, col = "red")
 cor(Name$value, Name$revenue)
 summary(model)
 rm(model)

@@ -18,7 +18,7 @@ Data for Exercise 7.30
 \examples{
 
 str(Statclas)
-boxplot(score ~ class, data = Statclas)
+boxplot(score ~ class, data = Statclas, col = "red")
 t.test(score ~ class, data = Statclas)
 
 }

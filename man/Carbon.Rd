@@ -17,7 +17,7 @@ Data for Exercise 10.28 and 10.29
 }
 \examples{
 
-boxplot(CO ~ site, data = Carbon)
+boxplot(CO ~ site, data = Carbon, col = "lightgreen")
 kruskal.test(CO ~ site, data = Carbon)
 
 }

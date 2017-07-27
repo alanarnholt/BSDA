@@ -32,7 +32,9 @@ NULL
 #' qqnorm(Abbey$price)
 #' qqline(Abbey$price)
 #' t.test(Abbey$price, mu = 300)
-#' hist(Abbey$price)
+#' hist(Abbey$price, main = "Exercise 6.39", 
+#'      xlab = "daily price returns (in pence)",
+#'      col = "blue")
 #' 
 "Abbey"
 
@@ -193,7 +195,7 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
-#' \item{days}{a numeric vector} 
+#' \item{days}{days absent} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
 #' Duxbury
@@ -202,7 +204,7 @@ NULL
 #' 
 #' CT <- xtabs(~ days, data = Absent)
 #' CT
-#' barplot(CT, col = "pink")
+#' barplot(CT, col = "pink", main = "Exercise 1.28")
 #' plot(ecdf(Absent$days), main = "ECDF")
 #' 
 "Absent"
@@ -255,9 +257,9 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' plot(sales ~ ads, data = Adsales)
+#' plot(sales ~ ads, data = Adsales, main = "Exercise 9.15")
 #' mod <- lm(sales ~ ads, data = Adsales)
-#' abline(mod)
+#' abline(mod, col = "red")
 #' summary(mod)
 #' predict(mod, newdata = data.frame(ads = 6), interval = "conf", level = 0.99)
 #' 
@@ -327,9 +329,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' hist(Aid$payment, xlab = "payment", main = "Your Title Here", 
+#' hist(Aid$payment, xlab = "payment", main = 
+#' "Average monthly payment per person in a family", 
 #' col = "lightblue")
-#' boxplot(Aid$payment)
+#' boxplot(Aid$payment, col = "lightblue")
 #' dotplot(state ~ payment, data = Aid)
 #' 
 "Aid"
@@ -437,7 +440,8 @@ NULL
 #' @examples
 #' 
 #' with(data = Airline, 
-#'      barplot(complaints, names.arg = airline, col = "lightblue")
+#'      barplot(complaints, names.arg = airline, col = "lightblue", 
+#'      las = 2)
 #' )
 #' plot(complaints ~ ontime, data = Airline, pch = 19, col = "red",
 #'      xlab = "On time", ylab = "Complaints")
@@ -548,12 +552,13 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' plot(math ~ anxiety, data = Anxiety)
+#' plot(math ~ anxiety, data = Anxiety, ylab = "score",
+#'      main = "Exercise 2.96")
 #' with(data = Anxiety,
 #' cor(math, anxiety)
 #' )
 #' linmod <- lm(math ~ anxiety, data = Anxiety)
-#' abline(linmod)
+#' abline(linmod, col = "purple")
 #' summary(linmod)
 #' 
 "Anxiety"
@@ -729,7 +734,9 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(time ~ treatment, data = Arthriti)
+#' boxplot(time ~ treatment, data = Arthriti, 
+#' col = c("lightblue", "lightgreen", "yellow"),
+#' ylab = "days")
 #' anova(lm(time ~ treatment, data = Arthriti))
 #' 
 "Arthriti"
@@ -1472,7 +1479,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(survival ~ type, Cancer)
+#' boxplot(survival ~ type, Cancer, col = "blue")
 #' stomach <- Cancer$survival[Cancer$type == "stomach"]
 #' bronchus <- Cancer$survival[Cancer$type == "bronchus"]
 #' boxplot(stomach, ylab = "Days")
@@ -1504,7 +1511,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(CO ~ site, data = Carbon)
+#' boxplot(CO ~ site, data = Carbon, col = "lightgreen")
 #' kruskal.test(CO ~ site, data = Carbon)
 #' 
 "Carbon"
@@ -1563,7 +1570,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(survival ~ treatment, data = Censored)
+#' boxplot(survival ~ treatment, data = Censored, col = "yellow")
 #' wilcox.test(survival ~ treatment, data = Censored, alternative = "greater")
 #' 
 "Censored"
@@ -1806,7 +1813,7 @@ NULL
 #' 
 #' with(data = Chips, 
 #'      boxplot(wafer11, wafer12, wafer13, wafer14, wafer21, 
-#'              wafer22, wafer23, wafer24)
+#'              wafer22, wafer23, wafer24, col = "pink")
 #' )
 #' 
 "Chips"
@@ -1834,7 +1841,7 @@ NULL
 #' 
 #' plot(weight ~ cigarettes, data = Cigarett)
 #' model <- lm(weight ~ cigarettes, data = Cigarett)
-#' abline(model)
+#' abline(model, col = "red")
 #' with(data = Cigarett,
 #'      cor(weight, cigarettes)
 #' )
@@ -1864,7 +1871,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(tar ~ brand, data = Cigar)
+#' boxplot(tar ~ brand, data = Cigar, col = "cyan", ylab = "mg tar")
 #' anova(lm(tar ~ brand, data = Cigar))
 #' 
 "Cigar"
@@ -2263,7 +2270,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(rate ~ year, data = Crime)
+#' boxplot(rate ~ year, data = Crime, col = "red")
 #' 
 "Crime"
 
@@ -2416,7 +2423,9 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(delay ~ carrier, data = Delay)
+#' boxplot(delay ~ carrier, data = Delay, 
+#'         main = "Exercise 10.55", ylab = "minutes",
+#'         col = "pink")
 #' kruskal.test(delay ~carrier, data = Delay)
 #' 
 "Delay"
@@ -2797,7 +2806,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(dbh ~ group, data = Dopamine)
+#' boxplot(dbh ~ group, data = Dopamine, col = "orange")
 #' t.test(dbh ~ group, data = Dopamine, var.equal = TRUE)
 #' 
 "Dopamine"
@@ -2883,7 +2892,8 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(trials ~ group, data = Drug)
+#' boxplot(trials ~ group, data = Drug,
+#'         main = "Example 7.15", col = c("yellow", "red"))
 #' wilcox.test(trials ~ group, data = Drug)
 #' t.test(rank(trials) ~ group, data = Drug, var.equal = TRUE)
 #' 
@@ -2917,7 +2927,8 @@ NULL
 #' @examples
 #' 
 #' plot(height ~ weight, data = Dyslexia)
-#' plot(words ~ factor(handed), data = Dyslexia)
+#' plot(words ~ factor(handed), data = Dyslexia,
+#'      xlab = "hand", col = "lightblue")
 #' 
 "Dyslexia"
 
@@ -3015,7 +3026,7 @@ NULL
 #' 
 #' plot(eggs ~ feed, data = Eggs)
 #' model <- lm(eggs ~ feed, data = Eggs)
-#' abline(model)
+#' abline(model, col = "red")
 #' summary(model)
 #' rm(model)
 #' 
@@ -3095,7 +3106,7 @@ NULL
 #' plot(kilowatt ~ size, data = Energy)
 #' with(data = Energy, cor(size, kilowatt))
 #' model <- lm(kilowatt ~ size, data = Energy)
-#' plot(Energy$size, resid(model))
+#' plot(Energy$size, resid(model), xlab = "size")
 #' 
 "Energy"
 
@@ -3117,7 +3128,8 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(salary ~ university, data = Engineer)
+#' boxplot(salary ~ university, data = Engineer,
+#'         main = "Example 10.7", col = "yellow")
 #' kruskal.test(salary ~ university, data = Engineer)
 #' anova(lm(salary ~ university, data = Engineer))
 #' anova(lm(rank(salary) ~ university, data = Engineer))
@@ -3239,7 +3251,7 @@ NULL
 #' 
 #' summary(Epatwoseater$cty)
 #' plot(hwy ~ cty, data = Epatwoseater)
-#' boxplot(cty ~ drv, data = Epatwoseater)
+#' boxplot(cty ~ drv, data = Epatwoseater, col = "lightgreen")
 #' 
 "Epatwoseater"
 
@@ -3388,7 +3400,7 @@ NULL
 #' @examples
 #' 
 #' plot(cost ~ number, data = Family)
-#' abline(lm(cost ~ number, data = Family))
+#' abline(lm(cost ~ number, data = Family), col = "red")
 #' cor(Family$cost, Family$number)
 #' 
 #' \dontrun{
@@ -4275,7 +4287,7 @@ NULL
 #' 
 #' plot(number ~ age, data = Gym)
 #' model <- lm(number ~ age, data = Gym)
-#' abline(model)
+#' abline(model, col = "red")
 #' summary(model)
 #' 
 "Gym"
@@ -4399,7 +4411,7 @@ NULL
 #' 
 #' plot(tensile ~ hardwood, data = Hardwood)
 #' model <- lm(tensile ~ hardwood, data = Hardwood)
-#' abline(model)
+#' abline(model, col = "red")
 #' plot(model, which = 1)
 #' 
 #' 
@@ -4766,7 +4778,7 @@ NULL
 #' @examples
 #' 
 #' plot(Newfoundland ~ `Grand Banks`, data = Iceberg)
-#' abline(lm(Newfoundland ~ `Grand Banks`, data = Iceberg))
+#' abline(lm(Newfoundland ~ `Grand Banks`, data = Iceberg), col = "blue")
 #' 
 "Iceberg"
 
@@ -4847,7 +4859,7 @@ NULL
 #' qqline(Independent$score[Independent$group=="A"])
 #' qqnorm(Independent$score[Independent$group=="B"])
 #' qqline(Independent$score[Independent$group=="B"])
-#' boxplot(score ~ group, data = Independent)
+#' boxplot(score ~ group, data = Independent, col = "blue")
 #' wilcox.test(score ~ group, data = Independent)
 #' 
 "Independent"
@@ -5253,7 +5265,7 @@ NULL
 #' 
 #' plot(satisfaction ~ wspt, data = Jobsat)
 #' model <- lm(satisfaction ~ wspt, data = Jobsat)
-#' abline(model)
+#' abline(model, col = "blue")
 #' summary(model)
 #' rm(model)
 #' 
@@ -5413,7 +5425,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(lead ~ group, data = Lead)
+#' boxplot(lead ~ group, data = Lead, col = topo.colors(2))
 #' 
 "Lead"
 
@@ -5520,7 +5532,7 @@ NULL
 #' 
 #' plot(life ~ heat, data = Lifespan)
 #' model <- lm(life ~ heat, data = Lifespan)
-#' abline(model)
+#' abline(model, col = "red")
 #' resid(model)
 #' sum((resid(model))^2)
 #' anova(model)
@@ -5560,7 +5572,7 @@ NULL
 #' 
 #' plot(deaths ~ damage, data = Ligntmonth)
 #' model = lm(deaths ~ damage, data = Ligntmonth)
-#' abline(model)
+#' abline(model, col = "red")
 #' rm(model)
 #' 
 "Ligntmonth"
@@ -5680,7 +5692,7 @@ NULL
 #' 
 #' plot(magnesium ~ distance, data = Magnesiu)
 #' model = lm(magnesium ~ distance, data = Magnesiu)
-#' abline(model)
+#' abline(model, col = "red")
 #' summary(model)
 #' rm(model)
 #' 
@@ -5855,7 +5867,7 @@ NULL
 #' 
 #' model <- lm(sat_math ~ profic, data = Mathpro)
 #' plot(sat_math ~ profic, data = Mathpro, ylab = "SAT", xlab = "proficiency")
-#' abline(model)
+#' abline(model, col = "red")
 #' summary(model)
 #' rm(model)
 #' 
@@ -5988,7 +6000,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(Metrent$rent)
+#' boxplot(Metrent$rent, col = "magenta")
 #' t.test(Metrent$rent, conf.level = 0.99)$conf
 #' 
 "Metrent"
@@ -6076,7 +6088,7 @@ NULL
 #' 
 #' plot(moisture ~ depth, data = Moisture)
 #' model <- lm(moisture ~ depth, data = Moisture)
-#' abline(model)
+#' abline(model, col = "red")
 #' plot(resid(model) ~ depth, data = Moisture)
 #' rm(model)
 #' 
@@ -6220,7 +6232,7 @@ NULL
 #' 
 #' plot(value ~ revenue, data = Name)
 #' model <- lm(value ~ revenue, data = Name)
-#' abline(model)
+#' abline(model, col = "red")
 #' cor(Name$value, Name$revenue)
 #' summary(model)
 #' rm(model)
@@ -6249,7 +6261,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(time ~ team, data = Nascar)
+#' boxplot(time ~ team, data = Nascar, col = rainbow(3))
 #' model <- lm(time ~ factor(team), data = Nascar)
 #' summary(model)
 #' anova(model)
@@ -6394,7 +6406,7 @@ NULL
 #' 
 #' model <- lm(sales ~ nicotine, data = Nicotine)
 #' plot(sales ~ nicotine, data = Nicotine)
-#' abline(model)
+#' abline(model, col = "red")
 #' summary(model)
 #' predict(model, newdata = data.frame(nicotine = 1), 
 #'         interval = "confidence", level = 0.99)
@@ -6424,7 +6436,7 @@ NULL
 #' 
 #' plot(price ~ harvest, data = Orange)
 #' model <- lm(price ~ harvest, data = Orange)
-#' abline(model)
+#' abline(model, col = "red")
 #' summary(model)
 #' rm(model)
 #' 
@@ -6598,7 +6610,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' plot(brother ~ sister, data = Pearson)
+#' plot(brother ~ sister, data = Pearson, col = "lightblue")
 #' cor(Pearson$brother, Pearson$sister)
 #' 
 "Pearson"
@@ -6752,7 +6764,7 @@ NULL
 #' 
 #' stem(Porosity$porosity)
 #' fivenum(Porosity$porosity)
-#' boxplot(Porosity$porosity)
+#' boxplot(Porosity$porosity, col = "lightgreen")
 #' 
 "Porosity"
 
@@ -6789,7 +6801,7 @@ NULL
 #' 
 #' plot(poverty ~ crime, data = Poverty)
 #' model <- lm(poverty ~ crime, data = Poverty)
-#' abline(model)
+#' abline(model, col = "red")
 #' summary(model)
 #' rm(model)
 #' 
@@ -6818,7 +6830,7 @@ NULL
 #' 
 #' plot(rate ~ income, data = Precinct)
 #' model <- (lm(rate ~ income, data = Precinct))
-#' abline(model)
+#' abline(model, col = "red")
 #' rm(model)
 #' 
 "Precinct"
@@ -7063,7 +7075,7 @@ NULL
 #' @examples
 #' 
 #' stem(Puerto$income)
-#' boxplot(Puerto$income)
+#' boxplot(Puerto$income, col = "purple")
 #' t.test(Puerto$income,conf.level = .90)$conf
 #' 
 "Puerto"
@@ -7119,7 +7131,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(score ~ process, data = Quality)
+#' boxplot(score ~ process, data = Quality, col = "lightgreen")
 #' t.test(score ~ process, data = Quality)
 #' 
 "Quality"
@@ -7181,7 +7193,7 @@ NULL
 #' 
 #' plot(sales ~ rd, data = Randd)
 #' model <- lm(sales ~ rd, data = Randd)
-#' abline(model)
+#' abline(model, col = "purple")
 #' summary(model)
 #' plot(model, which = 1)
 #' rm(model)
@@ -7331,7 +7343,7 @@ NULL
 #' 
 #' plot(reading ~ iq, data = Readiq)
 #' model <- lm(reading ~ iq, data = Readiq)
-#' abline(model)
+#' abline(model, col = "purple")
 #' predict(model, newdata = data.frame(iq = c(100, 120)))
 #' residuals(model)[c(6, 7)]
 #' rm(model)
@@ -7388,7 +7400,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(pollution ~ region, data = Region)
+#' boxplot(pollution ~ region, data = Region, col = "gray")
 #' anova(lm(pollution ~ region, data = Region))
 #' 
 "Region"
@@ -7416,7 +7428,7 @@ NULL
 #' 
 #' plot(cost ~ age, data = Register)
 #' model <- lm(cost ~ age, data = Register)
-#' abline(model)
+#' abline(model, col = "red")
 #' predict(model, newdata = data.frame(age = c(5, 10)))
 #' plot(model, which = 1)
 #' rm(model)
@@ -7560,7 +7572,7 @@ NULL
 #' 
 #' plot(sales ~ months, data = Retail)
 #' model <- lm(sales ~ months, data = Retail)
-#' abline(model)
+#' abline(model, col = "blue")
 #' summary(model)
 #' 
 "Retail"
@@ -7773,8 +7785,8 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(par ~ state, data = Saving)
-#' boxplot(par ~ state, data = Saving, log = "y")
+#' boxplot(par ~ state, data = Saving, col = "red")
+#' boxplot(par ~ state, data = Saving, log = "y", col = "red")
 #' model <- aov(par ~ state, data = Saving)
 #' summary(model)
 #' plot(TukeyHSD(model))
@@ -8017,7 +8029,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(response ~ treatment, data = Shkdrug)
+#' boxplot(response ~ treatment, data = Shkdrug, col = "gray")
 #' model <- lm(response ~ treatment, data = Shkdrug)
 #' anova(model)
 #' rm(model)
@@ -8046,7 +8058,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(attempts ~ group, data = Shock)
+#' boxplot(attempts ~ group, data = Shock, col = "violet")
 #' model <- lm(attempts ~ group, data = Shock)
 #' anova(model)
 #' rm(model)
@@ -8162,8 +8174,8 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(gpa ~ gender, data = Simpson)
-#' boxplot(gpa ~ sport, data = Simpson)
+#' boxplot(gpa ~ gender, data = Simpson, col = "violet")
+#' boxplot(gpa ~ sport, data = Simpson, col = "lightgreen")
 #' \dontrun{
 #' library(ggplot2)
 #' ggplot2::ggplot(data = Simpson, aes(x = gender, y = gpa, fill = gender)) +
@@ -8256,7 +8268,7 @@ NULL
 #' @examples
 #' 
 #' stem(Skin$differ)
-#' boxplot(Skin$differ)
+#' boxplot(Skin$differ, col = "pink")
 #' summary(Skin$differ)
 #' 
 "Skin"
@@ -8558,7 +8570,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(score ~ teacher, data = Spellers)
+#' boxplot(score ~ teacher, data = Spellers, col = "pink")
 #' t.test(score ~ teacher, data = Spellers)
 #' 
 "Spellers"
@@ -8731,7 +8743,7 @@ NULL
 #' @examples
 #' 
 #' str(Statclas)
-#' boxplot(score ~ class, data = Statclas)
+#' boxplot(score ~ class, data = Statclas, col = "red")
 #' t.test(score ~ class, data = Statclas)
 #' 
 "Statclas"
@@ -8788,7 +8800,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(score ~ class, data = Statisti)
+#' boxplot(score ~ class, data = Statisti, col = "violet")
 #' tapply(Statisti$score, Statisti$class, summary, na.rm = TRUE)
 #' \dontrun{
 #' library(dplyr)
@@ -8881,7 +8893,7 @@ NULL
 #' @examples
 #' 
 #' stem(Study$hours)
-#' hist(Study$hours)
+#' hist(Study$hours, col = "violet")
 #' summary(Study$hours)
 #' 
 "Study"
@@ -9225,7 +9237,7 @@ NULL
 #' @examples
 #' 
 #' stem(Test1$score)
-#' boxplot(Test1$score)
+#' boxplot(Test1$score, col = "purple")
 #' 
 "Test1"
 
@@ -9253,7 +9265,7 @@ NULL
 #' model <- lm(loss ~ temp, data = Thermal)
 #' summary(model)
 #' plot(loss ~ temp, data = Thermal)
-#' abline(model)
+#' abline(model, col = "red")
 #' rm(model)
 #' 
 "Thermal"
@@ -9438,11 +9450,11 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' hist(Toxic$sites)
-#' hist(Toxic$minority)
+#' hist(Toxic$sites, col = "red")
+#' hist(Toxic$minority, col = "blue")
 #' qqnorm(Toxic$minority)
 #' qqline(Toxic$minority)
-#' boxplot(sites ~ region, data = Toxic)
+#' boxplot(sites ~ region, data = Toxic, col = "lightgreen")
 #' tapply(Toxic$sites, Toxic$region, median)
 #' kruskal.test(sites ~ factor(region), data = Toxic)
 #' 
@@ -9535,7 +9547,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(score ~ group, data = Treatments)
+#' boxplot(score ~ group, data = Treatments, col = "violet")
 #' summary(aov(score ~ group, data = Treatments))
 #' summary(lm(score ~ group, data = Treatments))
 #' anova(lm(score ~ group, data = Treatments))
@@ -9723,7 +9735,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(Vacation$number)
+#' boxplot(Vacation$number, col = "violet")
 #' hist(Vacation$number, main = "Exercise 6.46", col = "blue",
 #'      xlab = "number of days of paid holidays and vacation leave taken")
 #'      t.test(Vacation$number, mu = 24)
@@ -9815,7 +9827,7 @@ NULL
 #' @examples
 #' 
 #' plot(verbal ~ number, data = Verbal)
-#' abline(lm(verbal ~ number, data = Verbal))
+#' abline(lm(verbal ~ number, data = Verbal), col = "red")
 #' summary(lm(verbal ~ number, data = Verbal))
 #' 
 "Verbal"
@@ -9875,7 +9887,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' boxplot(Viscosit$first, Viscosit$second)
+#' boxplot(Viscosit$first, Viscosit$second, col = "blue")
 #' t.test(Viscosit$first, Viscosit$second, var.equal = TRUE)
 #' 
 "Viscosit"

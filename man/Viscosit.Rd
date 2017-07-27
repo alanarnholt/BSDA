@@ -17,7 +17,7 @@ Data for Exercise 7.44
 }
 \examples{
 
-boxplot(Viscosit$first, Viscosit$second)
+boxplot(Viscosit$first, Viscosit$second, col = "blue")
 t.test(Viscosit$first, Viscosit$second, var.equal = TRUE)
 
 }

@@ -20,11 +20,11 @@ Data for Exercises 1.55, 5.08, 5.109, 8.58, and 10.35
 }
 \examples{
 
-hist(Toxic$sites)
-hist(Toxic$minority)
+hist(Toxic$sites, col = "red")
+hist(Toxic$minority, col = "blue")
 qqnorm(Toxic$minority)
 qqline(Toxic$minority)
-boxplot(sites ~ region, data = Toxic)
+boxplot(sites ~ region, data = Toxic, col = "lightgreen")
 tapply(Toxic$sites, Toxic$region, median)
 kruskal.test(sites ~ factor(region), data = Toxic)
 

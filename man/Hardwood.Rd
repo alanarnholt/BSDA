@@ -24,7 +24,7 @@ Data for Example 2.18 and Exercise 9.34
 
 plot(tensile ~ hardwood, data = Hardwood)
 model <- lm(tensile ~ hardwood, data = Hardwood)
-abline(model)
+abline(model, col = "red")
 plot(model, which = 1)
 
 

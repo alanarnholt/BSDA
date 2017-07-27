@@ -17,7 +17,7 @@ Data for Exercise 7.81
 }
 \examples{
 
-boxplot(score ~ process, data = Quality)
+boxplot(score ~ process, data = Quality, col = "lightgreen")
 t.test(score ~ process, data = Quality)
 
 }
