@@ -104,19 +104,18 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>boxplot</span>(<span class='no'>score</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)</div><div class='img'><img src='Rural-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>score</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>score</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)</div><img src='Rural-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>wilcox.test</span>(<span class='no'>score</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: cannot compute exact p-value with ties</span></div><div class='output co'>#&gt; 
 #&gt; 	Wilcoxon rank sum test with continuity correction
 #&gt; 
 #&gt; data:  score by area
 #&gt; W = 178, p-value = 0.1346
 #&gt; alternative hypothesis: true location shift is not equal to 0
-#&gt; </div><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>dplyr</span>)
-<span class='no'>Rural</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='no'>Rural</span>, <span class='kw'>r</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>score</span>))
-<span class='no'>Rural</span>
-<span class='fu'>t.test</span>(<span class='no'>r</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)
-<span class='co'># }</span><div class='input'>
-</div></pre>
+#&gt; </div><div class='input'><span class='fu'>not_run</span>({
+  <span class='fu'>library</span>(<span class='no'>dplyr</span>)
+  <span class='no'>Rural</span> <span class='kw'>&lt;-</span> <span class='kw'>dplyr</span><span class='kw'>::</span><span class='fu'>mutate</span>(<span class='no'>Rural</span>, <span class='kw'>r</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>score</span>))
+  <span class='no'>Rural</span>
+  <span class='fu'>t.test</span>(<span class='no'>r</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

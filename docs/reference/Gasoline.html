@@ -111,14 +111,13 @@ Duxbury</p>
 #&gt;   15 | 9
 #&gt;   16 | 001
 #&gt; </div><div class='input'>
-</div><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Gasoline</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'>factor</span>(<span class='fl'>1</span>), <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>price</span>)) +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_violin'>geom_violin</a></span>() +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_jitter'>geom_jitter</a></span>() +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>()
-<span class='co'># }</span><div class='input'>
-</div></pre>
+<span class='fu'>not_run</span>({
+  <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Gasoline</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'>factor</span>(<span class='fl'>1</span>), <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>price</span>)) +
+             <span class='fu'>geom_violin</span>() +
+             <span class='fu'>geom_jitter</span>() +
+             <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

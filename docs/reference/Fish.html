@@ -124,11 +124,10 @@ Duxbury</p>
 #&gt; </div><div class='output co'>#&gt;                   Conf.Level L.E.pt U.E.pt
 #&gt; Lower Achieved CI     0.9877     33     34
 #&gt; Interpolated CI       0.9900     33     34
-#&gt; Upper Achieved CI     0.9900     33     34</div><span class='co'># NOT RUN {</span>
-<span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>Fish</span>, <span class='no'>codend</span>) <span class='kw'>%&gt;%</span>
-         <span class='fu'>summarize</span>(<span class='kw'>MEDIAN</span> <span class='kw'>=</span> <span class='fu'>median</span>(<span class='no'>length</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))
-<span class='co'># }</span><div class='input'>
-</div></pre>
+#&gt; Upper Achieved CI     0.9900     33     34</div><div class='input'><span class='fu'>not_run</span>({
+  <span class='kw'>dplyr</span><span class='kw'>::</span><span class='fu'>group_by</span>(<span class='no'>Fish</span>, <span class='no'>codend</span>) <span class='kw'>%&gt;%</span>
+           <span class='fu'>summarize</span>(<span class='kw'>MEDIAN</span> <span class='kw'>=</span> <span class='fu'>median</span>(<span class='no'>length</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

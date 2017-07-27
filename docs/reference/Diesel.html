@@ -113,19 +113,20 @@ Duxbury</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>par</span>(<span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>2</span>)
-<span class='fu'>boxplot</span>(<span class='no'>pricepergallon</span> ~ <span class='no'>location</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Diesel</span>)</div><div class='img'><img src='Diesel-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>pricepergallon</span> ~ <span class='no'>location</span>,
+<span class='fu'>boxplot</span>(<span class='no'>pricepergallon</span> ~ <span class='no'>location</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Diesel</span>)</div><img src='Diesel-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>boxplot</span>(<span class='no'>pricepergallon</span> ~ <span class='no'>location</span>,
        <span class='kw'>data</span> <span class='kw'>=</span> <span class='fu'>droplevels</span>(<span class='no'>Diesel</span>[<span class='no'>Diesel</span>$<span class='no'>location</span> <span class='kw'>==</span> <span class='st'>"EastCoast"</span> <span class='kw'>|</span>
        <span class='no'>Diesel</span>$<span class='no'>location</span> <span class='kw'>==</span> <span class='st'>"Gulf"</span> <span class='kw'>|</span> <span class='no'>Diesel</span>$<span class='no'>location</span> <span class='kw'>==</span> <span class='st'>"NatAvg"</span> <span class='kw'>|</span>
        <span class='no'>Diesel</span>$<span class='no'>location</span> <span class='kw'>==</span> <span class='st'>"Rocky"</span> <span class='kw'>|</span> <span class='no'>Diesel</span>$<span class='no'>location</span> <span class='kw'>==</span> <span class='st'>"California"</span>, ]),
-       <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"pink"</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Exercise 2.8"</span>)</div><div class='img'><img src='Diesel-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>par</span>(<span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Diesel</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>date</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>pricepergallon</span>,
-           <span class='kw'>color</span> <span class='kw'>=</span> <span class='no'>location</span>)) +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_point'>geom_point</a></span>() +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_smooth'>geom_smooth</a></span>(<span class='kw'>se</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>) +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>() +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/labs'>labs</a></span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>"Price per Gallon (in dollars)"</span>)
-<span class='co'># }</span></pre>
+       <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"pink"</span>, <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Exercise 2.8"</span>)</div><img src='Diesel-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>par</span>(<span class='kw'>las</span> <span class='kw'>=</span> <span class='fl'>1</span>)
+<span class='fu'>not_run</span>({
+  <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Diesel</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>date</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>pricepergallon</span>,
+             <span class='kw'>color</span> <span class='kw'>=</span> <span class='no'>location</span>)) +
+             <span class='fu'>geom_point</span>() +
+             <span class='fu'>geom_smooth</span>(<span class='kw'>se</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>) +
+             <span class='fu'>theme_bw</span>() +
+             <span class='fu'>labs</span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>"Price per Gallon (in dollars)"</span>)
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -107,13 +107,13 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>boxplot</span>(<span class='no'>gpa</span> ~ <span class='no'>gender</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>)</div><div class='img'><img src='Simpson-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>gpa</span> ~ <span class='no'>sport</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>)</div><div class='img'><img src='Simpson-2.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
-<span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>gender</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>gpa</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>gender</span>)) +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_boxplot'>geom_boxplot</a></span>() +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/facet_grid'>facet_grid</a></span>(<span class='no'>.</span>~<span class='no'>sport</span>) +
-           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>()
-<span class='co'># }</span></pre>
+<span class='fu'>boxplot</span>(<span class='no'>gpa</span> ~ <span class='no'>gender</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"violet"</span>)</div><img src='Simpson-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>boxplot</span>(<span class='no'>gpa</span> ~ <span class='no'>sport</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='st'>"lightgreen"</span>)</div><img src='Simpson-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>not_run</span>({
+  <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Simpson</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>gender</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>gpa</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>gender</span>)) +
+             <span class='fu'>geom_boxplot</span>() +
+             <span class='fu'>facet_grid</span>(<span class='no'>.</span>~<span class='no'>sport</span>) +
+             <span class='fu'>theme_bw</span>()
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

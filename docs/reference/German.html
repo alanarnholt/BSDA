@@ -126,15 +126,14 @@ Duxbury</p>
 #&gt; W = 26, p-value = 0.0739
 #&gt; alternative hypothesis: true location shift is not equal to 0
 #&gt; </div><div class='input'>
-</div><span class='co'># NOT RUN {</span>
-<span class='no'>T8</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>tidyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/tidyr/topics/spread'>spread</a></span>(<span class='no'>German</span>, <span class='no'>when</span>, <span class='no'>errors</span>) <span class='kw'>%&gt;%</span>
-<span class='fu'>mutate</span>(<span class='kw'>di</span> <span class='kw'>=</span> <span class='no'>After</span> - <span class='no'>Before</span>, <span class='kw'>adi</span> <span class='kw'>=</span> <span class='fu'>abs</span>(<span class='no'>di</span>), <span class='kw'>rk</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>adi</span>), <span class='kw'>srk</span> <span class='kw'>=</span> <span class='fu'>sign</span>(<span class='no'>di</span>)*<span class='no'>rk</span>)
-<span class='no'>T8</span>
-<span class='fu'>qqnorm</span>(<span class='no'>T8</span>$<span class='no'>di</span>)
-<span class='fu'>qqline</span>(<span class='no'>T8</span>$<span class='no'>di</span>)
-<span class='fu'>t.test</span>(<span class='no'>T8</span>$<span class='no'>srk</span>)
-<span class='co'># }</span><div class='input'>
-</div></pre>
+<span class='fu'>not_run</span>({
+  <span class='no'>T8</span> <span class='kw'>&lt;-</span> <span class='kw'>tidyr</span><span class='kw'>::</span><span class='fu'>spread</span>(<span class='no'>German</span>, <span class='no'>when</span>, <span class='no'>errors</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>mutate</span>(<span class='kw'>di</span> <span class='kw'>=</span> <span class='no'>After</span> - <span class='no'>Before</span>, <span class='kw'>adi</span> <span class='kw'>=</span> <span class='fu'>abs</span>(<span class='no'>di</span>), <span class='kw'>rk</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>adi</span>), <span class='kw'>srk</span> <span class='kw'>=</span> <span class='fu'>sign</span>(<span class='no'>di</span>)*<span class='no'>rk</span>)
+  <span class='no'>T8</span>
+  <span class='fu'>qqnorm</span>(<span class='no'>T8</span>$<span class='no'>di</span>)
+  <span class='fu'>qqline</span>(<span class='no'>T8</span>$<span class='no'>di</span>)
+  <span class='fu'>t.test</span>(<span class='no'>T8</span>$<span class='no'>srk</span>)
+})</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
