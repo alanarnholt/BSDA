@@ -5,7 +5,7 @@
 \title{Sign Test}
 \usage{
 SIGN.test(x, y = NULL, md = 0, alternative = "two.sided",
-  conf.level = 0.95)
+  conf.level = 0.95, ...)
 }
 \arguments{
 \item{x}{numeric vector; \code{NA}s and \code{Inf}s are allowed but will be
@@ -25,14 +25,16 @@ in relation to the hypothesized value of the median.}
 
 \item{conf.level}{confidence level for the returned confidence interval,
 restricted to lie between zero and one}
+
+\item{...}{further arguments to be passed to or from methods}
 }
 \value{
-A list of class \code{htest}, containing the following components:
+A list of class \code{htest_S}, containing the following components:
 \item{statistic}{the S-statistic (the number of positive differences between
 the data and the hypothesized median), with names attribute \dQuote{S}.}
-\item{p.value}{the p-value for the test} \item{conf.int}{is a confidence
-interval (vector of length 2) for the true median based on linear
-interpolation. The confidence level is recorded in the attribute
+\item{p.value}{the p-value for the test} 
+\item{conf.int}{is a confidence interval (vector of length 2) for the true 
+median based on linear interpolation. The confidence level is recorded in the attribute
 \code{conf.level}. When the alternative is not \code{"two.sided"}, the
 confidence interval will be half-infinite, to reflect the interpretation of
 a confidence interval as the set of all values \code{k} for which one would
@@ -40,13 +42,17 @@ not reject the null hypothesis that the true mean or difference in means is
 \code{k}. Here infinity will be represented by \code{Inf}.}
 \item{estimate}{is avector of length 1, giving the sample median; this
 estimates the corresponding population parameter. Component \code{estimate}
-has a names attribute describing its elements.} \item{null.value}{is the
-value of the median specified by the null hypothesis. This equals the input
-argument \code{md}. Component \code{null.value} has a names attribute
-describing its elements.} \item{alternative}{records the value of the input
-argument alternative: \code{"greater"}, \code{"less"}, or
-\code{"two.sided"}} \item{data.name}{a character string (vector of length 1)
+has a names attribute describing its elements.} 
+\item{null.value}{is the value of the median specified by the null hypothesis. 
+This equals the input argument \code{md}. Component \code{null.value} has a 
+names attribute describing its elements.} 
+\item{alternative}{records the value of the input argument alternative: 
+\code{"greater"}, \code{"less"}, or \code{"two.sided"}} 
+\item{data.name}{a character string (vector of length 1)
 containing the actual name of the input vector \code{x}}
+\item{Confidence.Intervals}{a 3 by 3 matrix containing the lower achieved 
+confidence interval, the interpolated confidence interval, and the upper 
+achived confidence interval}
 }
 \description{
 This function will test a hypothesis based on the sign test and reports
@@ -74,7 +80,7 @@ direction of divergence of the population median for \code{x} from \code{md}
 \examples{
 
 x <- c(7.8, 6.6, 6.5, 7.4, 7.3, 7., 6.4, 7.1, 6.7, 7.6, 6.8)
-SIGN.test(x,md=6.5)
+SIGN.test(x, md = 6.5)
         # Computes two-sided sign-test for the null hypothesis 
         # that the population median for 'x' is 6.5. The alternative 
         # hypothesis is that the median is not 6.5. An interpolated 95\% 
@@ -89,6 +95,7 @@ SIGN.test(reaction, md=15, alternative="less")
         # hypothesis is that the median is less than 15.  
         # An interpolated upper 95\% upper bound for the population 
         # median will be computed.
+        
 
 }
 \references{
@@ -110,4 +117,3 @@ Ranks}. Holden and Day, San Francisco.
 \author{
 Alan T. Arnholt
 }
-\keyword{htest}
