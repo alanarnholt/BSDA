@@ -114,16 +114,16 @@ Duxbury</p>
 #&gt;   4yr college degree     25     28
 #&gt;   Some grad school        5      4
 #&gt;   Grad degree            13     17
-#&gt;   Doctoral degree         1      6</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"blue"</span>, <span class='st'>"red"</span>))</div><img src='Parented-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>rm</span>(<span class='no'>T1</span>)
-<span class='fu'>not_run</span>({
-  <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Parented</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>education</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>parent</span>)) +
-      <span class='fu'>geom_bar</span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
-      <span class='fu'>theme_bw</span>() +
-      <span class='fu'>theme</span>(<span class='kw'>axis.text.x</span>  <span class='kw'>=</span> <span class='fu'>element_text</span>(<span class='kw'>angle</span> <span class='kw'>=</span> <span class='fl'>85</span>, <span class='kw'>vjust</span> <span class='kw'>=</span> <span class='fl'>0.5</span>)) +
-      <span class='fu'>scale_fill_manual</span>(<span class='kw'>values</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"pink"</span>, <span class='st'>"blue"</span>)) +
-      <span class='fu'>labs</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>""</span>)
-})</div></pre>
+#&gt;   Doctoral degree         1      6</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>), <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>legend</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"blue"</span>, <span class='st'>"red"</span>))</div><div class='img'><img src='Parented-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>rm</span>(<span class='no'>T1</span>)</div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Parented</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>education</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>parent</span>)) +
+    <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_bar'>geom_bar</a></span>(<span class='kw'>position</span> <span class='kw'>=</span> <span class='st'>"dodge"</span>) +
+    <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>() +
+    <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/theme'>theme</a></span>(<span class='kw'>axis.text.x</span>  <span class='kw'>=</span> <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/element'>element_text</a></span>(<span class='kw'>angle</span> <span class='kw'>=</span> <span class='fl'>85</span>, <span class='kw'>vjust</span> <span class='kw'>=</span> <span class='fl'>0.5</span>)) +
+    <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/scale_manual'>scale_fill_manual</a></span>(<span class='kw'>values</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"pink"</span>, <span class='st'>"blue"</span>)) +
+    <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/labs'>labs</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>""</span>)
+<span class='co'># }</span><div class='input'>          
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

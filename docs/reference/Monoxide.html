@@ -104,7 +104,7 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>boxplot</span>(<span class='no'>emission</span> ~ <span class='no'>company</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Monoxide</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>topo.colors</span>(<span class='fl'>2</span>))</div><img src='Monoxide-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>t.test</span>(<span class='no'>emission</span> ~ <span class='no'>company</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Monoxide</span>)</div><div class='output co'>#&gt; 
+<span class='fu'>boxplot</span>(<span class='no'>emission</span> ~ <span class='no'>company</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Monoxide</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>topo.colors</span>(<span class='fl'>2</span>))</div><div class='img'><img src='Monoxide-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>emission</span> ~ <span class='no'>company</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Monoxide</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
 #&gt; data:  emission by company
@@ -121,12 +121,13 @@ Duxbury</p>
 #&gt; data:  emission by company
 #&gt; W = 71, p-value = 0.03617
 #&gt; alternative hypothesis: true location shift is not equal to 0
-#&gt; </div><div class='input'><span class='fu'>not_run</span>({
-  <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Monoxide</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>company</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>emission</span>)) +
-             <span class='fu'>geom_boxplot</span>() +
-             <span class='fu'>theme_bw</span>()
-})</div></pre>
+#&gt; </div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Monoxide</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>company</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>emission</span>)) +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_boxplot'>geom_boxplot</a></span>() +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>()
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

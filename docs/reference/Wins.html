@@ -113,13 +113,14 @@ Duxbury</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>plot</span>(<span class='no'>wins</span> ~ <span class='no'>era</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Wins</span>)</div><img src='Wins-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>not_run</span>({
-  <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Wins</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>era</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>wins</span>)) +
-             <span class='fu'>geom_point</span>() +
-             <span class='fu'>geom_smooth</span>(<span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"lm"</span>, <span class='kw'>se</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>) +
-             <span class='fu'>theme_bw</span>()
-})</div></pre>
+<span class='fu'>plot</span>(<span class='no'>wins</span> ~ <span class='no'>era</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Wins</span>)</div><div class='img'><img src='Wins-1.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Wins</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>era</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>wins</span>)) +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_point'>geom_point</a></span>() +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_smooth'>geom_smooth</a></span>(<span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"lm"</span>, <span class='kw'>se</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>) +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>()
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

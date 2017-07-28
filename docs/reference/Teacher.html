@@ -118,15 +118,14 @@ Duxbury</p>
      <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))
 <span class='fu'>hist</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>[<span class='no'>Teacher</span>$<span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"1993-94"</span>],
      <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"Teacher salary 1993-94"</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"salary"</span>,
-     <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))</div><img src='Teacher-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>1</span>))
-<span class='fu'>not_run</span>({
-
-  <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-      <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Teacher</span>, <span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>salary</span>)) +
-                 <span class='fu'>geom_histogram</span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"purple"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>) +
-                 <span class='fu'>facet_grid</span>(<span class='no'>year</span> ~ <span class='no'>.</span>) +
-                 <span class='fu'>theme_bw</span>()
-})</div></pre>
+     <span class='kw'>xlim</span> <span class='kw'>=</span> <span class='fu'>range</span>(<span class='no'>Teacher</span>$<span class='no'>salary</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))</div><div class='img'><img src='Teacher-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>par</span>(<span class='kw'>mfrow</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>1</span>))</div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+    <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Teacher</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>salary</span>)) +
+               <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_histogram'>geom_histogram</a></span>(<span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"purple"</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>) +
+               <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/facet_grid'>facet_grid</a></span>(<span class='no'>year</span> ~ <span class='no'>.</span>) +
+               <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>()
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

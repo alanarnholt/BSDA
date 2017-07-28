@@ -117,7 +117,7 @@ Duxbury</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>stripchart</span>(<span class='no'>qualif</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>, <span class='kw'>method</span> <span class='kw'>=</span> <span class='st'>"stack"</span>,
-           <span class='kw'>pch</span> <span class='kw'>=</span> <span class='fl'>19</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>))</div><img src='Indy500-2.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>boxplot</span>(<span class='no'>qualif</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>)</div><img src='Indy500-4.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>t.test</span>(<span class='no'>qualif</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>)</div><div class='output co'>#&gt; 
+           <span class='kw'>pch</span> <span class='kw'>=</span> <span class='fl'>19</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"red"</span>, <span class='st'>"blue"</span>))</div><div class='img'><img src='Indy500-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>boxplot</span>(<span class='no'>qualif</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>)</div><div class='img'><img src='Indy500-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>t.test</span>(<span class='no'>qualif</span> ~ <span class='no'>group</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>)</div><div class='output co'>#&gt; 
 #&gt; 	Welch Two Sample t-test
 #&gt; 
 #&gt; data:  qualif by group
@@ -128,13 +128,14 @@ Duxbury</p>
 #&gt; sample estimates:
 #&gt; mean in group 1 mean in group 2 
 #&gt;        226.4538        227.8644 
-#&gt; </div><div class='input'><span class='fu'>not_run</span>({
-  <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>, <span class='fu'>aes</span>(<span class='kw'>sample</span> <span class='kw'>=</span> <span class='no'>qualif</span>)) +
-             <span class='fu'>geom_qq</span>() +
-             <span class='fu'>facet_grid</span>(<span class='no'>group</span> ~ <span class='no'>.</span>) +
-             <span class='fu'>theme_bw</span>()
-})</div></pre>
+#&gt; </div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Indy500</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>sample</span> <span class='kw'>=</span> <span class='no'>qualif</span>)) +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_qq'>geom_qq</a></span>() +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/facet_grid'>facet_grid</a></span>(<span class='no'>group</span> ~ <span class='no'>.</span>) +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>()
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

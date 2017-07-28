@@ -132,16 +132,17 @@ Duxbury</p>
 #&gt; opinion        Gender: Male Gender: Female
 #&gt;   Criminal               42             44
 #&gt;   Not Criminal           53             51
-#&gt;   No Opinion              5              5</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>[<span class='fu'>c</span>(<span class='fl'>2</span>, <span class='fl'>3</span>), ]))</div><img src='Gallup-6.png' alt='' width='540' height='400' /><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>[<span class='fu'>c</span>(<span class='fl'>2</span>, <span class='fl'>3</span>), ]), <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><img src='Gallup-8.png' alt='' width='540' height='400' /><div class='input'>
-<span class='fu'>not_run</span>({
-  <span class='fu'>library</span>(<span class='no'>dplyr</span>)
-  <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-  <span class='kw'>dplyr</span><span class='kw'>::</span><span class='fu'>filter</span>(<span class='no'>Gallup</span>, <span class='no'>demographics</span> <span class='kw'>==</span> <span class='st'>"Gender: Male"</span> <span class='kw'>|</span> <span class='no'>demographics</span> <span class='kw'>==</span> <span class='st'>"Gender: Female"</span>) <span class='kw'>%&gt;%</span>
-  <span class='kw'>ggplot2</span><span class='kw'>::</span><span class='fu'>ggplot</span>(<span class='fu'>aes</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>demographics</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>opinion</span>)) +
-             <span class='fu'>geom_bar</span>() +
-             <span class='fu'>theme_bw</span>() +
-             <span class='fu'>labs</span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>"Fraction"</span>)
-})</div></pre>
+#&gt;   No Opinion              5              5</div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>[<span class='fu'>c</span>(<span class='fl'>2</span>, <span class='fl'>3</span>), ]))</div><div class='img'><img src='Gallup-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='fu'>barplot</span>(<span class='fu'>t</span>(<span class='no'>T1</span>[<span class='fu'>c</span>(<span class='fl'>2</span>, <span class='fl'>3</span>), ]), <span class='kw'>beside</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='Gallup-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'>
+</div><span class='co'># NOT RUN {</span>
+<span class='fu'>library</span>(<span class='no'>dplyr</span>)
+<span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+<span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/filter.html'>filter</a></span>(<span class='no'>Gallup</span>, <span class='no'>demographics</span> <span class='kw'>==</span> <span class='st'>"Gender: Male"</span> <span class='kw'>|</span> <span class='no'>demographics</span> <span class='kw'>==</span> <span class='st'>"Gender: Female"</span>) <span class='kw'>%&gt;%</span>
+<span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>demographics</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='no'>opinion</span>)) +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_bar'>geom_bar</a></span>() +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>() +
+           <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/labs'>labs</a></span>(<span class='kw'>y</span> <span class='kw'>=</span> <span class='st'>"Fraction"</span>)
+<span class='co'># }</span><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
