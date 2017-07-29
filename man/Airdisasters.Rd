@@ -11,7 +11,7 @@
 \item{decade}{a character vector indicating the decade of an aircraft accident} 
 }}
 \source{
-2000 \emph{World Almanac and Book of Facts}
+2000 \emph{World Almanac and Book of Facts}.
 }
 \usage{
 Airdisasters
@@ -32,6 +32,6 @@ par(las = 0)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

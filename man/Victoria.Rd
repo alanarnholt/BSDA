@@ -13,7 +13,7 @@
 }}
 \source{
 N. Shaw, \emph{Manual of Meteorology}, Vol. 1 (London: Cambridge University Press, 1942),
-p. 284; and F. Mosteller and J. W. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison-Wesley, 1977)
+p. 284; and F. Mosteller and J. W. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison-Wesley, 1977).
 }
 \usage{
 Victoria
@@ -31,6 +31,6 @@ rm(model)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

@@ -15,7 +15,7 @@ population from the court files of the nation's largest counties}
 }}
 \source{
 U.S. Department of Justice, \emph{Tort Cases in Large Counties}, Bureau of Justice
-Statistics Special Report, April 1995
+Statistics Special Report, April 1995.
 }
 \usage{
 Tort
@@ -30,6 +30,6 @@ EDA(Tort$months)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

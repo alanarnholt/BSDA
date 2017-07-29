@@ -4,7 +4,7 @@
 \name{Carbon}
 \alias{Carbon}
 \title{Carbon monoxide level measured at three industrial sites}
-\format{A data frame/tibble  with 24 observations on two variables
+\format{A data frame/tibble with 24 observations on two variables
 \describe{ 
 \item{CO}{carbon monoxide measured (in parts per million)} 
 \item{site}{a factor with levels \code{SiteA}, \code{SiteB}, and \code{SiteC}} 
@@ -23,6 +23,6 @@ kruskal.test(CO ~ site, data = Carbon)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

@@ -7,7 +7,8 @@
 areas}
 \format{A data frame/tibble with 135 observations on two variables
 \describe{ 
-\item{location}{a factor with the location of the high school student (\code{Rural}, \code{Suburban}, or \code{Urban})} 
+\item{location}{a factor with the location of the high school student 
+(\code{Rural}, \code{Suburban}, or \code{Urban})} 
 \item{hostility}{the score from the Hostility Level Test} 
 }}
 \usage{
@@ -25,6 +26,6 @@ kruskal.test(hostility ~ location, data = Hostile)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

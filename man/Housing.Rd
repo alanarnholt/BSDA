@@ -20,7 +20,7 @@ Angeles}, \code{Louisville}, \code{Memphis}, \code{Miami}, \code{Milwaukee},
 \item{price}{median house price (in dollars)} 
 }}
 \source{
-National Association of Realtors
+National Association of Realtors.
 }
 \usage{
 Housing
@@ -43,6 +43,6 @@ ggplot2::ggplot(data = Housing, aes(x = price, fill = year)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

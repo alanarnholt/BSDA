@@ -12,7 +12,7 @@
 }}
 \source{
 F. Mosteller, S. Fienberg, and R. Rourke, \emph{Beginning Statistics with Data Analysis}
-(Reading, MA: Addison-Wesley, 1983)
+(Reading, MA: Addison-Wesley, 1983).
 }
 \usage{
 Submarin
@@ -31,6 +31,6 @@ rm(model)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

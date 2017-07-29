@@ -12,7 +12,7 @@ dealer}, and \code{tire store}}
 \item{passed}{a factor with levels \code{less than 70\%}, \code{between 70\% and 84\%}, and \code{more than 85\%}}
 }}
 \source{
-\emph{The Charlotte Observer}, December 13, 1992
+\emph{The Charlotte Observer}, December 13, 1992.
 }
 \usage{
 Inspect
@@ -38,6 +38,6 @@ ggplot2::ggplot(data = Inspect, aes(x = passed, fill = station)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

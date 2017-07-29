@@ -12,7 +12,7 @@ hospitals}
 }}
 \source{
 \emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals}
-(August 1994), North Carolina Medical Database Commission, Department of Insurance
+(August 1994), North Carolina Medical Database Commission, Department of Insurance.
 }
 \usage{
 Appendec
@@ -28,6 +28,6 @@ anova(lm(cost ~ region, data = Appendec))
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

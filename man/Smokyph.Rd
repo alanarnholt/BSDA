@@ -7,7 +7,8 @@
 \format{A data frame/tibble with 75 observations on three variables
 \describe{ 
 \item{waterph}{water sample pH level} 
-\item{code}{charater variable with values \code{low} (elevation below 0.6 miles), and \code{high} (elevation above 0.6 miles)} 
+\item{code}{charater variable with values \code{low} (elevation below 0.6 miles), 
+and \code{high} (elevation above 0.6 miles)} 
 \item{elev}{elevation in miles} 
 }}
 \source{
@@ -41,6 +42,6 @@ stripchart(waterph ~ code, data = Smokyph, method = "stack",
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

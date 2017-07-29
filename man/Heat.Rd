@@ -15,7 +15,7 @@ households}
 }}
 \source{
 Bureau of the Census, \emph{Housing of the American Indians on Reservations},
-Statistical Brief 95-11, April 1995
+Statistical Brief 95-11, April 1995.
 }
 \usage{
 Heat
@@ -41,6 +41,6 @@ ggplot2::ggplot(data = Heat, aes(x = fuel, fill = location)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

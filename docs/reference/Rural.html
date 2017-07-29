@@ -99,7 +99,7 @@
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -112,7 +112,7 @@ Duxbury</p>
 #&gt; alternative hypothesis: true location shift is not equal to 0
 #&gt; </div><span class='co'># NOT RUN {</span>
 <span class='fu'>library</span>(<span class='no'>dplyr</span>)
-<span class='no'>Rural</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='no'>Rural</span>, <span class='kw'>r</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>score</span>))
+<span class='no'>Rural</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/dplyr/topics/mutate'>mutate</a></span>(<span class='no'>Rural</span>, <span class='kw'>r</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>score</span>))
 <span class='no'>Rural</span>
 <span class='fu'>t.test</span>(<span class='no'>r</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)
 <span class='co'># }</span><div class='input'>

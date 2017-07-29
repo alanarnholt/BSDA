@@ -12,7 +12,7 @@ workers}
 \item{price}{price for a bushel of wheat (in dollars)} 
 }}
 \source{
-\emph{The World Almanac and Book of Facts}, 2000
+\emph{The World Almanac and Book of Facts}, 2000.
 }
 \usage{
 Wheat
@@ -30,6 +30,6 @@ par(mfrow = c(1, 1))
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

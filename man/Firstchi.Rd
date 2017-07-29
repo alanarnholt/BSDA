@@ -6,7 +6,7 @@
 \title{Ages of women at the birth of their first child}
 \format{A data frame/tibble with 87 observations on one variable
 \describe{ 
-\item{age}{a numeric vector} 
+\item{age}{age of woman at birth of her first child} 
 }}
 \usage{
 Firstchi
@@ -21,6 +21,6 @@ EDA(Firstchi$age)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

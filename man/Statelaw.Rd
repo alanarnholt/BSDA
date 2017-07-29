@@ -11,8 +11,8 @@ agencies}
 \item{cost}{dollars spent per resident on law enforcement} 
 }}
 \source{
-Bureau of Justice Statistics, \emph{Law Enforcement Management and Administrative Statistics, 1993},
-NCJ-148825, September 1995, page 84.
+Bureau of Justice Statistics, \emph{Law Enforcement Management and 
+Administrative Statistics, 1993}, NCJ-148825, September 1995, page 84.
 }
 \usage{
 Statelaw
@@ -28,6 +28,6 @@ SIGN.test(Statelaw$cost, md = 8, alternative = "less")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

@@ -12,7 +12,7 @@ antipsychotic drug}
 }}
 \source{
 D.E. Sternberg, D.P. Van Kammen, and W.E. Bunney, "Schizophrenia: Dopamine
-b-Hydroxylase Activity and Treatment Respsonse," \emph{Science, 216} (1982), 1423 - 1425
+b-Hydroxylase Activity and Treatment Respsonse," \emph{Science, 216} (1982), 1423 - 1425.
 }
 \usage{
 Dopamine
@@ -28,6 +28,6 @@ t.test(dbh ~ group, data = Dopamine, var.equal = TRUE)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

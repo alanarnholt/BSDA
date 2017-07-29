@@ -6,7 +6,7 @@
 \title{Choice of vice presidental candidate in 1984 by gender}
 \format{A data frame/tibble with 1000 observations on two variables
 \describe{ 
-\item{gender}{a factor with levels \code{Men}
+\item{gender}{a factor with levels \code{Men} and
 \code{Women}} 
 \item{candidate}{a character vector of 1984 president and vice-president candidates} 
 }}
@@ -26,6 +26,6 @@ rm(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

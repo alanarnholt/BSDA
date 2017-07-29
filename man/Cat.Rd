@@ -4,7 +4,7 @@
 \name{Cat}
 \alias{Cat}
 \title{Reading scores on the California achievement test for a group of 3rd graders}
-\format{A data frame/tibble  with 17 observations on one variable
+\format{A data frame/tibble with 17 observations on one variable
 \describe{ 
 \item{score}{reading score on the California Achievement Test} 
 }}
@@ -23,6 +23,6 @@ boxplot(Cat$score, main = "Problem 1.116", col = "green")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

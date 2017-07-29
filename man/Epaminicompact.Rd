@@ -26,7 +26,7 @@ and \code{R}(rear wheel drive)}
 \item{cmb}{combined city and highway mpg} 
 }}
 \source{
-EPA data
+EPA data.
 }
 \usage{
 Epaminicompact
@@ -42,6 +42,6 @@ plot(hwy ~ cty, data = Epaminicompact)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

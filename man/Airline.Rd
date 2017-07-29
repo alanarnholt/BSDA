@@ -6,15 +6,15 @@
 \title{Percentage of on-time arrivals and number of complaints for 11 airlines}
 \format{A data frame/tibble with 11 observations on three variables
 \describe{ 
-\item{airline}{a charater variable with values \code{Alaska}
-\code{Amer West} \code{American} \code{Continental} \code{Delta}
-\code{Northwest} \code{Pan Am} \code{Southwest} \code{TWA} \code{United}
-\code{USAir}} 
+\item{airline}{a charater variable with values \code{Alaska},
+\code{Amer West}, \code{American}, \code{Continental}, \code{Delta},
+\code{Northwest}, \code{Pan Am}, \code{Southwest}, \code{TWA}, 
+\code{United}, and \code{USAir}} 
 \item{ontime}{a numeric vector}
 \item{complaints}{complaints per 1000 passengers} 
 }}
 \source{
-Transportation Department
+Transportation Department.
 }
 \usage{
 Airline
@@ -34,6 +34,6 @@ plot(complaints ~ ontime, data = Airline, pch = 19, col = "red",
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

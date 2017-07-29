@@ -6,7 +6,8 @@
 \title{Convictions in spouse murder cases by gender}
 \format{A data frame/tibble with 540 observations on two variables
 \describe{ 
-\item{result}{a factor with levels \code{not prosecuted}, \code{pleaded guilty}, \code{convicted}, and \code{acquited}}
+\item{result}{a factor with levels \code{not prosecuted}, \code{pleaded guilty}, 
+\code{convicted}, and \code{acquited}}
 \item{spouse}{a factor with levels \code{husband} and \code{wife}} 
 }}
 \source{
@@ -29,6 +30,6 @@ rm(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

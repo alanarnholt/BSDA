@@ -15,7 +15,7 @@ conducted in 1980}
 }}
 \source{
 George H. Gallup \emph{The Gallup Opinion Index Report No. 179} (Princeton, NJ:
-The Gallup Poll, July 1980), p. 15
+The Gallup Poll, July 1980), p. 15.
 }
 \usage{
 Gallup
@@ -44,6 +44,6 @@ ggplot2::ggplot(aes(x = demographics, fill = opinion)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

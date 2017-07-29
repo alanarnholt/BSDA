@@ -10,7 +10,7 @@ semester 1995}
 \item{score}{first exam score} 
 }}
 \source{
-Data provided by Dr. Anita Kitchens
+Data provided by Dr. Anita Kitchens.
 }
 \usage{
 Devmath
@@ -26,6 +26,6 @@ t.test(Devmath$score, mu = 80, alternative = "less")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

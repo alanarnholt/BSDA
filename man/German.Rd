@@ -8,9 +8,9 @@ experimental course in German}
 \format{A data frame/tibble with ten observations on three variables
 \describe{ 
 \item{student}{a character variable indicating student number} 
-\item{when}{a character variable with either code\{Before} or \code{After} 
-to indicate when the student received experimental instruction in German
-\item{errors}{A vector containing the number of errors}
+\item{when}{a character variable with values \code{Before} and \code{After} 
+to indicate when the student received experimental instruction in German}
+\item{errors}{the number of errors in copying a German passage}
 }}
 \usage{
 German
@@ -35,6 +35,6 @@ t.test(T8$srk)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

@@ -10,7 +10,7 @@
 \item{car}{name of sports car} 
 }}
 \source{
-\emph{Car and Drvier} (July 1995)
+\emph{Car and Drvier} (July 1995).
 }
 \usage{
 Supercar
@@ -28,6 +28,6 @@ anova(lm(speed ~ car, data = Supercar))
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

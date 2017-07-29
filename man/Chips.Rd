@@ -5,7 +5,7 @@
 \alias{Chips}
 \title{Four measurements on a first wafer and four measurements on a second wafer
 selected from 30 lots}
-\format{A data frame/tibble  with 30 observations on eight variables
+\format{A data frame/tibble with 30 observations on eight variables
 \describe{ 
 \item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
 \item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
@@ -37,6 +37,6 @@ with(data = Chips,
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

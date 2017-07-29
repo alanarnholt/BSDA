@@ -7,7 +7,8 @@
 community college}
 \format{A data frame/tibble with 31 observations one variable
 \describe{ 
-\item{score}{scores of 31 entering freshmen at a community college on a national standardized test} 
+\item{score}{scores of 31 entering freshmen at a community college 
+on a national standardized test} 
 }}
 \usage{
 Mathcomp
@@ -23,6 +24,6 @@ EDA(Mathcomp$score)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

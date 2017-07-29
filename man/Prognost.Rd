@@ -11,7 +11,7 @@ modification therapy}
 }}
 \source{
 Newmark, C., et al. (1973), Predictive Validity of the Rorschach Prognostic Rating Scale
-with Behavior Modification Techniques, \emph{Journal of Clinical Psychology, 29}, 246-248
+with Behavior Modification Techniques, \emph{Journal of Clinical Psychology, 29}, 246-248.
 }
 \usage{
 Prognost
@@ -27,6 +27,6 @@ t.test(Prognost$kprs_score, mu = 9)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

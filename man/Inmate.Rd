@@ -8,11 +8,12 @@
 \describe{ 
 \item{race}{a factor with levels \code{white},
 \code{black}, and \code{hispanic}} 
-\item{drug}{a factor with levels \code{heroin}, \code{crack}, \code{cocaine}, and \code{marijuana}}
+\item{drug}{a factor with levels \code{heroin}, \code{crack}, \code{cocaine}, 
+and \code{marijuana}}
 }}
 \source{
 C. Wolf Harlow (1994), \emph{Comparing Federal and State Prison Inmates},
-NCJ-145864, U.S. Department of Justice, Bureau of Justice Statistics
+NCJ-145864, U.S. Department of Justice, Bureau of Justice Statistics.
 }
 \usage{
 Inmate
@@ -30,6 +31,6 @@ rm(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

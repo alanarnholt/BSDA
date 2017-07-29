@@ -14,10 +14,11 @@ Taurus}, \code{Ford Tempo}, \code{Honda Accord}, \code{Hyundai Sonata},
 \code{Oldsmobile Calais}, \code{Oldsmobile Ciere}, \code{Plymouth Acclaim},
 \code{Pontiac 6000}, \code{Pontiac Grand Am}, \code{Pontiac Sunbird},
 \code{Saturn SL2}, \code{Subaru Legacy}, and \code{Toyota Camry}}
-\item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
+\item{repair}{total repair cost (in dollars) after crashing a car into a 
+barrier four times while the car was traveling at 5 miles per hour} 
 }}
 \source{
-Insurance Institute of Highway Safety
+Insurance Institute of Highway Safety.
 }
 \usage{
 Bumpers
@@ -35,6 +36,6 @@ dotplot(car ~ repair, data = Bumpers)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

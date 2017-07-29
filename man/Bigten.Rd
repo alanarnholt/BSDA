@@ -15,7 +15,7 @@
 \item{status}{factor with two levels \code{athlete} and \code{student}}
 }}
 \source{
-NCAA Graduation Rates Report, 2000
+NCAA Graduation Rates Report, 2000.
 }
 \usage{
 Bigten
@@ -34,6 +34,6 @@ with(data = Bigten,
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

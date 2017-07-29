@@ -14,7 +14,7 @@ earthquakes near Denver}
 Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2 ed., John Wiley and Sons,
 New York, p. 228, and Bardwell, G. E. (1970), Some Statistical Features of the Relationship between
 Rocky Mountain Arsenal Waste Disposal and Frequency of Earthquakes, \emph{Geological Society of America, Engineering
-Geology Case Histories, 8}, 33-337
+Geology Case Histories, 8}, 33-337.
 }
 \usage{
 Wastewat
@@ -33,6 +33,6 @@ plot(model, which = 2)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

@@ -6,7 +6,7 @@
 \title{Test grades in a beginning statistics class}
 \format{A data frame with 29 observations on one variable
 \describe{ 
-\item{grades}{a numeric vector} 
+\item{grades}{a numeric vector containing test grades} 
 }}
 \usage{
 Grades
@@ -29,6 +29,6 @@ ggplot2::ggplot(data = Grades, aes(x = grades, y = ..density..)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

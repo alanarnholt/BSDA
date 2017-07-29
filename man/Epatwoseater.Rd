@@ -29,7 +29,7 @@ ROADSTER}, and \code{Z8}}
 \item{cmb}{combined city and highway mpg} 
  }
  
- @source Environmental Protection Agency}
+ @source Environmental Protection Agency.}
 \usage{
 Epatwoseater
 }
@@ -45,6 +45,6 @@ boxplot(cty ~ drv, data = Epatwoseater, col = "lightgreen")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

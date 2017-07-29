@@ -7,7 +7,8 @@
 tasks}
 \format{A data frame/tibble with 64 observations on two variables
 \describe{ 
-\item{treatment}{type of treament \code{Drug/NoS}, \code{Drug/Shk}, \code{NoDg/NoS}, or \code{NoDrug/S}}
+\item{treatment}{type of treament \code{Drug/NoS}, \code{Drug/Shk}, 
+\code{NoDg/NoS}, or \code{NoDrug/S}}
 \item{response}{number of tasks completed in a 10-minute period}
 }}
 \usage{
@@ -26,6 +27,6 @@ rm(model)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

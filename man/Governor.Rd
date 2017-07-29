@@ -23,7 +23,7 @@ Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 \item{salary}{a numeric vector with the governor's salary (in dollars)} 
 }}
 \source{
-\emph{The 2000 World Almanac and Book of Facts}
+\emph{The 2000 World Almanac and Book of Facts}.
 }
 \usage{
 Governor
@@ -46,6 +46,6 @@ ggplot2::ggplot(data = Governor, aes(x = salary)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

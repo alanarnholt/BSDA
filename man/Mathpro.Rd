@@ -15,7 +15,7 @@
 \item{group}{a numeric vector} 
 }}
 \source{
-National Assessment of Educational Progress and The College Board
+National Assessment of Educational Progress and The College Board.
 }
 \usage{
 Mathpro
@@ -34,6 +34,6 @@ rm(model)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

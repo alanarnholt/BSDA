@@ -25,7 +25,7 @@ NULL
 #' \emph{Journal of the American Statistical Association}, 90, 605-613.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -52,7 +52,7 @@ NULL
 #' \item{group}{a character vector \code{A}, \code{B}, and \code{C}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -85,7 +85,7 @@ NULL
 #' 
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -125,7 +125,7 @@ NULL
 #' \item{ability}{a factor with levels  \code{hopeless},  \code{belowavg}, \code{average}, \code{aboveavg}, and \code{superior}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -173,7 +173,7 @@ NULL
 #' \item{rate}{a factor with levels \code{Low} and \code{High}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -198,7 +198,7 @@ NULL
 #' \item{days}{days absent} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -226,7 +226,7 @@ NULL
 #' \item{gender}{a factor with 2 levels \code{boys} and \code{girls}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -253,7 +253,7 @@ NULL
 #' \item{sales}{a numeric vector containing number of sales} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -281,7 +281,7 @@ NULL
 #' \item{aggres}{measure of aggresive tendency, ranging from 10-50} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -322,10 +322,10 @@ NULL
 #' \item{payment}{average monthly payment per person in a family} 
 #' }
 #' 
-#' @source US Department of Health and Human Services, 1993
+#' @source US Department of Health and Human Services, 1993.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -357,10 +357,10 @@ NULL
 #' }
 #' 
 #' @source Kalbsleich, J. and Lawless, J., (1989), An analysis of the data on transfusion
-#' related AIDS, \emph{Journal of the American Statistical Association, 84}, 360-372
+#' related AIDS, \emph{Journal of the American Statistical Association, 84}, 360-372.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -394,10 +394,10 @@ NULL
 #' \item{decade}{a character vector indicating the decade of an aircraft accident} 
 #' }
 #' 
-#' @source 2000 \emph{World Almanac and Book of Facts}
+#' @source 2000 \emph{World Almanac and Book of Facts}.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -424,18 +424,18 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 11 observations on three variables
 #' \describe{ 
-#' \item{airline}{a charater variable with values \code{Alaska}
-#' \code{Amer West} \code{American} \code{Continental} \code{Delta}
-#' \code{Northwest} \code{Pan Am} \code{Southwest} \code{TWA} \code{United}
-#' \code{USAir}} 
+#' \item{airline}{a charater variable with values \code{Alaska},
+#' \code{Amer West}, \code{American}, \code{Continental}, \code{Delta},
+#' \code{Northwest}, \code{Pan Am}, \code{Southwest}, \code{TWA}, 
+#' \code{United}, and \code{USAir}} 
 #' \item{ontime}{a numeric vector}
 #' \item{complaints}{complaints per 1000 passengers} 
 #' }
 #' 
-#' @source Transportation Department
+#' @source Transportation Department.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -464,7 +464,7 @@ NULL
 #' \item{age}{age when individual started drinking} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -490,10 +490,10 @@ NULL
 #' \code{pseudoephedrine}, and \code{placebo}}
 #'  }
 #'  
-#' @source Marion Merrel Dow, Inc. Kansas City, Mo. 64114
+#' @source Marion Merrel Dow, Inc. Kansas City, Mo. 64114.
 #'  
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -519,7 +519,7 @@ NULL
 #' \item{recover}{recovery time (in hours)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -548,7 +548,7 @@ NULL
 #' \item{math}{math test score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -581,7 +581,7 @@ NULL
 #' \item{apolipB}{level of apoliprotein B} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -610,10 +610,10 @@ NULL
 #' \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 #' }
 #' 
-#' @source North Carolina Medical Database Commission, August 1994
+#' @source North Carolina Medical Database Commission, August 1994.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -642,10 +642,10 @@ NULL
 #' }
 #' 
 #' @source \emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals}
-#' (August 1994), North Carolina Medical Database Commission, Department of Insurance
+#' (August 1994), North Carolina Medical Database Commission, Department of Insurance.
 #'    
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -669,7 +669,7 @@ NULL
 #' \item{product}{productivity scores} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -700,10 +700,10 @@ NULL
 #' \item{phase}{Ceramic Phase numbers} 
 #' }
 #' 
-#' @source Cunliffe, B. (1984) and Naylor and Smith (1988)
+#' @source Cunliffe, B. (1984) and Naylor and Smith (1988).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -730,7 +730,7 @@ NULL
 #' \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -757,7 +757,7 @@ NULL
 #' \item{duration}{duration (in hours) for transplant} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -783,10 +783,11 @@ NULL
 #' @format A data frame/tibble with 15 observations on two variables
 #' \describe{ 
 #' \item{time}{time (in seconds) for aspirin to dissolve} 
-#' \item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
+#' \item{impurity}{impurity of an ingredient with levels \code{1\%}, 
+#' \code{5\%}, and \code{10\%}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -813,7 +814,7 @@ NULL
 #' \item{difference}{difference between the \code{placebo} and \code{drug}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -869,7 +870,7 @@ NULL
 #' Del}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -898,7 +899,7 @@ NULL
 #' \item{manufacturer}{a factor with levels \code{A} and \code{B}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -925,7 +926,7 @@ NULL
 #' \item{group}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -948,10 +949,11 @@ NULL
 #' @format A data frame/tibble  with 142 observations on two variables
 #' \describe{ 
 #' \item{salary}{1999 salary for baseball player} 
-#' \item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
+#' \item{team}{a factor with levels \code{Angels}, \code{Indians}, 
+#' \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -983,10 +985,10 @@ NULL
 #' \item{status}{factor with two levels \code{athlete} and \code{student}}
 #' }
 #' 
-#' @source NCAA Graduation Rates Report, 2000
+#' @source NCAA Graduation Rates Report, 2000.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1009,12 +1011,12 @@ NULL
 #' 
 #' @name Biology
 #' @docType data
-#' @format A data frame/tibble  with 30 observations on one variable
+#' @format A data frame/tibble with 30 observations on one variable
 #' \describe{ 
 #' \item{score}{test scores on the first test in a beginning biology class} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1055,10 +1057,10 @@ NULL
 #' }
 #' 
 #' @source \emph{National Vital Statistics Report, 48}, March 28, 2000, National
-#' Center for Health Statistics
+#' Center for Health Statistics.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1092,10 +1094,10 @@ NULL
 #' \code{Graduate degree}} 
 #' }
 #' 
-#' @source Bureau of Census data
+#' @source Bureau of Census data.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1122,7 +1124,7 @@ NULL
 #' \item{expert}{blood pressure recorded by an expert using an at-home device} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1152,7 +1154,7 @@ NULL
 #' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1182,7 +1184,7 @@ NULL
 #' \item{group}{a factor with levels \code{active} and \code{nonactive}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1210,7 +1212,7 @@ NULL
 #' \item{spelling}{spelling score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1232,13 +1234,13 @@ NULL
 #' 
 #' @name Bookstor
 #' @docType data
-#' @format A data frame/tibble  with 72 observations on two variables
+#' @format A data frame/tibble with 72 observations on two variables
 #' \describe{ 
 #' \item{dollars}{money obtained for selling textbooks} 
 #' \item{store}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1273,10 +1275,10 @@ NULL
 #' }
 #' 
 #' @source P. Rousseeuw and A. Leroy, \emph{Robust Regression and Outlier Detection} 
-#' (New York: Wiley, 1987)
+#' (New York: Wiley, 1987).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1287,30 +1289,6 @@ NULL
 #' 
 #' 
 "Brain"
-
-
-
-
-
-#' Basic Statistics and Data Analysis
-#' 
-#' Data and functions for the book \emph{Basic Statistics and Data Analysis}
-#' 
-#' \tabular{ll}{ Package: \tab PASWR\cr Type: \tab Package\cr Version: \tab
-#' 1.02\cr Date: \tab 2016-02-25\cr License: \tab GPL (>=2) \cr } The package
-#' BSDA provides data and functions for the book \emph{Basic Statistics and
-#' Data Analysis}
-#' 
-#' @name BSDA-package
-#' @aliases BSDA-package BSDA
-#' @docType package
-#' @author Alan T. Arnholt
-#' 
-#' Maintainer: <arnholtat@@appstate.edu>
-#' @references Kitchens, L. J (2003) \emph{Basic Statistics and Data Analysis}.
-#' Brooks/Cole.
-#' @keywords package
-NULL
 
 
 #' Repair costs of vehicles crashed into a barrier at 5 miles per hour
@@ -1330,13 +1308,14 @@ NULL
 #' \code{Oldsmobile Calais}, \code{Oldsmobile Ciere}, \code{Plymouth Acclaim},
 #' \code{Pontiac 6000}, \code{Pontiac Grand Am}, \code{Pontiac Sunbird},
 #' \code{Saturn SL2}, \code{Subaru Legacy}, and \code{Toyota Camry}}
-#' \item{repair}{total repair cost (in dollars)  after crashing a car into a barrier four times while the car was traveling at 5 miles per hour} 
+#' \item{repair}{total repair cost (in dollars) after crashing a car into a 
+#' barrier four times while the car was traveling at 5 miles per hour} 
 #' }
 #' 
-#' @source Insurance Institute of Highway Safety
+#' @source Insurance Institute of Highway Safety.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1362,10 +1341,11 @@ NULL
 #' \describe{ 
 #' \item{attendance}{a factor with levels \code{absent} and
 #' \code{present}} 
-#' \item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, \code{swing}, and \code{split}} 
+#' \item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, 
+#' \code{swing}, and \code{split}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1386,7 +1366,7 @@ NULL
 #' 
 #' @name Bypass
 #' @docType data
-#' @format A data frame/tibble  with 17 observations on two variables
+#' @format A data frame/tibble with 17 observations on two variables
 #' \describe{ 
 #' \item{hospital}{a factor with levels \code{Carolinas Med
 #' Ct}, \code{Duke Med Ct}, \code{Durham Regional}, \code{Forsyth Memorial},
@@ -1399,10 +1379,10 @@ NULL
 #' }
 #' 
 #' @source \emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals}
-#' (August 1994), North Carolina Medical Database Commission, Department of Insurance
+#' (August 1994), North Carolina Medical Database Commission, Department of Insurance.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1431,7 +1411,7 @@ NULL
 #' \item{supplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1460,7 +1440,7 @@ NULL
 #' 
 #' @name Cancer
 #' @docType data
-#' @format A data frame/tibble  with 64 observations on two variables
+#' @format A data frame/tibble with 64 observations on two variables
 #' \describe{ 
 #' \item{survival}{survival time (in days) of terminal patients 
 #' treated with vitamin C}
@@ -1475,7 +1455,7 @@ NULL
 #' 
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1501,13 +1481,13 @@ NULL
 #' 
 #' @name Carbon
 #' @docType data
-#' @format A data frame/tibble  with 24 observations on two variables
+#' @format A data frame/tibble with 24 observations on two variables
 #' \describe{ 
 #' \item{CO}{carbon monoxide measured (in parts per million)} 
 #' \item{site}{a factor with levels \code{SiteA}, \code{SiteB}, and \code{SiteC}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1527,12 +1507,12 @@ NULL
 #' 
 #' @name Cat
 #' @docType data
-#' @format A data frame/tibble  with 17 observations on one variable
+#' @format A data frame/tibble with 17 observations on one variable
 #' \describe{ 
 #' \item{score}{reading score on the California Achievement Test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1566,7 +1546,7 @@ NULL
 #' \emph{Journal of the American Statistical Association}, 90, 178-184.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1587,7 +1567,7 @@ NULL
 #' 
 #' @name Challeng
 #' @docType data
-#' @format A data frame/tibble  with 25 observations on four variables
+#' @format A data frame/tibble with 25 observations on four variables
 #' \describe{ 
 #' \item{flight}{a character variable indicating the flight}
 #' \item{date}{date of the flight} 
@@ -1600,7 +1580,7 @@ NULL
 #' \emph{Journal of the American Statistical Association}, 84, No. 408, 945-957.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1639,7 +1619,7 @@ NULL
 #' \item{salary}{starting salary (in dollars) for chemistry major} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1669,7 +1649,7 @@ NULL
 #' John Wiley and Sons, New York.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1699,10 +1679,10 @@ NULL
 #' \code{average}, \code{below average}, and \code{much worse than average}} 
 #' }
 #' 
-#' @source Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995
+#' @source Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1731,7 +1711,7 @@ NULL
 #' and \code{ration3}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1765,7 +1745,7 @@ NULL
 #' \emph{Journal of the American Statistical Association}, 90, 729-738.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1790,7 +1770,7 @@ NULL
 #' 
 #' @name Chips
 #' @docType data
-#' @format A data frame/tibble  with 30 observations on eight variables
+#' @format A data frame/tibble with 30 observations on eight variables
 #' \describe{ 
 #' \item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
 #' \item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
@@ -1807,7 +1787,7 @@ NULL
 #' \emph{Journal of the American Statistical Association}, 90, 729-738.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1835,7 +1815,7 @@ NULL
 #' \item{weight}{children's birth weights (in pounds)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1867,7 +1847,7 @@ NULL
 #' \code{brandC}, and \code{brandD}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1893,7 +1873,7 @@ NULL
 #' \item{percent}{percent peak bone density} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1921,7 +1901,7 @@ NULL
 #' \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1948,7 +1928,7 @@ NULL
 #' \code{typeB}, and \code{typeC}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -1975,7 +1955,7 @@ NULL
 #' \item{differences}{\code{with} minus \code{without}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2004,7 +1984,7 @@ NULL
 #' \item{return}{yearly returns on each of 12 possible investments} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2044,7 +2024,7 @@ NULL
 #' @source Federal Highway Administration.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2078,7 +2058,7 @@ NULL
 #' \item{self}{Tennessee self concept scores} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2111,7 +2091,7 @@ NULL
 #' method used to construct a concrete block} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2138,7 +2118,7 @@ NULL
 #' \item{differences}{\code{new} minus \code{standard}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2167,7 +2147,7 @@ NULL
 #' \item{y}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2194,7 +2174,7 @@ NULL
 #' \item{score}{standardized psychology scores after a counseling process} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2220,10 +2200,10 @@ NULL
 #' \item{cpi}{consumer price index} 
 #' }
 #' 
-#' @source Bureau of Labor Statistics
+#' @source Bureau of Labor Statistics.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2263,10 +2243,10 @@ NULL
 #' }
 #' 
 #' @source U.S. Department of Justice, Bureau of Justice Statistics, \emph{Sourcebook of
-#' Criminal Justice Statistics}, 1993
+#' Criminal Justice Statistics}, 1993.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2296,7 +2276,7 @@ NULL
 #' Vegetable Kingdom}, 2nd edition, London.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2328,7 +2308,7 @@ NULL
 #' \item{service}{a factor with levels \code{Replaces unnecessarily} and \code{Follows manufacturer guidelines}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2359,7 +2339,7 @@ NULL
 #' \item{number}{number of defective items produced by the employees in a small business firm} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2387,10 +2367,11 @@ NULL
 #' \item{awarded}{a factor with levels \code{1970} and \code{1990}} 
 #' }
 #' 
-#' @source U.S. Department of Health and Human Services, National Center for Education Statistics
+#' @source U.S. Department of Health and Human Services, National 
+#' Center for Education Statistics.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2419,7 +2400,7 @@ NULL
 #' }
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2446,7 +2427,7 @@ NULL
 #' \item{number}{number of dependent children in a family} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2474,7 +2455,7 @@ NULL
 #' \item{educ}{the educational level (in years) of a sample of 40 auto workers in a plant in Detroit} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2504,7 +2485,7 @@ NULL
 #' @source \emph{Research in Development Education} (1994), V. 11, 2.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2532,10 +2513,10 @@ NULL
 #' \item{score}{first exam score} 
 #' }
 #' 
-#' @source Data provided by Dr. Anita Kitchens
+#' @source Data provided by Dr. Anita Kitchens.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2561,7 +2542,7 @@ NULL
 #' \item{px}{probability for outcome \code{x}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2597,10 +2578,10 @@ NULL
 #' }
 #' 
 #' @source Energy Information Administration, National Enerfy Information Center:
-#' 1000 Independence Ave., SW, Washington, D.C., 20585
+#' 1000 Independence Ave., SW, Washington, D.C., 20585.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2643,10 +2624,10 @@ NULL
 #' \item{rate}{number of tickets per vehicle per month} 
 #' }
 #' 
-#' @source \emph{Time}, November 8, 1993. Figures are from January to June 1993
+#' @source \emph{Time}, November 8, 1993. Figures are from January to June 1993.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2693,7 +2674,7 @@ NULL
 #' February 1995.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2727,10 +2708,10 @@ NULL
 #' and \code{1998}} 
 #' }
 #' 
-#' @source \emph{The World Almanac and Book of Facts}, 2000
+#' @source \emph{The World Almanac and Book of Facts}, 2000.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2766,7 +2747,7 @@ NULL
 #' @source U.S. Department of Justice.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2799,10 +2780,10 @@ NULL
 #' }
 #' 
 #' @source D.E. Sternberg, D.P. Van Kammen, and W.E. Bunney, "Schizophrenia: Dopamine
-#' b-Hydroxylase Activity and Treatment Respsonse," \emph{Science, 216} (1982), 1423 - 1425
+#' b-Hydroxylase Activity and Treatment Respsonse," \emph{Science, 216} (1982), 1423 - 1425.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2829,7 +2810,7 @@ NULL
 #' \item{change}{percent change from previous year} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2859,7 +2840,7 @@ NULL
 #' \item{referendum}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2888,7 +2869,7 @@ NULL
 #' \item{group}{a factor with levels \code{control} and \code{experimental}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2922,7 +2903,7 @@ NULL
 #' \item{children}{number of children in family} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2953,7 +2934,7 @@ NULL
 #' p 279.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2993,7 +2974,7 @@ NULL
 #' \item{crime}{violent crimes per 100,000 population} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3020,7 +3001,7 @@ NULL
 #' \item{eggs}{number of eggs per day for 100 chickens} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3062,10 +3043,10 @@ NULL
 #' \item{percent1998}{percent of the population over the age of 65 in 1998} 
 #' }
 #' 
-#' @source U.S. Census Bureau Internet site, February 2000
+#' @source U.S. Census Bureau Internet site, February 2000.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3099,7 +3080,7 @@ NULL
 #' \item{kilowatt}{killowatt-hours per month} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3124,7 +3105,7 @@ NULL
 #' \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3152,7 +3133,7 @@ NULL
 #' \item{score}{college entrance exam score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3194,10 +3175,10 @@ NULL
 #' \item{cmb}{combined city and highway mpg} 
 #' }
 #' 
-#' @source EPA data
+#' @source EPA data.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3242,10 +3223,10 @@ NULL
 #' \item{cmb}{combined city and highway mpg} 
 #'  }
 #'  
-#'  @source Environmental Protection Agency
+#'  @source Environmental Protection Agency.
 #'  
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3271,7 +3252,7 @@ NULL
 #' \item{age}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3296,7 +3277,7 @@ NULL
 #' \item{loss}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3323,7 +3304,7 @@ NULL
 #' \item{softness}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3360,7 +3341,7 @@ NULL
 #' \emph{Journal of the Royal Statistical Society}, Series C, \emph{39} (1990), 357-366.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3391,11 +3372,11 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 20 observations on two variables
 #' \describe{ 
-#' \item{number}{a numeric vector} 
-#' \item{cost}{a numeric vector} 
+#' \item{number}{number in family} 
+#' \item{cost}{cost per person (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3426,12 +3407,12 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 1000 observations on two variables
 #' \describe{ 
-#' \item{gender}{a factor with levels \code{Men}
+#' \item{gender}{a factor with levels \code{Men} and
 #' \code{Women}} 
 #' \item{candidate}{a character vector of 1984 president and vice-president candidates} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3455,13 +3436,13 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 1000 observations on two variables
 #' \describe{ 
-#' \item{gender}{a factor with levels \code{Men}
+#' \item{gender}{a factor with levels \code{Men} and
 #' \code{Women}} 
 #' \item{candidate}{a character vector of 1984 president and vice-president candidates} 
 #' }
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3504,7 +3485,7 @@ NULL
 #' @source Population Reference Bureau.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3527,10 +3508,10 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 87 observations on one variable
 #' \describe{ 
-#' \item{age}{a numeric vector} 
+#' \item{age}{age of woman at birth of her first child} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3556,10 +3537,10 @@ NULL
 #' }
 #' 
 #' @source R. Millar, \dQuote{Estimating the Size - Selectivity of Fishing Gear by Conditioning
-#' on the Total Catch,} \emph{Journal of the American Statistical Association, 87} (1992), 962 - 968
+#' on the Total Catch,} \emph{Journal of the American Statistical Association, 87} (1992), 962 - 968.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3590,7 +3571,7 @@ NULL
 #' \item{number}{a numeric vector recording the number of sit-ups performed in one minute} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3648,7 +3629,7 @@ NULL
 #' \item{total}{number of votes} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3676,10 +3657,10 @@ NULL
 #' \item{time}{breakdown time (in minutes)} 
 #' }
 #' 
-#' @source E. Soofi, N. Ebrahimi, and M. Habibullah, 1995
+#' @source E. Soofi, N. Ebrahimi, and M. Habibullah, 1995.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3714,10 +3695,10 @@ NULL
 #' \item{expenditure}{a numeric vector recording annual food expenditure (in dollars) in the state of Ohio.} 
 #' }
 #' 
-#' @source Bureau of Labor Statistics
+#' @source Bureau of Labor Statistics.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3742,10 +3723,10 @@ NULL
 #' }
 #' 
 #' @source R. D'Agostino, et al., (1990) "A Suggestion for Using Powerful and Informative
-#' Tests for Normality," \emph{The American Statistician, 44} 316-321
+#' Tests for Normality," \emph{The American Statistician, 44} 316-321.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3785,7 +3766,7 @@ NULL
 #' \item{age}{a numeric vector of ages} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3806,13 +3787,13 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 400 observations on two variables
 #' \describe{ 
-#' \item{region}{a factor with levels \code{Central}
-#' \code{East} \code{South} \code{West}} 
+#' \item{region}{a factor with levels \code{Central},
+#' \code{East,} \code{South}, and \code{West}} 
 #' \item{cost}{a factor with levels \code{less than expected}, \code{about what expected}, 
 #' and \code{more than expected}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3841,10 +3822,10 @@ NULL
 #' 
 #' @source K. Roeder, "Density Estimation with Confidence Sets Explained by Superclusters
 #' and Voids in the Galaxies," \emph{Journal of the American Statistical Association}, 85
-#' (1990), 617-624
+#' (1990), 617-624.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3874,10 +3855,10 @@ NULL
 #' }
 #' 
 #' @source George H. Gallup \emph{The Gallup Opinion Index Report No. 179} (Princeton, NJ:
-#' The Gallup Poll, July 1980), p. 15
+#' The Gallup Poll, July 1980), p. 15.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3915,7 +3896,7 @@ NULL
 #' \item{price}{price for one gallon of gasoline} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3946,12 +3927,12 @@ NULL
 #' @format A data frame/tibble with ten observations on three variables
 #' \describe{ 
 #' \item{student}{a character variable indicating student number} 
-#' \item{when}{a character variable with either code\{Before} or \code{After} 
-#' to indicate when the student received experimental instruction in German
-#' \item{errors}{A vector containing the number of errors}
+#' \item{when}{a character variable with values \code{Before} and \code{After} 
+#' to indicate when the student received experimental instruction in German}
+#' \item{errors}{the number of errors in copying a German passage}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3985,7 +3966,7 @@ NULL
 #' \item{yards}{distance a golf ball is driven in yards} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4031,10 +4012,10 @@ NULL
 #' \item{salary}{a numeric vector with the governor's salary (in dollars)} 
 #' }
 #' 
-#' @source \emph{The 2000 World Almanac and Book of Facts}
+#' @source \emph{The 2000 World Almanac and Book of Facts}.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4067,7 +4048,7 @@ NULL
 #' \item{collgpa}{college gpa} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4103,10 +4084,10 @@ NULL
 #' @docType data
 #' @format A data frame with 29 observations on one variable
 #' \describe{ 
-#' \item{grades}{a numeric vector} 
+#' \item{grades}{a numeric vector containing test grades} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4145,7 +4126,7 @@ NULL
 #' \item{percent}{graduation rate} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4171,7 +4152,7 @@ NULL
 #' \item{thick}{varve thickness in millimeters} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4200,7 +4181,7 @@ NULL
 #' @source J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd Ed., Jon Wiley and Sons, New York.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4226,7 +4207,7 @@ NULL
 #' \item{response}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4254,7 +4235,7 @@ NULL
 #' }
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4281,7 +4262,7 @@ NULL
 #' \item{number}{number of gymnastic activities successfully completed} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4311,7 +4292,7 @@ NULL
 #' \item{signrks}{the signed-ranked-differences} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4346,7 +4327,7 @@ NULL
 #' \item{concent}{haptoglobin concentration (in grams per liter)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4368,14 +4349,14 @@ NULL
 #' @docType data
 #' @format A data frame with 31 observations on one variable
 #' \describe{ 
-#' \item{receipt}{a numeric vector} 
+#' \item{receipt}{a numeric vector of daily receipts (in dollars)} 
 #' }
 #' 
 #' @source J.C. Miller and J.N. Miller, (1988), \emph{Statistics for Analytical Chemistry}, 2nd Ed. 
-#' (New York: Halsted Press)
+#' (New York: Halsted Press).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4402,10 +4383,10 @@ NULL
 #' }
 #' 
 #' @source G. Joglekar, et al., "Lack-of-Fit Testing When Replicates Are Not Available,"
-#' \emph{The American Statistician}, 43(3), (1989), 135-143
+#' \emph{The American Statistician}, 43(3), (1989), 135-143.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4435,10 +4416,10 @@ NULL
 #' }
 #' 
 #' @source Bureau of the Census, \emph{Housing of the American Indians on Reservations},
-#' Statistical Brief 95-11, April 1995
+#' Statistical Brief 95-11, April 1995.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4469,12 +4450,13 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 90 observations on the two variables
 #' \describe{ 
-#' \item{type}{a factor with levels \code{A}, \code{B}, and \code{C} denoting the type of oil heater} 
+#' \item{type}{a factor with levels \code{A}, \code{B}, and \code{C} denoting 
+#' the type of oil heater} 
 #' \item{efficiency}{heater efficiency rating} 
 #' }
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4502,10 +4484,10 @@ NULL
 #' }
 #' 
 #' @source I. Dunsmore, F. Daly, \emph{Statistical Methods, Unit 9, Categorical Data}, 
-#' Milton Keynes, The Open University, 18
+#' Milton Keynes, The Open University, 18.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4558,10 +4540,10 @@ NULL
 #' \item{price}{median house price (in dollars)} 
 #' }
 #' 
-#' @source National Association of Realtors
+#' @source National Association of Realtors.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4601,7 +4583,7 @@ NULL
 #' \item{time}{number of hours per week spent on homework} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4628,7 +4610,7 @@ NULL
 #' \item{mileage}{miles per gallon for a Honda Civic} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' 
 #' @examples
@@ -4651,11 +4633,12 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 135 observations on two variables
 #' \describe{ 
-#' \item{location}{a factor with the location of the high school student (\code{Rural}, \code{Suburban}, or \code{Urban})} 
+#' \item{location}{a factor with the location of the high school student 
+#' (\code{Rural}, \code{Suburban}, or \code{Urban})} 
 #' \item{hostility}{the score from the Hostility Level Test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4692,10 +4675,10 @@ NULL
 #' \item{price}{median house price (in dollars)} 
 #' }
 #' 
-#' @source National Association of Realtors
+#' @source National Association of Realtors.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4731,10 +4714,10 @@ NULL
 #' \code{warm}} 
 #' }
 #' 
-#' @source National Hurricane Center
+#' @source National Hurricane Center.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4770,10 +4753,10 @@ NULL
 #' }
 #' 
 #' @source N. Shaw, \emph{Manual of Meteorology}, Vol. 2 (London: Cambridge University Press 1942),
-#' 7; and F. Mosteller and J. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison - Wesley, 1977)
+#' 7; and F. Mosteller and J. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison - Wesley, 1977).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4811,10 +4794,10 @@ NULL
 #' \item{percent_change}{percent change in income from first quarter to the second quarter of 2000} 
 #' }
 #' 
-#' @source US Department of Commerce
+#' @source US Department of Commerce.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4851,7 +4834,7 @@ NULL
 #' \item{group}{a factor with levels \code{A} and \code{B}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4886,7 +4869,7 @@ NULL
 #' \item{poverty rate}{percent poverty} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4916,10 +4899,10 @@ NULL
 #' \item{speed}{the winners average speed (in mph)} 
 #' }
 #' 
-#' @source The World Almanac and Book of Facts, 2000, p. 1004
+#' @source The World Almanac and Book of Facts, 2000, p. 1004.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4955,7 +4938,7 @@ NULL
 #' Indianapolis 500 starts and a 2 for drivers with 5 or more Indianapolis 500 starts} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -4990,10 +4973,10 @@ NULL
 #' \item{inflation}{percent inflation rate} 
 #' }
 #' 
-#' @source Bureau of Labor Statistics
+#' @source Bureau of Labor Statistics.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5018,7 +5001,7 @@ NULL
 #' \item{temp}{inlet oil temperature (Fahrenheit)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5045,14 +5028,15 @@ NULL
 #' \describe{ 
 #' \item{race}{a factor with levels \code{white},
 #' \code{black}, and \code{hispanic}} 
-#' \item{drug}{a factor with levels \code{heroin}, \code{crack}, \code{cocaine}, and \code{marijuana}}
+#' \item{drug}{a factor with levels \code{heroin}, \code{crack}, \code{cocaine}, 
+#' and \code{marijuana}}
 #' }
 #' 
 #' @source C. Wolf Harlow (1994), \emph{Comparing Federal and State Prison Inmates},
-#' NCJ-145864, U.S. Department of Justice, Bureau of Justice Statistics
+#' NCJ-145864, U.S. Department of Justice, Bureau of Justice Statistics.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5082,10 +5066,10 @@ NULL
 #' \item{passed}{a factor with levels \code{less than 70\%}, \code{between 70\% and 84\%}, and \code{more than 85\%}}
 #' }
 #' 
-#' @source \emph{The Charlotte Observer}, December 13, 1992
+#' @source \emph{The Charlotte Observer}, December 13, 1992.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5120,7 +5104,7 @@ NULL
 #' \item{loss}{heat loss (in BTUs)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5156,7 +5140,7 @@ NULL
 #' \item{gpa}{Grade point average} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5190,7 +5174,7 @@ NULL
 #' \emph{Annals of Eugenics}, \strong{7}, Part II, 179-188.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5230,7 +5214,7 @@ NULL
 #' @source \emph{USA Today}, May 25, 1995.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5259,7 +5243,7 @@ NULL
 #' \item{satisfaction}{job satisfaction score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5288,7 +5272,7 @@ NULL
 #' \item{smoke}{a character vector with values \code{no} and \code{yes}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5329,7 +5313,7 @@ NULL
 #' \item{rate}{a numeric vector indicating rates for kilowatt per hour} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5356,7 +5340,7 @@ NULL
 #' \item{nokinder}{reading score of kids who did not go to kindergarten} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5391,10 +5375,10 @@ NULL
 #'  }
 #'  
 #'@source \emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals} (August 1994),
-#'North Carolina Medical Database Commission, Department of Insurance
+#'North Carolina Medical Database Commission, Department of Insurance.
 #'  
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5421,7 +5405,7 @@ NULL
 #' Industry," \emph{American Journal of Epidemiology, 155,} 549-555. 
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5444,7 +5428,7 @@ NULL
 #' \item{score}{score on a leadership exam} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5463,10 +5447,11 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 30 observations on one variable
 #' \describe{ 
-#' \item{survival}{a numeric vector indicating time surivived after injection} 
+#' \item{survival}{a numeric vector indicating time surivived 
+#' after injection (in seconds)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5493,10 +5478,10 @@ NULL
 #' \item{women}{life expectancy for women (in years)} 
 #' }
 #' 
-#' @source National Center for Health Statistics
+#' @source National Center for Health Statistics.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5526,7 +5511,7 @@ NULL
 #' \item{life}{lifespan of component (in hours)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5566,7 +5551,7 @@ NULL
 #' 1959-1994, NOAA Technical Memorandum NWS SR-193, Dept. of Commerce.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5595,7 +5580,7 @@ NULL
 #' \item{ranks}{ranks for variable \code{traffic}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5622,7 +5607,7 @@ NULL
 #' \item{ranks}{ranks for variable \code{score}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5650,7 +5635,7 @@ NULL
 #' \item{control}{score of the child with the standard method} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5683,10 +5668,10 @@ NULL
 #' }
 #' 
 #' @source Davis, J. (1986), \emph{Statistics and Data Analysis in Geology}, 2d. Ed.,
-#' John Wiley and Sons, New York, p. 146
+#' John Wiley and Sons, New York, p. 146.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5714,7 +5699,7 @@ NULL
 #' \item{award}{malpractice reward (in $1000)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5738,7 +5723,7 @@ NULL
 #' \item{salary}{random sample of advertised annual salaries of top executives (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5764,10 +5749,10 @@ NULL
 #' }
 #' 
 #' @source \emph{Law Enforcement Management and Administrative Statistics, 1993}, Bureau of 
-#' Justice Statistics, NCJ-148825, September 1995, p. 147-148
+#' Justice Statistics, NCJ-148825, September 1995, p. 147-148.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5794,7 +5779,7 @@ NULL
 #' \item{score}{scores on a standardized test for 30 tenth graders} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5824,10 +5809,11 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 31 observations one variable
 #' \describe{ 
-#' \item{score}{scores of 31 entering freshmen at a community college on a national standardized test} 
+#' \item{score}{scores of 31 entering freshmen at a community college 
+#' on a national standardized test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5858,10 +5844,10 @@ NULL
 #' \item{group}{a numeric vector} 
 #' }
 #' 
-#' @source National Assessment of Educational Progress and The College Board
+#' @source National Assessment of Educational Progress and The College Board.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5892,7 +5878,7 @@ NULL
 #' \code{CondB,} \code{CondC}, and \code{CondD}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5918,7 +5904,7 @@ NULL
 #' \item{value}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5944,7 +5930,7 @@ NULL
 #' \item{age}{mental age of 16 girls} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5968,7 +5954,7 @@ NULL
 #' \item{mercury}{a numeric vector measuring mercury (in parts per million)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -5992,11 +5978,11 @@ NULL
 #' \item{rent}{monthly rent in dollars} 
 #' }
 #' 
-#' @source U.S. Bureau of the Census, \emph{Housing in the Metropolitan Areas, Statistical Brief} SB/94/19,
-#' September 1994
+#' @source U.S. Bureau of the Census, \emph{Housing in the Metropolitan Areas, 
+#' Statistical Brief} SB/94/19, September 1994.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6021,7 +6007,7 @@ NULL
 #' \item{miller}{scores on the Miller Personality test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6049,7 +6035,7 @@ NULL
 #' \item{miller}{scores on the Miller personality test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6079,10 +6065,10 @@ NULL
 #' }
 #' 
 #' @source Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2d. ed.,
-#' John Wiley and Sons, New York, pp. 177, 185
+#' John Wiley and Sons, New York, pp. 177, 185.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6111,7 +6097,7 @@ NULL
 #' \item{emission}{carbon monoxide emitted} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6145,7 +6131,7 @@ NULL
 #' \item{differ}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6176,7 +6162,7 @@ NULL
 #' \item{differ}{\code{method1} - \code{method2}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6223,10 +6209,10 @@ NULL
 #' \item{revenue}{revenue in billions of dollars} 
 #' }
 #' 
-#' @source Financial World
+#' @source Financial World.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6257,7 +6243,7 @@ NULL
 #' \item{ranks}{a numeric vector ranking each pit stop in order of speed} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6286,7 +6272,7 @@ NULL
 #' \item{drug}{a numeric vector indicating each of the 4 drugs} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6314,7 +6300,7 @@ NULL
 #' \item{profit}{profit of each newsstand (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6342,7 +6328,7 @@ NULL
 #' \item{weight}{weight of each player (in pounds)}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6370,10 +6356,10 @@ NULL
 #' \item{weight}{weight of each player (in pounds)}
 #' }
 #' 
-#' @source \emph{USA Today}, April 20, 1994
+#' @source \emph{USA Today}, April 20, 1994.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6400,7 +6386,7 @@ NULL
 #' \item{sales}{sales figures (in $100,000)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6427,10 +6413,11 @@ NULL
 #' @format A data frame/tibble with six observations on two variables
 #' \describe{ 
 #' \item{harvest}{harvest in millions of boxes} 
-#' \item{price}{price is average price charged by California growers for for 75-pound box of navel oranges} 
+#' \item{price}{average price charged by California growers 
+#' for a 75-pound box of navel oranges} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6470,7 +6457,7 @@ NULL
 #' \item{1999salary}{a numeric vector containing each player's salary (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6503,7 +6490,7 @@ NULL
 #' \item{after}{mean arterial blood pressure of subject after receiving oxytocin} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6535,7 +6522,7 @@ NULL
 #' \item{parent}{a factor with levels \code{mother} and \code{father}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6574,7 +6561,7 @@ NULL
 #' \item{log_tickets}{natural log of \code{tickets}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6603,10 +6590,10 @@ NULL
 #' }
 #' 
 #' @source Pearson, K. and Lee, A. (1902-3), On the Laws of Inheritance in Man, 
-#' \emph{Biometrika, 2}, 357
+#' \emph{Biometrika, 2}, 357.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6631,7 +6618,7 @@ NULL
 #' \item{time}{duration of long distance phone call (in minutes)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6663,7 +6650,7 @@ NULL
 #' @source Centers for Disease Control, Atlanta, Georgia.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6701,7 +6688,7 @@ NULL
 #' \item{gender}{a factor with levels \code{female} and \code{male}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6728,7 +6715,7 @@ NULL
 #' \item{inde}{air pollution index} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6758,7 +6745,7 @@ NULL
 #' pages 63-65.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6792,10 +6779,10 @@ NULL
 #' \item{population}{population of city} 
 #' }
 #' 
-#' @source Children's Defense Fund and the Bureau of Justice Statistics
+#' @source Children's Defense Fund and the Bureau of Justice Statistics.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6824,7 +6811,7 @@ NULL
 #' \item{income}{percent with low income} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6851,7 +6838,7 @@ NULL
 #' \item{prejud}{racial prejudice score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6893,7 +6880,7 @@ NULL
 #' \item{death_age}{President's age at death} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6925,7 +6912,7 @@ NULL
 #' \item{confidence}{degree of confidence in the press (the higher the score, the more confidence)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6955,10 +6942,10 @@ NULL
 #' }
 #' 
 #' @source Newmark, C., et al. (1973), Predictive Validity of the Rorschach Prognostic Rating Scale
-#' with Behavior Modification Techniques, \emph{Journal of Clinical Psychology, 29}, 246-248
+#' with Behavior Modification Techniques, \emph{Journal of Clinical Psychology, 29}, 246-248.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -6986,7 +6973,7 @@ NULL
 #' \item{score}{standardized test score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7016,7 +7003,7 @@ NULL
 #' \item{sat}{SAT score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7045,7 +7032,7 @@ NULL
 #' \item{score}{number of correct repsonses in a psychology experiment} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7070,7 +7057,7 @@ NULL
 #' \item{income}{weekly family income (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7101,7 +7088,7 @@ NULL
 #' Analysis of Linear Models," \emph{The American Statistician, 48}, 220-229.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7127,7 +7114,7 @@ NULL
 #' \item{score}{results of a quality control test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7160,7 +7147,7 @@ NULL
 #' 140-147.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7187,7 +7174,7 @@ NULL
 #' \item{sales}{sales (in million dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7214,10 +7201,10 @@ NULL
 #' \item{survival_time}{survival time in weeks for rats exposed to a high level of radiation} 
 #' }
 #' 
-#' @source J. Lawless, \emph{Statistical Models and Methods for Lifetime Data} (New York: Wiley, 1982)
+#' @source J. Lawless, \emph{Statistical Models and Methods for Lifetime Data} (New York: Wiley, 1982).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7247,7 +7234,7 @@ NULL
 #' \item{gpa}{students' grade point average}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7281,7 +7268,7 @@ NULL
 #' \item{time}{threshold reaction time (in seconds) for persons subjected to emotional stress} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7309,7 +7296,7 @@ NULL
 #' \item{winsoriz}{winsorized values of \code{score}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7337,7 +7324,7 @@ NULL
 #' \item{iq}{IQ score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7367,7 +7354,7 @@ NULL
 #' \item{response}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7396,7 +7383,7 @@ NULL
 #'  \item{ranks}{ranked values of \code{pollution}} 
 #'  }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7422,7 +7409,7 @@ NULL
 #' \item{cost}{maintenance cost of cash register (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7454,7 +7441,7 @@ NULL
 #' \item{differ}{\code{psych1} - \code{psych2}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7484,7 +7471,7 @@ NULL
 #' \item{score}{math placement score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7513,7 +7500,7 @@ NULL
 #' \item{rent}{weekly apartment rental price (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7539,7 +7526,7 @@ NULL
 #' \item{time}{time to repair a wrecked in car (in hours)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7566,7 +7553,7 @@ NULL
 #' \item{sales}{employee gross sales (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7594,7 +7581,7 @@ NULL
 #' \item{temperature}{ocean temperature (in Celsius)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7620,7 +7607,7 @@ NULL
 #' \item{salinity}{ocean salinity level} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7649,7 +7636,7 @@ NULL
 #' \item{area}{character variable with values \code{city} and \code{rural}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7680,7 +7667,7 @@ NULL
 #' \item{salary}{starting salary for Ph.D. psycholgists (in dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7705,10 +7692,10 @@ NULL
 #' \item{salinity}{surface-water salinity value} 
 #' }
 #' 
-#' @source J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd ed. (New York: John Wiley, 1986)
+#' @source J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd ed. (New York: John Wiley, 1986).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7746,7 +7733,7 @@ NULL
 #' @source \emph{The 2000 World Almanac and Book of Facts}, Funk and Wagnalls Corporation, New Jersey.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7781,7 +7768,7 @@ NULL
 #' \item{state}{U.S. state}
 #'  }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7812,7 +7799,7 @@ NULL
 #' \item{reading}{recorded value (in pounds) of a 100 pound weight} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7846,7 +7833,7 @@ NULL
 #' \item{score}{schizophrenics score on a second standardized exam} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7871,10 +7858,11 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 13 observations on one variable
 #' \describe{ 
-#' \item{score}{schizophrenics score on a standardized exam one hour after recieving a specified dose of a tranqilizer.} 
+#' \item{score}{schizophrenics score on a standardized exam one 
+#' hour after recieving a specified dose of a tranqilizer.} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7899,13 +7887,15 @@ NULL
 #' @format A data frame/tibble with 86,759 observations on two variables
 #' \describe{ 
 #' \item{seatbelt}{a factor with levels \code{No} and \code{Yes}} 
-#' \item{injuries}{a factor with levels \code{None}, \code{Minimal}, \code{Minor}, or \code{Major} indicating the extent of the drivers injuries.a numeric vector}
+#' \item{injuries}{a factor with levels \code{None}, \code{Minimal}, 
+#' \code{Minor}, or \code{Major} indicating the extent of the drivers injuries}
 #' }
 #' 
-#' @source Jobson, J. (1982), \emph{Applied Multivariate Data Analysis}, Springer-Verlag, New York, p. 18
+#' @source Jobson, J. (1982), \emph{Applied Multivariate Data Analysis}, Springer-Verlag, 
+#' New York, p. 18.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7935,7 +7925,7 @@ NULL
 #' \item{after}{after the course self-confidence score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7963,7 +7953,7 @@ NULL
 #' \item{reaction}{reaction time for senior citizens applying for a driver's license renewal} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -7991,10 +7981,10 @@ NULL
 #' }
 #' 
 #' @source U.S. Department of Justice, Bureau of Justice Statistics, \emph{Prison Sentences
-#' and Time Served for Violence}, NCJ-153858, April 1995
+#' and Time Served for Violence}, NCJ-153858, April 1995.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8021,11 +8011,12 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 64 observations on two variables
 #' \describe{ 
-#' \item{treatment}{type of treament \code{Drug/NoS}, \code{Drug/Shk}, \code{NoDg/NoS}, or \code{NoDrug/S}}
+#' \item{treatment}{type of treament \code{Drug/NoS}, \code{Drug/Shk}, 
+#' \code{NoDg/NoS}, or \code{NoDrug/S}}
 #' \item{response}{number of tasks completed in a 10-minute period}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8049,12 +8040,12 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 27 observations on two variables
 #' \describe{ 
-#' \item{group}{grouping variable with values of \code{Group1} (no shock), \code{Group2} (medium shock), 
-#' and \code{Group3} (severe shock)} 
+#' \item{group}{grouping variable with values of \code{Group1} (no shock), 
+#' \code{Group2} (medium shock), and \code{Group3} (severe shock)} 
 #' \item{attempts}{number of attempts to complete a task}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8083,7 +8074,7 @@ NULL
 #' \item{loss}{loss (in 100 dollars)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8111,7 +8102,7 @@ NULL
 #' \item{parallax}{parallax measurements (seconds of a degree)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8140,7 +8131,7 @@ NULL
 #' \item{autos}{number of automobiles in the downtown area} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8170,7 +8161,7 @@ NULL
 #' \item{gender}{athlete sex (male, female)}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8198,10 +8189,11 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 20 observations on one variable
 #' \describe{ 
-#' \item{number}{maximum number of situps completed in an exercise class after 1 month in the program} 
+#' \item{number}{maximum number of situps completed in an exercise class 
+#' after 1 month in the program} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8231,7 +8223,7 @@ NULL
 #' \item{C2}{values from a sample of size 14 from a particular population} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8263,7 +8255,7 @@ NULL
 #' \emph{Biometrika}, 67(1980), 597-606.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8294,7 +8286,7 @@ NULL
 #' in a Mixture of Normals," \emph{Journal of the American Statistical Association, 89}, 497-495.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8319,7 +8311,8 @@ NULL
 #' @format A data frame/tibble with 75 observations on three variables
 #' \describe{ 
 #' \item{waterph}{water sample pH level} 
-#' \item{code}{charater variable with values \code{low} (elevation below 0.6 miles), and \code{high} (elevation above 0.6 miles)} 
+#' \item{code}{charater variable with values \code{low} (elevation below 0.6 miles), 
+#' and \code{high} (elevation above 0.6 miles)} 
 #' \item{elev}{elevation in miles} 
 #' }
 #' 
@@ -8327,7 +8320,7 @@ NULL
 #' \emph{Journal of the American Statistical Association, 89}, 1507-1516.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8362,15 +8355,18 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 2,484 observations on two variables
 #' \describe{ 
-#' \item{snore}{factor with levels \code{nonsnorer}, \code{ocassional snorer}, \code{nearly every night}, and \code{snores every night}}
-#' \item{heartdisease}{factor indicating whether the indiviudal has heart disease (\code{no} or \code{yes})} 
+#' \item{snore}{factor with levels \code{nonsnorer}, \code{ocassional snorer}, 
+#' \code{nearly every night}, and \code{snores every night}}
+#' \item{heartdisease}{factor indicating whether the indiviudal has heart disease 
+#' (\code{no} or \code{yes})} 
 #' }
 #' 
-#' @source Norton, P. and Dunn, E. (1985), Snoring as a Risk Factor for Disease, \emph{British Medical Journal, 291},
+#' @source Norton, P. and Dunn, E. (1985), Snoring as a Risk Factor for Disease, 
+#' \emph{British Medical Journal, 291},
 #' 630-632.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8401,7 +8397,7 @@ NULL
 #' @source Davis, J., \emph{Statistics and Data Analysis in Geology}, John Wiley, New York.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8425,7 +8421,7 @@ NULL
 #' \item{weight}{soccer players weight (in pounds)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8449,10 +8445,11 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 25 observations on one variable
 #' \describe{ 
-#' \item{income}{annual income (in dollars) of North Carolina social workers with less than five years experience.} 
+#' \item{income}{annual income (in dollars) of North Carolina social workers 
+#' with less than five years experience.} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8480,7 +8477,7 @@ NULL
 #' \item{exam}{final exam grade in college algebra} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8512,7 +8509,7 @@ NULL
 #' \item{rate}{murder rate per 100,000 people} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8539,7 +8536,7 @@ NULL
 #' \item{signranks}{signed ranked differences} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8566,7 +8563,7 @@ NULL
 #' \item{score}{score on a standardized spelling test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8594,7 +8591,7 @@ NULL
 #' \item{differ}{after - before (spelling score)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8620,10 +8617,11 @@ NULL
 #' @format A data frame/tibble with 200 observations on two variables
 #' \describe{ 
 #' \item{gender}{a factor with levels \code{male} and \code{female}}
-#' \item{sport}{a factor with levels \code{football}, \code{basketball}, \code{baseball}, and \code{tennis}} 
+#' \item{sport}{a factor with levels \code{football}, \code{basketball}, 
+#' \code{baseball}, and \code{tennis}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8647,7 +8645,8 @@ NULL
 #' @docType data
 #' @format A data frame/tibble with 540 observations on two variables
 #' \describe{ 
-#' \item{result}{a factor with levels \code{not prosecuted}, \code{pleaded guilty}, \code{convicted}, and \code{acquited}}
+#' \item{result}{a factor with levels \code{not prosecuted}, \code{pleaded guilty}, 
+#' \code{convicted}, and \code{acquited}}
 #' \item{spouse}{a factor with levels \code{husband} and \code{wife}} 
 #' }
 #' 
@@ -8655,7 +8654,7 @@ NULL
 #' Urban Counties}, Executive Summary, NCJ-156831.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8682,7 +8681,7 @@ NULL
 #' \item{time}{time (in seconds) for horse to run 1 mile} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8710,7 +8709,7 @@ NULL
 #' \emph{Journal of the American Statistical Association}, 83, 941-953.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8738,7 +8737,7 @@ NULL
 #' \item{score}{grade for an introductory statistics class} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8766,11 +8765,11 @@ NULL
 #' \item{cost}{dollars spent per resident on law enforcement} 
 #' }
 #' 
-#' @source Bureau of Justice Statistics, \emph{Law Enforcement Management and Administrative Statistics, 1993},
-#' NCJ-148825, September 1995, page 84.
+#' @source Bureau of Justice Statistics, \emph{Law Enforcement Management and 
+#' Administrative Statistics, 1993}, NCJ-148825, September 1995, page 84.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8796,7 +8795,7 @@ NULL
 #' \item{score}{test score for an introductory statistics test} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8829,7 +8828,7 @@ NULL
 #' \item{score}{State test of educational progress (STEP) science test score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8857,7 +8856,7 @@ NULL
 #' \item{poststress}{short term memory score after being exposed to a stressful situation} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8888,7 +8887,7 @@ NULL
 #' \item{hours}{number of hours a week freshmen reported studying for their courses} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8917,10 +8916,10 @@ NULL
 #' }
 #' 
 #' @source F. Mosteller, S. Fienberg, and R. Rourke, \emph{Beginning Statistics with Data Analysis}
-#' (Reading, MA: Addison-Wesley, 1983)
+#' (Reading, MA: Addison-Wesley, 1983).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8948,7 +8947,7 @@ NULL
 #' \item{time}{time (in minutes) it takes a subway to travel from the airport to downtown} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -8975,7 +8974,7 @@ NULL
 #' \item{sunspots}{average number of sunspots for the year} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9013,7 +9012,7 @@ NULL
 #' \item{victory_margin}{winner_score - loser_score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9038,10 +9037,10 @@ NULL
 #' \item{car}{name of sports car} 
 #' }
 #' 
-#' @source \emph{Car and Drvier} (July 1995)
+#' @source \emph{Car and Drvier} (July 1995).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9084,7 +9083,7 @@ NULL
 #' \item{air}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9128,10 +9127,10 @@ NULL
 #' \item{salary}{avaerage salary (in dollars)}
 #' }
 #' 
-#' @source National Education Association 
+#' @source National Education Association. 
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9172,7 +9171,7 @@ NULL
 #' \item{score}{Tennessee Self-Concept Scale score} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9206,7 +9205,7 @@ NULL
 #' \item{run}{factor with run number (1 or 2)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9232,7 +9231,7 @@ NULL
 #' \item{score}{score on first statistics exam} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9258,7 +9257,7 @@ NULL
 #' \item{loss}{heat loss (BTUs)} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9289,7 +9288,7 @@ NULL
 #' \item{date}{day of the year} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9313,7 +9312,7 @@ NULL
 #' \item{time}{time (in seconds) to check out a reservation}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9339,10 +9338,10 @@ NULL
 #' \item{cost}{price of toaster (in dollars)} 
 #' }
 #' 
-#' @source \emph{Consumer Reports} (October 1994)
+#' @source \emph{Consumer Reports} (October 1994).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9372,7 +9371,7 @@ NULL
 #' \item{status}{a factor with levels \code{Carrier} and \code{Non-carrier}}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9415,10 +9414,10 @@ NULL
 #' }
 #' 
 #' @source U.S. Department of Justice, \emph{Tort Cases in Large Counties}, Bureau of Justice
-#' Statistics Special Report, April 1995
+#' Statistics Special Report, April 1995.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9446,7 +9445,7 @@ NULL
 #' \item{percent}{a numeric vector} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9482,10 +9481,10 @@ NULL
 #' \item{marathon}{time in minutes for marathon} 
 #' }
 #' 
-#' @source Dawkins, B. (1989), "Multivariate Analysis of National Track Records," \emph{The American Statistician, 43}(2), 110-115
+#' @source Dawkins, B. (1989), "Multivariate Analysis of National Track Records," \emph{The American Statistician, 43}(2), 110-115.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9513,10 +9512,10 @@ NULL
 #' \item{time}{Olympic winning time (in seconds) for the 1500-meter run} 
 #' }
 #' 
-#' @source \emph{The World Almanac and Book of Facts}, 2000
+#' @source \emph{The World Almanac and Book of Facts}, 2000.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9543,7 +9542,7 @@ NULL
 #' \item{group}{factor with levels 1, 2, and 3} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9570,7 +9569,7 @@ NULL
 #' \item{number}{number of trees in a grid} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9598,7 +9597,7 @@ NULL
 #' \item{truck}{a factor with levels \code{chevy}, \code{dodge}, and \code{ford}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9626,10 +9625,10 @@ NULL
 #' \item{test}{state average on national math test} 
 #' }
 #' 
-#' @source Educational Testing Services
+#' @source Educational Testing Services.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9657,7 +9656,7 @@ NULL
 #' \item{differ}{\code{twinA} - \code{twinB}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9689,7 +9688,7 @@ NULL
 #' \item{drops}{number of courses dropped}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9731,7 +9730,7 @@ NULL
 #' \item{number}{number of days of paid holidays and vacation leave taken} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9762,7 +9761,7 @@ NULL
 #' @source Center for Disease Control, Atlanta, Georgia.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9788,13 +9787,14 @@ NULL
 #' @format A data frame/tibble with 151 observations on two variables
 #' \describe{ 
 #' \item{make}{a factor with levels \code{domestic} and \code{foreign}} 
-#' \item{rating}{a factor with levels \code{Much better than average}, \code{Above average}, \code{Average}, \code{Below average}, and \code{Much worse than average}} 
+#' \item{rating}{a factor with levels \code{Much better than average}, 
+#' \code{Above average}, \code{Average}, \code{Below average}, and \code{Much worse than average}} 
 #' }
 #' 
-#' @source Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995
+#' @source Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9822,7 +9822,7 @@ NULL
 #' \item{verbal}{verbal test score}
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9852,10 +9852,10 @@ NULL
 #' }
 #' 
 #' @source N. Shaw, \emph{Manual of Meteorology}, Vol. 1 (London: Cambridge University Press, 1942),
-#' p. 284; and F. Mosteller and J. W. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison-Wesley, 1977)
+#' p. 284; and F. Mosteller and J. W. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison-Wesley, 1977).
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9883,7 +9883,7 @@ NULL
 #' \item{second}{viscosity measurement for a certain substance on day two} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9908,7 +9908,7 @@ NULL
 #' \item{visual}{visual acuity measurement} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9935,7 +9935,7 @@ NULL
 #' \item{second}{reading test score after formal vocabulary training} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9964,10 +9964,10 @@ NULL
 #' @source Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2 ed., John Wiley and Sons,
 #' New York, p. 228, and Bardwell, G. E. (1970), Some Statistical Features of the Relationship between
 #' Rocky Mountain Arsenal Waste Disposal and Frequency of Earthquakes, \emph{Geological Society of America, Engineering
-#' Geology Case Histories, 8}, 33-337
+#' Geology Case Histories, 8}, 33-337.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -9997,7 +9997,7 @@ NULL
 #' \code{River Flood}, \code{Thunderstorm}, \code{Tornado}, and \code{Winter Weather}} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -10038,10 +10038,10 @@ NULL
 #' \item{price}{price for a bushel of wheat (in dollars)} 
 #' }
 #' 
-#' @source \emph{The World Almanac and Book of Facts}, 2000
+#' @source \emph{The World Almanac and Book of Facts}, 2000.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -10070,10 +10070,10 @@ NULL
 #' }
 #' 
 #' @source Joglekar, et al. (1989), Lack of Fit Testing when Replicates Are Not Available,
-#' \emph{The American Statistician, 43},(3), 135-143
+#' \emph{The American Statistician, 43},(3), 135-143.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -10099,7 +10099,7 @@ NULL
 #' \item{leakage}{percent leakage from a 50 mph wind} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -10132,7 +10132,7 @@ NULL
 #' \item{era}{earned run average} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -10164,7 +10164,7 @@ NULL
 #' \item{strength}{strength of wool} 
 #' }
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 
@@ -10193,7 +10193,7 @@ NULL
 #' @source NASA/Marshall Space Flight Center, Huntsville, AL 35812.
 #' 
 #' @references Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-#' Duxbury
+#' Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 #' @keywords datasets
 #' @examples
 #' 

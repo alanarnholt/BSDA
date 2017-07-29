@@ -33,7 +33,7 @@ Francisco CA}, \code{Seattle WA}, \code{Spokane WA}, \code{St Louis MO},
 \item{price}{median house price (in dollars)} 
 }}
 \source{
-National Association of Realtors
+National Association of Realtors.
 }
 \usage{
 Homes
@@ -62,6 +62,6 @@ ggplot2::ggplot(data = Homes, aes(x = region, y = price)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

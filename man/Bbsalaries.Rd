@@ -7,7 +7,8 @@
 \format{A data frame/tibble  with 142 observations on two variables
 \describe{ 
 \item{salary}{1999 salary for baseball player} 
-\item{team}{a factor with levels \code{Angels}, \code{Indians}, \code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
+\item{team}{a factor with levels \code{Angels}, \code{Indians}, 
+\code{Orioles}, \code{Redsoxs}, and \code{Whitesoxs}} 
 }}
 \usage{
 Bbsalaries
@@ -24,6 +25,6 @@ title(main = "Major League Salaries")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

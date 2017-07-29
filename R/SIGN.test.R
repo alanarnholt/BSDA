@@ -83,7 +83,7 @@
 #'         
 #' reaction <- c(14.3, 13.7, 15.4, 14.7, 12.4, 13.1, 9.2, 14.2, 
 #'               14.4, 15.8, 11.3, 15.0)
-#' SIGN.test(reaction, md=15, alternative="less")
+#' SIGN.test(reaction, md = 15, alternative = "less")
 #'         # Data from Example 6.11 page 330 of Kitchens BSDA.  
 #'         # Computes one-sided sign-test for the null hypothesis 
 #'         # that the population median is 15.  The alternative 

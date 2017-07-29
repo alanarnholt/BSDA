@@ -12,7 +12,7 @@
 }}
 \source{
 Pearson, K. and Lee, A. (1902-3), On the Laws of Inheritance in Man, 
-\emph{Biometrika, 2}, 357
+\emph{Biometrika, 2}, 357.
 }
 \usage{
 Pearson
@@ -28,6 +28,6 @@ cor(Pearson$brother, Pearson$sister)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

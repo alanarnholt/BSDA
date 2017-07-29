@@ -10,7 +10,7 @@
 \item{phase}{Ceramic Phase numbers} 
 }}
 \source{
-Cunliffe, B. (1984) and Naylor and Smith (1988)
+Cunliffe, B. (1984) and Naylor and Smith (1988).
 }
 \usage{
 Archaeo
@@ -27,6 +27,6 @@ anova(lm(age ~ as.factor(phase), data= Archaeo))
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

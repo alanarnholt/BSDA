@@ -17,7 +17,7 @@
 and \code{1998}} 
 }}
 \source{
-\emph{The World Almanac and Book of Facts}, 2000
+\emph{The World Almanac and Book of Facts}, 2000.
 }
 \usage{
 Dogs
@@ -39,6 +39,6 @@ ggplot2::ggplot(data = Dogs, aes(x = reorder(breed, ranking), y = ranking)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

@@ -23,7 +23,7 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 \item{percent1998}{percent of the population over the age of 65 in 1998} 
 }}
 \source{
-U.S. Census Bureau Internet site, February 2000
+U.S. Census Bureau Internet site, February 2000.
 }
 \usage{
 Elderly
@@ -47,6 +47,6 @@ ggplot2::ggplot(data = Elderly, aes(x = percent1985, y = percent1998)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

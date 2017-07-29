@@ -24,7 +24,7 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 }}
 \source{
 \emph{National Vital Statistics Report, 48}, March 28, 2000, National
-Center for Health Statistics
+Center for Health Statistics.
 }
 \usage{
 Birth
@@ -46,6 +46,6 @@ rm(rate1998)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

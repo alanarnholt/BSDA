@@ -12,7 +12,7 @@
 \code{pseudoephedrine}, and \code{placebo}}
  }}
 \source{
-Marion Merrel Dow, Inc. Kansas City, Mo. 64114
+Marion Merrel Dow, Inc. Kansas City, Mo. 64114.
 }
 \usage{
 Allergy
@@ -29,6 +29,6 @@ chisq.test(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

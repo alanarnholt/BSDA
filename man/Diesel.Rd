@@ -14,7 +14,7 @@
 }}
 \source{
 Energy Information Administration, National Enerfy Information Center:
-1000 Independence Ave., SW, Washington, D.C., 20585
+1000 Independence Ave., SW, Washington, D.C., 20585.
 }
 \usage{
 Diesel
@@ -44,6 +44,6 @@ ggplot2::ggplot(data = Diesel, aes(x = date, y = pricepergallon,
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

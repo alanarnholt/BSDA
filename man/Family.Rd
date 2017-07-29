@@ -6,8 +6,8 @@
 \title{Size of family versus cost per person per week for groceries}
 \format{A data frame/tibble with 20 observations on two variables
 \describe{ 
-\item{number}{a numeric vector} 
-\item{cost}{a numeric vector} 
+\item{number}{number in family} 
+\item{cost}{cost per person (in dollars)} 
 }}
 \usage{
 Family
@@ -32,6 +32,6 @@ ggplot2::ggplot(data = Family, aes(x = number, y = cost)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

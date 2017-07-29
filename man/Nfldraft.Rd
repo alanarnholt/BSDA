@@ -12,7 +12,7 @@
 \item{weight}{weight of each player (in pounds)}
 }}
 \source{
-\emph{USA Today}, April 20, 1994
+\emph{USA Today}, April 20, 1994.
 }
 \usage{
 Nfldraft
@@ -29,6 +29,6 @@ summary(lm(rating ~ forty, data = Nfldraft))
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

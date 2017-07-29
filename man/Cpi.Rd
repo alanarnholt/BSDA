@@ -10,7 +10,7 @@
 \item{cpi}{consumer price index} 
 }}
 \source{
-Bureau of Labor Statistics
+Bureau of Labor Statistics.
 }
 \usage{
 Cpi
@@ -26,6 +26,6 @@ barplot(Cpi$cpi, col = "pink", las = 2, main = "Problem 1.34")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

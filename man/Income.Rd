@@ -22,7 +22,7 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 \item{percent_change}{percent change in income from first quarter to the second quarter of 2000} 
 }}
 \source{
-US Department of Commerce
+US Department of Commerce.
 }
 \usage{
 Income
@@ -49,6 +49,6 @@ ggplot2::ggplot(data = DF,  aes(x = class, y = Freq)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

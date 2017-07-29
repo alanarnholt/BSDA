@@ -7,10 +7,11 @@
 \format{A data frame/tibble with 151 observations on two variables
 \describe{ 
 \item{make}{a factor with levels \code{domestic} and \code{foreign}} 
-\item{rating}{a factor with levels \code{Much better than average}, \code{Above average}, \code{Average}, \code{Below average}, and \code{Much worse than average}} 
+\item{rating}{a factor with levels \code{Much better than average}, 
+\code{Above average}, \code{Average}, \code{Below average}, and \code{Much worse than average}} 
 }}
 \source{
-Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995
+Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995.
 }
 \usage{
 Vehicle
@@ -27,6 +28,6 @@ chisq.test(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

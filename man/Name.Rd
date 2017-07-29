@@ -21,7 +21,7 @@ Lee}, \code{Schweppes}, \code{Smirnoff}, \code{Tampax}, \code{Winston}, and
 \item{revenue}{revenue in billions of dollars} 
 }}
 \source{
-Financial World
+Financial World.
 }
 \usage{
 Name
@@ -41,6 +41,6 @@ rm(model)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

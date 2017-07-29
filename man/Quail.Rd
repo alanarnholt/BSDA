@@ -27,6 +27,6 @@ boxplot(level ~ group, data = Quail, horizontal = TRUE, xlab = "LDL Level",
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

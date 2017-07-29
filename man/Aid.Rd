@@ -22,7 +22,7 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 \item{payment}{average monthly payment per person in a family} 
 }}
 \source{
-US Department of Health and Human Services, 1993
+US Department of Health and Human Services, 1993.
 }
 \usage{
 Aid
@@ -41,6 +41,6 @@ dotplot(state ~ payment, data = Aid)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

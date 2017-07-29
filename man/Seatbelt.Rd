@@ -7,10 +7,12 @@
 \format{A data frame/tibble with 86,759 observations on two variables
 \describe{ 
 \item{seatbelt}{a factor with levels \code{No} and \code{Yes}} 
-\item{injuries}{a factor with levels \code{None}, \code{Minimal}, \code{Minor}, or \code{Major} indicating the extent of the drivers injuries.a numeric vector}
+\item{injuries}{a factor with levels \code{None}, \code{Minimal}, 
+\code{Minor}, or \code{Major} indicating the extent of the drivers injuries}
 }}
 \source{
-Jobson, J. (1982), \emph{Applied Multivariate Data Analysis}, Springer-Verlag, New York, p. 18
+Jobson, J. (1982), \emph{Applied Multivariate Data Analysis}, Springer-Verlag, 
+New York, p. 18.
 }
 \usage{
 Seatbelt
@@ -28,6 +30,6 @@ rm(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

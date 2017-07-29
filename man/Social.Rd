@@ -6,7 +6,8 @@
 \title{Median income level for 25 social workers from North Carolina}
 \format{A data frame/tibble with 25 observations on one variable
 \describe{ 
-\item{income}{annual income (in dollars) of North Carolina social workers with less than five years experience.} 
+\item{income}{annual income (in dollars) of North Carolina social workers 
+with less than five years experience.} 
 }}
 \usage{
 Social
@@ -21,6 +22,6 @@ SIGN.test(Social$income, md = 27500, alternative = "less")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

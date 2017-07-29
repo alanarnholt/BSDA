@@ -10,7 +10,7 @@
 \item{speed}{the winners average speed (in mph)} 
 }}
 \source{
-The World Almanac and Book of Facts, 2000, p. 1004
+The World Almanac and Book of Facts, 2000, p. 1004.
 }
 \usage{
 Indiapol
@@ -25,6 +25,6 @@ plot(speed ~ year, data = Indiapol, type = "b")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

@@ -12,7 +12,7 @@
 }}
 \source{
 I. Dunsmore, F. Daly, \emph{Statistical Methods, Unit 9, Categorical Data}, 
-Milton Keynes, The Open University, 18
+Milton Keynes, The Open University, 18.
 }
 \usage{
 Hodgkin
@@ -36,6 +36,6 @@ ggplot2::ggplot(data = Hodgkin, aes(x = type, fill = response)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

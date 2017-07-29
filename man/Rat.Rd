@@ -9,7 +9,7 @@
 \item{survival_time}{survival time in weeks for rats exposed to a high level of radiation} 
 }}
 \source{
-J. Lawless, \emph{Statistical Models and Methods for Lifetime Data} (New York: Wiley, 1982)
+J. Lawless, \emph{Statistical Models and Methods for Lifetime Data} (New York: Wiley, 1982).
 }
 \usage{
 Rat
@@ -29,6 +29,6 @@ t.test(Rat$survival_time, mu = 100, alternative = "greater")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

@@ -5,7 +5,7 @@
 \alias{Challeng}
 \title{Temperatures and O-ring failures for the launches of the space shuttle
 Challenger}
-\format{A data frame/tibble  with 25 observations on four variables
+\format{A data frame/tibble with 25 observations on four variables
 \describe{ 
 \item{flight}{a character variable indicating the flight}
 \item{date}{date of the flight} 
@@ -45,6 +45,6 @@ par(mfrow=c(1, 1))
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

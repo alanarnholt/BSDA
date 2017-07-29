@@ -9,8 +9,8 @@
 \item{rent}{monthly rent in dollars} 
 }}
 \source{
-U.S. Bureau of the Census, \emph{Housing in the Metropolitan Areas, Statistical Brief} SB/94/19,
-September 1994
+U.S. Bureau of the Census, \emph{Housing in the Metropolitan Areas, 
+Statistical Brief} SB/94/19, September 1994.
 }
 \usage{
 Metrent
@@ -26,6 +26,6 @@ t.test(Metrent$rent, conf.level = 0.99)$conf
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

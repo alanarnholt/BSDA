@@ -11,7 +11,7 @@
 }}
 \source{
 Davis, J. (1986), \emph{Statistics and Data Analysis in Geology}, 2d. Ed.,
-John Wiley and Sons, New York, p. 146
+John Wiley and Sons, New York, p. 146.
 }
 \usage{
 Magnesiu
@@ -30,6 +30,6 @@ rm(model)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

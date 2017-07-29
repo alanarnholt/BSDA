@@ -6,8 +6,8 @@
 \title{Cost of funeral by region of country}
 \format{A data frame/tibble with 400 observations on two variables
 \describe{ 
-\item{region}{a factor with levels \code{Central}
-\code{East} \code{South} \code{West}} 
+\item{region}{a factor with levels \code{Central},
+\code{East,} \code{South}, and \code{West}} 
 \item{cost}{a factor with levels \code{less than expected}, \code{about what expected}, 
 and \code{more than expected}}
 }}
@@ -27,6 +27,6 @@ rm(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

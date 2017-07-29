@@ -11,7 +11,7 @@
 \source{
 K. Roeder, "Density Estimation with Confidence Sets Explained by Superclusters
 and Voids in the Galaxies," \emph{Journal of the American Statistical Association}, 85
-(1990), 617-624
+(1990), 617-624.
 }
 \usage{
 Galaxie
@@ -26,6 +26,6 @@ EDA(Galaxie$velocity)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

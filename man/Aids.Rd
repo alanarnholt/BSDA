@@ -13,7 +13,7 @@ transfusion}
 }}
 \source{
 Kalbsleich, J. and Lawless, J., (1989), An analysis of the data on transfusion
-related AIDS, \emph{Journal of the American Statistical Association, 84}, 360-372
+related AIDS, \emph{Journal of the American Statistical Association, 84}, 360-372.
 }
 \usage{
 Aids
@@ -36,6 +36,6 @@ with(data = Aids,
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

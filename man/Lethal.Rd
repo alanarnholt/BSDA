@@ -6,7 +6,8 @@
 \title{Survival time of mice injected with an experimental lethal drug}
 \format{A data frame/tibble with 30 observations on one variable
 \describe{ 
-\item{survival}{a numeric vector indicating time surivived after injection} 
+\item{survival}{a numeric vector indicating time surivived 
+after injection (in seconds)} 
 }}
 \usage{
 Lethal
@@ -22,6 +23,6 @@ SIGN.test(Lethal$survival, md = 45, alternative = "less")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

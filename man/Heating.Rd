@@ -6,7 +6,8 @@
 \title{Fuel efficiency ratings for three types of oil heaters}
 \format{A data frame/tibble with 90 observations on the two variables
 \describe{ 
-\item{type}{a factor with levels \code{A}, \code{B}, and \code{C} denoting the type of oil heater} 
+\item{type}{a factor with levels \code{A}, \code{B}, and \code{C} denoting 
+the type of oil heater} 
 \item{efficiency}{heater efficiency rating} 
 }}
 \usage{
@@ -24,6 +25,6 @@ kruskal.test(efficiency ~ type, data = Heating)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

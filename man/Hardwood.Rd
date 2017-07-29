@@ -12,7 +12,7 @@ batches of pulp}
 }}
 \source{
 G. Joglekar, et al., "Lack-of-Fit Testing When Replicates Are Not Available,"
-\emph{The American Statistician}, 43(3), (1989), 135-143
+\emph{The American Statistician}, 43(3), (1989), 135-143.
 }
 \usage{
 Hardwood
@@ -31,6 +31,6 @@ plot(model, which = 1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

@@ -9,7 +9,7 @@
 \item{fee}{fees for an appendectomy for a random sample of 20 hospitals in North Carolina} 
 }}
 \source{
-North Carolina Medical Database Commission, August 1994
+North Carolina Medical Database Commission, August 1994.
 }
 \usage{
 Append
@@ -29,6 +29,6 @@ fee[fee < ll | fee > ul]
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

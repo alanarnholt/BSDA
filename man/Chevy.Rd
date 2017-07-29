@@ -12,7 +12,7 @@
 \code{average}, \code{below average}, and \code{much worse than average}} 
 }}
 \source{
-Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995
+Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995.
 }
 \usage{
 Chevy
@@ -30,6 +30,6 @@ rm(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

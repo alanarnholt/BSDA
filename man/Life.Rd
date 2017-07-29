@@ -11,7 +11,7 @@
 \item{women}{life expectancy for women (in years)} 
 }}
 \source{
-National Center for Health Statistics
+National Center for Health Statistics.
 }
 \usage{
 Life
@@ -31,6 +31,6 @@ text(1955, 70, "Women", col = "red")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

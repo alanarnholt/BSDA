@@ -37,6 +37,6 @@ ggplot2::ggplot(data =T2, aes(x = reorder(type, Freq), y = Freq)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

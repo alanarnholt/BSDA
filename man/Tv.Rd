@@ -12,7 +12,7 @@ national math test scores}
 \item{test}{state average on national math test} 
 }}
 \source{
-Educational Testing Services
+Educational Testing Services.
 }
 \usage{
 Tv
@@ -28,6 +28,6 @@ cor(Tv$test, Tv$percent)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

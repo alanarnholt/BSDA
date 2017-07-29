@@ -7,7 +7,8 @@
 of schizophrenics after a specified dose of a tranquilizer}
 \format{A data frame/tibble with 13 observations on one variable
 \describe{ 
-\item{score}{schizophrenics score on a standardized exam one hour after recieving a specified dose of a tranqilizer.} 
+\item{score}{schizophrenics score on a standardized exam one 
+hour after recieving a specified dose of a tranqilizer.} 
 }}
 \usage{
 Schizoph
@@ -25,6 +26,6 @@ t.test(Schizoph$score, mu = 20)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

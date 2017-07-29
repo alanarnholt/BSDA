@@ -13,7 +13,7 @@ Grand Banks in 1920}
 }}
 \source{
 N. Shaw, \emph{Manual of Meteorology}, Vol. 2 (London: Cambridge University Press 1942),
-7; and F. Mosteller and J. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison - Wesley, 1977)
+7; and F. Mosteller and J. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison - Wesley, 1977).
 }
 \usage{
 Iceberg
@@ -29,6 +29,6 @@ abline(lm(Newfoundland ~ `Grand Banks`, data = Iceberg), col = "blue")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

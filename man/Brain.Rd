@@ -18,7 +18,7 @@ elephant}, \code{Asian Elephant}, \code{Brachiosaurus}, \code{Cat},
 }}
 \source{
 P. Rousseeuw and A. Leroy, \emph{Robust Regression and Outlier Detection} 
-(New York: Wiley, 1987)
+(New York: Wiley, 1987).
 }
 \usage{
 Brain
@@ -37,6 +37,6 @@ abline(mod, lty = "dashed", col = "blue")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

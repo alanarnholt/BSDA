@@ -12,7 +12,7 @@
 \item{inflation}{percent inflation rate} 
 }}
 \source{
-Bureau of Labor Statistics
+Bureau of Labor Statistics.
 }
 \usage{
 Inflatio
@@ -28,6 +28,6 @@ cor(Inflatio$increase, Inflatio$inflation, use = "complete.obs")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

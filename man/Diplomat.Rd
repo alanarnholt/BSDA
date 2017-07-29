@@ -13,7 +13,7 @@
 \item{rate}{number of tickets per vehicle per month} 
 }}
 \source{
-\emph{Time}, November 8, 1993. Figures are from January to June 1993
+\emph{Time}, November 8, 1993. Figures are from January to June 1993.
 }
 \usage{
 Diplomat
@@ -47,6 +47,6 @@ ggplot2::ggplot(data = Diplomat, aes(x = reorder(country, rate),
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

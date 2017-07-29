@@ -4,7 +4,7 @@
 \name{Biology}
 \alias{Biology}
 \title{Test scores on first exam in biology class}
-\format{A data frame/tibble  with 30 observations on one variable
+\format{A data frame/tibble with 30 observations on one variable
 \describe{ 
 \item{score}{test scores on the first test in a beginning biology class} 
 }}
@@ -23,6 +23,6 @@ lines(density(Biology$score), lwd=3)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

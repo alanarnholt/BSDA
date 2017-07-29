@@ -10,7 +10,7 @@
 }}
 \source{
 U.S. Department of Justice, Bureau of Justice Statistics, \emph{Prison Sentences
-and Time Served for Violence}, NCJ-153858, April 1995
+and Time Served for Violence}, NCJ-153858, April 1995.
 }
 \usage{
 Sentence
@@ -30,6 +30,6 @@ rm(ul, ll, limits)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

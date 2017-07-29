@@ -11,7 +11,7 @@ stress}
 \item{time}{breakdown time (in minutes)} 
 }}
 \source{
-E. Soofi, N. Ebrahimi, and M. Habibullah, 1995
+E. Soofi, N. Ebrahimi, and M. Habibullah, 1995.
 }
 \usage{
 Fluid
@@ -37,6 +37,6 @@ DF3
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

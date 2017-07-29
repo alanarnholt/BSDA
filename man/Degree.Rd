@@ -13,7 +13,8 @@
 \item{awarded}{a factor with levels \code{1970} and \code{1990}} 
 }}
 \source{
-U.S. Department of Health and Human Services, National Center for Education Statistics
+U.S. Department of Health and Human Services, National 
+Center for Education Statistics.
 }
 \usage{
 Degree
@@ -31,6 +32,6 @@ rm(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

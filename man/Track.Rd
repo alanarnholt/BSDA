@@ -16,7 +16,7 @@
 \item{marathon}{time in minutes for marathon} 
 }}
 \source{
-Dawkins, B. (1989), "Multivariate Analysis of National Track Records," \emph{The American Statistician, 43}(2), 110-115
+Dawkins, B. (1989), "Multivariate Analysis of National Track Records," \emph{The American Statistician, 43}(2), 110-115.
 }
 \usage{
 Track
@@ -34,6 +34,6 @@ cor(Track[, 2:8])
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

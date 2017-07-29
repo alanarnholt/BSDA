@@ -21,6 +21,6 @@ boxplot(South$rate, col = "gray", ylab = "Murder rate per 100,000 people")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

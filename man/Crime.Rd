@@ -24,7 +24,7 @@ Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 }}
 \source{
 U.S. Department of Justice, Bureau of Justice Statistics, \emph{Sourcebook of
-Criminal Justice Statistics}, 1993
+Criminal Justice Statistics}, 1993.
 }
 \usage{
 Crime
@@ -39,6 +39,6 @@ boxplot(rate ~ year, data = Crime, col = "red")
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

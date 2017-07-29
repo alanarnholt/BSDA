@@ -4,7 +4,7 @@
 \name{Cancer}
 \alias{Cancer}
 \title{Survival times of terminal cancer patients treated with vitamin C}
-\format{A data frame/tibble  with 64 observations on two variables
+\format{A data frame/tibble with 64 observations on two variables
 \describe{ 
 \item{survival}{survival time (in days) of terminal patients 
 treated with vitamin C}
@@ -37,6 +37,6 @@ rm(bronchus, stomach)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

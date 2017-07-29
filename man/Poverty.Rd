@@ -17,7 +17,7 @@
 \item{population}{population of city} 
 }}
 \source{
-Children's Defense Fund and the Bureau of Justice Statistics
+Children's Defense Fund and the Bureau of Justice Statistics.
 }
 \usage{
 Poverty
@@ -36,6 +36,6 @@ rm(model)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

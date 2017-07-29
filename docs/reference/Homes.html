@@ -121,12 +121,12 @@ Francisco CA</code>, <code>Seattle WA</code>, <code>Spokane WA</code>, <code>St 
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>National Association of Realtors</p>
+    <p>National Association of Realtors.</p>
     
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Kitchens, L. J. (2003) <em>Basic Statistics and Data Analysis</em>.
-Duxbury</p>
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -137,8 +137,8 @@ Duxbury</p>
 <span class='no'>p1994</span> <span class='kw'>&lt;-</span> <span class='fu'>subset</span>(<span class='no'>Homes</span>, <span class='no'>year</span> <span class='kw'>==</span> <span class='st'>"1994"</span>)</div><span class='co'># NOT RUN {</span>
 <span class='fu'>library</span>(<span class='no'>dplyr</span>)
 <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
-<span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>Homes</span>, <span class='no'>year</span>, <span class='no'>region</span>) <span class='kw'>%&gt;%</span>
-   <span class='fu'><a href='http://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span>(<span class='kw'>AvgPrice</span> <span class='kw'>=</span> <span class='fu'>mean</span>(<span class='no'>price</span>))
+<span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/dplyr/topics/group_by'>group_by</a></span>(<span class='no'>Homes</span>, <span class='no'>year</span>, <span class='no'>region</span>) <span class='kw'>%&gt;%</span>
+   <span class='fu'><a href='http://www.rdocumentation.org/packages/dplyr/topics/summarise'>summarize</a></span>(<span class='kw'>AvgPrice</span> <span class='kw'>=</span> <span class='fu'>mean</span>(<span class='no'>price</span>))
 <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Homes</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>region</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>price</span>)) +
            <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_boxplot'>geom_boxplot</a></span>() +
            <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggtheme'>theme_bw</a></span>() +

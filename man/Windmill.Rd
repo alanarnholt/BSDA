@@ -11,7 +11,7 @@
 }}
 \source{
 Joglekar, et al. (1989), Lack of Fit Testing when Replicates Are Not Available,
-\emph{The American Statistician, 43},(3), 135-143
+\emph{The American Statistician, 43},(3), 135-143.
 }
 \usage{
 Windmill
@@ -27,6 +27,6 @@ anova(lm(output ~ velocity, data = Windmill))
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

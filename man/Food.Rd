@@ -9,7 +9,7 @@
 \item{expenditure}{a numeric vector recording annual food expenditure (in dollars) in the state of Ohio.} 
 }}
 \source{
-Bureau of Labor Statistics
+Bureau of Labor Statistics.
 }
 \usage{
 Food
@@ -24,6 +24,6 @@ EDA(Food$expenditure)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

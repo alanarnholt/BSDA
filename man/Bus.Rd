@@ -8,7 +8,8 @@
 \describe{ 
 \item{attendance}{a factor with levels \code{absent} and
 \code{present}} 
-\item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, \code{swing}, and \code{split}} 
+\item{shift}{a factor with levels \code{am}, \code{noon}, \code{pm}, 
+\code{swing}, and \code{split}} 
 }}
 \usage{
 Bus
@@ -25,6 +26,6 @@ chisq.test(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

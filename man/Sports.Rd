@@ -7,7 +7,8 @@
 \format{A data frame/tibble with 200 observations on two variables
 \describe{ 
 \item{gender}{a factor with levels \code{male} and \code{female}}
-\item{sport}{a factor with levels \code{football}, \code{basketball}, \code{baseball}, and \code{tennis}} 
+\item{sport}{a factor with levels \code{football}, \code{basketball}, 
+\code{baseball}, and \code{tennis}} 
 }}
 \usage{
 Sports
@@ -25,6 +26,6 @@ rm(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

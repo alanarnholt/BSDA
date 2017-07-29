@@ -10,7 +10,7 @@
 }}
 \source{
 R. D'Agostino, et al., (1990) "A Suggestion for Using Powerful and Informative
-Tests for Normality," \emph{The American Statistician, 44} 316-321
+Tests for Normality," \emph{The American Statistician, 44} 316-321.
 }
 \usage{
 Framingh
@@ -43,6 +43,6 @@ ggplot2::ggplot(data = Framingh, aes(x = cholest, y = ..density..)) +
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

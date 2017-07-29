@@ -6,11 +6,11 @@
 \title{Daily receipts for a small hardware store for 31 working days}
 \format{A data frame with 31 observations on one variable
 \describe{ 
-\item{receipt}{a numeric vector} 
+\item{receipt}{a numeric vector of daily receipts (in dollars)} 
 }}
 \source{
 J.C. Miller and J.N. Miller, (1988), \emph{Statistics for Analytical Chemistry}, 2nd Ed. 
-(New York: Halsted Press)
+(New York: Halsted Press).
 }
 \usage{
 Hardware
@@ -25,6 +25,6 @@ stem(Hardware$receipt)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

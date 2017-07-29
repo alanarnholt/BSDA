@@ -11,7 +11,7 @@
 }}
 \source{
 R. Millar, \dQuote{Estimating the Size - Selectivity of Fishing Gear by Conditioning
-on the Total Catch,} \emph{Journal of the American Statistical Association, 87} (1992), 962 - 968
+on the Total Catch,} \emph{Journal of the American Statistical Association, 87} (1992), 962 - 968.
 }
 \usage{
 Fish
@@ -31,6 +31,6 @@ dplyr::group_by(Fish, codend) \%>\%
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

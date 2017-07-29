@@ -6,11 +6,14 @@
 \title{Snoring versus heart disease}
 \format{A data frame/tibble with 2,484 observations on two variables
 \describe{ 
-\item{snore}{factor with levels \code{nonsnorer}, \code{ocassional snorer}, \code{nearly every night}, and \code{snores every night}}
-\item{heartdisease}{factor indicating whether the indiviudal has heart disease (\code{no} or \code{yes})} 
+\item{snore}{factor with levels \code{nonsnorer}, \code{ocassional snorer}, 
+\code{nearly every night}, and \code{snores every night}}
+\item{heartdisease}{factor indicating whether the indiviudal has heart disease 
+(\code{no} or \code{yes})} 
 }}
 \source{
-Norton, P. and Dunn, E. (1985), Snoring as a Risk Factor for Disease, \emph{British Medical Journal, 291},
+Norton, P. and Dunn, E. (1985), Snoring as a Risk Factor for Disease, 
+\emph{British Medical Journal, 291},
 630-632.
 }
 \usage{
@@ -29,6 +32,6 @@ rm(T1)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

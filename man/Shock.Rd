@@ -6,8 +6,8 @@
 \title{Effect of experimental shock on time to complete difficult task}
 \format{A data frame/tibble with 27 observations on two variables
 \describe{ 
-\item{group}{grouping variable with values of \code{Group1} (no shock), \code{Group2} (medium shock), 
-and \code{Group3} (severe shock)} 
+\item{group}{grouping variable with values of \code{Group1} (no shock), 
+\code{Group2} (medium shock), and \code{Group3} (severe shock)} 
 \item{attempts}{number of attempts to complete a task}
 }}
 \usage{
@@ -27,6 +27,6 @@ rm(model)
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}

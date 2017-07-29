@@ -7,7 +7,8 @@
 \format{A data frame/tibble with 15 observations on two variables
 \describe{ 
 \item{time}{time (in seconds) for aspirin to dissolve} 
-\item{impurity}{impurity of an ingredient with levels \code{1\%}, \code{5\%}, and \code{10\%}} 
+\item{impurity}{impurity of an ingredient with levels \code{1\%}, 
+\code{5\%}, and \code{10\%}} 
 }}
 \usage{
 Asprin
@@ -23,6 +24,6 @@ boxplot(time ~ impurity, data = Asprin,
 }
 \references{
 Kitchens, L. J. (2003) \emph{Basic Statistics and Data Analysis}.
-Duxbury
+Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.
 }
 \keyword{datasets}
