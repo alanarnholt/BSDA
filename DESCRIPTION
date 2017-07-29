@@ -5,7 +5,7 @@ Version: 1.2.0
 Date: 2017-07-29
 LazyData: yes
 Authors@R: c(
-    person("Alan", "Arnholt", email = "arnholtat@appstate.edu", role = c("aut", "cre")),
+    person("Alan T.", "Arnholt", email = "arnholtat@appstate.edu", role = c("aut", "cre")),
     person("Ben", "Evans", email = "ben.evans@temple.edu", role = "aut"))
 Maintainer: Alan T. Arnholt <arnholtat@appstate.edu>   
 Description: Data sets for book "Basic Statistics and Data Analysis" by

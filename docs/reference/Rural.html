@@ -112,7 +112,7 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 #&gt; alternative hypothesis: true location shift is not equal to 0
 #&gt; </div><span class='co'># NOT RUN {</span>
 <span class='fu'>library</span>(<span class='no'>dplyr</span>)
-<span class='no'>Rural</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/dplyr/topics/mutate'>mutate</a></span>(<span class='no'>Rural</span>, <span class='kw'>r</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>score</span>))
+<span class='no'>Rural</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='http://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='no'>Rural</span>, <span class='kw'>r</span> <span class='kw'>=</span> <span class='fu'>rank</span>(<span class='no'>score</span>))
 <span class='no'>Rural</span>
 <span class='fu'>t.test</span>(<span class='no'>r</span> ~ <span class='no'>area</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Rural</span>)
 <span class='co'># }</span><div class='input'>
@@ -134,7 +134,7 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alan Arnholt, Ben Evans.</p>
+  <p>Developed by Alan T. Arnholt, Ben Evans.</p>
 </div>
 
 <div class="pkgdown">

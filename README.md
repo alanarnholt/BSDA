@@ -5,7 +5,7 @@ BSDA
 ### Version 1.2.0
 
 [![Travis-CI Build Status](https://travis-ci.org/alanarnholt/BSDA.svg?branch=master)](https://travis-ci.org/alanarnholt/BSDA)
-[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/BSDA)](http://cran.rstudio.com/package=BSDA)
+[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/BSDA)](https://CRAN.R-project.org/package=BSDA)
 
 
 ### Alan T. Arnholt
@@ -18,7 +18,7 @@ Please report any **bugs** or **suggestions** at:
 ### Installation
 
 The package is available for download from
-[CRAN](http://cran.r-project.org/web/packages/BSDA/).
+[CRAN](https://CRAN.R-project.org/package=BSDA).
 
 You may download the most recent version using the [devtools](https://github.com/hadley/devtools) function `install_github()` to install **BSDA** in R.
 
