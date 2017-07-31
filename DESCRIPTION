@@ -20,4 +20,6 @@ Suggests:
     ggplot2 (>= 2.1.0),
     dplyr,
     tidyr
+URL: https://github.com/alanarnholt/BSDA, https://alanarnholt.github.io/BSDA/
+BugReports: https://github.com/alanarnholt/BSDA/issues
 RoxygenNote: 6.0.1
