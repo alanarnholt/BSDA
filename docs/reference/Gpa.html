@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">Home</a>
+  <a href="../news/index.html">News</a>
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
@@ -105,7 +105,7 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='fu'>plot</span>(<span class='no'>collgpa</span> ~ <span class='no'>hsgpa</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Gpa</span>)</div><div class='input'><span class='no'>mod</span> <span class='kw'>&lt;-</span> <span class='fu'>lm</span>(<span class='no'>collgpa</span> ~ <span class='no'>hsgpa</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Gpa</span>)
-<span class='fu'>abline</span>(<span class='no'>mod</span>)               <span class='co'># add line</span></div><div class='img'><img src='Gpa-1.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>yhat</span> <span class='kw'>&lt;-</span> <span class='fu'>predict</span>(<span class='no'>mod</span>)      <span class='co'># fitted values</span>
+<span class='fu'>abline</span>(<span class='no'>mod</span>)               <span class='co'># add line</span></div><div class='img'><img src='Gpa-2.png' alt='' width='700' height='432.632880098887' /></div><div class='input'><span class='no'>yhat</span> <span class='kw'>&lt;-</span> <span class='fu'>predict</span>(<span class='no'>mod</span>)      <span class='co'># fitted values</span>
 <span class='no'>e</span> <span class='kw'>&lt;-</span> <span class='fu'>resid</span>(<span class='no'>mod</span>)           <span class='co'># residuals</span>
 <span class='fu'>cbind</span>(<span class='no'>Gpa</span>, <span class='no'>yhat</span>, <span class='no'>e</span>)       <span class='co'># Table 2.1</span></div><div class='output co'>#&gt;    hsgpa collgpa     yhat           e
 #&gt; 1    2.7     2.2 2.686530 -0.48653001

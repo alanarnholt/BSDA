@@ -53,7 +53,7 @@ sophomores — Sophomor • BSDA</title>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">Home</a>
+  <a href="../news/index.html">News</a>
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
@@ -112,7 +112,7 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 #&gt; student 1.00000000 0.03318292 0.00558619 0.06689427
 #&gt; gpa     0.03318292 1.00000000 0.90061435 0.86065205
 #&gt; sat     0.00558619 0.90061435 1.00000000 0.82544464
-#&gt; exam    0.06689427 0.86065205 0.82544464 1.00000000</div><div class='input'><span class='fu'>plot</span>(<span class='no'>exam</span> ~ <span class='no'>gpa</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Sophomor</span>)</div><div class='img'><img src='Sophomor-1.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
+#&gt; exam    0.06689427 0.86065205 0.82544464 1.00000000</div><div class='input'><span class='fu'>plot</span>(<span class='no'>exam</span> ~ <span class='no'>gpa</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Sophomor</span>)</div><div class='img'><img src='Sophomor-2.png' alt='' width='700' height='432.632880098887' /></div><span class='co'># NOT RUN {</span>
 <span class='fu'>library</span>(<span class='no'>ggplot2</span>)
 <span class='kw pkg'>ggplot2</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/ggplot'>ggplot</a></span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>Sophomor</span>, <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/aes'>aes</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>gpa</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>exam</span>)) +
            <span class='fu'><a href='http://www.rdocumentation.org/packages/ggplot2/topics/geom_point'>geom_point</a></span>()

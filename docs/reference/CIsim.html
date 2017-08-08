@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">Home</a>
+  <a href="../news/index.html">News</a>
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
@@ -146,21 +146,21 @@ the type argument.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'>CIsim</span>(<span class='fl'>100</span>, <span class='fl'>30</span>, <span class='fl'>100</span>, <span class='fl'>10</span>)</div><div class='img'><img src='CIsim-1.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; 6 % of the random confidence intervals do not contain Mu = 100 . </div><div class='input'>    <span class='co'># Simulates 100 samples of size 30 from </span>
+<span class='fu'>CIsim</span>(<span class='fl'>100</span>, <span class='fl'>30</span>, <span class='fl'>100</span>, <span class='fl'>10</span>)</div><div class='img'><img src='CIsim-4.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; 6 % of the random confidence intervals do not contain Mu = 100 . </div><div class='input'>    <span class='co'># Simulates 100 samples of size 30 from </span>
     <span class='co'># a normal distribution with mean 100</span>
     <span class='co'># and standard deviation 10.  From the</span>
     <span class='co'># 100 simulated samples, 95% confidence</span>
     <span class='co'># intervals for the Mean are constructed </span>
     <span class='co'># and depicted in the graph. </span>
 
-<span class='fu'>CIsim</span>(<span class='fl'>100</span>, <span class='fl'>30</span>, <span class='fl'>100</span>, <span class='fl'>10</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"Var"</span>)</div><div class='img'><img src='CIsim-2.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; 8 % of the random confidence intervals do not contain Var = 100 . </div><div class='input'>    <span class='co'># Simulates 100 samples of size 30 from </span>
+<span class='fu'>CIsim</span>(<span class='fl'>100</span>, <span class='fl'>30</span>, <span class='fl'>100</span>, <span class='fl'>10</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"Var"</span>)</div><div class='img'><img src='CIsim-5.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; 8 % of the random confidence intervals do not contain Var = 100 . </div><div class='input'>    <span class='co'># Simulates 100 samples of size 30 from </span>
     <span class='co'># a normal distribution with mean 100</span>
     <span class='co'># and standard deviation 10.  From the</span>
     <span class='co'># 100 simulated samples, 95% confidence</span>
     <span class='co'># intervals for the variance are constructed </span>
     <span class='co'># and depicted in the graph.</span>
 
-<span class='fu'>CIsim</span>(<span class='fl'>100</span>, <span class='fl'>50</span>, <span class='fl'>.5</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"Pi"</span>, <span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.90</span>)</div><div class='img'><img src='CIsim-3.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; 9 % of the random confidence intervals do not contain Pi = 0.5 . </div><div class='input'>    # Simulates 100 samples of size 50 from 
+<span class='fu'>CIsim</span>(<span class='fl'>100</span>, <span class='fl'>50</span>, <span class='fl'>.5</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"Pi"</span>, <span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>.90</span>)</div><div class='img'><img src='CIsim-6.png' alt='' width='700' height='432.632880098887' /></div><div class='output co'>#&gt; 9 % of the random confidence intervals do not contain Pi = 0.5 . </div><div class='input'>    # Simulates 100 samples of size 50 from 
     # a binomial distribution where the population
     # proportion of successes is 0.5.  From the
     # 100 simulated samples, 90% confidence
