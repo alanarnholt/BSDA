@@ -4,11 +4,13 @@
 \name{Sunspot}
 \alias{Sunspot}
 \title{Wolfer sunspot numbers from 1700 through 2000}
-\format{A data frame/tibble with 301 observations on two variables
+\format{
+A data frame/tibble with 301 observations on two variables
 \describe{ 
 \item{year}{year} 
 \item{sunspots}{average number of sunspots for the year} 
-}}
+}
+}
 \usage{
 Sunspot
 }

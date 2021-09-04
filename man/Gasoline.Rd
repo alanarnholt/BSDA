@@ -4,10 +4,12 @@
 \name{Gasoline}
 \alias{Gasoline}
 \title{Price of regular unleaded gasoline obtained from 25 service stations}
-\format{A data frame/tibble with 25 observations on one variable
+\format{
+A data frame/tibble with 25 observations on one variable
 \describe{ 
 \item{price}{price for one gallon of gasoline} 
-}}
+}
+}
 \usage{
 Gasoline
 }

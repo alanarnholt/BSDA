@@ -5,12 +5,14 @@
 \alias{Cabinets}
 \title{Estimates of costs of kitchen cabinets by two suppliers on 20 prospective
 homes}
-\format{A data frame/tibble with 20 observations on three variables
+\format{
+A data frame/tibble with 20 observations on three variables
 \describe{ 
 \item{home}{a numeric vector} 
 \item{supplA}{estimate for kitchen cabinets from supplier A (in dollars)} 
 \item{supplB}{estimate for kitchen cabinets from supplier A (in dollars)} 
-}}
+}
+}
 \usage{
 Cabinets
 }

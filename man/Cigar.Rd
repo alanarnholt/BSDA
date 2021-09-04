@@ -4,12 +4,14 @@
 \name{Cigar}
 \alias{Cigar}
 \title{Milligrams of tar in 25 cigarettes selected randomly from 4 different brands}
-\format{A data frame/tibble with 100 observations on two variables
+\format{
+A data frame/tibble with 100 observations on two variables
 \describe{ 
 \item{tar}{amount of tar (measured in milligrams)}
 \item{brand}{a factor indicating cigarette brand with levels \code{brandA}, \code{brandB},
 \code{brandC}, and \code{brandD}} 
-}}
+}
+}
 \usage{
 Cigar
 }

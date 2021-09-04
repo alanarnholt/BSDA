@@ -4,12 +4,14 @@
 \name{Weather94}
 \alias{Weather94}
 \title{Weather casualties in 1994}
-\format{A data frame/tibble with 388 observations on one variable
+\format{
+A data frame/tibble with 388 observations on one variable
 \describe{ 
 \item{type}{factor with levels \code{Extreme Temp}, \code{Flash Flood}, 
 \code{Fog}, \code{High Wind}, \code{Hurricane}, \code{Lighting}, \code{Other}, 
 \code{River Flood}, \code{Thunderstorm}, \code{Tornado}, and \code{Winter Weather}} 
-}}
+}
+}
 \usage{
 Weather94
 }

@@ -4,13 +4,15 @@
 \name{Tiaa}
 \alias{Tiaa}
 \title{1999-2000 closing prices for TIAA-CREF stocks}
-\format{A data frame/tibble with 365 observations on four variables
+\format{
+A data frame/tibble with 365 observations on four variables
 \describe{ 
 \item{crefstk}{closing price (in dollars)} 
 \item{crefgwt}{closing price (in dollars)} 
 \item{tiaa}{closing price (in dollars)} 
 \item{date}{day of the year} 
-}}
+}
+}
 \usage{
 Tiaa
 }

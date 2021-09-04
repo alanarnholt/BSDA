@@ -4,7 +4,8 @@
 \name{Florida2000}
 \alias{Florida2000}
 \title{Florida voter results in the 2000 presidential election}
-\format{A data frame/tibble with 67 observations on 12 variables
+\format{
+A data frame/tibble with 67 observations on 12 variables
 \describe{ 
 \item{county}{a character variable with values \code{ALACHUA},
 \code{BAKER}, \code{BAY}, \code{BRADFORD}, \code{BREVARD}, \code{BROWARD},
@@ -33,7 +34,8 @@
 \item{moorehead}{number of votes} 
 \item{phillips}{number of votes}
 \item{total}{number of votes} 
-}}
+}
+}
 \usage{
 Florida2000
 }

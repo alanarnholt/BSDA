@@ -5,14 +5,16 @@
 \alias{Gallup}
 \title{Results of a Gallup poll on possession of marijuana as a criminal offense
 conducted in 1980}
-\format{A data frame/tibble with 1,200 observations on two variables
+\format{
+A data frame/tibble with 1,200 observations on two variables
 \describe{ 
 \item{demographics}{a factor with levels \code{National}, \code{Gender: Male}
 \code{Gender: Female}, \code{Education: College}, \code{Eduction: High School},
 \code{Education: Grade School}, \code{Age: 18-24}, \code{Age: 25-29}, \code{Age: 30-49},
 \code{Age: 50-older}, \code{Religion: Protestant}, and \code{Religion: Catholic}} 
 \item{opinion}{a factor with levels \code{Criminal}, \code{Not Criminal}, and \code{No Opinion}}
-}}
+}
+}
 \source{
 George H. Gallup \emph{The Gallup Opinion Index Report No. 179} (Princeton, NJ:
 The Gallup Poll, July 1980), p. 15.

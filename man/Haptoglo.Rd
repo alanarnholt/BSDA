@@ -4,10 +4,12 @@
 \name{Haptoglo}
 \alias{Haptoglo}
 \title{Haptoglobin concentration in blood serum of 8 healthy adults}
-\format{A data frame/tibble with eight observations on one variable
+\format{
+A data frame/tibble with eight observations on one variable
 \describe{ 
 \item{concent}{haptoglobin concentration (in grams per liter)} 
-}}
+}
+}
 \usage{
 Haptoglo
 }

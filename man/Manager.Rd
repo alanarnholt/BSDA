@@ -4,10 +4,12 @@
 \name{Manager}
 \alias{Manager}
 \title{Advertised salaries offered general managers of major corporations in 1995}
-\format{A data frame/tibble with 26 observations on one variable
+\format{
+A data frame/tibble with 26 observations on one variable
 \describe{ 
 \item{salary}{random sample of advertised annual salaries of top executives (in dollars)} 
-}}
+}
+}
 \usage{
 Manager
 }

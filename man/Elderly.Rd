@@ -4,7 +4,8 @@
 \name{Elderly}
 \alias{Elderly}
 \title{Percent of the population over the age of 65}
-\format{A data frame/tibble with 51 observations on three variables
+\format{
+A data frame/tibble with 51 observations on three variables
 \describe{ 
 \item{state}{a factor with levels \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -21,7 +22,8 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 \item{percent1985}{percent of the population over the age of 65 in 1985} 
 \item{percent1998}{percent of the population over the age of 65 in 1998} 
-}}
+}
+}
 \source{
 U.S. Census Bureau Internet site, February 2000.
 }

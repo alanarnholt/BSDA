@@ -4,11 +4,13 @@
 \name{Indiapol}
 \alias{Indiapol}
 \title{Average miles per hour for the winners of the Indianapolis 500 race}
-\format{A data frame/tibble with 39 observations on two variables
+\format{
+A data frame/tibble with 39 observations on two variables
 \describe{ 
 \item{year}{the year of the race} 
 \item{speed}{the winners average speed (in mph)} 
-}}
+}
+}
 \source{
 The World Almanac and Book of Facts, 2000, p. 1004.
 }

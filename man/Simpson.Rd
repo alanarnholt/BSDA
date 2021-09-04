@@ -5,12 +5,14 @@
 \alias{Simpson}
 \title{Grade point averages of men and women participating in various sports-an
 illustration of Simpson's paradox}
-\format{A data frame/tibble with 100 observations on three variables
+\format{
+A data frame/tibble with 100 observations on three variables
 \describe{ 
 \item{gpa}{grade point average} 
 \item{sport}{sport played (basketball, soccer, or track)} 
 \item{gender}{athlete sex (male, female)}
-}}
+}
+}
 \usage{
 Simpson
 }

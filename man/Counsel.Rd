@@ -4,10 +4,12 @@
 \name{Counsel}
 \alias{Counsel}
 \title{Scores of 18 volunteers who participated in a counseling process}
-\format{A data frame/tibble with 18 observations on one variable
+\format{
+A data frame/tibble with 18 observations on one variable
 \describe{ 
 \item{score}{standardized psychology scores after a counseling process} 
-}}
+}
+}
 \usage{
 Counsel
 }

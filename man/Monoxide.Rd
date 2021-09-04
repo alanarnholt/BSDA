@@ -4,11 +4,13 @@
 \name{Monoxide}
 \alias{Monoxide}
 \title{Carbon monoxide emitted by smoke stacks of a manufacturer and a competitor}
-\format{A data frame/tibble with ten observations on two variables
+\format{
+A data frame/tibble with ten observations on two variables
 \describe{ 
 \item{company}{a vector with values \code{manufacturer} and \code{competitor}} 
 \item{emission}{carbon monoxide emitted} 
-}}
+}
+}
 \usage{
 Monoxide
 }

@@ -4,12 +4,14 @@
 \name{Region}
 \alias{Region}
 \title{Pollution index taken in three regions of the country}
-\format{A data frame/tibble with 48 observations on three variables
+\format{
+A data frame/tibble with 48 observations on three variables
 \describe{
  \item{pollution}{pollution index} 
  \item{region}{region of a county (\code{west}, \code{central}, and \code{east})}
  \item{ranks}{ranked values of \code{pollution}} 
- }}
+ }
+}
 \usage{
 Region
 }

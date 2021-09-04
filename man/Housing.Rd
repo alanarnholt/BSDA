@@ -4,7 +4,8 @@
 \name{Housing}
 \alias{Housing}
 \title{Median home prices for 1984 and 1993 in 37 markets across the U.S.}
-\format{A data frame/tibble with 74 observations on three variables
+\format{
+A data frame/tibble with 74 observations on three variables
 \describe{ 
 \item{city}{a character variable with values \code{Albany},
 \code{Anaheim}, \code{Atlanta}, \code{Baltimore}, \code{Birmingham},
@@ -18,7 +19,8 @@ Angeles}, \code{Louisville}, \code{Memphis}, \code{Miami}, \code{Milwaukee},
 \code{St Louis}, \code{Tampa}, and \code{Washington}} 
 \item{year}{a factor with levels \code{1984} and \code{1993}} 
 \item{price}{median house price (in dollars)} 
-}}
+}
+}
 \source{
 National Association of Realtors.
 }

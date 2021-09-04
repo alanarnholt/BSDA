@@ -4,11 +4,13 @@
 \name{Arthriti}
 \alias{Arthriti}
 \title{Time of relief for three treatments of arthritis}
-\format{A data frame/tibblewith 51 observations on two variables
+\format{
+A data frame/tibblewith 51 observations on two variables
 \describe{ 
 \item{time}{time (measured in days) until an arthritis sufferer experienced relief} 
 \item{treatment}{a factor with levels \code{A}, \code{B}, and \code{C}} 
-}}
+}
+}
 \usage{
 Arthriti
 }

@@ -4,14 +4,16 @@
 \name{Superbowl}
 \alias{Superbowl}
 \title{Margin of victory in Superbowls I to XXXV}
-\format{A data frame/tibble with 35 observations on five variables
+\format{
+A data frame/tibble with 35 observations on five variables
 \describe{ 
 \item{winning_team}{name of Suberbowl winning team}
 \item{winner_score}{winning score for the Superbowl} 
 \item{losing_team}{name of Suberbowl losing team}
 \item{loser_score}{score of losing teama numeric vector} 
 \item{victory_margin}{winner_score - loser_score} 
-}}
+}
+}
 \usage{
 Superbowl
 }

@@ -4,7 +4,8 @@
 \name{Attorney}
 \alias{Attorney}
 \title{Number of convictions reported by U.S. attorney's offices}
-\format{A data frame/tibble with 88 observations on three variables
+\format{
+A data frame/tibble with 88 observations on three variables
 \describe{ 
 \item{staff}{U.S. attorneys' office staff per 1 million population} 
 \item{convict}{U.S. attorneys' office convictions per 1 million population} 
@@ -34,7 +35,8 @@ Conn}, \code{New Orleans}, \code{New York (Brooklyn)}, \code{New York
 \code{Syracuse, NY}, \code{Tampa}, \code{Topeka, Kan}, \code{Tulsa},
 \code{Tyler, Tex}, \code{Washington}, \code{Wheeling, WVa}, and \code{Wilmington,
 Del}} 
-}}
+}
+}
 \usage{
 Attorney
 }

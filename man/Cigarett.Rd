@@ -4,11 +4,13 @@
 \name{Cigarett}
 \alias{Cigarett}
 \title{Effect of mother's smoking on birth weight of newborn}
-\format{A data frame/tibble with 16 observations on two variables
+\format{
+A data frame/tibble with 16 observations on two variables
 \describe{ 
 \item{cigarettes}{mothers' estimated average number of cigarettes smoked per day} 
 \item{weight}{children's birth weights (in pounds)} 
-}}
+}
+}
 \usage{
 Cigarett
 }

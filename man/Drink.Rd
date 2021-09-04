@@ -4,12 +4,14 @@
 \name{Drink}
 \alias{Drink}
 \title{Opinion on referendum by view on moral issue of selling alcoholic beverages}
-\format{A data frame/tibble with 472 observations on two variables
+\format{
+A data frame/tibble with 472 observations on two variables
 \describe{ 
 \item{drinking}{a factor with levels \code{ok},
 \code{tolerated}, and \code{immoral}} 
 \item{referendum}{a factor with levels \code{for}, \code{against}, and \code{undecided}} 
-}}
+}
+}
 \usage{
 Drink
 }

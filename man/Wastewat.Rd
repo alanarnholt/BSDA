@@ -5,11 +5,13 @@
 \alias{Wastewat}
 \title{Volume of injected waste water from Rocky Mountain Arsenal and number of
 earthquakes near Denver}
-\format{A data frame/tibble with 44 observations on two variables
+\format{
+A data frame/tibble with 44 observations on two variables
 \describe{ 
 \item{gallons}{injected water (in million gallons)} 
 \item{number}{number of earthqueakes detected in Denver}
-}}
+}
+}
 \source{
 Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2 ed., John Wiley and Sons,
 New York, p. 228, and Bardwell, G. E. (1970), Some Statistical Features of the Relationship between

@@ -4,13 +4,15 @@
 \name{Skin}
 \alias{Skin}
 \title{Survival times of closely and poorly matched skin grafts on burn patients}
-\format{A data frame/tibble with 11 observations on four variables
+\format{
+A data frame/tibble with 11 observations on four variables
 \describe{ 
 \item{patient}{patient identification number}
 \item{close}{graft survival time in days for a closely matched skin graft on the same burn patient} 
 \item{poor}{graft survival time in days for a poorly matched skin graft on the same burn patient} 
 \item{differ}{difference between close and poor (in days)}
-}}
+}
+}
 \source{
 R. F. Woolon and P. A. Lachenbruch, "Rank Tests for Censored Matched Pairs,"
 \emph{Biometrika}, 67(1980), 597-606.

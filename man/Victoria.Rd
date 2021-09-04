@@ -5,12 +5,14 @@
 \alias{Victoria}
 \title{Number of sunspots versus mean annual level of Lake Victoria Nyanza from
 1902 to 1921}
-\format{A data frame/tibble with 20 observations on three variables
+\format{
+A data frame/tibble with 20 observations on three variables
 \describe{ 
 \item{year}{year} 
 \item{level}{mean annual level of Lake Victoria Nyanza} 
 \item{sunspot}{number of sunspots} 
-}}
+}
+}
 \source{
 N. Shaw, \emph{Manual of Meteorology}, Vol. 1 (London: Cambridge University Press, 1942),
 p. 284; and F. Mosteller and J. W. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison-Wesley, 1977).

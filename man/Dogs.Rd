@@ -4,7 +4,8 @@
 \name{Dogs}
 \alias{Dogs}
 \title{Rankings of the favorite breeds of dogs}
-\format{A data frame/tibble with 20 observations on three variables
+\format{
+A data frame/tibble with 20 observations on three variables
 \describe{ 
 \item{breed}{a factor with levels \code{Beagle},
 \code{Boxer}, \code{Chihuahua}, \code{Chow}, \code{Dachshund}, 
@@ -15,7 +16,8 @@
 \item{ranking}{numeric ranking}
 \item{year}{a factor with levels \code{1992}, \code{1993}, \code{1997}, 
 and \code{1998}} 
-}}
+}
+}
 \source{
 \emph{The World Almanac and Book of Facts}, 2000.
 }

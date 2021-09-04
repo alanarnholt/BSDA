@@ -4,12 +4,14 @@
 \name{Asthmati}
 \alias{Asthmati}
 \title{Asthmatic relief index on nine subjects given a drug and a placebo}
-\format{A data frame/tibble  with nine observations on three variables
+\format{
+A data frame/tibble  with nine observations on three variables
 \describe{
 \item{drug}{asthmatic relief index for patients given a drug} 
 \item{placebo}{asthmatic relief index for patients given a placebo} 
 \item{difference}{difference between the \code{placebo} and \code{drug}} 
-}}
+}
+}
 \usage{
 Asthmati
 }

@@ -4,12 +4,14 @@
 \name{Dowjones}
 \alias{Dowjones}
 \title{Closing yearend Dow Jones Industrial averages from 1896 through 2000}
-\format{A data frame/tibble with 105 observations on three variables
+\format{
+A data frame/tibble with 105 observations on three variables
 \describe{ 
 \item{year}{date} 
 \item{close}{Dow Jones closing price} 
 \item{change}{percent change from previous year} 
-}}
+}
+}
 \usage{
 Dowjones
 }

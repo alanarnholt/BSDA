@@ -4,7 +4,8 @@
 \name{Birth}
 \alias{Birth}
 \title{Live birth rates in 1990 and 1998 for all states}
-\format{A data frame/tibble  with 51 observations on three variables
+\format{
+A data frame/tibble  with 51 observations on three variables
 \describe{ 
 \item{state}{a character with levels \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -21,7 +22,8 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 \item{rate}{live birth rates per 1000 population} 
 \item{year}{a factor with levels \code{1990} and \code{1998}} 
-}}
+}
+}
 \source{
 \emph{National Vital Statistics Report, 48}, March 28, 2000, National
 Center for Health Statistics.

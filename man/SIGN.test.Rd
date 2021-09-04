@@ -4,8 +4,14 @@
 \alias{SIGN.test}
 \title{Sign Test}
 \usage{
-SIGN.test(x, y = NULL, md = 0, alternative = "two.sided",
-  conf.level = 0.95, ...)
+SIGN.test(
+  x,
+  y = NULL,
+  md = 0,
+  alternative = "two.sided",
+  conf.level = 0.95,
+  ...
+)
 }
 \arguments{
 \item{x}{numeric vector; \code{NA}s and \code{Inf}s are allowed but will be

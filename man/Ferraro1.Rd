@@ -4,12 +4,14 @@
 \name{Ferraro1}
 \alias{Ferraro1}
 \title{Choice of presidental ticket in 1984 by gender}
-\format{A data frame/tibble with 1000 observations on two variables
+\format{
+A data frame/tibble with 1000 observations on two variables
 \describe{ 
 \item{gender}{a factor with levels \code{Men} and
 \code{Women}} 
 \item{candidate}{a character vector of 1984 president and vice-president candidates} 
-}}
+}
+}
 \usage{
 Ferraro1
 }

@@ -4,7 +4,8 @@
 \name{Abortion}
 \alias{Abortion}
 \title{Abortion rate by region of country}
-\format{A data frame/tibble with 51 observations on the following 10 variables:
+\format{
+A data frame/tibble with 51 observations on the following 10 variables:
 \describe{ 
 \item{state}{a character variable with values \code{alabama},
 \code{alaska}, \code{arizona}, \code{arkansas}, \code{california},
@@ -29,7 +30,8 @@ island}, \code{south carolina}, \code{south dakota}, \code{tennessee},
 \item{provide1992}{a numeric vector}
 \item{lowhigh}{a numeric vector} 
 \item{rate}{a factor with levels \code{Low} and \code{High}}
-}}
+}
+}
 \usage{
 Abortion
 }

@@ -4,10 +4,12 @@
 \name{Biology}
 \alias{Biology}
 \title{Test scores on first exam in biology class}
-\format{A data frame/tibble with 30 observations on one variable
+\format{
+A data frame/tibble with 30 observations on one variable
 \describe{ 
 \item{score}{test scores on the first test in a beginning biology class} 
-}}
+}
+}
 \usage{
 Biology
 }

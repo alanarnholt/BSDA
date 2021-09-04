@@ -4,10 +4,12 @@
 \name{Math}
 \alias{Math}
 \title{Standardized math test scores for 30 students}
-\format{A data frame/tibble with 30 observations on one variable
+\format{
+A data frame/tibble with 30 observations on one variable
 \describe{ 
 \item{score}{scores on a standardized test for 30 tenth graders} 
-}}
+}
+}
 \usage{
 Math
 }

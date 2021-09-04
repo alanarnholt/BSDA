@@ -4,11 +4,13 @@
 \name{Situp}
 \alias{Situp}
 \title{Maximum number of situps by participants in an exercise class}
-\format{A data frame/tibble with 20 observations on one variable
+\format{
+A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{number}{maximum number of situps completed in an exercise class 
 after 1 month in the program} 
-}}
+}
+}
 \usage{
 Situp
 }

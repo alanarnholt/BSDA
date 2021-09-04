@@ -4,11 +4,13 @@
 \name{Treatments}
 \alias{Treatments}
 \title{Illustrates analysis of variance for three treatment groups}
-\format{A data frame/tibble with 24 observations on two variables
+\format{
+A data frame/tibble with 24 observations on two variables
 \describe{
 \item{score}{score from an experiment} 
 \item{group}{factor with levels 1, 2, and 3} 
-}}
+}
+}
 \usage{
 Treatments
 }

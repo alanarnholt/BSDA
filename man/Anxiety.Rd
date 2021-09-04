@@ -4,11 +4,13 @@
 \name{Anxiety}
 \alias{Anxiety}
 \title{Math test scores versus anxiety scores before the test}
-\format{A data frame/tibble  with 20 observations on two variables
+\format{
+A data frame/tibble  with 20 observations on two variables
 \describe{ 
 \item{anxiety}{anxiety score before a major math test} 
 \item{math}{math test score} 
-}}
+}
+}
 \usage{
 Anxiety
 }

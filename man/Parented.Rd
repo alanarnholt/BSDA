@@ -4,13 +4,15 @@
 \name{Parented}
 \alias{Parented}
 \title{Education backgrounds of parents of entering freshmen at a state university}
-\format{A data frame/tibble with 200 observations on two variables
+\format{
+A data frame/tibble with 200 observations on two variables
 \describe{ 
 \item{education}{a factor with levels \code{4yr college
 degree}, \code{Doctoral degree}, \code{Grad degree}, \code{H.S grad or less},
 \code{Some college}, and \code{Some grad school}} 
 \item{parent}{a factor with levels \code{mother} and \code{father}} 
-}}
+}
+}
 \usage{
 Parented
 }

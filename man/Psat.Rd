@@ -4,11 +4,13 @@
 \name{Psat}
 \alias{Psat}
 \title{PSAT scores versus SAT scores}
-\format{A data frame/tibble with seven observations on the two variables
+\format{
+A data frame/tibble with seven observations on the two variables
 \describe{
 \item{psat}{PSAT score} 
 \item{sat}{SAT score} 
-}}
+}
+}
 \usage{
 Psat
 }

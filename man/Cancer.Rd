@@ -4,14 +4,16 @@
 \name{Cancer}
 \alias{Cancer}
 \title{Survival times of terminal cancer patients treated with vitamin C}
-\format{A data frame/tibble with 64 observations on two variables
+\format{
+A data frame/tibble with 64 observations on two variables
 \describe{ 
 \item{survival}{survival time (in days) of terminal patients 
 treated with vitamin C}
 \item{type}{a factor indicating type of cancer with levels 
 \code{breast}, \code{bronchus}, \code{colon}, \code{ovary}, and 
 \code{stomach}} 
-}}
+}
+}
 \source{
 Cameron, E and Pauling, L. 1978. \dQuote{Supplemental Ascorbate in the 
 Supportive Treatment of Cancer.} \emph{Proceedings of the National Academy of 

@@ -4,13 +4,15 @@
 \name{Inflatio}
 \alias{Inflatio}
 \title{Private pay increase of salaried employees versus inflation rate}
-\format{A data frame/tibble with 24 observations on four variables
+\format{
+A data frame/tibble with 24 observations on four variables
 \describe{
 \item{year}{a numeric vector of years} 
 \item{pay}{average hourly wage for salaried employees (in dollars)} 
 \item{increase}{percent increase in hourly wage over previous year}
 \item{inflation}{percent inflation rate} 
-}}
+}
+}
 \source{
 Bureau of Labor Statistics.
 }

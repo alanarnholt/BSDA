@@ -4,11 +4,13 @@
 \name{Track15}
 \alias{Track15}
 \title{Olympic winning times for the men's 1500-meter run}
-\format{A data frame/tibble with 26 observations on two variables
+\format{
+A data frame/tibble with 26 observations on two variables
 \describe{ 
 \item{year}{Olympic year} 
 \item{time}{Olympic winning time (in seconds) for the 1500-meter run} 
-}}
+}
+}
 \source{
 \emph{The World Almanac and Book of Facts}, 2000.
 }

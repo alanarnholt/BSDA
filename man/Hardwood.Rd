@@ -5,11 +5,13 @@
 \alias{Hardwood}
 \title{Tensile strength of Kraft paper for different percentages of hardwood in the
 batches of pulp}
-\format{A data frame/tibble with 19 observations on two variables
+\format{
+A data frame/tibble with 19 observations on two variables
 \describe{ 
 \item{tensile}{tensile strength of kraft paper (in pounds per square inch)}
 \item{hardwood}{percent of hardwood in the batch of pulp that was used to produce the paper} 
-}}
+}
+}
 \source{
 G. Joglekar, et al., "Lack-of-Fit Testing When Replicates Are Not Available,"
 \emph{The American Statistician}, 43(3), (1989), 135-143.

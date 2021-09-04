@@ -5,11 +5,13 @@
 \alias{Shuttle}
 \title{Number of people riding shuttle versus number of automobiles in the downtown
 area}
-\format{A data frame/tibble with 15 observations on two variables
+\format{
+A data frame/tibble with 15 observations on two variables
 \describe{ 
 \item{users}{number of shuttle riders} 
 \item{autos}{number of automobiles in the downtown area} 
-}}
+}
+}
 \usage{
 Shuttle
 }

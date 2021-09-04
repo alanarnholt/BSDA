@@ -5,11 +5,13 @@
 \alias{Saving}
 \title{Problem asset ration for savings and loan companies in California, New York,
 and Texas}
-\format{A data frame/tibble with 65 observations on two variables
+\format{
+A data frame/tibble with 65 observations on two variables
 \describe{ 
 \item{par}{problem-asset-ratio for Savings & Loans that were listed as being financially troubled in 1992} 
 \item{state}{U.S. state}
- }}
+ }
+}
 \usage{
 Saving
 }

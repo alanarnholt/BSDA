@@ -4,14 +4,16 @@
 \name{Rainks}
 \alias{Rainks}
 \title{Rainfall in an area of west central Kansas and four surrounding counties}
-\format{A data frame/tibble with 35 observations on five variables
+\format{
+A data frame/tibble with 35 observations on five variables
 \describe{ 
 \item{rain}{rainfall (in inches)} 
 \item{x1}{rainfall (in inches)} 
 \item{x2}{rainfall (in inches)} 
 \item{x3}{rainfall (in inches)} 
 \item{x4}{rainfall (in inches)} 
-}}
+}
+}
 \source{
 R. Picard, K. Berk (1990), Data Splitting, \emph{The American Statistician, 44}, (2),
 140-147.

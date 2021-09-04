@@ -4,10 +4,12 @@
 \name{Detroit}
 \alias{Detroit}
 \title{Educational levels of a sample of 40 auto workers in Detroit}
-\format{A data frame/tibble with 40 observations on one variable
+\format{
+A data frame/tibble with 40 observations on one variable
 \describe{ 
 \item{educ}{the educational level (in years) of a sample of 40 auto workers in a plant in Detroit} 
-}}
+}
+}
 \usage{
 Detroit
 }

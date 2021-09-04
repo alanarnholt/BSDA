@@ -5,12 +5,14 @@
 \alias{Develop}
 \title{Demographic characteristics of developmental students at 2-year colleges and
 4-year colleges}
-\format{A data frame/tibble with 5656 observations on two variables
+\format{
+A data frame/tibble with 5656 observations on two variables
 \describe{ 
 \item{race}{a factor with levels \code{African American}, \code{American Indian},
 \code{Asian}, \code{Latino}, and \code{White}} 
 \item{college}{a factor with levels \code{Two-year} and \code{Four-year}}
-}}
+}
+}
 \source{
 \emph{Research in Development Education} (1994), V. 11, 2.
 }

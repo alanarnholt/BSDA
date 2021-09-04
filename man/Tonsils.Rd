@@ -4,11 +4,13 @@
 \name{Tonsils}
 \alias{Tonsils}
 \title{Size of tonsils collected from 1,398 children}
-\format{A data frame/tibble with 1,398 observations on two variables
+\format{
+A data frame/tibble with 1,398 observations on two variables
 \describe{ 
 \item{size}{a factor with levels \code{Normal}, \code{Large}, and \code{Very Large}} 
 \item{status}{a factor with levels \code{Carrier} and \code{Non-carrier}}
-}}
+}
+}
 \usage{
 Tonsils
 }

@@ -4,11 +4,13 @@
 \name{Randd}
 \alias{Randd}
 \title{Research and development expenditures and sales of a large company}
-\format{A data frame/tibble with 12 observations on two variables
+\format{
+A data frame/tibble with 12 observations on two variables
 \describe{ 
 \item{rd}{research and development expenditures (in million dollars)} 
 \item{sales}{sales (in million dollars)} 
-}}
+}
+}
 \usage{
 Randd
 }

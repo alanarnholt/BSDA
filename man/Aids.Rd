@@ -5,12 +5,14 @@
 \alias{Aids}
 \title{Incubation times for 295 patients thought to be infected with HIV by a blood
 transfusion}
-\format{A data frame/tibble with 295 observations on three variables
+\format{
+A data frame/tibble with 295 observations on three variables
 \describe{ 
 \item{duration}{time (in months) from HIV infection to the clinical manifestation of full-blown AIDS} 
 \item{age}{age (in years) of patient} 
 \item{group}{a numeric vector}
-}}
+}
+}
 \source{
 Kalbsleich, J. and Lawless, J., (1989), An analysis of the data on transfusion
 related AIDS, \emph{Journal of the American Statistical Association, 84}, 360-372.

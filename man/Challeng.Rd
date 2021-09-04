@@ -5,13 +5,15 @@
 \alias{Challeng}
 \title{Temperatures and O-ring failures for the launches of the space shuttle
 Challenger}
-\format{A data frame/tibble with 25 observations on four variables
+\format{
+A data frame/tibble with 25 observations on four variables
 \describe{ 
 \item{flight}{a character variable indicating the flight}
 \item{date}{date of the flight} 
 \item{temp}{temperature (in fahrenheit)}
 \item{failures}{number of failures} 
-}}
+}
+}
 \source{
 Dalal, S. R., Fowlkes, E. B., Hoadley, B. 1989. \dQuote{Risk Analysis of the Space Shuttle: Pre-Challenger 
 Prediction of Failure.} 

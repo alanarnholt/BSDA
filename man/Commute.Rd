@@ -4,7 +4,8 @@
 \name{Commute}
 \alias{Commute}
 \title{Commuting times for selected cities in 1980 and 1990}
-\format{A data frame/tibble with 39 observations on three variables
+\format{
+A data frame/tibble with 39 observations on three variables
 \describe{ 
 \item{city}{a factor with levels \code{Atlanta},
 \code{Baltimore}, \code{Boston}, \code{Buffalo}, \code{Charlotte},
@@ -19,7 +20,8 @@
 \code{Washington}}
 \item{year}{year}
 \item{time}{commute times}
-}}
+}
+}
 \source{
 Federal Highway Administration.
 }

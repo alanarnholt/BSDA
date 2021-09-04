@@ -4,11 +4,13 @@
 \name{Earthqk}
 \alias{Earthqk}
 \title{One hundred year record of worldwide seismic activity(1770-1869)}
-\format{A data frame/tibble with 100 observations on two variables
+\format{
+A data frame/tibble with 100 observations on two variables
 \describe{ 
 \item{year}{year seimic activity recorded} 
 \item{severity}{annual incidence of sever earthquakes} 
-}}
+}
+}
 \source{
 Quenoille, M.H. (1952), \emph{Associated Measurements}, Butterworth, London.
 p 279.

@@ -4,12 +4,14 @@
 \name{Shock}
 \alias{Shock}
 \title{Effect of experimental shock on time to complete difficult task}
-\format{A data frame/tibble with 27 observations on two variables
+\format{
+A data frame/tibble with 27 observations on two variables
 \describe{ 
 \item{group}{grouping variable with values of \code{Group1} (no shock), 
 \code{Group2} (medium shock), and \code{Group3} (severe shock)} 
 \item{attempts}{number of attempts to complete a task}
-}}
+}
+}
 \usage{
 Shock
 }

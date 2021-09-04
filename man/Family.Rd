@@ -4,11 +4,13 @@
 \name{Family}
 \alias{Family}
 \title{Size of family versus cost per person per week for groceries}
-\format{A data frame/tibble with 20 observations on two variables
+\format{
+A data frame/tibble with 20 observations on two variables
 \describe{ 
 \item{number}{number in family} 
 \item{cost}{cost per person (in dollars)} 
-}}
+}
+}
 \usage{
 Family
 }

@@ -4,12 +4,14 @@
 \name{Teacher}
 \alias{Teacher}
 \title{Average teacher's salaries across the states in the 70s 80s and 90s}
-\format{A data frame/tibble with 51 observations on three variables
+\format{
+A data frame/tibble with 51 observations on three variables
 \describe{
  \item{state}{U.S. state}
 \item{year}{academic year} 
 \item{salary}{avaerage salary (in dollars)}
-}}
+}
+}
 \source{
 National Education Association.
 }

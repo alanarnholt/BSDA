@@ -4,12 +4,14 @@
 \name{Pearson}
 \alias{Pearson}
 \title{Karl Pearson's data on heights of brothers and sisters}
-\format{A data frame/tibble with 11 observations on three variables
+\format{
+A data frame/tibble with 11 observations on three variables
 \describe{ 
 \item{family}{number indicating family of brother and sister pair}
 \item{brother}{height of brother (in inches)} 
 \item{sister}{height of sister (in inches)} 
-}}
+}
+}
 \source{
 Pearson, K. and Lee, A. (1902-3), On the Laws of Inheritance in Man, 
 \emph{Biometrika, 2}, 357.

@@ -4,11 +4,13 @@
 \name{Lethal}
 \alias{Lethal}
 \title{Survival time of mice injected with an experimental lethal drug}
-\format{A data frame/tibble with 30 observations on one variable
+\format{
+A data frame/tibble with 30 observations on one variable
 \describe{ 
 \item{survival}{a numeric vector indicating time surivived 
 after injection (in seconds)} 
-}}
+}
+}
 \usage{
 Lethal
 }

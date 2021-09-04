@@ -5,11 +5,13 @@
 \alias{Dopamine}
 \title{Dopamine b-hydroxylase activity of schizophrenic patients treated with an
 antipsychotic drug}
-\format{A data frame/tibble  with 25 observations on two variables
+\format{
+A data frame/tibble  with 25 observations on two variables
 \describe{ 
 \item{dbh}{dopamine b-hydroxylase activity (units are nmol/(ml)(h)/(mg) of protein)} 
 \item{group}{a factor with levels \code{nonpsychotic} and \code{psychotic}} 
-}}
+}
+}
 \source{
 D.E. Sternberg, D.P. Van Kammen, and W.E. Bunney, "Schizophrenia: Dopamine
 b-Hydroxylase Activity and Treatment Respsonse," \emph{Science, 216} (1982), 1423 - 1425.

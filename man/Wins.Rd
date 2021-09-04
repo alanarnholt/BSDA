@@ -5,7 +5,8 @@
 \alias{Wins}
 \title{Baseball team wins versus seven independent variables for National league teams
 in 1990}
-\format{A data frame with 12 observations on nine variables
+\format{
+A data frame with 12 observations on nine variables
 \describe{ 
 \item{team}{name of team}
 \item{wins}{number of wins} 
@@ -16,7 +17,8 @@ in 1990}
 \item{caught}{number of times caught stealing} 
 \item{errors}{number of errors} 
 \item{era}{earned run average} 
-}}
+}
+}
 \usage{
 Wins
 }

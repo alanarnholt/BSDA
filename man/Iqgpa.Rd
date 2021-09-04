@@ -4,11 +4,13 @@
 \name{Iqgpa}
 \alias{Iqgpa}
 \title{GPA versus IQ for 12 individuals}
-\format{A data frame/tibble with 12 observations on two variables
+\format{
+A data frame/tibble with 12 observations on two variables
 \describe{ 
 \item{iq}{IQ scores} 
 \item{gpa}{Grade point average} 
-}}
+}
+}
 \usage{
 Iqgpa
 }

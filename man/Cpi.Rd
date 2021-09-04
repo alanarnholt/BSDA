@@ -4,11 +4,13 @@
 \name{Cpi}
 \alias{Cpi}
 \title{Consumer price index from 1979 to 1998}
-\format{A data frame/tibble with 20 observations on two variables
+\format{
+A data frame/tibble with 20 observations on two variables
 \describe{ 
 \item{year}{year} 
 \item{cpi}{consumer price index} 
-}}
+}
+}
 \source{
 Bureau of Labor Statistics.
 }

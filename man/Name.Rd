@@ -4,7 +4,8 @@
 \name{Name}
 \alias{Name}
 \title{Estimated value of a brand name product and the conpany's revenue}
-\format{A data frame/tibble with 42 observations on three variables
+\format{
+A data frame/tibble with 42 observations on three variables
 \describe{ 
 \item{brand}{a factor with levels \code{Band-Aid},
 \code{Barbie}, \code{Birds Eye}, \code{Budweiser}, \code{Camel}, \code{Campbell},
@@ -19,7 +20,8 @@ Lee}, \code{Schweppes}, \code{Smirnoff}, \code{Tampax}, \code{Winston}, and
 \verb{Wrigley's}}
 \item{value}{value in billions of dollars}
 \item{revenue}{revenue in billions of dollars} 
-}}
+}
+}
 \source{
 Financial World.
 }

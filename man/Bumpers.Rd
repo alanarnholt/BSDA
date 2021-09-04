@@ -4,7 +4,8 @@
 \name{Bumpers}
 \alias{Bumpers}
 \title{Repair costs of vehicles crashed into a barrier at 5 miles per hour}
-\format{A data frame/tibble with 23 observations on two variables
+\format{
+A data frame/tibble with 23 observations on two variables
 \describe{ 
 \item{car}{a factor with levels \code{Buick Century},
 \code{Buick Skylark}, \code{Chevrolet Cavalier}, \code{Chevrolet Corsica},
@@ -16,7 +17,8 @@ Taurus}, \code{Ford Tempo}, \code{Honda Accord}, \code{Hyundai Sonata},
 \code{Saturn SL2}, \code{Subaru Legacy}, and \code{Toyota Camry}}
 \item{repair}{total repair cost (in dollars) after crashing a car into a 
 barrier four times while the car was traveling at 5 miles per hour} 
-}}
+}
+}
 \source{
 Insurance Institute of Highway Safety.
 }

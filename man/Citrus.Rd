@@ -4,11 +4,13 @@
 \name{Citrus}
 \alias{Citrus}
 \title{Percent of peak bone density of different aged children}
-\format{A data frame/tibble with nine observations on two variables
+\format{
+A data frame/tibble with nine observations on two variables
 \describe{ 
 \item{age}{age of children} 
 \item{percent}{percent peak bone density} 
-}}
+}
+}
 \usage{
 Citrus
 }

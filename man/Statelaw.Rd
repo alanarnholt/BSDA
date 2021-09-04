@@ -5,11 +5,13 @@
 \alias{Statelaw}
 \title{Operating expenditures per resident for each of the state law enforcement
 agencies}
-\format{A data frame/tibble with 50 observations on two variables
+\format{
+A data frame/tibble with 50 observations on two variables
 \describe{ 
 \item{state}{U.S. state} 
 \item{cost}{dollars spent per resident on law enforcement} 
-}}
+}
+}
 \source{
 Bureau of Justice Statistics, \emph{Law Enforcement Management and 
 Administrative Statistics, 1993}, NCJ-148825, September 1995, page 84.

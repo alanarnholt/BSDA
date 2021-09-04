@@ -4,12 +4,14 @@
 \name{Orange}
 \alias{Orange}
 \title{Price of oranges versus size of the harvest}
-\format{A data frame/tibble with six observations on two variables
+\format{
+A data frame/tibble with six observations on two variables
 \describe{ 
 \item{harvest}{harvest in millions of boxes} 
 \item{price}{average price charged by California growers 
 for a 75-pound box of navel oranges} 
-}}
+}
+}
 \usage{
 Orange
 }

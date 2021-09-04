@@ -4,11 +4,13 @@
 \name{Fish}
 \alias{Fish}
 \title{Length and number of fish caught with small and large mesh codend}
-\format{A data frame/tibble with 1534 observations on two variables
+\format{
+A data frame/tibble with 1534 observations on two variables
 \describe{ 
 \item{codend}{a character variable with values \code{smallmesh} and \code{largemesh} } 
 \item{length}{length of the fish measured in centimeters} 
-}}
+}
+}
 \source{
 R. Millar, \dQuote{Estimating the Size - Selectivity of Fishing Gear by Conditioning
 on the Total Catch,} \emph{Journal of the American Statistical Association, 87} (1992), 962 - 968.

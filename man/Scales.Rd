@@ -5,11 +5,13 @@
 \alias{Scales}
 \title{Readings obtained from a 100 pound weight placed on four brands of bathroom
 scales}
-\format{A data frame/tibble with 20 observations on two variables
+\format{
+A data frame/tibble with 20 observations on two variables
 \describe{ 
 \item{brand}{variable indicating brand of bathroom scale (\code{A}, \code{B}, \code{C}, or \code{D})} 
 \item{reading}{recorded value (in pounds) of a 100 pound weight} 
-}}
+}
+}
 \usage{
 Scales
 }

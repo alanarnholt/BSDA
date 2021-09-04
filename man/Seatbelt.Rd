@@ -4,12 +4,14 @@
 \name{Seatbelt}
 \alias{Seatbelt}
 \title{Injury level versus seatbelt usage}
-\format{A data frame/tibble with 86,759 observations on two variables
+\format{
+A data frame/tibble with 86,759 observations on two variables
 \describe{ 
 \item{seatbelt}{a factor with levels \code{No} and \code{Yes}} 
 \item{injuries}{a factor with levels \code{None}, \code{Minimal}, 
 \code{Minor}, or \code{Major} indicating the extent of the drivers injuries}
-}}
+}
+}
 \source{
 Jobson, J. (1982), \emph{Applied Multivariate Data Analysis}, Springer-Verlag, 
 New York, p. 18.

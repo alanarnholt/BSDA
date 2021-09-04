@@ -5,14 +5,16 @@
 \alias{Heat}
 \title{Primary heating sources of homes on indian reservations versus all
 households}
-\format{A data frame/tibble with 301 observations on two variables
+\format{
+A data frame/tibble with 301 observations on two variables
 \describe{ 
 \item{fuel}{a factor with levels \code{Utility gas},
 \code{LP bottled gas}, \code{Electricity}, \code{Fuel oil}, \code{Wood}, and
 \code{Other}} 
 \item{location}{a factor with levels \code{American Indians on reservation},
  \code{All U.S. households}, and \code{American Indians not on reservations}} 
-}}
+}
+}
 \source{
 Bureau of the Census, \emph{Housing of the American Indians on Reservations},
 Statistical Brief 95-11, April 1995.

@@ -4,11 +4,13 @@
 \name{Thermal}
 \alias{Thermal}
 \title{Heat loss of thermal pane windows versus outside temperature}
-\format{A data frame/tibble with 12 observations on the two variables
+\format{
+A data frame/tibble with 12 observations on the two variables
 \describe{ 
 \item{temp}{temperature (degrees Celcius)} 
 \item{loss}{heat loss (BTUs)} 
-}}
+}
+}
 \usage{
 Thermal
 }

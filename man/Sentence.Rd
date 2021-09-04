@@ -4,10 +4,12 @@
 \name{Sentence}
 \alias{Sentence}
 \title{Sentences of 41 prisoners convicted of a homicide offense}
-\format{A data frame/tibble with 41 observations on one variable
+\format{
+A data frame/tibble with 41 observations on one variable
 \describe{ 
 \item{months}{sentence length (in months) for prisoners convicted of homocide} 
-}}
+}
+}
 \source{
 U.S. Department of Justice, Bureau of Justice Statistics, \emph{Prison Sentences
 and Time Served for Violence}, NCJ-153858, April 1995.

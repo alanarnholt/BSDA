@@ -4,11 +4,13 @@
 \name{Energy}
 \alias{Energy}
 \title{Amount of energy consumed by homes versus their sizes}
-\format{A data frame/tibble with 12 observations on two variables
+\format{
+A data frame/tibble with 12 observations on two variables
 \describe{ 
 \item{size}{size of home (in square feet)} 
 \item{kilowatt}{killowatt-hours per month} 
-}}
+}
+}
 \usage{
 Energy
 }

@@ -4,10 +4,12 @@
 \name{Galaxie}
 \alias{Galaxie}
 \title{Velocities of 82 galaxies in the Corona Borealis region}
-\format{A data frame/tibble with 82 observations on one variable
+\format{
+A data frame/tibble with 82 observations on one variable
 \describe{ 
 \item{velocity}{velocity measured in kilometers per second} 
-}}
+}
+}
 \source{
 K. Roeder, "Density Estimation with Confidence Sets Explained by Superclusters
 and Voids in the Galaxies," \emph{Journal of the American Statistical Association}, 85

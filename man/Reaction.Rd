@@ -4,10 +4,12 @@
 \name{Reaction}
 \alias{Reaction}
 \title{Threshold reaction time for persons subjected to emotional stress}
-\format{A data frame/tibble with 12 observations on one variable
+\format{
+A data frame/tibble with 12 observations on one variable
 \describe{ 
 \item{time}{threshold reaction time (in seconds) for persons subjected to emotional stress} 
-}}
+}
+}
 \usage{
 Reaction
 }

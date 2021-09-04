@@ -4,10 +4,12 @@
 \name{Grades}
 \alias{Grades}
 \title{Test grades in a beginning statistics class}
-\format{A data frame with 29 observations on one variable
+\format{
+A data frame with 29 observations on one variable
 \describe{ 
 \item{grades}{a numeric vector containing test grades} 
-}}
+}
+}
 \usage{
 Grades
 }

@@ -4,10 +4,12 @@
 \name{Salinity}
 \alias{Salinity}
 \title{Surface-water salinity measurements from Whitewater Bay, Florida}
-\format{A data frame/tibble with 48 observations on one variable
+\format{
+A data frame/tibble with 48 observations on one variable
 \describe{ 
 \item{salinity}{surface-water salinity value} 
-}}
+}
+}
 \source{
 J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd ed. (New York: John Wiley, 1986).
 }

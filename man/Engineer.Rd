@@ -4,11 +4,13 @@
 \name{Engineer}
 \alias{Engineer}
 \title{Salaries after 10 years for graduates of three different universities}
-\format{A data frame/tibble with 51 observations on two variables
+\format{
+A data frame/tibble with 51 observations on two variables
 \describe{ 
 \item{salary}{salary (in $1000) 10 years after graduation} 
 \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
-}}
+}
+}
 \usage{
 Engineer
 }

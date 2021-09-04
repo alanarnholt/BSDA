@@ -4,13 +4,15 @@
 \name{Inspect}
 \alias{Inspect}
 \title{Percent of vehicles passing inspection by type inspection station}
-\format{A data frame/tibble with 174 observations on two variables
+\format{
+A data frame/tibble with 174 observations on two variables
 \describe{ 
 \item{station}{a factor with levels \code{auto inspection},
 \code{auto repair}, \code{car care center}, \code{gas station}, \code{new car
 dealer}, and \code{tire store}} 
 \item{passed}{a factor with levels \code{less than 70\%}, \code{between 70\% and 84\%}, and \code{more than 85\%}}
-}}
+}
+}
 \source{
 \emph{The Charlotte Observer}, December 13, 1992.
 }

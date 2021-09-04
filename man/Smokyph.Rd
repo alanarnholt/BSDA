@@ -4,13 +4,15 @@
 \name{Smokyph}
 \alias{Smokyph}
 \title{Water pH levels of 75 water samples taken in the Great Smoky Mountains}
-\format{A data frame/tibble with 75 observations on three variables
+\format{
+A data frame/tibble with 75 observations on three variables
 \describe{ 
 \item{waterph}{water sample pH level} 
 \item{code}{charater variable with values \code{low} (elevation below 0.6 miles), 
 and \code{high} (elevation above 0.6 miles)} 
 \item{elev}{elevation in miles} 
-}}
+}
+}
 \source{
 Schmoyer, R. L. (1994), Permutation Tests for Correlation in Regression Errors,
 \emph{Journal of the American Statistical Association, 89}, 1507-1516.

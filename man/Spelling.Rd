@@ -5,12 +5,14 @@
 \alias{Spelling}
 \title{Spelling scores for 9 eighth graders before and after a 2-week course of
 instruction}
-\format{A data frame/tibble with nine observations on three variables
+\format{
+A data frame/tibble with nine observations on three variables
 \describe{ 
 \item{before}{spelling score before a 2-week course of instruction} 
 \item{after}{spelling score after a 2-week course of instruction} 
 \item{differ}{after - before (spelling score)} 
-}}
+}
+}
 \usage{
 Spelling
 }

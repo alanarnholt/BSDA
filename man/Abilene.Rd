@@ -4,14 +4,16 @@
 \name{Abilene}
 \alias{Abilene}
 \title{Crimes reported in Abilene, Texas}
-\format{A data frame/tibble with 16 observations on three variables
+\format{
+A data frame/tibble with 16 observations on three variables
 \describe{ 
 \item{crimetype}{a character variable with values \code{Aggravated
 assault}, \code{Arson}, \code{Burglary}, \code{Forcible rape}, \code{Larceny
 theft}, \code{Murder}, \code{Robbery}, and \code{Vehicle theft}.}
 \item{year}{a factor with levels \code{1992} and \code{1999}} 
 \item{number}{number of reported crimes} 
-}}
+}
+}
 \source{
 \emph{Uniform Crime Reports}, US Dept. of Justice.
 }

@@ -4,8 +4,15 @@
 \alias{z.test}
 \title{Z-test}
 \usage{
-z.test(x, y = NULL, alternative = "two.sided", mu = 0, sigma.x = NULL,
-  sigma.y = NULL, conf.level = 0.95)
+z.test(
+  x,
+  y = NULL,
+  alternative = "two.sided",
+  mu = 0,
+  sigma.x = NULL,
+  sigma.y = NULL,
+  conf.level = 0.95
+)
 }
 \arguments{
 \item{x}{numeric vector; \code{NA}s and \code{Inf}s are allowed but will be

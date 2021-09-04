@@ -5,11 +5,13 @@
 \alias{Mathcomp}
 \title{Standardized math competency for a group of entering freshmen at a small
 community college}
-\format{A data frame/tibble with 31 observations one variable
+\format{
+A data frame/tibble with 31 observations one variable
 \describe{ 
 \item{score}{scores of 31 entering freshmen at a community college 
 on a national standardized test} 
-}}
+}
+}
 \usage{
 Mathcomp
 }

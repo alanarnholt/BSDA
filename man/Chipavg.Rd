@@ -5,13 +5,15 @@
 \alias{Chipavg}
 \title{Measurements of the thickness of the oxide layer of manufactured integrated
 circuits}
-\format{A data frame/tibble with 30 observations on three variables
+\format{
+A data frame/tibble with 30 observations on three variables
 \describe{ 
 \item{wafer1}{thickness of the oxide layer for \code{wafer1}} 
 \item{wafer2}{thickness of the oxide layer for \code{wafer2}}
 \item{thickness}{average thickness of the oxide layer of the eight measurements
 obtained from each set of two wafers} 
-}}
+}
+}
 \source{
 Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
 for Monitoring Parameters of a Nested Random Effect Model.} 

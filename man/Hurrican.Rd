@@ -4,14 +4,16 @@
 \name{Hurrican}
 \alias{Hurrican}
 \title{Number of storms, hurricanes and El Nino effects from 1950 through 1995}
-\format{A data frame/tibble with 46 observations on four variables
+\format{
+A data frame/tibble with 46 observations on four variables
 \describe{ 
 \item{year}{a numeric vector indicating year} 
 \item{storms}{a numeric vector recording number of storms} 
 \item{hurrican}{a numeric vector recording number of hurricanes}
 \item{elnino}{a factor with levels \code{cold}, \code{neutral}, and
 \code{warm}} 
-}}
+}
+}
 \source{
 National Hurricane Center.
 }

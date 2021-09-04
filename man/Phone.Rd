@@ -4,10 +4,12 @@
 \name{Phone}
 \alias{Phone}
 \title{Length of long-distance phone calls for a small business firm}
-\format{A data frame/tibble with 20 observations on one variable
+\format{
+A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{time}{duration of long distance phone call (in minutes)} 
-}}
+}
+}
 \usage{
 Phone
 }

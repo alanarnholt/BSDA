@@ -4,10 +4,12 @@
 \name{Alcohol}
 \alias{Alcohol}
 \title{Ages at which 14 female alcoholics began drinking}
-\format{A data frame/tibble with 14 observations on one variable
+\format{
+A data frame/tibble with 14 observations on one variable
 \describe{ 
 \item{age}{age when individual started drinking} 
-}}
+}
+}
 \usage{
 Alcohol
 }

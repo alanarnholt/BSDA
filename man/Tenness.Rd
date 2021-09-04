@@ -4,10 +4,12 @@
 \name{Tenness}
 \alias{Tenness}
 \title{Tennessee self concept scores for 20 gifted high school students}
-\format{A data frame/tibble with 20 observations on one variable
+\format{
+A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{score}{Tennessee Self-Concept Scale score} 
-}}
+}
+}
 \usage{
 Tenness
 }

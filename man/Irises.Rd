@@ -4,14 +4,16 @@
 \name{Irises}
 \alias{Irises}
 \title{R.A. Fishers famous data on Irises}
-\format{A data frame/tibble with 150 observations on five variables
+\format{
+A data frame/tibble with 150 observations on five variables
 \describe{ 
 \item{sepal_length}{sepal length (in cm)} 
 \item{sepal_width}{sepal width (in cm)} 
 \item{petal_length}{petal length (in cm)}
 \item{petal_width}{petal width (in cm)} 
 \item{species}{a factor with levels \code{setosa}, \code{versicolor}, and \code{virginica}} 
-}}
+}
+}
 \source{
 Fisher, R. A. (1936) The use of multiple measurements in taxonomic problems. 
 \emph{Annals of Eugenics}, \strong{7}, Part II, 179-188.
@@ -27,7 +29,7 @@ Data for Examples 1.15 and 5.19
 tapply(Irises$sepal_length, Irises$species, mean)
 t.test(Irises$sepal_length[Irises$species == "setosa"], conf.level = 0.99)
 hist(Irises$sepal_length[Irises$species == "setosa"], 
-     main = "Sepal length for\\n Iris Setosa",
+     main = "Sepal length for\n Iris Setosa",
      xlab = "Length (in cm)")
 boxplot(sepal_length ~ species, data = Irises)
 

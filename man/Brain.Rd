@@ -4,7 +4,8 @@
 \name{Brain}
 \alias{Brain}
 \title{Brain weight versus body weight of 28 animals}
-\format{A data frame/tibble  with 28 observations on three variables
+\format{
+A data frame/tibble  with 28 observations on three variables
 \describe{ 
 \item{species}{a factor with levels \code{African
 elephant}, \code{Asian Elephant}, \code{Brachiosaurus}, \code{Cat},
@@ -15,7 +16,8 @@ elephant}, \code{Asian Elephant}, \code{Brachiosaurus}, \code{Cat},
 \code{Rat}, \code{Rhesus monkey}, \code{Sheep}, and \code{Triceratops}}
 \item{bodyweight}{body weight (in kg)} 
 \item{brainweight}{brain weight (in g)} 
-}}
+}
+}
 \source{
 P. Rousseeuw and A. Leroy, \emph{Robust Regression and Outlier Detection} 
 (New York: Wiley, 1987).

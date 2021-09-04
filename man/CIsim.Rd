@@ -4,8 +4,14 @@
 \alias{CIsim}
 \title{Confidence Interval Simulation Program}
 \usage{
-CIsim(samples = 100, n = 30, mu = 0, sigma = 1, conf.level = 0.95,
-  type = "Mean")
+CIsim(
+  samples = 100,
+  n = 30,
+  mu = 0,
+  sigma = 1,
+  conf.level = 0.95,
+  type = "Mean"
+)
 }
 \arguments{
 \item{samples}{the number of samples desired.}

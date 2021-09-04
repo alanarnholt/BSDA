@@ -4,11 +4,13 @@
 \name{Bones}
 \alias{Bones}
 \title{Bone density measurements of 35 physically active and 35 non-active women}
-\format{A data frame/tibble  with 70 observations on two variables
+\format{
+A data frame/tibble  with 70 observations on two variables
 \describe{ 
 \item{density}{bone density measurements}
 \item{group}{a factor with levels \code{active} and \code{nonactive}} 
-}}
+}
+}
 \usage{
 Bones
 }

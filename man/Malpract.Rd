@@ -4,10 +4,12 @@
 \name{Malpract}
 \alias{Malpract}
 \title{Amounts awarded in 17 malpractice cases}
-\format{A data frame/tibble with 17 observations on one variable
+\format{
+A data frame/tibble with 17 observations on one variable
 \describe{ 
 \item{award}{malpractice reward (in $1000)} 
-}}
+}
+}
 \usage{
 Malpract
 }

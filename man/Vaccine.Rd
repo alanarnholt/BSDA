@@ -4,11 +4,13 @@
 \name{Vaccine}
 \alias{Vaccine}
 \title{Reported serious reactions due to vaccines in 11 southern states}
-\format{A data frame/tibble with 11 observations on two variables
+\format{
+A data frame/tibble with 11 observations on two variables
 \describe{ 
 \item{state}{U.S. state} 
 \item{number}{number of reported serious reactions per million doses of a vaccine} 
-}}
+}
+}
 \source{
 Center for Disease Control, Atlanta, Georgia.
 }

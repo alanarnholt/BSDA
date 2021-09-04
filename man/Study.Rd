@@ -4,10 +4,12 @@
 \name{Study}
 \alias{Study}
 \title{Number of hours studied per week by a sample of 50 freshmen}
-\format{A data frame/tibble with 50 observations on one variable
+\format{
+A data frame/tibble with 50 observations on one variable
 \describe{ 
 \item{hours}{number of hours a week freshmen reported studying for their courses} 
-}}
+}
+}
 \usage{
 Study
 }

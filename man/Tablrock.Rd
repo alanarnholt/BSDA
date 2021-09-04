@@ -4,7 +4,8 @@
 \name{Tablrock}
 \alias{Tablrock}
 \title{Ozone concentrations at Mt. Mitchell, North Carolina}
-\format{A data frame/tibble with 719 observations on the following 17 variables.
+\format{
+A data frame/tibble with 719 observations on the following 17 variables.
 \describe{ 
 \item{day}{date}
 \item{hour}{time of day} 
@@ -23,7 +24,8 @@
 \item{co2}{a numeric vector}
 \item{gas}{a numeric vector} 
 \item{air}{a numeric vector} 
-}}
+}
+}
 \usage{
 Tablrock
 }

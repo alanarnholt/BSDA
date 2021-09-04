@@ -4,7 +4,8 @@
 \name{Epaminicompact}
 \alias{Epaminicompact}
 \title{Fuel efficiency ratings for compact vehicles in 2001}
-\format{A data frame/tibble with 22 observations on ten variables
+\format{
+A data frame/tibble with 22 observations on ten variables
 \describe{ 
 \item{class}{a character variable with value \code{MINICOMPACT CARS}} 
 \item{manufacturer}{a character variable with values \code{AUDI},
@@ -24,7 +25,8 @@ and \code{R}(rear wheel drive)}
 \item{cty}{city mpg}
 \item{hwy}{highway mpg} 
 \item{cmb}{combined city and highway mpg} 
-}}
+}
+}
 \source{
 EPA data.
 }

@@ -4,10 +4,12 @@
 \name{Food}
 \alias{Food}
 \title{Annual food expenditures for 40 single households in Ohio}
-\format{A data frame/tibble with 40 observations on one variable
+\format{
+A data frame/tibble with 40 observations on one variable
 \describe{ 
 \item{expenditure}{a numeric vector recording annual food expenditure (in dollars) in the state of Ohio.} 
-}}
+}
+}
 \source{
 Bureau of Labor Statistics.
 }

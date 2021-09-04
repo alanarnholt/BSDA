@@ -4,10 +4,12 @@
 \name{Entrance}
 \alias{Entrance}
 \title{College entrance exam scores for 24 high school seniors}
-\format{A data frame/tibble with 24 observations on one variable
+\format{
+A data frame/tibble with 24 observations on one variable
 \describe{ 
 \item{score}{college entrance exam score} 
-}}
+}
+}
 \usage{
 Entrance
 }

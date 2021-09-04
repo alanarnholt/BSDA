@@ -5,11 +5,13 @@
 \alias{Homework}
 \title{Number of hours per week spent on homework for private and public high
 school students}
-\format{A data frame with 30 observations on two variables
+\format{
+A data frame with 30 observations on two variables
 \describe{ 
 \item{school}{type of school either \code{private} or \code{public}} 
 \item{time}{number of hours per week spent on homework} 
-}}
+}
+}
 \usage{
 Homework
 }
