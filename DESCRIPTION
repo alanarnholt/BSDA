@@ -2,7 +2,7 @@ Package: BSDA
 Type: Package
 Title: Basic Statistics and Data Analysis
 Version: 1.2.1
-Date: 2017-08-07
+Date: 2021-09-04
 LazyData: yes
 Authors@R: c(
     person("Alan T.", "Arnholt", email = "arnholtat@appstate.edu", role = c("aut", "cre")),

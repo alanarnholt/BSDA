@@ -20,7 +20,7 @@ Please report any **bugs** or **suggestions** at:
 
 The stable version of the package is available for download from [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/BSDA)](https://cran.r-project.org/package=BSDA).
 
-You may install the most recent development version of **BSDA** using the [devtools](https://github.com/hadley/devtools) function `install_github()`.
+You may install the most recent development version of **BSDA** using the [devtools](https://github.com/r-lib/devtools) function `install_github()`.
 
 However, you need to make sure you're set up to develop packages. This is platform specific:
 
