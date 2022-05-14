@@ -9,8 +9,9 @@ BSDA
 [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/BSDA)](https://cran.r-project.org/package=BSDA)
 
 [![CRAN version](https://www.r-pkg.org/badges/version/BSDA)](https://cran.r-project.org/package=BSDA)
-![](https://cranlogs.r-pkg.org/badges/grand-total/BSDA)
 
+![](https://cranlogs.r-pkg.org/badges/grand-total/BSDA)
+=======
 
 ### Alan T. Arnholt
 
@@ -21,10 +22,9 @@ Please report any **bugs** or **suggestions** at:
 
 ### Installation
 
-The package is available for download from
-[CRAN](http://cran.r-project.org/web/packages/BSDA/).
+The stable version of the package is available for download from [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/BSDA)](https://cran.r-project.org/package=BSDA).
 
-You may download the most recent version using the [devtools](https://github.com/hadley/devtools) function `install_github()` to install **BSDA** in R.
+You may install the most recent development version of **BSDA** using the [devtools](https://github.com/r-lib/devtools) function `install_github()`.
 
 However, you need to make sure you're set up to develop packages. This is platform specific:
 

@@ -127,6 +127,9 @@ function(x, y = NULL, alternative = "two.sided", mu = 0, sigma.x = NULL,
     else {
         dname <- deparse(substitute(x))
     }
+    # remove NAs 8/07/17
+    xok <- !is.na(x)
+    x <- x[xok]
     nx <- length(x)
     if(nx <= 2)
         stop("not enough x observations")
@@ -139,6 +142,8 @@ function(x, y = NULL, alternative = "two.sided", mu = 0, sigma.x = NULL,
         names(estimate) <- c("mean of x")
     }
     else {
+        yok <- !is.na(y)
+        y <- y[yok]
         ny <- length(y)
         if(ny <= 2)
             stop("not enough y observations")
