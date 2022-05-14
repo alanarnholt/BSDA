@@ -4,10 +4,12 @@
 \name{Visual}
 \alias{Visual}
 \title{Visual acuity of a group of subjects tested under a specified dose of a drug}
-\format{A data frame/tibble with 18 observations on one variable
+\format{
+A data frame/tibble with 18 observations on one variable
 \describe{ 
 \item{visual}{visual acuity measurement} 
-}}
+}
+}
 \usage{
 Visual
 }

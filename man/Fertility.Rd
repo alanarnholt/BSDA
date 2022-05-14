@@ -4,7 +4,8 @@
 \name{Fertility}
 \alias{Fertility}
 \title{Fertility rates of all 50 states and DC}
-\format{A data frame/tibble with 51 observations on two variables
+\format{
+A data frame/tibble with 51 observations on two variables
 \describe{ 
 \item{state}{a character variable with values \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -20,7 +21,8 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 \code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia},
 \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 \item{rate}{fertility rate (expected number of births during childbearing years)}
-}}
+}
+}
 \source{
 Population Reference Bureau.
 }

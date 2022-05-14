@@ -4,7 +4,8 @@
 \name{Dyslexia}
 \alias{Dyslexia}
 \title{Data on a group of college students diagnosed with dyslexia}
-\format{A data frame/tibble with eight observations on seven variables
+\format{
+A data frame/tibble with eight observations on seven variables
 \describe{ 
 \item{words}{number of words read per minute} 
 \item{age}{age of participant} 
@@ -14,7 +15,8 @@
 \item{weight}{weight of participant (in pounds)} 
 \item{height}{height of participant (in inches)} 
 \item{children}{number of children in family} 
-}}
+}
+}
 \usage{
 Dyslexia
 }

@@ -4,10 +4,12 @@
 \name{Honda}
 \alias{Honda}
 \title{Miles per gallon for a Honda Civic on 35 different occasions}
-\format{A data frame/tibble with 35 observations on one variable
+\format{
+A data frame/tibble with 35 observations on one variable
 \describe{ 
 \item{mileage}{miles per gallon for a Honda Civic} 
-}}
+}
+}
 \usage{
 Honda
 }

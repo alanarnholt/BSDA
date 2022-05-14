@@ -5,12 +5,14 @@
 \alias{Program}
 \title{Effects of four different methods of programmed learning for statistics
 students}
-\format{A data frame/tibble with 44 observations on two variables
+\format{
+A data frame/tibble with 44 observations on two variables
 \describe{ 
 \item{method}{a character variable with values \code{method1}, \code{method2}, 
 \code{method3}, and \code{method4}} 
 \item{score}{standardized test score} 
-}}
+}
+}
 \usage{
 Program
 }

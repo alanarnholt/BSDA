@@ -4,7 +4,8 @@
 \name{Aid}
 \alias{Aid}
 \title{Monthly payments per person for families in the AFDC federal program}
-\format{A data frame/tibble with 51 observations on two variables
+\format{
+A data frame/tibble with 51 observations on two variables
 \describe{ 
 \item{state}{a factor with levels \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -20,7 +21,8 @@ Dakota}, \code{Ohio}, \code{Oklahoma}, \code{Oregon}, \code{Pennsylvania},
 \code{Tennessee}, \code{Texas}, \code{Utah}, \code{Vermont}, \code{Virginia},
 \code{Washington}, \code{West Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 \item{payment}{average monthly payment per person in a family} 
-}}
+}
+}
 \source{
 US Department of Health and Human Services, 1993.
 }

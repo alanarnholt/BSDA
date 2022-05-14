@@ -4,7 +4,8 @@
 \name{Epatwoseater}
 \alias{Epatwoseater}
 \title{Fuel efficiency ratings for two-seater vehicles in 2001}
-\format{A data frame/tibble with 36 observations on ten variables
+\format{
+A data frame/tibble with 36 observations on ten variables
 \describe{ 
 \item{class}{a character variable with value \code{TWO SEATERS}}
 \item{manufacturer}{a character variable with values \code{ACURA}, \code{AUDI},
@@ -29,7 +30,8 @@ ROADSTER}, and \code{Z8}}
 \item{cmb}{combined city and highway mpg} 
  }
  
- @source Environmental Protection Agency.}
+ @source Environmental Protection Agency.
+}
 \usage{
 Epatwoseater
 }

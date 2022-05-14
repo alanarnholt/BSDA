@@ -4,11 +4,13 @@
 \name{Median}
 \alias{Median}
 \title{Illustrates test of equality of medians with the Kruskal Wallis test}
-\format{A data frame/tibble with 45 observations on two variables
+\format{
+A data frame/tibble with 45 observations on two variables
 \describe{ 
 \item{sample}{a vector with values \code{Sample1}, \code{Sample 2}, and \code{Sample 3}} 
 \item{value}{a numeric vector} 
-}}
+}
+}
 \usage{
 Median
 }

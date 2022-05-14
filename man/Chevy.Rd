@@ -4,13 +4,15 @@
 \name{Chevy}
 \alias{Chevy}
 \title{Insurance injury ratings of Chevrolet vehicles for 1990 and 1993 models}
-\format{A data frame/tibble with 67 observations on two variables
+\format{
+A data frame/tibble with 67 observations on two variables
 \describe{ 
 \item{year}{a factor with levels \code{1988-90} and
 \code{1991-93}} 
 \item{frequency}{a factor with levels \code{much better than average}, \code{above average},
 \code{average}, \code{below average}, and \code{much worse than average}} 
-}}
+}
+}
 \source{
 Insurance Institute for Highway Safety and the Highway Loss Data Institute, 1995.
 }

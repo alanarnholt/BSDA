@@ -4,14 +4,16 @@
 \name{Diesel}
 \alias{Diesel}
 \title{Diesel fuel prices in 1999-2000 in nine regions of the country}
-\format{A data frame/tibble with 650 observations on three variables
+\format{
+A data frame/tibble with 650 observations on three variables
 \describe{ 
 \item{date}{date when price was recorded}
 \item{pricepergallon}{price per gallon (in dollars)}
 \item{location}{a factor with levels \code{California}, \code{CentralAtlantic},
 \code{Coast}, \code{EastCoast}, \code{Gulf}, \code{LowerAtlantic}, \code{NatAvg},
 \code{NorthEast}, \code{Rocky}, and \code{WesternMountain}}
-}}
+}
+}
 \source{
 Energy Information Administration, National Enerfy Information Center:
 1000 Independence Ave., SW, Washington, D.C., 20585.

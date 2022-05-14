@@ -5,14 +5,16 @@
 \alias{Tort}
 \title{The number of torts, average number of months to process a tort, and county
 population from the court files of the nation's largest counties}
-\format{A data frame/tibble with 45 observations on five variables
+\format{
+A data frame/tibble with 45 observations on five variables
 \describe{ 
 \item{county}{U.S. county}
 \item{months}{average number of months to process a tort} 
 \item{population}{population of the county} 
 \item{torts}{number of torts} 
 \item{rate}{rate per 10,000 residents} 
-}}
+}
+}
 \source{
 U.S. Department of Justice, \emph{Tort Cases in Large Counties}, Bureau of Justice
 Statistics Special Report, April 1995.

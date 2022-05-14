@@ -4,7 +4,8 @@
 \name{Jdpower}
 \alias{Jdpower}
 \title{Number of problems reported per 100 cars in 1994 versus 1995s}
-\format{A data frame/tibble with 29 observations on three variables
+\format{
+A data frame/tibble with 29 observations on three variables
 \describe{ 
 \item{car}{a factor with levels \code{Acura}, \code{BMW},
 \code{Buick}, \code{Cadillac}, \code{Chevrolet}, \code{Dodge} \code{Eagle},
@@ -15,7 +16,8 @@
 \code{Toyota} \code{Volkswagen}, \code{Volvo}} 
 \item{1994}{number of problems per 100 cars in 1994} 
 \item{1995}{number of problems per 100 cars in 1995} 
-}}
+}
+}
 \source{
 \emph{USA Today}, May 25, 1995.
 }

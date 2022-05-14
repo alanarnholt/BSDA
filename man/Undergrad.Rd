@@ -4,7 +4,8 @@
 \name{Undergrad}
 \alias{Undergrad}
 \title{Data set describing a sample of undergraduate students}
-\format{A data frame/tibble with 100 observations on six variables
+\format{
+A data frame/tibble with 100 observations on six variables
 \describe{ 
 \item{gender}{character variable with values \code{Female} and \code{Male}} 
 \item{major}{college major}
@@ -12,7 +13,8 @@
 \item{gpa}{grade point average}
 \item{sat}{Scholastic Assessment Test score} 
 \item{drops}{number of courses dropped}
-}}
+}
+}
 \usage{
 Undergrad
 }

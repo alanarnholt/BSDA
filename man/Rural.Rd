@@ -4,11 +4,13 @@
 \name{Rural}
 \alias{Rural}
 \title{Social adjustment scores for a rural group and a city group of children}
-\format{A data frame/tibble with 33 observations on two variables
+\format{
+A data frame/tibble with 33 observations on two variables
 \describe{ 
 \item{score}{child's social adjustment score} 
 \item{area}{character variable with values \code{city} and \code{rural}} 
-}}
+}
+}
 \usage{
 Rural
 }

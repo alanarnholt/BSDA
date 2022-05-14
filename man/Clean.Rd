@@ -4,11 +4,13 @@
 \name{Clean}
 \alias{Clean}
 \title{Residual contaminant following the use of three different cleansing agents}
-\format{A data frame/tibble with 45 observations on two variables
+\format{
+A data frame/tibble with 45 observations on two variables
 \describe{ 
 \item{clean}{residual contaminants} 
 \item{agent}{a factor with levels \code{A}, \code{B}, and \code{C}} 
-}}
+}
+}
 \usage{
 Clean
 }

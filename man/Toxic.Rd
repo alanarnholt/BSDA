@@ -4,14 +4,16 @@
 \name{Toxic}
 \alias{Toxic}
 \title{Hazardous waste sites near minority communities}
-\format{A data frame/tibble with 51 observations on five variables
+\format{
+A data frame/tibble with 51 observations on five variables
 \describe{ 
 \item{state}{U.S. state}
 \item{region}{U.S. region} 
 \item{sites}{number of commercial hazardous waste sites}
 \item{minority}{percent of minorities living in communities with commercial hazardous waste sites} 
 \item{percent}{a numeric vector} 
-}}
+}
+}
 \usage{
 Toxic
 }

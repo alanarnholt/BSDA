@@ -4,10 +4,12 @@
 \name{Exercise}
 \alias{Exercise}
 \title{Weight loss for 30 members of an exercise program}
-\format{A data frame/tibble with 30 observations on one variable
+\format{
+A data frame/tibble with 30 observations on one variable
 \describe{ 
 \item{loss}{a numeric vector} 
-}}
+}
+}
 \usage{
 Exercise
 }

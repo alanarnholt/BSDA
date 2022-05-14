@@ -5,12 +5,14 @@
 \alias{Kinder}
 \title{Reading scores for first grade children who attended kindergarten versus
 those who did not}
-\format{A data frame/tibble with eight observations on three variables
+\format{
+A data frame/tibble with eight observations on three variables
 \describe{ 
 \item{pair}{a numeric indicator of pair} 
 \item{kinder}{reading score of kids who went to kindergarten} 
 \item{nokinder}{reading score of kids who did not go to kindergarten} 
-}}
+}
+}
 \usage{
 Kinder
 }

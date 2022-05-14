@@ -4,12 +4,14 @@
 \name{Fitness}
 \alias{Fitness}
 \title{Number of sit-ups before and after a physical fitness course}
-\format{A data frame/tibble with 18 observations on the three variables
+\format{
+A data frame/tibble with 18 observations on the three variables
 \describe{ 
 \item{subject}{a character variable indicating subject number}
 \item{test}{a character variable with values \code{After} and \code{Before}} 
 \item{number}{a numeric vector recording the number of sit-ups performed in one minute} 
-}}
+}
+}
 \usage{
 Fitness
 }

@@ -4,11 +4,13 @@
 \name{Remedial}
 \alias{Remedial}
 \title{Math placement test score for 35 freshmen females and 42 freshmen males}
-\format{A data frame/tibble with 84 observations on two variables
+\format{
+A data frame/tibble with 84 observations on two variables
 \describe{ 
 \item{gender}{a character variable with values \code{female} and \code{male}} 
 \item{score}{math placement score} 
-}}
+}
+}
 \usage{
 Remedial
 }

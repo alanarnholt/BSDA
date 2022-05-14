@@ -2,10 +2,14 @@
 BSDA
 ========
 
-### Version 1.2.0
+### Version 1.2.1
 
 [![Travis-CI Build Status](https://travis-ci.org/alanarnholt/BSDA.svg?branch=master)](https://travis-ci.org/alanarnholt/BSDA)
-[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/BSDA)](http://cran.rstudio.com/package=BSDA)
+
+[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/BSDA)](https://cran.r-project.org/package=BSDA)
+
+[![CRAN version](https://www.r-pkg.org/badges/version/BSDA)](https://cran.r-project.org/package=BSDA)
+![](https://cranlogs.r-pkg.org/badges/grand-total/BSDA)
 
 
 ### Alan T. Arnholt

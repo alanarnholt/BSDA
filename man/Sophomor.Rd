@@ -5,13 +5,15 @@
 \alias{Sophomor}
 \title{Grade point averages, SAT scores and final grade in college algebra for 20
 sophomores}
-\format{A data frame/tibble with 20 observations on four variables
+\format{
+A data frame/tibble with 20 observations on four variables
 \describe{ 
 \item{student}{identification number} 
 \item{gpa}{grade point average} 
 \item{sat}{SAT math score} 
 \item{exam}{final exam grade in college algebra} 
-}}
+}
+}
 \usage{
 Sophomor
 }

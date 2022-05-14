@@ -4,11 +4,13 @@
 \name{Supercar}
 \alias{Supercar}
 \title{Top speeds attained by five makes of supercars}
-\format{A data frame/tibble with 30 observations on two variables
+\format{
+A data frame/tibble with 30 observations on two variables
 \describe{
 \item{speed}{top speed (in miles per hour) of car without redlining} 
 \item{car}{name of sports car} 
-}}
+}
+}
 \source{
 \emph{Car and Drvier} (July 1995).
 }

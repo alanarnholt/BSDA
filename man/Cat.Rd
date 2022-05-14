@@ -4,10 +4,12 @@
 \name{Cat}
 \alias{Cat}
 \title{Reading scores on the California achievement test for a group of 3rd graders}
-\format{A data frame/tibble with 17 observations on one variable
+\format{
+A data frame/tibble with 17 observations on one variable
 \describe{ 
 \item{score}{reading score on the California Achievement Test} 
-}}
+}
+}
 \usage{
 Cat
 }

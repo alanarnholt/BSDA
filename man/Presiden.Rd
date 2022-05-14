@@ -4,7 +4,8 @@
 \name{Presiden}
 \alias{Presiden}
 \title{Ages at inauguration and death of U.S. presidents}
-\format{A data frame/tibble with 43 observations on five variables
+\format{
+A data frame/tibble with 43 observations on five variables
 \describe{ 
 \item{first_initial}{a factor with levels \code{A.}, \code{B.},
 \code{C.}, \code{D.}, \code{F.}, \code{G.}, \code{G. W.}, \code{H.}, \code{J.},
@@ -24,7 +25,8 @@
 \code{PA}, \code{SC}, \code{TEX}, \code{VA}, and \code{VT}}
 \item{inaugural_age}{President's age at inauguration} 
 \item{death_age}{President's age at death} 
-}}
+}
+}
 \usage{
 Presiden
 }

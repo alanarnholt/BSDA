@@ -4,10 +4,12 @@
 \name{Stable}
 \alias{Stable}
 \title{Times of a 2-year old stallion on a one mile run}
-\format{A data frame/tibble with nine observations on one variable
+\format{
+A data frame/tibble with nine observations on one variable
 \describe{ 
 \item{time}{time (in seconds) for horse to run 1 mile} 
-}}
+}
+}
 \usage{
 Stable
 }

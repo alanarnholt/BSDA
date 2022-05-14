@@ -5,11 +5,13 @@
 \alias{Retail}
 \title{Length of employment versus gross sales for 10 employees of a large retail
 store}
-\format{A data frame/tibble with 10 observations on two variables
+\format{
+A data frame/tibble with 10 observations on two variables
 \describe{ 
 \item{months}{length of employment (in months)}
 \item{sales}{employee gross sales (in dollars)} 
-}}
+}
+}
 \usage{
 Retail
 }

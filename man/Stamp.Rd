@@ -4,10 +4,12 @@
 \name{Stamp}
 \alias{Stamp}
 \title{Thicknesses of 1872 Hidalgo stamps issued in Mexico}
-\format{A data frame/tibble with 485 observations on one variable
+\format{
+A data frame/tibble with 485 observations on one variable
 \describe{ 
 \item{thickness}{stamp thickness (in mm)}
-}}
+}
+}
 \source{
 Izenman, A., Sommer, C. (1988), Philatelic Mixtures and Multimodal Densities,
 \emph{Journal of the American Statistical Association}, 83, 941-953.

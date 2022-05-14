@@ -4,7 +4,8 @@
 \name{Ligntmonth}
 \alias{Ligntmonth}
 \title{Relationship between damage reports and deaths caused by lightning}
-\format{A data frame/tibble with 12 observations on four variables
+\format{
+A data frame/tibble with 12 observations on four variables
 \describe{ 
 \item{month}{a factor with levels \code{1/01/2000},
 \code{10/01/2000}, \code{11/01/2000}, \code{12/01/2000}, \code{2/01/2000},
@@ -13,7 +14,8 @@
 \item{deaths}{number of deaths due to lightning strikes} 
 \item{injuries}{number of injuries due to lightning strikes}
 \item{damage}{damage due to lightning strikes (in dollars)} 
-}}
+}
+}
 \source{
 \emph{Lighting Fatalities, Injuries and Damage Reports in the United States},
 1959-1994, NOAA Technical Memorandum NWS SR-193, Dept. of Commerce.

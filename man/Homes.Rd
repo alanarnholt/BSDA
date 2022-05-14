@@ -4,7 +4,8 @@
 \name{Homes}
 \alias{Homes}
 \title{Median prices of single-family homes in 65 metropolitan statistical areas}
-\format{A data frame/tibble with 65 observations on the four variables
+\format{
+A data frame/tibble with 65 observations on the four variables
 \describe{ 
 \item{city}{a character variable with values \code{Akron OH},
 \code{Albuquerque NM}, \code{Anaheim CA}, \code{Atlanta GA}, \code{Baltimore
@@ -31,7 +32,8 @@ Francisco CA}, \code{Seattle WA}, \code{Spokane WA}, \code{St Louis MO},
 \code{South}, and \code{West}} 
 \item{year}{a factor with levels \code{1994} and \code{2000}}
 \item{price}{median house price (in dollars)} 
-}}
+}
+}
 \source{
 National Association of Realtors.
 }

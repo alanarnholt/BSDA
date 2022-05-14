@@ -4,13 +4,15 @@
 \name{Speed}
 \alias{Speed}
 \title{Speed reading scores before and after a course on speed reading}
-\format{A data frame/tibble with 15 observations on four variables
+\format{
+A data frame/tibble with 15 observations on four variables
 \describe{ 
 \item{before}{reading comprehension score before taking a speed-reading course} 
 \item{after}{reading comprehension score after taking a speed-reading course} 
 \item{differ}{after - before (comprehension reading scores)}
 \item{signranks}{signed ranked differences} 
-}}
+}
+}
 \usage{
 Speed
 }

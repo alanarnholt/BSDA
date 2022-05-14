@@ -4,10 +4,12 @@
 \name{Rentals}
 \alias{Rentals}
 \title{Weekly rentals for 45 apartments}
-\format{A data frame/tibble with 45 observations on one variable
+\format{
+A data frame/tibble with 45 observations on one variable
 \describe{ 
 \item{rent}{weekly apartment rental price (in dollars)} 
-}}
+}
+}
 \usage{
 Rentals
 }

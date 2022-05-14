@@ -4,7 +4,8 @@
 \name{Airline}
 \alias{Airline}
 \title{Percentage of on-time arrivals and number of complaints for 11 airlines}
-\format{A data frame/tibble with 11 observations on three variables
+\format{
+A data frame/tibble with 11 observations on three variables
 \describe{ 
 \item{airline}{a charater variable with values \code{Alaska},
 \code{Amer West}, \code{American}, \code{Continental}, \code{Delta},
@@ -12,7 +13,8 @@
 \code{United}, and \code{USAir}} 
 \item{ontime}{a numeric vector}
 \item{complaints}{complaints per 1000 passengers} 
-}}
+}
+}
 \source{
 Transportation Department.
 }

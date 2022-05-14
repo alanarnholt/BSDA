@@ -5,10 +5,12 @@
 \alias{Devmath}
 \title{Test scores for students who failed developmental mathematics in the fall
 semester 1995}
-\format{A data frame/tibble with 40 observations on one variable
+\format{
+A data frame/tibble with 40 observations on one variable
 \describe{ 
 \item{score}{first exam score} 
-}}
+}
+}
 \source{
 Data provided by Dr. Anita Kitchens.
 }

@@ -5,7 +5,8 @@
 \alias{Sat}
 \title{SAT scores, percent taking exam and state funding per student by state for
 1994, 1995 and 1999}
-\format{A data frame/tibble with 102 observations on seven variables
+\format{
+A data frame/tibble with 102 observations on seven variables
 \describe{ 
 \item{state}{U.S. state}
 \item{verbal}{verbal SAT score} 
@@ -14,7 +15,8 @@
 \item{percent}{percent of high school seniors taking the SAT} 
 \item{expend}{state expenditure per student (in dollars)} 
 \item{year}{year} 
-}}
+}
+}
 \source{
 \emph{The 2000 World Almanac and Book of Facts}, Funk and Wagnalls Corporation, New Jersey.
 }

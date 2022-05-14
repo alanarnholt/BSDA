@@ -4,10 +4,12 @@
 \name{Repair}
 \alias{Repair}
 \title{Recorded times for repairing 22 automobiles involved in wrecks}
-\format{A data frame/tibble with 22 observations on one variable
+\format{
+A data frame/tibble with 22 observations on one variable
 \describe{ 
 \item{time}{time to repair a wrecked in car (in hours)} 
-}}
+}
+}
 \usage{
 Repair
 }

@@ -4,11 +4,13 @@
 \name{Autogear}
 \alias{Autogear}
 \title{Number of defective auto gears produced by two manufacturers}
-\format{A data frame/tibble  with 20 observations on two variables
+\format{
+A data frame/tibble  with 20 observations on two variables
 \describe{ 
 \item{defectives}{number of defective gears in the production of 100 gears per day} 
 \item{manufacturer}{a factor with levels \code{A} and \code{B}} 
-}}
+}
+}
 \usage{
 Autogear
 }

@@ -4,9 +4,17 @@
 \alias{zsum.test}
 \title{Summarized z-test}
 \usage{
-zsum.test(mean.x, sigma.x = NULL, n.x = NULL, mean.y = NULL,
-  sigma.y = NULL, n.y = NULL, alternative = "two.sided", mu = 0,
-  conf.level = 0.95)
+zsum.test(
+  mean.x,
+  sigma.x = NULL,
+  n.x = NULL,
+  mean.y = NULL,
+  sigma.y = NULL,
+  n.y = NULL,
+  alternative = "two.sided",
+  mu = 0,
+  conf.level = 0.95
+)
 }
 \arguments{
 \item{mean.x}{a single number representing the sample mean of \code{x}}

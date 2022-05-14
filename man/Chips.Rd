@@ -5,7 +5,8 @@
 \alias{Chips}
 \title{Four measurements on a first wafer and four measurements on a second wafer
 selected from 30 lots}
-\format{A data frame/tibble with 30 observations on eight variables
+\format{
+A data frame/tibble with 30 observations on eight variables
 \describe{ 
 \item{wafer11}{first measurement of thickness of the oxide layer for \code{wafer1}} 
 \item{wafer12}{second measurement of thickness of the oxide layer for \code{wafer1}}
@@ -15,7 +16,8 @@ selected from 30 lots}
 \item{wafer22}{second measurement of thickness of the oxide layer for \code{wafer2}} 
 \item{wafer23}{third measurement of thickness of the oxide layer for \code{wafer2}} 
 \item{wafer24}{fourth measurement of thickness of the oxide layer for \code{wafer2}} 
-}}
+}
+}
 \source{
 Yashchin, E. 1995. \dQuote{Likelihood Ratio Methods 
 for Monitoring Parameters of a Nested Random Effect Model.} 

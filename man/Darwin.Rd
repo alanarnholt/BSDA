@@ -4,12 +4,14 @@
 \name{Darwin}
 \alias{Darwin}
 \title{Charles Darwin's study of cross-fertilized and self-fertilized plants}
-\format{A data frame/tibble with 15 observations on three variables
+\format{
+A data frame/tibble with 15 observations on three variables
 \describe{ 
 \item{pot}{number of pot} 
 \item{cross}{height of plant (in inches) after a fixed period of time when cross-fertilized} 
 \item{self}{height of plant (in inches) after a fixed period of time when self-fertilized}
-}}
+}
+}
 \source{
 Darwin, C. (1876) \emph{The Effect of Cross- and Self-Fertilization in the 
 Vegetable Kingdom}, 2nd edition, London.

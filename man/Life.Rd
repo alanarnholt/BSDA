@@ -4,12 +4,14 @@
 \name{Life}
 \alias{Life}
 \title{Life expectancy of men and women in U.S.}
-\format{A data frame/tibble with eight observations on three variables
+\format{
+A data frame/tibble with eight observations on three variables
 \describe{ 
 \item{year}{a numeric vector indicating year} 
 \item{men}{life expectancy for men (in years)} 
 \item{women}{life expectancy for women (in years)} 
-}}
+}
+}
 \source{
 National Center for Health Statistics.
 }

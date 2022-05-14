@@ -4,11 +4,13 @@
 \name{Eggs}
 \alias{Eggs}
 \title{Number of eggs versus amounts of feed supplement}
-\format{A data frame/tibble with 12 observations on two variables
+\format{
+A data frame/tibble with 12 observations on two variables
 \describe{ 
 \item{feed}{amount of feed supplement} 
 \item{eggs}{number of eggs per day for 100 chickens} 
-}}
+}
+}
 \usage{
 Eggs
 }

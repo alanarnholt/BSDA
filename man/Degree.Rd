@@ -4,14 +4,16 @@
 \name{Degree}
 \alias{Degree}
 \title{Percent of bachelor's degrees awarded women in 1970 versus 1990}
-\format{A data frame/tibble with 1064 observations on two variables
+\format{
+A data frame/tibble with 1064 observations on two variables
 \describe{ 
 \item{field}{a factor with levels \code{Health},
 \code{Education}, \code{Foreign Language}, \code{Psychology}, \code{Fine Arts},
 \code{Life Sciences}, \code{Business}, \code{Social Science}, \code{Physical Sciences},
 \code{Engineering}, and \code{All Fields}} 
 \item{awarded}{a factor with levels \code{1970} and \code{1990}} 
-}}
+}
+}
 \source{
 U.S. Department of Health and Human Services, National 
 Center for Education Statistics.

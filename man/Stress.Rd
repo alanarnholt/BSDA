@@ -5,11 +5,13 @@
 \alias{Stress}
 \title{Short-term memory test scores on 12 subjects before and after a stressful
 situation}
-\format{A data frame/tibble with 12 observations on two variables
+\format{
+A data frame/tibble with 12 observations on two variables
 \describe{ 
 \item{prestress}{short term memory score before being exposed to a stressful situation}
 \item{poststress}{short term memory score after being exposed to a stressful situation} 
-}}
+}
+}
 \usage{
 Stress
 }

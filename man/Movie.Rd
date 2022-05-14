@@ -4,12 +4,14 @@
 \name{Movie}
 \alias{Movie}
 \title{Moral attitude scale on 15 subjects before and after viewing a movie}
-\format{A data frame/tibble with 12 observations on three variables
+\format{
+A data frame/tibble with 12 observations on three variables
 \describe{ 
 \item{before}{moral aptitude before viewing the movie} 
 \item{after}{moral aptitude after viewing the movie} 
 \item{differ}{a numeric vector} 
-}}
+}
+}
 \usage{
 Movie
 }

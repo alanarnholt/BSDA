@@ -5,12 +5,14 @@
 \alias{Hostile}
 \title{Hostility levels of high school students from rural, suburban, and urban
 areas}
-\format{A data frame/tibble with 135 observations on two variables
+\format{
+A data frame/tibble with 135 observations on two variables
 \describe{ 
 \item{location}{a factor with the location of the high school student 
 (\code{Rural}, \code{Suburban}, or \code{Urban})} 
 \item{hostility}{the score from the Hostility Level Test} 
-}}
+}
+}
 \usage{
 Hostile
 }

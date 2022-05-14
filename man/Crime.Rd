@@ -4,7 +4,8 @@
 \name{Crime}
 \alias{Crime}
 \title{Violent crime rates for the states in 1983 and 1993}
-\format{A data frame/tibble with 102 observations on three variables
+\format{
+A data frame/tibble with 102 observations on three variables
 \describe{ 
 \item{state}{a factor with levels \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -21,7 +22,8 @@
 Virginia}, \code{Wisconsin}, and \code{Wyoming}}
 \item{year}{a factor with levels \code{1983} and \code{1993}} 
 \item{rate}{crime rate per 100,000 inhabitants} 
-}}
+}
+}
 \source{
 U.S. Department of Justice, Bureau of Justice Statistics, \emph{Sourcebook of
 Criminal Justice Statistics}, 1993.

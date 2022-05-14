@@ -5,10 +5,12 @@
 \alias{Porosity}
 \title{Porosity measurements on 20 samples of Tensleep Sandstone, Pennsylvanian
 from Bighorn Basin in Wyoming}
-\format{A data frame/tibble with 20 observations on one variable
+\format{
+A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{porosity}{porosity measurement (percent)} 
-}}
+}
+}
 \source{
 Davis, J. C. (1986), \emph{Statistics and Data Analysis in Geology}, 2nd edition,
 pages 63-65.

@@ -4,11 +4,13 @@
 \name{Insulate}
 \alias{Insulate}
 \title{Heat loss through a new insulating medium}
-\format{A data frame/tibble with ten observations on two variables
+\format{
+A data frame/tibble with ten observations on two variables
 \describe{ 
 \item{temp}{outside temperature (in degrees Celcius)} 
 \item{loss}{heat loss (in BTUs)} 
-}}
+}
+}
 \usage{
 Insulate
 }

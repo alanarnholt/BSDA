@@ -5,7 +5,8 @@
 \alias{Educat}
 \title{Crime rates versus the percent of the population without a high school
 degree}
-\format{A data frame/tibble with 51 observations on three variables
+\format{
+A data frame/tibble with 51 observations on three variables
 \describe{ 
 \item{state}{a factor with levels \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -22,7 +23,8 @@ degree}
 Virginia}, \code{Wisconsin}, and \code{Wyoming}} 
 \item{nodegree}{percent of the population without a high school degree} 
 \item{crime}{violent crimes per 100,000 population} 
-}}
+}
+}
 \usage{
 Educat
 }

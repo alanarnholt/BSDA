@@ -4,11 +4,13 @@
 \name{Register}
 \alias{Register}
 \title{Maintenance cost versus age of cash registers in a department store}
-\format{A data frame/tibble with nine observations on two variables
+\format{
+A data frame/tibble with nine observations on two variables
 \describe{ 
 \item{age}{age of cash register (in years)} 
 \item{cost}{maintenance cost of cash register (in dollars)} 
-}}
+}
+}
 \usage{
 Register
 }

@@ -4,11 +4,13 @@
 \name{Aptitude}
 \alias{Aptitude}
 \title{Aptitude test scores versus productivity in a factory}
-\format{A data frame/tibble  with 8 observations on two variables
+\format{
+A data frame/tibble  with 8 observations on two variables
 \describe{ 
 \item{aptitude}{aptitude test scores}
 \item{product}{productivity scores} 
-}}
+}
+}
 \usage{
 Aptitude
 }

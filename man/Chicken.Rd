@@ -4,12 +4,14 @@
 \name{Chicken}
 \alias{Chicken}
 \title{Weight gain of chickens fed three different rations}
-\format{A data frame/tibble with 13 observations onthree variables
+\format{
+A data frame/tibble with 13 observations onthree variables
 \describe{ 
 \item{gain}{weight gain over a specified period} 
 \item{feed}{a factor with levels \code{ration1}, \code{ration2}, 
 and \code{ration3}} 
-}}
+}
+}
 \usage{
 Chicken
 }

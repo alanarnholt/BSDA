@@ -4,11 +4,13 @@
 \name{Magnesiu}
 \alias{Magnesiu}
 \title{Magnesium concentration and distances between samples}
-\format{A data frame/tibble with 20 observations on two variables
+\format{
+A data frame/tibble with 20 observations on two variables
 \describe{ 
 \item{distance}{distance between samples}
 \item{magnesium}{concentration of magnesium} 
-}}
+}
+}
 \source{
 Davis, J. (1986), \emph{Statistics and Data Analysis in Geology}, 2d. Ed.,
 John Wiley and Sons, New York, p. 146.

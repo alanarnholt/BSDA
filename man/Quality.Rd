@@ -4,11 +4,13 @@
 \name{Quality}
 \alias{Quality}
 \title{Quality control test scores on two manufacturing processes}
-\format{A data frame/tibble with 15 observations on two variables
+\format{
+A data frame/tibble with 15 observations on two variables
 \describe{ 
 \item{process}{a character variable with values \code{Process1} and \code{Process2}}
 \item{score}{results of a quality control test} 
-}}
+}
+}
 \usage{
 Quality
 }

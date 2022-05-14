@@ -5,10 +5,12 @@
 \alias{Grnriv2}
 \title{Thickness of a varved section of the Green river oil shale deposit near a
 major lake in the Rocky Mountains}
-\format{A data frame/tibble with 101 observations on one variable
+\format{
+A data frame/tibble with 101 observations on one variable
 \describe{ 
 \item{thick}{varve thickness (in millimeters)} 
-}}
+}
+}
 \source{
 J. Davis, \emph{Statistics and Data Analysis in Geology}, 2nd Ed., Jon Wiley and Sons, New York.
 }

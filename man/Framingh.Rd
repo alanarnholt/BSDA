@@ -4,10 +4,12 @@
 \name{Framingh}
 \alias{Framingh}
 \title{Cholesterol values of 62 subjects in the Framingham Heart Study}
-\format{A data frame/tibble with 62 observations on one variable
+\format{
+A data frame/tibble with 62 observations on one variable
 \describe{ 
 \item{cholest}{a numeric vector with cholesterol values} 
-}}
+}
+}
 \source{
 R. D'Agostino, et al., (1990) "A Suggestion for Using Powerful and Informative
 Tests for Normality," \emph{The American Statistician, 44} 316-321.

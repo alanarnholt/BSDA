@@ -5,10 +5,12 @@
 \alias{Prognost}
 \title{Klopfer's prognostic rating scale for subjects receiving behavior
 modification therapy}
-\format{A data frame/tibble with 15 observations on one variable
+\format{
+A data frame/tibble with 15 observations on one variable
 \describe{ 
 \item{kprs_score}{Kloper's Prognostic Rating Scale score} 
-}}
+}
+}
 \source{
 Newmark, C., et al. (1973), Predictive Validity of the Rorschach Prognostic Rating Scale
 with Behavior Modification Techniques, \emph{Journal of Clinical Psychology, 29}, 246-248.

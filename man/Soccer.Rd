@@ -4,10 +4,12 @@
 \name{Soccer}
 \alias{Soccer}
 \title{Weights of 25 soccer players}
-\format{A data frame/tibble with 25 observations on one variable
+\format{
+A data frame/tibble with 25 observations on one variable
 \describe{ 
 \item{weight}{soccer players weight (in pounds)} 
-}}
+}
+}
 \usage{
 Soccer
 }
@@ -18,7 +20,7 @@ Data for Exercise 1.46
 
 stem(Soccer$weight, scale = 2)
 hist(Soccer$weight, breaks = seq(110, 210, 10), col = "orange",
-     main = "Problem 1.46 \\n Weights of Soccer Players", 
+     main = "Problem 1.46 \n Weights of Soccer Players", 
      xlab = "weight (lbs)", right = FALSE)
 
 }

@@ -4,7 +4,8 @@
 \name{Orioles}
 \alias{Orioles}
 \title{Salaries of members of the Baltimore Orioles baseball team}
-\format{A data frame/tibble with 27 observations on three variables
+\format{
+A data frame/tibble with 27 observations on three variables
 \describe{ 
 \item{first name}{a factor with levels \code{Albert},
 \code{Arthur}, \code{B.J.}, \code{Brady}, \code{Cal}, \code{Charles},
@@ -19,7 +20,8 @@
 \code{Ripken Jr.}, \code{Slocumb}, \code{Surhoff},\code{Timlin}, and
 \code{Webster}} 
 \item{1999salary}{a numeric vector containing each player's salary (in dollars)} 
-}}
+}
+}
 \usage{
 Orioles
 }

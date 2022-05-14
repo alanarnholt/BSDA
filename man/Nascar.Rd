@@ -4,12 +4,14 @@
 \name{Nascar}
 \alias{Nascar}
 \title{Efficiency of pit crews for three major NASCAR teams}
-\format{A data frame/tibble with 36 observations on six variables
+\format{
+A data frame/tibble with 36 observations on six variables
 \describe{ 
 \item{time}{duration of pit stop (in seconds)} 
 \item{team}{a numeric vector representing team 1, 2, or 3} 
 \item{ranks}{a numeric vector ranking each pit stop in order of speed} 
-}}
+}
+}
 \usage{
 Nascar
 }

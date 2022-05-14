@@ -4,11 +4,13 @@
 \name{Shoplift}
 \alias{Shoplift}
 \title{Sales receipts versus shoplifting losses for a department store}
-\format{A data frame/tibble with eight observations on two variables
+\format{
+A data frame/tibble with eight observations on two variables
 \describe{ 
 \item{sales}{sales (in 1000 dollars)} 
 \item{loss}{loss (in 100 dollars)} 
-}}
+}
+}
 \usage{
 Shoplift
 }

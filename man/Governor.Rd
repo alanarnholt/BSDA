@@ -4,7 +4,8 @@
 \name{Governor}
 \alias{Governor}
 \title{Annual salaries for state governors in 1994 and 1999}
-\format{A data frame/tibble with 50 observations on three variables
+\format{
+A data frame/tibble with 50 observations on three variables
 \describe{ 
 \item{state}{a character variable with values \code{Alabama},
 \code{Alaska}, \code{Arizona}, \code{Arkansas}, \code{California},
@@ -21,7 +22,8 @@
 Virginia}, \code{Wisconsin}, and \code{Wyoming}} 
 \item{year}{a factor indicating year} 
 \item{salary}{a numeric vector with the governor's salary (in dollars)} 
-}}
+}
+}
 \source{
 \emph{The 2000 World Almanac and Book of Facts}.
 }

@@ -4,10 +4,12 @@
 \name{Mercury}
 \alias{Mercury}
 \title{Concentration of mercury in 25 lake trout}
-\format{A data frame/tibble with 25 observations on one variable
+\format{
+A data frame/tibble with 25 observations on one variable
 \describe{ 
 \item{mercury}{a numeric vector measuring mercury (in parts per million)} 
-}}
+}
+}
 \usage{
 Mercury
 }

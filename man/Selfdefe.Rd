@@ -5,12 +5,14 @@
 \alias{Selfdefe}
 \title{Self-confidence scores for 9 women before and after instructions on
 self-defense}
-\format{A data frame/tibble with nine observations on three variables
+\format{
+A data frame/tibble with nine observations on three variables
 \describe{ 
 \item{woman}{number identifying the woman} 
 \item{before}{before the course self-confidence score} 
 \item{after}{after the course self-confidence score} 
-}}
+}
+}
 \usage{
 Selfdefe
 }

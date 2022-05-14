@@ -4,10 +4,12 @@
 \name{Pollutio}
 \alias{Pollutio}
 \title{Air pollution index for 15 randomly selected days for a major western city}
-\format{A data frame/tibble with 15 observations on one variable
+\format{
+A data frame/tibble with 15 observations on one variable
 \describe{ 
 \item{inde}{air pollution index} 
-}}
+}
+}
 \usage{
 Pollutio
 }

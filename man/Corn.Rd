@@ -5,12 +5,14 @@
 \alias{Corn}
 \title{Comparison of the yields of a new variety and a standard variety of corn
 planted on 12 plots of land}
-\format{A data frame/tibble with 12 observations on three variables
+\format{
+A data frame/tibble with 12 observations on three variables
 \describe{ 
 \item{new}{corn yield with new meathod} 
 \item{standard}{corn yield with standard method}
 \item{differences}{\code{new} minus \code{standard}} 
-}}
+}
+}
 \usage{
 Corn
 }

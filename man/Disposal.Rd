@@ -4,10 +4,12 @@
 \name{Disposal}
 \alias{Disposal}
 \title{Toxic intensity for manufacturing plants producing herbicidal preparations}
-\format{A data frame/tibble with 29 observations on one variable
+\format{
+A data frame/tibble with 29 observations on one variable
 \describe{ 
 \item{pounds}{pounds of toxic waste per $1000 of shipments of its products} 
-}}
+}
+}
 \source{
 Bureau of the Census, \emph{Reducing Toxins}, Statistical Brief SB/95-3,
 February 1995.

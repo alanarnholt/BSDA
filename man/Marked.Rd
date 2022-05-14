@@ -4,10 +4,12 @@
 \name{Marked}
 \alias{Marked}
 \title{Percent of marked cars in 65 police departments in Florida}
-\format{A data frame/tibble with 65 observations on one variable
+\format{
+A data frame/tibble with 65 observations on one variable
 \describe{ 
 \item{percent}{percentage of marked cars in 65 Florida police departments}
-}}
+}
+}
 \source{
 \emph{Law Enforcement Management and Administrative Statistics, 1993}, Bureau of 
 Justice Statistics, NCJ-148825, September 1995, p. 147-148.

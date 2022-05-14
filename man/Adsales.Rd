@@ -4,12 +4,14 @@
 \name{Adsales}
 \alias{Adsales}
 \title{Number of ads versus number of sales for a retailer of satellite dishes}
-\format{A data frame/tibble with six observations on three variables
+\format{
+A data frame/tibble with six observations on three variables
 \describe{ 
 \item{month}{a character vector listing month}
 \item{ads}{a numeric vector containing number of ads} 
 \item{sales}{a numeric vector containing number of sales} 
-}}
+}
+}
 \usage{
 Adsales
 }

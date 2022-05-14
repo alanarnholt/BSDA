@@ -5,10 +5,12 @@
 \alias{Abbey}
 \title{Daily price returns (in pence) of Abbey National shares between 7/31/91 and
 10/8/91}
-\format{A data frame/tibble with 50 observations on one variable
+\format{
+A data frame/tibble with 50 observations on one variable
 \describe{ 
 \item{price}{daily price returns (in pence) of Abbey National shares} 
-}}
+}
+}
 \source{
 Buckle, D. (1995), Bayesian Inference for Stable Distributions, 
 \emph{Journal of the American Statistical Association}, 90, 605-613.

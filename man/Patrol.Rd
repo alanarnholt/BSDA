@@ -5,12 +5,14 @@
 \alias{Patrol}
 \title{Years of experience and number of tickets given by patrolpersons in New York
 City}
-\format{A data frame/tibble with ten observations on three variables
+\format{
+A data frame/tibble with ten observations on three variables
 \describe{ 
 \item{tickets}{number of tickets written per week} 
 \item{years}{patrolperson's experience (in years)} 
 \item{log_tickets}{natural log of \code{tickets}}
-}}
+}
+}
 \usage{
 Patrol
 }

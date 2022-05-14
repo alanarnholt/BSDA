@@ -4,11 +4,13 @@
 \name{Dice}
 \alias{Dice}
 \title{Outcomes and probabilities of the roll of a pair of fair dice}
-\format{A data frame/tibble with 11 observations on two variables
+\format{
+A data frame/tibble with 11 observations on two variables
 \describe{ 
 \item{x}{possible outcomes for the sum of two dice} 
 \item{px}{probability for outcome \code{x}} 
-}}
+}
+}
 \usage{
 Dice
 }

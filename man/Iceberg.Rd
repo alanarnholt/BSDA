@@ -5,12 +5,14 @@
 \alias{Iceberg}
 \title{Number of icebergs sighted each month south of Newfoundland and south of the
 Grand Banks in 1920}
-\format{A data frame with 12 observations on three variables
+\format{
+A data frame with 12 observations on three variables
 \describe{
  \item{month}{a character variable with abbreviated months of the year} 
 \item{Newfoundland}{number of icebergs sighted south of Newfoundland}
 \item{Grand Banks}{number of icebergs sighted south of Grand Banks} 
-}}
+}
+}
 \source{
 N. Shaw, \emph{Manual of Meteorology}, Vol. 2 (London: Cambridge University Press 1942),
 7; and F. Mosteller and J. Tukey, \emph{Data Analysis and Regression} (Reading, MA: Addison - Wesley, 1977).

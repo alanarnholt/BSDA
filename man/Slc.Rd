@@ -5,10 +5,12 @@
 \alias{Slc}
 \title{Sodium-lithium countertransport activity on 190 individuals from six large
 English kindred}
-\format{A data frame/tibble with 190 observations on one variable
+\format{
+A data frame/tibble with 190 observations on one variable
 \describe{ 
 \item{slc}{Red blood cell sodium-lithium countertransport} 
-}}
+}
+}
 \source{
 Roeder, K., (1994), "A Graphical Technique for Determining the Number of Components
 in a Mixture of Normals," \emph{Journal of the American Statistical Association, 89}, 497-495.

@@ -4,12 +4,14 @@
 \name{Longtail}
 \alias{Longtail}
 \title{Long-tailed distributions to illustrate Kruskal Wallis test}
-\format{A data frame/tibble with 60 observations on three variables
+\format{
+A data frame/tibble with 60 observations on three variables
 \describe{ 
 \item{score}{a numeric vector} 
 \item{group}{a numeric vector with values \code{1}, \code{2}, and \code{3}} 
 \item{ranks}{ranks for variable \code{score}} 
-}}
+}
+}
 \usage{
 Longtail
 }

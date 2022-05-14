@@ -5,12 +5,14 @@
 \alias{Fabric}
 \title{Measures of softness of ten different clothing garments washed with and
 without a softener}
-\format{A data frame/tibble with 20 observations on three variables
+\format{
+A data frame/tibble with 20 observations on three variables
 \describe{ 
 \item{garment}{a numeric vector} 
 \item{softner}{a character variable with values \code{with} and \code{without}} 
 \item{softness}{a numeric vector} 
-}}
+}
+}
 \usage{
 Fabric
 }

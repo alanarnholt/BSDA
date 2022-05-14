@@ -5,11 +5,13 @@
 \alias{Drug}
 \title{Number of trials to master a task for a group of 28 subjects assigned to a
 control and an experimental group}
-\format{A data frame/tibble with 28 observations on two variables
+\format{
+A data frame/tibble with 28 observations on two variables
 \describe{ 
 \item{trials}{number of trials to master a task} 
 \item{group}{a factor with levels \code{control} and \code{experimental}} 
-}}
+}
+}
 \usage{
 Drug
 }

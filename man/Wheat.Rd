@@ -5,12 +5,14 @@
 \alias{Wheat}
 \title{Price of a bushel of wheat versus the national weekly earnings of production
 workers}
-\format{A data frame/tibble with 19 observations on three variables
+\format{
+A data frame/tibble with 19 observations on three variables
 \describe{ 
 \item{year}{year} 
 \item{earnings}{national weekly earnings (in dollars) for production workers} 
 \item{price}{price for a bushel of wheat (in dollars)} 
-}}
+}
+}
 \source{
 \emph{The World Almanac and Book of Facts}, 2000.
 }

@@ -4,12 +4,14 @@
 \name{Concrete}
 \alias{Concrete}
 \title{Compressive strength of concrete blocks made by two different methods}
-\format{A data frame/tibble with 20 observations on two variables
+\format{
+A data frame/tibble with 20 observations on two variables
 \describe{ 
 \item{strength}{comprehensive strength (in pounds per square inch)} 
 \item{method}{factor with levels \code{new} and \code{old} indicating the 
 method used to construct a concrete block} 
-}}
+}
+}
 \usage{
 Concrete
 }

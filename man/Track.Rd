@@ -4,7 +4,8 @@
 \name{Track}
 \alias{Track}
 \title{National Olympic records for women in several races}
-\format{A data frame with 55 observations on eight variables
+\format{
+A data frame with 55 observations on eight variables
 \describe{ 
 \item{country}{athlete's country} 
 \item{100m}{time in seconds for 100 m} 
@@ -14,7 +15,8 @@
 \item{1500m}{time in minutes for 1500 m} 
 \item{3000m}{time in minutes for 3000 m} 
 \item{marathon}{time in minutes for marathon} 
-}}
+}
+}
 \source{
 Dawkins, B. (1989), "Multivariate Analysis of National Track Records," \emph{The American Statistician, 43}(2), 110-115.
 }

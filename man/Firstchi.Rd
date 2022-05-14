@@ -4,10 +4,12 @@
 \name{Firstchi}
 \alias{Firstchi}
 \title{Ages of women at the birth of their first child}
-\format{A data frame/tibble with 87 observations on one variable
+\format{
+A data frame/tibble with 87 observations on one variable
 \describe{ 
 \item{age}{age of woman at birth of her first child} 
-}}
+}
+}
 \usage{
 Firstchi
 }

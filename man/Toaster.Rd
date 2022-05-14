@@ -4,12 +4,14 @@
 \name{Toaster}
 \alias{Toaster}
 \title{Consumer Reports (Oct 94) rating of toaster ovens versus the cost}
-\format{A data frame/tibble with 17 observations on three variables
+\format{
+A data frame/tibble with 17 observations on three variables
 \describe{ 
 \item{toaster}{name of toaster} 
 \item{score}{Consumer Reports score}
 \item{cost}{price of toaster (in dollars)} 
-}}
+}
+}
 \source{
 \emph{Consumer Reports} (October 1994).
 }

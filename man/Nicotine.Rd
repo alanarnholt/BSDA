@@ -4,11 +4,13 @@
 \name{Nicotine}
 \alias{Nicotine}
 \title{Nicotine content versus sales for eight major brands of cigarettes}
-\format{A data frame/tibble with eight observations on two variables
+\format{
+A data frame/tibble with eight observations on two variables
 \describe{ 
 \item{nicotine}{nicotine content (in milligrams)} 
 \item{sales}{sales figures (in $100,000)} 
-}}
+}
+}
 \usage{
 Nicotine
 }

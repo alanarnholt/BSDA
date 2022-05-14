@@ -4,12 +4,14 @@
 \name{Coffee}
 \alias{Coffee}
 \title{Productivity of workers with and without a coffee break}
-\format{A data frame/tibble with nine observations on three variables
+\format{
+A data frame/tibble with nine observations on three variables
 \describe{ 
 \item{without}{workers' productivity scores without a coffee break} 
 \item{with}{workers' productivity scores with a coffee break}
 \item{differences}{\code{with} minus \code{without}} 
-}}
+}
+}
 \usage{
 Coffee
 }

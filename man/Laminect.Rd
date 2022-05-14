@@ -4,12 +4,14 @@
 \name{Laminect}
 \alias{Laminect}
 \title{Median costs of laminectomies at hospitals across North Carolina in 1992}
-\format{A data frame/tibble with 138 observations on two variables
+\format{
+A data frame/tibble with 138 observations on two variables
 \describe{
  \item{area}{a character vector indicating the area of the hospital with \code{Rural}, \code{Regional},
  and \code{Metropol}} 
  \item{cost}{a numeric vector indicating cost of a laminectomy} 
- }}
+ }
+}
 \source{
 \emph{Consumer's Guide to Hospitalization Charges in North Carolina Hospitals} (August 1994),
 North Carolina Medical Database Commission, Department of Insurance.

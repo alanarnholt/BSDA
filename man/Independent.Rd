@@ -4,11 +4,13 @@
 \name{Independent}
 \alias{Independent}
 \title{Illustrates a comparison problem for long-tailed distributions}
-\format{A data frame/tibble with 46 observations on two variables
+\format{
+A data frame/tibble with 46 observations on two variables
 \describe{ 
 \item{score}{a numeric vector} 
 \item{group}{a factor with levels \code{A} and \code{B}} 
-}}
+}
+}
 \usage{
 Independent
 }

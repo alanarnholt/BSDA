@@ -4,13 +4,15 @@
 \name{Blackedu}
 \alias{Blackedu}
 \title{Education level of blacks by gender}
-\format{A data frame/tibble  with 3800 observations on two variables
+\format{
+A data frame/tibble  with 3800 observations on two variables
 \describe{
 \item{gender}{a factor with levels \code{Female} and \code{Male}}
 \item{education}{a factor with levels \code{High school dropout},
 \code{High school graudate}, \code{Some college}, \code{Bachelor}'\code{s degree}, and
 \code{Graduate degree}} 
-}}
+}
+}
 \source{
 Bureau of Census data.
 }

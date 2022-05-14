@@ -4,7 +4,8 @@
 \name{Graduate}
 \alias{Graduate}
 \title{Graduation rates for student athletes in the Southeastern Conf.}
-\format{A data frame/tibble with 12 observations on three variables
+\format{
+A data frame/tibble with 12 observations on three variables
 \describe{ 
 \item{school}{a character variable with values \code{Alabama},
 \code{Arkansas}, \code{Auburn}, \code{Florida}, \code{Georgia}, \code{Kentucky},
@@ -14,7 +15,8 @@ Carolina,} \code{Tennessee}, and \code{Vanderbilt}}
  \code{Fl}, \code{Ge}, \code{Ke}, \code{LSt}, \code{Mi}, \code{MSt}, \code{SC}, 
  \code{Te}, and \code{Va}}
 \item{percent}{graduation rate} 
-}}
+}
+}
 \usage{
 Graduate
 }

@@ -5,13 +5,15 @@
 \alias{Censored}
 \title{Entry age and survival time of patients with small cell lung cancer under
 two different treatments}
-\format{A data frame/tibble  with 121 observations on three variables
+\format{
+A data frame/tibble  with 121 observations on three variables
 \describe{ 
 \item{survival}{survival time (in days) of patients with small cell lung cancer} 
 \item{treatment}{a factor with levels \code{armA} and \code{armB} indicating the 
 treatment a patient received} 
 \item{age}{the age of the patient} 
-}}
+}
+}
 \source{
 Ying, Z., Jung, S., Wei, L. 1995. \dQuote{Survival Analysis with Median Regression Models.} 
 \emph{Journal of the American Statistical Association}, 90, 178-184.

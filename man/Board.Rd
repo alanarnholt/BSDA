@@ -4,11 +4,13 @@
 \name{Board}
 \alias{Board}
 \title{Incomes of board members from three different universities}
-\format{A data frame/tibble with 7 observations on three variables
+\format{
+A data frame/tibble with 7 observations on three variables
 \describe{ 
 \item{salary}{1999 salary (in $1000) for board directors} 
 \item{university}{a factor with levels \code{A}, \code{B}, and \code{C}} 
-}}
+}
+}
 \usage{
 Board
 }

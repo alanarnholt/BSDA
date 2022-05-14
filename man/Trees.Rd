@@ -4,10 +4,12 @@
 \name{Trees}
 \alias{Trees}
 \title{Number of trees in 20 grids}
-\format{A data frame/tibble with 20 observations on one variable
+\format{
+A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{number}{number of trees in a grid} 
-}}
+}
+}
 \usage{
 Trees
 }

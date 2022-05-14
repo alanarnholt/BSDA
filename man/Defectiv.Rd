@@ -4,10 +4,12 @@
 \name{Defectiv}
 \alias{Defectiv}
 \title{Number of defective items produced by 20 employees}
-\format{A data frame/tibble with 20 observations on one variable
+\format{
+A data frame/tibble with 20 observations on one variable
 \describe{ 
 \item{number}{number of defective items produced by the employees in a small business firm} 
-}}
+}
+}
 \usage{
 Defectiv
 }
