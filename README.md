@@ -6,7 +6,7 @@ BSDA
 
 [![Travis-CI Build Status](https://travis-ci.org/alanarnholt/BSDA.svg?branch=master)](https://travis-ci.org/alanarnholt/BSDA)
 
-[![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/BSDA)](https://cran.r-project.org/package=BSDA)
+[![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/BSDA)](https://cran.r-project.org/package=BSDA)
 
 [![CRAN version](https://www.r-pkg.org/badges/version/BSDA)](https://cran.r-project.org/package=BSDA)
 
@@ -22,7 +22,7 @@ Please report any **bugs** or **suggestions** at:
 
 ### Installation
 
-The stable version of the package is available for download from [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/BSDA)](https://cran.r-project.org/package=BSDA).
+The stable version of the package is available for download from [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/BSDA)](https://cran.r-project.org/package=BSDA).
 
 You may install the most recent development version of **BSDA** using the [devtools](https://github.com/r-lib/devtools) function `install_github()`.
 
@@ -50,7 +50,7 @@ To install the **BSDA** package, type the following at the **R** prompt:
 devtools::install_github('alanarnholt/BSDA')
 ```
     
-It is possible to install **BSDA** with [GIT](http://git-scm.com/) and the **R CMD build** assuming you have GIT installed and the appropriate tools to build **R** from source.
+It is possible to install **BSDA** with [GIT](https://git-scm.com/) and the **R CMD build** assuming you have GIT installed and the appropriate tools to build **R** from source.
 
 ```bash
 git clone https://github.com/alanarnholt/BSDA.git
