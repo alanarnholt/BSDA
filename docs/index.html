@@ -34,7 +34,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -74,9 +74,9 @@
 <div class="page-header"><h1 id="bsda">BSDA<a class="anchor" aria-label="anchor" href="#bsda"></a>
 </h1></div>
 <div class="section level3">
-<h3 id="version-121">Version 1.2.1<a class="anchor" aria-label="anchor" href="#version-121"></a>
+<h3 id="version-122">Version 1.2.2<a class="anchor" aria-label="anchor" href="#version-122"></a>
 </h3>
-
+<p><a href="https://travis-ci.org/alanarnholt/BSDA" class="external-link"><img src="https://travis-ci.org/alanarnholt/BSDA.svg?branch=master" alt="Travis-CI Build Status"></a></p>
 <p><a href="https://cran.r-project.org/package=BSDA" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/BSDA" alt="Downloads from the RStudio CRAN mirror"></a></p>
 <p><a href="https://cran.r-project.org/package=BSDA" class="external-link"><img src="https://www.r-pkg.org/badges/version/BSDA" alt="CRAN version"></a></p>
 </div>
@@ -104,16 +104,16 @@
 </ul>
 <p>You can check everything is installed correctly with the <code>has_devel()</code> function from the <strong>devtools</strong> package. Type the following at the <strong>R</strong> prompt:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>    
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pkgbuild/man/has_compiler.html" class="external-link">has_devel</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>    </span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://pkgbuild.r-lib.org/reference/has_compiler.html" class="external-link">has_devel</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>If everything is installed correctly, the function will print some output and then return <strong>TRUE</strong>.</p>
 <p>To install the <strong>BSDA</strong> package, type the following at the <strong>R</strong> prompt:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'alanarnholt/BSDA'</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">'alanarnholt/BSDA'</span><span class="op">)</span></span></code></pre></div>
 <p>It is possible to install <strong>BSDA</strong> with <a href="http://git-scm.com/" class="external-link">GIT</a> and the <strong>R CMD build</strong> assuming you have GIT installed and the appropriate tools to build <strong>R</strong> from source.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/alanarnholt/BSDA.git</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> CMD build BSDA</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> CMD INSTALL BSDA_<span class="pp">*</span>.tar.gz</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/alanarnholt/BSDA.git</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">R</span> CMD build BSDA</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="ex">R</span> CMD INSTALL BSDA_<span class="pp">*</span>.tar.gz</span></code></pre></div>
 </div>
 </div>
 
@@ -152,12 +152,7 @@
 </ul>
 </div>
 
-<div class="dev-status">
-<h2 data-toc-skip>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="https://travis-ci.org/alanarnholt/BSDA" class="external-link"><img src="https://travis-ci.org/alanarnholt/BSDA.svg?branch=master" alt="Travis-CI Build Status"></a></li>
-</ul>
-</div>
+
 
   </div>
 </div>
@@ -170,7 +165,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

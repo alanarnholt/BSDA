@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -56,7 +56,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">EDA</span><span class="op">(</span><span class="va">x</span>, trim <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">EDA</span><span class="op">(</span><span class="va">x</span>, trim <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -64,14 +64,19 @@
     <dl><dt>x</dt>
 <dd><p>numeric vector. <code>NA</code>s and <code>Inf</code>s are allowed but will be
 removed.</p></dd>
+
+
 <dt>trim</dt>
 <dd><p>fraction (between 0 and 0.5, inclusive) of values to be trimmed
 from each end of the ordered data.  If <code>trim = 0.5</code>, the result is the
 median.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>Function returns various measures of center and location. The values
+    
+
+<p>Function returns various measures of center and location. The values
 returned for the Quartiles are based on the definitions provided in
 <cite>BSDA</cite>. The boxplot is based on the Quartiles returned in the commands
 window.</p>
@@ -93,19 +98,19 @@ sets containing more than 5000 observations.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="fu">EDA</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">EDA</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "rnorm(100)"</span>
 <span class="r-plt img"><img src="EDA-1.png" alt="" width="700" height="433"></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Size (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  100.000    0.000   -2.064   -0.661    0.004    0.017    0.014    0.774 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  100.000    0.000   -3.021   -0.789   -0.024   -0.006   -0.014    0.770 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     Max.   Stdev.     Var.  SE Mean   I.Q.R.    Range Kurtosis Skewness </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    2.096    0.949    0.901    0.095    1.435    4.160   -0.755   -0.103 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    3.021    1.039    1.079    0.104    1.559    6.042    0.225   -0.050 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> SW p-val </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    0.327 </span>
-<span class="r-in">    <span class="co"># Produces four graphs for the 100 randomly</span></span>
-<span class="r-in">    <span class="co"># generated standard normal variates.</span></span>
-<span class="r-in"></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    0.762 </span>
+<span class="r-in"><span>    <span class="co"># Produces four graphs for the 100 randomly</span></span></span>
+<span class="r-in"><span>    <span class="co"># generated standard normal variates.</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -120,7 +125,7 @@ sets containing more than 5000 observations.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

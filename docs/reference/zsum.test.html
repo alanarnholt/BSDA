@@ -20,7 +20,7 @@ Output is identical to that produced with z.test."><!-- mathjax --><script src="
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -62,35 +62,47 @@ Output is identical to that produced with <code>z.test</code>.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">zsum.test</span><span class="op">(</span>
-  <span class="va">mean.x</span>,
-  sigma.x <span class="op">=</span> <span class="cn">NULL</span>,
-  n.x <span class="op">=</span> <span class="cn">NULL</span>,
-  mean.y <span class="op">=</span> <span class="cn">NULL</span>,
-  sigma.y <span class="op">=</span> <span class="cn">NULL</span>,
-  n.y <span class="op">=</span> <span class="cn">NULL</span>,
-  alternative <span class="op">=</span> <span class="st">"two.sided"</span>,
-  mu <span class="op">=</span> <span class="fl">0</span>,
-  conf.level <span class="op">=</span> <span class="fl">0.95</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">zsum.test</span><span class="op">(</span></span>
+<span>  <span class="va">mean.x</span>,</span>
+<span>  sigma.x <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  n.x <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  mean.y <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  sigma.y <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  n.y <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  alternative <span class="op">=</span> <span class="st">"two.sided"</span>,</span>
+<span>  mu <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  conf.level <span class="op">=</span> <span class="fl">0.95</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>mean.x</dt>
 <dd><p>a single number representing the sample mean of <code>x</code></p></dd>
+
+
 <dt>sigma.x</dt>
 <dd><p>a single number representing the population standard
 deviation for <code>x</code></p></dd>
+
+
 <dt>n.x</dt>
 <dd><p>a single number representing the sample size for <code>x</code></p></dd>
+
+
 <dt>mean.y</dt>
 <dd><p>a single number representing the sample mean of <code>y</code></p></dd>
+
+
 <dt>sigma.y</dt>
 <dd><p>a single number representing the population standard
 deviation for <code>y</code></p></dd>
+
+
 <dt>n.y</dt>
 <dd><p>a single number representing the sample size for <code>y</code></p></dd>
+
+
 <dt>alternative</dt>
 <dd><p>is a character string, one of <code>"greater"</code>,
 <code>"less"</code> or <code>"two.sided"</code>, or the initial letter of each,
@@ -100,21 +112,29 @@ in relation to the hypothesized value <code>mu</code>. For the standard two-samp
 tests, <code>alternative</code> refers to the difference between the true
 population mean for <code>x</code> and that for <code>y</code>, in relation to
 <code>mu</code>.</p></dd>
+
+
 <dt>mu</dt>
 <dd><p>a single number representing the value of the mean or difference
 in means specified by the null hypothesis</p></dd>
+
+
 <dt>conf.level</dt>
 <dd><p>confidence level for the returned confidence interval,
 restricted to lie between zero and one</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A list of class <code>htest</code>, containing the following components:</p>
+    
+
+<p>A list of class <code>htest</code>, containing the following components:</p>
 <dl><dt>statistic</dt>
 <dd><p>the z-statistic, with names attribute <code>z</code>.</p></dd>
+
 <dt>p.value</dt>
 <dd><p>the p-value for the test</p></dd>
-<dt>conf.int </dt>
+ <dt>conf.int </dt>
 <dd><p>is a confidence
 interval (vector of length 2) for the true mean or difference in means. The
 confidence level is recorded in the attribute <code>conf.level</code>. When
@@ -123,24 +143,25 @@ half-infinite, to reflect the interpretation of a confidence interval as the
 set of all values <code>k</code> for which one would not reject the null
 hypothesis that the true mean or difference in means is <code>k</code>. Here,
 infinity will be represented by <code>Inf</code>.</p></dd>
-<dt>estimate</dt>
+ <dt>estimate</dt>
 <dd><p>vector of
 length 1 or 2, giving the sample mean(s) or mean of differences; these
 estimate the corresponding population parameters. Component <code>estimate</code>
 has a names attribute describing its elements.</p></dd>
-<dt>null.value</dt>
+ <dt>null.value</dt>
 <dd><p>the value
 of the mean or difference in means specified by the null hypothesis. This
 equals the input argument <code>mu</code>. Component <code>null.value</code> has a names
 attribute describing its elements.</p></dd>
-<dt>alternative</dt>
+ <dt>alternative</dt>
 <dd><p>records the value of
 the input argument alternative: <code>"greater"</code> , <code>"less"</code> or
 <code>"two.sided"</code>.</p></dd>
-<dt>data.name</dt>
+ <dt>data.name</dt>
 <dd><p>a character string (vector of length
 1) containing the names <code>x</code> and <code>y</code> for the two summarized
 samples</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -180,8 +201,8 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="fu">zsum.test</span><span class="op">(</span>mean.x<span class="op">=</span><span class="fl">56</span><span class="op">/</span><span class="fl">30</span>,sigma.x<span class="op">=</span><span class="fl">2</span>, n.x<span class="op">=</span><span class="fl">30</span>, alternative<span class="op">=</span><span class="st">"greater"</span>, mu<span class="op">=</span><span class="fl">1.8</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">zsum.test</span><span class="op">(</span>mean.x<span class="op">=</span><span class="fl">56</span><span class="op">/</span><span class="fl">30</span>,sigma.x<span class="op">=</span><span class="fl">2</span>, n.x<span class="op">=</span><span class="fl">30</span>, alternative<span class="op">=</span><span class="st">"greater"</span>, mu<span class="op">=</span><span class="fl">1.8</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	One-sample z-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -194,44 +215,44 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  1.866667 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co"># Example 9.7 part a. from PASWR.</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">zsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,sigma.x<span class="op">=</span><span class="fl">1</span>,n.x<span class="op">=</span><span class="fl">12</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co"># Example 9.7 part a. from PASWR.</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">zsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,sigma.x<span class="op">=</span><span class="fl">1</span>,n.x<span class="op">=</span><span class="fl">12</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	One-sample z-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  Summarized x</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> z = 0.86264, p-value = 0.3883</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> z = 0.13179, p-value = 0.8952</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true mean is not equal to 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 95 percent confidence interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  -0.3167716  0.8148142</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  -0.5277485  0.6038372</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> mean of x </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 0.2490213 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  mean of x </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.03804433 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co"># Two-sided one-sample z-test where the assumed value for</span></span>
-<span class="r-in">        <span class="co"># sigma.x is one. The null hypothesis is that the population</span></span>
-<span class="r-in">        <span class="co"># mean for 'x' is zero. The alternative hypothesis states</span></span>
-<span class="r-in">        <span class="co"># that it is either greater or less than zero. A confidence</span></span>
-<span class="r-in">        <span class="co"># interval for the population mean will be computed.</span></span>
-<span class="r-in">        <span class="co"># Note: returns same answer as:</span></span>
-<span class="r-in"><span class="fu"><a href="z.test.html">z.test</a></span><span class="op">(</span><span class="va">x</span>,sigma.x<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co"># Two-sided one-sample z-test where the assumed value for</span></span></span>
+<span class="r-in"><span>        <span class="co"># sigma.x is one. The null hypothesis is that the population</span></span></span>
+<span class="r-in"><span>        <span class="co"># mean for 'x' is zero. The alternative hypothesis states</span></span></span>
+<span class="r-in"><span>        <span class="co"># that it is either greater or less than zero. A confidence</span></span></span>
+<span class="r-in"><span>        <span class="co"># interval for the population mean will be computed.</span></span></span>
+<span class="r-in"><span>        <span class="co"># Note: returns same answer as:</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="z.test.html">z.test</a></span><span class="op">(</span><span class="va">x</span>,sigma.x<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	One-sample z-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  x</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> z = 0.86264, p-value = 0.3883</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> z = 0.13179, p-value = 0.8952</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true mean is not equal to 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 95 percent confidence interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  -0.3167716  0.8148142</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  -0.5277485  0.6038372</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> mean of x </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 0.2490213 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  mean of x </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.03804433 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co">#</span></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">7.8</span>, <span class="fl">6.6</span>, <span class="fl">6.5</span>, <span class="fl">7.4</span>, <span class="fl">7.3</span>, <span class="fl">7.0</span>, <span class="fl">6.4</span>, <span class="fl">7.1</span>, <span class="fl">6.7</span>, <span class="fl">7.6</span>, <span class="fl">6.8</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4.5</span>, <span class="fl">5.4</span>, <span class="fl">6.1</span>, <span class="fl">6.1</span>, <span class="fl">5.4</span>, <span class="fl">5.0</span>, <span class="fl">4.1</span>, <span class="fl">5.5</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">zsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, sigma.x<span class="op">=</span><span class="fl">0.5</span>, n.x<span class="op">=</span><span class="fl">11</span> ,<span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, sigma.y<span class="op">=</span><span class="fl">0.5</span>, n.y<span class="op">=</span><span class="fl">8</span>, mu<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co">#</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">7.8</span>, <span class="fl">6.6</span>, <span class="fl">6.5</span>, <span class="fl">7.4</span>, <span class="fl">7.3</span>, <span class="fl">7.0</span>, <span class="fl">6.4</span>, <span class="fl">7.1</span>, <span class="fl">6.7</span>, <span class="fl">7.6</span>, <span class="fl">6.8</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4.5</span>, <span class="fl">5.4</span>, <span class="fl">6.1</span>, <span class="fl">6.1</span>, <span class="fl">5.4</span>, <span class="fl">5.0</span>, <span class="fl">4.1</span>, <span class="fl">5.5</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">zsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, sigma.x<span class="op">=</span><span class="fl">0.5</span>, n.x<span class="op">=</span><span class="fl">11</span> ,<span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, sigma.y<span class="op">=</span><span class="fl">0.5</span>, n.y<span class="op">=</span><span class="fl">8</span>, mu<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Two-sample z-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -244,13 +265,13 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x mean of y </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  7.018182  5.262500 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co"># Two-sided standard two-sample z-test where both sigma.x</span></span>
-<span class="r-in">        <span class="co"># and sigma.y are both assumed to equal 0.5. The null hypothesis</span></span>
-<span class="r-in">        <span class="co"># is that the population mean for 'x' less that for 'y' is 2.</span></span>
-<span class="r-in">        <span class="co"># The alternative hypothesis is that this difference is not 2.</span></span>
-<span class="r-in">        <span class="co"># A confidence interval for the true difference will be computed.</span></span>
-<span class="r-in">        <span class="co"># Note: returns same answer as:</span></span>
-<span class="r-in"><span class="fu"><a href="z.test.html">z.test</a></span><span class="op">(</span><span class="va">x</span>, sigma.x<span class="op">=</span><span class="fl">0.5</span>, <span class="va">y</span>, sigma.y<span class="op">=</span><span class="fl">0.5</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co"># Two-sided standard two-sample z-test where both sigma.x</span></span></span>
+<span class="r-in"><span>        <span class="co"># and sigma.y are both assumed to equal 0.5. The null hypothesis</span></span></span>
+<span class="r-in"><span>        <span class="co"># is that the population mean for 'x' less that for 'y' is 2.</span></span></span>
+<span class="r-in"><span>        <span class="co"># The alternative hypothesis is that this difference is not 2.</span></span></span>
+<span class="r-in"><span>        <span class="co"># A confidence interval for the true difference will be computed.</span></span></span>
+<span class="r-in"><span>        <span class="co"># Note: returns same answer as:</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="z.test.html">z.test</a></span><span class="op">(</span><span class="va">x</span>, sigma.x<span class="op">=</span><span class="fl">0.5</span>, <span class="va">y</span>, sigma.y<span class="op">=</span><span class="fl">0.5</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Two-sample z-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -263,9 +284,9 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x mean of y </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  7.018182  5.262500 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co">#</span></span>
-<span class="r-in"><span class="fu">zsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, sigma.x<span class="op">=</span><span class="fl">0.5</span>, n.x<span class="op">=</span><span class="fl">11</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, sigma.y<span class="op">=</span><span class="fl">0.5</span>, n.y<span class="op">=</span><span class="fl">8</span>,</span>
-<span class="r-in">conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co">#</span></span></span>
+<span class="r-in"><span><span class="fu">zsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, sigma.x<span class="op">=</span><span class="fl">0.5</span>, n.x<span class="op">=</span><span class="fl">11</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, sigma.y<span class="op">=</span><span class="fl">0.5</span>, n.y<span class="op">=</span><span class="fl">8</span>,</span></span>
+<span class="r-in"><span>conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Two-sample z-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -278,13 +299,13 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x mean of y </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  7.018182  5.262500 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co"># Two-sided standard two-sample z-test where both sigma.x and</span></span>
-<span class="r-in">        <span class="co"># sigma.y are both assumed to equal 0.5. The null hypothesis</span></span>
-<span class="r-in">        <span class="co"># is that the population mean for 'x' less that for 'y' is zero.</span></span>
-<span class="r-in">        <span class="co"># The alternative hypothesis is that this difference is not</span></span>
-<span class="r-in">        <span class="co"># zero.  A 90% confidence interval for the true difference will</span></span>
-<span class="r-in">        <span class="co"># be computed.  Note: returns same answer as:</span></span>
-<span class="r-in"><span class="fu"><a href="z.test.html">z.test</a></span><span class="op">(</span><span class="va">x</span>, sigma.x<span class="op">=</span><span class="fl">0.5</span>, <span class="va">y</span>, sigma.y<span class="op">=</span><span class="fl">0.5</span>, conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co"># Two-sided standard two-sample z-test where both sigma.x and</span></span></span>
+<span class="r-in"><span>        <span class="co"># sigma.y are both assumed to equal 0.5. The null hypothesis</span></span></span>
+<span class="r-in"><span>        <span class="co"># is that the population mean for 'x' less that for 'y' is zero.</span></span></span>
+<span class="r-in"><span>        <span class="co"># The alternative hypothesis is that this difference is not</span></span></span>
+<span class="r-in"><span>        <span class="co"># zero.  A 90% confidence interval for the true difference will</span></span></span>
+<span class="r-in"><span>        <span class="co"># be computed.  Note: returns same answer as:</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="z.test.html">z.test</a></span><span class="op">(</span><span class="va">x</span>, sigma.x<span class="op">=</span><span class="fl">0.5</span>, <span class="va">y</span>, sigma.y<span class="op">=</span><span class="fl">0.5</span>, conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Two-sample z-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -297,8 +318,8 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x mean of y </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  7.018182  5.262500 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -313,7 +334,7 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

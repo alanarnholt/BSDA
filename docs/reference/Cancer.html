@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -56,7 +56,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="va">Cancer</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">Cancer</span></span></code></pre></div>
     </div>
 
     <div id="format">
@@ -86,14 +86,14 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html" class="external-link">boxplot</a></span><span class="op">(</span><span class="va">survival</span> <span class="op">~</span> <span class="va">type</span>, <span class="va">Cancer</span>, col <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html" class="external-link">boxplot</a></span><span class="op">(</span><span class="va">survival</span> <span class="op">~</span> <span class="va">type</span>, <span class="va">Cancer</span>, col <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="Cancer-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="va">stomach</span> <span class="op">&lt;-</span> <span class="va">Cancer</span><span class="op">$</span><span class="va">survival</span><span class="op">[</span><span class="va">Cancer</span><span class="op">$</span><span class="va">type</span> <span class="op">==</span> <span class="st">"stomach"</span><span class="op">]</span></span>
-<span class="r-in"><span class="va">bronchus</span> <span class="op">&lt;-</span> <span class="va">Cancer</span><span class="op">$</span><span class="va">survival</span><span class="op">[</span><span class="va">Cancer</span><span class="op">$</span><span class="va">type</span> <span class="op">==</span> <span class="st">"bronchus"</span><span class="op">]</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html" class="external-link">boxplot</a></span><span class="op">(</span><span class="va">stomach</span>, ylab <span class="op">=</span> <span class="st">"Days"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="va">stomach</span> <span class="op">&lt;-</span> <span class="va">Cancer</span><span class="op">$</span><span class="va">survival</span><span class="op">[</span><span class="va">Cancer</span><span class="op">$</span><span class="va">type</span> <span class="op">==</span> <span class="st">"stomach"</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">bronchus</span> <span class="op">&lt;-</span> <span class="va">Cancer</span><span class="op">$</span><span class="va">survival</span><span class="op">[</span><span class="va">Cancer</span><span class="op">$</span><span class="va">type</span> <span class="op">==</span> <span class="st">"bronchus"</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html" class="external-link">boxplot</a></span><span class="op">(</span><span class="va">stomach</span>, ylab <span class="op">=</span> <span class="st">"Days"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="Cancer-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu"><a href="SIGN.test.html">SIGN.test</a></span><span class="op">(</span><span class="va">stomach</span>, md <span class="op">=</span> <span class="fl">100</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu"><a href="SIGN.test.html">SIGN.test</a></span><span class="op">(</span><span class="va">stomach</span>, md <span class="op">=</span> <span class="fl">100</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	One-sample Sign-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -113,7 +113,7 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Interpolated CI       0.9500 46.221    Inf</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Upper Achieved CI     0.9539 46.000    Inf</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span class="fu"><a href="SIGN.test.html">SIGN.test</a></span><span class="op">(</span><span class="va">bronchus</span>, md <span class="op">=</span> <span class="fl">100</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu"><a href="SIGN.test.html">SIGN.test</a></span><span class="op">(</span><span class="va">bronchus</span>, md <span class="op">=</span> <span class="fl">100</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	One-sample Sign-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -133,9 +133,9 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Interpolated CI       0.9500 76.8572    Inf</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Upper Achieved CI     0.9755 72.0000    Inf</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span><span class="va">bronchus</span>, <span class="va">stomach</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span><span class="va">bronchus</span>, <span class="va">stomach</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -150,7 +150,7 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

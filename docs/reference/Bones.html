@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -56,7 +56,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="va">Bones</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">Bones</span></span></code></pre></div>
     </div>
 
     <div id="format">
@@ -77,34 +77,34 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">density</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">Bones</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">density</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">Bones</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Welch Two Sample t-test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  density by group</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> t = 0.83732, df = 66.806, p-value = 0.2027</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true difference in means is greater than 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true difference in means between group active and group nonactice is greater than 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 95 percent confidence interval:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -3.99656      Inf</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    mean in group active mean in group nonactice </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                211.6286                207.6000 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rank.html" class="external-link">rank</a></span><span class="op">(</span><span class="va">density</span><span class="op">)</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">Bones</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rank.html" class="external-link">rank</a></span><span class="op">(</span><span class="va">density</span><span class="op">)</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">Bones</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Welch Two Sample t-test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  rank(density) by group</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> t = 2.1844, df = 67.867, p-value = 0.0162</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true difference in means is greater than 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true difference in means between group active and group nonactice is greater than 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 95 percent confidence interval:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  2.446855      Inf</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    mean in group active mean in group nonactice </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                40.67143                30.32857 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/wilcox.test.html" class="external-link">wilcox.test</a></span><span class="op">(</span><span class="va">density</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">Bones</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/wilcox.test.html" class="external-link">wilcox.test</a></span><span class="op">(</span><span class="va">density</span> <span class="op">~</span> <span class="va">group</span>, data <span class="op">=</span> <span class="va">Bones</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>cannot compute exact p-value with ties</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Wilcoxon rank sum test with continuity correction</span>
@@ -113,8 +113,8 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> W = 793.5, p-value = 0.01695</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true location shift is greater than 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"></span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -129,7 +129,7 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

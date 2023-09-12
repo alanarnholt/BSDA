@@ -18,7 +18,7 @@ error."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/math
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -58,30 +58,41 @@ error.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">nsize</span><span class="op">(</span><span class="va">b</span>, sigma <span class="op">=</span> <span class="cn">NULL</span>, p <span class="op">=</span> <span class="fl">0.5</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span>, type <span class="op">=</span> <span class="st">"mu"</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">nsize</span><span class="op">(</span><span class="va">b</span>, sigma <span class="op">=</span> <span class="cn">NULL</span>, p <span class="op">=</span> <span class="fl">0.5</span>, conf.level <span class="op">=</span> <span class="fl">0.95</span>, type <span class="op">=</span> <span class="st">"mu"</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>b</dt>
 <dd><p>the desired bound.</p></dd>
+
+
 <dt>sigma</dt>
 <dd><p>population standard deviation. Not required if using type
 <code>"pi"</code>.</p></dd>
+
+
 <dt>p</dt>
 <dd><p>estimate for the population proportion of successes. Not required
 if using type <code>"mu"</code>.</p></dd>
+
+
 <dt>conf.level</dt>
 <dd><p>confidence level for the problem, restricted to lie
 between zero and one.</p></dd>
+
+
 <dt>type</dt>
 <dd><p>character string, one of <code>"mu"</code> or <code>"pi"</code>, or just the
 initial letter of each, indicating the appropriate parameter. Default value
 is <code>"mu"</code>.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>Returns required sample size.</p>
+    
+
+<p>Returns required sample size.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -94,32 +105,32 @@ is <code>"mu"</code>.</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="fu">nsize</span><span class="op">(</span>b<span class="op">=</span><span class="fl">.03</span>, p<span class="op">=</span><span class="fl">708</span><span class="op">/</span><span class="fl">1200</span>, conf.level<span class="op">=</span><span class="fl">.90</span>, type<span class="op">=</span><span class="st">"pi"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">nsize</span><span class="op">(</span>b<span class="op">=</span><span class="fl">.03</span>, p<span class="op">=</span><span class="fl">708</span><span class="op">/</span><span class="fl">1200</span>, conf.level<span class="op">=</span><span class="fl">.90</span>, type<span class="op">=</span><span class="st">"pi"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> The required sample size (n) to estimate the population </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> proportion of successes with a 0.9 confidence interval </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> so that the margin of error is no more than 0.03 is 728 . </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">    <span class="co"># Returns the required sample size (n) to estimate the population </span></span>
-<span class="r-in">    <span class="co"># proportion of successes with a 0.9 confidence interval </span></span>
-<span class="r-in">    <span class="co"># so that the margin of error is no more than 0.03 when the</span></span>
-<span class="r-in">    <span class="co"># estimate of the population propotion of successes is 708/1200.</span></span>
-<span class="r-in">    <span class="co"># This is problem 5.38 on page 257 of Kitchen's BSDA.</span></span>
-<span class="r-in">    </span>
-<span class="r-in"><span class="fu">nsize</span><span class="op">(</span>b<span class="op">=</span><span class="fl">.15</span>, sigma<span class="op">=</span><span class="fl">.31</span>, conf.level<span class="op">=</span><span class="fl">.90</span>, type<span class="op">=</span><span class="st">"mu"</span><span class="op">)</span></span>
+<span class="r-in"><span>    <span class="co"># Returns the required sample size (n) to estimate the population </span></span></span>
+<span class="r-in"><span>    <span class="co"># proportion of successes with a 0.9 confidence interval </span></span></span>
+<span class="r-in"><span>    <span class="co"># so that the margin of error is no more than 0.03 when the</span></span></span>
+<span class="r-in"><span>    <span class="co"># estimate of the population propotion of successes is 708/1200.</span></span></span>
+<span class="r-in"><span>    <span class="co"># This is problem 5.38 on page 257 of Kitchen's BSDA.</span></span></span>
+<span class="r-in"><span>    </span></span>
+<span class="r-in"><span><span class="fu">nsize</span><span class="op">(</span>b<span class="op">=</span><span class="fl">.15</span>, sigma<span class="op">=</span><span class="fl">.31</span>, conf.level<span class="op">=</span><span class="fl">.90</span>, type<span class="op">=</span><span class="st">"mu"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> The required sample size (n) to estimate the population </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean with a 0.9 confidence interval so that the margin </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> of error is no more than 0.15 is 12 . </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">    <span class="co"># Returns the required sample size (n) to estimate the population </span></span>
-<span class="r-in">    <span class="co"># mean with a 0.9 confidence interval so that the margin </span></span>
-<span class="r-in">    <span class="co"># of error is no more than 0.15.  This is Example 5.17 on page</span></span>
-<span class="r-in">    <span class="co"># 261 of Kitchen's BSDA.</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span>    <span class="co"># Returns the required sample size (n) to estimate the population </span></span></span>
+<span class="r-in"><span>    <span class="co"># mean with a 0.9 confidence interval so that the margin </span></span></span>
+<span class="r-in"><span>    <span class="co"># of error is no more than 0.15.  This is Example 5.17 on page</span></span></span>
+<span class="r-in"><span>    <span class="co"># 261 of Kitchen's BSDA.</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -134,7 +145,7 @@ is <code>"mu"</code>.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

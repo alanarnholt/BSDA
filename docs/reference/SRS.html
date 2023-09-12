@@ -18,7 +18,7 @@ sampling."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/m
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -58,19 +58,24 @@ sampling.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">SRS</span><span class="op">(</span><span class="va">POPvalues</span>, <span class="va">n</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">SRS</span><span class="op">(</span><span class="va">POPvalues</span>, <span class="va">n</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>POPvalues</dt>
 <dd><p>vector containing the poulation values.</p></dd>
+
+
 <dt>n</dt>
 <dd><p>the sample size.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>Returns a matrix containing the possible simple random samples of
+    
+
+<p>Returns a matrix containing the possible simple random samples of
 size <code>n</code> taken from a population <code>POPvalues</code>.</p>
     </div>
     <div id="see-also">
@@ -84,15 +89,15 @@ size <code>n</code> taken from a population <code>POPvalues</code>.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="fu">SRS</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">8</span>,<span class="fl">3</span><span class="op">)</span>,<span class="fl">2</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">SRS</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">8</span>,<span class="fl">3</span><span class="op">)</span>,<span class="fl">2</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    5    8</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    5    3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    8    3</span>
-<span class="r-in">    <span class="co"># The rows in the matrix list the values for the 3 possible</span></span>
-<span class="r-in">    <span class="co"># simple random samples of size 2 from the population of 5,8, and 3.</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span>    <span class="co"># The rows in the matrix list the values for the 3 possible</span></span></span>
+<span class="r-in"><span>    <span class="co"># simple random samples of size 2 from the population of 5,8, and 3.</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -107,7 +112,7 @@ size <code>n</code> taken from a population <code>POPvalues</code>.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

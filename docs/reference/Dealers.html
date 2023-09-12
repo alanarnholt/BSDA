@@ -19,7 +19,7 @@ rendered to customers — Dealers"><meta property="og:description" content="Data
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -59,7 +59,7 @@ rendered to customers</h1>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="va">Dealers</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">Dealers</span></span></code></pre></div>
     </div>
 
     <div id="format">
@@ -81,8 +81,8 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html" class="external-link">xtabs</a></span><span class="op">(</span><span class="op">~</span><span class="va">type</span> <span class="op">+</span> <span class="va">service</span>, data <span class="op">=</span> <span class="va">Dealers</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html" class="external-link">xtabs</a></span><span class="op">(</span><span class="op">~</span><span class="va">type</span> <span class="op">+</span> <span class="va">service</span>, data <span class="op">=</span> <span class="va">Dealers</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         service</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> type     Replaces unnecessarily Follows manufacturer guidelines</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Honda                      19                               2</span>
@@ -91,8 +91,8 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Ford                        8                              13</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Dodge                      11                              10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Saturn                      4                              15</span>
-<span class="r-in"><span class="va">T1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html" class="external-link">xtabs</a></span><span class="op">(</span><span class="op">~</span><span class="va">type</span> <span class="op">+</span> <span class="va">service</span>, data <span class="op">=</span> <span class="va">Dealers</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">T1</span></span>
+<span class="r-in"><span><span class="va">T1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html" class="external-link">xtabs</a></span><span class="op">(</span><span class="op">~</span><span class="va">type</span> <span class="op">+</span> <span class="va">service</span>, data <span class="op">=</span> <span class="va">Dealers</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">T1</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         service</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> type     Replaces unnecessarily Follows manufacturer guidelines</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Honda                      19                               2</span>
@@ -101,7 +101,7 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Ford                        8                              13</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Dodge                      11                              10</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Saturn                      4                              15</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/addmargins.html" class="external-link">addmargins</a></span><span class="op">(</span><span class="va">T1</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/addmargins.html" class="external-link">addmargins</a></span><span class="op">(</span><span class="va">T1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         service</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> type     Replaces unnecessarily Follows manufacturer guidelines Sum</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Honda                      19                               2  21</span>
@@ -111,8 +111,8 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Dodge                      11                              10  21</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Saturn                      4                              15  19</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Sum                        57                              65 122</span>
-<span class="r-in"><span class="va">pt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/prop.table.html" class="external-link">prop.table</a></span><span class="op">(</span><span class="va">T1</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">pt</span></span>
+<span class="r-in"><span><span class="va">pt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/proportions.html" class="external-link">prop.table</a></span><span class="op">(</span><span class="va">T1</span>, margin <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">pt</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         service</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> type     Replaces unnecessarily Follows manufacturer guidelines</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Honda               0.9047619                       0.0952381</span>
@@ -121,10 +121,10 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Ford                0.3809524                       0.6190476</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Dodge               0.5238095                       0.4761905</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Saturn              0.2105263                       0.7894737</span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/barplot.html" class="external-link">barplot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="va">pt</span><span class="op">)</span>,  col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"skyblue"</span><span class="op">)</span>, legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">T1</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/barplot.html" class="external-link">barplot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="va">pt</span><span class="op">)</span>,  col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"skyblue"</span><span class="op">)</span>, legend <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">T1</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="Dealers-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span><span class="va">T1</span>, <span class="va">pt</span><span class="op">)</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span><span class="va">T1</span>, <span class="va">pt</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -139,7 +139,7 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

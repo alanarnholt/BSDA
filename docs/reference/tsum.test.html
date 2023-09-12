@@ -19,7 +19,7 @@ produced with t.test."><!-- mathjax --><script src="https://cdnjs.cloudflare.com
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -60,36 +60,48 @@ produced with <code>t.test</code>.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">tsum.test</span><span class="op">(</span>
-  <span class="va">mean.x</span>,
-  s.x <span class="op">=</span> <span class="cn">NULL</span>,
-  n.x <span class="op">=</span> <span class="cn">NULL</span>,
-  mean.y <span class="op">=</span> <span class="cn">NULL</span>,
-  s.y <span class="op">=</span> <span class="cn">NULL</span>,
-  n.y <span class="op">=</span> <span class="cn">NULL</span>,
-  alternative <span class="op">=</span> <span class="st">"two.sided"</span>,
-  mu <span class="op">=</span> <span class="fl">0</span>,
-  var.equal <span class="op">=</span> <span class="cn">FALSE</span>,
-  conf.level <span class="op">=</span> <span class="fl">0.95</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">tsum.test</span><span class="op">(</span></span>
+<span>  <span class="va">mean.x</span>,</span>
+<span>  s.x <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  n.x <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  mean.y <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  s.y <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  n.y <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  alternative <span class="op">=</span> <span class="st">"two.sided"</span>,</span>
+<span>  mu <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  var.equal <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  conf.level <span class="op">=</span> <span class="fl">0.95</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>mean.x</dt>
 <dd><p>a single number representing the sample mean of <code>x</code></p></dd>
+
+
 <dt>s.x</dt>
 <dd><p>a single number representing the sample standard deviation for
 <code>x</code></p></dd>
+
+
 <dt>n.x</dt>
 <dd><p>a single number representing the sample size for <code>x</code></p></dd>
+
+
 <dt>mean.y</dt>
 <dd><p>a single number representing the sample mean of <code>y</code></p></dd>
+
+
 <dt>s.y</dt>
 <dd><p>a single number representing the sample standard deviation for
 <code>y</code></p></dd>
+
+
 <dt>n.y</dt>
 <dd><p>a single number representing the sample size for <code>y</code></p></dd>
+
+
 <dt>alternative</dt>
 <dd><p>is a character string, one of <code>"greater"</code>,
 <code>"less"</code> or <code>"two.sided"</code>, or just the initial letter of each,
@@ -108,29 +120,39 @@ population in relation to the hypothesized value <code>mu</code>. For the standa
 and Welch modified two-sample t-tests, alternative refers to the difference
 between the true population mean for <code>x</code> and that for <code>y</code>, in
 relation to <code>mu</code>.</p></dd>
+
+
 <dt>mu</dt>
 <dd><p>is a single number representing the value of the mean or
 difference in means specified by the null hypothesis.</p></dd>
+
+
 <dt>var.equal</dt>
 <dd><p>logical flag: if <code>TRUE</code>, the variances of the parent
 populations of <code>x</code> and <code>y</code> are assumed equal. Argument
 <code>var.equal</code> should be supplied only for the two-sample tests.</p></dd>
+
+
 <dt>conf.level</dt>
 <dd><p>is the confidence level for the returned confidence
 interval; it must lie between zero and one.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A list of class <code>htest</code>, containing the following components:</p>
+    
+
+<p>A list of class <code>htest</code>, containing the following components:</p>
 <dl><dt>statistic</dt>
 <dd><p>the t-statistic, with names attribute <code>"t"</code></p></dd>
+
 <dt>parameters</dt>
 <dd><p>is the degrees of freedom of the t-distribution associated
 with statistic.  Component <code>parameters</code> has names attribute
 <code>"df"</code>.</p></dd>
-<dt>p.value</dt>
+ <dt>p.value</dt>
 <dd><p>the p-value for the test.</p></dd>
-<dt>conf.int </dt>
+ <dt>conf.int </dt>
 <dd><p>is
 a confidence interval (vector of length 2) for the true mean or difference
 in means. The confidence level is recorded in the attribute
@@ -139,21 +161,25 @@ confidence interval will be half-infinite, to reflect the interpretation of
 a confidence interval as the set of all values <code>k</code> for which one would
 not reject the null hypothesis that the true mean or difference in means is
 <code>k</code> . Here infinity will be represented by <code>Inf</code>.</p></dd>
+
 <dt>estimate</dt>
 <dd><p>vector of length 1 or 2, giving the sample mean(s) or mean
 of differences; these estimate the corresponding population parameters.
 Component <code>estimate</code> has a names attribute describing its elements.</p></dd>
+
 <dt>null.value</dt>
 <dd><p>the value of the mean or difference in means specified by
 the null hypothesis. This equals the input argument <code>mu</code>. Component
 <code>null.value</code> has a names attribute describing its elements.</p></dd>
+
 <dt>alternative</dt>
 <dd><p>records the value of the input argument alternative:
 <code>"greater"</code> , <code>"less"</code> or <code>"two.sided"</code>.</p></dd>
-<dt>data.name</dt>
+ <dt>data.name</dt>
 <dd><p>a
 character string (vector of length 1) containing the names x and y for the
 two summarized samples.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -196,8 +222,8 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="fu">tsum.test</span><span class="op">(</span>mean.x<span class="op">=</span><span class="fl">5.6</span>, s.x<span class="op">=</span><span class="fl">2.1</span>, n.x<span class="op">=</span><span class="fl">16</span>, mu<span class="op">=</span><span class="fl">4.9</span>, alternative<span class="op">=</span><span class="st">"greater"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">tsum.test</span><span class="op">(</span>mean.x<span class="op">=</span><span class="fl">5.6</span>, s.x<span class="op">=</span><span class="fl">2.1</span>, n.x<span class="op">=</span><span class="fl">16</span>, mu<span class="op">=</span><span class="fl">4.9</span>, alternative<span class="op">=</span><span class="st">"greater"</span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>argument 'var.equal' ignored for one-sample test.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	One-sample t-Test</span>
@@ -211,51 +237,51 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       5.6 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co"># Problem 6.31 on page 324 of BSDA states:  The chamber of commerce</span></span>
-<span class="r-in">        <span class="co"># of a particular city claims that the mean carbon dioxide</span></span>
-<span class="r-in">        <span class="co"># level of air polution is no greater than 4.9 ppm.  A random</span></span>
-<span class="r-in">        <span class="co"># sample of 16 readings resulted in a sample mean of 5.6 ppm,</span></span>
-<span class="r-in">        <span class="co"># and s=2.1 ppm.  One-sided one-sample t-test.  The null </span></span>
-<span class="r-in">        <span class="co"># hypothesis is that the population mean for 'x' is 4.9.   </span></span>
-<span class="r-in">        <span class="co"># The alternative hypothesis states that it is greater than 4.9.  </span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span> </span>
-<span class="r-in"><span class="fu">tsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, n.x<span class="op">=</span><span class="fl">12</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co"># Problem 6.31 on page 324 of BSDA states:  The chamber of commerce</span></span></span>
+<span class="r-in"><span>        <span class="co"># of a particular city claims that the mean carbon dioxide</span></span></span>
+<span class="r-in"><span>        <span class="co"># level of air polution is no greater than 4.9 ppm.  A random</span></span></span>
+<span class="r-in"><span>        <span class="co"># sample of 16 readings resulted in a sample mean of 5.6 ppm,</span></span></span>
+<span class="r-in"><span>        <span class="co"># and s=2.1 ppm.  One-sided one-sample t-test.  The null </span></span></span>
+<span class="r-in"><span>        <span class="co"># hypothesis is that the population mean for 'x' is 4.9.   </span></span></span>
+<span class="r-in"><span>        <span class="co"># The alternative hypothesis states that it is greater than 4.9.  </span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span> </span></span>
+<span class="r-in"><span><span class="fu">tsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, n.x<span class="op">=</span><span class="fl">12</span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>argument 'var.equal' ignored for one-sample test.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	One-sample t-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  Summarized x</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> t = -0.82396, df = 11, p-value = 0.4275</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> t = 0.76116, df = 11, p-value = 0.4626</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true mean is not equal to 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 95 percent confidence interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  -0.9214139  0.4194488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  -0.3703039  0.7618257</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  mean of x </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.2509825 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> mean of x </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.1957609 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co"># Two-sided one-sample t-test. The null hypothesis is that  </span></span>
-<span class="r-in">        <span class="co"># the population mean for 'x' is zero. The alternative </span></span>
-<span class="r-in">        <span class="co"># hypothesis states  that it is either greater or less </span></span>
-<span class="r-in">        <span class="co"># than zero. A confidence interval for the population mean </span></span>
-<span class="r-in">        <span class="co"># will be computed.  Note: above returns same answer as: </span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co"># Two-sided one-sample t-test. The null hypothesis is that  </span></span></span>
+<span class="r-in"><span>        <span class="co"># the population mean for 'x' is zero. The alternative </span></span></span>
+<span class="r-in"><span>        <span class="co"># hypothesis states  that it is either greater or less </span></span></span>
+<span class="r-in"><span>        <span class="co"># than zero. A confidence interval for the population mean </span></span></span>
+<span class="r-in"><span>        <span class="co"># will be computed.  Note: above returns same answer as: </span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	One Sample t-test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  x</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> t = -0.82396, df = 11, p-value = 0.4275</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> t = 0.76116, df = 11, p-value = 0.4626</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true mean is not equal to 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 95 percent confidence interval:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  -0.9214139  0.4194488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  -0.3703039  0.7618257</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  mean of x </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.2509825 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> mean of x </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.1957609 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">   </span>
-<span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">7.8</span>, <span class="fl">6.6</span>, <span class="fl">6.5</span>, <span class="fl">7.4</span>, <span class="fl">7.3</span>, <span class="fl">7.0</span>, <span class="fl">6.4</span>, <span class="fl">7.1</span>, <span class="fl">6.7</span>, <span class="fl">7.6</span>, <span class="fl">6.8</span><span class="op">)</span> </span>
-<span class="r-in"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4.5</span>, <span class="fl">5.4</span>, <span class="fl">6.1</span>, <span class="fl">6.1</span>, <span class="fl">5.4</span>, <span class="fl">5.0</span>, <span class="fl">4.1</span>, <span class="fl">5.5</span><span class="op">)</span> </span>
-<span class="r-in"><span class="fu">tsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, s.x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, n.x<span class="op">=</span><span class="fl">11</span> ,<span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, s.y<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, n.y<span class="op">=</span><span class="fl">8</span>, mu<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
+<span class="r-in"><span>   </span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">7.8</span>, <span class="fl">6.6</span>, <span class="fl">6.5</span>, <span class="fl">7.4</span>, <span class="fl">7.3</span>, <span class="fl">7.0</span>, <span class="fl">6.4</span>, <span class="fl">7.1</span>, <span class="fl">6.7</span>, <span class="fl">7.6</span>, <span class="fl">6.8</span><span class="op">)</span> </span></span>
+<span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4.5</span>, <span class="fl">5.4</span>, <span class="fl">6.1</span>, <span class="fl">6.1</span>, <span class="fl">5.4</span>, <span class="fl">5.0</span>, <span class="fl">4.1</span>, <span class="fl">5.5</span><span class="op">)</span> </span></span>
+<span class="r-in"><span><span class="fu">tsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, s.x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, n.x<span class="op">=</span><span class="fl">11</span> ,<span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, s.y<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, n.y<span class="op">=</span><span class="fl">8</span>, mu<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Welch Modified Two-Sample t-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -268,12 +294,12 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x mean of y </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  7.018182  5.262500 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co"># Two-sided standard two-sample t-test.  The null hypothesis  </span></span>
-<span class="r-in">        <span class="co"># is that the population mean for 'x' less that for 'y' is 2. </span></span>
-<span class="r-in">        <span class="co"># The alternative hypothesis is that this difference is not 2. </span></span>
-<span class="r-in">        <span class="co"># A confidence interval for the true difference will be computed.</span></span>
-<span class="r-in">        <span class="co"># Note: above returns same answer as: </span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co"># Two-sided standard two-sample t-test.  The null hypothesis  </span></span></span>
+<span class="r-in"><span>        <span class="co"># is that the population mean for 'x' less that for 'y' is 2. </span></span></span>
+<span class="r-in"><span>        <span class="co"># The alternative hypothesis is that this difference is not 2. </span></span></span>
+<span class="r-in"><span>        <span class="co"># A confidence interval for the true difference will be computed.</span></span></span>
+<span class="r-in"><span>        <span class="co"># Note: above returns same answer as: </span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Welch Two Sample t-test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -286,8 +312,8 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x mean of y </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  7.018182  5.262500 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        </span>
-<span class="r-in"><span class="fu">tsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, s.x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, n.x<span class="op">=</span><span class="fl">11</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, s.y<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, n.y<span class="op">=</span><span class="fl">8</span>, conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span>
+<span class="r-in"><span>        </span></span>
+<span class="r-in"><span><span class="fu">tsum.test</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, s.x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, n.x<span class="op">=</span><span class="fl">11</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, s.y<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>, n.y<span class="op">=</span><span class="fl">8</span>, conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Welch Modified Two-Sample t-Test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -300,12 +326,12 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x mean of y </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  7.018182  5.262500 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in">        <span class="co"># Two-sided standard two-sample t-test.  The null hypothesis </span></span>
-<span class="r-in">        <span class="co"># is that the population mean for 'x' less that for 'y' is zero.  </span></span>
-<span class="r-in">        <span class="co"># The alternative hypothesis is that this difference is not</span></span>
-<span class="r-in">        <span class="co"># zero.  A 90% confidence interval for the true difference will </span></span>
-<span class="r-in">        <span class="co"># be computed.  Note: above returns same answer as:</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span>
+<span class="r-in"><span>        <span class="co"># Two-sided standard two-sample t-test.  The null hypothesis </span></span></span>
+<span class="r-in"><span>        <span class="co"># is that the population mean for 'x' less that for 'y' is zero.  </span></span></span>
+<span class="r-in"><span>        <span class="co"># The alternative hypothesis is that this difference is not</span></span></span>
+<span class="r-in"><span>        <span class="co"># zero.  A 90% confidence interval for the true difference will </span></span></span>
+<span class="r-in"><span>        <span class="co"># be computed.  Note: above returns same answer as:</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Welch Two Sample t-test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -318,8 +344,8 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x mean of y </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  7.018182  5.262500 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"></span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -334,7 +360,7 @@ ed</em>. Ames, Iowa: Iowa State University Press.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

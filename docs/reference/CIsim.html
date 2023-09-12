@@ -19,7 +19,7 @@ proportion of successes (Pi)."><!-- mathjax --><script src="https://cdnjs.cloudf
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">BSDA</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.2.2</span>
       </span>
     </div>
 
@@ -60,22 +60,26 @@ proportion of successes (Pi).</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">CIsim</span><span class="op">(</span>
-  samples <span class="op">=</span> <span class="fl">100</span>,
-  n <span class="op">=</span> <span class="fl">30</span>,
-  mu <span class="op">=</span> <span class="fl">0</span>,
-  sigma <span class="op">=</span> <span class="fl">1</span>,
-  conf.level <span class="op">=</span> <span class="fl">0.95</span>,
-  type <span class="op">=</span> <span class="st">"Mean"</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">CIsim</span><span class="op">(</span></span>
+<span>  samples <span class="op">=</span> <span class="fl">100</span>,</span>
+<span>  n <span class="op">=</span> <span class="fl">30</span>,</span>
+<span>  mu <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>  sigma <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  conf.level <span class="op">=</span> <span class="fl">0.95</span>,</span>
+<span>  type <span class="op">=</span> <span class="st">"Mean"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>samples</dt>
 <dd><p>the number of samples desired.</p></dd>
+
+
 <dt>n</dt>
 <dd><p>the size of each sample.</p></dd>
+
+
 <dt>mu</dt>
 <dd><p>if constructing confidence intervals for the population mean or
 the population variance, mu is the population mean (i.e., type is one of
@@ -83,20 +87,29 @@ either <code>"Mean"</code>, or <code>"Var"</code>). If constructing confidence i
 for the poulation proportion of successes, the value entered for mu
 represents the population proportion of successes <code>(Pi)</code>, and as such,
 must be a number between 0 and 1.</p></dd>
+
+
 <dt>sigma</dt>
 <dd><p>the population standard deviation. <code>sigma</code> is not required
 if confidence intervals are of type <code>"Pi"</code>.</p></dd>
+
+
 <dt>conf.level</dt>
 <dd><p>confidence level for the graphed confidence intervals,
 restricted to lie between zero and one.</p></dd>
+
+
 <dt>type</dt>
 <dd><p>character string, one of <code>"Mean"</code>, <code>"Var"</code> or
 <code>"Pi"</code>, or just the initial letter of each, indicating the type of
 confidence interval simulation to perform.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>Graph depicts simulated confidence intervals. The number of
+    
+
+<p>Graph depicts simulated confidence intervals. The number of
 confidence intervals that do not contain the parameter of interest are
 counted and reported in the commands window.</p>
     </div>
@@ -114,37 +127,37 @@ the type argument.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="fu">CIsim</span><span class="op">(</span><span class="fl">100</span>, <span class="fl">30</span>, <span class="fl">100</span>, <span class="fl">10</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">CIsim</span><span class="op">(</span><span class="fl">100</span>, <span class="fl">30</span>, <span class="fl">100</span>, <span class="fl">10</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="CIsim-1.png" alt="" width="700" height="433"></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5 % of the random confidence intervals do not contain Mu = 100 . </span>
-<span class="r-in">    <span class="co"># Simulates 100 samples of size 30 from </span></span>
-<span class="r-in">    <span class="co"># a normal distribution with mean 100</span></span>
-<span class="r-in">    <span class="co"># and standard deviation 10.  From the</span></span>
-<span class="r-in">    <span class="co"># 100 simulated samples, 95% confidence</span></span>
-<span class="r-in">    <span class="co"># intervals for the Mean are constructed </span></span>
-<span class="r-in">    <span class="co"># and depicted in the graph. </span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">CIsim</span><span class="op">(</span><span class="fl">100</span>, <span class="fl">30</span>, <span class="fl">100</span>, <span class="fl">10</span>, type<span class="op">=</span><span class="st">"Var"</span><span class="op">)</span></span>
+<span class="r-in"><span>    <span class="co"># Simulates 100 samples of size 30 from </span></span></span>
+<span class="r-in"><span>    <span class="co"># a normal distribution with mean 100</span></span></span>
+<span class="r-in"><span>    <span class="co"># and standard deviation 10.  From the</span></span></span>
+<span class="r-in"><span>    <span class="co"># 100 simulated samples, 95% confidence</span></span></span>
+<span class="r-in"><span>    <span class="co"># intervals for the Mean are constructed </span></span></span>
+<span class="r-in"><span>    <span class="co"># and depicted in the graph. </span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">CIsim</span><span class="op">(</span><span class="fl">100</span>, <span class="fl">30</span>, <span class="fl">100</span>, <span class="fl">10</span>, type<span class="op">=</span><span class="st">"Var"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="CIsim-2.png" alt="" width="700" height="433"></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 % of the random confidence intervals do not contain Var = 100 . </span>
-<span class="r-in">    <span class="co"># Simulates 100 samples of size 30 from </span></span>
-<span class="r-in">    <span class="co"># a normal distribution with mean 100</span></span>
-<span class="r-in">    <span class="co"># and standard deviation 10.  From the</span></span>
-<span class="r-in">    <span class="co"># 100 simulated samples, 95% confidence</span></span>
-<span class="r-in">    <span class="co"># intervals for the variance are constructed </span></span>
-<span class="r-in">    <span class="co"># and depicted in the graph.</span></span>
-<span class="r-in">    </span>
-<span class="r-in"><span class="fu">CIsim</span><span class="op">(</span><span class="fl">100</span>, <span class="fl">50</span>, <span class="fl">.5</span>, type<span class="op">=</span><span class="st">"Pi"</span>, conf.level<span class="op">=</span><span class="fl">.90</span><span class="op">)</span>     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 % of the random confidence intervals do not contain Var = 100 . </span>
+<span class="r-in"><span>    <span class="co"># Simulates 100 samples of size 30 from </span></span></span>
+<span class="r-in"><span>    <span class="co"># a normal distribution with mean 100</span></span></span>
+<span class="r-in"><span>    <span class="co"># and standard deviation 10.  From the</span></span></span>
+<span class="r-in"><span>    <span class="co"># 100 simulated samples, 95% confidence</span></span></span>
+<span class="r-in"><span>    <span class="co"># intervals for the variance are constructed </span></span></span>
+<span class="r-in"><span>    <span class="co"># and depicted in the graph.</span></span></span>
+<span class="r-in"><span>    </span></span>
+<span class="r-in"><span><span class="fu">CIsim</span><span class="op">(</span><span class="fl">100</span>, <span class="fl">50</span>, <span class="fl">.5</span>, type<span class="op">=</span><span class="st">"Pi"</span>, conf.level<span class="op">=</span><span class="fl">.90</span><span class="op">)</span>     </span></span>
 <span class="r-plt img"><img src="CIsim-3.png" alt="" width="700" height="433"></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9 % of the random confidence intervals do not contain Pi = 0.5 . </span>
-<span class="r-in">    <span class="co"># Simulates 100 samples of size 50 from </span></span>
-<span class="r-in">    <span class="co"># a binomial distribution where the population</span></span>
-<span class="r-in">    <span class="co"># proportion of successes is 0.5.  From the</span></span>
-<span class="r-in">    <span class="co"># 100 simulated samples, 90% confidence</span></span>
-<span class="r-in">    <span class="co"># intervals for Pi are constructed </span></span>
-<span class="r-in">    <span class="co"># and depicted in the graph.  </span></span>
-<span class="r-in"></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 % of the random confidence intervals do not contain Pi = 0.5 . </span>
+<span class="r-in"><span>    <span class="co"># Simulates 100 samples of size 50 from </span></span></span>
+<span class="r-in"><span>    <span class="co"># a binomial distribution where the population</span></span></span>
+<span class="r-in"><span>    <span class="co"># proportion of successes is 0.5.  From the</span></span></span>
+<span class="r-in"><span>    <span class="co"># 100 simulated samples, 90% confidence</span></span></span>
+<span class="r-in"><span>    <span class="co"># intervals for Pi are constructed </span></span></span>
+<span class="r-in"><span>    <span class="co"># and depicted in the graph.  </span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -159,7 +172,7 @@ the type argument.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
