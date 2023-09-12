@@ -1,8 +1,8 @@
 Package: BSDA
 Type: Package
 Title: Basic Statistics and Data Analysis
-Version: 1.2.1
-Date: 2021-09-04
+Version: 1.2.2
+Date: 2023-09-12
 LazyData: yes
 Authors@R: c(
     person("Alan T.", "Arnholt", email = "arnholtat@appstate.edu", role = c("aut", "cre")),
@@ -20,7 +20,7 @@ Suggests:
     ggplot2 (>= 2.1.0),
     dplyr,
     tidyr
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Encoding: UTF-8
 URL: https://github.com/alanarnholt/BSDA, https://alanarnholt.github.io/BSDA/
 BugReports: https://github.com/alanarnholt/BSDA/issues

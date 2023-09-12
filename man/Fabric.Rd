@@ -21,11 +21,10 @@ Data for Example 7.21
 }
 \examples{
 
-wilcox.test(softness ~ softner, data = Fabric, 
-            paired = TRUE, alternative = "greater")
-
 \dontrun{
 library(tidyr)
+tidyr::spread(Fabric, softner, softness) -> FabricWide
+wilcox.test(Pair(with, without)~1, alternative = "greater", data = FabricWide)
 T7 <- tidyr::spread(Fabric, softner, softness) \%>\% 
 mutate(di = with - without, adi = abs(di), rk = rank(adi), 
        srk = sign(di)*rk)

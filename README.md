@@ -2,7 +2,7 @@
 BSDA
 ========
 
-### Version 1.2.1
+### Version 1.2.2
 
 [![Travis-CI Build Status](https://travis-ci.org/alanarnholt/BSDA.svg?branch=master)](https://travis-ci.org/alanarnholt/BSDA)
 
