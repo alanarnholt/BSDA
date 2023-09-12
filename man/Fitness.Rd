@@ -20,8 +20,10 @@ Data for Exercise 7.71
 }
 \examples{
 
-t.test(number ~ test, data = Fitness, alternative = "greater", paired = TRUE)
 \dontrun{
+tidyr::spread(Fitness, test, number) -> FitnessWide
+t.test(Pair(After, Before)~1, alternative = "greater", data = FitnessWide)
+
 Wide <- tidyr::spread(Fitness, test, number) \%>\%
 mutate(diff = After - Before)
 Wide
