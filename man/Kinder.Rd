@@ -26,8 +26,6 @@ diff <- Kinder$kinder - Kinder$nokinder
 qqnorm(diff)
 qqline(diff)
 shapiro.test(diff)
-t.test(Kinder$kinder, Kinder$nokinder, paired = TRUE)
-# Or
 t.test(diff)
 rm(diff)
 

@@ -20,7 +20,7 @@ Data for Exercise 7.80
 }
 \examples{
 
-t.test(Vocab$first, Vocab$second, paired = TRUE)
+t.test(Pair(Vocab$first, Vocab$second) ~ 1)
 
 }
 \references{

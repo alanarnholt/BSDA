@@ -23,8 +23,8 @@ Data for Exercise 7.53
 qqnorm(Movie$differ)
 qqline(Movie$differ)
 shapiro.test(Movie$differ)
-t.test(Movie$after, Movie$before, paired = TRUE, conf.level = 0.99)
-wilcox.test(Movie$after, Movie$before, paired = TRUE)
+t.test(Movie$differ, conf.level = 0.99)
+wilcox.test(Movie$differ)
 
 }
 \references{

@@ -24,9 +24,8 @@ diff <- Stress$prestress - Stress$poststress
 qqnorm(diff)
 qqline(diff)
 t.test(diff)
-t.test(Stress$prestress, Stress$poststress, paired = TRUE)
 \dontrun{
-wilcox.test(Stress$prestress, Stress$poststress, paired = TRUE)
+wilcox.test(Pair(Stress$prestress, Stress$poststress)~1, data = Stress)
 }
 
 }

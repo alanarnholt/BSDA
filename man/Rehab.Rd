@@ -25,8 +25,6 @@ boxplot(Rehab$differ)
 qqnorm(Rehab$differ)
 qqline(Rehab$differ)
 t.test(Rehab$differ)
-# Or
-t.test(Rehab$psych1, Rehab$psych2, paired = TRUE)
 
 }
 \references{

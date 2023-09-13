@@ -24,7 +24,7 @@ Data for Exercise 7.57
 shapiro.test(Habits$differ)
 qqnorm(Habits$differ)
 qqline(Habits$differ)
-wilcox.test(Habits$B, Habits$A, paired = TRUE, alternative = "less")
+wilcox.test(Pair(B, A) ~ 1, data = Habits, alternative = "less")
 t.test(Habits$signrks, alternative = "less")
 
 \dontrun{

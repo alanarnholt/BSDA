@@ -24,7 +24,7 @@ diff = Oxytocin$after - Oxytocin$before
 qqnorm(diff)
 qqline(diff)
 shapiro.test(diff)
-t.test(Oxytocin$after, Oxytocin$before, paired = TRUE)
+t.test(diff)
 rm(diff)
 
 }

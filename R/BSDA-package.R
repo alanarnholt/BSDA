@@ -3937,10 +3937,10 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' t.test(errors ~ when, data = German, paired = TRUE)
-#' wilcox.test(errors ~ when, data = German)
-#' 
 #' \dontrun{
+#' tidyr::spread(German, when, errors) -> GermanWide
+#' t.test(Pair(After, Before) ~ 1, data = GermanWide)
+#' wilcox.test(Pair(After, Before) ~ 1, data = GermanWide)
 #' T8 <- tidyr::spread(German, when, errors) %>%
 #' mutate(di = After - Before, adi = abs(di), rk = rank(adi), srk = sign(di)*rk)
 #' T8
@@ -4300,7 +4300,7 @@ NULL
 #' shapiro.test(Habits$differ)
 #' qqnorm(Habits$differ)
 #' qqline(Habits$differ)
-#' wilcox.test(Habits$B, Habits$A, paired = TRUE, alternative = "less")
+#' wilcox.test(Pair(B, A) ~ 1, data = Habits, alternative = "less")
 #' t.test(Habits$signrks, alternative = "less")
 #' 
 #' \dontrun{
@@ -5350,8 +5350,6 @@ NULL
 #' qqnorm(diff)
 #' qqline(diff)
 #' shapiro.test(diff)
-#' t.test(Kinder$kinder, Kinder$nokinder, paired = TRUE)
-#' # Or
 #' t.test(diff)
 #' rm(diff)
 #' 
@@ -5644,8 +5642,6 @@ NULL
 #' qqnorm(diff)
 #' qqline(diff)
 #' shapiro.test(diff)
-#' t.test(Lowabil$experiment, Lowabil$control, paired = TRUE)
-#' # OR
 #' t.test(diff)
 #' rm(diff)
 #' 
@@ -6139,8 +6135,8 @@ NULL
 #' qqnorm(Movie$differ)
 #' qqline(Movie$differ)
 #' shapiro.test(Movie$differ)
-#' t.test(Movie$after, Movie$before, paired = TRUE, conf.level = 0.99)
-#' wilcox.test(Movie$after, Movie$before, paired = TRUE)
+#' t.test(Movie$differ, conf.level = 0.99)
+#' wilcox.test(Movie$differ)
 #' 
 "Movie"
 
@@ -6170,8 +6166,6 @@ NULL
 #' qqnorm(Music$differ)
 #' qqline(Music$differ)
 #' shapiro.test(Music$differ)
-#' t.test(Music$method1, Music$method2, paired = TRUE)
-#' # Or
 #' t.test(Music$differ)
 #' \dontrun{
 #' library(ggplot2)
@@ -6499,7 +6493,7 @@ NULL
 #' qqnorm(diff)
 #' qqline(diff)
 #' shapiro.test(diff)
-#' t.test(Oxytocin$after, Oxytocin$before, paired = TRUE)
+#' t.test(diff)
 #' rm(diff)
 #' 
 "Oxytocin"
@@ -7450,8 +7444,6 @@ NULL
 #' qqnorm(Rehab$differ)
 #' qqline(Rehab$differ)
 #' t.test(Rehab$differ)
-#' # Or
-#' t.test(Rehab$psych1, Rehab$psych2, paired = TRUE)
 #' 
 "Rehab"
 
@@ -7933,8 +7925,6 @@ NULL
 #' Selfdefe$differ <- Selfdefe$after - Selfdefe$before
 #' Selfdefe
 #' t.test(Selfdefe$differ, alternative = "greater")
-#' t.test(Selfdefe$after, Selfdefe$before, 
-#'        paired = TRUE, alternative = "greater")
 #' 
 "Selfdefe"
 
@@ -8543,7 +8533,7 @@ NULL
 #' 
 #' t.test(Speed$differ, alternative = "greater")
 #' t.test(Speed$signranks, alternative = "greater")
-#' wilcox.test(Speed$after, Speed$before, paired = TRUE, alternative = "greater")
+#' wilcox.test(Pair(Speed$after, Speed$before) ~ 1, data = Speed, alternative = "greater")
 #' 
 "Speed"
 
@@ -8599,7 +8589,6 @@ NULL
 #' qqnorm(Spelling$differ)
 #' qqline(Spelling$differ)
 #' shapiro.test(Spelling$differ)
-#' t.test(Spelling$before, Spelling$after, paired = TRUE)
 #' t.test(Spelling$differ)
 #' 
 "Spelling"
@@ -8865,9 +8854,8 @@ NULL
 #' qqnorm(diff)
 #' qqline(diff)
 #' t.test(diff)
-#' t.test(Stress$prestress, Stress$poststress, paired = TRUE)
 #' \dontrun{
-#' wilcox.test(Stress$prestress, Stress$poststress, paired = TRUE)
+#' wilcox.test(Pair(Stress$prestress, Stress$poststress)~1, data = Stress)
 #' }
 #' 
 "Stress"
@@ -9664,7 +9652,7 @@ NULL
 #' qqnorm(Twin$differ)
 #' qqline(Twin$differ)
 #' shapiro.test(Twin$differ)
-#' t.test(Twin$twinA, Twin$twinB, paired = TRUE)
+#' t.test(Twin$differ)
 #' 
 "Twin"
 
@@ -9940,7 +9928,7 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' t.test(Vocab$first, Vocab$second, paired = TRUE)
+#' t.test(Pair(Vocab$first, Vocab$second) ~ 1)
 #' 
 "Vocab"
 

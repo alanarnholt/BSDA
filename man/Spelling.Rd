@@ -24,7 +24,6 @@ Data for Exercise 7.56
 qqnorm(Spelling$differ)
 qqline(Spelling$differ)
 shapiro.test(Spelling$differ)
-t.test(Spelling$before, Spelling$after, paired = TRUE)
 t.test(Spelling$differ)
 
 }

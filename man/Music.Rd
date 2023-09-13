@@ -24,8 +24,6 @@ Data for Exercise 7.59
 qqnorm(Music$differ)
 qqline(Music$differ)
 shapiro.test(Music$differ)
-t.test(Music$method1, Music$method2, paired = TRUE)
-# Or
 t.test(Music$differ)
 \dontrun{
 library(ggplot2)

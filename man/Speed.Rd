@@ -23,7 +23,7 @@ Data for Exercise 7.58
 
 t.test(Speed$differ, alternative = "greater")
 t.test(Speed$signranks, alternative = "greater")
-wilcox.test(Speed$after, Speed$before, paired = TRUE, alternative = "greater")
+wilcox.test(Pair(Speed$after, Speed$before) ~ 1, data = Speed, alternative = "greater")
 
 }
 \references{

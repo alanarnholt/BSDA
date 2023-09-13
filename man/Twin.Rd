@@ -24,7 +24,7 @@ Data for Exercise 7.54
 qqnorm(Twin$differ)
 qqline(Twin$differ)
 shapiro.test(Twin$differ)
-t.test(Twin$twinA, Twin$twinB, paired = TRUE)
+t.test(Twin$differ)
 
 }
 \references{

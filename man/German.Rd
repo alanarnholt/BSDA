@@ -22,10 +22,10 @@ Data for Exercise 7.60
 }
 \examples{
 
-t.test(errors ~ when, data = German, paired = TRUE)
-wilcox.test(errors ~ when, data = German)
-
 \dontrun{
+tidyr::spread(German, when, errors) -> GermanWide
+t.test(Pair(After, Before) ~ 1, data = GermanWide)
+wilcox.test(Pair(After, Before) ~ 1, data = GermanWide)
 T8 <- tidyr::spread(German, when, errors) \%>\%
 mutate(di = After - Before, adi = abs(di), rk = rank(adi), srk = sign(di)*rk)
 T8
