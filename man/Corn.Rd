@@ -25,7 +25,7 @@ boxplot(Corn$differences)
 qqnorm(Corn$differences)
 qqline(Corn$differences)
 shapiro.test(Corn$differences)
-t.test(Corn$new, Corn$standard, paired = TRUE, alternative = "greater")
+t.test(Corn$differences, alternative = "greater")
 
 }
 \references{

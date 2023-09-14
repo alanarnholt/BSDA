@@ -110,12 +110,12 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mean of x </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       5.4 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/wilcox.test.html" class="external-link">wilcox.test</a></span><span class="op">(</span><span class="va">Speed</span><span class="op">$</span><span class="va">after</span>, <span class="va">Speed</span><span class="op">$</span><span class="va">before</span>, paired <span class="op">=</span> <span class="cn">TRUE</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/wilcox.test.html" class="external-link">wilcox.test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Pair.html" class="external-link">Pair</a></span><span class="op">(</span><span class="va">Speed</span><span class="op">$</span><span class="va">after</span>, <span class="va">Speed</span><span class="op">$</span><span class="va">before</span><span class="op">)</span> <span class="op">~</span> <span class="fl">1</span>, data <span class="op">=</span> <span class="va">Speed</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>cannot compute exact p-value with ties</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Wilcoxon signed rank test with continuity correction</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> data:  Speed$after and Speed$before</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> data:  Pair(Speed$after, Speed$before)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> V = 100.5, p-value = 0.01144</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true location shift is greater than 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>

@@ -91,28 +91,28 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> data:  Movie$differ</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.83643, p-value = 0.02506</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">Movie</span><span class="op">$</span><span class="va">after</span>, <span class="va">Movie</span><span class="op">$</span><span class="va">before</span>, paired <span class="op">=</span> <span class="cn">TRUE</span>, conf.level <span class="op">=</span> <span class="fl">0.99</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">Movie</span><span class="op">$</span><span class="va">differ</span>, conf.level <span class="op">=</span> <span class="fl">0.99</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 	Paired t-test</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	One Sample t-test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> data:  Movie$after and Movie$before</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> data:  Movie$differ</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> t = 2, df = 11, p-value = 0.0708</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true mean difference is not equal to 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true mean is not equal to 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 99 percent confidence interval:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  -0.3686022  1.7019355</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> sample estimates:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> mean difference </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       0.6666667 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> mean of x </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 0.6666667 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/wilcox.test.html" class="external-link">wilcox.test</a></span><span class="op">(</span><span class="va">Movie</span><span class="op">$</span><span class="va">after</span>, <span class="va">Movie</span><span class="op">$</span><span class="va">before</span>, paired <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/wilcox.test.html" class="external-link">wilcox.test</a></span><span class="op">(</span><span class="va">Movie</span><span class="op">$</span><span class="va">differ</span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>cannot compute exact p-value with ties</span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>cannot compute exact p-value with zeroes</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Wilcoxon signed rank test with continuity correction</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> data:  Movie$after and Movie$before</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> data:  Movie$differ</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> V = 52.5, p-value = 0.07707</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true location shift is not equal to 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true location is not equal to 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 </code></pre></div>

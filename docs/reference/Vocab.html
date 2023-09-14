@@ -81,11 +81,11 @@ Pacific Grove, CA: Brooks/Cole, a division of Thomson Learning.</p>
     <div id="ref-examples">
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">Vocab</span><span class="op">$</span><span class="va">first</span>, <span class="va">Vocab</span><span class="op">$</span><span class="va">second</span>, paired <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Pair.html" class="external-link">Pair</a></span><span class="op">(</span><span class="va">Vocab</span><span class="op">$</span><span class="va">first</span>, <span class="va">Vocab</span><span class="op">$</span><span class="va">second</span><span class="op">)</span> <span class="op">~</span> <span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	Paired t-test</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> data:  Vocab$first and Vocab$second</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> data:  Pair(Vocab$first, Vocab$second)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> t = -2.2958, df = 13, p-value = 0.03896</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> alternative hypothesis: true mean difference is not equal to 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 95 percent confidence interval:</span>
