@@ -170,7 +170,7 @@ function(mean.x, s.x = NULL, n.x = NULL, mean.y = NULL, s.y = NULL, n.y = NULL,
     alpha <- 1 - conf.level
     if(is.null(mean.y)) {
         # one-sample t-test.
-        if(!var.equal) warning(
+        if(!missing(var.equal)) warning(
                 "argument 'var.equal' ignored for one-sample test."
                 )
         conf.int.xbar <- mean.x
